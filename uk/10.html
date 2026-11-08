@@ -3,22 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Блок 10 · nmt-math · ai|</title>
+<title>Фігури на площині · nmt-math · ai|</title>
 <!-- meta: built by tools/build-meta.py - do not edit by hand -->
-<meta name="description" content="Лід сторінки: про що вона і кому потрібна.">
+<meta name="description" content="Кілька аксіом, з яких логікою виводиться все інше.">
 <link rel="canonical" href="https://y-kolyada.github.io/nmt-math/uk/10.html">
 <link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/10.html">
 <link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/10.html">
 <link rel="alternate" hreflang="x-default" href="https://y-kolyada.github.io/nmt-math/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="nmt-math">
-<meta property="og:title" content="Блок 10">
-<meta property="og:description" content="Лід сторінки: про що вона і кому потрібна.">
+<meta property="og:title" content="Фігури на площині">
+<meta property="og:description" content="Кілька аксіом, з яких логікою виводиться все інше.">
 <meta property="og:url" content="https://y-kolyada.github.io/nmt-math/uk/10.html">
 <meta property="og:locale" content="uk_UA">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Блок 10","description":"Лід сторінки: про що вона і кому потрібна.","url":"https://y-kolyada.github.io/nmt-math/uk/10.html","inLanguage":"uk","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Фігури на площині","description":"Кілька аксіом, з яких логікою виводиться все інше.","url":"https://y-kolyada.github.io/nmt-math/uk/10.html","inLanguage":"uk","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
 <!-- /meta -->
 <link rel="stylesheet" href="../assets/style.css?v=1">
 <link rel="stylesheet" href="../assets/study.css?v=1">
@@ -90,28 +90,192 @@
   </nav>
 
   <main id="main">
-    <h1>Блок 10</h1>
-    <p class="page-size" data-words="48">Слів: 48</p>
-    <p class="lead">Лід сторінки: про що вона і кому потрібна. Одне речення, не довше за 160 знаків.</p>
+    <h1>Фігури на площині</h1>
+    <p class="page-size" data-words="831">Слів: 831</p>
+    <p class="lead">Кілька аксіом, з яких логікою виводиться все інше. Геометрія - перше місце, де математика
+    постає не набором формул, а системою: кожна властивість доводиться з попередніх.</p>
 
     <div class="box key" id="key-idea">
       <h2>Головна думка сторінки <a class="anchor-link" href="#key-idea" aria-label="посилання на цей блок">#</a></h2>
-      <p>Текст цього розділу ще не написаний.</p>
+      <p>Сума кутів трикутника, властивості паралелограма, вписаний кут - не окремі факти, а ланцюжок: кожен
+      доводиться з попередніх, а в основі - аксіома про паралельні прямі. Тому в геометрії діє одне правило:
+      «на рисунку виглядає рівним» - не довід. Блок уміє встановлювати форму і рівність; виміряти довжини і площі -
+      завдання наступного блоку (11).</p>
     </div>
 
-    <h2 id="first">1 · Блок 1 <a class="anchor-link" href="#first">#</a></h2>
-    <p>Текст цього розділу ще не написаний.</p>
+    <span class="step">Крок 0 · Зачіпка</span>
+    <h2 id="hook">1 · Вписаний кут дорівнює центральному? <a class="anchor-link" href="#hook">#</a></h2>
+    <p>Центральний кут кола дорівнює 80°. Чому дорівнює вписаний кут, що спирається на ту саму дугу? Звичка
+    «спираються на одну дугу - отже рівні» дає 80°. Насправді вписаний кут удвічі менший: 40°. Обидва кути
+    «дивляться» на одну дугу, але з різних точок: з центру дуга видна під більшим кутом.</p>
 
-    <div class="box key" id="artifacts">
-      <h2>Що в тебе є після цієї сторінки <a class="anchor-link" href="#artifacts">#</a></h2>
-      <p>Текст цього розділу ще не написаний.</p>
+    <span class="step">Крок 1 · Поняття</span>
+    <h2 id="concept">2 · Кути, трикутники, коло <a class="anchor-link" href="#concept">#</a></h2>
+    <ul>
+      <li><strong>Суміжні кути</strong> мають спільну сторону, а дві інші утворюють пряму: разом 180°. <strong>Вертикальні</strong>
+      кути рівні.</li>
+      <li><strong>Січна</strong> перетинає дві прямі й утворює пари кутів: відповідні, внутрішні різносторонні, односторонні.</li>
+      <li><strong>Подібні трикутники</strong> мають однакову форму: кути рівні, сторони пропорційні.</li>
+      <li><strong>Центральний кут</strong> має вершину в центрі кола, <strong>вписаний</strong> - на колі. <strong>Дотична</strong> має з
+      колом одну спільну точку.</li>
+      <li><strong>Властивість</strong> каже, що випливає з того, що фігура певного виду; <strong>ознака</strong> - за чим цей вид
+      розпізнати. Це два напрями однієї теореми, і вони не завжди обидва правильні.</li>
+    </ul>
+
+    <span class="step">Крок 2 · Закон</span>
+    <h2 id="law">3 · Закони фігур <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-parallel">
+      <p class="law-name">Паралельні прямі і січна</p>
+      <p>Прямі паралельні тоді і тільки тоді, коли відповідні кути рівні; рівні й внутрішні різносторонні; а
+      односторонні в сумі дають 180°.</p>
     </div>
+    <div class="law" id="law-angles">
+      <p class="law-name">Сума кутів</p>
+      <div class="math-block" data-tex="\angle A + \angle B + \angle C = 180^\circ,\qquad S_n = 180^\circ (n - 2)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>&#x02220;</mo><mi>A</mi><mo>&#x0002B;</mo><mo>&#x02220;</mo><mi>B</mi><mo>&#x0002B;</mo><mo>&#x02220;</mo><mi>C</mi><mo>&#x0003D;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>S</mi><mi>n</mi></msub><mo>&#x0003D;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo stretchy="false">&#x00028;</mo><mi>n</mi><mo>&#x02212;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">\angle A + \angle B + \angle C = 180^\circ,\qquad S_n = 180^\circ (n - 2)</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-inscribed">
+      <p class="law-name">Вписаний кут</p>
+      <p>Вписаний кут дорівнює половині центрального, що спирається на ту саму дугу. Вписаний кут, що спирається на
+      діаметр, - прямий.</p>
+    </div>
+    <div class="law" id="law-triangle-ineq">
+      <p class="law-name">Нерівність трикутника</p>
+      <div class="math-block" data-tex="a < b + c,\quad b < a + c,\quad c < a + b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>a</mi><mo>&#x0003C;</mo><mi>b</mi><mo>&#x0002B;</mo><mi>c</mi><mo>&#x0002C;</mo><mspace width="1em" /><mi>b</mi><mo>&#x0003C;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>c</mi><mo>&#x0002C;</mo><mspace width="1em" /><mi>c</mi><mo>&#x0003C;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a &lt; b + c,\quad b &lt; a + c,\quad c &lt; a + b</annotation></semantics></math></div>
+      <p>Досить перевірити, що найбільша сторона менша за суму двох інших.</p>
+    </div>
+    <div class="law" id="law-similar">
+      <p class="law-name">Ознака подібності за двома кутами</p>
+      <p>Якщо два кути одного трикутника дорівнюють двом кутам іншого, трикутники подібні.</p>
+    </div>
+
+    <span class="step">Крок 3 · Чому так</span>
+    <h2 id="why">4 · Звідки закони <a class="anchor-link" href="#why">#</a></h2>
+    <p><strong>Сума кутів трикутника.</strong> Проведемо через вершину B пряму, паралельну AC. Кути при B, утворені нею, -
+    внутрішні різносторонні з кутами A і C, тож рівні їм. Три кути при B разом утворюють розгорнутий кут: 180°.
+    Тут видно, на чому стоїть теорема: на властивості паралельних прямих.</p>
+    <p><strong>Многокутник.</strong> Діагоналі з однієї вершини ділять опуклий n-кутник на
+    <span class="math" data-tex="n - 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>n</mi><mo>&#x02212;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n - 2</annotation></semantics></math></span> трикутники, і кути трикутників разом складають кути многокутника.</p>
+    <p><strong>Вписаний кут.</strong> Нехай одна сторона вписаного кута проходить через центр O. Трикутник з вершинами в
+    O, у вершині кута і на колі рівнобедрений (дві сторони - радіуси), а центральний кут - його зовнішній кут, тобто сума
+    двох рівних кутів. Отже, вписаний кут - половина центрального. Інші розташування зводяться до цього.</p>
+    <p><strong>Нерівність трикутника.</strong> Відрізок - найкоротший шлях між двома точками, тож шлях через третю вершину
+    довший.</p>
+
+    <span class="step">Крок 4 · Межі</span>
+    <h2 id="limits">5 · Де закони ламаються <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-picture">
+      <p><strong>Рисунок - не довід.</strong> Кути, які «виглядають рівними», рівні лише тоді, коли це випливає з умови і теорем.</p>
+    </div>
+    <div class="limit" id="limit-converse">
+      <p><strong>Властивість не завжди обертається.</strong> Діагоналі прямокутника рівні, але рівні діагоналі має і
+      рівнобічна трапеція. У паралелограма діагоналі ділять одна одну навпіл, але рівні - лише у прямокутника.</p>
+    </div>
+    <div class="limit" id="limit-strict">
+      <p><strong>Нерівність трикутника строга.</strong> Якщо <span class="math" data-tex="c = a + b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>c</mi><mo>&#x0003D;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">c = a + b</annotation></semantics></math></span>, три точки лежать на одній
+      прямій, і трикутника немає.</p>
+    </div>
+
+    <span class="step">Крок 5 · Застосування</span>
+    <h2 id="apply">6 · Задачі у формі НМТ <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="В" data-limit="">
+      <p class="task-kind">Вибір однієї відповіді з п'яти · 1 бал</p>
+      <p>Кути трикутника відносяться як 2 : 3 : 4. Знайдіть найбільший кут.</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · 40°</button>
+        <button type="button" data-opt="Б">Б · 60°</button>
+        <button type="button" data-opt="В">В · 80°</button>
+        <button type="button" data-opt="Г">Г · 90°</button>
+        <button type="button" data-opt="Д">Д · 100°</button>
+      </div>
+      <p class="law-ref">Закони: <a href="#law-angles">сума кутів</a> і частина від цілого з <a href="02.html">блоку 2</a>.</p>
+      <div class="solution">Усього частин 9, одна частина <span class="math" data-tex="180^\circ : 9 = 20^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>180</mn><mo>&#x02218;</mo></msup><mi>:</mi><mn>9</mn><mo>&#x0003D;</mo><msup><mn>20</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">180^\circ : 9 = 20^\circ</annotation></semantics></math></span>, найбільший кут
+      <span class="math" data-tex="4 \cdot 20^\circ = 80^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>4</mn><mo>&#x000B7;</mo><msup><mn>20</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><msup><mn>80</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">4 \cdot 20^\circ = 80^\circ</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="720" data-limit="">
+      <p class="task-kind">Коротка відповідь · 2 бали</p>
+      <p>Знайдіть суму кутів опуклого шестикутника (у градусах).</p>
+      <p><label>Відповідь: <input type="text" inputmode="decimal" size="8" aria-label="Відповідь"></label>
+      <button type="button" class="check">Перевірити</button></p>
+      <p class="law-ref">Закон: <a href="#law-angles">сума кутів многокутника</a>.</p>
+      <div class="solution"><span class="math" data-tex="180^\circ \cdot (6 - 2) = 720^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x000B7;</mo><mo stretchy="false">&#x00028;</mo><mn>6</mn><mo>&#x02212;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mn>720</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">180^\circ \cdot (6 - 2) = 720^\circ</annotation></semantics></math></span>: чотири трикутники.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="55" data-limit="">
+      <p class="task-kind">Коротка відповідь · 2 бали</p>
+      <p>Центральний кут кола дорівнює 110°. Знайдіть вписаний кут (у градусах), що спирається на ту саму дугу.</p>
+      <p><label>Відповідь: <input type="text" inputmode="decimal" size="8" aria-label="Відповідь"></label>
+      <button type="button" class="check">Перевірити</button></p>
+      <p class="law-ref">Закон: <a href="#law-inscribed">вписаний кут</a>.</p>
+      <div class="solution">Половина центрального: 55°.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="В" data-limit="limit-strict">
+      <p class="task-kind">Вибір однієї відповіді з п'яти · 1 бал</p>
+      <p>З якої трійки відрізків можна скласти трикутник?</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · 1, 2, 3</button>
+        <button type="button" data-opt="Б">Б · 2, 3, 6</button>
+        <button type="button" data-opt="В">В · 3, 4, 5</button>
+        <button type="button" data-opt="Г">Г · 1, 1, 2</button>
+        <button type="button" data-opt="Д">Д · 2, 2, 5</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#law-triangle-ineq">нерівність трикутника</a>.</p>
+      <div class="solution">Лише <span class="math" data-tex="5 < 3 + 4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>5</mn><mo>&#x0003C;</mo><mn>3</mn><mo>&#x0002B;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">5 &lt; 3 + 4</annotation></semantics></math></span>. У А і Г найбільша сторона дорівнює сумі двох інших:
+      це межа, трикутник вироджується у відрізок.</div>
+    </div>
+
+    <span class="step">Крок 6 · Зворотний хід</span>
+    <h2 id="reverse">7 · Сам назви закон <a class="anchor-link" href="#reverse">#</a></h2>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="115" data-limit="">
+      <p class="task-kind">Коротка відповідь · 2 бали</p>
+      <p>Дві паралельні прямі перетнуто січною. Один з односторонніх кутів дорівнює 65°. Знайдіть другий (у градусах).</p>
+      <p><label>Відповідь: <input type="text" inputmode="decimal" size="8" aria-label="Відповідь"></label>
+      <button type="button" class="check">Перевірити</button></p>
+      <p class="law-ref">Закон: <a href="#law-parallel">паралельні прямі і січна</a>.</p>
+      <div class="solution"><span class="math" data-tex="180^\circ - 65^\circ = 115^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x02212;</mo><msup><mn>65</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><msup><mn>115</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">180^\circ - 65^\circ = 115^\circ</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="55" data-limit="">
+      <p class="task-kind">Коротка відповідь · 2 бали</p>
+      <p>Точка C лежить на колі з діаметром AB, <span class="math" data-tex="\angle A = 35^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02220;</mo><mi>A</mi><mo>&#x0003D;</mo><msup><mn>35</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">\angle A = 35^\circ</annotation></semantics></math></span>. Знайдіть кут B трикутника ABC
+      (у градусах).</p>
+      <p><label>Відповідь: <input type="text" inputmode="decimal" size="8" aria-label="Відповідь"></label>
+      <button type="button" class="check">Перевірити</button></p>
+      <p class="law-ref">Закони: <a href="#law-inscribed">вписаний кут на діаметр</a> і <a href="#law-angles">сума кутів</a>.</p>
+      <div class="solution">Кут C спирається на діаметр, тому <span class="math" data-tex="\angle C = 90^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02220;</mo><mi>C</mi><mo>&#x0003D;</mo><msup><mn>90</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">\angle C = 90^\circ</annotation></semantics></math></span>; тоді
+      <span class="math" data-tex="\angle B = 180^\circ - 90^\circ - 35^\circ = 55^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02220;</mo><mi>B</mi><mo>&#x0003D;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x02212;</mo><msup><mn>90</mn><mo>&#x02218;</mo></msup><mo>&#x02212;</mo><msup><mn>35</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><msup><mn>55</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">\angle B = 180^\circ - 90^\circ - 35^\circ = 55^\circ</annotation></semantics></math></span>.</div>
+    </div>
+
+    <h2 id="error">8 · Знайди помилку в чужому розв'язанні <a class="anchor-link" href="#error">#</a></h2>
+    <p>Вікторія пише: «Діагоналі чотирикутника ABCD рівні, отже ABCD - прямокутник».</p>
+    <details>
+      <summary>Де помилка?</summary>
+      <p>Рівні діагоналі - властивість прямокутника, але не ознака: рівні діагоналі має і рівнобічна трапеція, і навіть
+      чотирикутник без жодних паралельних сторін. Ознака прямокутника: паралелограм з рівними діагоналями
+      (<a href="#limit-converse">друга межа</a>).</p>
+    </details>
+
+    <h2 id="artifacts">Що в тебе є після цієї сторінки <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>Ланцюжок замість переліку.</strong> Паралельні прямі дають суму кутів трикутника, сума кутів трикутника -
+      суму кутів многокутника, рівнобедрений трикутник з радіусів - вписаний кут. Якщо забув факт, його можна відновити з
+      попереднього.</p>
+    </div>
+    <p>Ти знаєш цей блок, якщо:</p>
+    <ol>
+      <li>розв'язуєш 8 з 10 задач на кути, трикутники і коло без підказки;</li>
+      <li>можеш пояснити вголос, чому сума кутів трикутника дорівнює 180°;</li>
+      <li>знаходиш помилку в чужому розв'язанні, як у Вікторії.</li>
+    </ol>
   
 
     <footer>
       <nav class="pager" aria-label="Сусідні теми">
         <p class="pager-next">Наступна тема: <a href="11.html">Блок 11</a></p>
-        <p class="pager-prev">Попередня тема: <a href="09.html">Блок 9</a></p>
+        <p class="pager-prev">Попередня тема: <a href="09.html">Комбінаторика, ймовірність, статистика</a></p>
       </nav>
       <p class="footer-note">Сайт серії AI Factory. Зроблений тим самим оснащенням: звичайний HTML і CSS, перевірка на bash, публікація через GitHub Pages.</p>
     </footer>
