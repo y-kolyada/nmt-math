@@ -3,22 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Блок 12 · nmt-math · ai|</title>
+<title>Координати і вектори · nmt-math · ai|</title>
 <!-- meta: built by tools/build-meta.py - do not edit by hand -->
-<meta name="description" content="Лід сторінки: про що вона і кому потрібна.">
+<meta name="description" content="Точка стає парою (у просторі - трійкою) чисел, і геометрична задача розв&#x27;язується рівнянням.">
 <link rel="canonical" href="https://y-kolyada.github.io/nmt-math/uk/12.html">
 <link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/12.html">
 <link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/12.html">
 <link rel="alternate" hreflang="x-default" href="https://y-kolyada.github.io/nmt-math/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="nmt-math">
-<meta property="og:title" content="Блок 12">
-<meta property="og:description" content="Лід сторінки: про що вона і кому потрібна.">
+<meta property="og:title" content="Координати і вектори">
+<meta property="og:description" content="Точка стає парою (у просторі - трійкою) чисел, і геометрична задача розв&#x27;язується рівнянням.">
 <meta property="og:url" content="https://y-kolyada.github.io/nmt-math/uk/12.html">
 <meta property="og:locale" content="uk_UA">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Блок 12","description":"Лід сторінки: про що вона і кому потрібна.","url":"https://y-kolyada.github.io/nmt-math/uk/12.html","inLanguage":"uk","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Координати і вектори","description":"Точка стає парою (у просторі - трійкою) чисел, і геометрична задача розв'язується рівнянням.","url":"https://y-kolyada.github.io/nmt-math/uk/12.html","inLanguage":"uk","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
 <!-- /meta -->
 <link rel="stylesheet" href="../assets/style.css?v=1">
 <link rel="stylesheet" href="../assets/study.css?v=1">
@@ -90,28 +90,183 @@
   </nav>
 
   <main id="main">
-    <h1>Блок 12</h1>
-    <p class="page-size" data-words="48">Слів: 48</p>
-    <p class="lead">Лід сторінки: про що вона і кому потрібна. Одне речення, не довше за 160 знаків.</p>
+    <h1>Координати і вектори</h1>
+    <p class="page-size" data-words="649">Слів: 649</p>
+    <p class="lead">Точка стає парою (у просторі - трійкою) чисел, і геометрична задача розв'язується рівнянням.
+    Площина і простір тут разом: формули відрізняються лише третьою координатою.</p>
 
     <div class="box key" id="key-idea">
       <h2>Головна думка сторінки <a class="anchor-link" href="#key-idea" aria-label="посилання на цей блок">#</a></h2>
-      <p>Текст цього розділу ще не написаний.</p>
+      <p>Координати з'єднують геометрію (блоки 10, 11) з алгеброю (блоки 3, 4): відстань між точками - це теорема
+      Піфагора, записана числами, а кут між векторами - теорема косинусів. Вектор - величина з напрямом, і його
+      координати - це «на скільки зрушити по кожній осі». Програма прямо вимагає бачити аналогію між площиною і
+      простором, тому кожна формула нижче записана так, що третя координата просто додається.</p>
     </div>
 
-    <h2 id="first">1 · Блок 1 <a class="anchor-link" href="#first">#</a></h2>
-    <p>Текст цього розділу ще не написаний.</p>
+    <span class="step">Крок 0 · Зачіпка</span>
+    <h2 id="hook">1 · Вектор з A в B <a class="anchor-link" href="#hook">#</a></h2>
+    <p>Дано <span class="math" data-tex="A(5;\ 1)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>A</mi><mo stretchy="false">&#x00028;</mo><mn>5</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>1</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">A(5;\ 1)</annotation></semantics></math></span> і <span class="math" data-tex="B(2;\ 4)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>B</mi><mo stretchy="false">&#x00028;</mo><mn>2</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>4</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">B(2;\ 4)</annotation></semantics></math></span>. Які координати вектора
+    <span class="math" data-tex="\overrightarrow{AB}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mrow><mi>A</mi><mi>B</mi></mrow><mo>&#x02192;</mo></mover></mrow><annotation encoding="application/x-tex">\overrightarrow{AB}</annotation></semantics></math></span>? Звичний хід: «від першої точки відняти другу»:
+    <span class="math" data-tex="(3;\ -3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mn>3</mn><mi>;</mi><mtext>&#x000A0;</mtext><mo>&#x02212;</mo><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(3;\ -3)</annotation></semantics></math></span>. Але вектор показує, як дійти з A до B: по осі x з 5 до 2 - це −3, по осі y з 1
+    до 4 - це +3. Отже <span class="math" data-tex="\overrightarrow{AB} = (-3;\ 3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mrow><mi>A</mi><mi>B</mi></mrow><mo>&#x02192;</mo></mover><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mn>3</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">\overrightarrow{AB} = (-3;\ 3)</annotation></semantics></math></span>: кінець мінус початок.</p>
 
-    <div class="box key" id="artifacts">
-      <h2>Що в тебе є після цієї сторінки <a class="anchor-link" href="#artifacts">#</a></h2>
-      <p>Текст цього розділу ще не написаний.</p>
+    <span class="step">Крок 1 · Поняття</span>
+    <h2 id="concept">2 · Координати, вектор, скалярний добуток <a class="anchor-link" href="#concept">#</a></h2>
+    <ul>
+      <li><strong>Координати точки</strong> - її проєкції на осі: <span class="math" data-tex="(x;\ y)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>x</mi><mi>;</mi><mtext>&#x000A0;</mtext><mi>y</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(x;\ y)</annotation></semantics></math></span> на площині,
+      <span class="math" data-tex="(x;\ y;\ z)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>x</mi><mi>;</mi><mtext>&#x000A0;</mtext><mi>y</mi><mi>;</mi><mtext>&#x000A0;</mtext><mi>z</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(x;\ y;\ z)</annotation></semantics></math></span> у просторі.</li>
+      <li><strong>Вектор</strong> - напрямлений відрізок. Рівні вектори мають однакові довжину і напрям, де б вони не стояли.
+      <strong>Колінеарні</strong> вектори лежать на паралельних прямих (або на одній).</li>
+      <li><strong>Скалярний добуток</strong> двох векторів - <strong>число</strong>: добуток їхніх довжин на косинус кута між ними.</li>
+    </ul>
+
+    <span class="step">Крок 2 · Закон</span>
+    <h2 id="law">3 · Закони координат <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-vector">
+      <p class="law-name">Координати вектора і середина відрізка</p>
+      <div class="math-block" data-tex="\overrightarrow{AB} = (x_B - x_A;\ y_B - y_A;\ z_B - z_A),\qquad M = \left(\frac{x_A + x_B}{2};\ \frac{y_A + y_B}{2};\ \frac{z_A + z_B}{2}\right)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mover><mrow><mi>A</mi><mi>B</mi></mrow><mo>&#x02192;</mo></mover><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><msub><mi>x</mi><mi>B</mi></msub><mo>&#x02212;</mo><msub><mi>x</mi><mi>A</mi></msub><mi>;</mi><mtext>&#x000A0;</mtext><msub><mi>y</mi><mi>B</mi></msub><mo>&#x02212;</mo><msub><mi>y</mi><mi>A</mi></msub><mi>;</mi><mtext>&#x000A0;</mtext><msub><mi>z</mi><mi>B</mi></msub><mo>&#x02212;</mo><msub><mi>z</mi><mi>A</mi></msub><mo stretchy="false">&#x00029;</mo><mo>&#x0002C;</mo><mspace width="2em" /><mi>M</mi><mo>&#x0003D;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mfrac><mrow><msub><mi>x</mi><mi>A</mi></msub><mo>&#x0002B;</mo><msub><mi>x</mi><mi>B</mi></msub></mrow><mrow><mn>2</mn></mrow></mfrac><mi>;</mi><mtext>&#x000A0;</mtext><mfrac><mrow><msub><mi>y</mi><mi>A</mi></msub><mo>&#x0002B;</mo><msub><mi>y</mi><mi>B</mi></msub></mrow><mrow><mn>2</mn></mrow></mfrac><mi>;</mi><mtext>&#x000A0;</mtext><mfrac><mrow><msub><mi>z</mi><mi>A</mi></msub><mo>&#x0002B;</mo><msub><mi>z</mi><mi>B</mi></msub></mrow><mrow><mn>2</mn></mrow></mfrac><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow></mrow><annotation encoding="application/x-tex">\overrightarrow{AB} = (x_B - x_A;\ y_B - y_A;\ z_B - z_A),\qquad M = \left(\frac{x_A + x_B}{2};\ \frac{y_A + y_B}{2};\ \frac{z_A + z_B}{2}\right)</annotation></semantics></math></div>
     </div>
+    <div class="law" id="law-distance">
+      <p class="law-name">Відстань між точками</p>
+      <div class="math-block" data-tex="AB = \sqrt{(x_B - x_A)^2 + (y_B - y_A)^2 + (z_B - z_A)^2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mi>B</mi><mo>&#x0003D;</mo><msqrt><mrow><mo stretchy="false">&#x00028;</mo><msub><mi>x</mi><mi>B</mi></msub><mo>&#x02212;</mo><msub><mi>x</mi><mi>A</mi></msub><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0002B;</mo><mo stretchy="false">&#x00028;</mo><msub><mi>y</mi><mi>B</mi></msub><mo>&#x02212;</mo><msub><mi>y</mi><mi>A</mi></msub><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0002B;</mo><mo stretchy="false">&#x00028;</mo><msub><mi>z</mi><mi>B</mi></msub><mo>&#x02212;</mo><msub><mi>z</mi><mi>A</mi></msub><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">AB = \sqrt{(x_B - x_A)^2 + (y_B - y_A)^2 + (z_B - z_A)^2}</annotation></semantics></math></div>
+      <p>На площині третього доданка немає.</p>
+    </div>
+    <div class="law" id="law-dot">
+      <p class="law-name">Скалярний добуток</p>
+      <div class="math-block" data-tex="\vec a \cdot \vec b = x_1x_2 + y_1y_2 + z_1z_2 = |\vec a|\,|\vec b|\cos\varphi"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mover><mi>a</mi><mo stretchy="true">&#x02192;</mo></mover><mo>&#x000B7;</mo><mover><mi>b</mi><mo stretchy="true">&#x02192;</mo></mover><mo>&#x0003D;</mo><msub><mi>x</mi><mn>1</mn></msub><msub><mi>x</mi><mn>2</mn></msub><mo>&#x0002B;</mo><msub><mi>y</mi><mn>1</mn></msub><msub><mi>y</mi><mn>2</mn></msub><mo>&#x0002B;</mo><msub><mi>z</mi><mn>1</mn></msub><msub><mi>z</mi><mn>2</mn></msub><mo>&#x0003D;</mo><mo stretchy="false">&#x0007C;</mo><mover><mi>a</mi><mo stretchy="true">&#x02192;</mo></mover><mo stretchy="false">&#x0007C;</mo><mspace width="0.167em" /><mo stretchy="false">&#x0007C;</mo><mover><mi>b</mi><mo stretchy="true">&#x02192;</mo></mover><mo stretchy="false">&#x0007C;</mo><mi>cos</mi><mi>&#x003C6;</mi></mrow><annotation encoding="application/x-tex">\vec a \cdot \vec b = x_1x_2 + y_1y_2 + z_1z_2 = |\vec a|\,|\vec b|\cos\varphi</annotation></semantics></math></div>
+      <p>Вектори перпендикулярні тоді і тільки тоді, коли скалярний добуток дорівнює нулю. Колінеарні - коли їхні
+      координати пропорційні.</p>
+    </div>
+    <div class="law" id="law-circle">
+      <p class="law-name">Рівняння кола і сфери</p>
+      <div class="math-block" data-tex="(x - a)^2 + (y - b)^2 = R^2,\qquad (x - a)^2 + (y - b)^2 + (z - c)^2 = R^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mi>a</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0002B;</mo><mo stretchy="false">&#x00028;</mo><mi>y</mi><mo>&#x02212;</mo><mi>b</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>R</mi><mn>2</mn></msup><mo>&#x0002C;</mo><mspace width="2em" /><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mi>a</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0002B;</mo><mo stretchy="false">&#x00028;</mo><mi>y</mi><mo>&#x02212;</mo><mi>b</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0002B;</mo><mo stretchy="false">&#x00028;</mo><mi>z</mi><mo>&#x02212;</mo><mi>c</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>R</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(x - a)^2 + (y - b)^2 = R^2,\qquad (x - a)^2 + (y - b)^2 + (z - c)^2 = R^2</annotation></semantics></math></div>
+      <p>Центр <span class="math" data-tex="(a;\ b)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mi>;</mi><mtext>&#x000A0;</mtext><mi>b</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(a;\ b)</annotation></semantics></math></span> або <span class="math" data-tex="(a;\ b;\ c)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mi>;</mi><mtext>&#x000A0;</mtext><mi>b</mi><mi>;</mi><mtext>&#x000A0;</mtext><mi>c</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(a;\ b;\ c)</annotation></semantics></math></span>, радіус R.</p>
+    </div>
+
+    <span class="step">Крок 3 · Чому так</span>
+    <h2 id="why">4 · Звідки формули <a class="anchor-link" href="#why">#</a></h2>
+    <p><strong>Відстань.</strong> Різниці координат - катети прямокутного трикутника, відрізок AB - його гіпотенуза. Це
+    теорема Піфагора (блок 11). У просторі її застосовують двічі: спершу до діагоналі основи, потім до висоти.</p>
+    <p><strong>Коло.</strong> Коло - множина точок на відстані R від центру. Запишіть цю відстань формулою і піднесіть до
+    квадрата - вийде рівняння кола.</p>
+    <p><strong>Скалярний добуток.</strong> Застосуйте теорему косинусів до трикутника, побудованого на векторах
+    <span class="math" data-tex="\vec a"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mi>a</mi><mo stretchy="true">&#x02192;</mo></mover></mrow><annotation encoding="application/x-tex">\vec a</annotation></semantics></math></span> і <span class="math" data-tex="\vec b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mi>b</mi><mo stretchy="true">&#x02192;</mo></mover></mrow><annotation encoding="application/x-tex">\vec b</annotation></semantics></math></span>, і розпишіть довжини через координати: квадрати скоротяться, і
+    залишиться <span class="math" data-tex="x_1x_2 + y_1y_2 + z_1z_2 = |\vec a||\vec b|\cos\varphi"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><msub><mi>x</mi><mn>2</mn></msub><mo>&#x0002B;</mo><msub><mi>y</mi><mn>1</mn></msub><msub><mi>y</mi><mn>2</mn></msub><mo>&#x0002B;</mo><msub><mi>z</mi><mn>1</mn></msub><msub><mi>z</mi><mn>2</mn></msub><mo>&#x0003D;</mo><mo stretchy="false">&#x0007C;</mo><mover><mi>a</mi><mo stretchy="true">&#x02192;</mo></mover><mo stretchy="false">&#x0007C;</mo><mo stretchy="false">&#x0007C;</mo><mover><mi>b</mi><mo stretchy="true">&#x02192;</mo></mover><mo stretchy="false">&#x0007C;</mo><mi>cos</mi><mi>&#x003C6;</mi></mrow><annotation encoding="application/x-tex">x_1x_2 + y_1y_2 + z_1z_2 = |\vec a||\vec b|\cos\varphi</annotation></semantics></math></span>. При куті 90° косинус нуль -
+    звідси умова перпендикулярності.</p>
+
+    <span class="step">Крок 4 · Межі</span>
+    <h2 id="limits">5 · Де закони ламаються <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-order">
+      <p><strong>Кінець мінус початок.</strong> <span class="math" data-tex="\overrightarrow{BA} = -\overrightarrow{AB}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mrow><mi>B</mi><mi>A</mi></mrow><mo>&#x02192;</mo></mover><mo>&#x0003D;</mo><mo>&#x02212;</mo><mover><mrow><mi>A</mi><mi>B</mi></mrow><mo>&#x02192;</mo></mover></mrow><annotation encoding="application/x-tex">\overrightarrow{BA} = -\overrightarrow{AB}</annotation></semantics></math></span>: переставивши точки,
+      отримаєш протилежний вектор.</p>
+    </div>
+    <div class="limit" id="limit-number">
+      <p><strong>Скалярний добуток - число, а не вектор.</strong> Його не можна «додати до вектора», а його знак показує кут:
+      додатний - гострий, від'ємний - тупий.</p>
+    </div>
+    <div class="limit" id="limit-radius">
+      <p><strong>Праворуч у рівнянні кола - квадрат радіуса.</strong> Для <span class="math" data-tex="(x - 3)^2 + (y + 1)^2 = 16"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mn>3</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0002B;</mo><mo stretchy="false">&#x00028;</mo><mi>y</mi><mo>&#x0002B;</mo><mn>1</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><mn>16</mn></mrow><annotation encoding="application/x-tex">(x - 3)^2 + (y + 1)^2 = 16</annotation></semantics></math></span>
+      радіус 4, а центр <span class="math" data-tex="(3;\ -1)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mn>3</mn><mi>;</mi><mtext>&#x000A0;</mtext><mo>&#x02212;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(3;\ -1)</annotation></semantics></math></span>: знаки в дужках обернені, як у зсуві графіка (блок 5).</p>
+    </div>
+
+    <span class="step">Крок 5 · Застосування</span>
+    <h2 id="apply">6 · Задачі у формі НМТ <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="Б" data-limit="">
+      <p class="task-kind">Вибір однієї відповіді з п'яти · 1 бал</p>
+      <p>Знайдіть відстань між точками <span class="math" data-tex="A(1;\ 2)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>A</mi><mo stretchy="false">&#x00028;</mo><mn>1</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>2</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">A(1;\ 2)</annotation></semantics></math></span> і <span class="math" data-tex="B(4;\ 6)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>B</mi><mo stretchy="false">&#x00028;</mo><mn>4</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>6</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">B(4;\ 6)</annotation></semantics></math></span>.</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · 7</button>
+        <button type="button" data-opt="Б">Б · 5</button>
+        <button type="button" data-opt="В">В · 25</button>
+        <button type="button" data-opt="Г">Г · √7</button>
+        <button type="button" data-opt="Д">Д · 1</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#law-distance">відстань між точками</a>.</p>
+      <div class="solution"><span class="math" data-tex="\sqrt{3^2 + 4^2} = 5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msqrt><mrow><msup><mn>3</mn><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mn>4</mn><mn>2</mn></msup></mrow></msqrt><mo>&#x0003D;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">\sqrt{3^2 + 4^2} = 5</annotation></semantics></math></span>. 7 - сума різниць, 25 - забутий корінь.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="2" data-limit="">
+      <p class="task-kind">Коротка відповідь · 2 бали</p>
+      <p>Точка M - середина відрізка AB, <span class="math" data-tex="A(-2;\ 5)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>A</mi><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mn>2</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>5</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">A(-2;\ 5)</annotation></semantics></math></span>, <span class="math" data-tex="B(6;\ -1)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>B</mi><mo stretchy="false">&#x00028;</mo><mn>6</mn><mi>;</mi><mtext>&#x000A0;</mtext><mo>&#x02212;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">B(6;\ -1)</annotation></semantics></math></span>. Знайдіть абсцису точки M.</p>
+      <p><label>Відповідь: <input type="text" inputmode="decimal" size="8" aria-label="Відповідь"></label>
+      <button type="button" class="check">Перевірити</button></p>
+      <p class="law-ref">Закон: <a href="#law-vector">середина відрізка</a>.</p>
+      <div class="solution"><span class="math" data-tex="\frac{-2 + 6}{2} = 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mo>&#x02212;</mo><mn>2</mn><mo>&#x0002B;</mo><mn>6</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x0003D;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\frac{-2 + 6}{2} = 2</annotation></semantics></math></span>. Середина - середнє арифметичне кінців.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="0" data-limit="limit-number">
+      <p class="task-kind">Коротка відповідь · 2 бали</p>
+      <p>Знайдіть скалярний добуток векторів <span class="math" data-tex="\vec a(2;\ -3;\ 1)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mi>a</mi><mo stretchy="true">&#x02192;</mo></mover><mo stretchy="false">&#x00028;</mo><mn>2</mn><mi>;</mi><mtext>&#x000A0;</mtext><mo>&#x02212;</mo><mn>3</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>1</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">\vec a(2;\ -3;\ 1)</annotation></semantics></math></span> і
+      <span class="math" data-tex="\vec b(4;\ 1;\ -5)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mi>b</mi><mo stretchy="true">&#x02192;</mo></mover><mo stretchy="false">&#x00028;</mo><mn>4</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>1</mn><mi>;</mi><mtext>&#x000A0;</mtext><mo>&#x02212;</mo><mn>5</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">\vec b(4;\ 1;\ -5)</annotation></semantics></math></span>.</p>
+      <p><label>Відповідь: <input type="text" inputmode="decimal" size="8" aria-label="Відповідь"></label>
+      <button type="button" class="check">Перевірити</button></p>
+      <p class="law-ref">Закон: <a href="#law-dot">скалярний добуток</a>.</p>
+      <div class="solution"><span class="math" data-tex="8 - 3 - 5 = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>8</mn><mo>&#x02212;</mo><mn>3</mn><mo>&#x02212;</mo><mn>5</mn><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">8 - 3 - 5 = 0</annotation></semantics></math></span>: вектори перпендикулярні, хоча на рисунку цього не видно.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="Г" data-limit="limit-radius">
+      <p class="task-kind">Вибір однієї відповіді з п'яти · 1 бал</p>
+      <p>Знайдіть радіус кола <span class="math" data-tex="(x - 3)^2 + (y + 1)^2 = 16"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mn>3</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0002B;</mo><mo stretchy="false">&#x00028;</mo><mi>y</mi><mo>&#x0002B;</mo><mn>1</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><mn>16</mn></mrow><annotation encoding="application/x-tex">(x - 3)^2 + (y + 1)^2 = 16</annotation></semantics></math></span>.</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · 16</button>
+        <button type="button" data-opt="Б">Б · 3</button>
+        <button type="button" data-opt="В">В · 8</button>
+        <button type="button" data-opt="Г">Г · 4</button>
+        <button type="button" data-opt="Д">Д · 1</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#law-circle">рівняння кола</a>.</p>
+      <div class="solution"><span class="math" data-tex="R^2 = 16"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mn>16</mn></mrow><annotation encoding="application/x-tex">R^2 = 16</annotation></semantics></math></span>, R = 4. 16 - забутий квадрат, 8 - «поділили на 2».</div>
+    </div>
+
+    <span class="step">Крок 6 · Зворотний хід</span>
+    <h2 id="reverse">7 · Сам назви закон <a class="anchor-link" href="#reverse">#</a></h2>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="1" data-limit="">
+      <p class="task-kind">Коротка відповідь · 2 бали</p>
+      <p>При якому значенні m вектори <span class="math" data-tex="\vec a(2;\ m)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mi>a</mi><mo stretchy="true">&#x02192;</mo></mover><mo stretchy="false">&#x00028;</mo><mn>2</mn><mi>;</mi><mtext>&#x000A0;</mtext><mi>m</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">\vec a(2;\ m)</annotation></semantics></math></span> і <span class="math" data-tex="\vec b(3;\ -6)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mi>b</mi><mo stretchy="true">&#x02192;</mo></mover><mo stretchy="false">&#x00028;</mo><mn>3</mn><mi>;</mi><mtext>&#x000A0;</mtext><mo>&#x02212;</mo><mn>6</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">\vec b(3;\ -6)</annotation></semantics></math></span>
+      перпендикулярні?</p>
+      <p><label>Відповідь: <input type="text" inputmode="decimal" size="8" aria-label="Відповідь"></label>
+      <button type="button" class="check">Перевірити</button></p>
+      <p class="law-ref">Закон: <a href="#law-dot">скалярний добуток дорівнює нулю</a>.</p>
+      <div class="solution"><span class="math" data-tex="6 - 6m = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>6</mn><mo>&#x02212;</mo><mn>6</mn><mi>m</mi><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">6 - 6m = 0</annotation></semantics></math></span>, m = 1. «Перпендикулярні» в умові - це рівняння з блоку 4.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="3" data-limit="">
+      <p class="task-kind">Коротка відповідь · 2 бали</p>
+      <p>Знайдіть довжину відрізка з кінцями <span class="math" data-tex="A(1;\ 2;\ 3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>A</mi><mo stretchy="false">&#x00028;</mo><mn>1</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>2</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">A(1;\ 2;\ 3)</annotation></semantics></math></span> і <span class="math" data-tex="B(3;\ 4;\ 4)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>B</mi><mo stretchy="false">&#x00028;</mo><mn>3</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>4</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>4</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">B(3;\ 4;\ 4)</annotation></semantics></math></span>.</p>
+      <p><label>Відповідь: <input type="text" inputmode="decimal" size="8" aria-label="Відповідь"></label>
+      <button type="button" class="check">Перевірити</button></p>
+      <p class="law-ref">Закон: <a href="#law-distance">відстань у просторі</a>.</p>
+      <div class="solution"><span class="math" data-tex="\sqrt{4 + 4 + 1} = 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msqrt><mrow><mn>4</mn><mo>&#x0002B;</mo><mn>4</mn><mo>&#x0002B;</mo><mn>1</mn></mrow></msqrt><mo>&#x0003D;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">\sqrt{4 + 4 + 1} = 3</annotation></semantics></math></span>. Та сама формула, що й на площині, з одним доданком більше.</div>
+    </div>
+
+    <h2 id="error">8 · Знайди помилку в чужому розв'язанні <a class="anchor-link" href="#error">#</a></h2>
+    <p>Іван знаходить вектор <span class="math" data-tex="\overrightarrow{AB}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mrow><mi>A</mi><mi>B</mi></mrow><mo>&#x02192;</mo></mover></mrow><annotation encoding="application/x-tex">\overrightarrow{AB}</annotation></semantics></math></span> для <span class="math" data-tex="A(5;\ 1)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>A</mi><mo stretchy="false">&#x00028;</mo><mn>5</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>1</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">A(5;\ 1)</annotation></semantics></math></span>,
+    <span class="math" data-tex="B(2;\ 4)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>B</mi><mo stretchy="false">&#x00028;</mo><mn>2</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>4</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">B(2;\ 4)</annotation></semantics></math></span>: «<span class="math" data-tex="\overrightarrow{AB} = (5 - 2;\ 1 - 4) = (3;\ -3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mrow><mi>A</mi><mi>B</mi></mrow><mo>&#x02192;</mo></mover><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mn>5</mn><mo>&#x02212;</mo><mn>2</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>1</mn><mo>&#x02212;</mo><mn>4</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mn>3</mn><mi>;</mi><mtext>&#x000A0;</mtext><mo>&#x02212;</mo><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">\overrightarrow{AB} = (5 - 2;\ 1 - 4) = (3;\ -3)</annotation></semantics></math></span>».</p>
+    <details>
+      <summary>Де помилка?</summary>
+      <p>Іван відняв кінець від початку і отримав вектор <span class="math" data-tex="\overrightarrow{BA}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mrow><mi>B</mi><mi>A</mi></mrow><mo>&#x02192;</mo></mover></mrow><annotation encoding="application/x-tex">\overrightarrow{BA}</annotation></semantics></math></span>. Правильно
+      <span class="math" data-tex="(2 - 5;\ 4 - 1) = (-3;\ 3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mn>2</mn><mo>&#x02212;</mo><mn>5</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>4</mn><mo>&#x02212;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mn>3</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(2 - 5;\ 4 - 1) = (-3;\ 3)</annotation></semantics></math></span> (<a href="#limit-order">перша межа</a>). Довжина та сама, напрям протилежний.</p>
+    </details>
+
+    <h2 id="artifacts">Що в тебе є після цієї сторінки <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>Піфагор і теорема косинусів, записані координатами.</strong> Відстань, рівняння кола і сфери - це Піфагор;
+      скалярний добуток - теорема косинусів; простір відрізняється від площини лише третьою координатою.</p>
+    </div>
+    <p>Ти знаєш цей блок, якщо:</p>
+    <ol>
+      <li>розв'язуєш 8 з 10 задач на координати і вектори без підказки;</li>
+      <li>можеш пояснити вголос, чому формула відстані - це теорема Піфагора;</li>
+      <li>знаходиш помилку в чужому розв'язанні, як в Івановому.</li>
+    </ol>
   
 
     <footer>
       <nav class="pager" aria-label="Сусідні теми">
         <p class="pager-next">Наступна тема: <a href="13.html">Блок 13</a></p>
-        <p class="pager-prev">Попередня тема: <a href="11.html">Блок 11</a></p>
+        <p class="pager-prev">Попередня тема: <a href="11.html">Вимірювання на площині</a></p>
       </nav>
       <p class="footer-note">Сайт серії AI Factory. Зроблений тим самим оснащенням: звичайний HTML і CSS, перевірка на bash, публікація через GitHub Pages.</p>
     </footer>
