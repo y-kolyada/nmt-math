@@ -3,22 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Блок 9 · nmt-math · ai|</title>
+<title>Комбінаторика, ймовірність, статистика · nmt-math · ai|</title>
 <!-- meta: built by tools/build-meta.py - do not edit by hand -->
-<meta name="description" content="Лід сторінки: про що вона і кому потрібна.">
+<meta name="description" content="Лічба, застосована не до предметів, а до варіантів.">
 <link rel="canonical" href="https://y-kolyada.github.io/nmt-math/uk/09.html">
 <link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/09.html">
 <link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/09.html">
 <link rel="alternate" hreflang="x-default" href="https://y-kolyada.github.io/nmt-math/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="nmt-math">
-<meta property="og:title" content="Блок 9">
-<meta property="og:description" content="Лід сторінки: про що вона і кому потрібна.">
+<meta property="og:title" content="Комбінаторика, ймовірність, статистика">
+<meta property="og:description" content="Лічба, застосована не до предметів, а до варіантів.">
 <meta property="og:url" content="https://y-kolyada.github.io/nmt-math/uk/09.html">
 <meta property="og:locale" content="uk_UA">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Блок 9","description":"Лід сторінки: про що вона і кому потрібна.","url":"https://y-kolyada.github.io/nmt-math/uk/09.html","inLanguage":"uk","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Комбінаторика, ймовірність, статистика","description":"Лічба, застосована не до предметів, а до варіантів.","url":"https://y-kolyada.github.io/nmt-math/uk/09.html","inLanguage":"uk","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
 <!-- /meta -->
 <link rel="stylesheet" href="../assets/style.css?v=1">
 <link rel="stylesheet" href="../assets/study.css?v=1">
@@ -90,28 +90,187 @@
   </nav>
 
   <main id="main">
-    <h1>Блок 9</h1>
-    <p class="page-size" data-words="48">Слів: 48</p>
-    <p class="lead">Лід сторінки: про що вона і кому потрібна. Одне речення, не довше за 160 знаків.</p>
+    <h1>Комбінаторика, ймовірність, статистика</h1>
+    <p class="page-size" data-words="823">Слів: 823</p>
+    <p class="lead">Лічба, застосована не до предметів, а до варіантів. Ймовірність - це та сама лічба: скільки
+    варіантів сприятливих серед усіх рівноможливих.</p>
 
     <div class="box key" id="key-idea">
       <h2>Головна думка сторінки <a class="anchor-link" href="#key-idea" aria-label="посилання на цей блок">#</a></h2>
-      <p>Текст цього розділу ще не написаний.</p>
+      <p>Уся комбінаторика стоїть на одному правилі добутку і одному запитанні: чи важливий порядок. Класична
+      ймовірність - частка, і вся її складність у тому, щоб правильно порахувати чисельник і знаменник серед
+      <strong>рівноможливих</strong> наслідків. Статистика описує вже зібрані числа: середнє, медіана, мода, розмах.
+      Блок уміє рахувати шанси; передбачити окремий результат він не може і не обіцяє.</p>
     </div>
 
-    <h2 id="first">1 · Блок 1 <a class="anchor-link" href="#first">#</a></h2>
-    <p>Текст цього розділу ще не написаний.</p>
+    <span class="step">Крок 0 · Зачіпка</span>
+    <h2 id="hook">1 · Двоє чергових з п'яти <a class="anchor-link" href="#hook">#</a></h2>
+    <p>Скількома способами можна обрати двох чергових з п'яти учнів? Звичний хід: «першого 5 способами, другого 4,
+    разом 20». Але пара «Оля і Ігор» і пара «Ігор і Оля» - та сама пара чергових. Кожну пару пораховано двічі, тому
+    правильна відповідь <span class="math" data-tex="20 : 2 = 10"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>20</mn><mi>:</mi><mn>2</mn><mo>&#x0003D;</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">20 : 2 = 10</annotation></semantics></math></span>. Якби обирали чергового і його заступника,
+    порядок був би важливий і відповідь 20 була б правильною.</p>
 
-    <div class="box key" id="artifacts">
-      <h2>Що в тебе є після цієї сторінки <a class="anchor-link" href="#artifacts">#</a></h2>
-      <p>Текст цього розділу ще не написаний.</p>
+    <span class="step">Крок 1 · Поняття</span>
+    <h2 id="concept">2 · Варіанти, події, ряди даних <a class="anchor-link" href="#concept">#</a></h2>
+    <ul>
+      <li><strong>Перестановка</strong> - упорядкування всіх n елементів. <strong>Розміщення</strong> - упорядкований вибір k з n.
+      <strong>Комбінація</strong> - невпорядкований вибір k з n.</li>
+      <li><strong>Випадкова подія</strong> - результат, який може відбутися або ні. <strong>Рівноможливі наслідки</strong> - жоден не має
+      переваги над іншим (грань кубика, сторона чесної монети).</li>
+      <li><strong>Середнє</strong> - сума даних, поділена на їх кількість. <strong>Медіана</strong> - середнє за місцем значення
+      впорядкованого ряду. <strong>Мода</strong> - значення, яке трапляється найчастіше. <strong>Розмах</strong> - різниця
+      найбільшого і найменшого.</li>
+    </ul>
+
+    <span class="step">Крок 2 · Закон</span>
+    <h2 id="law">3 · Закони лічби і ймовірності <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-product">
+      <p class="law-name">Правило добутку</p>
+      <p>Якщо перший вибір можна зробити m способами, а після нього другий - n способами, то пару виборів можна зробити
+      <span class="math" data-tex="m \cdot n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>m</mi><mo>&#x000B7;</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m \cdot n</annotation></semantics></math></span> способами.</p>
     </div>
+    <div class="law" id="law-formulas">
+      <p class="law-name">Перестановки, розміщення, комбінації</p>
+      <div class="math-block" data-tex="P_n = n!,\qquad A_n^k = \frac{n!}{(n - k)!},\qquad C_n^k = \frac{n!}{k!\,(n - k)!}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>P</mi><mi>n</mi></msub><mo>&#x0003D;</mo><mi>n</mi><mo>&#x00021;</mo><mo>&#x0002C;</mo><mspace width="2em" /><msubsup><mi>A</mi><mi>n</mi><mi>k</mi></msubsup><mo>&#x0003D;</mo><mfrac><mrow><mi>n</mi><mo>&#x00021;</mo></mrow><mrow><mo stretchy="false">&#x00028;</mo><mi>n</mi><mo>&#x02212;</mo><mi>k</mi><mo stretchy="false">&#x00029;</mo><mo>&#x00021;</mo></mrow></mfrac><mo>&#x0002C;</mo><mspace width="2em" /><msubsup><mi>C</mi><mi>n</mi><mi>k</mi></msubsup><mo>&#x0003D;</mo><mfrac><mrow><mi>n</mi><mo>&#x00021;</mo></mrow><mrow><mi>k</mi><mo>&#x00021;</mo><mspace width="0.167em" /><mo stretchy="false">&#x00028;</mo><mi>n</mi><mo>&#x02212;</mo><mi>k</mi><mo stretchy="false">&#x00029;</mo><mo>&#x00021;</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">P_n = n!,\qquad A_n^k = \frac{n!}{(n - k)!},\qquad C_n^k = \frac{n!}{k!\,(n - k)!}</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-probability">
+      <p class="law-name">Класична ймовірність</p>
+      <div class="math-block" data-tex="P(A) = \frac{m}{n},\qquad 0 \leq P(A) \leq 1,\qquad P(\overline{A}) = 1 - P(A)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">&#x00028;</mo><mi>A</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mfrac><mrow><mi>m</mi></mrow><mrow><mi>n</mi></mrow></mfrac><mo>&#x0002C;</mo><mspace width="2em" /><mn>0</mn><mo>&#x02264;</mo><mi>P</mi><mo stretchy="false">&#x00028;</mo><mi>A</mi><mo stretchy="false">&#x00029;</mo><mo>&#x02264;</mo><mn>1</mn><mo>&#x0002C;</mo><mspace width="2em" /><mi>P</mi><mo stretchy="false">&#x00028;</mo><mover><mrow><mi>A</mi></mrow><mo accent="true">&#x02015;</mo></mover><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>1</mn><mo>&#x02212;</mo><mi>P</mi><mo stretchy="false">&#x00028;</mo><mi>A</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">P(A) = \frac{m}{n},\qquad 0 \leq P(A) \leq 1,\qquad P(\overline{A}) = 1 - P(A)</annotation></semantics></math></div>
+      <p>де n - кількість усіх рівноможливих наслідків, m - кількість сприятливих для події A.</p>
+    </div>
+
+    <span class="step">Крок 3 · Чому так</span>
+    <h2 id="why">4 · Звідки формули <a class="anchor-link" href="#why">#</a></h2>
+    <p><strong>Перестановки.</strong> На перше місце - n кандидатів, на друге - <span class="math" data-tex="n - 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>n</mi><mo>&#x02212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n - 1</annotation></semantics></math></span>, і так далі: правило
+    добутку дає <span class="math" data-tex="n \cdot (n - 1) \cdot \ldots \cdot 1 = n!"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>n</mi><mo>&#x000B7;</mo><mo stretchy="false">&#x00028;</mo><mi>n</mi><mo>&#x02212;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo><mo>&#x000B7;</mo><mi>&#x02026;</mi><mo>&#x000B7;</mo><mn>1</mn><mo>&#x0003D;</mo><mi>n</mi><mo>&#x00021;</mo></mrow><annotation encoding="application/x-tex">n \cdot (n - 1) \cdot \ldots \cdot 1 = n!</annotation></semantics></math></span>. Розміщення - той самий добуток,
+    обірваний після k множників.</p>
+    <p><strong>Комбінації.</strong> Кожну невпорядковану групу з k елементів можна впорядкувати <span class="math" data-tex="k!"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>k</mi><mo>&#x00021;</mo></mrow><annotation encoding="application/x-tex">k!</annotation></semantics></math></span> способами, і всі
+    ці впорядкування враховані в <span class="math" data-tex="A_n^k"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msubsup><mi>A</mi><mi>n</mi><mi>k</mi></msubsup></mrow><annotation encoding="application/x-tex">A_n^k</annotation></semantics></math></span>. Тому <span class="math" data-tex="C_n^k = \frac{A_n^k}{k!}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msubsup><mi>C</mi><mi>n</mi><mi>k</mi></msubsup><mo>&#x0003D;</mo><mfrac><mrow><msubsup><mi>A</mi><mi>n</mi><mi>k</mi></msubsup></mrow><mrow><mi>k</mi><mo>&#x00021;</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">C_n^k = \frac{A_n^k}{k!}</annotation></semantics></math></span> - це і є
+    ділення на 2 із зачіпки.</p>
+    <p><strong>Протилежна подія.</strong> Кожен наслідок або сприяє A, або ні, тому <span class="math" data-tex="m_A + m_{\overline{A}} = n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>m</mi><mi>A</mi></msub><mo>&#x0002B;</mo><msub><mi>m</mi><mrow><mover><mrow><mi>A</mi></mrow><mo accent="true">&#x02015;</mo></mover></mrow></msub><mo>&#x0003D;</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m_A + m_{\overline{A}} = n</annotation></semantics></math></span>. Ділимо на n.</p>
+
+    <span class="step">Крок 4 · Межі</span>
+    <h2 id="limits">5 · Де закони ламаються <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-order">
+      <p><strong>Головне запитання - чи важливий порядок.</strong> Пароль, черга, розклад - важливий (розміщення, перестановки).
+      Команда, набір, комісія - не важливий (комбінації).</p>
+    </div>
+    <div class="limit" id="limit-equal">
+      <p><strong>Класична формула вимагає рівноможливих наслідків.</strong> Сум на двох кубиках 11 (від 2 до 12), але вони
+      не рівноможливі: сума 7 виходить шістьма способами, сума 2 - одним. Рахувати треба пари граней: їх 36.</p>
+    </div>
+    <div class="limit" id="limit-median">
+      <p><strong>Медіану шукають у впорядкованому ряді.</strong> При парній кількості даних медіана - середнє двох
+      центральних чисел. А середнє, на відміну від медіани, чутливе до одного дуже великого значення.</p>
+    </div>
+
+    <span class="step">Крок 5 · Застосування</span>
+    <h2 id="apply">6 · Задачі у формі НМТ <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="Г" data-limit="limit-order">
+      <p class="task-kind">Вибір однієї відповіді з п'яти · 1 бал</p>
+      <p>Скількома способами можна поставити на полицю в ряд чотири різні книжки?</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · 4</button>
+        <button type="button" data-opt="Б">Б · 8</button>
+        <button type="button" data-opt="В">В · 16</button>
+        <button type="button" data-opt="Г">Г · 24</button>
+        <button type="button" data-opt="Д">Д · 256</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#law-formulas">перестановки</a>.</p>
+      <div class="solution"><span class="math" data-tex="4! = 24"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>4</mn><mo>&#x00021;</mo><mo>&#x0003D;</mo><mn>24</mn></mrow><annotation encoding="application/x-tex">4! = 24</annotation></semantics></math></span>. 256 - це <span class="math" data-tex="4^4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>4</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">4^4</annotation></semantics></math></span>: так було б, якби одну
+      книжку можна було поставити кілька разів.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="120" data-limit="limit-order">
+      <p class="task-kind">Коротка відповідь · 2 бали</p>
+      <p>Із 10 учнів класу треба обрати трьох для участі в олімпіаді. Скількома способами це можна зробити?</p>
+      <p><label>Відповідь: <input type="text" inputmode="decimal" size="8" aria-label="Відповідь"></label>
+      <button type="button" class="check">Перевірити</button></p>
+      <p class="law-ref">Закон: <a href="#law-formulas">комбінації</a>: порядок не важливий.</p>
+      <div class="solution"><span class="math" data-tex="C_{10}^3 = \frac{10 \cdot 9 \cdot 8}{3!} = 120"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msubsup><mi>C</mi><mrow><mn>10</mn></mrow><mn>3</mn></msubsup><mo>&#x0003D;</mo><mfrac><mrow><mn>10</mn><mo>&#x000B7;</mo><mn>9</mn><mo>&#x000B7;</mo><mn>8</mn></mrow><mrow><mn>3</mn><mo>&#x00021;</mo></mrow></mfrac><mo>&#x0003D;</mo><mn>120</mn></mrow><annotation encoding="application/x-tex">C_{10}^3 = \frac{10 \cdot 9 \cdot 8}{3!} = 120</annotation></semantics></math></span>. Без ділення на
+      <span class="math" data-tex="3! = 6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>3</mn><mo>&#x00021;</mo><mo>&#x0003D;</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">3! = 6</annotation></semantics></math></span> вийшло б 720 - кількість упорядкованих трійок.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="0,8" data-limit="">
+      <p class="task-kind">Коротка відповідь · 2 бали</p>
+      <p>У коробці 3 червоні, 5 синіх і 2 білі кульки. Навмання беруть одну. Знайдіть ймовірність того, що вона
+      <strong>не</strong> біла.</p>
+      <p><label>Відповідь: <input type="text" inputmode="decimal" size="8" aria-label="Відповідь"></label>
+      <button type="button" class="check">Перевірити</button></p>
+      <p class="law-ref">Закон: <a href="#law-probability">протилежна подія</a>.</p>
+      <div class="solution"><span class="math" data-tex="P(\text{біла}) = \frac{2}{10} = 0\text{,}2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>P</mi><mo stretchy="false">&#x00028;</mo><mtext>біла</mtext><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>10</mn></mrow></mfrac><mo>&#x0003D;</mo><mn>0</mn><mtext>,</mtext><mn>2</mn></mrow><annotation encoding="application/x-tex">P(\text{біла}) = \frac{2}{10} = 0\text{,}2</annotation></semantics></math></span>, тому
+      <span class="math" data-tex="P = 1 - 0\text{,}2 = 0\text{,}8"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>P</mi><mo>&#x0003D;</mo><mn>1</mn><mo>&#x02212;</mo><mn>0</mn><mtext>,</mtext><mn>2</mn><mo>&#x0003D;</mo><mn>0</mn><mtext>,</mtext><mn>8</mn></mrow><annotation encoding="application/x-tex">P = 1 - 0\text{,}2 = 0\text{,}8</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="match" data-answer="Б А В" data-limit="limit-median">
+      <p class="task-kind">Встановлення відповідності · 3 бали</p>
+      <p>Дано ряд даних: 2, 3, 3, 5, 7. До кожної характеристики (1-3) доберіть її значення (А-Д).</p>
+      <ul class="pairs">
+        <li><label>1. Середнє значення
+          <select aria-label="Відповідь до характеристики 1"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+        <li><label>2. Медіана
+          <select aria-label="Відповідь до характеристики 2"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+        <li><label>3. Розмах
+          <select aria-label="Відповідь до характеристики 3"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+      </ul>
+      <p>А · 3 &nbsp; Б · 4 &nbsp; В · 5 &nbsp; Г · 7 &nbsp; Д · 2</p>
+      <p><button type="button" class="check">Перевірити</button></p>
+      <p class="law-ref">Поняття: <a href="#concept">характеристики ряду даних</a>.</p>
+      <div class="solution">Середнє <span class="math" data-tex="\frac{20}{5} = 4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>20</mn></mrow><mrow><mn>5</mn></mrow></mfrac><mo>&#x0003D;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">\frac{20}{5} = 4</annotation></semantics></math></span>; медіана - третє з п'яти, 3; розмах
+      <span class="math" data-tex="7 - 2 = 5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>7</mn><mo>&#x02212;</mo><mn>2</mn><mo>&#x0003D;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">7 - 2 = 5</annotation></semantics></math></span>. Мода тут теж 3, але її не питали.</div>
+    </div>
+
+    <span class="step">Крок 6 · Зворотний хід</span>
+    <h2 id="reverse">7 · Сам назви закон <a class="anchor-link" href="#reverse">#</a></h2>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="10000" data-limit="">
+      <p class="task-kind">Коротка відповідь · 2 бали</p>
+      <p>Скільки існує чотиризначних кодів для замка, якщо кожна цифра коду може бути від 0 до 9 і цифри можуть
+      повторюватися?</p>
+      <p><label>Відповідь: <input type="text" inputmode="decimal" size="8" aria-label="Відповідь"></label>
+      <button type="button" class="check">Перевірити</button></p>
+      <p class="law-ref">Закон: <a href="#law-product">правило добутку</a>.</p>
+      <div class="solution">На кожне з чотирьох місць - 10 варіантів незалежно від інших: <span class="math" data-tex="10^4 = 10000"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>10</mn><mn>4</mn></msup><mo>&#x0003D;</mo><mn>10000</mn></mrow><annotation encoding="application/x-tex">10^4 = 10000</annotation></semantics></math></span>.
+      Тут жодна з трьох формул не потрібна: повторення дозволені.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="0,25" data-limit="limit-equal">
+      <p class="task-kind">Коротка відповідь · 2 бали</p>
+      <p>Монету кидають двічі. Знайдіть ймовірність того, що обидва рази випаде герб.</p>
+      <p><label>Відповідь: <input type="text" inputmode="decimal" size="8" aria-label="Відповідь"></label>
+      <button type="button" class="check">Перевірити</button></p>
+      <p class="law-ref">Закони: <a href="#law-product">правило добутку</a> і <a href="#law-probability">класична ймовірність</a>.</p>
+      <div class="solution">Рівноможливих наслідків <span class="math" data-tex="2 \cdot 2 = 4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>2</mn><mo>&#x000B7;</mo><mn>2</mn><mo>&#x0003D;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">2 \cdot 2 = 4</annotation></semantics></math></span> (ГГ, ГЦ, ЦГ, ЦЦ), сприятливий один:
+      0,25. Сліпий хід «0, 1 або 2 герби - три результати» дає 1/3, бо ці три результати не рівноможливі.</div>
+    </div>
+
+    <h2 id="error">8 · Знайди помилку в чужому розв'язанні <a class="anchor-link" href="#error">#</a></h2>
+    <p>Тарас міркує: «На двох кубиках сума буває від 2 до 12, тобто 11 варіантів. Отже, ймовірність, що сума дорівнює 7,
+    становить 1/11».</p>
+    <details>
+      <summary>Де помилка?</summary>
+      <p>Ці 11 сум не рівноможливі (<a href="#limit-equal">друга межа</a>). Рівноможливі - 36 пар граней, і сума 7 виходить у
+      шести з них: (1; 6), (2; 5), …, (6; 1). Відповідь <span class="math" data-tex="\frac{6}{36} = \frac{1}{6}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>6</mn></mrow><mrow><mn>36</mn></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{6}{36} = \frac{1}{6}</annotation></semantics></math></span>.</p>
+    </details>
+
+    <h2 id="artifacts">Що в тебе є після цієї сторінки <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>Одне правило і одне запитання.</strong> Правило добутку дає всі формули комбінаторики, а запитання «чи
+      важливий порядок» вибирає між ними. Ймовірність - це лічба, але лише серед рівноможливих наслідків.</p>
+    </div>
+    <p>Ти знаєш цей блок, якщо:</p>
+    <ol>
+      <li>розв'язуєш 8 з 10 задач на лічбу варіантів і ймовірність без підказки;</li>
+      <li>можеш пояснити вголос, чому в комбінаціях ділять на <span class="math" data-tex="k!"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>k</mi><mo>&#x00021;</mo></mrow><annotation encoding="application/x-tex">k!</annotation></semantics></math></span>;</li>
+      <li>знаходиш помилку в чужому розв'язанні, як у Тарасовому.</li>
+    </ol>
   
 
     <footer>
       <nav class="pager" aria-label="Сусідні теми">
         <p class="pager-next">Наступна тема: <a href="10.html">Блок 10</a></p>
-        <p class="pager-prev">Попередня тема: <a href="08.html">Блок 8</a></p>
+        <p class="pager-prev">Попередня тема: <a href="08.html">Похідна та інтеграл</a></p>
       </nav>
       <p class="footer-note">Сайт серії AI Factory. Зроблений тим самим оснащенням: звичайний HTML і CSS, перевірка на bash, публікація через GitHub Pages.</p>
     </footer>
