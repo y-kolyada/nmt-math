@@ -46,4 +46,4 @@ details[open] summary { margin-bottom: 6px; }
 
 /* Группа блоков в меню: подпись, а не пункт (check-struct считает только <li>). */
 nav.contents li.group { font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em;
-  color: var(--dim); margin: 1rem 0 .3rem; list-style: none; }
+  color: var(--dim); margin: .5rem 0 .15rem 10px; list-style: none; }
