@@ -1,0 +1,83 @@
+# Profile `study`: the school study sites
+
+This file is part of the charter for every site whose `site.conf` says
+`profile = study`. Where it differs from `AGENTS.md`, this file wins; where it is
+silent, `AGENTS.md` holds. It reaches the sites through `sync.sh` like the charter.
+
+Born on `nmt-math` (2026-11-08, accepted by the Conductor 2026-11-09). The
+numbers below live in `tools/siteconf.py`; this file says why they are what
+they are.
+
+## 1. Skeleton
+
+1. **Languages.** Ukrainian is the source (`uk/`), Russian is the second
+   language (`ru/`), translated at the very end. English, if it ever comes, is
+   one `langs` override in `site.conf`, not a new profile.
+2. **Thirteen blocks, not fifteen sections.** Pages `01`-`13` are blocks of the
+   subject in the order the subject grew, each built from the previous ones.
+   There are no example chapters and no question banks: practice lives inside
+   every block, bound to its law. The menu may group the blocks with
+   `<li class="group">Алгебра і початки аналізу</li>`: a group is a caption,
+   not an item, and the checks count only items.
+3. **Navigator: seven subject lenses** instead of the nine engineering ones:
+   `lens-language` (мова і запис), `lens-laws` (закони), `lens-proof`
+   (доведення), `lens-scope` (застосовність), `lens-limits` (межі),
+   `lens-links` (зв'язки між розділами), `lens-traps` (пастки формулювань
+   НМТ). Each written lens ends with `<p><strong>Пов'язані блоки курсу:</strong> ...</p>`.
+4. The glossary, the navigator, the term cards and every series rule about
+   them hold as in `AGENTS.md`, read for the Ukrainian source.
+
+## 2. The unit is a law, not a task type
+
+A block holds several laws. Each law follows the chain that the prototype
+proved, in this order, with the step label above the heading:
+
+| Step | What | Why |
+| --- | --- | --- |
+| 0 · Зачіпка | a case where the habitual blind move gives a wrong answer | a habit is changed only by its own failure |
+| 1 · Поняття | what the object is, in the language of mathematics | without the object a law is a string of signs |
+| 2 · Закон | the formula in a frame, `<div class="law" id="law-...">` | what must be recognised in seconds |
+| 3 · Чому так | a proof or a clear intuition, for the age | a law without "why" never binds to an example |
+| 4 · Межі | `<div class="limit" id="limit-...">`: where the law breaks | half of exam errors are a law used outside its domain |
+| 5 · Застосування | tasks in the exam's forms, each naming its law | the law and the task are tied explicitly |
+| 6 · Зворотний хід | a task without the hint: the reader names the law | stripping the plot off a task is the exam's main skill |
+
+A block may run the chain once per law or gather steps 5 and 6 for several
+laws at the end; the order of steps inside one law does not change.
+
+**No inflation.** A worked task names as many laws as actually work in it,
+usually one or two. A story about a video sped up 1.5 times is `t = S / k`,
+not three "laws".
+
+**Three predicates close every block**: I solve 8 of 10 tasks of this kind
+without a hint; I explain aloud why the formula works; I find the error in
+someone else's solution. Every block carries one "find the error" item.
+
+## 3. The trainer contract (`assets/trainer.js`)
+
+A task is `<div class="task" data-kind="choice|short|match" data-answer="..." data-limit="limit-id">`
+with a `.task-kind` line (form and points), a `<p class="law-ref">` naming the law
+with a link to its frame, and a `<div class="solution">` with the worked answer.
+
+- The solution stays closed until a correct answer: an answer seen before the
+  attempt teaches reading answers, not the law. After the second wrong
+  attempt a "Показати розбір" button appears.
+- A wrong answer leads to the law and its limit, never to the right answer.
+- `data-mode="reverse"` hides the law line too until the task is solved
+  (step 6).
+- Choice: buttons `data-opt="А".."Д"`; wrong options are real blind moves,
+  explained in the solution. Match: three `<select>`, `data-answer="В Б А"`.
+  Short: one `<input>`, comma or dot accepted, Unicode minus accepted.
+
+## 4. Sources and rights
+
+Exam papers (zno.osvita.ua, УЦОЯО) are not copied: the tasks there are images
+and the rights are not ours. Every task on a study site is our own analogue;
+a link to an official task may stand next to it. Figures are our own SVG.
+
+## 5. Formulas
+
+TeX in `data-tex`, baked by `tools/build-math.py`. **The decimal comma is
+written `0\text{,}25`**: `0{,}25` bakes into an operator comma and the reader
+sees "0, 25". Every second number in Ukrainian mathematics has a comma, so
+this is not a corner case.

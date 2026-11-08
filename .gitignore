@@ -1,0 +1,15 @@
+# The browser check is run through a symlink to the factory's node_modules.
+node_modules
+# Python leaves these next to the tools.
+__pycache__/
+*.pyc
+# Session analytics written by the harness: the file name carries a work email slug.
+docs/codemie/
+.codemie/
+# The kubeconfig of a site that proves its claims against a cluster, written by
+# its own tools/cluster.sh. It holds an admin certificate and belongs to the
+# host, not to the repository. The line stands in the seed rather than on the
+# one site that has a cluster today: a site-local ignore is wiped by the next
+# sync.sh, and this one was - on devops-helm, on 31.10.2026, which is how the
+# line got here.
+.cluster/
