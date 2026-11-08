@@ -3,22 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Блок 11 · nmt-math · ai|</title>
+<title>Вимірювання на площині · nmt-math · ai|</title>
 <!-- meta: built by tools/build-meta.py - do not edit by hand -->
-<meta name="description" content="Лід сторінки: про що вона і кому потрібна.">
+<meta name="description" content="Фігурам з блоку 10 ставлять у відповідність числа: довжини, кути, площі.">
 <link rel="canonical" href="https://y-kolyada.github.io/nmt-math/uk/11.html">
 <link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/11.html">
 <link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/11.html">
 <link rel="alternate" hreflang="x-default" href="https://y-kolyada.github.io/nmt-math/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="nmt-math">
-<meta property="og:title" content="Блок 11">
-<meta property="og:description" content="Лід сторінки: про що вона і кому потрібна.">
+<meta property="og:title" content="Вимірювання на площині">
+<meta property="og:description" content="Фігурам з блоку 10 ставлять у відповідність числа: довжини, кути, площі.">
 <meta property="og:url" content="https://y-kolyada.github.io/nmt-math/uk/11.html">
 <meta property="og:locale" content="uk_UA">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Блок 11","description":"Лід сторінки: про що вона і кому потрібна.","url":"https://y-kolyada.github.io/nmt-math/uk/11.html","inLanguage":"uk","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Вимірювання на площині","description":"Фігурам з блоку 10 ставлять у відповідність числа: довжини, кути, площі.","url":"https://y-kolyada.github.io/nmt-math/uk/11.html","inLanguage":"uk","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
 <!-- /meta -->
 <link rel="stylesheet" href="../assets/style.css?v=1">
 <link rel="stylesheet" href="../assets/study.css?v=1">
@@ -90,28 +90,180 @@
   </nav>
 
   <main id="main">
-    <h1>Блок 11</h1>
-    <p class="page-size" data-words="48">Слів: 48</p>
-    <p class="lead">Лід сторінки: про що вона і кому потрібна. Одне речення, не довше за 160 знаків.</p>
+    <h1>Вимірювання на площині</h1>
+    <p class="page-size" data-words="701">Слів: 701</p>
+    <p class="lead">Фігурам з блоку 10 ставлять у відповідність числа: довжини, кути, площі. Майже кожна формула
+    тут - або теорема Піфагора, або площа прямокутника, розрізаного і складеного інакше.</p>
 
     <div class="box key" id="key-idea">
       <h2>Головна думка сторінки <a class="anchor-link" href="#key-idea" aria-label="посилання на цей блок">#</a></h2>
-      <p>Текст цього розділу ще не написаний.</p>
+      <p>Теорема косинусів - це Піфагор для будь-якого трикутника, а площа трикутника через синус - це «половина основи на
+      висоту», де висоту записано через кут. Площі фігур виводяться з площі прямокутника розрізанням. І одне правило,
+      яке рятує бали: площа росте як квадрат лінійного розміру, об'єм (блок 13) - як куб. Блок уміє міряти; розташування
+      фігур у координатах - тема блоку 12.</p>
     </div>
 
-    <h2 id="first">1 · Блок 1 <a class="anchor-link" href="#first">#</a></h2>
-    <p>Текст цього розділу ще не написаний.</p>
+    <span class="step">Крок 0 · Зачіпка</span>
+    <h2 id="hook">1 · Сторону подвоїли - площа подвоїлася? <a class="anchor-link" href="#hook">#</a></h2>
+    <p>Квадрат зі стороною 3 має площу 9. Сторону подвоїли. Звична відповідь: «площа теж подвоїлася, 18». Але квадрат
+    зі стороною 6 має площу 36 - учетверо більшу. Його можна скласти з чотирьох початкових квадратів. Площа
+    залежить від двох вимірів, і кожен з них подвоївся.</p>
 
-    <div class="box key" id="artifacts">
-      <h2>Що в тебе є після цієї сторінки <a class="anchor-link" href="#artifacts">#</a></h2>
-      <p>Текст цього розділу ще не написаний.</p>
+    <span class="step">Крок 1 · Поняття</span>
+    <h2 id="concept">2 · Довжина, кут, площа <a class="anchor-link" href="#concept">#</a></h2>
+    <ul>
+      <li>У <strong>прямокутному трикутнику</strong>: синус гострого кута - відношення протилежного катета до гіпотенузи, косинус -
+      прилеглого катета до гіпотенузи, тангенс - протилежного катета до прилеглого.</li>
+      <li><strong>Площа</strong> - скільки одиничних квадратів вміщує фігура. Рівні фігури мають рівні площі, а площа фігури,
+      складеної з частин, - сума площ частин.</li>
+      <li><strong>Коефіцієнт подібності</strong> k - у скільки разів довжини однієї фігури більші за відповідні довжини іншої.</li>
+    </ul>
+
+    <span class="step">Крок 2 · Закон</span>
+    <h2 id="law">3 · Закони вимірювання <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-pythagoras">
+      <p class="law-name">Теорема Піфагора</p>
+      <div class="math-block" data-tex="c^2 = a^2 + b^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">c^2 = a^2 + b^2</annotation></semantics></math></div>
+      <p>c - гіпотенуза, a і b - катети прямокутного трикутника.</p>
     </div>
+    <div class="law" id="law-cosines">
+      <p class="law-name">Теорема косинусів і теорема синусів</p>
+      <div class="math-block" data-tex="c^2 = a^2 + b^2 - 2ab\cos C,\qquad \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi><mi>C</mi><mo>&#x0002C;</mo><mspace width="2em" /><mfrac><mrow><mi>a</mi></mrow><mrow><mi>sin</mi><mi>A</mi></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mi>b</mi></mrow><mrow><mi>sin</mi><mi>B</mi></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mi>c</mi></mrow><mrow><mi>sin</mi><mi>C</mi></mrow></mfrac><mo>&#x0003D;</mo><mn>2</mn><mi>R</mi></mrow><annotation encoding="application/x-tex">c^2 = a^2 + b^2 - 2ab\cos C,\qquad \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-areas">
+      <p class="law-name">Площі</p>
+      <div class="math-block" data-tex="S_\triangle = \frac{1}{2}ah = \frac{1}{2}ab\sin C,\qquad S_{\text{трап}} = \frac{a + b}{2}\,h,\qquad S_{\text{круга}} = \pi r^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>S</mi><mi>&#x025B3;</mi></msub><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>a</mi><mi>h</mi><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>a</mi><mi>b</mi><mi>sin</mi><mi>C</mi><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>S</mi><mrow><mtext>трап</mtext></mrow></msub><mo>&#x0003D;</mo><mfrac><mrow><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi></mrow><mrow><mn>2</mn></mrow></mfrac><mspace width="0.167em" /><mi>h</mi><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>S</mi><mrow><mtext>круга</mtext></mrow></msub><mo>&#x0003D;</mo><mi>&#x003C0;</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">S_\triangle = \frac{1}{2}ah = \frac{1}{2}ab\sin C,\qquad S_{\text{трап}} = \frac{a + b}{2}\,h,\qquad S_{\text{круга}} = \pi r^2</annotation></semantics></math></div>
+      <p>Довжина кола <span class="math" data-tex="C = 2\pi r"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>C</mi><mo>&#x0003D;</mo><mn>2</mn><mi>&#x003C0;</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">C = 2\pi r</annotation></semantics></math></span>; паралелограм <span class="math" data-tex="S = ah"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>S</mi><mo>&#x0003D;</mo><mi>a</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">S = ah</annotation></semantics></math></span>.</p>
+    </div>
+    <div class="law" id="law-scale">
+      <p class="law-name">Площі подібних фігур</p>
+      <div class="math-block" data-tex="\frac{S_1}{S_2} = k^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><msub><mi>S</mi><mn>1</mn></msub></mrow><mrow><msub><mi>S</mi><mn>2</mn></msub></mrow></mfrac><mo>&#x0003D;</mo><msup><mi>k</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{S_1}{S_2} = k^2</annotation></semantics></math></div>
+    </div>
+
+    <span class="step">Крок 3 · Чому так</span>
+    <h2 id="why">4 · Звідки формули <a class="anchor-link" href="#why">#</a></h2>
+    <p><strong>Піфагор.</strong> Квадрат зі стороною <span class="math" data-tex="a + b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a + b</annotation></semantics></math></span> можна заповнити чотирма однаковими прямокутними
+    трикутниками і квадратом на гіпотенузі в середині. Площа: <span class="math" data-tex="(a + b)^2 = 4 \cdot \frac{ab}{2} + c^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><mn>4</mn><mo>&#x000B7;</mo><mfrac><mrow><mi>a</mi><mi>b</mi></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x0002B;</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(a + b)^2 = 4 \cdot \frac{ab}{2} + c^2</annotation></semantics></math></span>.
+    Розкрийте квадрат суми (блок 3) - залишиться <span class="math" data-tex="a^2 + b^2 = c^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">a^2 + b^2 = c^2</annotation></semantics></math></span>.</p>
+    <p><strong>Косинуси.</strong> При <span class="math" data-tex="C = 90^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>C</mi><mo>&#x0003D;</mo><msup><mn>90</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">C = 90^\circ</annotation></semantics></math></span> косинус нуль, і формула стає Піфагором. Доданок
+    <span class="math" data-tex="-2ab\cos C"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02212;</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">-2ab\cos C</annotation></semantics></math></span> - поправка на те, наскільки кут відрізняється від прямого.</p>
+    <p><strong>Площа через синус.</strong> Висота до сторони a дорівнює <span class="math" data-tex="b\sin C"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>b</mi><mi>sin</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">b\sin C</annotation></semantics></math></span> (з прямокутного трикутника),
+    тому <span class="math" data-tex="\frac{1}{2}ah = \frac{1}{2}ab\sin C"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>a</mi><mi>h</mi><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>a</mi><mi>b</mi><mi>sin</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">\frac{1}{2}ah = \frac{1}{2}ab\sin C</annotation></semantics></math></span>. Трапеція - два трикутники, круг - многокутник з дуже
+    великою кількістю сторін.</p>
+    <p><strong>Подібність.</strong> Кожен одиничний квадрат усередині фігури розтягується в k разів у обох напрямах, тобто
+    в <span class="math" data-tex="k^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>k</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">k^2</annotation></semantics></math></span> разів за площею.</p>
+
+    <span class="step">Крок 4 · Межі</span>
+    <h2 id="limits">5 · Де закони ламаються <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-right">
+      <p><strong>Піфагор - лише для прямокутного трикутника.</strong> Для інших - теорема косинусів.</p>
+    </div>
+    <div class="limit" id="limit-obtuse">
+      <p><strong>Косинус тупого кута від'ємний.</strong> Тоді <span class="math" data-tex="-2ab\cos C"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02212;</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">-2ab\cos C</annotation></semantics></math></span> стає додатним, і сторона проти
+      тупого кута довша, ніж дав би Піфагор.</p>
+    </div>
+    <div class="limit" id="limit-square">
+      <p><strong>Площа росте як квадрат.</strong> Збільшити всі довжини в k разів означає збільшити площу в
+      <span class="math" data-tex="k^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>k</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">k^2</annotation></semantics></math></span> разів, а не в k.</p>
+    </div>
+
+    <span class="step">Крок 5 · Застосування</span>
+    <h2 id="apply">6 · Задачі у формі НМТ <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="В" data-limit="limit-right">
+      <p class="task-kind">Вибір однієї відповіді з п'яти · 1 бал</p>
+      <p>Катети прямокутного трикутника дорівнюють 6 см і 8 см. Знайдіть гіпотенузу.</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · 7 см</button>
+        <button type="button" data-opt="Б">Б · 14 см</button>
+        <button type="button" data-opt="В">В · 10 см</button>
+        <button type="button" data-opt="Г">Г · √28 см</button>
+        <button type="button" data-opt="Д">Д · 48 см</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#law-pythagoras">теорема Піфагора</a>.</p>
+      <div class="solution"><span class="math" data-tex="\sqrt{36 + 64} = 10"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msqrt><mrow><mn>36</mn><mo>&#x0002B;</mo><mn>64</mn></mrow></msqrt><mo>&#x0003D;</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">\sqrt{36 + 64} = 10</annotation></semantics></math></span>. 14 - сума катетів, √28 - різниця квадратів.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="15" data-limit="">
+      <p class="task-kind">Коротка відповідь · 2 бали</p>
+      <p>Дві сторони трикутника дорівнюють 6 см і 10 см, а кут між ними 30°. Знайдіть площу трикутника (у см²).</p>
+      <p><label>Відповідь: <input type="text" inputmode="decimal" size="8" aria-label="Відповідь"></label>
+      <button type="button" class="check">Перевірити</button></p>
+      <p class="law-ref">Закон: <a href="#law-areas">площа трикутника через синус</a>.</p>
+      <div class="solution"><span class="math" data-tex="\frac{1}{2} \cdot 6 \cdot 10 \cdot \sin 30^\circ = 30 \cdot \frac{1}{2} = 15"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x000B7;</mo><mn>6</mn><mo>&#x000B7;</mo><mn>10</mn><mo>&#x000B7;</mo><mi>sin</mi><msup><mn>30</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><mn>30</mn><mo>&#x000B7;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x0003D;</mo><mn>15</mn></mrow><annotation encoding="application/x-tex">\frac{1}{2} \cdot 6 \cdot 10 \cdot \sin 30^\circ = 30 \cdot \frac{1}{2} = 15</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="35" data-limit="">
+      <p class="task-kind">Коротка відповідь · 2 бали</p>
+      <p>Основи трапеції дорівнюють 4 см і 10 см, висота 5 см. Знайдіть площу трапеції (у см²).</p>
+      <p><label>Відповідь: <input type="text" inputmode="decimal" size="8" aria-label="Відповідь"></label>
+      <button type="button" class="check">Перевірити</button></p>
+      <p class="law-ref">Закон: <a href="#law-areas">площа трапеції</a>.</p>
+      <div class="solution"><span class="math" data-tex="\frac{4 + 10}{2} \cdot 5 = 35"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>4</mn><mo>&#x0002B;</mo><mn>10</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x000B7;</mo><mn>5</mn><mo>&#x0003D;</mo><mn>35</mn></mrow><annotation encoding="application/x-tex">\frac{4 + 10}{2} \cdot 5 = 35</annotation></semantics></math></span>: середня лінія на висоту.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="В" data-limit="limit-obtuse">
+      <p class="task-kind">Вибір однієї відповіді з п'яти · 1 бал</p>
+      <p>Дві сторони трикутника 3 і 5, кут між ними 120°. Знайдіть третю сторону.</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · 4</button>
+        <button type="button" data-opt="Б">Б · √19</button>
+        <button type="button" data-opt="В">В · 7</button>
+        <button type="button" data-opt="Г">Г · 8</button>
+        <button type="button" data-opt="Д">Д · √34</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#law-cosines">теорема косинусів</a>.</p>
+      <div class="solution"><span class="math" data-tex="c^2 = 9 + 25 - 2 \cdot 15 \cdot \left(-\frac{1}{2}\right) = 49"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mn>9</mn><mo>&#x0002B;</mo><mn>25</mn><mo>&#x02212;</mo><mn>2</mn><mo>&#x000B7;</mo><mn>15</mn><mo>&#x000B7;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mo>&#x02212;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mo>&#x0003D;</mo><mn>49</mn></mrow><annotation encoding="application/x-tex">c^2 = 9 + 25 - 2 \cdot 15 \cdot \left(-\frac{1}{2}\right) = 49</annotation></semantics></math></span>,
+      c = 7. √19 - косинус узято зі знаком «+», √34 - Піфагор для тупокутного трикутника.</div>
+    </div>
+
+    <span class="step">Крок 6 · Зворотний хід</span>
+    <h2 id="reverse">7 · Сам назви закон <a class="anchor-link" href="#reverse">#</a></h2>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="3" data-limit="limit-square">
+      <p class="task-kind">Коротка відповідь · 2 бали</p>
+      <p>Площа квадрата збільшилася в 9 разів. У скільки разів збільшилася його сторона?</p>
+      <p><label>Відповідь: <input type="text" inputmode="decimal" size="8" aria-label="Відповідь"></label>
+      <button type="button" class="check">Перевірити</button></p>
+      <p class="law-ref">Закон: <a href="#law-scale">площі подібних фігур</a>.</p>
+      <div class="solution"><span class="math" data-tex="k^2 = 9"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">k^2 = 9</annotation></semantics></math></span>, k = 3.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="5" data-limit="">
+      <p class="task-kind">Коротка відповідь · 2 бали</p>
+      <p>Гіпотенуза прямокутного трикутника 10 см, один з гострих кутів 30°. Знайдіть катет, протилежний цьому куту (у см).</p>
+      <p><label>Відповідь: <input type="text" inputmode="decimal" size="8" aria-label="Відповідь"></label>
+      <button type="button" class="check">Перевірити</button></p>
+      <p class="law-ref">Поняття: <a href="#concept">синус гострого кута</a>.</p>
+      <div class="solution"><span class="math" data-tex="10 \cdot \sin 30^\circ = 5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>10</mn><mo>&#x000B7;</mo><mi>sin</mi><msup><mn>30</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">10 \cdot \sin 30^\circ = 5</annotation></semantics></math></span>. Відомий факт «катет проти 30° дорівнює половині
+      гіпотенузи» - це те саме означення синуса.</div>
+    </div>
+
+    <h2 id="error">8 · Знайди помилку в чужому розв'язанні <a class="anchor-link" href="#error">#</a></h2>
+    <p>Наталя пише: «Радіус круга збільшили втричі, отже площа круга збільшилася втричі».</p>
+    <details>
+      <summary>Де помилка?</summary>
+      <p><span class="math" data-tex="\pi (3r)^2 = 9\pi r^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>&#x003C0;</mi><mo stretchy="false">&#x00028;</mo><mn>3</mn><mi>r</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><mn>9</mn><mi>&#x003C0;</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\pi (3r)^2 = 9\pi r^2</annotation></semantics></math></span>: площа збільшилася в 9 разів. Площа залежить від квадрата лінійного розміру
+      (<a href="#limit-square">третя межа</a>). Утричі збільшилася б довжина кола.</p>
+    </details>
+
+    <h2 id="artifacts">Що в тебе є після цієї сторінки <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>Піфагор, площа прямокутника і квадрат коефіцієнта.</strong> Теорема косинусів - Піфагор з поправкою на кут,
+      площа через синус - висота, записана через кут, площі фігур - розрізання. І площа завжди росте як квадрат.</p>
+    </div>
+    <p>Ти знаєш цей блок, якщо:</p>
+    <ol>
+      <li>розв'язуєш 8 з 10 задач на довжини і площі без підказки;</li>
+      <li>можеш пояснити вголос, чому теорема косинусів при прямому куті стає теоремою Піфагора;</li>
+      <li>знаходиш помилку в чужому розв'язанні, як у Наталиному.</li>
+    </ol>
   
 
     <footer>
       <nav class="pager" aria-label="Сусідні теми">
         <p class="pager-next">Наступна тема: <a href="12.html">Блок 12</a></p>
-        <p class="pager-prev">Попередня тема: <a href="10.html">Блок 10</a></p>
+        <p class="pager-prev">Попередня тема: <a href="10.html">Фігури на площині</a></p>
       </nav>
       <p class="footer-note">Сайт серії AI Factory. Зроблений тим самим оснащенням: звичайний HTML і CSS, перевірка на bash, публікація через GitHub Pages.</p>
     </footer>
