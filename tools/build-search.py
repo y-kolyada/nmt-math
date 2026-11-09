@@ -32,7 +32,9 @@ TERM = re.compile(r'<div class="glossary-term" id="([^"]+)">(.*?)</h2>(.*?)(?=<d
 QA = re.compile(r'<ol class="qa"[^>]*>(.*?)</ol>', re.S | re.I)
 LI = re.compile(r'<li>(.*?)</li>', re.S | re.I)
 STRONG = re.compile(r'<strong\b[^>]*>(.*?)</strong>', re.S | re.I)
-TAG = re.compile(r'<[^>]+>')
+# Тег целиком, с кавычками: знак > внутри атрибута (data-tex="x>0") обрывал
+# простое <[^>]+>, и в сниппет поиска попадали обломки вида «0">,».
+TAG = re.compile(r'<(?:[^>"\']|"[^"]*"|\'[^\']*\')*>')
 ANCHOR_LINK = re.compile(r'<a class="anchor-link".*?</a>', re.S | re.I)
 # Служебные блоки, которые печёт tools/build-meta.py: в поиске они были бы
 # шумом - «Следующая тема» нашлась бы на каждой странице.
@@ -43,6 +45,13 @@ GAP = re.compile(r'\s+([?!,.:;)])')
 # строкой состоял бы из обломков разметки. Читатель ищет словами, и слова
 # «интеграл», «сумма», «предел» стоят в прозе вокруг формулы.
 MATH = re.compile(r'<math\b.*?</math>', re.S | re.I)
+# Внешние источники учебного профиля (tools/build-sources.py): каждый год -
+# отдельная запись со своим видом x:<источник>:<год>, чтобы окно поиска дало
+# на него свой переключатель, а выключенный в настройках год не искался.
+# На сайтах без таких блоков индекс не меняется ни на байт.
+EXT = re.compile(r'<div class="ext" data-ext="([^"]+)" id="([^"]+)">(.*?)</div>', re.S | re.I)
+EXT_OFF = re.compile(r'<p class="[^"]*\bext-off\b[^"]*"[^>]*>.*?</p>', re.S | re.I)
+H3 = re.compile(r'<h3\b[^>]*>(.*?)</h3>', re.S | re.I)
 
 
 def drop_cards(chunk):
@@ -134,7 +143,14 @@ def entries(path, page):
         # A glossary block heading holds the terms that follow; they are indexed
         # one by one, so the heading keeps only its own lead text.
         own = chunk.split('<div class="glossary-term"')[0]
+        exts = EXT.findall(own)
+        if exts:
+            own = EXT_OFF.sub(' ', EXT.sub(' ', own))
         found.append([page + '#' + anchor, head, title, text_of(own), kind])
+        for ext, ext_id, inner in exts:
+            label = H3.search(inner)
+            label = text_of(label.group(1)) if label else ext
+            found.append([page + '#' + ext_id, label, title, text_of(H3.sub(' ', inner)), 'x:' + ext])
 
         for block in QA.findall(chunk):
             for item in LI.findall(block):
@@ -156,8 +172,11 @@ def build(lang):
             items += entries(os.path.join(lang, name), name)
     seen = {k for *_, k in items}
     kinds = [code for code in KINDS if code in seen]
-    data = json.dumps({'l': lang, 'k': kinds, 'i': items},
-                      ensure_ascii=False, separators=(',', ':'))
+    index = {'l': lang, 'k': kinds, 'i': items}
+    ext = sorted({e[4] for e in items if e[4].startswith('x:')}, reverse=True)
+    if ext:
+        index['x'] = {k: next(e[1] for e in items if e[4] == k) for k in ext}
+    data = json.dumps(index, ensure_ascii=False, separators=(',', ':'))
     return 'window.SEARCH=' + data + ';\n', len(items)
 
 

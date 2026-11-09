@@ -48,7 +48,26 @@
   // не из чего, и ряда переключателей не появляется вовсе: на языке, где
   // переведена только витрина, он был бы одной кнопкой «Витрина».
   const kinds = ((window.SEARCH && window.SEARCH.k) || []).filter((k) => say.kinds[k]);
-  const faceted = kinds.length > 1;
+  // Внешние источники учебного профиля (assets/sources.js): у каждого года
+  // свой вид x:<источник>:<год> и своя подпись. Выключенный в настройках год
+  // не ищется и не показывает переключателя; настройки читаются заново при
+  // каждом открытии окна, потому что меняются в другом окне.
+  const xlabels = (window.SEARCH && window.SEARCH.x) || {};
+  const xkinds = Object.keys(xlabels);
+  const EXT_KEY = key('ext-off');
+  function xOff() {
+    try {
+      const list = JSON.parse(localStorage.getItem(EXT_KEY) || '[]');
+      return new Set(Array.isArray(list) ? list : []);
+    } catch (_) { return new Set(); }
+  }
+  let extOff = xOff();
+  const xHidden = (k) => {
+    const id = k.slice(2);
+    return extOff.has(id) || extOff.has(id.split(':')[0]);
+  };
+  const live = () => kinds.concat(xkinds.filter((k) => !xHidden(k)));
+  const faceted = kinds.length + xkinds.length > 1;
   const off = new Set();
 
   const panel = document.createElement('div');
@@ -74,6 +93,8 @@
     + (faceted ? '<div class="search-facets" role="group">'
         + kinds.map((k) => '<button type="button" class="search-facet" data-kind="' + k
           + '" aria-pressed="true">' + say.kinds[k] + '</button>').join('')
+        + xkinds.map((k) => '<button type="button" class="search-facet search-facet-ext" data-kind="' + k
+          + '" aria-pressed="true"></button>').join('')
         + '</div>' : '')
     + '<p class="search-count" hidden></p>'
     + '<ul class="search-results"></ul>'
@@ -83,6 +104,7 @@
 
   const input = panel.querySelector('.search-input');
   const facets = [...panel.querySelectorAll('.search-facet')];
+  facets.forEach((b) => { if (xlabels[b.dataset.kind]) b.textContent = xlabels[b.dataset.kind]; });
   const onlyBtn = panel.querySelector('.search-only');
   const count = panel.querySelector('.search-count');
   const clearBtn = panel.querySelector('.search-clear');
@@ -105,12 +127,16 @@
   // Выключить все виды - то же, что не искать вовсе, поэтому последний
   // включённый не выключается: пустая выдача без причины читается как
   // поломка поиска, а не как собственный выбор.
+  // Объявления, а не стрелки: paintFacets зовётся выше по тексту, ещё при загрузке.
+  function offLive() { return live().filter((k) => off.has(k)).length; }
+  function onlyTopics() { return offLive() === live().length - 1 && !off.has('t'); }
+
   function paintFacets() {
-    facets.forEach((b) => b.setAttribute('aria-pressed', String(!off.has(b.dataset.kind))));
-    if (onlyBtn) {
-      const onlyTopics = off.size === kinds.length - 1 && !off.has('t');
-      onlyBtn.setAttribute('aria-pressed', String(onlyTopics));
-    }
+    facets.forEach((b) => {
+      b.setAttribute('aria-pressed', String(!off.has(b.dataset.kind)));
+      if (xlabels[b.dataset.kind]) b.hidden = xHidden(b.dataset.kind);
+    });
+    if (onlyBtn) onlyBtn.setAttribute('aria-pressed', String(onlyTopics()));
   }
 
   // Один щелчок вместо пяти: предмет сайта или весь сайт. Первое открытие
@@ -118,9 +144,9 @@
   // не должен сначала включать то, о чём не спрашивал.
   if (onlyBtn) {
     onlyBtn.addEventListener('click', () => {
-      const onlyTopics = off.size === kinds.length - 1 && !off.has('t');
+      const was = onlyTopics();
       off.clear();
-      if (!onlyTopics) kinds.forEach((k) => { if (k !== 't') off.add(k); });
+      if (!was) live().forEach((k) => { if (k !== 't') off.add(k); });
       paintFacets();
       render(input.value, false);
       saveState(picked, '', false);
@@ -130,7 +156,7 @@
   facets.forEach((btn) => btn.addEventListener('click', () => {
     const k = btn.dataset.kind;
     if (off.has(k)) off.delete(k);
-    else if (off.size < kinds.length - 1) off.add(k);
+    else if (offLive() < live().length - 1) off.add(k);
     else return;
     paintFacets();
     render(input.value, false);
@@ -167,7 +193,7 @@
     if (needle.length < 2) return { total: 0, shown: [] };
     const hits = [];
     for (const entry of items) {
-      if (off.has(entry.kind)) continue;
+      if (off.has(entry.kind) || (entry.kind.charAt(1) === ':' && xHidden(entry.kind))) continue;
       const inTitle = entry.t.indexOf(needle);
       const inBody = inTitle < 0 ? entry.b.indexOf(needle) : -1;
       if (inTitle < 0 && inBody < 0) continue;
@@ -250,6 +276,8 @@
   }
 
   function open() {
+    extOff = xOff();
+    paintFacets();
     panel.hidden = false;
     render(input.value, true);
     input.focus();

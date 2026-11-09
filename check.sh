@@ -108,6 +108,7 @@ run "перевод и заглушки"  python3 tools/check-struct.py
 # Study sites only: an assess site keeps exactly the rows it always had.
 if [ "$(python3 tools/siteconf.py --get name)" = study ]; then
   run "частота законов"     python3 tools/build-frequency.py --check
+  run "ссылки на экзамен"    python3 tools/build-sources.py --check
 fi
 
 echo

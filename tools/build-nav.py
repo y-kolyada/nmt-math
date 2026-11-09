@@ -47,8 +47,8 @@ LANG_GROUP = {'ru': 'Язык страницы', 'en': 'Page language',
 SKIP_LINK = re.compile(r'\s*<a class="skip"[^>]*>.*?</a>', re.S)
 SWITCHER = re.compile(r'<(div|nav) class="lang-switcher"[^>]*>(.*?)</\1>', re.S)
 SWITCH_LINK = re.compile(r'<a ([^>]*?)href="([^"]+)"([^>]*)>(.*?)</a>', re.S)
-# study.css and trainer.js are loaded only by pages of study-profile sites.
-ASSETS = ('style.css', 'swa.js', 'terms.js', 'cp.js', 'study.css', 'trainer.js')
+# study.css, trainer.js and sources.js are loaded only by pages of study-profile sites.
+ASSETS = ('style.css', 'swa.js', 'terms.js', 'cp.js', 'study.css', 'trainer.js', 'sources.js')
 NAV_ITEM = re.compile(r'(<nav class="contents"[^>]*>.*?</nav>)', re.S | re.I)
 NAV_LINK = re.compile(r'(<a\b[^>]*href="(?:\.\./\w\w/)?(\d\d)\.html"[^>]*>)(.*?)(</a>)', re.S | re.I)
 
