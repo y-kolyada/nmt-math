@@ -81,3 +81,25 @@ TeX in `data-tex`, baked by `tools/build-math.py`. **The decimal comma is
 written `0\text{,}25`**: `0{,}25` bakes into an operator comma and the reader
 sees "0, 25". Every second number in Ukrainian mathematics has a comma, so
 this is not a corner case.
+
+## 6. Figures
+
+Decided with the Conductor 2026-11-09.
+
+1. **A figure complements the text and never replaces it.** The text of every
+   step stays complete without the figure: reading and drawing figures are
+   skills of their own that a pupil is still building, and a page must read in
+   full to a screen reader on a phone. Every figure carries a non-empty
+   `aria-label` that says what the figure shows, and a caption.
+2. **Figures live inside the steps**, mostly in "Чому так" and "Межі", as many
+   as the law needs (usually two to four per block). There is no separate
+   "figures" axis: it would tear the picture away from the law it explains.
+3. **Two kinds of source in `diagrams/`.** Schemes (links, chains of
+   derivation, order of steps) have a Mermaid source `NN-name.mmd`.
+   Mathematical figures (graphs, circles, triangles, solids) have a generator
+   `NN-name.py` that computes exact coordinates from the same formula the page
+   states and prints the SVG: a parabola drawn from its equation, not by eye.
+   `tools/check-diagrams.mjs` accepts both kinds as sources.
+4. Captions read `Рисунок N.`, numbered through the language folder; the
+   series rules of rule 18 (canvas 320, labels of at least 12 units,
+   `currentColor`) hold for both kinds.
