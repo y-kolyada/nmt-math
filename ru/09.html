@@ -3,22 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Счёт и вероятность · nmt-math · ai|</title>
+<title>Комбинаторика, вероятность, статистика · nmt-math · ai|</title>
 <!-- meta: built by tools/build-meta.py - do not edit by hand -->
-<meta name="description" content="">
+<meta name="description" content="Счёт, применённый не к предметам, а к вариантам.">
 <link rel="canonical" href="https://y-kolyada.github.io/nmt-math/ru/09.html">
 <link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/09.html">
 <link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/09.html">
 <link rel="alternate" hreflang="x-default" href="https://y-kolyada.github.io/nmt-math/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="nmt-math">
-<meta property="og:title" content="Счёт и вероятность">
-<meta property="og:description" content="">
+<meta property="og:title" content="Комбинаторика, вероятность, статистика">
+<meta property="og:description" content="Счёт, применённый не к предметам, а к вариантам.">
 <meta property="og:url" content="https://y-kolyada.github.io/nmt-math/ru/09.html">
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Счёт и вероятность","description":"","url":"https://y-kolyada.github.io/nmt-math/ru/09.html","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Комбинаторика, вероятность, статистика","description":"Счёт, применённый не к предметам, а к вариантам.","url":"https://y-kolyada.github.io/nmt-math/ru/09.html","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
 <!-- /meta -->
 <link rel="stylesheet" href="../assets/style.css?v=1">
 <link rel="stylesheet" href="../assets/study.css?v=1">
@@ -90,17 +90,314 @@
   </nav>
 
   <main id="main">
-    <h1>Счёт и вероятность</h1>
-    <p class="page-size" data-words="21">Слов: 21</p>
+    <h1>Комбинаторика, вероятность, статистика</h1>
+    <p class="page-size" data-words="951">Слов: 951</p>
+    <p class="lead">Счёт, применённый не к предметам, а к вариантам. Вероятность - тот же счёт: сколько
+    вариантов благоприятных среди всех равновозможных.</p>
 
-    <div class="stub-card">
-      <h2>Русская версия готовится</h2>
-      <p>Полная рабочая версия этой страницы опубликована на украинском языке.</p>
-      <p>Открыть полную версию:</p>
-      <div class="stub-actions">
-        <a href="../uk/09.html" class="btn-primary">Счёт и вероятность →</a>
-      </div>
+    <div class="box key" id="key-idea">
+      <h2>Главная мысль страницы <a class="anchor-link" href="#key-idea" aria-label="ссылка на этот блок">#</a></h2>
+      <p>Вся комбинаторика стоит на одном правиле произведения и одном вопросе: важен ли порядок. Классическая
+      вероятность - доля, и вся её сложность в том, чтобы правильно посчитать числитель и знаменатель среди
+      <strong>равновозможных</strong> исходов. Статистика описывает уже собранные числа: среднее, медиана, мода, размах.
+      Блок умеет считать шансы; предсказать отдельный результат он не может и не обещает.</p>
     </div>
+
+    <span class="step">Шаг 0 · Зацепка</span>
+    <h2 id="hook">1 · Двое дежурных из пяти <a class="anchor-link" href="#hook">#</a></h2>
+    <p>Сколькими способами можно выбрать двух дежурных из пяти учеников? Привычный ход: «первого 5 способами, второго 4,
+    всего 20». Но пара «Оля и Игорь» и пара «Игорь и Оля» - та же пара дежурных. Каждую пару посчитали дважды, поэтому
+    правильный ответ <span class="math" data-tex="20 : 2 = 10"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>20</mn><mi>:</mi><mn>2</mn><mo>&#x0003D;</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">20 : 2 = 10</annotation></semantics></math></span>. Если бы выбирали дежурного и его заместителя,
+    порядок был бы важен и ответ 20 был бы правильным.</p>
+
+    <span class="step">Шаг 1 · Понятие</span>
+    <h2 id="concept">2 · Варианты, события, ряды данных <a class="anchor-link" href="#concept">#</a></h2>
+    <ul>
+      <li><strong>Перестановка</strong> - упорядочение всех n элементов. <strong>Размещение</strong> - упорядоченный выбор k из n.
+      <strong>Сочетание</strong> - неупорядоченный выбор k из n.</li>
+      <li><strong>Случайное событие</strong> - результат, который может произойти или нет. <strong>Равновозможные исходы</strong> - ни один не имеет
+      преимущества перед другим (грань кубика, сторона честной монеты).</li>
+      <li><strong>Среднее</strong> - сумма данных, делённая на их количество. <strong>Медиана</strong> - среднее по месту значение
+      упорядоченного ряда. <strong>Мода</strong> - значение, которое встречается чаще всего. <strong>Размах</strong> - разность
+      наибольшего и наименьшего.</li>
+    </ul>
+
+    <span class="step">Шаг 2 · Закон</span>
+    <h2 id="law">3 · Законы счёта и вероятности <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-product">
+      <p class="law-name">Правило произведения</p>
+      <p>Если первый выбор можно сделать m способами, а после него второй - n способами, то пару выборов можно сделать
+      <span class="math" data-tex="m \cdot n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>m</mi><mo>&#x000B7;</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m \cdot n</annotation></semantics></math></span> способами.</p>
+    </div>
+    <div class="law" id="law-formulas">
+      <p class="law-name">Перестановки, размещения, сочетания</p>
+      <div class="math-block" data-tex="P_n = n!,\qquad A_n^k = \frac{n!}{(n - k)!},\qquad C_n^k = \frac{n!}{k!\,(n - k)!}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>P</mi><mi>n</mi></msub><mo>&#x0003D;</mo><mi>n</mi><mo>&#x00021;</mo><mo>&#x0002C;</mo><mspace width="2em" /><msubsup><mi>A</mi><mi>n</mi><mi>k</mi></msubsup><mo>&#x0003D;</mo><mfrac><mrow><mi>n</mi><mo>&#x00021;</mo></mrow><mrow><mo stretchy="false">&#x00028;</mo><mi>n</mi><mo>&#x02212;</mo><mi>k</mi><mo stretchy="false">&#x00029;</mo><mo>&#x00021;</mo></mrow></mfrac><mo>&#x0002C;</mo><mspace width="2em" /><msubsup><mi>C</mi><mi>n</mi><mi>k</mi></msubsup><mo>&#x0003D;</mo><mfrac><mrow><mi>n</mi><mo>&#x00021;</mo></mrow><mrow><mi>k</mi><mo>&#x00021;</mo><mspace width="0.167em" /><mo stretchy="false">&#x00028;</mo><mi>n</mi><mo>&#x02212;</mo><mi>k</mi><mo stretchy="false">&#x00029;</mo><mo>&#x00021;</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">P_n = n!,\qquad A_n^k = \frac{n!}{(n - k)!},\qquad C_n^k = \frac{n!}{k!\,(n - k)!}</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-probability">
+      <p class="law-name">Классическая вероятность</p>
+      <div class="math-block" data-tex="P(A) = \frac{m}{n},\qquad 0 \leq P(A) \leq 1,\qquad P(\overline{A}) = 1 - P(A)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">&#x00028;</mo><mi>A</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mfrac><mrow><mi>m</mi></mrow><mrow><mi>n</mi></mrow></mfrac><mo>&#x0002C;</mo><mspace width="2em" /><mn>0</mn><mo>&#x02264;</mo><mi>P</mi><mo stretchy="false">&#x00028;</mo><mi>A</mi><mo stretchy="false">&#x00029;</mo><mo>&#x02264;</mo><mn>1</mn><mo>&#x0002C;</mo><mspace width="2em" /><mi>P</mi><mo stretchy="false">&#x00028;</mo><mover><mrow><mi>A</mi></mrow><mo accent="true">&#x02015;</mo></mover><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>1</mn><mo>&#x02212;</mo><mi>P</mi><mo stretchy="false">&#x00028;</mo><mi>A</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">P(A) = \frac{m}{n},\qquad 0 \leq P(A) \leq 1,\qquad P(\overline{A}) = 1 - P(A)</annotation></semantics></math></div>
+      <p>где n - количество всех равновозможных исходов, m - количество благоприятных для события A.</p>
+    </div>
+
+    <span class="step">Шаг 3 · Почему так</span>
+    <h2 id="why">4 · Откуда формулы <a class="anchor-link" href="#why">#</a></h2>
+    <p><strong>Перестановки.</strong> На первое место - n кандидатов, на второе - <span class="math" data-tex="n - 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>n</mi><mo>&#x02212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n - 1</annotation></semantics></math></span>, и так далее: правило
+    произведения даёт <span class="math" data-tex="n \cdot (n - 1) \cdot \ldots \cdot 1 = n!"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>n</mi><mo>&#x000B7;</mo><mo stretchy="false">&#x00028;</mo><mi>n</mi><mo>&#x02212;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo><mo>&#x000B7;</mo><mi>&#x02026;</mi><mo>&#x000B7;</mo><mn>1</mn><mo>&#x0003D;</mo><mi>n</mi><mo>&#x00021;</mo></mrow><annotation encoding="application/x-tex">n \cdot (n - 1) \cdot \ldots \cdot 1 = n!</annotation></semantics></math></span>. Размещение - то же произведение,
+    оборванное после k множителей.</p>
+    <!-- fig:09-tree -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 196" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Дерево двух бросков монеты: из начала две ветви, герб и цифра, из каждой ещё две. Листьев 2 · 2 = 4: ГГ, ГЦ, ЦГ, ЦЦ. Все четыре равновозможны, и только один из них - два герба.">
+        <circle cx="24.0" cy="98.0" r="5" fill="currentColor"/>
+        <line x1="29.0" y1="98.0" x2="102.0" y2="50.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <rect x="102.0" y="36.0" width="36.0" height="28.0" rx="6" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1.2"/>
+        <text x="120.0" y="55.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-weight="700">Г</text>
+        <line x1="29.0" y1="98.0" x2="102.0" y2="146.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <rect x="102.0" y="132.0" width="36.0" height="28.0" rx="6" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1.2"/>
+        <text x="120.0" y="151.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-weight="700">Ц</text>
+        <line x1="138.0" y1="50.0" x2="214.0" y2="24.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <rect x="214.0" y="10.0" width="44.0" height="28.0" rx="6" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="236.0" y="29.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-weight="700">ГГ</text>
+        <line x1="138.0" y1="50.0" x2="214.0" y2="76.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <rect x="214.0" y="62.0" width="44.0" height="28.0" rx="6" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1.2"/>
+        <text x="236.0" y="81.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle">ГЦ</text>
+        <line x1="138.0" y1="146.0" x2="214.0" y2="120.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <rect x="214.0" y="106.0" width="44.0" height="28.0" rx="6" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1.2"/>
+        <text x="236.0" y="125.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle">ЦГ</text>
+        <line x1="138.0" y1="146.0" x2="214.0" y2="172.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <rect x="214.0" y="158.0" width="44.0" height="28.0" rx="6" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1.2"/>
+        <text x="236.0" y="177.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle">ЦЦ</text>
+        <text x="70.0" y="192.0" fill="currentColor" font-size="12" opacity="0.7" text-anchor="middle">1-й бросок</text>
+        <text x="186.0" y="192.0" fill="currentColor" font-size="12" opacity="0.7" text-anchor="middle">2-й бросок</text>
+      </svg>
+      <p class="dim">Рисунок 20. Правило произведения как дерево: 2 · 2 = 4 равновозможных исхода.</p>
+    </div>
+    <!-- /fig:09-tree -->
+    <p><strong>Сочетания.</strong> Каждую неупорядоченную группу из k элементов можно упорядочить <span class="math" data-tex="k!"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>k</mi><mo>&#x00021;</mo></mrow><annotation encoding="application/x-tex">k!</annotation></semantics></math></span> способами, и все
+    эти упорядочения учтены в <span class="math" data-tex="A_n^k"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msubsup><mi>A</mi><mi>n</mi><mi>k</mi></msubsup></mrow><annotation encoding="application/x-tex">A_n^k</annotation></semantics></math></span>. Поэтому <span class="math" data-tex="C_n^k = \frac{A_n^k}{k!}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msubsup><mi>C</mi><mi>n</mi><mi>k</mi></msubsup><mo>&#x0003D;</mo><mfrac><mrow><msubsup><mi>A</mi><mi>n</mi><mi>k</mi></msubsup></mrow><mrow><mi>k</mi><mo>&#x00021;</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">C_n^k = \frac{A_n^k}{k!}</annotation></semantics></math></span> - это и есть
+    деление на 2 из зацепки.</p>
+    <p><strong>Противоположное событие.</strong> Каждый исход либо благоприятствует A, либо нет, поэтому <span class="math" data-tex="m_A + m_{\overline{A}} = n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>m</mi><mi>A</mi></msub><mo>&#x0002B;</mo><msub><mi>m</mi><mrow><mover><mrow><mi>A</mi></mrow><mo accent="true">&#x02015;</mo></mover></mrow></msub><mo>&#x0003D;</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m_A + m_{\overline{A}} = n</annotation></semantics></math></span>. Делим на n.</p>
+
+    <span class="step">Шаг 4 · Границы</span>
+    <h2 id="limits">5 · Где законы ломаются <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-order">
+      <p><strong>Главный вопрос - важен ли порядок.</strong> Пароль, очередь, расписание - важен (размещения, перестановки).
+      Команда, набор, комиссия - не важен (сочетания).</p>
+    </div>
+    <div class="limit" id="limit-equal">
+      <p><strong>Классическая формула требует равновозможных исходов.</strong> Сумм на двух кубиках 11 (от 2 до 12), но они
+      не равновозможны: сумма 7 получается шестью способами, сумма 2 - одним. Считать нужно пары граней: их 36.</p>
+    </div>
+    <!-- fig:09-dice -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 250" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Таблица 6 на 6: строка - первый кубик, столбец - второй, в клетке сумма. Шесть клеток с суммой 7 лежат на диагонали и выделены. Сумма 2 встречается только в одной клетке, поэтому суммы не равновозможны, а пары граней - равновозможны.">
+        <text x="90.0" y="26.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle" font-weight="700">1</text>
+        <text x="64.0" y="54.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end" font-weight="700">1</text>
+        <text x="122.0" y="26.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle" font-weight="700">2</text>
+        <text x="64.0" y="86.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end" font-weight="700">2</text>
+        <text x="154.0" y="26.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle" font-weight="700">3</text>
+        <text x="64.0" y="118.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end" font-weight="700">3</text>
+        <text x="186.0" y="26.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle" font-weight="700">4</text>
+        <text x="64.0" y="150.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end" font-weight="700">4</text>
+        <text x="218.0" y="26.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle" font-weight="700">5</text>
+        <text x="64.0" y="182.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end" font-weight="700">5</text>
+        <text x="250.0" y="26.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle" font-weight="700">6</text>
+        <text x="64.0" y="214.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end" font-weight="700">6</text>
+        <rect x="74.0" y="34.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="90.0" y="54.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">2</text>
+        <rect x="106.0" y="34.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="122.0" y="54.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">3</text>
+        <rect x="138.0" y="34.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="154.0" y="54.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">4</text>
+        <rect x="170.0" y="34.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="186.0" y="54.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">5</text>
+        <rect x="202.0" y="34.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="218.0" y="54.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">6</text>
+        <rect x="234.0" y="34.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="0.8" style="stroke:var(--acc)"/>
+        <text x="250.0" y="54.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" font-weight="700">7</text>
+        <rect x="74.0" y="66.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="90.0" y="86.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">3</text>
+        <rect x="106.0" y="66.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="122.0" y="86.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">4</text>
+        <rect x="138.0" y="66.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="154.0" y="86.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">5</text>
+        <rect x="170.0" y="66.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="186.0" y="86.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">6</text>
+        <rect x="202.0" y="66.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="0.8" style="stroke:var(--acc)"/>
+        <text x="218.0" y="86.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" font-weight="700">7</text>
+        <rect x="234.0" y="66.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="250.0" y="86.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">8</text>
+        <rect x="74.0" y="98.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="90.0" y="118.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">4</text>
+        <rect x="106.0" y="98.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="122.0" y="118.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">5</text>
+        <rect x="138.0" y="98.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="154.0" y="118.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">6</text>
+        <rect x="170.0" y="98.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="0.8" style="stroke:var(--acc)"/>
+        <text x="186.0" y="118.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" font-weight="700">7</text>
+        <rect x="202.0" y="98.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="218.0" y="118.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">8</text>
+        <rect x="234.0" y="98.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="250.0" y="118.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">9</text>
+        <rect x="74.0" y="130.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="90.0" y="150.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">5</text>
+        <rect x="106.0" y="130.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="122.0" y="150.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">6</text>
+        <rect x="138.0" y="130.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="0.8" style="stroke:var(--acc)"/>
+        <text x="154.0" y="150.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" font-weight="700">7</text>
+        <rect x="170.0" y="130.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="186.0" y="150.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">8</text>
+        <rect x="202.0" y="130.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="218.0" y="150.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">9</text>
+        <rect x="234.0" y="130.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="250.0" y="150.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">10</text>
+        <rect x="74.0" y="162.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="90.0" y="182.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">6</text>
+        <rect x="106.0" y="162.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="0.8" style="stroke:var(--acc)"/>
+        <text x="122.0" y="182.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" font-weight="700">7</text>
+        <rect x="138.0" y="162.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="154.0" y="182.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">8</text>
+        <rect x="170.0" y="162.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="186.0" y="182.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">9</text>
+        <rect x="202.0" y="162.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="218.0" y="182.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">10</text>
+        <rect x="234.0" y="162.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="250.0" y="182.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">11</text>
+        <rect x="74.0" y="194.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="0.8" style="stroke:var(--acc)"/>
+        <text x="90.0" y="214.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" font-weight="700">7</text>
+        <rect x="106.0" y="194.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="122.0" y="214.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">8</text>
+        <rect x="138.0" y="194.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="154.0" y="214.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">9</text>
+        <rect x="170.0" y="194.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="186.0" y="214.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">10</text>
+        <rect x="202.0" y="194.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="218.0" y="214.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">11</text>
+        <rect x="234.0" y="194.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="250.0" y="214.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">12</text>
+        <text x="170.0" y="14.0" fill="currentColor" font-size="12" opacity="0.7" text-anchor="middle">2-й</text>
+        <text x="14.0" y="130.0" fill="currentColor" font-size="12" opacity="0.7">1-й</text>
+      </svg>
+      <p class="dim">Рисунок 21. Равновозможны 36 пар граней, а не 11 сумм: сумма 7 занимает 6 клеток из 36.</p>
+    </div>
+    <!-- /fig:09-dice -->
+    <div class="limit" id="limit-median">
+      <p><strong>Медиану ищут в упорядоченном ряду.</strong> При чётном количестве данных медиана - среднее двух
+      центральных чисел. А среднее, в отличие от медианы, чувствительно к одному очень большому значению.</p>
+    </div>
+
+    <span class="step">Шаг 5 · Применение</span>
+    <h2 id="apply">6 · Задачи в форме НМТ <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="Г" data-limit="limit-order">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p>Сколькими способами можно поставить на полку в ряд четыре разные книги?</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · 4</button>
+        <button type="button" data-opt="Б">Б · 8</button>
+        <button type="button" data-opt="В">В · 16</button>
+        <button type="button" data-opt="Г">Г · 24</button>
+        <button type="button" data-opt="Д">Д · 256</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#law-formulas">перестановки</a>.</p>
+      <div class="solution"><span class="math" data-tex="4! = 24"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>4</mn><mo>&#x00021;</mo><mo>&#x0003D;</mo><mn>24</mn></mrow><annotation encoding="application/x-tex">4! = 24</annotation></semantics></math></span>. 256 - это <span class="math" data-tex="4^4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>4</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">4^4</annotation></semantics></math></span>: так было бы, если бы одну
+      книгу можно было поставить несколько раз.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="120" data-limit="limit-order">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Из 10 учеников класса нужно выбрать троих для участия в олимпиаде. Сколькими способами это можно сделать?</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-formulas">сочетания</a>: порядок не важен.</p>
+      <div class="solution"><span class="math" data-tex="C_{10}^3 = \frac{10 \cdot 9 \cdot 8}{3!} = 120"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msubsup><mi>C</mi><mrow><mn>10</mn></mrow><mn>3</mn></msubsup><mo>&#x0003D;</mo><mfrac><mrow><mn>10</mn><mo>&#x000B7;</mo><mn>9</mn><mo>&#x000B7;</mo><mn>8</mn></mrow><mrow><mn>3</mn><mo>&#x00021;</mo></mrow></mfrac><mo>&#x0003D;</mo><mn>120</mn></mrow><annotation encoding="application/x-tex">C_{10}^3 = \frac{10 \cdot 9 \cdot 8}{3!} = 120</annotation></semantics></math></span>. Без деления на
+      <span class="math" data-tex="3! = 6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>3</mn><mo>&#x00021;</mo><mo>&#x0003D;</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">3! = 6</annotation></semantics></math></span> получилось бы 720 - количество упорядоченных троек.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="0,8" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>В коробке 3 красных, 5 синих и 2 белых шарика. Наугад берут один. Найдите вероятность того, что он
+      <strong>не</strong> белый.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-probability">противоположное событие</a>.</p>
+      <div class="solution"><span class="math" data-tex="P(\text{белый}) = \frac{2}{10} = 0\text{,}2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>P</mi><mo stretchy="false">&#x00028;</mo><mtext>белый</mtext><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>10</mn></mrow></mfrac><mo>&#x0003D;</mo><mn>0</mn><mtext>,</mtext><mn>2</mn></mrow><annotation encoding="application/x-tex">P(\text{белый}) = \frac{2}{10} = 0\text{,}2</annotation></semantics></math></span>, поэтому
+      <span class="math" data-tex="P = 1 - 0\text{,}2 = 0\text{,}8"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>P</mi><mo>&#x0003D;</mo><mn>1</mn><mo>&#x02212;</mo><mn>0</mn><mtext>,</mtext><mn>2</mn><mo>&#x0003D;</mo><mn>0</mn><mtext>,</mtext><mn>8</mn></mrow><annotation encoding="application/x-tex">P = 1 - 0\text{,}2 = 0\text{,}8</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="match" data-answer="Б А В" data-limit="limit-median">
+      <p class="task-kind">Установление соответствия · 3 балла</p>
+      <p>Дан ряд данных: 2, 3, 3, 5, 7. К каждой характеристике (1-3) подберите её значение (А-Д).</p>
+      <ul class="pairs">
+        <li><label>1. Среднее значение
+          <select aria-label="Ответ к характеристике 1"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+        <li><label>2. Медиана
+          <select aria-label="Ответ к характеристике 2"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+        <li><label>3. Размах
+          <select aria-label="Ответ к характеристике 3"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+      </ul>
+      <p>А · 3 &nbsp; Б · 4 &nbsp; В · 5 &nbsp; Г · 7 &nbsp; Д · 2</p>
+      <p><button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Понятие: <a href="#concept">характеристики ряда данных</a>.</p>
+      <div class="solution">Среднее <span class="math" data-tex="\frac{20}{5} = 4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>20</mn></mrow><mrow><mn>5</mn></mrow></mfrac><mo>&#x0003D;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">\frac{20}{5} = 4</annotation></semantics></math></span>; медиана - третье из пяти, 3; размах
+      <span class="math" data-tex="7 - 2 = 5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>7</mn><mo>&#x02212;</mo><mn>2</mn><mo>&#x0003D;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">7 - 2 = 5</annotation></semantics></math></span>. Мода здесь тоже 3, но её не спрашивали.</div>
+    </div>
+
+    <span class="step">Шаг 6 · Обратный ход</span>
+    <h2 id="reverse">7 · Назови закон сам <a class="anchor-link" href="#reverse">#</a></h2>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="10000" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Сколько существует четырёхзначных кодов для замка, если каждая цифра кода может быть от 0 до 9 и цифры могут
+      повторяться?</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-product">правило произведения</a>.</p>
+      <div class="solution">На каждое из четырёх мест - 10 вариантов независимо от других: <span class="math" data-tex="10^4 = 10000"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>10</mn><mn>4</mn></msup><mo>&#x0003D;</mo><mn>10000</mn></mrow><annotation encoding="application/x-tex">10^4 = 10000</annotation></semantics></math></span>.
+      Здесь ни одна из трёх формул не нужна: повторения разрешены.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="0,25" data-limit="limit-equal">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Монету бросают дважды. Найдите вероятность того, что оба раза выпадет герб.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Законы: <a href="#law-product">правило произведения</a> и <a href="#law-probability">классическая вероятность</a>.</p>
+      <div class="solution">Равновозможных исходов <span class="math" data-tex="2 \cdot 2 = 4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>2</mn><mo>&#x000B7;</mo><mn>2</mn><mo>&#x0003D;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">2 \cdot 2 = 4</annotation></semantics></math></span> (ГГ, ГЦ, ЦГ, ЦЦ), благоприятный один:
+      0,25. Слепой ход «0, 1 или 2 герба - три результата» даёт 1/3, потому что эти три результата не равновозможны.</div>
+    </div>
+
+    <h2 id="error">8 · Найди ошибку в чужом решении <a class="anchor-link" href="#error">#</a></h2>
+    <p>Тарас рассуждает: «На двух кубиках сумма бывает от 2 до 12, то есть 11 вариантов. Значит, вероятность, что сумма равна 7,
+    составляет 1/11».</p>
+    <details>
+      <summary>Где ошибка?</summary>
+      <p>Эти 11 сумм не равновозможны (<a href="#limit-equal">вторая граница</a>). Равновозможны 36 пар граней, и сумма 7 получается в
+      шести из них: (1; 6), (2; 5), …, (6; 1). Ответ <span class="math" data-tex="\frac{6}{36} = \frac{1}{6}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>6</mn></mrow><mrow><mn>36</mn></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{6}{36} = \frac{1}{6}</annotation></semantics></math></span>.</p>
+    </details>
+
+    <h2 id="artifacts">Что у тебя есть после этой страницы <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>Одно правило и один вопрос.</strong> Правило произведения даёт все формулы комбинаторики, а вопрос «важен ли
+      порядок» выбирает между ними. Вероятность - это счёт, но только среди равновозможных исходов.</p>
+    </div>
+    <!-- freq -->
+    <p class="dim law-freq" data-tasks="6">Частота на этом сайте, а не на НМТ: на этой странице 6 задач тренажёра, и они опираются на такие законы: Классическая вероятность - 2, Перестановки, размещения, сочетания - 2, Правило произведения - 2, Характеристики ряда данных - 1.</p>
+    <!-- /freq -->
+    <p>Ты знаешь этот блок, если:</p>
+    <ol>
+      <li>решаешь 8 из 10 задач на счёт вариантов и вероятность без подсказки;</li>
+      <li>можешь объяснить вслух, почему в сочетаниях делят на <span class="math" data-tex="k!"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>k</mi><mo>&#x00021;</mo></mrow><annotation encoding="application/x-tex">k!</annotation></semantics></math></span>;</li>
+      <li>находишь ошибку в чужом решении, как у Тараса.</li>
+    </ol>
+  
+
+    <footer>
+      <nav class="pager" aria-label="Соседние темы">
+        <p class="pager-next">Следующая тема: <a href="10.html">Фигуры на плоскости</a></p>
+        <p class="pager-prev">Предыдущая тема: <a href="08.html">Производная и интеграл</a></p>
+      </nav>
+      <p class="footer-note">Сайт серии AI Factory. Сделан той же оснасткой, что и остальные: обычный HTML и CSS, проверка на bash, публикация через GitHub Pages.</p>
+    </footer>
   </main>
 
 </div>
