@@ -91,7 +91,7 @@
 
   <main id="main">
     <h1>Вимірювання на площині</h1>
-    <p class="page-size" data-words="729">Слів: 729</p>
+    <p class="page-size" data-words="767">Слів: 767</p>
     <p class="lead">Фігурам з блоку 10 ставлять у відповідність числа: довжини, кути, площі. Майже кожна формула
     тут - або теорема Піфагора, або площа прямокутника, розрізаного і складеного інакше.</p>
 
@@ -108,6 +108,27 @@
     <p>Квадрат зі стороною 3 має площу 9. Сторону подвоїли. Звична відповідь: «площа теж подвоїлася, 18». Але квадрат
     зі стороною 6 має площу 36 - учетверо більшу. Його можна скласти з чотирьох початкових квадратів. Площа
     залежить від двох вимірів, і кожен з них подвоївся.</p>
+    <!-- fig:11-scale -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 176" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Ліворуч квадрат зі стороною 3 і площею 9. Праворуч квадрат зі стороною 6: він складається з чотирьох таких самих квадратів, тому його площа 36, учетверо більша.">
+        <rect x="20.0" y="80.0" width="66.0" height="66.0" rx="0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.2"/>
+        <text x="53.0" y="118.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">S = 9</text>
+        <text x="53.0" y="164.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-style="italic">3</text>
+        <rect x="150.0" y="14.0" width="66.0" height="66.0" rx="0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="183.0" y="52.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">9</text>
+        <rect x="216.0" y="14.0" width="66.0" height="66.0" rx="0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.2"/>
+        <text x="249.0" y="52.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">9</text>
+        <rect x="150.0" y="80.0" width="66.0" height="66.0" rx="0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.2"/>
+        <text x="183.0" y="118.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">9</text>
+        <rect x="216.0" y="80.0" width="66.0" height="66.0" rx="0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.2"/>
+        <text x="249.0" y="118.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">9</text>
+        <text x="216.0" y="164.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-style="italic">6  ·  S = 36</text>
+        <line x1="96.0" y1="110.0" x2="140.0" y2="90.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <polygon points="140.0,90.0 135.3,95.1 133.0,90.2" fill="currentColor"/>
+      </svg>
+      <p class="dim">Рисунок 24. Сторона подвоїлася - площа зросла вчетверо: 3² = 9, 6² = 36.</p>
+    </div>
+    <!-- /fig:11-scale -->
 
     <span class="step">Крок 1 · Поняття</span>
     <h2 id="concept">2 · Довжина, кут, площа <a class="anchor-link" href="#concept">#</a></h2>
@@ -145,6 +166,21 @@
     <p><strong>Піфагор.</strong> Квадрат зі стороною <span class="math" data-tex="a + b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a + b</annotation></semantics></math></span> можна заповнити чотирма однаковими прямокутними
     трикутниками і квадратом на гіпотенузі в середині. Площа: <span class="math" data-tex="(a + b)^2 = 4 \cdot \frac{ab}{2} + c^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><mn>4</mn><mo>&#x000B7;</mo><mfrac><mrow><mi>a</mi><mi>b</mi></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x0002B;</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(a + b)^2 = 4 \cdot \frac{ab}{2} + c^2</annotation></semantics></math></span>.
     Розкрийте квадрат суми (блок 3) - залишиться <span class="math" data-tex="a^2 + b^2 = c^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">a^2 + b^2 = c^2</annotation></semantics></math></span>.</p>
+    <!-- fig:11-pythagoras -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 236" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Квадрат зі стороною a + b, у кутах якого стоять чотири однакові прямокутні трикутники з катетами a і b. Усередині лишається квадрат зі стороною c - гіпотенузою. Площа: (a + b)² = 4 · ab/2 + c², звідки a² + b² = c².">
+        <rect x="70.0" y="18.0" width="180.0" height="180.0" rx="0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.2"/>
+        <polygon points="190.0,18.0 250.0,138.0 130.0,198.0 70.0,78.0" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.8" opacity="1.0" style="stroke:var(--acc);fill:var(--acc)"/>
+        <text x="160.0" y="114.0" fill="currentColor" font-size="18" opacity="1.0" text-anchor="middle" font-style="italic" font-weight="700">c²</text>
+        <text x="130.0" y="14.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">a</text>
+        <text x="220.0" y="14.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">b</text>
+        <text x="62.0" y="53.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">b</text>
+        <text x="62.0" y="143.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">a</text>
+        <text x="224.0" y="74.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic" style="fill:var(--acc)">c</text>
+      </svg>
+      <p class="dim">Рисунок 25. Доведення теореми Піфагора площею: чотири трикутники і квадрат c².</p>
+    </div>
+    <!-- /fig:11-pythagoras -->
     <p><strong>Косинуси.</strong> При <span class="math" data-tex="C = 90^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>C</mi><mo>&#x0003D;</mo><msup><mn>90</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">C = 90^\circ</annotation></semantics></math></span> косинус нуль, і формула стає Піфагором. Доданок
     <span class="math" data-tex="-2ab\cos C"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02212;</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">-2ab\cos C</annotation></semantics></math></span> - поправка на те, наскільки кут відрізняється від прямого.</p>
     <p><strong>Площа через синус.</strong> Висота до сторони a дорівнює <span class="math" data-tex="b\sin C"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>b</mi><mi>sin</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">b\sin C</annotation></semantics></math></span> (з прямокутного трикутника),

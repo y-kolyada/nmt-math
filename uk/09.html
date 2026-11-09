@@ -91,7 +91,7 @@
 
   <main id="main">
     <h1>Комбінаторика, ймовірність, статистика</h1>
-    <p class="page-size" data-words="882">Слів: 882</p>
+    <p class="page-size" data-words="970">Слів: 970</p>
     <p class="lead">Лічба, застосована не до предметів, а до варіантів. Ймовірність - це та сама лічба: скільки
     варіантів сприятливих серед усіх рівноможливих.</p>
 
@@ -144,6 +144,34 @@
     <p><strong>Перестановки.</strong> На перше місце - n кандидатів, на друге - <span class="math" data-tex="n - 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>n</mi><mo>&#x02212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n - 1</annotation></semantics></math></span>, і так далі: правило
     добутку дає <span class="math" data-tex="n \cdot (n - 1) \cdot \ldots \cdot 1 = n!"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>n</mi><mo>&#x000B7;</mo><mo stretchy="false">&#x00028;</mo><mi>n</mi><mo>&#x02212;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo><mo>&#x000B7;</mo><mi>&#x02026;</mi><mo>&#x000B7;</mo><mn>1</mn><mo>&#x0003D;</mo><mi>n</mi><mo>&#x00021;</mo></mrow><annotation encoding="application/x-tex">n \cdot (n - 1) \cdot \ldots \cdot 1 = n!</annotation></semantics></math></span>. Розміщення - той самий добуток,
     обірваний після k множників.</p>
+    <!-- fig:09-tree -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 196" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Дерево двох кидків монети: з початку дві гілки, герб і цифра, з кожної ще дві. Листків 2 · 2 = 4: ГГ, ГЦ, ЦГ, ЦЦ. Усі чотири рівноможливі, і лише один з них - два герби.">
+        <circle cx="24.0" cy="98.0" r="5" fill="currentColor"/>
+        <line x1="29.0" y1="98.0" x2="102.0" y2="50.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <rect x="102.0" y="36.0" width="36.0" height="28.0" rx="6" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1.2"/>
+        <text x="120.0" y="55.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-weight="700">Г</text>
+        <line x1="29.0" y1="98.0" x2="102.0" y2="146.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <rect x="102.0" y="132.0" width="36.0" height="28.0" rx="6" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1.2"/>
+        <text x="120.0" y="151.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-weight="700">Ц</text>
+        <line x1="138.0" y1="50.0" x2="214.0" y2="24.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <rect x="214.0" y="10.0" width="44.0" height="28.0" rx="6" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="236.0" y="29.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-weight="700">ГГ</text>
+        <line x1="138.0" y1="50.0" x2="214.0" y2="76.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <rect x="214.0" y="62.0" width="44.0" height="28.0" rx="6" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1.2"/>
+        <text x="236.0" y="81.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle">ГЦ</text>
+        <line x1="138.0" y1="146.0" x2="214.0" y2="120.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <rect x="214.0" y="106.0" width="44.0" height="28.0" rx="6" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1.2"/>
+        <text x="236.0" y="125.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle">ЦГ</text>
+        <line x1="138.0" y1="146.0" x2="214.0" y2="172.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <rect x="214.0" y="158.0" width="44.0" height="28.0" rx="6" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1.2"/>
+        <text x="236.0" y="177.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle">ЦЦ</text>
+        <text x="70.0" y="192.0" fill="currentColor" font-size="12" opacity="0.7" text-anchor="middle">1-й кидок</text>
+        <text x="186.0" y="192.0" fill="currentColor" font-size="12" opacity="0.7" text-anchor="middle">2-й кидок</text>
+      </svg>
+      <p class="dim">Рисунок 20. Правило добутку як дерево: 2 · 2 = 4 рівноможливі наслідки.</p>
+    </div>
+    <!-- /fig:09-tree -->
     <p><strong>Комбінації.</strong> Кожну невпорядковану групу з k елементів можна впорядкувати <span class="math" data-tex="k!"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>k</mi><mo>&#x00021;</mo></mrow><annotation encoding="application/x-tex">k!</annotation></semantics></math></span> способами, і всі
     ці впорядкування враховані в <span class="math" data-tex="A_n^k"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msubsup><mi>A</mi><mi>n</mi><mi>k</mi></msubsup></mrow><annotation encoding="application/x-tex">A_n^k</annotation></semantics></math></span>. Тому <span class="math" data-tex="C_n^k = \frac{A_n^k}{k!}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msubsup><mi>C</mi><mi>n</mi><mi>k</mi></msubsup><mo>&#x0003D;</mo><mfrac><mrow><msubsup><mi>A</mi><mi>n</mi><mi>k</mi></msubsup></mrow><mrow><mi>k</mi><mo>&#x00021;</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">C_n^k = \frac{A_n^k}{k!}</annotation></semantics></math></span> - це і є
     ділення на 2 із зачіпки.</p>
@@ -159,6 +187,99 @@
       <p><strong>Класична формула вимагає рівноможливих наслідків.</strong> Сум на двох кубиках 11 (від 2 до 12), але вони
       не рівноможливі: сума 7 виходить шістьма способами, сума 2 - одним. Рахувати треба пари граней: їх 36.</p>
     </div>
+    <!-- fig:09-dice -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 250" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Таблиця 6 на 6: рядок - перший кубик, стовпчик - другий, у клітинці сума. Шість клітинок із сумою 7 лежать на діагоналі і виділені. Сума 2 трапляється лише в одній клітинці, тому суми не рівноможливі, а пари граней - рівноможливі.">
+        <text x="90.0" y="26.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle" font-weight="700">1</text>
+        <text x="64.0" y="54.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end" font-weight="700">1</text>
+        <text x="122.0" y="26.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle" font-weight="700">2</text>
+        <text x="64.0" y="86.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end" font-weight="700">2</text>
+        <text x="154.0" y="26.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle" font-weight="700">3</text>
+        <text x="64.0" y="118.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end" font-weight="700">3</text>
+        <text x="186.0" y="26.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle" font-weight="700">4</text>
+        <text x="64.0" y="150.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end" font-weight="700">4</text>
+        <text x="218.0" y="26.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle" font-weight="700">5</text>
+        <text x="64.0" y="182.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end" font-weight="700">5</text>
+        <text x="250.0" y="26.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle" font-weight="700">6</text>
+        <text x="64.0" y="214.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end" font-weight="700">6</text>
+        <rect x="74.0" y="34.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="90.0" y="54.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">2</text>
+        <rect x="106.0" y="34.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="122.0" y="54.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">3</text>
+        <rect x="138.0" y="34.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="154.0" y="54.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">4</text>
+        <rect x="170.0" y="34.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="186.0" y="54.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">5</text>
+        <rect x="202.0" y="34.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="218.0" y="54.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">6</text>
+        <rect x="234.0" y="34.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="0.8" style="stroke:var(--acc)"/>
+        <text x="250.0" y="54.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" font-weight="700">7</text>
+        <rect x="74.0" y="66.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="90.0" y="86.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">3</text>
+        <rect x="106.0" y="66.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="122.0" y="86.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">4</text>
+        <rect x="138.0" y="66.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="154.0" y="86.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">5</text>
+        <rect x="170.0" y="66.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="186.0" y="86.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">6</text>
+        <rect x="202.0" y="66.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="0.8" style="stroke:var(--acc)"/>
+        <text x="218.0" y="86.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" font-weight="700">7</text>
+        <rect x="234.0" y="66.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="250.0" y="86.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">8</text>
+        <rect x="74.0" y="98.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="90.0" y="118.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">4</text>
+        <rect x="106.0" y="98.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="122.0" y="118.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">5</text>
+        <rect x="138.0" y="98.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="154.0" y="118.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">6</text>
+        <rect x="170.0" y="98.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="0.8" style="stroke:var(--acc)"/>
+        <text x="186.0" y="118.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" font-weight="700">7</text>
+        <rect x="202.0" y="98.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="218.0" y="118.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">8</text>
+        <rect x="234.0" y="98.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="250.0" y="118.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">9</text>
+        <rect x="74.0" y="130.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="90.0" y="150.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">5</text>
+        <rect x="106.0" y="130.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="122.0" y="150.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">6</text>
+        <rect x="138.0" y="130.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="0.8" style="stroke:var(--acc)"/>
+        <text x="154.0" y="150.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" font-weight="700">7</text>
+        <rect x="170.0" y="130.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="186.0" y="150.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">8</text>
+        <rect x="202.0" y="130.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="218.0" y="150.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">9</text>
+        <rect x="234.0" y="130.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="250.0" y="150.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">10</text>
+        <rect x="74.0" y="162.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="90.0" y="182.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">6</text>
+        <rect x="106.0" y="162.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="0.8" style="stroke:var(--acc)"/>
+        <text x="122.0" y="182.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" font-weight="700">7</text>
+        <rect x="138.0" y="162.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="154.0" y="182.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">8</text>
+        <rect x="170.0" y="162.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="186.0" y="182.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">9</text>
+        <rect x="202.0" y="162.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="218.0" y="182.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">10</text>
+        <rect x="234.0" y="162.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="250.0" y="182.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">11</text>
+        <rect x="74.0" y="194.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="0.8" style="stroke:var(--acc)"/>
+        <text x="90.0" y="214.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" font-weight="700">7</text>
+        <rect x="106.0" y="194.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="122.0" y="214.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">8</text>
+        <rect x="138.0" y="194.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="154.0" y="214.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">9</text>
+        <rect x="170.0" y="194.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="186.0" y="214.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">10</text>
+        <rect x="202.0" y="194.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="218.0" y="214.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">11</text>
+        <rect x="234.0" y="194.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="250.0" y="214.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">12</text>
+        <text x="170.0" y="14.0" fill="currentColor" font-size="12" opacity="0.7" text-anchor="middle">2-й</text>
+        <text x="14.0" y="130.0" fill="currentColor" font-size="12" opacity="0.7">1-й</text>
+      </svg>
+      <p class="dim">Рисунок 21. Рівноможливі - 36 пар граней, а не 11 сум: сума 7 займає 6 клітинок з 36.</p>
+    </div>
+    <!-- /fig:09-dice -->
     <div class="limit" id="limit-median">
       <p><strong>Медіану шукають у впорядкованому ряді.</strong> При парній кількості даних медіана - середнє двох
       центральних чисел. А середнє, на відміну від медіани, чутливе до одного дуже великого значення.</p>

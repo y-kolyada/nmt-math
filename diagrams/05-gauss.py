@@ -21,6 +21,5 @@ def figure(lang):
         if a != '…':
             f.line(x - 16, 66, x + 16, 66, w=1)
             f.text(x, 86, '101', size=13, anchor='middle', bold=True, accent=True)
-    f.text(14, 30, '+', size=14, op=0)
     f.text(160, 118, each + ': 101,  2S = 101 · 100', size=12, anchor='middle', op=0.8)
     return f, label, caption
