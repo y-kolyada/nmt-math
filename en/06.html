@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en" data-site="nmt-math">
+<head>
+<meta charset="utf-8">
+<meta name="swa-sources" content="nmt-ua:2024 nmt-ua:2025 nmt-ua:2026">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Power, root, logarithm · nmt-math · ai|</title>
+<!-- meta: built by tools/build-meta.py - do not edit by hand -->
+<meta name="description" content="A power and the two questions that invert it.">
+<link rel="canonical" href="https://y-kolyada.github.io/nmt-math/en/06.html">
+<link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/06.html">
+<link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/06.html">
+<link rel="alternate" hreflang="en" href="https://y-kolyada.github.io/nmt-math/en/06.html">
+<link rel="alternate" hreflang="x-default" href="https://y-kolyada.github.io/nmt-math/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="nmt-math">
+<meta property="og:title" content="Power, root, logarithm">
+<meta property="og:description" content="A power and the two questions that invert it.">
+<meta property="og:url" content="https://y-kolyada.github.io/nmt-math/en/06.html">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Power, root, logarithm","description":"A power and the two questions that invert it.","url":"https://y-kolyada.github.io/nmt-math/en/06.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<!-- /meta -->
+<link rel="stylesheet" href="../assets/style.css?v=2">
+<link rel="stylesheet" href="../assets/study.css?v=2">
+<script>
+  (function() {
+    var s = document.documentElement.dataset.site || 'swa';
+    var t = localStorage.getItem('swa-' + s + '-theme');
+    if (t) document.documentElement.setAttribute('data-theme', t);
+    var f = localStorage.getItem('swa-' + s + '-font');
+    if (f) document.documentElement.setAttribute('data-font', f);
+  })();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+
+<header class="top">
+  <div class="brand-group">
+    <a class="home" href="index.html">
+      <span class="badge-ai">ai|</span>
+      <span class="sub-brand">nmt-math</span>
+    </a>
+    <div class="three" aria-hidden="true">law · <span class="topic">Mathematics</span> · limits · practice</div>
+  </div>
+  <div class="utility-tray" role="toolbar" aria-label="Display settings and language">
+    <nav class="lang-switcher" aria-label="Page language">
+      <a href="../uk/06.html" lang="uk" hreflang="uk" aria-label="Українська">UK</a>
+      <a href="../ru/06.html" lang="ru" hreflang="ru" aria-label="Русский">RU</a>
+      <a href="06.html" lang="en" hreflang="en" aria-label="English" class="active" aria-current="page">EN</a>
+    </nav>
+    <div class="font-scaler" role="group" aria-label="Font size">
+      <button type="button" class="font-btn font-s" data-size="s" title="Small font" aria-label="Small font">A</button>
+      <button type="button" class="font-btn font-m active" data-size="m" title="Standard font" aria-label="Standard font">A</button>
+      <button type="button" class="font-btn font-l" data-size="l" title="Large font" aria-label="Large font">A</button>
+    </div>
+    <button type="button" class="theme-toggle" id="themeToggle" title="Switch theme (day/night)" aria-label="Switch theme day/night">
+      <span class="theme-icon" aria-hidden="true"><svg class="icon" data-icon="sun" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="3.8"/><path d="M10 1.2v2.2M10 16.6v2.2M1.2 10h2.2M16.6 10h2.2M3.7 3.7l1.6 1.6M14.7 14.7l1.6 1.6M16.3 3.7l-1.6 1.6M5.3 14.7l-1.6 1.6"/></svg></span>
+    </button>
+  </div>
+</header>
+
+<div class="cols">
+
+  <nav class="contents" aria-label="Course blocks">
+    <ol>
+      <li class="group">Algebra and analysis</li>
+      <li><a href="01.html"><span class="num">1</span>Number, operations</a></li>
+      <li><a href="02.html"><span class="num">2</span>Ratio and percent</a></li>
+      <li><a href="03.html"><span class="num">3</span>Expressions</a></li>
+      <li><a href="04.html"><span class="num">4</span>Equations, inequalities</a></li>
+      <li><a href="05.html"><span class="num">5</span>Function, sequence</a></li>
+      <li><a href="06.html" aria-current="page"><span class="num">6</span>Powers, logarithms</a></li>
+      <li><a href="07.html"><span class="num">7</span>Trigonometry</a></li>
+      <li><a href="08.html"><span class="num">8</span>Derivative, integral</a></li>
+      <li><a href="09.html"><span class="num">9</span>Counting, probability</a></li>
+      <li class="group">Geometry</li>
+      <li><a href="10.html"><span class="num">10</span>Plane figures</a></li>
+      <li><a href="11.html"><span class="num">11</span>Measuring figures</a></li>
+      <li><a href="12.html"><span class="num">12</span>Coordinates, vectors</a></li>
+      <li><a href="13.html"><span class="num">13</span>Space and solids</a></li>
+    </ol>
+    <div class="nav-extra">
+      <div><a href="navigator.html"><svg class="icon" data-icon="target" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7.4"/><circle cx="10" cy="10" r="3.6"/><circle cx="10" cy="10" r="0.7" fill="currentColor"/></svg> Navigator</a></div>
+      <div><a href="glossary.html"><svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg> Glossary</a></div>
+    </div>
+    <div class="page-toc" id="pageToc" aria-label="Sections of this page" hidden>
+      <ul class="toc-list" id="tocList"></ul>
+    </div>
+  </nav>
+
+  <main id="main">
+    <h1>Power, root, logarithm</h1>
+    <p class="page-size" data-words="1984">Words: 1984</p>
+    <p class="lead">A power and the two questions that invert it. At school the root and the logarithm are studied in different years, in different chapters and with different rules. In fact they are two questions to one equality, and their laws are one law of powers read from different sides.</p>
+
+    <div class="box key" id="key-idea">
+      <h2>Main idea of the page <a class="anchor-link" href="#key-idea" aria-label="link to this block">#</a></h2>
+      <p>The equality <span class="math" data-tex="a^n = b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>a</mi><mi>n</mi></msup><mo>&#x0003D;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a^n = b</annotation></semantics></math></span> has three participants. An unknown <span class="math" data-tex="b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span> is a power, an unknown <span class="math" data-tex="a"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span> is a root, an unknown <span class="math" data-tex="n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span> is a logarithm. So the properties of logarithms need not be learnt separately: they are the properties of powers written for the exponent. Their restrictions are shared too: they come from the fact that a positive number stays positive in any power.</p>
+    </div>
+
+    <span class="step">Step 0 · Hook</span>
+    <h2 id="hook">1 · What the root of x² equals <a class="anchor-link" href="#hook">#</a></h2>
+    <p>Simplify <span class="math" data-tex="\sqrt{x^2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">\sqrt{x^2}</annotation></semantics></math></span>. The usual answer: «the root and the square cancel each other, so <span class="math" data-tex="x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span>».</p>
+    <p>Let us check with a number. Let <span class="math" data-tex="x = -3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">x = -3</annotation></semantics></math></span>. Then <span class="math" data-tex="\sqrt{(-3)^2} = \sqrt{9} = 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msqrt><mrow><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mn>3</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup></mrow></msqrt><mo>&#x0003D;</mo><msqrt><mrow><mn>9</mn></mrow></msqrt><mo>&#x0003D;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">\sqrt{(-3)^2} = \sqrt{9} = 3</annotation></semantics></math></span>, not −3. The root of the square returned not the number but its distance to zero:</p>
+    <div class="math-block" data-tex="\sqrt{x^2} = |x|"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt><mo>&#x0003D;</mo><mo stretchy="false">&#x0007C;</mo><mi>x</mi><mo stretchy="false">&#x0007C;</mo></mrow><annotation encoding="application/x-tex">\sqrt{x^2} = |x|</annotation></semantics></math></div>
+    <p>The second hook: what is <span class="math" data-tex="\log_2(-8)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>log</mi><mn>2</mn></msub><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mn>8</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">\log_2(-8)</annotation></semantics></math></span>? The question reads: «to what power must 2 be raised to get −8?». There is no such power: two to any power is positive. Both hooks have one source, and below it will become visible.</p>
+
+    <span class="step">Step 1 · Concept</span>
+    <h2 id="concept">2 · One equality, three questions <a class="anchor-link" href="#concept">#</a></h2>
+    <p>A <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">power</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Power</strong><button type="button" class="term-close" aria-label="Close">&times;</button></span><span class="term-desc">The product of n equal factors a; fractional and negative exponents extend this definition.</span><span class="term-links"><a href="glossary.html#term-power">To the glossary <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> with a natural exponent is a product of equal factors: <span class="math" data-tex="a^n = a \cdot a \cdot \ldots \cdot a"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>a</mi><mi>n</mi></msup><mo>&#x0003D;</mo><mi>a</mi><mo>&#x000B7;</mo><mi>a</mi><mo>&#x000B7;</mo><mi>&#x02026;</mi><mo>&#x000B7;</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">a^n = a \cdot a \cdot \ldots \cdot a</annotation></semantics></math></span> (<span class="math" data-tex="n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span> factors). Take the equality <span class="math" data-tex="2^3 = 8"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>&#x0003D;</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">2^3 = 8</annotation></semantics></math></span> and ask about each participant:</p>
+    <ul>
+      <li>the base 2 and the exponent 3 are known, we seek the result - this is a <strong>power</strong>: <span class="math" data-tex="2^3 = 8"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>&#x0003D;</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">2^3 = 8</annotation></semantics></math></span>;</li>
+      <li>the exponent 3 and the result 8 are known, we seek the base - this is a <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">root</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">n-th root</strong><button type="button" class="term-close" aria-label="Close">&times;</button></span><span class="term-desc">The number that gives b when raised to the power n.</span><span class="term-links"><a href="glossary.html#term-nroot">To the glossary <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong>: <span class="math" data-tex="\sqrt[3]{8} = 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mroot><mrow><mn>8</mn></mrow><mn>3</mn></mroot><mo>&#x0003D;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\sqrt[3]{8} = 2</annotation></semantics></math></span>;</li>
+      <li>the base 2 and the result 8 are known, we seek the exponent - this is a <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">logarithm</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Logarithm</strong><button type="button" class="term-close" aria-label="Close">&times;</button></span><span class="term-desc">The exponent to which the base a must be raised to get b.</span><span class="term-links"><a href="glossary.html#term-log">To the glossary <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong>: <span class="math" data-tex="\log_2 8 = 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>log</mi><mn>2</mn></msub><mn>8</mn><mo>&#x0003D;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">\log_2 8 = 3</annotation></semantics></math></span>.</li>
+    </ul>
+    <!-- fig:06-three-questions -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 200" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="In the centre is the equality 2³ = 8. Three arrows lead to three questions: unknown result - a power, unknown base - a root, unknown exponent - a logarithm.">
+        <rect x="110.0" y="12.0" width="100.0" height="40.0" rx="6" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="160.0" y="39.0" fill="currentColor" font-size="17" opacity="1.0" text-anchor="middle" font-weight="700">2³ = 8</text>
+        <line x1="160.0" y1="52.0" x2="54.0" y2="120.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <polygon points="54.0,120.0 58.0,114.2 60.9,118.8" fill="currentColor"/>
+        <rect x="6.0" y="122.0" width="96.0" height="66.0" rx="6" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-width="1.2"/>
+        <text x="54.0" y="144.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-weight="700">power</text>
+        <text x="54.0" y="163.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">2³ = ?</text>
+        <text x="54.0" y="181.0" fill="currentColor" font-size="12" opacity="0.7" text-anchor="middle" font-style="italic">we seek 8</text>
+        <line x1="160.0" y1="52.0" x2="160.0" y2="120.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <polygon points="160.0,120.0 157.3,113.6 162.7,113.6" fill="currentColor"/>
+        <rect x="112.0" y="122.0" width="96.0" height="66.0" rx="6" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-width="1.2"/>
+        <text x="160.0" y="144.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-weight="700">root</text>
+        <text x="160.0" y="163.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">∛8 = ?</text>
+        <text x="160.0" y="181.0" fill="currentColor" font-size="12" opacity="0.7" text-anchor="middle" font-style="italic">we seek 2</text>
+        <line x1="160.0" y1="52.0" x2="266.0" y2="120.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <polygon points="266.0,120.0 259.1,118.8 262.0,114.2" fill="currentColor"/>
+        <rect x="218.0" y="122.0" width="96.0" height="66.0" rx="6" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-width="1.2"/>
+        <text x="266.0" y="144.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-weight="700">logarithm</text>
+        <text x="266.0" y="163.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">log₂ 8 = ?</text>
+        <text x="266.0" y="181.0" fill="currentColor" font-size="12" opacity="0.7" text-anchor="middle" font-style="italic">we seek 3</text>
+      </svg>
+      <p class="dim">Figure 22. One equality, three questions: power, root, logarithm.</p>
+    </div>
+    <!-- /fig:06-three-questions -->
+    <p>Hence two definitions worth reading as questions:</p>
+    <ul>
+      <li><span class="math" data-tex="\sqrt[n]{b}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mroot><mrow><mi>b</mi></mrow><mi>n</mi></mroot></mrow><annotation encoding="application/x-tex">\sqrt[n]{b}</annotation></semantics></math></span> is the number that gives <span class="math" data-tex="b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span> in the power <span class="math" data-tex="n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span>;</li>
+      <li><span class="math" data-tex="\log_a b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>log</mi><mi>a</mi></msub><mi>b</mi></mrow><annotation encoding="application/x-tex">\log_a b</annotation></semantics></math></span> is the exponent to which <span class="math" data-tex="a"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span> must be raised to get <span class="math" data-tex="b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span>.</li>
+    </ul>
+
+    <span class="step">Step 2 · Law</span>
+    <h2 id="law">3 · One law in three notations <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-power">
+      <p class="law-name">Law of powers: multiplying powers adds exponents</p>
+      <div class="math-block" data-tex="a^m \cdot a^n = a^{m+n}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>a</mi><mi>m</mi></msup><mo>&#x000B7;</mo><msup><mi>a</mi><mi>n</mi></msup><mo>&#x0003D;</mo><msup><mi>a</mi><mrow><mi>m</mi><mo>&#x0002B;</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">a^m \cdot a^n = a^{m+n}</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-log">
+      <p class="law-name">The same law read for the exponent</p>
+      <div class="math-block" data-tex="\log_a (xy) = \log_a x + \log_a y"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>log</mi><mi>a</mi></msub><mo stretchy="false">&#x00028;</mo><mi>x</mi><mi>y</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msub><mi>log</mi><mi>a</mi></msub><mi>x</mi><mo>&#x0002B;</mo><msub><mi>log</mi><mi>a</mi></msub><mi>y</mi></mrow><annotation encoding="application/x-tex">\log_a (xy) = \log_a x + \log_a y</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-identity">
+      <p class="law-name">The definition of the logarithm in one line</p>
+      <div class="math-block" data-tex="a^{\log_a b} = b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>a</mi><mrow><msub><mi>log</mi><mi>a</mi></msub><mi>b</mi></mrow></msup><mo>&#x0003D;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a^{\log_a b} = b</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-root">
+      <p class="law-name">Root of a square</p>
+      <div class="math-block" data-tex="\sqrt{a^2} = |a|"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup></mrow></msqrt><mo>&#x0003D;</mo><mo stretchy="false">&#x0007C;</mo><mi>a</mi><mo stretchy="false">&#x0007C;</mo></mrow><annotation encoding="application/x-tex">\sqrt{a^2} = |a|</annotation></semantics></math></div>
+    </div>
+    <p>The other properties are consequences of these four: a quotient of powers gives a difference of exponents and the logarithm of a quotient, a power of a power gives a product of exponents and the rule <span class="math" data-tex="\log_a x^k = k \log_a x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>log</mi><mi>a</mi></msub><msup><mi>x</mi><mi>k</mi></msup><mo>&#x0003D;</mo><mi>k</mi><msub><mi>log</mi><mi>a</mi></msub><mi>x</mi></mrow><annotation encoding="application/x-tex">\log_a x^k = k \log_a x</annotation></semantics></math></span>.</p>
+
+    <span class="step">Step 3 · Why it is so</span>
+    <h2 id="why">4 · Where the law comes from and why it was invented <a class="anchor-link" href="#why">#</a></h2>
+    <p><strong>Power.</strong> <span class="math" data-tex="a^m"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>a</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">a^m</annotation></semantics></math></span> has <span class="math" data-tex="m"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span> factors, <span class="math" data-tex="a^n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>a</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">a^n</annotation></semantics></math></span> has another <span class="math" data-tex="n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span>. Together there are <span class="math" data-tex="m + n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>m</mi><mo>&#x0002B;</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m + n</annotation></semantics></math></span> of them. No more proof is needed.</p>
+    <p><strong>Logarithm.</strong> Let <span class="math" data-tex="x = a^m"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><msup><mi>a</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">x = a^m</annotation></semantics></math></span> and <span class="math" data-tex="y = a^n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><msup><mi>a</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">y = a^n</annotation></semantics></math></span>, that is, <span class="math" data-tex="m = \log_a x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>m</mi><mo>&#x0003D;</mo><msub><mi>log</mi><mi>a</mi></msub><mi>x</mi></mrow><annotation encoding="application/x-tex">m = \log_a x</annotation></semantics></math></span>, <span class="math" data-tex="n = \log_a y"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>n</mi><mo>&#x0003D;</mo><msub><mi>log</mi><mi>a</mi></msub><mi>y</mi></mrow><annotation encoding="application/x-tex">n = \log_a y</annotation></semantics></math></span>. By the law of powers <span class="math" data-tex="xy = a^{m+n}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mi>y</mi><mo>&#x0003D;</mo><msup><mi>a</mi><mrow><mi>m</mi><mo>&#x0002B;</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">xy = a^{m+n}</annotation></semantics></math></span>, so the exponent of the product equals <span class="math" data-tex="m + n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>m</mi><mo>&#x0002B;</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m + n</annotation></semantics></math></span>. That is exactly <span class="math" data-tex="\log_a(xy) = \log_a x + \log_a y"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>log</mi><mi>a</mi></msub><mo stretchy="false">&#x00028;</mo><mi>x</mi><mi>y</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msub><mi>log</mi><mi>a</mi></msub><mi>x</mi><mo>&#x0002B;</mo><msub><mi>log</mi><mi>a</mi></msub><mi>y</mi></mrow><annotation encoding="application/x-tex">\log_a(xy) = \log_a x + \log_a y</annotation></semantics></math></span>.</p>
+    <p><strong>Why.</strong> Logarithms appeared in 1614 with John Napier precisely for the sake of this law: multiplying large numbers was replaced by adding their logarithms from a table. A logarithm turns multiplication into addition. This is not a school exercise but a tool with which astronomers computed orbits for more than three centuries, until calculators appeared.</p>
+    <p><strong>Root of a square.</strong> An <span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">arithmetic root</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Arithmetic root</strong><button type="button" class="term-close" aria-label="Close">&times;</button></span><span class="term-desc">The non-negative number whose square equals a given non-negative number.</span><span class="term-links"><a href="glossary.html#term-arith-root">To the glossary <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span> is a non-negative number by definition. The squares of the numbers <span class="math" data-tex="a"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span> and <span class="math" data-tex="-a"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02212;</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">-a</annotation></semantics></math></span> are the same, and of these two candidates the root picks the non-negative one. That is <span class="math" data-tex="|a|"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x0007C;</mo><mi>a</mi><mo stretchy="false">&#x0007C;</mo></mrow><annotation encoding="application/x-tex">|a|</annotation></semantics></math></span>.</p>
+
+    <span class="step">Step 4 · Limits</span>
+    <h2 id="limits">5 · Where the laws break <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-log-domain">
+      <p><strong>The logarithm <span class="math" data-tex="\log_a b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>log</mi><mi>a</mi></msub><mi>b</mi></mrow><annotation encoding="application/x-tex">\log_a b</annotation></semantics></math></span> exists only for <span class="math" data-tex="a > 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mo>&#x0003E;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a &gt; 0</annotation></semantics></math></span>, <span class="math" data-tex="a \neq 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mo>&#x02260;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">a \neq 1</annotation></semantics></math></span>, <span class="math" data-tex="b > 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>b</mi><mo>&#x0003E;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b &gt; 0</annotation></semantics></math></span>.</strong> Each condition is not a rule from a textbook but an answer to the question «to what power». A positive base in any power gives a positive number, hence <span class="math" data-tex="b > 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>b</mi><mo>&#x0003E;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b &gt; 0</annotation></semantics></math></span>. One in any power gives 1, so the question «to what power must 1 be raised to get 5» has no answer, while «to get 1» has infinitely many. These three conditions are the domain of every task with a logarithm.</p>
+    </div>
+    <!-- fig:06-exp-log -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 250" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="The graphs y = 2ˣ and y = log₂ x are symmetric about the line y = x. The exponential function is always positive, so the logarithm exists only for positive numbers: its graph never goes to the left of the Oy axis.">
+        <line x1="30.0" y1="144.0" x2="290.0" y2="144.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="290.0,144.0 283.6,146.7 283.6,141.3" fill="currentColor"/>
+        <line x1="134.0" y1="232.0" x2="134.0" y2="12.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="134.0,12.0 136.7,18.4 131.3,18.4" fill="currentColor"/>
+        <text x="286.0" y="160.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <text x="142.0" y="24.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <line x1="168.7" y1="141.0" x2="168.7" y2="147.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="168.7" y="160.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">1</text>
+        <line x1="203.3" y1="141.0" x2="203.3" y2="147.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="203.3" y="160.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">2</text>
+        <line x1="272.7" y1="141.0" x2="272.7" y2="147.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="272.7" y="160.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">4</text>
+        <line x1="131.0" y1="114.7" x2="137.0" y2="114.7" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="128.0" y="118.7" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">1</text>
+        <line x1="131.0" y1="85.3" x2="137.0" y2="85.3" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="128.0" y="89.3" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">2</text>
+        <line x1="131.0" y1="26.7" x2="137.0" y2="26.7" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="128.0" y="30.7" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">4</text>
+        <polyline points="30.0,232.0 32.2,230.2 34.3,228.3 36.5,226.5 38.7,224.7 40.8,222.8 43.0,221.0 45.2,219.2 47.3,217.3 49.5,215.5 51.7,213.7 53.8,211.8 56.0,210.0 58.2,208.2 60.3,206.3 62.5,204.5 64.7,202.7 66.8,200.8 69.0,199.0 71.2,197.2 73.3,195.3 75.5,193.5 77.7,191.7 79.8,189.8 82.0,188.0 84.2,186.2 86.3,184.3 88.5,182.5 90.7,180.7 92.8,178.8 95.0,177.0 97.2,175.2 99.3,173.3 101.5,171.5 103.7,169.7 105.8,167.8 108.0,166.0 110.2,164.2 112.3,162.3 114.5,160.5 116.7,158.7 118.8,156.8 121.0,155.0 123.2,153.2 125.3,151.3 127.5,149.5 129.7,147.7 131.8,145.8 134.0,144.0 136.2,142.2 138.3,140.3 140.5,138.5 142.7,136.7 144.8,134.8 147.0,133.0 149.2,131.2 151.3,129.3 153.5,127.5 155.7,125.7 157.8,123.8 160.0,122.0 162.2,120.2 164.3,118.3 166.5,116.5 168.7,114.7 170.8,112.8 173.0,111.0 175.2,109.2 177.3,107.3 179.5,105.5 181.7,103.7 183.8,101.8 186.0,100.0 188.2,98.2 190.3,96.3 192.5,94.5 194.7,92.7 196.8,90.8 199.0,89.0 201.2,87.2 203.3,85.3 205.5,83.5 207.7,81.7 209.8,79.8 212.0,78.0 214.2,76.2 216.3,74.3 218.5,72.5 220.7,70.7 222.8,68.8 225.0,67.0 227.2,65.2 229.3,63.3 231.5,61.5 233.7,59.7 235.8,57.8 238.0,56.0 240.2,54.2 242.3,52.3 244.5,50.5 246.7,48.7 248.8,46.8 251.0,45.0 253.2,43.2 255.3,41.3 257.5,39.5 259.7,37.7 261.8,35.8 264.0,34.0 266.2,32.2 268.3,30.3 270.5,28.5 272.7,26.7 274.8,24.8 277.0,23.0 279.2,21.2 281.3,19.3 283.5,17.5 285.7,15.7 287.8,13.8 290.0,12.0" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" opacity="0.6"/>
+        <polyline points="30.0,140.3 31.5,140.2 33.0,140.1 34.5,140.0 36.0,139.9 37.5,139.7 39.0,139.6 40.5,139.5 41.9,139.3 43.4,139.2 44.9,139.1 46.4,138.9 47.9,138.8 49.4,138.6 50.9,138.4 52.4,138.3 53.9,138.1 55.4,137.9 56.9,137.7 58.4,137.5 59.9,137.3 61.4,137.1 62.9,136.9 64.4,136.7 65.8,136.5 67.3,136.3 68.8,136.0 70.3,135.8 71.8,135.5 73.3,135.3 74.8,135.0 76.3,134.7 77.8,134.5 79.3,134.2 80.8,133.9 82.3,133.6 83.8,133.3 85.3,132.9 86.8,132.6 88.2,132.2 89.7,131.9 91.2,131.5 92.7,131.1 94.2,130.8 95.7,130.4 97.2,129.9 98.7,129.5 100.2,129.1 101.7,128.6 103.2,128.2 104.7,127.7 106.2,127.2 107.7,126.7 109.2,126.1 110.7,125.6 112.1,125.1 113.6,124.5 115.1,123.9 116.6,123.3 118.1,122.6 119.6,122.0 121.1,121.3 122.6,120.6 124.1,119.9 125.6,119.2 127.1,118.5 128.6,117.7 130.1,116.9 131.6,116.1 133.1,115.2 134.5,114.3 136.0,113.4 137.5,112.5 139.0,111.6 140.5,110.6 142.0,109.6 143.5,108.5 145.0,107.4 146.5,106.3 148.0,105.2 149.5,104.0 151.0,102.8 152.5,101.6 154.0,100.3 155.5,98.9 157.0,97.6 158.4,96.2 159.9,94.7 161.4,93.2 162.9,91.7 164.4,90.1 165.9,88.5 167.4,86.8 168.9,85.1 170.4,83.3 171.9,81.4 173.4,79.5 174.9,77.6 176.4,75.6 177.9,73.5 179.4,71.4 180.8,69.2 182.3,66.9 183.8,64.5 185.3,62.1 186.8,59.7 188.3,57.1 189.8,54.5 191.3,51.8 192.8,49.0 194.3,46.1 195.8,43.1 197.3,40.0 198.8,36.9 200.3,33.6 201.8,30.3 203.3,26.9 204.7,23.3 206.2,19.6 207.7,15.9" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="2" opacity="1.0" style="stroke:var(--acc)"/>
+        <polyline points="138.5,230.3 139.8,219.9 141.0,211.5 142.3,204.5 143.6,198.5 144.8,193.3 146.1,188.6 147.3,184.4 148.6,180.6 149.9,177.1 151.1,173.8 152.4,170.8 153.7,168.0 154.9,165.4 156.2,162.9 157.4,160.6 158.7,158.3 160.0,156.2 161.2,154.2 162.5,152.3 163.8,150.5 165.0,148.7 166.3,147.0 167.5,145.4 168.8,143.8 170.1,142.3 171.3,140.9 172.6,139.5 173.9,138.1 175.1,136.8 176.4,135.5 177.6,134.3 178.9,133.0 180.2,131.9 181.4,130.7 182.7,129.6 184.0,128.5 185.2,127.5 186.5,126.5 187.7,125.4 189.0,124.5 190.3,123.5 191.5,122.6 192.8,121.6 194.1,120.7 195.3,119.9 196.6,119.0 197.8,118.2 199.1,117.3 200.4,116.5 201.6,115.7 202.9,114.9 204.2,114.2 205.4,113.4 206.7,112.7 207.9,111.9 209.2,111.2 210.5,110.5 211.7,109.8 213.0,109.1 214.3,108.5 215.5,107.8 216.8,107.2 218.0,106.5 219.3,105.9 220.6,105.3 221.8,104.7 223.1,104.1 224.4,103.5 225.6,102.9 226.9,102.3 228.1,101.7 229.4,101.2 230.7,100.6 231.9,100.1 233.2,99.5 234.5,99.0 235.7,98.4 237.0,97.9 238.2,97.4 239.5,96.9 240.8,96.4 242.0,95.9 243.3,95.4 244.6,94.9 245.8,94.4 247.1,94.0 248.3,93.5 249.6,93.0 250.9,92.6 252.1,92.1 253.4,91.7 254.7,91.2 255.9,90.8 257.2,90.3 258.4,89.9 259.7,89.5 261.0,89.1 262.2,88.6 263.5,88.2 264.8,87.8 266.0,87.4 267.3,87.0 268.5,86.6 269.8,86.2 271.1,85.8 272.3,85.4 273.6,85.1 274.9,84.7 276.1,84.3 277.4,83.9 278.6,83.5 279.9,83.2 281.2,82.8 282.4,82.5 283.7,82.1 285.0,81.7 286.2,81.4 287.5,81.0 288.7,80.7 290.0,80.3" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="2" opacity="1.0"/>
+        <text x="33.5" y="122.0" fill="currentColor" font-size="12" opacity="1.0" style="fill:var(--acc)">y = 2ˣ</text>
+        <text x="224.1" y="127.9" fill="currentColor" font-size="12" opacity="1.0">y = log₂ x</text>
+        <text x="248.4" y="34.0" fill="currentColor" font-size="12" opacity="0.7">y = x</text>
+      </svg>
+      <p class="dim">Figure 23. The logarithm mirrors the power: 2ˣ > 0 always, so log₂ x exists only for x > 0.</p>
+    </div>
+    <!-- /fig:06-exp-log -->
+    <div class="limit" id="limit-log-product">
+      <p><strong>The law <span class="math" data-tex="\log_a(xy) = \log_a x + \log_a y"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>log</mi><mi>a</mi></msub><mo stretchy="false">&#x00028;</mo><mi>x</mi><mi>y</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msub><mi>log</mi><mi>a</mi></msub><mi>x</mi><mo>&#x0002B;</mo><msub><mi>log</mi><mi>a</mi></msub><mi>y</mi></mrow><annotation encoding="application/x-tex">\log_a(xy) = \log_a x + \log_a y</annotation></semantics></math></span> requires <span class="math" data-tex="x > 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003E;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x &gt; 0</annotation></semantics></math></span> and <span class="math" data-tex="y > 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003E;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">y &gt; 0</annotation></semantics></math></span>.</strong> The left side exists for two negative factors too: <span class="math" data-tex="\log_2((-2)(-4)) = \log_2 8 = 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>log</mi><mn>2</mn></msub><mo stretchy="false">&#x00028;</mo><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mn>4</mn><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msub><mi>log</mi><mn>2</mn></msub><mn>8</mn><mo>&#x0003D;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">\log_2((-2)(-4)) = \log_2 8 = 3</annotation></semantics></math></span>, but the right side does not. So transforming an expression with a logarithm can narrow the domain and lose a root. The honest record: <span class="math" data-tex="\log_a x^2 = 2\log_a |x|"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>log</mi><mi>a</mi></msub><msup><mi>x</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mn>2</mn><msub><mi>log</mi><mi>a</mi></msub><mo stretchy="false">&#x0007C;</mo><mi>x</mi><mo stretchy="false">&#x0007C;</mo></mrow><annotation encoding="application/x-tex">\log_a x^2 = 2\log_a |x|</annotation></semantics></math></span>.</p>
+    </div>
+    <div class="limit" id="limit-root">
+      <p><strong><span class="math" data-tex="\sqrt{a^2} = |a|"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup></mrow></msqrt><mo>&#x0003D;</mo><mo stretchy="false">&#x0007C;</mo><mi>a</mi><mo stretchy="false">&#x0007C;</mo></mrow><annotation encoding="application/x-tex">\sqrt{a^2} = |a|</annotation></semantics></math></span>, but <span class="math" data-tex="(\sqrt{a})^2 = a"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><msqrt><mrow><mi>a</mi></mrow></msqrt><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">(\sqrt{a})^2 = a</annotation></semantics></math></span> only for <span class="math" data-tex="a \geq 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mo>&#x02265;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a \geq 0</annotation></semantics></math></span>.</strong> An even root of a negative number does not exist among the real numbers, while an odd one does: <span class="math" data-tex="\sqrt[3]{-8} = -2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mroot><mrow><mo>&#x02212;</mo><mn>8</mn></mrow><mn>3</mn></mroot><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\sqrt[3]{-8} = -2</annotation></semantics></math></span>.</p>
+    </div>
+    <!-- fig:06-abs-root -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 190" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="The graph of y = √(x²) is the «tick» y = |x|: both branches lie above the Ox axis. Dashed: y = x; to the left of zero it runs below the axis, so √(x²) and x differ there.">
+        <line x1="20.0" y1="98.2" x2="300.0" y2="98.2" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="300.0,98.2 293.6,100.9 293.6,95.4" fill="currentColor"/>
+        <line x1="160.0" y1="172.0" x2="160.0" y2="12.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="160.0,12.0 162.7,18.4 157.3,18.4" fill="currentColor"/>
+        <text x="296.0" y="114.2" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <text x="168.0" y="24.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <line x1="80.0" y1="95.2" x2="80.0" y2="101.2" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="80.0" y="114.2" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">−2</text>
+        <line x1="240.0" y1="95.2" x2="240.0" y2="101.2" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="240.0" y="114.2" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">2</text>
+        <line x1="157.0" y1="48.9" x2="163.0" y2="48.9" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="154.0" y="52.9" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">2</text>
+        <polyline points="40.0,172.0 42.1,170.7 44.2,169.4 46.3,168.1 48.4,166.8 50.5,165.5 52.6,164.2 54.7,163.0 56.8,161.7 58.9,160.4 61.0,159.1 63.1,157.8 65.2,156.5 67.3,155.2 69.4,153.9 71.5,152.6 73.6,151.3 75.7,150.0 77.8,148.7 79.9,147.4 82.0,146.2 84.1,144.9 86.2,143.6 88.3,142.3 90.4,141.0 92.5,139.7 94.6,138.4 96.7,137.1 98.8,135.8 100.9,134.5 103.0,133.2 105.1,131.9 107.2,130.6 109.3,129.4 111.4,128.1 113.5,126.8 115.6,125.5 117.7,124.2 119.8,122.9 121.9,121.6 124.0,120.3 126.1,119.0 128.2,117.7 130.3,116.4 132.4,115.1 134.5,113.8 136.6,112.6 138.7,111.3 140.8,110.0 142.9,108.7 145.0,107.4 147.1,106.1 149.2,104.8 151.3,103.5 153.4,102.2 155.5,100.9 157.6,99.6 159.7,98.3 161.8,97.0 163.9,95.8 166.0,94.5 168.1,93.2 170.2,91.9 172.3,90.6 174.4,89.3 176.5,88.0 178.6,86.7 180.7,85.4 182.8,84.1 184.9,82.8 187.0,81.5 189.1,80.2 191.2,79.0 193.3,77.7 195.4,76.4 197.5,75.1 199.6,73.8 201.7,72.5 203.8,71.2 205.9,69.9 208.0,68.6 210.1,67.3 212.2,66.0 214.3,64.7 216.4,63.4 218.5,62.2 220.6,60.9 222.7,59.6 224.8,58.3 226.9,57.0 229.0,55.7 231.1,54.4 233.2,53.1 235.3,51.8 237.4,50.5 239.5,49.2 241.6,47.9 243.7,46.6 245.8,45.4 247.9,44.1 250.0,42.8 252.1,41.5 254.2,40.2 256.3,38.9 258.4,37.6 260.5,36.3 262.6,35.0 264.7,33.7 266.8,32.4 268.9,31.1 271.0,29.8 273.1,28.6 275.2,27.3 277.3,26.0 279.4,24.7 281.5,23.4 283.6,22.1 285.7,20.8 287.8,19.5 289.9,18.2 292.0,16.9" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.7"/>
+        <polyline points="24.0,14.5 26.3,15.9 28.5,17.3 30.8,18.6 33.1,20.0 35.3,21.4 37.6,22.8 39.9,24.2 42.1,25.6 44.4,27.0 46.7,28.4 48.9,29.8 51.2,31.2 53.5,32.6 55.7,34.0 58.0,35.4 60.3,36.8 62.5,38.2 64.8,39.6 67.1,41.0 69.3,42.4 71.6,43.8 73.9,45.1 76.1,46.5 78.4,47.9 80.7,49.3 82.9,50.7 85.2,52.1 87.5,53.5 89.7,54.9 92.0,56.3 94.3,57.7 96.5,59.1 98.8,60.5 101.1,61.9 103.3,63.3 105.6,64.7 107.9,66.1 110.1,67.5 112.4,68.9 114.7,70.3 116.9,71.7 119.2,73.0 121.5,74.4 123.7,75.8 126.0,77.2 128.3,78.6 130.5,80.0 132.8,81.4 135.1,82.8 137.3,84.2 139.6,85.6 141.9,87.0 144.1,88.4 146.4,89.8 148.7,91.2 150.9,92.6 153.2,94.0 155.5,95.4 157.7,96.8 160.0,98.2 162.3,96.8 164.5,95.4 166.8,94.0 169.1,92.6 171.3,91.2 173.6,89.8 175.9,88.4 178.1,87.0 180.4,85.6 182.7,84.2 184.9,82.8 187.2,81.4 189.5,80.0 191.7,78.6 194.0,77.2 196.3,75.8 198.5,74.4 200.8,73.0 203.1,71.7 205.3,70.3 207.6,68.9 209.9,67.5 212.1,66.1 214.4,64.7 216.7,63.3 218.9,61.9 221.2,60.5 223.5,59.1 225.7,57.7 228.0,56.3 230.3,54.9 232.5,53.5 234.8,52.1 237.1,50.7 239.3,49.3 241.6,47.9 243.9,46.5 246.1,45.1 248.4,43.8 250.7,42.4 252.9,41.0 255.2,39.6 257.5,38.2 259.7,36.8 262.0,35.4 264.3,34.0 266.5,32.6 268.8,31.2 271.1,29.8 273.3,28.4 275.6,27.0 277.9,25.6 280.1,24.2 282.4,22.8 284.7,21.4 286.9,20.0 289.2,18.6 291.5,17.3 293.7,15.9 296.0,14.5" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="2.2" opacity="1.0" style="stroke:var(--acc)"/>
+        <text x="196.0" y="90.8" fill="currentColor" font-size="12" opacity="1.0" style="fill:var(--acc)">y = √(x²) = |x|</text>
+        <text x="208.0" y="127.7" fill="currentColor" font-size="12" opacity="0.8">y = x</text>
+      </svg>
+      <p class="dim">Figure 24. √(x²) = |x|: to the left of zero the root of the square is not x.</p>
+    </div>
+    <!-- /fig:06-abs-root -->
+    <div class="limit" id="limit-monotone">
+      <p><strong>With a base between 0 and 1 the sign of an inequality changes.</strong> The functions <span class="math" data-tex="a^x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>a</mi><mi>x</mi></msup></mrow><annotation encoding="application/x-tex">a^x</annotation></semantics></math></span> and <span class="math" data-tex="\log_a x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>log</mi><mi>a</mi></msub><mi>x</mi></mrow><annotation encoding="application/x-tex">\log_a x</annotation></semantics></math></span> increase for <span class="math" data-tex="a > 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mo>&#x0003E;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">a &gt; 1</annotation></semantics></math></span> and decrease for <span class="math" data-tex="0 < a < 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>0</mn><mo>&#x0003C;</mo><mi>a</mi><mo>&#x0003C;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">0 &lt; a &lt; 1</annotation></semantics></math></span>. So <span class="math" data-tex="0.5^x > 0.5^3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>0.5</mn><mi>x</mi></msup><mo>&#x0003E;</mo><msup><mn>0.5</mn><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">0.5^x &gt; 0.5^3</annotation></semantics></math></span> gives <span class="math" data-tex="x < 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003C;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">x &lt; 3</annotation></semantics></math></span>, not <span class="math" data-tex="x > 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003E;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">x &gt; 3</annotation></semantics></math></span>.</p>
+    </div>
+
+    <span class="step">Step 5 · Practice</span>
+    <h2 id="apply">6 · Tasks in the NMT format <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="C" data-limit="limit-log-product">
+      <p class="task-kind">One answer out of five · 1 point</p>
+      <p>Calculate <span class="math" data-tex="\log_3 54 - \log_3 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>log</mi><mn>3</mn></msub><mn>54</mn><mo>&#x02212;</mo><msub><mi>log</mi><mn>3</mn></msub><mn>2</mn></mrow><annotation encoding="application/x-tex">\log_3 54 - \log_3 2</annotation></semantics></math></span>.</p>
+      <div class="opts">
+        <button type="button" data-opt="A">A · 1</button>
+        <button type="button" data-opt="B">B · 2</button>
+        <button type="button" data-opt="C">C · 3</button>
+        <button type="button" data-opt="D">D · 27</button>
+        <button type="button" data-opt="E">E · 52</button>
+      </div>
+      <p class="law-ref">Law: the <a href="#law-log">logarithm of a product</a>, read for a quotient.</p>
+      <div class="solution"><span class="math" data-tex="\log_3 54 - \log_3 2 = \log_3 \frac{54}{2} = \log_3 27 = 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>log</mi><mn>3</mn></msub><mn>54</mn><mo>&#x02212;</mo><msub><mi>log</mi><mn>3</mn></msub><mn>2</mn><mo>&#x0003D;</mo><msub><mi>log</mi><mn>3</mn></msub><mfrac><mrow><mn>54</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x0003D;</mo><msub><mi>log</mi><mn>3</mn></msub><mn>27</mn><mo>&#x0003D;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">\log_3 54 - \log_3 2 = \log_3 \frac{54}{2} = \log_3 27 = 3</annotation></semantics></math></span>. Blind moves: 27 - found the quotient and forgot the logarithm, 52 - subtracted the arguments.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="-1" data-limit="limit-root">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p>Calculate <span class="math" data-tex="\sqrt{(1 - \sqrt{2})^2} - \sqrt{2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msqrt><mrow><mo stretchy="false">&#x00028;</mo><mn>1</mn><mo>&#x02212;</mo><msqrt><mrow><mn>2</mn></mrow></msqrt><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup></mrow></msqrt><mo>&#x02212;</mo><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow><annotation encoding="application/x-tex">\sqrt{(1 - \sqrt{2})^2} - \sqrt{2}</annotation></semantics></math></span>.</p>
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Law: <a href="#law-root">root of a square</a>.</p>
+      <div class="solution">The number <span class="math" data-tex="1 - \sqrt{2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>1</mn><mo>&#x02212;</mo><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow><annotation encoding="application/x-tex">1 - \sqrt{2}</annotation></semantics></math></span> is negative, so <span class="math" data-tex="\sqrt{(1 - \sqrt{2})^2} = |1 - \sqrt{2}| = \sqrt{2} - 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msqrt><mrow><mo stretchy="false">&#x00028;</mo><mn>1</mn><mo>&#x02212;</mo><msqrt><mrow><mn>2</mn></mrow></msqrt><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup></mrow></msqrt><mo>&#x0003D;</mo><mo stretchy="false">&#x0007C;</mo><mn>1</mn><mo>&#x02212;</mo><msqrt><mrow><mn>2</mn></mrow></msqrt><mo stretchy="false">&#x0007C;</mo><mo>&#x0003D;</mo><msqrt><mrow><mn>2</mn></mrow></msqrt><mo>&#x02212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\sqrt{(1 - \sqrt{2})^2} = |1 - \sqrt{2}| = \sqrt{2} - 1</annotation></semantics></math></span>. In all: <span class="math" data-tex="\sqrt{2} - 1 - \sqrt{2} = -1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt><mo>&#x02212;</mo><mn>1</mn><mo>&#x02212;</mo><msqrt><mrow><mn>2</mn></mrow></msqrt><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\sqrt{2} - 1 - \sqrt{2} = -1</annotation></semantics></math></span>. The blind move «the root and the square cancel» gives <span class="math" data-tex="1 - 2\sqrt{2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>1</mn><mo>&#x02212;</mo><mn>2</mn><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow><annotation encoding="application/x-tex">1 - 2\sqrt{2}</annotation></semantics></math></span>, and such an answer cannot even be written in the short form.</div>
+    </div>
+
+    <div class="task" data-kind="match" data-answer="B C A" data-limit="">
+      <p class="task-kind">Matching · 3 points</p>
+      <p>Match each expression (1-3) with the one equal to it (A-E).</p>
+      <ul class="pairs">
+        <li><label>1. <span class="math" data-tex="2^5 \cdot 2^3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>2</mn><mn>5</mn></msup><mo>&#x000B7;</mo><msup><mn>2</mn><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">2^5 \cdot 2^3</annotation></semantics></math></span> <select aria-label="Answer for expression 1"><option value="">-</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option></select></label></li>
+        <li><label>2. <span class="math" data-tex="(2^5)^3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><msup><mn>2</mn><mn>5</mn></msup><msup><mo stretchy="false">&#x00029;</mo><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">(2^5)^3</annotation></semantics></math></span> <select aria-label="Answer for expression 2"><option value="">-</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option></select></label></li>
+        <li><label>3. <span class="math" data-tex="2^5 : 2^3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>2</mn><mn>5</mn></msup><mi>:</mi><msup><mn>2</mn><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">2^5 : 2^3</annotation></semantics></math></span> <select aria-label="Answer for expression 3"><option value="">-</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option></select></label></li>
+      </ul>
+      <p>A · <span class="math" data-tex="2^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>2</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">2^2</annotation></semantics></math></span> &nbsp; B · <span class="math" data-tex="2^8"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>2</mn><mn>8</mn></msup></mrow><annotation encoding="application/x-tex">2^8</annotation></semantics></math></span> &nbsp; C · <span class="math" data-tex="2^{15}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>2</mn><mrow><mn>15</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^{15}</annotation></semantics></math></span> &nbsp; D · <span class="math" data-tex="4^8"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>4</mn><mn>8</mn></msup></mrow><annotation encoding="application/x-tex">4^8</annotation></semantics></math></span> &nbsp; E · <span class="math" data-tex="2^{53}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>2</mn><mrow><mn>53</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^{53}</annotation></semantics></math></span></p>
+      <p><button type="button" class="check">Check</button></p>
+      <p class="law-ref">Law: the <a href="#law-power">law of powers</a> and two of its consequences.</p>
+      <div class="solution">Multiplication adds the exponents (8), a power of a power multiplies them (15), division subtracts (2). Traps: <span class="math" data-tex="4^8"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>4</mn><mn>8</mn></msup></mrow><annotation encoding="application/x-tex">4^8</annotation></semantics></math></span> - the bases were multiplied, <span class="math" data-tex="2^{53}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>2</mn><mrow><mn>53</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^{53}</annotation></semantics></math></span> - the exponents were «glued».</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="B" data-limit="" data-claim="06-task-log">
+      <p class="task-kind">One answer out of five · 1 point</p>
+      <p>The graph of the function y = log₂ x passes through a point with ordinate 3. Find the abscissa of this point.</p>
+      <!-- fig:06-task-log -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 210" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="The graph of y = log₂ x: it passes through (1; 0) and grows slowly to the right. At height y = 3 a horizontal dashed line is drawn to the graph; the point where they meet is marked, and its abscissa is unknown.">
+        <line x1="20.0" y1="126.6" x2="300.0" y2="126.6" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="300.0,126.6 293.6,129.3 293.6,123.9" fill="currentColor"/>
+        <line x1="40.7" y1="196.0" x2="40.7" y2="10.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="40.7,10.0 43.5,16.4 38.0,16.4" fill="currentColor"/>
+        <text x="296.0" y="142.6" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <text x="48.7" y="22.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <line x1="66.7" y1="123.6" x2="66.7" y2="129.6" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="66.7" y="142.6" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">1</text>
+        <line x1="37.7" y1="43.3" x2="43.7" y2="43.3" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="34.7" y="47.3" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">3</text>
+        <polyline points="45.4,195.3 46.7,185.8 47.9,178.1 49.1,171.7 50.4,166.2 51.6,161.3 52.9,157.0 54.1,153.0 55.4,149.5 56.6,146.2 57.9,143.2 59.1,140.4 60.4,137.7 61.6,135.3 62.9,132.9 64.1,130.8 65.4,128.7 66.6,126.7 67.9,124.8 69.1,123.0 70.3,121.3 71.6,119.6 72.8,118.0 74.1,116.5 75.3,115.0 76.6,113.6 77.8,112.3 79.1,110.9 80.3,109.6 81.6,108.4 82.8,107.2 84.1,106.0 85.3,104.9 86.6,103.8 87.8,102.7 89.1,101.7 90.3,100.6 91.5,99.7 92.8,98.7 94.0,97.7 95.3,96.8 96.5,95.9 97.8,95.0 99.0,94.1 100.3,93.3 101.5,92.5 102.8,91.7 104.0,90.9 105.3,90.1 106.5,89.3 107.8,88.6 109.0,87.8 110.3,87.1 111.5,86.4 112.7,85.7 114.0,85.0 115.2,84.3 116.5,83.7 117.7,83.0 119.0,82.4 120.2,81.7 121.5,81.1 122.7,80.5 124.0,79.9 125.2,79.3 126.5,78.7 127.7,78.1 129.0,77.6 130.2,77.0 131.5,76.4 132.7,75.9 133.9,75.3 135.2,74.8 136.4,74.3 137.7,73.8 138.9,73.3 140.2,72.8 141.4,72.3 142.7,71.8 143.9,71.3 145.2,70.8 146.4,70.3 147.7,69.8 148.9,69.4 150.2,68.9 151.4,68.5 152.7,68.0 153.9,67.6 155.1,67.1 156.4,66.7 157.6,66.3 158.9,65.9 160.1,65.4 161.4,65.0 162.6,64.6 163.9,64.2 165.1,63.8 166.4,63.4 167.6,63.0 168.9,62.6 170.1,62.2 171.4,61.8 172.6,61.5 173.9,61.1 175.1,60.7 176.3,60.3 177.6,60.0 178.8,59.6 180.1,59.2 181.3,58.9 182.6,58.5 183.8,58.2 185.1,57.8 186.3,57.5 187.6,57.1 188.8,56.8 190.1,56.5 191.3,56.1 192.6,55.8 193.8,55.5 195.1,55.2 196.3,54.8 197.5,54.5 198.8,54.2 200.0,53.9 201.3,53.6 202.5,53.3 203.8,53.0 205.0,52.6 206.3,52.3 207.5,52.0 208.8,51.7 210.0,51.5 211.3,51.2 212.5,50.9 213.8,50.6 215.0,50.3 216.3,50.0 217.5,49.7 218.7,49.4 220.0,49.2 221.2,48.9 222.5,48.6 223.7,48.3 225.0,48.1 226.2,47.8 227.5,47.5 228.7,47.3 230.0,47.0 231.2,46.7 232.5,46.5 233.7,46.2 235.0,45.9 236.2,45.7 237.5,45.4 238.7,45.2 239.9,44.9 241.2,44.7 242.4,44.4 243.7,44.2 244.9,43.9 246.2,43.7 247.4,43.5 248.7,43.2 249.9,43.0 251.2,42.7 252.4,42.5 253.7,42.3 254.9,42.0 256.2,41.8 257.4,41.6 258.7,41.3 259.9,41.1 261.1,40.9 262.4,40.7 263.6,40.4 264.9,40.2 266.1,40.0 267.4,39.8 268.6,39.5 269.9,39.3 271.1,39.1 272.4,38.9 273.6,38.7 274.9,38.5 276.1,38.2 277.4,38.0 278.6,37.8 279.9,37.6 281.1,37.4 282.3,37.2 283.6,37.0 284.8,36.8 286.1,36.6 287.3,36.4 288.6,36.2 289.8,36.0 291.1,35.8 292.3,35.6 293.6,35.4 294.8,35.2" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="2.2" opacity="1.0" style="stroke:var(--acc)"/>
+        <line x1="40.7" y1="43.3" x2="248.1" y2="43.3" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.8"/>
+        <line x1="248.1" y1="43.3" x2="248.1" y2="126.6" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.8"/>
+        <circle cx="248.1" cy="43.3" r="4.5" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="248.1" y="142.6" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-weight="700">?</text>
+        <text x="123.7" y="65.5" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic" style="fill:var(--acc)">y = log₂ x</text>
+      </svg>
+      <p class="dim">Figure 25. For the task: the point of the logarithm graph with ordinate 3.</p>
+    </div>
+    <!-- /fig:06-task-log -->
+      <div class="opts">
+        <button type="button" data-opt="A">A · 6</button>
+        <button type="button" data-opt="B">B · 8</button>
+        <button type="button" data-opt="C">C · 9</button>
+        <button type="button" data-opt="D">D · 1.5</button>
+        <button type="button" data-opt="E">E · 3</button>
+      </div>
+      <p class="law-ref">Law: <a href="#law-identity">definition of the logarithm</a>.</p>
+      <div class="solution">log₂ x = 3 means 2³ = x, that is, x = 8. 6 is 2 · 3, 9 is 3², 1.5 is 3 : 2.</div>
+    </div>
+
+    <span class="step">Step 6 · Reverse move</span>
+    <h2 id="reverse">7 · Name the law yourself <a class="anchor-link" href="#reverse">#</a></h2>
+    <p>The law is not given. First name the laws and the domain, then calculate. The solution opens after you answer.</p>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="3" data-limit="limit-log-domain">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p>Solve the equation <span class="math" data-tex="\sqrt{x + 1} \cdot \log_2(x - 2) = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msqrt><mrow><mi>x</mi><mo>&#x0002B;</mo><mn>1</mn></mrow></msqrt><mo>&#x000B7;</mo><msub><mi>log</mi><mn>2</mn></msub><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\sqrt{x + 1} \cdot \log_2(x - 2) = 0</annotation></semantics></math></span>. If there are several roots, write their sum.</p>
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Laws: the <a href="#limit-log-domain">domain of the logarithm</a> and the <a href="01.html#law-zero">zero product</a> of block 1.</p>
+      <div class="solution">Domain: <span class="math" data-tex="x + 1 \geq 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0002B;</mo><mn>1</mn><mo>&#x02265;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x + 1 \geq 0</annotation></semantics></math></span> and <span class="math" data-tex="x - 2 > 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x02212;</mo><mn>2</mn><mo>&#x0003E;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x - 2 &gt; 0</annotation></semantics></math></span>, that is, <span class="math" data-tex="x > 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003E;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x &gt; 2</annotation></semantics></math></span>. A product equals zero when one of the factors equals zero <strong>and both make sense</strong>. The first factor gives <span class="math" data-tex="x = -1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">x = -1</annotation></semantics></math></span>, but there <span class="math" data-tex="\log_2(-3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>log</mi><mn>2</mn></msub><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">\log_2(-3)</annotation></semantics></math></span> does not exist. The second gives <span class="math" data-tex="x = 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">x = 3</annotation></semantics></math></span>. Answer: 3. The blind move without the domain gives two roots and the sum 2. An equation of this type (a product of an irrational and a logarithmic expression) was among the hardest tasks of NMT 2026.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="35" data-limit="">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p>Calculate <span class="math" data-tex="5^{\log_5 7 + 1}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>5</mn><mrow><msub><mi>log</mi><mn>5</mn></msub><mn>7</mn><mo>&#x0002B;</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">5^{\log_5 7 + 1}</annotation></semantics></math></span>.</p>
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Laws: the <a href="#law-power">law of powers</a> and the <a href="#law-identity">definition of the logarithm</a>.</p>
+      <div class="solution"><span class="math" data-tex="5^{\log_5 7 + 1} = 5^{\log_5 7} \cdot 5^1 = 7 \cdot 5 = 35"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>5</mn><mrow><msub><mi>log</mi><mn>5</mn></msub><mn>7</mn><mo>&#x0002B;</mo><mn>1</mn></mrow></msup><mo>&#x0003D;</mo><msup><mn>5</mn><mrow><msub><mi>log</mi><mn>5</mn></msub><mn>7</mn></mrow></msup><mo>&#x000B7;</mo><msup><mn>5</mn><mn>1</mn></msup><mo>&#x0003D;</mo><mn>7</mn><mo>&#x000B7;</mo><mn>5</mn><mo>&#x0003D;</mo><mn>35</mn></mrow><annotation encoding="application/x-tex">5^{\log_5 7 + 1} = 5^{\log_5 7} \cdot 5^1 = 7 \cdot 5 = 35</annotation></semantics></math></span>. A sum in the exponent is a product of powers: the law of powers read from right to left.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="2" data-limit="">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p>Calculate <span class="math" data-tex="\log_2 3 \cdot \log_3 4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>log</mi><mn>2</mn></msub><mn>3</mn><mo>&#x000B7;</mo><msub><mi>log</mi><mn>3</mn></msub><mn>4</mn></mrow><annotation encoding="application/x-tex">\log_2 3 \cdot \log_3 4</annotation></semantics></math></span>.</p>
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Law: change of base, a consequence of the <a href="#law-identity">definition of the logarithm</a>.</p>
+      <div class="solution"><span class="math" data-tex="\log_2 3 = \frac{1}{\log_3 2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>log</mi><mn>2</mn></msub><mn>3</mn><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><msub><mi>log</mi><mn>3</mn></msub><mn>2</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\log_2 3 = \frac{1}{\log_3 2}</annotation></semantics></math></span>, so the product equals <span class="math" data-tex="\frac{\log_3 4}{\log_3 2} = \log_2 4 = 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><msub><mi>log</mi><mn>3</mn></msub><mn>4</mn></mrow><mrow><msub><mi>log</mi><mn>3</mn></msub><mn>2</mn></mrow></mfrac><mo>&#x0003D;</mo><msub><mi>log</mi><mn>2</mn></msub><mn>4</mn><mo>&#x0003D;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\frac{\log_3 4}{\log_3 2} = \log_2 4 = 2</annotation></semantics></math></span>. The chain «from 2 to 3, from 3 to 4» gives «from 2 to 4».</div>
+    </div>
+
+    <h2 id="error">8 · Find the mistake in someone else's solution <a class="anchor-link" href="#error">#</a></h2>
+    <p>Petro solves the equation <span class="math" data-tex="\log_2 x^2 = 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>log</mi><mn>2</mn></msub><msup><mi>x</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\log_2 x^2 = 2</annotation></semantics></math></span>: «By the property of the logarithm <span class="math" data-tex="\log_2 x^2 = 2\log_2 x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>log</mi><mn>2</mn></msub><msup><mi>x</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mn>2</mn><msub><mi>log</mi><mn>2</mn></msub><mi>x</mi></mrow><annotation encoding="application/x-tex">\log_2 x^2 = 2\log_2 x</annotation></semantics></math></span>, so <span class="math" data-tex="\log_2 x = 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>log</mi><mn>2</mn></msub><mi>x</mi><mo>&#x0003D;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\log_2 x = 1</annotation></semantics></math></span> and <span class="math" data-tex="x = 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x = 2</annotation></semantics></math></span>. There is one root».</p>
+    <details>
+      <summary>Where is the mistake?</summary>
+      <p>The expression <span class="math" data-tex="\log_2 x^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>log</mi><mn>2</mn></msub><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\log_2 x^2</annotation></semantics></math></span> exists for all <span class="math" data-tex="x \neq 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x02260;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x \neq 0</annotation></semantics></math></span>, while <span class="math" data-tex="2\log_2 x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>2</mn><msub><mi>log</mi><mn>2</mn></msub><mi>x</mi></mrow><annotation encoding="application/x-tex">2\log_2 x</annotation></semantics></math></span> exists only for <span class="math" data-tex="x > 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003E;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x &gt; 0</annotation></semantics></math></span>. Petro narrowed the domain and lost the root <span class="math" data-tex="x = -2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x = -2</annotation></semantics></math></span>. Correctly: <span class="math" data-tex="x^2 = 4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">x^2 = 4</annotation></semantics></math></span>, <span class="math" data-tex="x = \pm 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mi>&#x000B1;</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">x = \pm 2</annotation></semantics></math></span>, two roots. This is the <a href="#limit-log-product">second limit</a> of the law.</p>
+    </details>
+    <!-- sources -->
+    <h2 id="external">9 · Links to tasks from external sources <a class="anchor-link" href="#external">#</a></h2>
+    <p class="dim">Real tasks from other NMT preparation sites that lean on the laws of this block. Read the condition on the source site behind the link; the tagging by laws is ours. Sources and years are switched on and off in the settings (the gear at the top).</p>
+    <p class="dim ext-off" hidden>All external sources are switched off in the settings.</p>
+    <div class="ext-source" data-ext-source="nmt-ua" id="ext-nmt-ua">
+      <h3 class="ext-head">NMT on the ZNO-ONLINE site (zno.osvita.ua, in Ukrainian)</h3>
+      <p class="dim ext-lead">Tasks of the main NMT sessions of 2024-2026 from the ZNO-ONLINE site, by year. Each year is switched on separately.</p>
+      <div class="ext" data-ext="nmt-ua:2026" id="ext-nmt-ua-2026">
+        <h4>NMT 2026</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q11" rel="noopener" target="_blank">Session 1, task 11</a> - Law of powers: multiplying powers adds exponents</li>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q14" rel="noopener" target="_blank">Session 1, task 14</a> - Law of powers: multiplying powers adds exponents</li>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q17" rel="noopener" target="_blank">Session 1, task 17</a> - Law of powers: multiplying powers adds exponents, The definition of the logarithm in one line</li>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q22" rel="noopener" target="_blank">Session 1, task 22</a> (with a figure) - The definition of the logarithm in one line</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q11" rel="noopener" target="_blank">Session 2, task 11</a> - Law of powers: multiplying powers adds exponents</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q15" rel="noopener" target="_blank">Session 2, task 15</a> - The definition of the logarithm in one line</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q17" rel="noopener" target="_blank">Session 2, task 17</a> - Law of powers: multiplying powers adds exponents, The definition of the logarithm in one line</li>
+        </ul>
+      </div>
+      <div class="ext" data-ext="nmt-ua:2025" id="ext-nmt-ua-2025">
+        <h4>NMT 2025</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q4" rel="noopener" target="_blank">Session 1, task 4</a> - Law of powers: multiplying powers adds exponents</li>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q9" rel="noopener" target="_blank">Session 1, task 9</a> - The definition of the logarithm in one line</li>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q14" rel="noopener" target="_blank">Session 1, task 14</a> - The definition of the logarithm in one line</li>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q17" rel="noopener" target="_blank">Session 1, task 17</a> - Law of powers: multiplying powers adds exponents</li>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q22" rel="noopener" target="_blank">Session 1, task 22</a> - Law of powers: multiplying powers adds exponents</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q11" rel="noopener" target="_blank">Session 2, task 11</a> - Law of powers: multiplying powers adds exponents</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q13" rel="noopener" target="_blank">Session 2, task 13</a> - Law of powers: multiplying powers adds exponents</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q14" rel="noopener" target="_blank">Session 2, task 14</a> - The definition of the logarithm in one line</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q17" rel="noopener" target="_blank">Session 2, task 17</a> - Law of powers: multiplying powers adds exponents, The definition of the logarithm in one line</li>
+        </ul>
+      </div>
+      <div class="ext" data-ext="nmt-ua:2024" id="ext-nmt-ua-2024">
+        <h4>NMT 2024</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q8" rel="noopener" target="_blank">Session 1, task 8</a> - Law of powers: multiplying powers adds exponents</li>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q11" rel="noopener" target="_blank">Session 1, task 11</a> - Law of powers: multiplying powers adds exponents</li>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q13" rel="noopener" target="_blank">Session 1, task 13</a> - The definition of the logarithm in one line</li>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q17" rel="noopener" target="_blank">Session 1, task 17</a> - Law of powers: multiplying powers adds exponents</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q7" rel="noopener" target="_blank">Session 2, task 7</a> - Law of powers: multiplying powers adds exponents</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q9" rel="noopener" target="_blank">Session 2, task 9</a> - Law of powers: multiplying powers adds exponents</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q13" rel="noopener" target="_blank">Session 2, task 13</a> - The same law read for the exponent</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q14" rel="noopener" target="_blank">Session 2, task 14</a> - Law of powers: multiplying powers adds exponents</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q17" rel="noopener" target="_blank">Session 2, task 17</a> - Law of powers: multiplying powers adds exponents</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q22" rel="noopener" target="_blank">Session 2, task 22</a> (with a figure) - The definition of the logarithm in one line</li>
+        </ul>
+      </div>
+    </div>
+    <!-- /sources -->
+
+    <h2 id="artifacts">What you have after this page <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>One law of powers instead of three lists of properties.</strong> The properties of roots and logarithms need not be kept in memory separately: they can be derived from <span class="math" data-tex="a^m \cdot a^n = a^{m+n}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>a</mi><mi>m</mi></msup><mo>&#x000B7;</mo><msup><mi>a</mi><mi>n</mi></msup><mo>&#x0003D;</mo><msup><mi>a</mi><mrow><mi>m</mi><mo>&#x0002B;</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">a^m \cdot a^n = a^{m+n}</annotation></semantics></math></span> in a minute. And the domain of a logarithm is not a rule that is easy to forget but an answer to the question «to what power».</p>
+    </div>
+    <!-- freq -->
+    <p class="dim law-freq" data-tasks="7">Frequency on this site, not in the NMT: this page has 7 trainer tasks, and they lean on these laws: The definition of the logarithm in one line - 3, Law of powers: multiplying powers adds exponents - 2, Domain of the logarithm - 1, Root of a square - 1, The same law read for the exponent - 1, Zero product - 1. In real NMT papers of 2024-2026 this block is needed in 26 tasks out of 132: Law of powers: multiplying powers adds exponents - 18, The definition of the logarithm in one line - 10, The same law read for the exponent - 1.</p>
+    <!-- /freq -->
+    <p>You know this law if you:</p>
+    <ol>
+      <li>solve 8 tasks out of 10 on powers, roots and logarithms without a hint;</li>
+      <li>can explain aloud why the logarithm of a product equals the sum of the logarithms;</li>
+      <li>find the mistake in someone else's solution, as in Petro's.</li>
+    </ol>
+  
+
+    <footer>
+      <nav class="pager" aria-label="Neighbouring topics">
+        <p class="pager-next">Next topic: <a href="07.html">Trigonometry</a></p>
+        <p class="pager-prev">Previous topic: <a href="05.html">Function and sequence</a></p>
+      </nav>
+      <p class="footer-note">An AI Factory series site. Built with the same harness: plain HTML and CSS, checked with bash, published via GitHub Pages.</p>
+    </footer>
+  </main>
+
+</div>
+</div>
+<script src="../assets/swa.js?v=2"></script>
+<script src="../assets/trainer.js?v=2"></script>
+<script src="../assets/sources.js?v=2"></script>
+<script src="../assets/terms.js?v=2"></script>
+<script src="../assets/cp.js?v=2"></script>
+</body>
+</html>
