@@ -127,7 +127,14 @@ const SITE = (/data-site="([^"]+)"/.exec(readFileSync(PROFILE.source + '/index.h
 // site, so it lives in site.conf next to the name and the address.
 const WORD = (/^\s*search\s*=\s*(.+)$/m.exec(readFileSync('site.conf', 'utf8'))
   || [, 'ai'])[1].trim();
-await phone.addInitScript((w) => { window.SMOKE_WORD = w; }, WORD);
+// A site in two languages searches each language for its own word: a Ukrainian
+// word is not in the Russian index. `search_ru = процент` in site.conf names
+// the word of one language; `search` stays the word of every other.
+const WORDS = Object.fromEntries([...readFileSync('site.conf', 'utf8').matchAll(/^\s*search_(\w\w)\s*=\s*(.+)$/gm)]
+  .map((m) => [m[1], m[2].trim()]));
+// The init script runs before the page is parsed, so the language is read
+// where the word is used, not here.
+await phone.addInitScript((m) => { window.SMOKE_WORDS = m; }, { w: WORD, by: WORDS });
 await phoneBig.addInitScript((site) => {
   try { localStorage.setItem('swa-' + site + '-font', 'l'); } catch (e) { /* private window */ }
 }, SITE);
@@ -233,7 +240,7 @@ for (const file of files) {
       // is not, the panel is still expected to open, answer and close.
       const indexed = !!(window.SEARCH && window.SEARCH.i
         .some((entry) => String(entry[0]).startsWith('02.html#')));
-      const word = window.SMOKE_WORD || 'ai';
+      const word = (window.SMOKE_WORDS && (window.SMOKE_WORDS.by[document.documentElement.lang] || window.SMOKE_WORDS.w)) || 'ai';
       input.value = word;
       input.dispatchEvent(new Event('input'));
       await sleep(120);
@@ -464,7 +471,7 @@ for (const file of files) {
       for (let i = 0; i < 60 && !document.querySelector('.search-input'); i++) await sleep(50);
       const input = document.querySelector('.search-input');
       if (!input) return ['панель поиска не открылась'];
-      const word = window.SMOKE_WORD || 'ai';
+      const word = (window.SMOKE_WORDS && (window.SMOKE_WORDS.by[document.documentElement.lang] || window.SMOKE_WORDS.w)) || 'ai';
       input.value = word;
       input.dispatchEvent(new Event('input'));
       await sleep(150);
