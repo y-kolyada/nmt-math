@@ -250,6 +250,21 @@ def main():
             if why:
                 drifted.append((basename, anchor, why, plain(desc.group(1))))
 
+    # Пятая сторона: карточка без скрипта молчит. Заглушка штампуется без
+    # terms.js и cp.js (в ней нет ни карточек, ни кода), и перевод, который
+    # наполняет заглушку, должен подключить их сам. На nmt-math все 16 русских
+    # страниц получили карточки без terms.js, проверка была зелёной, а слово
+    # не открывалось по щелчку. Поэтому смотрятся все языки, не только исходный.
+    deaf = []
+    for lang in siteconf.profile()['langs']:
+        for file_path in sorted(glob.glob(os.path.join(lang, '*.html'))):
+            with open(file_path, encoding='utf-8') as f:
+                content = f.read()
+            if '<span class="term">' in content and 'assets/terms.js' not in content:
+                deaf.append((file_path, 'terms.js', 'карточки .term'))
+            if '<pre' in content and 'assets/cp.js' not in content:
+                deaf.append((file_path, 'cp.js', 'блоки кода'))
+
     # Identify glossary terms missing in-page markup
     missing_in_pages = [t for t in glossary_terms if t not in found_term_links]
 
@@ -259,7 +274,7 @@ def main():
     skip = SHELL_WORDS | site_words()
     unexplained = sorted(a for a in acronyms if a not in explained and a not in skip)
 
-    has_errors = bool(broken_links or missing_in_pages or unexplained or drifted)
+    has_errors = bool(broken_links or missing_in_pages or unexplained or drifted or deaf)
 
     print()
     print('  Двусторонний контракт терминов')
@@ -275,6 +290,7 @@ def main():
     print(f'  битых ссылок на термины:     {len(broken_links)}')
     print(f'  сокращений в тексте:         {len(acronyms)}, без объяснения: {len(unexplained)}')
     print(f'  описаний карточек проверено: {compared}, с обломками: {len(drifted)}')
+    print(f'  страниц без своего скрипта:  {len(deaf)}')
 
     if missing_in_pages:
         print()
@@ -307,6 +323,15 @@ def main():
         if len(unexplained) > 10:
             print(f'    -> ... и ещё {len(unexplained) - 10}')
         print('  Либо статья в словаре, либо строка `acronyms =` в site.conf с причиной.')
+
+    if deaf:
+        print()
+        print('  ОШИБКА: на странице есть то, что оживляет скрипт, а скрипт не подключён:')
+        for d_file, d_script, d_what in deaf[:10]:
+            print(f'    -> {d_file}: {d_what} без {d_script}')
+        if len(deaf) > 10:
+            print(f'    -> ... и ещё {len(deaf) - 10}')
+        print('  Строка <script src="../assets/<скрипт>"></script> перед </body>, как на странице исходного языка.')
 
     print('  ' + '-' * 46)
     if has_errors:
