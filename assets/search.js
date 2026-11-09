@@ -6,30 +6,34 @@
     ru: { place: 'Искать по разделам, словарю и вопросам', none: 'Ничего не найдено',
           empty: 'Для этого языка содержание ещё не переведено', close: 'Закрыть поиск',
           clear: 'Очистить строку поиска',
-          hint: 'Esc - закрыть, стрелки - выбор, Enter - перейти' ,
+          hint: 'Esc - закрыть, стрелки - выбор, Enter - перейти, PgUp/PgDn - страницы' ,
           only: 'Искать только по темам или снова везде', found: 'Найдено',
-          firstN: 'показаны первые',
+          shown: 'показаны', pages: 'Страницы результатов',
+          prev: 'Предыдущая страница результатов', next: 'Следующая страница результатов',
           kinds: { t: 'Темы', e: 'Примеры', q: 'Вопросы', n: 'Навигатор', g: 'Словарь', i: 'Витрина' } },
     en: { place: 'Search sections, glossary, and questions', none: 'Nothing found',
           empty: 'This language has no content yet', close: 'Close search',
           clear: 'Clear search query',
-          hint: 'Esc to close, arrows to move, Enter to open' ,
+          hint: 'Esc to close, arrows to move, Enter to open, PgUp/PgDn to turn pages' ,
           only: 'Search topics only, or everywhere again', found: 'Found',
-          firstN: 'first shown',
+          shown: 'shown', pages: 'Result pages',
+          prev: 'Previous page of results', next: 'Next page of results',
           kinds: { t: 'Topics', e: 'Examples', q: 'Questions', n: 'Navigator', g: 'Glossary', i: 'Landing' } },
     uk: { place: 'Шукати в розділах, словнику й питаннях', none: 'Нічого не знайдено',
           empty: 'Для цієї мови зміст ще не перекладено', close: 'Закрити пошук',
           clear: 'Очистити рядок пошуку',
-          hint: 'Esc - закрити, стрілки - вибір, Enter - перейти' ,
+          hint: 'Esc - закрити, стрілки - вибір, Enter - перейти, PgUp/PgDn - сторінки' ,
           only: 'Шукати лише в темах або знову скрізь', found: 'Знайдено',
-          firstN: 'показано перші',
+          shown: 'показано', pages: 'Сторінки результатів',
+          prev: 'Попередня сторінка результатів', next: 'Наступна сторінка результатів',
           kinds: { t: 'Теми', e: 'Приклади', q: 'Питання', n: 'Навігатор', g: 'Словник', i: 'Вітрина' } },
     de: { place: 'Abschnitte, Glossar und Fragen durchsuchen', none: 'Nichts gefunden',
           empty: 'Für diese Sprache gibt es noch keine Inhalte', close: 'Suche schließen',
           clear: 'Suchfeld leeren',
-          hint: 'Esc schließt, Pfeile wählen, Enter öffnet' ,
+          hint: 'Esc schließt, Pfeile wählen, Enter öffnet, Bild↑/Bild↓ blättern' ,
           only: 'Nur in Themen suchen oder wieder überall', found: 'Gefunden',
-          firstN: 'davon angezeigt',
+          shown: 'angezeigt', pages: 'Ergebnisseiten',
+          prev: 'Vorherige Ergebnisseite', next: 'Nächste Ergebnisseite',
           kinds: { t: 'Themen', e: 'Beispiele', q: 'Fragen', n: 'Navigator', g: 'Glossar', i: 'Startseite' } },
   };
 
@@ -96,7 +100,8 @@
         + xkinds.map((k) => '<button type="button" class="search-facet search-facet-ext" data-kind="' + k
           + '" aria-pressed="true"></button>').join('')
         + '</div>' : '')
-    + '<p class="search-count" hidden></p>'
+    + '<div class="search-meta" hidden><p class="search-count"></p>'
+    + '<div class="search-pager" role="group" aria-label="' + say.pages + '" hidden></div></div>'
     + '<ul class="search-results"></ul>'
     + '<div class="search-hint">' + say.hint + '</div>'
     + '</div>';
@@ -106,16 +111,26 @@
   const facets = [...panel.querySelectorAll('.search-facet')];
   facets.forEach((b) => { if (xlabels[b.dataset.kind]) b.textContent = xlabels[b.dataset.kind]; });
   const onlyBtn = panel.querySelector('.search-only');
+  const meta = panel.querySelector('.search-meta');
   const count = panel.querySelector('.search-count');
+  const pager = panel.querySelector('.search-pager');
   const clearBtn = panel.querySelector('.search-clear');
   const list = panel.querySelector('.search-results');
   let picked = -1;
+  // Выдача идёт страницами по сорок мест: сорок - прежний потолок списка, и
+  // пейджер открывает то, что раньше за ним пропадало. Номер страницы
+  // считается с нуля и живёт рядом с запросом, чтобы возврат со страницы
+  // темы открывал окно там же, откуда читатель ушёл.
+  const PAGE = 40;
+  let pageNo = 0;
+  let pages = 1;
 
   try {
     const saved = JSON.parse(sessionStorage.getItem(key('search')) || 'null');
     if (saved && saved.q) {
       input.value = saved.q;
       picked = typeof saved.idx === 'number' ? saved.idx : -1;
+      pageNo = typeof saved.page === 'number' && saved.page > 0 ? saved.page : 0;
     }
     if (saved && Array.isArray(saved.off)) {
       saved.off.forEach((k) => off.add(k));
@@ -175,6 +190,7 @@
         url: url || '',
         active: Boolean(active),
         off: [...off],
+        page: pageNo,
       }));
     } catch (_) {}
   }
@@ -188,9 +204,9 @@
 
   function find(query) {
     const needle = norm(query.trim());
-    // Пустой и односимвольный запрос тоже возвращает форму {total, shown}: раньше здесь
-    // стоял пустой массив, и render падал на got.shown.length при каждом открытии окна.
-    if (needle.length < 2) return { total: 0, shown: [] };
+    // Пустой и односимвольный запрос тоже возвращает форму {total, all}: раньше здесь
+    // стоял пустой массив, и render падал на got.all при каждом открытии окна.
+    if (needle.length < 2) return { total: 0, all: [] };
     const hits = [];
     for (const entry of items) {
       if (off.has(entry.kind) || (entry.kind.charAt(1) === ':' && xHidden(entry.kind))) continue;
@@ -200,25 +216,83 @@
       hits.push({ entry, rank: inTitle >= 0 ? inTitle : 1000 + inBody });
     }
     hits.sort((a, b) => a.rank - b.rank);
-    return { total: hits.length, shown: hits.slice(0, 40).map((h) => h.entry) };
+    return { total: hits.length, all: hits.map((h) => h.entry) };
+  }
+
+  // Номера страниц для пейджера: до семи страниц - все, дальше - первая,
+  // последняя и соседи текущей, а пропуски между ними - многоточие (null).
+  function pageList(n, cur) {
+    if (n <= 7) return [...Array(n).keys()];
+    let lo = Math.max(1, cur - 1);
+    let hi = Math.min(n - 2, cur + 1);
+    if (cur <= 3) { lo = 1; hi = 4; }
+    if (cur >= n - 4) { lo = n - 5; hi = n - 2; }
+    const out = [0];
+    if (lo > 1) out.push(null);
+    for (let i = lo; i <= hi; i += 1) out.push(i);
+    if (hi < n - 2) out.push(null);
+    out.push(n - 1);
+    return out;
+  }
+
+  function pgButton(label, to, aria, current, disabled) {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'search-pg';
+    b.textContent = label;
+    b.dataset.page = String(to);
+    if (aria) b.setAttribute('aria-label', aria);
+    if (current) b.setAttribute('aria-current', 'page');
+    if (disabled) b.disabled = true;
+    return b;
+  }
+
+  function paintPager() {
+    pager.innerHTML = '';
+    pager.hidden = pages < 2;
+    if (pages < 2) return;
+    pager.appendChild(pgButton('‹', pageNo - 1, say.prev, false, pageNo === 0));
+    pageList(pages, pageNo).forEach((n) => {
+      if (n === null) {
+        const gap = document.createElement('span');
+        gap.className = 'search-pg-gap';
+        gap.textContent = '…';
+        pager.appendChild(gap);
+      } else {
+        pager.appendChild(pgButton(String(n + 1), n, '', n === pageNo, false));
+      }
+    });
+    pager.appendChild(pgButton('›', pageNo + 1, say.next, false, pageNo === pages - 1));
+  }
+
+  function turn(to) {
+    if (to < 0 || to >= pages || to === pageNo) return;
+    pageNo = to;
+    picked = -1;
+    render(input.value, true);
+    list.scrollTop = 0;
+    saveState(-1, '', false);
   }
 
   function render(query, keepPicked) {
     clearBtn.hidden = !query.length;
-    const got = items.length ? find(query) : { total: 0, shown: [] };
-    const found = got.shown;
+    const got = items.length ? find(query) : { total: 0, all: [] };
+    // Новый запрос или другая область - снова первая страница; открытие
+    // окна и листание страницу сохраняют, но не дальше последней: область
+    // могла сузиться в другом окне.
+    if (!keepPicked) { picked = -1; pageNo = 0; }
+    pages = Math.max(1, Math.ceil(got.total / PAGE));
+    if (pageNo > pages - 1) { pageNo = pages - 1; picked = -1; }
+    const found = got.all.slice(pageNo * PAGE, (pageNo + 1) * PAGE);
     list.innerHTML = '';
-    if (!keepPicked) picked = -1;
-    // Счётчик говорит, сколько нашлось на самом деле, а не сколько влезло:
-    // сорок - это потолок выдачи, и читатель, видящий ровно сорок, не должен
-    // гадать, конец это списка или его начало.
-    if (count) {
-      count.hidden = !got.total;
-      count.textContent = got.total
-        ? say.found + ': ' + got.total
-          + (got.total > found.length ? ', ' + say.firstN + ' ' + found.length : '')
-        : '';
-    }
+    // Счётчик говорит, сколько нашлось на самом деле, а не сколько влезло,
+    // и какой кусок списка сейчас на экране.
+    meta.hidden = !got.total;
+    count.textContent = got.total
+      ? say.found + ': ' + got.total
+        + (pages > 1 ? ', ' + say.shown + ' ' + (pageNo * PAGE + 1) + '-' + (pageNo * PAGE + found.length) : '')
+      : '';
+    paintPager();
     if (!items.length) {
       list.innerHTML = '<li class="search-empty">' + say.empty + '</li>';
       return;
@@ -302,6 +376,10 @@
   });
   panel.querySelector('.search-close').addEventListener('click', close);
   panel.addEventListener('click', (e) => { if (e.target === panel) close(); });
+  pager.addEventListener('click', (e) => {
+    const b = e.target.closest('.search-pg');
+    if (b && !b.disabled) turn(Number(b.dataset.page));
+  });
   list.addEventListener('click', (e) => {
     const a = e.target.closest('a');
     if (a) chooseLink(a);
@@ -311,6 +389,11 @@
     if (e.key === 'Escape') { e.preventDefault(); close(); return; }
     if (e.key === 'ArrowDown') { e.preventDefault(); move(1); return; }
     if (e.key === 'ArrowUp') { e.preventDefault(); move(-1); return; }
+    if (e.key === 'PageDown' && pages > 1) { e.preventDefault(); turn(pageNo + 1); return; }
+    if (e.key === 'PageUp' && pages > 1) { e.preventDefault(); turn(pageNo - 1); return; }
+    // Enter на кнопке окна (пейджер, области) нажимает саму кнопку, а не
+    // уводит читателя по первому найденному месту.
+    if (e.key === 'Enter' && e.target.tagName === 'BUTTON') return;
     if (e.key === 'Enter') {
       const links = [...list.querySelectorAll('a')];
       const target = links[picked >= 0 ? picked : 0];
