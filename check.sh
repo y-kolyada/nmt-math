@@ -105,6 +105,10 @@ run "формулы"             python3 tools/build-math.py --check
 run "схемы страниц"        node tools/check-diagrams.mjs
 run "линзы навигатора"     python3 tools/check-navigator.py
 run "перевод и заглушки"  python3 tools/check-struct.py
+# Study sites only: an assess site keeps exactly the rows it always had.
+if [ "$(python3 tools/siteconf.py --get name)" = study ]; then
+  run "частота законов"     python3 tools/build-frequency.py --check
+fi
 
 echo
 echo "  Итог проверки сайта"
