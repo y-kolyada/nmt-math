@@ -67,6 +67,15 @@ SAY = {
            'sources': {'nmt-ua': {'head': 'NMT on the ZNO-ONLINE site (zno.osvita.ua, in Ukrainian)', 'year': 'NMT %s',
                                   'lead': 'Tasks of the main NMT sessions of %s from the ZNO-ONLINE site, by year. '
                                           'Each year is switched on separately.'}}},
+    'de': {'head': 'Links zu Aufgaben aus externen Quellen',
+           'intro': 'Echte Aufgaben von anderen Seiten zur NMT-Vorbereitung, die auf den Gesetzen dieses Blocks beruhen. '
+                    'Die Aufgabe liest du auf der Quellseite hinter dem Link; die Zuordnung zu den Gesetzen ist unsere. Quellen und Jahre werden '
+                    'in den Einstellungen ein- und ausgeschaltet (das Zahnrad oben).',
+           'off': 'Alle externen Quellen sind in den Einstellungen ausgeschaltet.',
+           'item': 'Sitzung %s, Aufgabe %s', 'fig': 'mit Abbildung',
+           'sources': {'nmt-ua': {'head': 'NMT auf der Seite ZNO-ONLINE (zno.osvita.ua, auf Ukrainisch)', 'year': 'NMT %s',
+                                  'lead': 'Aufgaben der Hauptsitzungen des NMT %s von der Seite ZNO-ONLINE, nach Jahren. '
+                                          'Jedes Jahr wird einzeln eingeschaltet.'}}},
 }
 SECTION = re.compile(r'\n?\s*<!-- sources -->.*?<!-- /sources -->', re.S)
 META = re.compile(r'\n?<meta name="swa-sources" content="[^"]*">')

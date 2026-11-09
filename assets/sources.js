@@ -34,6 +34,11 @@
           lead: 'Links to real exam tasks that rest on the laws of a block. A year switched off leaves the pages and the search.',
           sources: { 'nmt-ua': 'Show links to NMT tasks on the ZNO-ONLINE site (zno.osvita.ua)' },
           year: { 'nmt-ua': 'NMT %s' } },
+    de: { open: 'Einstellungen', title: 'Einstellungen', close: 'Einstellungen schließen',
+          group: 'Externe Quellen',
+          lead: 'Links zu echten Prüfungsaufgaben, die auf den Gesetzen eines Blocks beruhen. Ein ausgeschaltetes Jahr verschwindet von den Seiten und aus der Suche.',
+          sources: { 'nmt-ua': 'Links zu NMT-Aufgaben auf der Seite ZNO-ONLINE (zno.osvita.ua) zeigen' },
+          year: { 'nmt-ua': 'NMT %s' } },
   };
   const lang = document.documentElement.lang || 'uk';
   const say = SAY[lang] || SAY.uk;

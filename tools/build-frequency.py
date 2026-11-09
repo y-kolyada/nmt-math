@@ -86,6 +86,25 @@ SAY = {
            'xmiss': 'NMT laws the site does not have yet', 'xmissintro': 'These topics came up in NMT tasks, but the site has no law of its own for them yet. This is input for the next blocks, not finished material.',
            'xitem': '%s: %d %s', 'xtask': ('task', 'tasks'), 'xloc': ('task', 'tasks'),
            'xstub': 'Blocks %s are not translated yet: their laws are not in these lists. Their counts are on the landing page of the source language.'},
+    # German, like English, has two forms.
+    'de': {'line': 'Häufigkeit auf dieser Seite, nicht im NMT: diese Seite hat %d %s im Trainer, und sie stützen sich auf diese Gesetze: %s.',
+           'none': 'Diese Seite hat keine Aufgaben im Trainer.',
+           'tasks': ('Aufgabe', 'Aufgaben'),
+           'head': 'Häufigkeit der Gesetze auf der Seite',
+           'intro': 'Wie viele Aufgaben im Trainer sich auf jedes Gesetz stützen. Das ist die Häufigkeit <strong>auf dieser Seite</strong>, nicht im NMT: '
+                    'sie zeigt, wie die Seite trainiert, nicht, was die Prüfung fragt. Was die Prüfung fragt, zeigt der Schnitt durch echte NMT-Varianten weiter unten, falls es ihn gibt.',
+           'total': 'Aufgaben im Trainer insgesamt: %d; Gesetze, auf die sie sich stützen: %d.',
+           'blocks': 'Nach Blöcken',
+           'top': 'Gesetze, auf die sich die meisten Aufgaben stützen',
+           'block': '%s: %d %s, am häufigsten - %s',
+           'even': 'jedes Gesetz mit einer Aufgabe', 'and': ' und ',
+           'exam': 'In echten NMT-Varianten %s wird dieser Block in %d %s von %d gebraucht: %s.',
+           'exam0': 'In echten NMT-Varianten %s wurde dieser Block in keiner der %d Aufgaben gebraucht.',
+           'xhead': 'Echte NMT-Varianten %s', 'xintro': 'Dieselben Gesetze, aber in %d Aufgaben der sechs Hauptsitzungen des NMT %s: die zweite Zahl neben der ersten. Die Zuordnung ist unsere, die Aufgaben stehen hinter den Links in jedem Block.',
+           'xblocks': 'NMT-Aufgaben nach Blöcken', 'xtop': 'Gesetze, auf die sich die meisten NMT-Aufgaben stützen',
+           'xmiss': 'NMT-Gesetze, die die Seite noch nicht hat', 'xmissintro': 'Diese Themen kamen in NMT-Aufgaben vor, aber die Seite hat für sie noch kein eigenes Gesetz. Das ist ein Eingang für die nächsten Blöcke, kein fertiges Material.',
+           'xitem': '%s: %d %s', 'xtask': ('Aufgabe', 'Aufgaben'), 'xloc': ('Aufgabe', 'Aufgaben'),
+           'xstub': 'Die Blöcke %s sind noch nicht übersetzt: ihre Gesetze fehlen in diesen Listen. Ihre Zahlen stehen auf der Startseite der Ausgangssprache.'},
 }
 TASK = re.compile(r'<div class="task"[^>]*>(.*?)<div class="solution">', re.S)
 LAW_REF = re.compile(r'<p class="law-ref">(.*?)</p>', re.S)

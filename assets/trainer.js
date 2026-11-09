@@ -12,6 +12,7 @@
     uk: { right: 'Правильно.', wrong: 'Ні. Перечитай', law: 'закон', and: ' і його ', limits: 'межі', again: ', потім спробуй ще раз.', reveal: 'Показати розбір' },
     ru: { right: 'Правильно.', wrong: 'Нет. Перечитай', law: 'закон', and: ' и его ', limits: 'границы', again: ', потом попробуй ещё раз.', reveal: 'Показать разбор' },
     en: { right: 'Correct.', wrong: 'No. Reread the', law: 'law', and: ' and its ', limits: 'limits', again: ', then try again.', reveal: 'Show the solution' },
+    de: { right: 'Richtig.', wrong: 'Nein. Lies noch einmal das', law: 'Gesetz', and: ' und seine ', limits: 'Grenzen', again: ', dann versuch es noch einmal.', reveal: 'Lösung zeigen' },
   };
   const say = SAY[document.documentElement.lang] || SAY.uk;
   const norm = (s) => s.trim().replace(',', '.').replace(/[\u2212\u2013]/g, '-').replace(/\s+/g, '');
