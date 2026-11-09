@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Фигуры на плоскости · nmt-math · ai|</title>
 <!-- meta: built by tools/build-meta.py - do not edit by hand -->
-<meta name="description" content="">
+<meta name="description" content="Несколько аксиом, из которых логикой выводится всё остальное.">
 <link rel="canonical" href="https://y-kolyada.github.io/nmt-math/ru/10.html">
 <link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/10.html">
 <link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/10.html">
@@ -13,12 +13,12 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="nmt-math">
 <meta property="og:title" content="Фигуры на плоскости">
-<meta property="og:description" content="">
+<meta property="og:description" content="Несколько аксиом, из которых логикой выводится всё остальное.">
 <meta property="og:url" content="https://y-kolyada.github.io/nmt-math/ru/10.html">
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Фигуры на плоскости","description":"","url":"https://y-kolyada.github.io/nmt-math/ru/10.html","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Фигуры на плоскости","description":"Несколько аксиом, из которых логикой выводится всё остальное.","url":"https://y-kolyada.github.io/nmt-math/ru/10.html","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
 <!-- /meta -->
 <link rel="stylesheet" href="../assets/style.css?v=1">
 <link rel="stylesheet" href="../assets/study.css?v=1">
@@ -91,16 +91,234 @@
 
   <main id="main">
     <h1>Фигуры на плоскости</h1>
-    <p class="page-size" data-words="21">Слов: 21</p>
+    <p class="page-size" data-words="904">Слов: 904</p>
+    <p class="lead">Несколько аксиом, из которых логикой выводится всё остальное. Геометрия - первое место, где математика
+    предстаёт не набором формул, а системой: каждое свойство доказывается из предыдущих.</p>
 
-    <div class="stub-card">
-      <h2>Русская версия готовится</h2>
-      <p>Полная рабочая версия этой страницы опубликована на украинском языке.</p>
-      <p>Открыть полную версию:</p>
-      <div class="stub-actions">
-        <a href="../uk/10.html" class="btn-primary">Фигуры на плоскости →</a>
-      </div>
+    <div class="box key" id="key-idea">
+      <h2>Главная мысль страницы <a class="anchor-link" href="#key-idea" aria-label="ссылка на этот блок">#</a></h2>
+      <p>Сумма углов треугольника, свойства параллелограмма, вписанный угол - не отдельные факты, а цепочка: каждый
+      доказывается из предыдущих, а в основе - аксиома о параллельных прямых. Поэтому в геометрии действует одно правило:
+      «на рисунке выглядит равным» - не довод. Блок умеет устанавливать форму и равенство; измерить длины и площади -
+      задача следующего блока (11).</p>
     </div>
+
+    <span class="step">Шаг 0 · Зацепка</span>
+    <h2 id="hook">1 · Вписанный угол равен центральному? <a class="anchor-link" href="#hook">#</a></h2>
+    <p>Центральный угол окружности равен 80°. Чему равен вписанный угол, опирающийся на ту же дугу? Привычка
+    «опираются на одну дугу - значит равны» даёт 80°. На самом деле вписанный угол вдвое меньше: 40°. Оба угла
+    «смотрят» на одну дугу, но из разных точек: из центра дуга видна под большим углом.</p>
+
+    <span class="step">Шаг 1 · Понятие</span>
+    <h2 id="concept">2 · Углы, треугольники, окружность <a class="anchor-link" href="#concept">#</a></h2>
+    <ul>
+      <li><strong>Смежные углы</strong> имеют общую сторону, а две другие образуют прямую: вместе 180°. <strong>Вертикальные</strong>
+      углы равны.</li>
+      <li><strong>Секущая</strong> пересекает две прямые и образует пары углов: соответственные, накрест лежащие, односторонние.</li>
+      <li><strong>Подобные треугольники</strong> имеют одинаковую форму: углы равны, стороны пропорциональны.</li>
+      <li><strong>Центральный угол</strong> имеет вершину в центре окружности, <strong>вписанный</strong> - на окружности. <strong>Касательная</strong> имеет с
+      окружностью одну общую точку.</li>
+      <li><strong>Свойство</strong> говорит, что следует из того, что фигура определённого вида; <strong>признак</strong> - по чему этот вид
+      распознать. Это два направления одной теоремы, и они не всегда оба верны.</li>
+    </ul>
+
+    <span class="step">Шаг 2 · Закон</span>
+    <h2 id="law">3 · Законы фигур <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-parallel">
+      <p class="law-name">Параллельные прямые и секущая</p>
+      <p>Прямые параллельны тогда и только тогда, когда соответственные углы равны; равны и накрест лежащие; а
+      односторонние в сумме дают 180°.</p>
+    </div>
+    <div class="law" id="law-angles">
+      <p class="law-name">Сумма углов</p>
+      <div class="math-block" data-tex="\angle A + \angle B + \angle C = 180^\circ,\qquad S_n = 180^\circ (n - 2)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>&#x02220;</mo><mi>A</mi><mo>&#x0002B;</mo><mo>&#x02220;</mo><mi>B</mi><mo>&#x0002B;</mo><mo>&#x02220;</mo><mi>C</mi><mo>&#x0003D;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>S</mi><mi>n</mi></msub><mo>&#x0003D;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo stretchy="false">&#x00028;</mo><mi>n</mi><mo>&#x02212;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">\angle A + \angle B + \angle C = 180^\circ,\qquad S_n = 180^\circ (n - 2)</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-inscribed">
+      <p class="law-name">Вписанный угол</p>
+      <p>Вписанный угол равен половине центрального, опирающегося на ту же дугу. Вписанный угол, опирающийся на
+      диаметр, - прямой.</p>
+    </div>
+    <div class="law" id="law-triangle-ineq">
+      <p class="law-name">Неравенство треугольника</p>
+      <div class="math-block" data-tex="a < b + c,\quad b < a + c,\quad c < a + b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>a</mi><mo>&#x0003C;</mo><mi>b</mi><mo>&#x0002B;</mo><mi>c</mi><mo>&#x0002C;</mo><mspace width="1em" /><mi>b</mi><mo>&#x0003C;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>c</mi><mo>&#x0002C;</mo><mspace width="1em" /><mi>c</mi><mo>&#x0003C;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a &lt; b + c,\quad b &lt; a + c,\quad c &lt; a + b</annotation></semantics></math></div>
+      <p>Достаточно проверить, что наибольшая сторона меньше суммы двух других.</p>
+    </div>
+    <div class="law" id="law-similar">
+      <p class="law-name">Признак подобия по двум углам</p>
+      <p>Если два угла одного треугольника равны двум углам другого, треугольники подобны.</p>
+    </div>
+
+    <span class="step">Шаг 3 · Почему так</span>
+    <h2 id="why">4 · Откуда законы <a class="anchor-link" href="#why">#</a></h2>
+    <p><strong>Сумма углов треугольника.</strong> Проведём через вершину B прямую, параллельную AC. Углы при B, образованные ею, -
+    накрест лежащие с углами A и C, поэтому равны им. Три угла при B вместе образуют развёрнутый угол: 180°.
+    Здесь видно, на чём стоит теорема: на свойстве параллельных прямых.</p>
+    <!-- fig:10-angle-sum -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 180" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Треугольник ABC и прямая через вершину B, параллельная стороне AC. Углы при B, образованные этой прямой, равны углам A и C как внутренние накрест лежащие. Три угла при B вместе составляют развёрнутый угол 180°.">
+        <polygon points="40.0,150.0 130.0,40.0 290.0,150.0" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="14.0" y1="40.0" x2="306.0" y2="40.0" stroke="currentColor" stroke-width="1.4" opacity="1.0" style="stroke:var(--acc)"/>
+        <text x="34.0" y="168.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-weight="700">A</text>
+        <text x="130.0" y="30.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-weight="700">B</text>
+        <text x="292.0" y="168.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-weight="700">C</text>
+        <text x="66.0" y="144.0" fill="currentColor" font-size="13" opacity="1.0" font-weight="700" style="fill:var(--acc)">1</text>
+        <text x="256.0" y="144.0" fill="currentColor" font-size="13" opacity="1.0" font-weight="700" style="fill:var(--acc)">3</text>
+        <text x="96.0" y="56.0" fill="currentColor" font-size="13" opacity="1.0" font-weight="700" style="fill:var(--acc)">1</text>
+        <text x="152.0" y="56.0" fill="currentColor" font-size="13" opacity="1.0" font-weight="700" style="fill:var(--acc)">3</text>
+        <text x="128.0" y="70.0" fill="currentColor" font-size="13" opacity="1.0" font-weight="700">2</text>
+      </svg>
+      <p class="dim">Рисунок 22. Сумма углов треугольника: три угла при вершине B составляют прямую линию.</p>
+    </div>
+    <!-- /fig:10-angle-sum -->
+    <p><strong>Многоугольник.</strong> Диагонали из одной вершины делят выпуклый n-угольник на
+    <span class="math" data-tex="n - 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>n</mi><mo>&#x02212;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n - 2</annotation></semantics></math></span> треугольника, и углы треугольников вместе составляют углы многоугольника.</p>
+    <p><strong>Вписанный угол.</strong> Пусть одна сторона вписанного угла проходит через центр O. Треугольник с вершинами в
+    O, в вершине угла и на окружности равнобедренный (две стороны - радиусы), а центральный угол - его внешний угол, то есть сумма
+    двух равных углов. Значит, вписанный угол - половина центрального. Другие расположения сводятся к этому.</p>
+    <!-- fig:10-inscribed -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 230" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Окружность с центром O. Центральный угол AOB равен 100°, вписанный угол ACB опирается на ту же дугу AB и равен 50° - вдвое меньше.">
+        <circle cx="160.0" cy="112.0" r="92.0" fill="currentColor" fill-opacity="0.0" stroke="currentColor" stroke-width="1.4"/>
+        <polyline points="89.5,171.1 160.0,112.0 230.5,171.1" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.8" opacity="1.0" style="stroke:var(--acc)"/>
+        <polyline points="89.5,171.1 144.0,21.4 230.5,171.1" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.6" opacity="1.0"/>
+        <circle cx="89.5" cy="171.1" r="3.5" fill="currentColor"/>
+        <circle cx="230.5" cy="171.1" r="3.5" fill="currentColor"/>
+        <circle cx="144.0" cy="21.4" r="3.5" fill="currentColor"/>
+        <circle cx="160.0" cy="112.0" r="3.5" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="81.5" y="185.1" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-weight="700">A</text>
+        <text x="238.5" y="185.1" fill="currentColor" font-size="14" opacity="1.0" font-weight="700">B</text>
+        <text x="144.0" y="13.4" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-weight="700">C</text>
+        <text x="168.0" y="108.0" fill="currentColor" font-size="14" opacity="1.0" font-weight="700">O</text>
+        <text x="160.0" y="142.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" style="fill:var(--acc)">100°</text>
+        <text x="146.0" y="55.4" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">50°</text>
+      </svg>
+      <p class="dim">Рисунок 23. Вписанный угол - половина центрального на той же дуге: 100° и 50°.</p>
+    </div>
+    <!-- /fig:10-inscribed -->
+    <p><strong>Неравенство треугольника.</strong> Отрезок - кратчайший путь между двумя точками, поэтому путь через третью вершину
+    длиннее.</p>
+
+    <span class="step">Шаг 4 · Границы</span>
+    <h2 id="limits">5 · Где законы ломаются <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-picture">
+      <p><strong>Рисунок - не довод.</strong> Углы, которые «выглядят равными», равны только тогда, когда это следует из условия и теорем.</p>
+    </div>
+    <div class="limit" id="limit-converse">
+      <p><strong>Свойство не всегда обращается.</strong> Диагонали прямоугольника равны, но равные диагонали имеет и
+      равнобокая трапеция. У параллелограмма диагонали делят друг друга пополам, но равны - только у прямоугольника.</p>
+    </div>
+    <div class="limit" id="limit-strict">
+      <p><strong>Неравенство треугольника строгое.</strong> Если <span class="math" data-tex="c = a + b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>c</mi><mo>&#x0003D;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">c = a + b</annotation></semantics></math></span>, три точки лежат на одной
+      прямой, и треугольника нет.</p>
+    </div>
+
+    <span class="step">Шаг 5 · Применение</span>
+    <h2 id="apply">6 · Задачи в форме НМТ <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="В" data-limit="">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p>Углы треугольника относятся как 2 : 3 : 4. Найдите наибольший угол.</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · 40°</button>
+        <button type="button" data-opt="Б">Б · 60°</button>
+        <button type="button" data-opt="В">В · 80°</button>
+        <button type="button" data-opt="Г">Г · 90°</button>
+        <button type="button" data-opt="Д">Д · 100°</button>
+      </div>
+      <p class="law-ref">Законы: <a href="#law-angles">сумма углов</a> и часть от целого из <a href="02.html">блока 2</a>.</p>
+      <div class="solution">Всего частей 9, одна часть <span class="math" data-tex="180^\circ : 9 = 20^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>180</mn><mo>&#x02218;</mo></msup><mi>:</mi><mn>9</mn><mo>&#x0003D;</mo><msup><mn>20</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">180^\circ : 9 = 20^\circ</annotation></semantics></math></span>, наибольший угол
+      <span class="math" data-tex="4 \cdot 20^\circ = 80^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>4</mn><mo>&#x000B7;</mo><msup><mn>20</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><msup><mn>80</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">4 \cdot 20^\circ = 80^\circ</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="720" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Найдите сумму углов выпуклого шестиугольника (в градусах).</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-angles">сумма углов многоугольника</a>.</p>
+      <div class="solution"><span class="math" data-tex="180^\circ \cdot (6 - 2) = 720^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x000B7;</mo><mo stretchy="false">&#x00028;</mo><mn>6</mn><mo>&#x02212;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mn>720</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">180^\circ \cdot (6 - 2) = 720^\circ</annotation></semantics></math></span>: четыре треугольника.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="55" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Центральный угол окружности равен 110°. Найдите вписанный угол (в градусах), опирающийся на ту же дугу.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-inscribed">вписанный угол</a>.</p>
+      <div class="solution">Половина центрального: 55°.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="В" data-limit="limit-strict">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p>Из какой тройки отрезков можно составить треугольник?</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · 1, 2, 3</button>
+        <button type="button" data-opt="Б">Б · 2, 3, 6</button>
+        <button type="button" data-opt="В">В · 3, 4, 5</button>
+        <button type="button" data-opt="Г">Г · 1, 1, 2</button>
+        <button type="button" data-opt="Д">Д · 2, 2, 5</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#law-triangle-ineq">неравенство треугольника</a>.</p>
+      <div class="solution">Только <span class="math" data-tex="5 < 3 + 4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>5</mn><mo>&#x0003C;</mo><mn>3</mn><mo>&#x0002B;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">5 &lt; 3 + 4</annotation></semantics></math></span>. В А и Г наибольшая сторона равна сумме двух других:
+      это граница, треугольник вырождается в отрезок.</div>
+    </div>
+
+    <span class="step">Шаг 6 · Обратный ход</span>
+    <h2 id="reverse">7 · Назови закон сам <a class="anchor-link" href="#reverse">#</a></h2>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="115" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Две параллельные прямые пересечены секущей. Один из односторонних углов равен 65°. Найдите второй (в градусах).</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-parallel">параллельные прямые и секущая</a>.</p>
+      <div class="solution"><span class="math" data-tex="180^\circ - 65^\circ = 115^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x02212;</mo><msup><mn>65</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><msup><mn>115</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">180^\circ - 65^\circ = 115^\circ</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="55" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Точка C лежит на окружности с диаметром AB, <span class="math" data-tex="\angle A = 35^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02220;</mo><mi>A</mi><mo>&#x0003D;</mo><msup><mn>35</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">\angle A = 35^\circ</annotation></semantics></math></span>. Найдите угол B треугольника ABC
+      (в градусах).</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Законы: <a href="#law-inscribed">вписанный угол на диаметр</a> и <a href="#law-angles">сумма углов</a>.</p>
+      <div class="solution">Угол C опирается на диаметр, поэтому <span class="math" data-tex="\angle C = 90^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02220;</mo><mi>C</mi><mo>&#x0003D;</mo><msup><mn>90</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">\angle C = 90^\circ</annotation></semantics></math></span>; тогда
+      <span class="math" data-tex="\angle B = 180^\circ - 90^\circ - 35^\circ = 55^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02220;</mo><mi>B</mi><mo>&#x0003D;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x02212;</mo><msup><mn>90</mn><mo>&#x02218;</mo></msup><mo>&#x02212;</mo><msup><mn>35</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><msup><mn>55</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">\angle B = 180^\circ - 90^\circ - 35^\circ = 55^\circ</annotation></semantics></math></span>.</div>
+    </div>
+
+    <h2 id="error">8 · Найди ошибку в чужом решении <a class="anchor-link" href="#error">#</a></h2>
+    <p>Виктория пишет: «Диагонали четырёхугольника ABCD равны, значит ABCD - прямоугольник».</p>
+    <details>
+      <summary>Где ошибка?</summary>
+      <p>Равные диагонали - свойство прямоугольника, но не признак: равные диагонали имеет и равнобокая трапеция, и даже
+      четырёхугольник без единой пары параллельных сторон. Признак прямоугольника: параллелограмм с равными диагоналями
+      (<a href="#limit-converse">вторая граница</a>).</p>
+    </details>
+
+    <h2 id="artifacts">Что у тебя есть после этой страницы <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>Цепочка вместо перечня.</strong> Параллельные прямые дают сумму углов треугольника, сумма углов треугольника -
+      сумму углов многоугольника, равнобедренный треугольник из радиусов - вписанный угол. Если забыл факт, его можно восстановить из
+      предыдущего.</p>
+    </div>
+    <!-- freq -->
+    <p class="dim law-freq" data-tasks="6">Частота на этом сайте, а не на НМТ: на этой странице 6 задач тренажёра, и они опираются на такие законы: Сумма углов - 3, Вписанный угол - 2, Неравенство треугольника - 1, Параллельные прямые и секущая - 1.</p>
+    <!-- /freq -->
+    <p>Ты знаешь этот блок, если:</p>
+    <ol>
+      <li>решаешь 8 из 10 задач на углы, треугольники и окружность без подсказки;</li>
+      <li>можешь объяснить вслух, почему сумма углов треугольника равна 180°;</li>
+      <li>находишь ошибку в чужом решении, как у Виктории.</li>
+    </ol>
+  
+
+    <footer>
+      <nav class="pager" aria-label="Соседние темы">
+        <p class="pager-next">Следующая тема: <a href="11.html">Измерение фигур</a></p>
+        <p class="pager-prev">Предыдущая тема: <a href="09.html">Комбинаторика, вероятность, статистика</a></p>
+      </nav>
+      <p class="footer-note">Сайт серии AI Factory. Сделан той же оснасткой, что и остальные: обычный HTML и CSS, проверка на bash, публикация через GitHub Pages.</p>
+    </footer>
   </main>
 
 </div>
