@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Figuren in der Ebene · nmt-math · ai|</title>
 <!-- meta: built by tools/build-meta.py - do not edit by hand -->
-<meta name="description" content="">
+<meta name="description" content="Wenige Axiome, aus denen die Logik alles Übrige ableitet.">
 <link rel="canonical" href="https://y-kolyada.github.io/nmt-math/de/10.html">
 <link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/10.html">
 <link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/10.html">
@@ -16,12 +16,12 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="nmt-math">
 <meta property="og:title" content="Figuren in der Ebene">
-<meta property="og:description" content="">
+<meta property="og:description" content="Wenige Axiome, aus denen die Logik alles Übrige ableitet.">
 <meta property="og:url" content="https://y-kolyada.github.io/nmt-math/de/10.html">
 <meta property="og:locale" content="de_DE">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Figuren in der Ebene","description":"","url":"https://y-kolyada.github.io/nmt-math/de/10.html","inLanguage":"de","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Figuren in der Ebene","description":"Wenige Axiome, aus denen die Logik alles Übrige ableitet.","url":"https://y-kolyada.github.io/nmt-math/de/10.html","inLanguage":"de","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
 <!-- /meta -->
 <link rel="stylesheet" href="../assets/style.css?v=3">
 <link rel="stylesheet" href="../assets/study.css?v=3">
@@ -96,16 +96,519 @@
 
   <main id="main">
     <h1>Figuren in der Ebene</h1>
-    <p class="page-size" data-words="26">Wörter: 26</p>
+    <p class="page-size" data-words="2622">Wörter: 2622</p>
+    <p class="lead">Wenige Axiome, aus denen die Logik alles Übrige ableitet. Die Geometrie ist der erste Ort, an dem die Mathematik nicht als Sammlung von Formeln erscheint, sondern als System: jede Eigenschaft wird aus den vorigen bewiesen.</p>
 
-    <div class="stub-card">
-      <h2>Die deutsche Fassung ist in Vorbereitung</h2>
-      <p>Die vollständige Fassung dieser Seite ist auf Ukrainisch veröffentlicht.</p>
-      <p>Vollständige Fassung öffnen:</p>
-      <div class="stub-actions">
-        <a href="../uk/10.html" class="btn-primary">Figuren in der Ebene →</a>
+    <div class="box key" id="key-idea">
+      <h2>Hauptgedanke der Seite <a class="anchor-link" href="#key-idea" aria-label="Link zu diesem Block">#</a></h2>
+      <p>Die Winkelsumme im Dreieck, die Eigenschaften eines Parallelogramms, der Umfangswinkel sind keine einzelnen Tatsachen, sondern eine Kette: jede wird aus den vorigen bewiesen, und am Grund liegt das Parallelenaxiom. Deshalb gilt in der Geometrie eine Regel: «in der Abbildung sieht es gleich aus» ist kein Argument. Der Block kann Form und Gleichheit feststellen; Längen und Flächen zu messen ist die Aufgabe des nächsten Blocks (11).</p>
+    </div>
+
+    <span class="step">Schritt 0 · Einstieg</span>
+    <h2 id="hook">1 · Ist ein Umfangswinkel gleich dem Mittelpunktswinkel? <a class="anchor-link" href="#hook">#</a></h2>
+    <p>Ein Mittelpunktswinkel eines Kreises beträgt 80°. Wie groß ist der Umfangswinkel über demselben Bogen? Die Gewohnheit «sie stehen über einem Bogen, also sind sie gleich» ergibt 80°. Tatsächlich ist der Umfangswinkel halb so groß: 40°. Beide Winkel «schauen» auf einen Bogen, aber von verschiedenen Punkten: vom Mittelpunkt aus sieht man den Bogen unter einem größeren Winkel.</p>
+
+    <span class="step">Schritt 1 · Begriff</span>
+    <h2 id="concept">2 · Winkel, Dreiecke, der Kreis <a class="anchor-link" href="#concept">#</a></h2>
+    <ul>
+      <li><strong>Nebenwinkel</strong> haben einen gemeinsamen Schenkel, und die zwei anderen Schenkel bilden eine Gerade: zusammen 180°. <strong>Scheitelwinkel</strong> sind gleich.</li>
+      <li>Eine <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">querschneidende Gerade</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Querschneidende Gerade</strong><button type="button" class="term-close" aria-label="Schließen">&times;</button></span><span class="term-desc">Eine Gerade, die zwei andere Geraden schneidet und mit ihnen Winkelpaare bildet.</span><span class="term-links"><a href="glossary.html#term-secant">Zum Begriffswörterbuch <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> schneidet zwei Geraden und bildet Winkelpaare: Stufenwinkel, Wechselwinkel, Nachbarwinkel.</li>
+      <li><strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Ähnliche Dreiecke</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Ähnliche Dreiecke</strong><button type="button" class="term-close" aria-label="Schließen">&times;</button></span><span class="term-desc">Dreiecke derselben Form: die Winkel sind gleich, die Seiten proportional.</span><span class="term-links"><a href="glossary.html#term-similar">Zum Begriffswörterbuch <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> haben dieselbe Form: die Winkel sind gleich, die Seiten proportional.</li>
+      <li>Ein <strong>Mittelpunktswinkel</strong> hat den Scheitel im Mittelpunkt eines Kreises, ein <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Umfangswinkel</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Umfangswinkel</strong><button type="button" class="term-close" aria-label="Schließen">&times;</button></span><span class="term-desc">Ein Winkel mit dem Scheitel auf einem Kreis, dessen Schenkel den Kreis schneiden.</span><span class="term-links"><a href="glossary.html#term-inscribed">Zum Begriffswörterbuch <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> auf dem Kreis. Eine <strong>Tangente</strong> hat mit dem Kreis einen gemeinsamen Punkt.</li>
+      <li>Eine <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Eigenschaft</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Eigenschaft und Kriterium</strong><button type="button" class="term-close" aria-label="Schließen">&times;</button></span><span class="term-desc">Die zwei Richtungen eines Satzes: was aus der Art der Figur folgt und woran man diese Art erkennt.</span><span class="term-links"><a href="glossary.html#term-property-sign">Zum Begriffswörterbuch <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> sagt, was daraus folgt, dass eine Figur von bestimmter Art ist; ein <strong>Kriterium</strong> sagt, woran man diese Art erkennt. Das sind zwei Richtungen eines Satzes, und sie gelten nicht immer beide.</li>
+    </ul>
+
+    <span class="step">Schritt 2 · Gesetz</span>
+    <h2 id="law">3 · Gesetze der Figuren <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-parallel">
+      <p class="law-name">Parallele Geraden und eine querschneidende Gerade</p>
+      <p>Geraden sind genau dann parallel, wenn die Stufenwinkel gleich sind; dann sind auch die Wechselwinkel gleich, und die Nachbarwinkel ergeben zusammen 180°.</p>
+    </div>
+    <div class="corollary" id="cor-parallelogram" data-law="law-parallel">
+      <p class="corollary-of">Folgerung aus dem Gesetz <a href="#law-parallel">«Parallele Geraden und eine querschneidende Gerade»</a></p>
+      <p class="corollary-name">Winkel eines Parallelogramms</p>
+      <div class="math-block" data-tex="\angle A + \angle B = 180^\circ,\qquad \angle A = \angle C,\quad \angle B = \angle D"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>&#x02220;</mo><mi>A</mi><mo>&#x0002B;</mo><mo>&#x02220;</mo><mi>B</mi><mo>&#x0003D;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x0002C;</mo><mspace width="2em" /><mo>&#x02220;</mo><mi>A</mi><mo>&#x0003D;</mo><mo>&#x02220;</mo><mi>C</mi><mo>&#x0002C;</mo><mspace width="1em" /><mo>&#x02220;</mo><mi>B</mi><mo>&#x0003D;</mo><mo>&#x02220;</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">\angle A + \angle B = 180^\circ,\qquad \angle A = \angle C,\quad \angle B = \angle D</annotation></semantics></math></div>
+      <p>Benachbarte Winkel eines Parallelogramms ergeben zusammen 180°, gegenüberliegende sind gleich.</p>
+      <!-- fig:10-cor-parallelogram -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 190" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Das Parallelogramm ABCD. Die Winkel A und C sind mit α markiert, die Winkel B und D mit 180° − α: benachbarte Winkel ergeben zusammen 180°, gegenüberliegende sind gleich.">
+        <polygon points="40.0,160.0 210.0,160.0 270.0,56.1 100.0,56.1" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <text x="34.0" y="174.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">A</text>
+        <text x="214.0" y="174.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">B</text>
+        <text x="276.0" y="54.1" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">C</text>
+        <text x="94.0" y="52.1" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">D</text>
+        <text x="66.0" y="152.0" fill="currentColor" font-size="14" opacity="1.0" style="fill:var(--acc)">α</text>
+        <text x="244.0" y="76.1" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" style="fill:var(--acc)">α</text>
+        <text x="200.0" y="150.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end">180° − α</text>
+        <text x="112.0" y="78.1" fill="currentColor" font-size="13" opacity="1.0">180° − α</text>
+      </svg>
+      <p class="dim">Abbildung 36. Folgerung: benachbarte Winkel eines Parallelogramms ergeben zusammen 180°, gegenüberliegende sind gleich.</p>
+    </div>
+    <!-- /fig:10-cor-parallelogram -->
+      <p><strong>Warum es so ist.</strong> Die Seiten AD und BC sind parallel, AB ist eine querschneidende Gerade, also sind die Winkel A und B Nachbarwinkel: A + B = 180°. Genauso ist B + C = 180° für die parallelen AB und CD, daher A = C. Ein Parallelogramm mit den Winkeln x und 2x existiert also: x + 2x = 180°, die Winkel sind 60° und 120°.</p>
+    </div>
+    <div class="law" id="law-angles">
+      <p class="law-name">Die Winkelsumme im Dreieck ist 180°</p>
+      <div class="math-block" data-tex="\angle A + \angle B + \angle C = 180^\circ,\qquad S_n = 180^\circ (n - 2)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>&#x02220;</mo><mi>A</mi><mo>&#x0002B;</mo><mo>&#x02220;</mo><mi>B</mi><mo>&#x0002B;</mo><mo>&#x02220;</mo><mi>C</mi><mo>&#x0003D;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>S</mi><mi>n</mi></msub><mo>&#x0003D;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo stretchy="false">&#x00028;</mo><mi>n</mi><mo>&#x02212;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">\angle A + \angle B + \angle C = 180^\circ,\qquad S_n = 180^\circ (n - 2)</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-inscribed">
+      <p class="law-name">Umfangswinkel</p>
+      <p>Ein Umfangswinkel ist halb so groß wie der Mittelpunktswinkel über demselben Bogen. Ein Umfangswinkel über einem Durchmesser ist ein rechter Winkel.</p>
+    </div>
+    <div class="corollary" id="cor-cyclic" data-law="law-inscribed">
+      <p class="corollary-of">Folgerung aus dem Gesetz <a href="#law-inscribed">«Umfangswinkel»</a></p>
+      <p class="corollary-name">Sehnenviereck</p>
+      <div class="math-block" data-tex="\angle A + \angle C = \angle B + \angle D = 180^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>&#x02220;</mo><mi>A</mi><mo>&#x0002B;</mo><mo>&#x02220;</mo><mi>C</mi><mo>&#x0003D;</mo><mo>&#x02220;</mo><mi>B</mi><mo>&#x0002B;</mo><mo>&#x02220;</mo><mi>D</mi><mo>&#x0003D;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">\angle A + \angle C = \angle B + \angle D = 180^\circ</annotation></semantics></math></div>
+      <p>Ist ein Viereck einem Kreis einbeschrieben, ergeben seine gegenüberliegenden Winkel zusammen 180°. Einen Kreis kann man um ein Trapez nur dann zeichnen, wenn es gleichschenklig ist.</p>
+      <!-- fig:10-cor-cyclic -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 230" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Das Viereck ABCD ist einem Kreis einbeschrieben. Der Winkel A ist mit α markiert, der gegenüberliegende Winkel C ist 180° − α; der Winkel B ist mit β markiert, der gegenüberliegende Winkel D ist 180° − β.">
+        <circle cx="160.0" cy="112.0" r="96.0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="1.4"/>
+        <polygon points="69.8,144.8 192.8,202.2 254.5,95.3 127.2,21.8" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <text x="56.6" y="154.6" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">A</text>
+        <text x="197.6" y="220.4" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">B</text>
+        <text x="268.3" y="97.9" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">C</text>
+        <text x="122.4" y="13.6" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">D</text>
+        <text x="93.2" y="141.3" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" style="fill:var(--acc)">α</text>
+        <text x="207.3" y="108.7" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" style="fill:var(--acc)">180° − α</text>
+        <text x="183.0" y="180.1" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">β</text>
+        <text x="141.0" y="64.7" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">180° − β</text>
+      </svg>
+      <p class="dim">Abbildung 37. Folgerung: in einem Sehnenviereck ergeben gegenüberliegende Winkel zusammen 180°.</p>
+    </div>
+    <!-- /fig:10-cor-cyclic -->
+      <p><strong>Warum es so ist.</strong> Die Winkel A und C stehen über zwei Bögen, die zusammen den ganzen Kreis bilden, 360°. Jeder Umfangswinkel ist halb so groß wie sein Bogen, also A + C = 360° : 2 = 180°. In einem Trapez ABCD mit den Grundseiten AD und BC sind die Winkel A und B Nachbarwinkel: A + B = 180°; in einem einbeschriebenen auch B + D = 180°, also A = D, und das Trapez ist gleichschenklig.</p>
+    </div>
+    <div class="corollary" id="cor-circumcenter" data-law="law-inscribed">
+      <p class="corollary-of">Folgerung aus dem Gesetz <a href="#law-inscribed">«Umfangswinkel»</a></p>
+      <p class="corollary-name">Mittelpunkt des Umkreises</p>
+      <p>Die Mittelsenkrechten der Seiten eines Dreiecks schneiden sich in einem Punkt, dem <span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Mittelpunkt des Umkreises</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Umkreismittelpunkt</strong><button type="button" class="term-close" aria-label="Schließen">&times;</button></span><span class="term-desc">Der Punkt, der von allen Ecken eines Dreiecks gleich weit entfernt ist: dort schneiden sich die Mittelsenkrechten der Seiten.</span><span class="term-links"><a href="glossary.html#term-circumcenter">Zum Begriffswörterbuch <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span>. Im rechtwinkligen Dreieck ist es der Mittelpunkt der Hypotenuse, im stumpfwinkligen ein Punkt außerhalb des Dreiecks.</p>
+      <!-- fig:10-cor-circumcenter -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 256" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Das Dreieck ABC und die Mittelsenkrechten seiner drei Seiten, gestrichelt. Sie schneiden sich in einem Punkt O, dem Mittelpunkt des Kreises durch A, B und C.">
+        <circle cx="160.0" cy="142.1" r="100.6" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 4"/>
+        <polygon points="66.0,178.0 254.0,178.0 130.0,46.0" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="160.0" y1="192.0" x2="160.0" y2="124.1" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="160.0" cy="178.0" r="3" fill="currentColor"/>
+        <line x1="202.2" y1="102.4" x2="146.9" y2="154.4" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="192.0" cy="112.0" r="3" fill="currentColor"/>
+        <line x1="85.4" y1="105.9" x2="176.2" y2="149.9" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="98.0" cy="112.0" r="3" fill="currentColor"/>
+        <circle cx="160.0" cy="142.1" r="3.5" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="170.0" y="147.1" fill="currentColor" font-size="14" opacity="1.0" font-style="italic" style="fill:var(--acc)">O</text>
+        <text x="60.0" y="192.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">A</text>
+        <text x="260.0" y="192.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">B</text>
+        <text x="130.0" y="36.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">C</text>
+      </svg>
+      <p class="dim">Abbildung 38. Folgerung: die Mittelsenkrechten der Dreiecksseiten schneiden sich im Mittelpunkt des Umkreises.</p>
+    </div>
+    <!-- /fig:10-cor-circumcenter -->
+      <p><strong>Warum es so ist.</strong> Jeder Punkt der Mittelsenkrechten von AB ist von A und B gleich weit entfernt: zwei rechtwinklige Dreiecke mit einer gemeinsamen Kathete und gleichen zweiten Katheten haben gleiche Hypotenusen (Satz des Pythagoras, Block 11). Der Schnittpunkt zweier Mittelsenkrechten ist von allen drei Ecken gleich weit entfernt - er ist der Mittelpunkt des Kreises. Ein rechter Winkel steht über einem Durchmesser, also ist im rechtwinkligen Dreieck die Hypotenuse ein Durchmesser und der Mittelpunkt ihre Mitte. Ein stumpfer Winkel C ist die Hälfte des Bogens AB, der größer als ein Halbkreis ist, also liegen C und der Mittelpunkt auf verschiedenen Seiten von AB.</p>
+    </div>
+    <div class="law" id="law-triangle-ineq">
+      <p class="law-name">Dreiecksungleichung</p>
+      <div class="math-block" data-tex="a < b + c,\quad b < a + c,\quad c < a + b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>a</mi><mo>&#x0003C;</mo><mi>b</mi><mo>&#x0002B;</mo><mi>c</mi><mo>&#x0002C;</mo><mspace width="1em" /><mi>b</mi><mo>&#x0003C;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>c</mi><mo>&#x0002C;</mo><mspace width="1em" /><mi>c</mi><mo>&#x0003C;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a &lt; b + c,\quad b &lt; a + c,\quad c &lt; a + b</annotation></semantics></math></div>
+      <p>Es genügt zu prüfen, dass die größte Seite kleiner ist als die Summe der beiden anderen.</p>
+    </div>
+    <div class="law" id="law-similar">
+      <p class="law-name">Ähnlichkeit über zwei Winkel</p>
+      <p>Sind zwei Winkel eines Dreiecks gleich zwei Winkeln eines anderen, sind die Dreiecke ähnlich.</p>
+    </div>
+    <div class="corollary" id="cor-midline" data-law="law-similar">
+      <p class="corollary-of">Folgerung aus dem Gesetz <a href="#law-similar">«Ähnlichkeit über zwei Winkel»</a></p>
+      <p class="corollary-name"><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Mittellinie</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Mittellinie</strong><button type="button" class="term-close" aria-label="Schließen">&times;</button></span><span class="term-desc">Die Strecke, die die Mittelpunkte zweier Seiten eines Dreiecks oder der Schenkel eines Trapezes verbindet.</span><span class="term-links"><a href="glossary.html#term-midline">Zum Begriffswörterbuch <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span> eines Dreiecks und eines Trapezes</p>
+      <div class="math-block" data-tex="MN \parallel AC,\quad MN = \frac{AC}{2};\qquad m_{\text{Trapez}} = \frac{a + b}{2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>M</mi><mi>N</mi><mo>&#x02225;</mo><mi>A</mi><mi>C</mi><mo>&#x0002C;</mo><mspace width="1em" /><mi>M</mi><mi>N</mi><mo>&#x0003D;</mo><mfrac><mrow><mi>A</mi><mi>C</mi></mrow><mrow><mn>2</mn></mrow></mfrac><mi>;</mi><mspace width="2em" /><msub><mi>m</mi><mrow><mtext>Trapez</mtext></mrow></msub><mo>&#x0003D;</mo><mfrac><mrow><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi></mrow><mrow><mn>2</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">MN \parallel AC,\quad MN = \frac{AC}{2};\qquad m_{\text{Trapez}} = \frac{a + b}{2}</annotation></semantics></math></div>
+      <p>Die Mittellinie verbindet die Mittelpunkte zweier Seiten eines Dreiecks: sie ist parallel zur dritten Seite und halb so lang. Die Mittellinie eines Trapezes verbindet die Mittelpunkte der Schenkel, ist parallel zu den Grundseiten und gleich ihrer halben Summe.</p>
+      <!-- fig:10-cor-midline -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 200" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Das Dreieck ABC, M ist der Mittelpunkt von AB, N der Mittelpunkt von BC. Die Mittellinie MN ist hervorgehoben: sie ist parallel zu AC und halb so lang; AC ist mit a markiert, MN mit a/2.">
+        <polygon points="40.0,170.0 150.0,30.0 280.0,170.0" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="95.0" y1="100.0" x2="215.0" y2="100.0" stroke="currentColor" stroke-width="2.4" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="95.0" cy="100.0" r="3.5" fill="currentColor" style="fill:var(--acc)"/>
+        <circle cx="215.0" cy="100.0" r="3.5" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="34.0" y="184.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">A</text>
+        <text x="150.0" y="20.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">B</text>
+        <text x="286.0" y="184.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">C</text>
+        <text x="87.0" y="100.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">M</text>
+        <text x="223.0" y="100.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">N</text>
+        <text x="160.0" y="188.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">a</text>
+        <text x="155.0" y="118.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic" style="fill:var(--acc)">a/2</text>
+      </svg>
+      <p class="dim">Abbildung 39. Folgerung: die Mittellinie eines Dreiecks ist parallel zur dritten Seite und halb so lang.</p>
+    </div>
+    <!-- /fig:10-cor-midline -->
+      <p><strong>Warum es so ist.</strong> Zieh durch den Mittelpunkt M der Seite AB eine Parallele zu AC; sie trifft BC im Punkt N. Stufenwinkel an parallelen Geraden sind gleich, also sind die Dreiecke MBN und ABC über zwei Winkel ähnlich mit dem Verhältnis BM : BA = 1 : 2. Daher BN = BC/2, das heißt, N ist der Mittelpunkt, und MN = AC/2. Eine Diagonale teilt ein Trapez in zwei Dreiecke, und die Mittellinie des Trapezes besteht aus den Mittellinien dieser Dreiecke: a/2 + b/2.</p>
+    </div>
+
+    <span class="step">Schritt 3 · Warum es so ist</span>
+    <h2 id="why">4 · Woher die Gesetze kommen <a class="anchor-link" href="#why">#</a></h2>
+    <p><strong>Die Winkelsumme im Dreieck.</strong> Zieh durch die Ecke B eine Parallele zu AC. Die Winkel bei B, die sie bildet, sind Wechselwinkel zu den Winkeln A und C, also gleich ihnen. Die drei Winkel bei B bilden zusammen einen gestreckten Winkel: 180°. Hier sieht man, worauf der Satz steht: auf der Eigenschaft paralleler Geraden.</p>
+    <!-- fig:10-angle-sum -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 180" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Das Dreieck ABC und eine Gerade durch die Ecke B parallel zur Seite AC. Die Winkel bei B, die diese Gerade bildet, sind als Wechselwinkel gleich den Winkeln A und C. Die drei Winkel bei B ergeben zusammen einen gestreckten Winkel, 180°.">
+        <polygon points="40.0,150.0 130.0,40.0 290.0,150.0" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="14.0" y1="40.0" x2="306.0" y2="40.0" stroke="currentColor" stroke-width="1.4" opacity="1.0" style="stroke:var(--acc)"/>
+        <text x="34.0" y="168.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-weight="700">A</text>
+        <text x="130.0" y="30.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-weight="700">B</text>
+        <text x="292.0" y="168.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-weight="700">C</text>
+        <text x="66.0" y="144.0" fill="currentColor" font-size="13" opacity="1.0" font-weight="700" style="fill:var(--acc)">1</text>
+        <text x="256.0" y="144.0" fill="currentColor" font-size="13" opacity="1.0" font-weight="700" style="fill:var(--acc)">3</text>
+        <text x="96.0" y="56.0" fill="currentColor" font-size="13" opacity="1.0" font-weight="700" style="fill:var(--acc)">1</text>
+        <text x="152.0" y="56.0" fill="currentColor" font-size="13" opacity="1.0" font-weight="700" style="fill:var(--acc)">3</text>
+        <text x="128.0" y="70.0" fill="currentColor" font-size="13" opacity="1.0" font-weight="700">2</text>
+      </svg>
+      <p class="dim">Abbildung 40. Die Winkelsumme im Dreieck: die drei Winkel an der Ecke B bilden eine Gerade.</p>
+    </div>
+    <!-- /fig:10-angle-sum -->
+    <p><strong>Ein Vieleck.</strong> Die Diagonalen aus einer Ecke teilen ein konvexes n-Eck in <span class="math" data-tex="n - 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>n</mi><mo>&#x02212;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n - 2</annotation></semantics></math></span> Dreiecke, und die Winkel der Dreiecke ergeben zusammen die Winkel des Vielecks.</p>
+    <p><strong>Der Umfangswinkel.</strong> Ein Schenkel des Umfangswinkels gehe durch den Mittelpunkt O. Das Dreieck mit Ecken in O, im Scheitel des Winkels und auf dem Kreis ist gleichschenklig (zwei Seiten sind Radien), und der Mittelpunktswinkel ist sein Außenwinkel, also die Summe zweier gleicher Winkel. Der Umfangswinkel ist also halb so groß wie der Mittelpunktswinkel. Andere Lagen lassen sich darauf zurückführen.</p>
+    <!-- fig:10-inscribed -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 230" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Ein Kreis mit dem Mittelpunkt O. Der Mittelpunktswinkel AOB beträgt 100°; der Umfangswinkel ACB steht über demselben Bogen AB und beträgt 50°, halb so viel.">
+        <circle cx="160.0" cy="112.0" r="92.0" fill="currentColor" fill-opacity="0.0" stroke="currentColor" stroke-width="1.4"/>
+        <polyline points="89.5,171.1 160.0,112.0 230.5,171.1" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.8" opacity="1.0" style="stroke:var(--acc)"/>
+        <polyline points="89.5,171.1 144.0,21.4 230.5,171.1" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.6" opacity="1.0"/>
+        <circle cx="89.5" cy="171.1" r="3.5" fill="currentColor"/>
+        <circle cx="230.5" cy="171.1" r="3.5" fill="currentColor"/>
+        <circle cx="144.0" cy="21.4" r="3.5" fill="currentColor"/>
+        <circle cx="160.0" cy="112.0" r="3.5" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="81.5" y="185.1" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-weight="700">A</text>
+        <text x="238.5" y="185.1" fill="currentColor" font-size="14" opacity="1.0" font-weight="700">B</text>
+        <text x="144.0" y="13.4" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-weight="700">C</text>
+        <text x="168.0" y="108.0" fill="currentColor" font-size="14" opacity="1.0" font-weight="700">O</text>
+        <text x="160.0" y="142.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" style="fill:var(--acc)">100°</text>
+        <text x="146.0" y="55.4" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">50°</text>
+      </svg>
+      <p class="dim">Abbildung 41. Ein Umfangswinkel ist halb so groß wie der Mittelpunktswinkel über demselben Bogen: 100° und 50°.</p>
+    </div>
+    <!-- /fig:10-inscribed -->
+    <p><strong>Die Dreiecksungleichung.</strong> Eine Strecke ist der kürzeste Weg zwischen zwei Punkten, also ist der Weg über die dritte Ecke länger.</p>
+
+    <span class="step">Schritt 4 · Grenzen</span>
+    <h2 id="limits">5 · Wo die Gesetze brechen <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-picture">
+      <p><strong>Eine Abbildung ist kein Argument.</strong> Winkel, die «gleich aussehen», sind nur dann gleich, wenn es aus der Bedingung und den Sätzen folgt.</p>
+    </div>
+    <div class="limit" id="limit-converse">
+      <p><strong>Eine Eigenschaft lässt sich nicht immer umkehren.</strong> Die Diagonalen eines Rechtecks sind gleich, aber auch ein gleichschenkliges Trapez hat gleiche Diagonalen. In einem Parallelogramm halbieren sich die Diagonalen, gleich sind sie aber nur in einem Rechteck.</p>
+    </div>
+    <div class="limit" id="limit-strict">
+      <p><strong>Die Dreiecksungleichung ist streng.</strong> Ist <span class="math" data-tex="c = a + b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>c</mi><mo>&#x0003D;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">c = a + b</annotation></semantics></math></span>, liegen die drei Punkte auf einer Geraden, und es gibt kein Dreieck.</p>
+    </div>
+
+    <span class="step">Schritt 5 · Übung</span>
+    <h2 id="apply">6 · Aufgaben im NMT-Format <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="C" data-limit="">
+      <p class="task-kind">Eine Antwort aus fünf · 1 Punkt</p>
+      <p>Die Winkel eines Dreiecks stehen im Verhältnis 2 : 3 : 4. Finde den größten Winkel.</p>
+      <div class="opts">
+        <button type="button" data-opt="A">A · 40°</button>
+        <button type="button" data-opt="B">B · 60°</button>
+        <button type="button" data-opt="C">C · 80°</button>
+        <button type="button" data-opt="D">D · 90°</button>
+        <button type="button" data-opt="E">E · 100°</button>
+      </div>
+      <p class="law-ref">Gesetze: die <a href="#law-angles">Winkelsumme</a> und der Teil eines Ganzen aus <a href="02.html">Block 2</a>.</p>
+      <div class="solution">Insgesamt sind es 9 Teile, ein Teil ist <span class="math" data-tex="180^\circ : 9 = 20^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>180</mn><mo>&#x02218;</mo></msup><mi>:</mi><mn>9</mn><mo>&#x0003D;</mo><msup><mn>20</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">180^\circ : 9 = 20^\circ</annotation></semantics></math></span>, der größte Winkel ist <span class="math" data-tex="4 \cdot 20^\circ = 80^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>4</mn><mo>&#x000B7;</mo><msup><mn>20</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><msup><mn>80</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">4 \cdot 20^\circ = 80^\circ</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="720" data-limit="">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p>Finde die Winkelsumme eines konvexen Sechsecks (in Grad).</p>
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetz: die <a href="#law-angles">Winkelsumme eines Vielecks</a>.</p>
+      <div class="solution"><span class="math" data-tex="180^\circ \cdot (6 - 2) = 720^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x000B7;</mo><mo stretchy="false">&#x00028;</mo><mn>6</mn><mo>&#x02212;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mn>720</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">180^\circ \cdot (6 - 2) = 720^\circ</annotation></semantics></math></span>: vier Dreiecke.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="55" data-limit="">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p>Ein Mittelpunktswinkel eines Kreises beträgt 110°. Finde den Umfangswinkel (in Grad) über demselben Bogen.</p>
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetz: <a href="#law-inscribed">Umfangswinkel</a>.</p>
+      <div class="solution">Halb so groß wie der Mittelpunktswinkel: 55°.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="C" data-limit="limit-strict">
+      <p class="task-kind">Eine Antwort aus fünf · 1 Punkt</p>
+      <p>Aus welchem Tripel von Strecken kann man ein Dreieck bilden?</p>
+      <div class="opts">
+        <button type="button" data-opt="A">A · 1, 2, 3</button>
+        <button type="button" data-opt="B">B · 2, 3, 6</button>
+        <button type="button" data-opt="C">C · 3, 4, 5</button>
+        <button type="button" data-opt="D">D · 1, 1, 2</button>
+        <button type="button" data-opt="E">E · 2, 2, 5</button>
+      </div>
+      <p class="law-ref">Gesetz: die <a href="#law-triangle-ineq">Dreiecksungleichung</a>.</p>
+      <div class="solution">Nur <span class="math" data-tex="5 < 3 + 4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>5</mn><mo>&#x0003C;</mo><mn>3</mn><mo>&#x0002B;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">5 &lt; 3 + 4</annotation></semantics></math></span>. In A und D ist die größte Seite gleich der Summe der beiden anderen: das ist die Grenze, das Dreieck entartet zu einer Strecke.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="15" data-limit="" data-claim="10-task-midline">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p>Die Seiten eines Dreiecks sind 8 cm, 10 cm und 12 cm. Finde den Umfang des Dreiecks, dessen Ecken die Seitenmitten des gegebenen sind (in cm).</p>
+      <!-- fig:10-task-midline -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 196" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Das Dreieck ABC mit den Seiten AB = 8, BC = 10, AC = 12. Die Punkte M, N und K sind die Mittelpunkte von AB, BC und AC; das Dreieck MNK ist farbig.">
+        <polygon points="34.0,170.0 128.5,31.1 286.0,170.0" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <polygon points="81.2,100.5 207.2,100.5 160.0,170.0" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.8" opacity="1.0" style="stroke:var(--acc);fill:var(--acc)"/>
+        <text x="28.0" y="175.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">A</text>
+        <text x="128.5" y="23.1" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">B</text>
+        <text x="292.0" y="175.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">C</text>
+        <text x="73.2" y="100.5" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">M</text>
+        <text x="215.2" y="100.5" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">N</text>
+        <text x="160.0" y="188.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">K</text>
+        <text x="49.6" y="139.3" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end">8</text>
+        <text x="254.6" y="139.3" fill="currentColor" font-size="13" opacity="1.0">10</text>
+        <text x="97.0" y="188.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">12</text>
+      </svg>
+      <p class="dim">Abbildung 42. Zur Aufgabe: ein Dreieck, dessen Ecken die Seitenmitten des Dreiecks ABC sind.</p>
+    </div>
+    <!-- /fig:10-task-midline -->
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Folgerung: <a href="#cor-midline">die Mittellinie eines Dreiecks</a>.</p>
+      <div class="solution">Jede Seite des neuen Dreiecks ist eine Mittellinie, also halb so lang wie eine Seite des gegebenen: (8 + 10 + 12) : 2 = 15.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="D" data-limit="" data-claim="10-task-exterior">
+      <p class="task-kind">Eine Antwort aus fünf · 1 Punkt</p>
+      <p>Im Dreieck ABC ist ∠A = 50°, ∠B = 70°. Finde den Außenwinkel des Dreiecks an der Ecke C.</p>
+      <!-- fig:10-task-exterior -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 190" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Das Dreieck ABC mit den Winkeln A = 50° und B = 70°. Die Seite AC ist über die Ecke C hinaus verlängert; der Außenwinkel an der Ecke C, zwischen der Verlängerung und der Seite CB, ist mit einem Fragezeichen markiert.">
+        <polygon points="24.0,166.0 142.5,24.8 224.0,166.0" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="224.0" y1="166.0" x2="300.0" y2="166.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <path d="M 50.0 166.0 A 26.0 26.0 0 0 0 40.7 146.1" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M 246.0 166.0 A 22.0 22.0 0 0 0 213.0 146.9" fill="none" stroke="currentColor" stroke-width="1.4" style="stroke:var(--acc)"/>
+        <text x="22.0" y="184.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">A</text>
+        <text x="142.5" y="16.8" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">B</text>
+        <text x="220.0" y="184.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">C</text>
+        <text x="56.0" y="158.0" fill="currentColor" font-size="13" opacity="1.0">50°</text>
+        <text x="140.6" y="56.7" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">70°</text>
+        <text x="243.0" y="138.1" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-weight="700" style="fill:var(--acc)">?</text>
+      </svg>
+      <p class="dim">Abbildung 43. Zur Aufgabe: der Außenwinkel eines Dreiecks an der Ecke C.</p>
+    </div>
+    <!-- /fig:10-task-exterior -->
+      <div class="opts">
+        <button type="button" data-opt="A">A · 60°</button>
+        <button type="button" data-opt="B">B · 100°</button>
+        <button type="button" data-opt="C">C · 110°</button>
+        <button type="button" data-opt="D">D · 120°</button>
+        <button type="button" data-opt="E">E · 130°</button>
+      </div>
+      <p class="law-ref">Gesetz: die <a href="#law-angles">Winkelsumme im Dreieck</a>.</p>
+      <div class="solution">∠C = 180° − 50° − 70° = 60°, der Außenwinkel ist 180° − 60° = 120°: er ist die Summe der zwei nicht anliegenden Winkel. 60° ist der Winkel C selbst, 110° und 130° sind die Außenwinkel bei B und A.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="C" data-limit="" data-claim="10-task-diameter">
+      <p class="task-kind">Eine Antwort aus fünf · 1 Punkt</p>
+      <p>AB ist ein Durchmesser eines Kreises, der Punkt C liegt auf dem Kreis, ∠ABC = 35°. Finde ∠BAC.</p>
+      <!-- fig:10-task-diameter -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 214" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Ein Kreis mit dem Mittelpunkt O und dem Durchmesser AB. Der Punkt C liegt auf dem Kreis, der Winkel ABC beträgt 35°, der Winkel BAC ist mit einem Fragezeichen markiert; der Winkel ACB steht über dem Durchmesser.">
+        <circle cx="160.0" cy="110.0" r="92.0" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-width="1.4"/>
+        <polygon points="68.0,110.0 252.0,110.0 128.5,23.5" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <circle cx="160.0" cy="110.0" r="3" fill="currentColor"/>
+        <polyline points="122.2,32.6 131.2,38.9 137.5,29.9" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <text x="62.0" y="115.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">A</text>
+        <text x="258.0" y="115.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">B</text>
+        <text x="124.5" y="15.5" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">C</text>
+        <text x="160.0" y="128.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">O</text>
+        <text x="218.0" y="104.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end">35°</text>
+        <text x="98.0" y="102.0" fill="currentColor" font-size="15" opacity="1.0" font-weight="700" style="fill:var(--acc)">?</text>
+      </svg>
+      <p class="dim">Abbildung 44. Zur Aufgabe: ein einem Kreis einbeschriebenes Dreieck, dessen eine Seite ein Durchmesser ist.</p>
+    </div>
+    <!-- /fig:10-task-diameter -->
+      <div class="opts">
+        <button type="button" data-opt="A">A · 35°</button>
+        <button type="button" data-opt="B">B · 45°</button>
+        <button type="button" data-opt="C">C · 55°</button>
+        <button type="button" data-opt="D">D · 65°</button>
+        <button type="button" data-opt="E">E · 145°</button>
+      </div>
+      <p class="law-ref">Gesetz: <a href="#law-inscribed">Umfangswinkel</a>: ein Winkel über einem Durchmesser ist ein rechter.</p>
+      <div class="solution">∠ACB steht über einem Halbkreis, also ist er 180° : 2 = 90°, und ∠BAC = 180° − 90° − 35° = 55°. 145° ist 180° − 35°, als gäbe es keinen Winkel C.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="65" data-limit="" data-claim="10-read-angles">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p class="task-class"><strong>Daten in der Abbildung · ablesen und anwenden.</strong> Die Zahlen für die Lösung stehen nur in der Abbildung: schreib sie zuerst heraus, dann löse.</p>
+      <p>Finde den Winkel C des abgebildeten Dreiecks ABC (in Grad).</p>
+      <!-- fig:10-read-angles -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 226" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Das Dreieck ABC. Auf der Abbildung sind die Winkel ∠A = 48°, ∠B = 67° markiert. Der Winkel C ist mit einem Fragezeichen markiert.">
+        <polygon points="60.0,200.0 260.0,200.0 195.9,49.0" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <path d="M 86.0 200.0 A 26 26 0 0 0 77.4 180.7" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M 249.8 176.1 A 26 26 0 0 0 234.0 200.0" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <text x="92.0" y="192.0" fill="currentColor" font-size="13" opacity="1.0" style="fill:var(--acc)">48°</text>
+        <text x="228.0" y="192.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" style="fill:var(--acc)">67°</text>
+        <text x="195.9" y="77.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-weight="700" style="fill:var(--acc)">?</text>
+        <text x="54.0" y="216.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">A</text>
+        <text x="266.0" y="216.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">B</text>
+        <text x="195.9" y="41.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">C</text>
+      </svg>
+      <p class="dim">Abbildung 45. Zur Aufgabe: ein Dreieck mit zwei markierten Winkeln.</p>
+    </div>
+    <!-- /fig:10-read-angles -->
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetz: die <a href="#law-angles">Winkelsumme im Dreieck</a>.</p>
+      <div class="solution">Aus der Abbildung: ∠A = 48°, ∠B = 67°. ∠C = 180° − 48° − 67° = 65°.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="D" data-limit="" data-claim="10-read-par">
+      <p class="task-kind">Eine Antwort aus fünf · 1 Punkt</p>
+      <p class="task-class"><strong>Daten in der Abbildung · das Nötige auswählen.</strong> Die Zahlen stehen nur in der Abbildung, und darunter ist eine überflüssige oder eine Falle: der Gitterschritt, eine Skala, die nicht bei null beginnt. Schreib nur heraus, was die Lösung braucht.</p>
+      <p>Finde den Winkel B des abgebildeten Parallelogramms ABCD.</p>
+      <!-- fig:10-read-par -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 192" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Das Parallelogramm ABCD. Auf der Abbildung ist der Winkel A = 58° markiert und die Seite AB = 7 cm beschriftet. Der Winkel B ist mit einem Fragezeichen markiert.">
+        <polygon points="40.0,160.0 208.0,160.0 274.2,54.0 106.2,54.0" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <path d="M 64.0 160.0 A 24 24 0 0 0 52.7 139.6" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <text x="70.0" y="152.0" fill="currentColor" font-size="13" opacity="1.0" style="fill:var(--acc)">58°</text>
+        <text x="124.0" y="180.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">7 cm</text>
+        <text x="194.0" y="150.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="end" font-weight="700" style="fill:var(--acc)">?</text>
+        <text x="34.0" y="176.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">A</text>
+        <text x="214.0" y="176.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">B</text>
+        <text x="280.2" y="50.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">C</text>
+        <text x="100.2" y="50.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">D</text>
+      </svg>
+      <p class="dim">Abbildung 46. Zur Aufgabe: ein Parallelogramm mit einem markierten Winkel und einer beschrifteten Seite.</p>
+    </div>
+    <!-- /fig:10-read-par -->
+      <div class="opts">
+        <button type="button" data-opt="A">A · 58°</button>
+        <button type="button" data-opt="B">B · 65°</button>
+        <button type="button" data-opt="C">C · 97°</button>
+        <button type="button" data-opt="D">D · 122°</button>
+        <button type="button" data-opt="E">E · 151°</button>
+      </div>
+      <p class="law-ref">Folgerung: <a href="#cor-parallelogram">Winkel eines Parallelogramms</a>.</p>
+      <div class="solution">Gebraucht wird nur der Winkel A = 58°: benachbarte Winkel eines Parallelogramms ergeben zusammen 180°, also ∠B = 180° − 58° = 122°. Die Seitenlänge 7 cm braucht man für die Winkel nicht. 58° ist der Winkel C, gegenüber von A.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="45" data-limit="" data-claim="10-read-circle">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p class="task-class"><strong>Daten in der Abbildung · ablesen und verknüpfen.</strong> Die Zahlen stehen nur in der Abbildung, und das Abgelesene geht in zwei Gesetze ein: schreib die Zahlen heraus, dann nenne beide Gesetze.</p>
+      <p>Finde den Winkel ABC des abgebildeten Dreiecks (in Grad).</p>
+      <!-- fig:10-read-circle -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 228" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Ein Kreis mit dem Mittelpunkt O, die Punkte A, B, C auf dem Kreis, das Dreieck ABC einbeschrieben. Auf der Abbildung sind der Mittelpunktswinkel AOB = 130° (über dem Bogen AB, der C nicht enthält) und der Winkel CAB = 70° markiert. Der Winkel ABC ist mit einem Fragezeichen markiert.">
+        <circle cx="160.0" cy="112.0" r="92.0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="1.4"/>
+        <polygon points="73.5,143.5 239.7,158.0 128.5,25.5" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="160.0" y1="112.0" x2="73.5" y2="143.5" stroke="currentColor" stroke-width="1.3" opacity="1.0" style="stroke:var(--acc)"/>
+        <line x1="160.0" y1="112.0" x2="239.7" y2="158.0" stroke="currentColor" stroke-width="1.3" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="160.0" cy="112.0" r="3" fill="currentColor"/>
+        <text x="162.0" y="104.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-style="italic">O</text>
+        <text x="160.0" y="142.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" style="fill:var(--acc)">130°</text>
+        <text x="60.4" y="153.3" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">A</text>
+        <text x="251.8" y="170.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">B</text>
+        <text x="123.7" y="17.4" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">C</text>
+        <text x="95.5" y="129.5" fill="currentColor" font-size="13" opacity="1.0">70°</text>
+        <text x="221.7" y="136.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="end" font-weight="700" style="fill:var(--acc)">?</text>
+      </svg>
+      <p class="dim">Abbildung 47. Zur Aufgabe: ein einbeschriebenes Dreieck, ein Mittelpunktswinkel und ein Umfangswinkel.</p>
+    </div>
+    <!-- /fig:10-read-circle -->
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetze: <a href="#law-inscribed">Umfangswinkel</a> und die <a href="#law-angles">Winkelsumme im Dreieck</a>.</p>
+      <div class="solution">Aus der Abbildung: der Mittelpunktswinkel AOB = 130°, ∠CAB = 70°. Der Umfangswinkel ACB steht über demselben Bogen AB, also ist er halb so groß: 65°. Dann ∠ABC = 180° − 65° − 70° = 45°.</div>
+    </div>
+
+    <span class="step">Schritt 6 · Rückwärtszug</span>
+    <h2 id="reverse">7 · Nenne das Gesetz selbst <a class="anchor-link" href="#reverse">#</a></h2>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="115" data-limit="">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p>Zwei parallele Geraden werden von einer querschneidenden Geraden geschnitten. Einer der Nachbarwinkel beträgt 65°. Finde den anderen (in Grad).</p>
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetz: <a href="#law-parallel">parallele Geraden und eine querschneidende Gerade</a>.</p>
+      <div class="solution"><span class="math" data-tex="180^\circ - 65^\circ = 115^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x02212;</mo><msup><mn>65</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><msup><mn>115</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">180^\circ - 65^\circ = 115^\circ</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="55" data-limit="">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p>Der Punkt C liegt auf einem Kreis mit dem Durchmesser AB, <span class="math" data-tex="\angle A = 35^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02220;</mo><mi>A</mi><mo>&#x0003D;</mo><msup><mn>35</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">\angle A = 35^\circ</annotation></semantics></math></span>. Finde den Winkel B des Dreiecks ABC (in Grad).</p>
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetze: <a href="#law-inscribed">ein Umfangswinkel über einem Durchmesser</a> und die <a href="#law-angles">Winkelsumme</a>.</p>
+      <div class="solution">Der Winkel C steht über einem Durchmesser, also <span class="math" data-tex="\angle C = 90^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02220;</mo><mi>C</mi><mo>&#x0003D;</mo><msup><mn>90</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">\angle C = 90^\circ</annotation></semantics></math></span>; dann <span class="math" data-tex="\angle B = 180^\circ - 90^\circ - 35^\circ = 55^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02220;</mo><mi>B</mi><mo>&#x0003D;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x02212;</mo><msup><mn>90</mn><mo>&#x02218;</mo></msup><mo>&#x02212;</mo><msup><mn>35</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><msup><mn>55</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">\angle B = 180^\circ - 90^\circ - 35^\circ = 55^\circ</annotation></semantics></math></span>.</div>
+    </div>
+
+    <h2 id="error">8 · Finde den Fehler in einer fremden Lösung <a class="anchor-link" href="#error">#</a></h2>
+    <p>Viktoria schreibt: «Die Diagonalen des Vierecks ABCD sind gleich, also ist ABCD ein Rechteck».</p>
+    <details>
+      <summary>Wo ist der Fehler?</summary>
+      <p>Gleiche Diagonalen sind eine Eigenschaft des Rechtecks, aber kein Kriterium: auch ein gleichschenkliges Trapez hat gleiche Diagonalen, und sogar ein Viereck ganz ohne parallele Seiten. Das Kriterium für ein Rechteck: ein Parallelogramm mit gleichen Diagonalen (die <a href="#limit-converse">zweite Grenze</a>).</p>
+    </details>
+    <!-- sources -->
+    <h2 id="external">9 · Links zu Aufgaben aus externen Quellen <a class="anchor-link" href="#external">#</a></h2>
+    <p class="dim">Echte Aufgaben von anderen Seiten zur NMT-Vorbereitung, die auf den Gesetzen dieses Blocks beruhen. Die Aufgabe liest du auf der Quellseite hinter dem Link; die Zuordnung zu den Gesetzen ist unsere. Quellen und Jahre werden in den Einstellungen ein- und ausgeschaltet (das Zahnrad oben).</p>
+    <p class="dim ext-off" hidden>Alle externen Quellen sind in den Einstellungen ausgeschaltet.</p>
+    <div class="ext-source" data-ext-source="nmt-ua" id="ext-nmt-ua">
+      <h3 class="ext-head">NMT auf der Seite ZNO-ONLINE (zno.osvita.ua, auf Ukrainisch)</h3>
+      <p class="dim ext-lead">Aufgaben der Hauptsitzungen des NMT 2024-2026 von der Seite ZNO-ONLINE, nach Jahren. Jedes Jahr wird einzeln eingeschaltet.</p>
+      <div class="ext" data-ext="nmt-ua:2026" id="ext-nmt-ua-2026">
+        <h4>NMT 2026</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q3" rel="noopener" target="_blank">Sitzung 1, Aufgabe 3</a> (mit Abbildung) - Parallele Geraden und eine querschneidende Gerade</li>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q10" rel="noopener" target="_blank">Sitzung 1, Aufgabe 10</a> (mit Abbildung) - Umfangswinkel</li>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q13" rel="noopener" target="_blank">Sitzung 1, Aufgabe 13</a> (mit Abbildung) - Mittellinie eines Dreiecks und eines Trapezes</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q3" rel="noopener" target="_blank">Sitzung 2, Aufgabe 3</a> (mit Abbildung) - Die Winkelsumme im Dreieck ist 180°</li>
+        </ul>
+      </div>
+      <div class="ext" data-ext="nmt-ua:2025" id="ext-nmt-ua-2025">
+        <h4>NMT 2025</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q2" rel="noopener" target="_blank">Sitzung 1, Aufgabe 2</a> (mit Abbildung) - Winkel, Dreiecke, der Kreis</li>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q10" rel="noopener" target="_blank">Sitzung 1, Aufgabe 10</a> - Dreiecksungleichung, Die Winkelsumme im Dreieck ist 180°</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q2" rel="noopener" target="_blank">Sitzung 2, Aufgabe 2</a> (mit Abbildung) - Die Winkelsumme im Dreieck ist 180°</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q10" rel="noopener" target="_blank">Sitzung 2, Aufgabe 10</a> - Sehnenviereck, Mittellinie eines Dreiecks und eines Trapezes</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q18" rel="noopener" target="_blank">Sitzung 2, Aufgabe 18</a> (mit Abbildung) - Mittellinie eines Dreiecks und eines Trapezes</li>
+        </ul>
+      </div>
+      <div class="ext" data-ext="nmt-ua:2024" id="ext-nmt-ua-2024">
+        <h4>NMT 2024</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q2" rel="noopener" target="_blank">Sitzung 1, Aufgabe 2</a> (mit Abbildung) - Die Winkelsumme im Dreieck ist 180°</li>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q10" rel="noopener" target="_blank">Sitzung 1, Aufgabe 10</a> - Dreiecksungleichung, Winkel eines Parallelogramms</li>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q18" rel="noopener" target="_blank">Sitzung 1, Aufgabe 18</a> (mit Abbildung) - Mittellinie eines Dreiecks und eines Trapezes</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q4" rel="noopener" target="_blank">Sitzung 2, Aufgabe 4</a> (mit Abbildung) - Winkel, Dreiecke, der Kreis</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q10" rel="noopener" target="_blank">Sitzung 2, Aufgabe 10</a> - Mittelpunkt des Umkreises</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q18" rel="noopener" target="_blank">Sitzung 2, Aufgabe 18</a> (mit Abbildung) - Mittellinie eines Dreiecks und eines Trapezes</li>
+        </ul>
       </div>
     </div>
+    <!-- /sources -->
+
+    <h2 id="artifacts">Was du nach dieser Seite hast <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>Eine Kette statt einer Liste.</strong> Parallele Geraden ergeben die Winkelsumme im Dreieck, die Winkelsumme im Dreieck ergibt die Winkelsumme im Vieleck, ein gleichschenkliges Dreieck aus Radien ergibt den Umfangswinkel. Vergisst du eine Tatsache, baust du sie aus der vorigen wieder auf.</p>
+    </div>
+    <!-- freq -->
+    <p class="dim law-freq" data-tasks="12">Häufigkeit auf dieser Seite, nicht im NMT: diese Seite hat 12 Aufgaben im Trainer, und sie stützen sich auf diese Gesetze: Die Winkelsumme im Dreieck ist 180° - 6, Umfangswinkel - 4, Parallele Geraden und eine querschneidende Gerade - 2, Dreiecksungleichung - 1, Ähnlichkeit über zwei Winkel - 1. In echten NMT-Varianten 2024-2026 wird dieser Block in 15 Aufgaben von 132 gebraucht: Ähnlichkeit über zwei Winkel - 5, Die Winkelsumme im Dreieck ist 180° - 4, Umfangswinkel - 3, Dreiecksungleichung - 2, Parallele Geraden und eine querschneidende Gerade - 2, Winkel, Dreiecke, der Kreis - 2.</p>
+    <!-- /freq -->
+    <p>Du kannst diesen Block, wenn du:</p>
+    <ol>
+      <li>8 von 10 Aufgaben zu Winkeln, Dreiecken und dem Kreis ohne Hinweis löst;</li>
+      <li>laut erklären kannst, warum die Winkelsumme im Dreieck 180° beträgt;</li>
+      <li>den Fehler in einer fremden Lösung findest, wie in der von Viktoria.</li>
+    </ol>
+  
+
+    <footer>
+      <nav class="pager" aria-label="Benachbarte Themen">
+        <p class="pager-next">Nächstes Thema: <a href="11.html">Messen in der Ebene</a></p>
+        <p class="pager-prev">Vorheriges Thema: <a href="09.html">Kombinatorik, Wahrscheinlichkeit, Statistik</a></p>
+      </nav>
+      <p class="footer-note">Eine Website der AI Factory-Serie. Mit denselben Werkzeugen erstellt: einfaches HTML und CSS, Bash-Prüfung, Veröffentlichung über GitHub Pages.</p>
+    </footer>
   </main>
 
 </div>

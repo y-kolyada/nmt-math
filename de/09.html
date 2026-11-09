@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kombinatorik, Wahrscheinlichkeit, Statistik · nmt-math · ai|</title>
 <!-- meta: built by tools/build-meta.py - do not edit by hand -->
-<meta name="description" content="">
+<meta name="description" content="Zählen, angewandt nicht auf Gegenstände, sondern auf Möglichkeiten.">
 <link rel="canonical" href="https://y-kolyada.github.io/nmt-math/de/09.html">
 <link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/09.html">
 <link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/09.html">
@@ -16,12 +16,12 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="nmt-math">
 <meta property="og:title" content="Kombinatorik, Wahrscheinlichkeit, Statistik">
-<meta property="og:description" content="">
+<meta property="og:description" content="Zählen, angewandt nicht auf Gegenstände, sondern auf Möglichkeiten.">
 <meta property="og:url" content="https://y-kolyada.github.io/nmt-math/de/09.html">
 <meta property="og:locale" content="de_DE">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Kombinatorik, Wahrscheinlichkeit, Statistik","description":"","url":"https://y-kolyada.github.io/nmt-math/de/09.html","inLanguage":"de","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Kombinatorik, Wahrscheinlichkeit, Statistik","description":"Zählen, angewandt nicht auf Gegenstände, sondern auf Möglichkeiten.","url":"https://y-kolyada.github.io/nmt-math/de/09.html","inLanguage":"de","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
 <!-- /meta -->
 <link rel="stylesheet" href="../assets/style.css?v=3">
 <link rel="stylesheet" href="../assets/study.css?v=3">
@@ -96,16 +96,347 @@
 
   <main id="main">
     <h1>Kombinatorik, Wahrscheinlichkeit, Statistik</h1>
-    <p class="page-size" data-words="24">Wörter: 24</p>
+    <p class="page-size" data-words="1465">Wörter: 1465</p>
+    <p class="lead">Zählen, angewandt nicht auf Gegenstände, sondern auf Möglichkeiten. Wahrscheinlichkeit ist dasselbe Zählen: wie viele günstige Möglichkeiten es unter allen gleich wahrscheinlichen gibt.</p>
 
-    <div class="stub-card">
-      <h2>Die deutsche Fassung ist in Vorbereitung</h2>
-      <p>Die vollständige Fassung dieser Seite ist auf Ukrainisch veröffentlicht.</p>
-      <p>Vollständige Fassung öffnen:</p>
-      <div class="stub-actions">
-        <a href="../uk/09.html" class="btn-primary">Kombinatorik, Wahrscheinlichkeit, Statistik →</a>
+    <div class="box key" id="key-idea">
+      <h2>Hauptgedanke der Seite <a class="anchor-link" href="#key-idea" aria-label="Link zu diesem Block">#</a></h2>
+      <p>Die ganze Kombinatorik steht auf einer Produktregel und einer Frage: zählt die Reihenfolge? Die <span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">klassische Wahrscheinlichkeit</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Klassische Wahrscheinlichkeit</strong><button type="button" class="term-close" aria-label="Schließen">&times;</button></span><span class="term-desc">Der Anteil der günstigen Ausgänge an allen gleich wahrscheinlichen.</span><span class="term-links"><a href="glossary.html#term-probability">Zum Begriffswörterbuch <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span> ist ein Anteil, und ihre ganze Schwierigkeit liegt darin, Zähler und Nenner unter <strong>gleich wahrscheinlichen</strong> Ausgängen richtig zu zählen. Die Statistik beschreibt schon gesammelte Zahlen: den Mittelwert, den Median, den Modus, die Spannweite. Der Block kann Chancen zählen; ein einzelnes Ergebnis vorherzusagen kann und verspricht er nicht.</p>
+    </div>
+
+    <span class="step">Schritt 0 · Einstieg</span>
+    <h2 id="hook">1 · Zwei Klassensprecher aus fünf <a class="anchor-link" href="#hook">#</a></h2>
+    <p>Auf wie viele Arten kann man aus fünf Schülern zwei Klassensprecher wählen? Der übliche Zug: «den ersten auf 5 Arten, den zweiten auf 4, zusammen 20». Aber das Paar «Olia und Ihor» und das Paar «Ihor und Olia» sind dasselbe Paar von Sprechern. Jedes Paar wurde doppelt gezählt, also ist die richtige Antwort <span class="math" data-tex="20 : 2 = 10"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>20</mn><mi>:</mi><mn>2</mn><mo>&#x0003D;</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">20 : 2 = 10</annotation></semantics></math></span>. Würde man einen Sprecher und einen Stellvertreter wählen, zählte die Reihenfolge, und die Antwort 20 wäre richtig.</p>
+
+    <span class="step">Schritt 1 · Begriff</span>
+    <h2 id="concept">2 · Möglichkeiten, Ereignisse, Datenreihen <a class="anchor-link" href="#concept">#</a></h2>
+    <ul>
+      <li>Eine <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Permutation</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Permutation</strong><button type="button" class="term-close" aria-label="Schließen">&times;</button></span><span class="term-desc">Eine Anordnung aller n Elemente.</span><span class="term-links"><a href="glossary.html#term-permutation">Zum Begriffswörterbuch <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> ist eine Anordnung aller n Elemente. Eine <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Variation</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Variation</strong><button type="button" class="term-close" aria-label="Schließen">&times;</button></span><span class="term-desc">Eine geordnete Auswahl von k Elementen aus n.</span><span class="term-links"><a href="glossary.html#term-placement">Zum Begriffswörterbuch <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> ist eine geordnete Auswahl von k aus n. Eine <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Kombination</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Kombination</strong><button type="button" class="term-close" aria-label="Schließen">&times;</button></span><span class="term-desc">Eine ungeordnete Auswahl von k Elementen aus n.</span><span class="term-links"><a href="glossary.html#term-combination">Zum Begriffswörterbuch <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> ist eine ungeordnete Auswahl von k aus n.</li>
+      <li>Ein <strong>Zufallsereignis</strong> ist ein Ergebnis, das eintreten kann oder nicht. <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Gleich wahrscheinliche Ausgänge</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Gleich wahrscheinliche Ausgänge</strong><button type="button" class="term-close" aria-label="Schließen">&times;</button></span><span class="term-desc">Ausgänge eines Versuchs, von denen keiner einen Vorteil vor den anderen hat.</span><span class="term-links"><a href="glossary.html#term-equally">Zum Begriffswörterbuch <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong>: keiner hat einen Vorteil vor einem anderen (eine Seite eines Würfels, eine Seite einer fairen Münze).</li>
+      <li>Der <strong>Mittelwert</strong> ist die Summe der Daten geteilt durch ihre Anzahl. Der <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Median</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Median</strong><button type="button" class="term-close" aria-label="Schließen">&times;</button></span><span class="term-desc">Der Wert, der in der Mitte einer geordneten Datenreihe steht.</span><span class="term-links"><a href="glossary.html#term-median">Zum Begriffswörterbuch <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> ist der Wert in der Mitte, nach dem Platz in einer geordneten Reihe. Der <strong>Modus</strong> ist der Wert, der am häufigsten vorkommt. Die <strong>Spannweite</strong> ist die Differenz des größten und des kleinsten.</li>
+    </ul>
+
+    <span class="step">Schritt 2 · Gesetz</span>
+    <h2 id="law">3 · Gesetze des Zählens und der Wahrscheinlichkeit <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-product">
+      <p class="law-name">Produktregel</p>
+      <p>Kann die erste Wahl auf m Arten getroffen werden und danach die zweite auf n Arten, dann kann das Paar von Wahlen auf <span class="math" data-tex="m \cdot n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>m</mi><mo>&#x000B7;</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m \cdot n</annotation></semantics></math></span> Arten getroffen werden.</p>
+    </div>
+    <div class="law" id="law-formulas">
+      <p class="law-name">Permutationen, Variationen, Kombinationen</p>
+      <div class="math-block" data-tex="P_n = n!,\qquad A_n^k = \frac{n!}{(n - k)!},\qquad C_n^k = \frac{n!}{k!\,(n - k)!}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>P</mi><mi>n</mi></msub><mo>&#x0003D;</mo><mi>n</mi><mo>&#x00021;</mo><mo>&#x0002C;</mo><mspace width="2em" /><msubsup><mi>A</mi><mi>n</mi><mi>k</mi></msubsup><mo>&#x0003D;</mo><mfrac><mrow><mi>n</mi><mo>&#x00021;</mo></mrow><mrow><mo stretchy="false">&#x00028;</mo><mi>n</mi><mo>&#x02212;</mo><mi>k</mi><mo stretchy="false">&#x00029;</mo><mo>&#x00021;</mo></mrow></mfrac><mo>&#x0002C;</mo><mspace width="2em" /><msubsup><mi>C</mi><mi>n</mi><mi>k</mi></msubsup><mo>&#x0003D;</mo><mfrac><mrow><mi>n</mi><mo>&#x00021;</mo></mrow><mrow><mi>k</mi><mo>&#x00021;</mo><mspace width="0.167em" /><mo stretchy="false">&#x00028;</mo><mi>n</mi><mo>&#x02212;</mo><mi>k</mi><mo stretchy="false">&#x00029;</mo><mo>&#x00021;</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">P_n = n!,\qquad A_n^k = \frac{n!}{(n - k)!},\qquad C_n^k = \frac{n!}{k!\,(n - k)!}</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-probability">
+      <p class="law-name">Klassische Wahrscheinlichkeit</p>
+      <div class="math-block" data-tex="P(A) = \frac{m}{n},\qquad 0 \leq P(A) \leq 1,\qquad P(\overline{A}) = 1 - P(A)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">&#x00028;</mo><mi>A</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mfrac><mrow><mi>m</mi></mrow><mrow><mi>n</mi></mrow></mfrac><mo>&#x0002C;</mo><mspace width="2em" /><mn>0</mn><mo>&#x02264;</mo><mi>P</mi><mo stretchy="false">&#x00028;</mo><mi>A</mi><mo stretchy="false">&#x00029;</mo><mo>&#x02264;</mo><mn>1</mn><mo>&#x0002C;</mo><mspace width="2em" /><mi>P</mi><mo stretchy="false">&#x00028;</mo><mover><mrow><mi>A</mi></mrow><mo accent="true">&#x02015;</mo></mover><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>1</mn><mo>&#x02212;</mo><mi>P</mi><mo stretchy="false">&#x00028;</mo><mi>A</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">P(A) = \frac{m}{n},\qquad 0 \leq P(A) \leq 1,\qquad P(\overline{A}) = 1 - P(A)</annotation></semantics></math></div>
+      <p>wobei n die Zahl aller gleich wahrscheinlichen Ausgänge ist und m die Zahl der für das Ereignis A günstigen.</p>
+    </div>
+
+    <span class="step">Schritt 3 · Warum es so ist</span>
+    <h2 id="why">4 · Woher die Formeln kommen <a class="anchor-link" href="#why">#</a></h2>
+    <p><strong>Permutationen.</strong> Für den ersten Platz gibt es n Kandidaten, für den zweiten <span class="math" data-tex="n - 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>n</mi><mo>&#x02212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n - 1</annotation></semantics></math></span>, und so weiter: die Produktregel ergibt <span class="math" data-tex="n \cdot (n - 1) \cdot \ldots \cdot 1 = n!"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>n</mi><mo>&#x000B7;</mo><mo stretchy="false">&#x00028;</mo><mi>n</mi><mo>&#x02212;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo><mo>&#x000B7;</mo><mi>&#x02026;</mi><mo>&#x000B7;</mo><mn>1</mn><mo>&#x0003D;</mo><mi>n</mi><mo>&#x00021;</mo></mrow><annotation encoding="application/x-tex">n \cdot (n - 1) \cdot \ldots \cdot 1 = n!</annotation></semantics></math></span>. Eine Variation ist dasselbe Produkt, nach k Faktoren abgeschnitten.</p>
+    <!-- fig:09-tree -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 196" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Ein Baum für zwei Münzwürfe: vom Start zwei Äste, Kopf und Zahl, und von jedem noch zwei. Es gibt 2 · 2 = 4 Blätter: KK, KZ, ZK, ZZ. Alle vier sind gleich wahrscheinlich, und nur eines davon ist zweimal Kopf.">
+        <circle cx="24.0" cy="98.0" r="5" fill="currentColor"/>
+        <line x1="29.0" y1="98.0" x2="102.0" y2="50.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <rect x="102.0" y="36.0" width="36.0" height="28.0" rx="6" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1.2"/>
+        <text x="120.0" y="55.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-weight="700">K</text>
+        <line x1="29.0" y1="98.0" x2="102.0" y2="146.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <rect x="102.0" y="132.0" width="36.0" height="28.0" rx="6" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1.2"/>
+        <text x="120.0" y="151.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-weight="700">Z</text>
+        <line x1="138.0" y1="50.0" x2="214.0" y2="24.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <rect x="214.0" y="10.0" width="44.0" height="28.0" rx="6" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="236.0" y="29.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-weight="700">KK</text>
+        <line x1="138.0" y1="50.0" x2="214.0" y2="76.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <rect x="214.0" y="62.0" width="44.0" height="28.0" rx="6" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1.2"/>
+        <text x="236.0" y="81.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle">KZ</text>
+        <line x1="138.0" y1="146.0" x2="214.0" y2="120.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <rect x="214.0" y="106.0" width="44.0" height="28.0" rx="6" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1.2"/>
+        <text x="236.0" y="125.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle">ZK</text>
+        <line x1="138.0" y1="146.0" x2="214.0" y2="172.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <rect x="214.0" y="158.0" width="44.0" height="28.0" rx="6" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1.2"/>
+        <text x="236.0" y="177.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle">ZZ</text>
+        <text x="70.0" y="192.0" fill="currentColor" font-size="12" opacity="0.7" text-anchor="middle">1. Wurf</text>
+        <text x="186.0" y="192.0" fill="currentColor" font-size="12" opacity="0.7" text-anchor="middle">2. Wurf</text>
+      </svg>
+      <p class="dim">Abbildung 33. Die Produktregel als Baum: 2 · 2 = 4 gleich wahrscheinliche Ausgänge.</p>
+    </div>
+    <!-- /fig:09-tree -->
+    <p><strong>Kombinationen.</strong> Jede ungeordnete Gruppe von k Elementen lässt sich auf <span class="math" data-tex="k!"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>k</mi><mo>&#x00021;</mo></mrow><annotation encoding="application/x-tex">k!</annotation></semantics></math></span> Arten anordnen, und alle diese Anordnungen sind in <span class="math" data-tex="A_n^k"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msubsup><mi>A</mi><mi>n</mi><mi>k</mi></msubsup></mrow><annotation encoding="application/x-tex">A_n^k</annotation></semantics></math></span> mitgezählt. Also <span class="math" data-tex="C_n^k = \frac{A_n^k}{k!}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msubsup><mi>C</mi><mi>n</mi><mi>k</mi></msubsup><mo>&#x0003D;</mo><mfrac><mrow><msubsup><mi>A</mi><mi>n</mi><mi>k</mi></msubsup></mrow><mrow><mi>k</mi><mo>&#x00021;</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">C_n^k = \frac{A_n^k}{k!}</annotation></semantics></math></span> - genau das Teilen durch 2 aus dem Einstieg.</p>
+    <p><strong>Das Gegenereignis.</strong> Jeder Ausgang ist für A günstig oder nicht, also <span class="math" data-tex="m_A + m_{\overline{A}} = n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>m</mi><mi>A</mi></msub><mo>&#x0002B;</mo><msub><mi>m</mi><mrow><mover><mrow><mi>A</mi></mrow><mo accent="true">&#x02015;</mo></mover></mrow></msub><mo>&#x0003D;</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m_A + m_{\overline{A}} = n</annotation></semantics></math></span>. Teile durch n.</p>
+
+    <span class="step">Schritt 4 · Grenzen</span>
+    <h2 id="limits">5 · Wo die Gesetze brechen <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-order">
+      <p><strong>Die Hauptfrage ist, ob die Reihenfolge zählt.</strong> Ein Passwort, eine Warteschlange, ein Stundenplan - sie zählt (Variationen, Permutationen). Eine Mannschaft, eine Menge, ein Ausschuss - sie zählt nicht (Kombinationen).</p>
+    </div>
+    <div class="limit" id="limit-equal">
+      <p><strong>Die klassische Formel verlangt gleich wahrscheinliche Ausgänge.</strong> Bei zwei Würfeln gibt es 11 Summen (von 2 bis 12), aber sie sind nicht gleich wahrscheinlich: die Summe 7 entsteht auf sechs Arten, die Summe 2 auf eine. Zählen muss man Paare von Augenzahlen: es sind 36.</p>
+    </div>
+    <!-- fig:09-dice -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 250" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Eine Tabelle 6 mal 6: die Zeile ist der erste Würfel, die Spalte der zweite, in der Zelle steht die Summe. Die sechs Zellen mit der Summe 7 liegen auf einer Diagonalen und sind hervorgehoben. Die Summe 2 kommt nur in einer Zelle vor, also sind die Summen nicht gleich wahrscheinlich, die Paare von Augenzahlen aber schon.">
+        <text x="90.0" y="26.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle" font-weight="700">1</text>
+        <text x="64.0" y="54.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end" font-weight="700">1</text>
+        <text x="122.0" y="26.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle" font-weight="700">2</text>
+        <text x="64.0" y="86.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end" font-weight="700">2</text>
+        <text x="154.0" y="26.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle" font-weight="700">3</text>
+        <text x="64.0" y="118.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end" font-weight="700">3</text>
+        <text x="186.0" y="26.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle" font-weight="700">4</text>
+        <text x="64.0" y="150.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end" font-weight="700">4</text>
+        <text x="218.0" y="26.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle" font-weight="700">5</text>
+        <text x="64.0" y="182.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end" font-weight="700">5</text>
+        <text x="250.0" y="26.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle" font-weight="700">6</text>
+        <text x="64.0" y="214.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end" font-weight="700">6</text>
+        <rect x="74.0" y="34.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="90.0" y="54.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">2</text>
+        <rect x="106.0" y="34.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="122.0" y="54.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">3</text>
+        <rect x="138.0" y="34.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="154.0" y="54.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">4</text>
+        <rect x="170.0" y="34.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="186.0" y="54.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">5</text>
+        <rect x="202.0" y="34.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="218.0" y="54.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">6</text>
+        <rect x="234.0" y="34.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="0.8" style="stroke:var(--acc)"/>
+        <text x="250.0" y="54.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" font-weight="700">7</text>
+        <rect x="74.0" y="66.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="90.0" y="86.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">3</text>
+        <rect x="106.0" y="66.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="122.0" y="86.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">4</text>
+        <rect x="138.0" y="66.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="154.0" y="86.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">5</text>
+        <rect x="170.0" y="66.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="186.0" y="86.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">6</text>
+        <rect x="202.0" y="66.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="0.8" style="stroke:var(--acc)"/>
+        <text x="218.0" y="86.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" font-weight="700">7</text>
+        <rect x="234.0" y="66.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="250.0" y="86.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">8</text>
+        <rect x="74.0" y="98.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="90.0" y="118.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">4</text>
+        <rect x="106.0" y="98.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="122.0" y="118.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">5</text>
+        <rect x="138.0" y="98.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="154.0" y="118.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">6</text>
+        <rect x="170.0" y="98.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="0.8" style="stroke:var(--acc)"/>
+        <text x="186.0" y="118.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" font-weight="700">7</text>
+        <rect x="202.0" y="98.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="218.0" y="118.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">8</text>
+        <rect x="234.0" y="98.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="250.0" y="118.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">9</text>
+        <rect x="74.0" y="130.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="90.0" y="150.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">5</text>
+        <rect x="106.0" y="130.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="122.0" y="150.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">6</text>
+        <rect x="138.0" y="130.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="0.8" style="stroke:var(--acc)"/>
+        <text x="154.0" y="150.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" font-weight="700">7</text>
+        <rect x="170.0" y="130.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="186.0" y="150.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">8</text>
+        <rect x="202.0" y="130.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="218.0" y="150.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">9</text>
+        <rect x="234.0" y="130.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="250.0" y="150.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">10</text>
+        <rect x="74.0" y="162.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="90.0" y="182.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">6</text>
+        <rect x="106.0" y="162.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="0.8" style="stroke:var(--acc)"/>
+        <text x="122.0" y="182.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" font-weight="700">7</text>
+        <rect x="138.0" y="162.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="154.0" y="182.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">8</text>
+        <rect x="170.0" y="162.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="186.0" y="182.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">9</text>
+        <rect x="202.0" y="162.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="218.0" y="182.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">10</text>
+        <rect x="234.0" y="162.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="250.0" y="182.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">11</text>
+        <rect x="74.0" y="194.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="0.8" style="stroke:var(--acc)"/>
+        <text x="90.0" y="214.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" font-weight="700">7</text>
+        <rect x="106.0" y="194.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="122.0" y="214.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">8</text>
+        <rect x="138.0" y="194.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="154.0" y="214.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">9</text>
+        <rect x="170.0" y="194.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="186.0" y="214.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">10</text>
+        <rect x="202.0" y="194.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="218.0" y="214.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">11</text>
+        <rect x="234.0" y="194.0" width="32.0" height="32.0" rx="0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.8"/>
+        <text x="250.0" y="214.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">12</text>
+        <text x="170.0" y="14.0" fill="currentColor" font-size="12" opacity="0.7" text-anchor="middle">2.</text>
+        <text x="14.0" y="130.0" fill="currentColor" font-size="12" opacity="0.7">1.</text>
+      </svg>
+      <p class="dim">Abbildung 34. Gleich wahrscheinlich sind die 36 Paare von Augenzahlen, nicht die 11 Summen: die Summe 7 nimmt 6 Zellen von 36 ein.</p>
+    </div>
+    <!-- /fig:09-dice -->
+    <div class="limit" id="limit-median">
+      <p><strong>Den Median sucht man in einer geordneten Reihe.</strong> Bei einer geraden Anzahl von Daten ist der Median der Mittelwert der zwei mittleren Zahlen. Und der Mittelwert reagiert, anders als der Median, auf einen einzelnen sehr großen Wert.</p>
+    </div>
+
+    <span class="step">Schritt 5 · Übung</span>
+    <h2 id="apply">6 · Aufgaben im NMT-Format <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="D" data-limit="limit-order">
+      <p class="task-kind">Eine Antwort aus fünf · 1 Punkt</p>
+      <p>Auf wie viele Arten kann man vier verschiedene Bücher in einer Reihe auf ein Regal stellen?</p>
+      <div class="opts">
+        <button type="button" data-opt="A">A · 4</button>
+        <button type="button" data-opt="B">B · 8</button>
+        <button type="button" data-opt="C">C · 16</button>
+        <button type="button" data-opt="D">D · 24</button>
+        <button type="button" data-opt="E">E · 256</button>
+      </div>
+      <p class="law-ref">Gesetz: <a href="#law-formulas">Permutationen</a>.</p>
+      <div class="solution"><span class="math" data-tex="4! = 24"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>4</mn><mo>&#x00021;</mo><mo>&#x0003D;</mo><mn>24</mn></mrow><annotation encoding="application/x-tex">4! = 24</annotation></semantics></math></span>. 256 ist <span class="math" data-tex="4^4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>4</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">4^4</annotation></semantics></math></span>: so wäre es, wenn man ein Buch mehrmals hinstellen könnte.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="120" data-limit="limit-order">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p>Aus einer Klasse von 10 Schülern sollen drei für eine Olympiade gewählt werden. Auf wie viele Arten geht das?</p>
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetz: <a href="#law-formulas">Kombinationen</a>: die Reihenfolge zählt nicht.</p>
+      <div class="solution"><span class="math" data-tex="C_{10}^3 = \frac{10 \cdot 9 \cdot 8}{3!} = 120"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msubsup><mi>C</mi><mrow><mn>10</mn></mrow><mn>3</mn></msubsup><mo>&#x0003D;</mo><mfrac><mrow><mn>10</mn><mo>&#x000B7;</mo><mn>9</mn><mo>&#x000B7;</mo><mn>8</mn></mrow><mrow><mn>3</mn><mo>&#x00021;</mo></mrow></mfrac><mo>&#x0003D;</mo><mn>120</mn></mrow><annotation encoding="application/x-tex">C_{10}^3 = \frac{10 \cdot 9 \cdot 8}{3!} = 120</annotation></semantics></math></span>. Ohne das Teilen durch <span class="math" data-tex="3! = 6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>3</mn><mo>&#x00021;</mo><mo>&#x0003D;</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">3! = 6</annotation></semantics></math></span> wären es 720, die Zahl der geordneten Tripel.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="0,8" data-limit="">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p>In einer Kiste liegen 3 rote, 5 blaue und 2 weiße Kugeln. Eine wird zufällig gezogen. Finde die Wahrscheinlichkeit, dass sie <strong>nicht</strong> weiß ist.</p>
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetz: <a href="#law-probability">das Gegenereignis</a>.</p>
+      <div class="solution"><span class="math" data-tex="P(\text{weiß}) = \frac{2}{10} = 0{,}2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>P</mi><mo stretchy="false">&#x00028;</mo><mtext>weiß</mtext><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>10</mn></mrow></mfrac><mo>&#x0003D;</mo><mn>0</mn><mrow><mo>&#x0002C;</mo></mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">P(\text{weiß}) = \frac{2}{10} = 0{,}2</annotation></semantics></math></span>, also <span class="math" data-tex="P = 1 - 0{,}2 = 0{,}8"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>P</mi><mo>&#x0003D;</mo><mn>1</mn><mo>&#x02212;</mo><mn>0</mn><mrow><mo>&#x0002C;</mo></mrow><mn>2</mn><mo>&#x0003D;</mo><mn>0</mn><mrow><mo>&#x0002C;</mo></mrow><mn>8</mn></mrow><annotation encoding="application/x-tex">P = 1 - 0{,}2 = 0{,}8</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="match" data-answer="B A C" data-limit="limit-median">
+      <p class="task-kind">Zuordnung · 3 Punkte</p>
+      <p>Gegeben ist eine Datenreihe: 2, 3, 3, 5, 7. Ordne jeder Kenngröße (1-3) ihren Wert (A-E) zu.</p>
+      <ul class="pairs">
+        <li><label>1. Der Mittelwert <select aria-label="Antwort zur Kenngröße 1"><option value="">-</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option></select></label></li>
+        <li><label>2. Der Median <select aria-label="Antwort zur Kenngröße 2"><option value="">-</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option></select></label></li>
+        <li><label>3. Die Spannweite <select aria-label="Antwort zur Kenngröße 3"><option value="">-</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option></select></label></li>
+      </ul>
+      <p>A · 3 &nbsp; B · 4 &nbsp; C · 5 &nbsp; D · 7 &nbsp; E · 2</p>
+      <p><button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Begriff: <a href="#concept">Kenngrößen einer Datenreihe</a>.</p>
+      <div class="solution">Der Mittelwert ist <span class="math" data-tex="\frac{20}{5} = 4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>20</mn></mrow><mrow><mn>5</mn></mrow></mfrac><mo>&#x0003D;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">\frac{20}{5} = 4</annotation></semantics></math></span>; der Median ist die dritte von fünf, 3; die Spannweite ist <span class="math" data-tex="7 - 2 = 5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>7</mn><mo>&#x02212;</mo><mn>2</mn><mo>&#x0003D;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">7 - 2 = 5</annotation></semantics></math></span>. Der Modus ist hier auch 3, aber nach ihm wurde nicht gefragt.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="0,5" data-limit="" data-claim="09-task-spinner">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p>Ein Glücksrad ist in 8 gleiche Sektoren mit den Nummern 1, 2, …, 8 geteilt. Der Pfeil wird einmal gedreht. Finde die Wahrscheinlichkeit, dass er auf einem Sektor mit einer Primzahl stehen bleibt.</p>
+      <!-- fig:09-task-spinner -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 210" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Ein Glücksrad, in 8 gleiche Sektoren mit den Nummern 1 bis 8 geteilt. Der Pfeil in der Mitte bleibt zufällig auf einem der Sektoren stehen.">
+        <circle cx="160.0" cy="105.0" r="92.0" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-width="1.8"/>
+        <line x1="160.0" y1="105.0" x2="160.0" y2="13.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <text x="185.3" y="49.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-weight="700">1</text>
+        <line x1="160.0" y1="105.0" x2="225.1" y2="39.9" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <text x="221.0" y="84.7" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-weight="700">2</text>
+        <line x1="160.0" y1="105.0" x2="252.0" y2="105.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <text x="221.0" y="135.3" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-weight="700">3</text>
+        <line x1="160.0" y1="105.0" x2="225.1" y2="170.1" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <text x="185.3" y="171.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-weight="700">4</text>
+        <line x1="160.0" y1="105.0" x2="160.0" y2="197.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <text x="134.7" y="171.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-weight="700">5</text>
+        <line x1="160.0" y1="105.0" x2="94.9" y2="170.1" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <text x="99.0" y="135.3" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-weight="700">6</text>
+        <line x1="160.0" y1="105.0" x2="68.0" y2="105.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <text x="99.0" y="84.7" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-weight="700">7</text>
+        <line x1="160.0" y1="105.0" x2="94.9" y2="39.9" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <text x="134.7" y="49.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-weight="700">8</text>
+        <line x1="160.0" y1="105.0" x2="202.8" y2="115.3" stroke="currentColor" stroke-width="2.6" opacity="1.0" style="stroke:var(--acc)"/>
+        <polygon points="202.8,115.3 193.9,116.7 195.5,109.9" fill="currentColor" style="fill:var(--acc)"/>
+        <circle cx="160.0" cy="105.0" r="5" fill="currentColor" style="fill:var(--acc)"/>
+      </svg>
+      <p class="dim">Abbildung 35. Zur Aufgabe: ein Glücksrad aus acht gleichen Sektoren.</p>
+    </div>
+    <!-- /fig:09-task-spinner -->
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetz: <a href="#law-probability">klassische Wahrscheinlichkeit</a>.</p>
+      <div class="solution">Es gibt 8 gleich wahrscheinliche Ausgänge und 4 günstige: die Primzahlen 2, 3, 5, 7 (1 ist keine Primzahl). P = 4 : 8 = 0,5.</div>
+    </div>
+
+    <span class="step">Schritt 6 · Rückwärtszug</span>
+    <h2 id="reverse">7 · Nenne das Gesetz selbst <a class="anchor-link" href="#reverse">#</a></h2>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="10000" data-limit="">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p>Wie viele vierstellige Zahlenschlosscodes gibt es, wenn jede Ziffer des Codes von 0 bis 9 sein kann und Ziffern sich wiederholen dürfen?</p>
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetz: die <a href="#law-product">Produktregel</a>.</p>
+      <div class="solution">Jeder der vier Plätze hat unabhängig von den anderen 10 Möglichkeiten: <span class="math" data-tex="10^4 = 10000"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>10</mn><mn>4</mn></msup><mo>&#x0003D;</mo><mn>10000</mn></mrow><annotation encoding="application/x-tex">10^4 = 10000</annotation></semantics></math></span>. Keine der drei Formeln wird hier gebraucht: Wiederholung ist erlaubt.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="0,25" data-limit="limit-equal">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p>Eine Münze wird zweimal geworfen. Finde die Wahrscheinlichkeit, dass beide Male Kopf fällt.</p>
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetze: die <a href="#law-product">Produktregel</a> und die <a href="#law-probability">klassische Wahrscheinlichkeit</a>.</p>
+      <div class="solution">Es gibt <span class="math" data-tex="2 \cdot 2 = 4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>2</mn><mo>&#x000B7;</mo><mn>2</mn><mo>&#x0003D;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">2 \cdot 2 = 4</annotation></semantics></math></span> gleich wahrscheinliche Ausgänge (KK, KZ, ZK, ZZ), einer ist günstig: 0,25. Der blinde Zug «0, 1 oder 2 mal Kopf - drei Ergebnisse» ergibt 1/3, weil diese drei Ergebnisse nicht gleich wahrscheinlich sind.</div>
+    </div>
+
+    <h2 id="error">8 · Finde den Fehler in einer fremden Lösung <a class="anchor-link" href="#error">#</a></h2>
+    <p>Taras überlegt: «Bei zwei Würfeln kann die Summe von 2 bis 12 sein, also 11 Möglichkeiten. Also ist die Wahrscheinlichkeit, dass die Summe 7 ist, 1/11».</p>
+    <details>
+      <summary>Wo ist der Fehler?</summary>
+      <p>Diese 11 Summen sind nicht gleich wahrscheinlich (die <a href="#limit-equal">zweite Grenze</a>). Die gleich wahrscheinlichen Ausgänge sind die 36 Paare von Augenzahlen, und die Summe 7 entsteht in sechs davon: (1; 6), (2; 5), …, (6; 1). Die Antwort ist <span class="math" data-tex="\frac{6}{36} = \frac{1}{6}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>6</mn></mrow><mrow><mn>36</mn></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{6}{36} = \frac{1}{6}</annotation></semantics></math></span>.</p>
+    </details>
+    <!-- sources -->
+    <h2 id="external">9 · Links zu Aufgaben aus externen Quellen <a class="anchor-link" href="#external">#</a></h2>
+    <p class="dim">Echte Aufgaben von anderen Seiten zur NMT-Vorbereitung, die auf den Gesetzen dieses Blocks beruhen. Die Aufgabe liest du auf der Quellseite hinter dem Link; die Zuordnung zu den Gesetzen ist unsere. Quellen und Jahre werden in den Einstellungen ein- und ausgeschaltet (das Zahnrad oben).</p>
+    <p class="dim ext-off" hidden>Alle externen Quellen sind in den Einstellungen ausgeschaltet.</p>
+    <div class="ext-source" data-ext-source="nmt-ua" id="ext-nmt-ua">
+      <h3 class="ext-head">NMT auf der Seite ZNO-ONLINE (zno.osvita.ua, auf Ukrainisch)</h3>
+      <p class="dim ext-lead">Aufgaben der Hauptsitzungen des NMT 2024-2026 von der Seite ZNO-ONLINE, nach Jahren. Jedes Jahr wird einzeln eingeschaltet.</p>
+      <div class="ext" data-ext="nmt-ua:2026" id="ext-nmt-ua-2026">
+        <h4>NMT 2026</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q7" rel="noopener" target="_blank">Sitzung 1, Aufgabe 7</a> - Klassische Wahrscheinlichkeit</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q7" rel="noopener" target="_blank">Sitzung 2, Aufgabe 7</a> - Klassische Wahrscheinlichkeit</li>
+        </ul>
+      </div>
+      <div class="ext" data-ext="nmt-ua:2025" id="ext-nmt-ua-2025">
+        <h4>NMT 2025</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q20" rel="noopener" target="_blank">Sitzung 1, Aufgabe 20</a> (mit Abbildung) - Klassische Wahrscheinlichkeit</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q20" rel="noopener" target="_blank">Sitzung 2, Aufgabe 20</a> (mit Abbildung) - Klassische Wahrscheinlichkeit</li>
+        </ul>
+      </div>
+      <div class="ext" data-ext="nmt-ua:2024" id="ext-nmt-ua-2024">
+        <h4>NMT 2024</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q20" rel="noopener" target="_blank">Sitzung 1, Aufgabe 20</a> - Möglichkeiten, Ereignisse, Datenreihen</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q1" rel="noopener" target="_blank">Sitzung 2, Aufgabe 1</a> (mit Abbildung) - Klassische Wahrscheinlichkeit</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q20" rel="noopener" target="_blank">Sitzung 2, Aufgabe 20</a> - Permutationen, Variationen, Kombinationen</li>
+        </ul>
       </div>
     </div>
+    <!-- /sources -->
+
+    <h2 id="artifacts">Was du nach dieser Seite hast <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>Eine Regel und eine Frage.</strong> Die Produktregel ergibt alle Formeln der Kombinatorik, und die Frage «zählt die Reihenfolge» wählt zwischen ihnen. Wahrscheinlichkeit ist Zählen, aber nur unter gleich wahrscheinlichen Ausgängen.</p>
+    </div>
+    <!-- freq -->
+    <p class="dim law-freq" data-tasks="7">Häufigkeit auf dieser Seite, nicht im NMT: diese Seite hat 7 Aufgaben im Trainer, und sie stützen sich auf diese Gesetze: Klassische Wahrscheinlichkeit - 3, Permutationen, Variationen, Kombinationen - 2, Produktregel - 2, Kenngrößen einer Datenreihe - 1. In echten NMT-Varianten 2024-2026 wird dieser Block in 7 Aufgaben von 132 gebraucht: Klassische Wahrscheinlichkeit - 5, Möglichkeiten, Ereignisse, Datenreihen - 1, Permutationen, Variationen, Kombinationen - 1.</p>
+    <!-- /freq -->
+    <p>Du kannst diesen Block, wenn du:</p>
+    <ol>
+      <li>8 von 10 Aufgaben zum Zählen von Möglichkeiten und zur Wahrscheinlichkeit ohne Hinweis löst;</li>
+      <li>laut erklären kannst, warum man Kombinationen durch <span class="math" data-tex="k!"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>k</mi><mo>&#x00021;</mo></mrow><annotation encoding="application/x-tex">k!</annotation></semantics></math></span> teilt;</li>
+      <li>den Fehler in einer fremden Lösung findest, wie in der von Taras.</li>
+    </ol>
+  
+
+    <footer>
+      <nav class="pager" aria-label="Benachbarte Themen">
+        <p class="pager-next">Nächstes Thema: <a href="10.html">Figuren in der Ebene</a></p>
+        <p class="pager-prev">Vorheriges Thema: <a href="08.html">Ableitung und Integral</a></p>
+      </nav>
+      <p class="footer-note">Eine Website der AI Factory-Serie. Mit denselben Werkzeugen erstellt: einfaches HTML und CSS, Bash-Prüfung, Veröffentlichung über GitHub Pages.</p>
+    </footer>
   </main>
 
 </div>

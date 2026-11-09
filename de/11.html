@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Messen in der Ebene · nmt-math · ai|</title>
 <!-- meta: built by tools/build-meta.py - do not edit by hand -->
-<meta name="description" content="">
+<meta name="description" content="Die Figuren aus Block 10 bekommen Zahlen: Längen, Winkel, Flächen.">
 <link rel="canonical" href="https://y-kolyada.github.io/nmt-math/de/11.html">
 <link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/11.html">
 <link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/11.html">
@@ -16,12 +16,12 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="nmt-math">
 <meta property="og:title" content="Messen in der Ebene">
-<meta property="og:description" content="">
+<meta property="og:description" content="Die Figuren aus Block 10 bekommen Zahlen: Längen, Winkel, Flächen.">
 <meta property="og:url" content="https://y-kolyada.github.io/nmt-math/de/11.html">
 <meta property="og:locale" content="de_DE">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Messen in der Ebene","description":"","url":"https://y-kolyada.github.io/nmt-math/de/11.html","inLanguage":"de","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Messen in der Ebene","description":"Die Figuren aus Block 10 bekommen Zahlen: Längen, Winkel, Flächen.","url":"https://y-kolyada.github.io/nmt-math/de/11.html","inLanguage":"de","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
 <!-- /meta -->
 <link rel="stylesheet" href="../assets/style.css?v=3">
 <link rel="stylesheet" href="../assets/study.css?v=3">
@@ -96,16 +96,468 @@
 
   <main id="main">
     <h1>Messen in der Ebene</h1>
-    <p class="page-size" data-words="26">Wörter: 26</p>
+    <p class="page-size" data-words="2159">Wörter: 2159</p>
+    <p class="lead">Die Figuren aus Block 10 bekommen Zahlen: Längen, Winkel, Flächen. Fast jede Formel hier ist entweder der Satz des Pythagoras oder die Fläche eines Rechtecks, zerschnitten und anders zusammengesetzt.</p>
 
-    <div class="stub-card">
-      <h2>Die deutsche Fassung ist in Vorbereitung</h2>
-      <p>Die vollständige Fassung dieser Seite ist auf Ukrainisch veröffentlicht.</p>
-      <p>Vollständige Fassung öffnen:</p>
-      <div class="stub-actions">
-        <a href="../uk/11.html" class="btn-primary">Messen in der Ebene →</a>
+    <div class="box key" id="key-idea">
+      <h2>Hauptgedanke der Seite <a class="anchor-link" href="#key-idea" aria-label="Link zu diesem Block">#</a></h2>
+      <p>Der <span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Kosinussatz</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Kosinussatz</strong><button type="button" class="term-close" aria-label="Schließen">&times;</button></span><span class="term-desc">Der Satz des Pythagoras für jedes Dreieck, um den Winkel korrigiert.</span><span class="term-links"><a href="glossary.html#term-cosines">Zum Begriffswörterbuch <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span> ist Pythagoras für jedes Dreieck, und die Dreiecksfläche über den Sinus ist «die halbe Grundseite mal die Höhe», mit der Höhe über den Winkel geschrieben. Die Flächen von Figuren leitet man durch Zerschneiden aus der Fläche eines Rechtecks her. Und eine Regel, die Punkte rettet: die Fläche wächst mit dem Quadrat einer Länge, das Volumen (Block 13) mit dem Kubus. Der Block kann messen; Figuren in Koordinaten zu legen ist das Thema von Block 12.</p>
+    </div>
+
+    <span class="step">Schritt 0 · Einstieg</span>
+    <h2 id="hook">1 · Die Seite verdoppelt, also die Fläche verdoppelt? <a class="anchor-link" href="#hook">#</a></h2>
+    <p>Ein Quadrat mit der Seite 3 hat den Flächeninhalt 9. Die Seite wurde verdoppelt. Die übliche Antwort: «die Fläche hat sich auch verdoppelt, 18». Aber ein Quadrat mit der Seite 6 hat den Flächeninhalt 36, viermal so groß. Man kann es aus vier der ursprünglichen Quadrate legen. Die Fläche hängt von zwei Abmessungen ab, und jede davon hat sich verdoppelt.</p>
+    <!-- fig:11-scale -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 176" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Links ein Quadrat mit der Seite 3 und dem Flächeninhalt 9. Rechts ein Quadrat mit der Seite 6: es besteht aus vier solchen Quadraten, also ist sein Flächeninhalt 36, viermal so groß.">
+        <rect x="20.0" y="80.0" width="66.0" height="66.0" rx="0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.2"/>
+        <text x="53.0" y="118.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">S = 9</text>
+        <text x="53.0" y="164.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-style="italic">3</text>
+        <rect x="150.0" y="14.0" width="66.0" height="66.0" rx="0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="183.0" y="52.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">9</text>
+        <rect x="216.0" y="14.0" width="66.0" height="66.0" rx="0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.2"/>
+        <text x="249.0" y="52.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">9</text>
+        <rect x="150.0" y="80.0" width="66.0" height="66.0" rx="0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.2"/>
+        <text x="183.0" y="118.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">9</text>
+        <rect x="216.0" y="80.0" width="66.0" height="66.0" rx="0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.2"/>
+        <text x="249.0" y="118.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">9</text>
+        <text x="216.0" y="164.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-style="italic">6  ·  S = 36</text>
+        <line x1="96.0" y1="110.0" x2="140.0" y2="90.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <polygon points="140.0,90.0 135.3,95.1 133.0,90.2" fill="currentColor"/>
+      </svg>
+      <p class="dim">Abbildung 48. Die Seite verdoppelte sich, also wuchs die Fläche auf das Vierfache: 3² = 9, 6² = 36.</p>
+    </div>
+    <!-- /fig:11-scale -->
+
+    <span class="step">Schritt 1 · Begriff</span>
+    <h2 id="concept">2 · Länge, Winkel, Fläche <a class="anchor-link" href="#concept">#</a></h2>
+    <ul>
+      <li>Im <strong>rechtwinkligen Dreieck</strong>: der Sinus eines spitzen Winkels ist das Verhältnis der Gegenkathete zur Hypotenuse, der Kosinus das Verhältnis der Ankathete zur Hypotenuse, der Tangens das Verhältnis der Gegenkathete zur Ankathete.</li>
+      <li>Der <strong>Flächeninhalt</strong> sagt, wie viele Einheitsquadrate eine Figur fasst. Gleiche Figuren haben gleiche Flächen, und die Fläche einer Figur aus Teilen ist die Summe der Flächen der Teile.</li>
+      <li>Der <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Ähnlichkeitsfaktor</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Ähnlichkeitsfaktor</strong><button type="button" class="term-close" aria-label="Schließen">&times;</button></span><span class="term-desc">Die Zahl, um die die Längen einer Figur die entsprechenden Längen einer ähnlichen übertreffen.</span><span class="term-links"><a href="glossary.html#term-scale">Zum Begriffswörterbuch <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> k gibt an, wie viel Mal die Längen einer Figur die entsprechenden Längen einer anderen übertreffen.</li>
+    </ul>
+
+    <span class="step">Schritt 2 · Gesetz</span>
+    <h2 id="law">3 · Gesetze des Messens <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-pythagoras">
+      <p class="law-name">Satz des Pythagoras</p>
+      <div class="math-block" data-tex="c^2 = a^2 + b^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">c^2 = a^2 + b^2</annotation></semantics></math></div>
+      <p>c ist die Hypotenuse, a und b sind die Katheten eines rechtwinkligen Dreiecks.</p>
+    </div>
+    <div class="corollary" id="cor-tangents" data-law="law-pythagoras">
+      <p class="corollary-of">Folgerung aus dem Gesetz <a href="#law-pythagoras">«Satz des Pythagoras»</a></p>
+      <p class="corollary-name">Tangentenabschnitte und Tangentenviereck</p>
+      <div class="math-block" data-tex="PT_1 = PT_2;\qquad a + c = b + d"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><msub><mi>T</mi><mn>1</mn></msub><mo>&#x0003D;</mo><mi>P</mi><msub><mi>T</mi><mn>2</mn></msub><mi>;</mi><mspace width="2em" /><mi>a</mi><mo>&#x0002B;</mo><mi>c</mi><mo>&#x0003D;</mo><mi>b</mi><mo>&#x0002B;</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">PT_1 = PT_2;\qquad a + c = b + d</annotation></semantics></math></div>
+      <p>Die von einem Punkt an einen Kreis gelegten Tangentenabschnitte sind gleich lang. Deshalb sind in einem <span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">einem Kreis umbeschriebenen Viereck</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Tangentenviereck</strong><button type="button" class="term-close" aria-label="Schließen">&times;</button></span><span class="term-desc">Ein Viereck, dessen Seiten alle einen Kreis berühren.</span><span class="term-links"><a href="glossary.html#term-tangential">Zum Begriffswörterbuch <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span> die Summen gegenüberliegender Seiten gleich: a + c = b + d.</p>
+      <!-- fig:11-cor-tangents -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 200" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Ein Kreis mit dem Mittelpunkt O und ein Punkt P außerhalb. Von P gehen zwei Tangenten aus, die den Kreis in T₁ und T₂ berühren; beide Tangentenabschnitte sind mit t markiert. Die Radien OT₁ und OT₂ stehen senkrecht auf den Tangenten.">
+        <circle cx="90.0" cy="100.0" r="58.0" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-width="1.4"/>
+        <line x1="280.0" y1="100.0" x2="107.7" y2="44.8" stroke="currentColor" stroke-width="2.2" opacity="1.0" style="stroke:var(--acc)"/>
+        <line x1="90.0" y1="100.0" x2="107.7" y2="44.8" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3" opacity="1.0"/>
+        <circle cx="107.7" cy="44.8" r="3.5" fill="currentColor"/>
+        <polyline points="105.0,53.3 113.5,56.1 116.3,47.5" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="195.9" y="64.4" fill="currentColor" font-size="14" opacity="1.0" font-style="italic" style="fill:var(--acc)">t</text>
+        <line x1="280.0" y1="100.0" x2="107.7" y2="155.2" stroke="currentColor" stroke-width="2.2" opacity="1.0" style="stroke:var(--acc)"/>
+        <line x1="90.0" y1="100.0" x2="107.7" y2="155.2" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3" opacity="1.0"/>
+        <circle cx="107.7" cy="155.2" r="3.5" fill="currentColor"/>
+        <polyline points="105.0,146.7 113.5,143.9 116.3,152.5" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="195.9" y="147.6" fill="currentColor" font-size="14" opacity="1.0" font-style="italic" style="fill:var(--acc)">t</text>
+        <circle cx="90.0" cy="100.0" r="3" fill="currentColor"/>
+        <circle cx="280.0" cy="100.0" r="3.5" fill="currentColor"/>
+        <text x="82.0" y="105.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">O</text>
+        <text x="284.0" y="120.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">P</text>
+        <text x="105.7" y="34.8" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">T₁</text>
+        <text x="105.7" y="177.2" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">T₂</text>
+      </svg>
+      <p class="dim">Abbildung 49. Folgerung: die von einem Punkt an einen Kreis gelegten Tangentenabschnitte sind gleich lang.</p>
+    </div>
+    <!-- /fig:11-cor-tangents -->
+      <p><strong>Warum es so ist.</strong> Der Radius zum Berührpunkt steht senkrecht auf der Tangente, also ergibt der Satz des Pythagoras für einen Punkt P und den Mittelpunkt O bei beiden Tangenten PT² = PO² − r²: die Abschnitte sind gleich. Jede Seite eines umbeschriebenen Vierecks besteht aus zwei solchen Abschnitten von ihren Enden, und in der Summe gegenüberliegender Seiten kommt jeder der vier Abschnitte genau einmal vor. Der Mittelpunkt eines einem Trapez einbeschriebenen Kreises ist von beiden Grundseiten r entfernt, also liegt er auf der Mittellinie, und die Höhe des Trapezes ist 2r.</p>
+    </div>
+    <div class="law" id="law-cosines">
+      <p class="law-name">Kosinussatz und Sinussatz</p>
+      <div class="math-block" data-tex="c^2 = a^2 + b^2 - 2ab\cos C,\qquad \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi><mi>C</mi><mo>&#x0002C;</mo><mspace width="2em" /><mfrac><mrow><mi>a</mi></mrow><mrow><mi>sin</mi><mi>A</mi></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mi>b</mi></mrow><mrow><mi>sin</mi><mi>B</mi></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mi>c</mi></mrow><mrow><mi>sin</mi><mi>C</mi></mrow></mfrac><mo>&#x0003D;</mo><mn>2</mn><mi>R</mi></mrow><annotation encoding="application/x-tex">c^2 = a^2 + b^2 - 2ab\cos C,\qquad \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R</annotation></semantics></math></div>
+    </div>
+    <div class="corollary" id="cor-chords" data-law="law-cosines">
+      <p class="corollary-of">Folgerung aus dem Gesetz <a href="#law-cosines">«Kosinussatz und Sinussatz»</a></p>
+      <p class="corollary-name">Sehnen und Bögen</p>
+      <div class="math-block" data-tex="AB = 2R\sin C"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mi>B</mi><mo>&#x0003D;</mo><mn>2</mn><mi>R</mi><mi>sin</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">AB = 2R\sin C</annotation></semantics></math></div>
+      <p>Eine Sehne ist gleich dem doppelten Radius mal dem Sinus des Umfangswinkels über ihr. Gleiche Sehnen spannen gleiche Bögen; die längste Sehne ist ein Durchmesser, und er teilt den Kreis in zwei Hälften; eine Sehne kann kürzer als der Radius sein.</p>
+      <!-- fig:11-cor-chords -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 228" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Ein Kreis mit dem Mittelpunkt O und dem Radius R. Die Sehne AB ist hervorgehoben, der Umfangswinkel ACB über ihr ist mit γ markiert. Gestrichelt: ein Durchmesser, die längste Sehne. Beschriftung: AB = 2R · sin γ.">
+        <circle cx="112.0" cy="120.0" r="88.0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="1.4"/>
+        <line x1="24.0" y1="120.0" x2="200.0" y2="120.0" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4" opacity="1.0"/>
+        <line x1="39.9" y1="170.5" x2="184.1" y2="170.5" stroke="currentColor" stroke-width="2.4" opacity="1.0" style="stroke:var(--acc)"/>
+        <line x1="104.3" y1="32.3" x2="39.9" y2="170.5" stroke="currentColor" stroke-width="1.4" opacity="1.0"/>
+        <line x1="104.3" y1="32.3" x2="184.1" y2="170.5" stroke="currentColor" stroke-width="1.4" opacity="1.0"/>
+        <line x1="112.0" y1="120.0" x2="184.1" y2="170.5" stroke="currentColor" stroke-width="1.1" opacity="0.7"/>
+        <circle cx="112.0" cy="120.0" r="3" fill="currentColor"/>
+        <text x="108.0" y="113.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">O</text>
+        <text x="156.0" y="143.2" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">R</text>
+        <text x="28.4" y="183.5" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">A</text>
+        <text x="195.6" y="183.5" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">B</text>
+        <text x="103.1" y="23.4" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">C</text>
+        <text x="104.3" y="62.3" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" style="fill:var(--acc)">γ</text>
+        <text x="206.0" y="70.0" fill="currentColor" font-size="13" opacity="1.0" style="fill:var(--acc)">AB = 2R · sin γ</text>
+      </svg>
+      <p class="dim">Abbildung 50. Folgerung: eine Sehne ist gleich dem doppelten Radius mal dem Sinus des Umfangswinkels.</p>
+    </div>
+    <!-- /fig:11-cor-chords -->
+      <p><strong>Warum es so ist.</strong> Das ist der Sinussatz für ein einem Kreis einbeschriebenes Dreieck ABC: AB : sin C = 2R. Gleiche Sehnen bedeuten gleiche Sinus der Umfangswinkel, und das bedeutet gleiche Bögen. Ein Sinus ist nicht größer als 1, also ist eine Sehne nicht länger als 2R, und nur ein Durchmesser hat die Länge 2R. Ist sin C < 1/2, ist die Sehne kürzer als R.</p>
+    </div>
+    <div class="law" id="law-areas">
+      <p class="law-name">Flächen von Dreieck, Trapez und Kreis</p>
+      <div class="math-block" data-tex="S_\triangle = \frac{1}{2}ah = \frac{1}{2}ab\sin C,\qquad S_{\text{Trapez}} = \frac{a + b}{2}\,h,\qquad S_{\text{Kreisscheibe}} = \pi r^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>S</mi><mi>&#x025B3;</mi></msub><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>a</mi><mi>h</mi><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>a</mi><mi>b</mi><mi>sin</mi><mi>C</mi><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>S</mi><mrow><mtext>Trapez</mtext></mrow></msub><mo>&#x0003D;</mo><mfrac><mrow><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi></mrow><mrow><mn>2</mn></mrow></mfrac><mspace width="0.167em" /><mi>h</mi><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>S</mi><mrow><mtext>Kreisscheibe</mtext></mrow></msub><mo>&#x0003D;</mo><mi>&#x003C0;</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">S_\triangle = \frac{1}{2}ah = \frac{1}{2}ab\sin C,\qquad S_{\text{Trapez}} = \frac{a + b}{2}\,h,\qquad S_{\text{Kreisscheibe}} = \pi r^2</annotation></semantics></math></div>
+      <p>Der Kreisumfang ist <span class="math" data-tex="C = 2\pi r"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>C</mi><mo>&#x0003D;</mo><mn>2</mn><mi>&#x003C0;</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">C = 2\pi r</annotation></semantics></math></span>; ein Parallelogramm hat <span class="math" data-tex="S = ah"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>S</mi><mo>&#x0003D;</mo><mi>a</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">S = ah</annotation></semantics></math></span>.</p>
+    </div>
+    <div class="law" id="law-scale">
+      <p class="law-name">Flächen ähnlicher Figuren</p>
+      <div class="math-block" data-tex="\frac{S_1}{S_2} = k^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><msub><mi>S</mi><mn>1</mn></msub></mrow><mrow><msub><mi>S</mi><mn>2</mn></msub></mrow></mfrac><mo>&#x0003D;</mo><msup><mi>k</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{S_1}{S_2} = k^2</annotation></semantics></math></div>
+    </div>
+
+    <span class="step">Schritt 3 · Warum es so ist</span>
+    <h2 id="why">4 · Woher die Formeln kommen <a class="anchor-link" href="#why">#</a></h2>
+    <p><strong>Pythagoras.</strong> Ein Quadrat mit der Seite <span class="math" data-tex="a + b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a + b</annotation></semantics></math></span> lässt sich mit vier gleichen rechtwinkligen Dreiecken und einem Quadrat über der Hypotenuse in der Mitte füllen. Fläche: <span class="math" data-tex="(a + b)^2 = 4 \cdot \frac{ab}{2} + c^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><mn>4</mn><mo>&#x000B7;</mo><mfrac><mrow><mi>a</mi><mi>b</mi></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x0002B;</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(a + b)^2 = 4 \cdot \frac{ab}{2} + c^2</annotation></semantics></math></span>. Löse das Quadrat der Summe auf (Block 3), und es bleibt <span class="math" data-tex="a^2 + b^2 = c^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">a^2 + b^2 = c^2</annotation></semantics></math></span>.</p>
+    <!-- fig:11-pythagoras -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 236" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Ein Quadrat mit der Seite a + b, in dessen Ecken vier gleiche rechtwinklige Dreiecke mit den Katheten a und b stehen. Innen bleibt ein Quadrat mit der Seite c, der Hypotenuse. Fläche: (a + b)² = 4 · ab/2 + c², also a² + b² = c².">
+        <rect x="70.0" y="18.0" width="180.0" height="180.0" rx="0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.2"/>
+        <polygon points="190.0,18.0 250.0,138.0 130.0,198.0 70.0,78.0" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.8" opacity="1.0" style="stroke:var(--acc);fill:var(--acc)"/>
+        <text x="160.0" y="114.0" fill="currentColor" font-size="18" opacity="1.0" text-anchor="middle" font-style="italic" font-weight="700">c²</text>
+        <text x="130.0" y="14.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">a</text>
+        <text x="220.0" y="14.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">b</text>
+        <text x="62.0" y="53.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">b</text>
+        <text x="62.0" y="143.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">a</text>
+        <text x="224.0" y="74.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic" style="fill:var(--acc)">c</text>
+      </svg>
+      <p class="dim">Abbildung 51. Ein Beweis des Satzes des Pythagoras über die Fläche: vier Dreiecke und ein Quadrat c².</p>
+    </div>
+    <!-- /fig:11-pythagoras -->
+    <p><strong>Kosinussatz.</strong> Bei <span class="math" data-tex="C = 90^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>C</mi><mo>&#x0003D;</mo><msup><mn>90</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">C = 90^\circ</annotation></semantics></math></span> ist der Kosinus null, und die Formel wird zu Pythagoras. Der Summand <span class="math" data-tex="-2ab\cos C"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02212;</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">-2ab\cos C</annotation></semantics></math></span> ist eine Korrektur dafür, wie weit der Winkel von einem rechten abweicht.</p>
+    <p><strong>Fläche über den Sinus.</strong> Die Höhe auf die Seite a ist <span class="math" data-tex="b\sin C"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>b</mi><mi>sin</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">b\sin C</annotation></semantics></math></span> (aus einem rechtwinkligen Dreieck), also <span class="math" data-tex="\frac{1}{2}ah = \frac{1}{2}ab\sin C"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>a</mi><mi>h</mi><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>a</mi><mi>b</mi><mi>sin</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">\frac{1}{2}ah = \frac{1}{2}ab\sin C</annotation></semantics></math></span>. Ein Trapez sind zwei Dreiecke, ein Kreis ist ein Vieleck mit sehr vielen Seiten.</p>
+    <p><strong>Ähnlichkeit.</strong> Jedes Einheitsquadrat in einer Figur wird in beiden Richtungen k-mal gestreckt, also in der Fläche <span class="math" data-tex="k^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>k</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">k^2</annotation></semantics></math></span>-mal.</p>
+
+    <span class="step">Schritt 4 · Grenzen</span>
+    <h2 id="limits">5 · Wo die Gesetze brechen <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-right">
+      <p><strong>Pythagoras gilt nur für ein rechtwinkliges Dreieck.</strong> Für die übrigen gilt der Kosinussatz.</p>
+    </div>
+    <div class="limit" id="limit-obtuse">
+      <p><strong>Der Kosinus eines stumpfen Winkels ist negativ.</strong> Dann wird <span class="math" data-tex="-2ab\cos C"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02212;</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">-2ab\cos C</annotation></semantics></math></span> positiv, und die Seite gegenüber dem stumpfen Winkel ist länger, als Pythagoras ergäbe.</p>
+    </div>
+    <div class="limit" id="limit-square">
+      <p><strong>Die Fläche wächst mit dem Quadrat.</strong> Alle Längen k-mal vergrößern heißt, die Fläche <span class="math" data-tex="k^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>k</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">k^2</annotation></semantics></math></span>-mal zu vergrößern, nicht k-mal.</p>
+    </div>
+
+    <span class="step">Schritt 5 · Übung</span>
+    <h2 id="apply">6 · Aufgaben im NMT-Format <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="C" data-limit="limit-right">
+      <p class="task-kind">Eine Antwort aus fünf · 1 Punkt</p>
+      <p>Die Katheten eines rechtwinkligen Dreiecks sind 6 cm und 8 cm. Finde die Hypotenuse.</p>
+      <div class="opts">
+        <button type="button" data-opt="A">A · 7 cm</button>
+        <button type="button" data-opt="B">B · 14 cm</button>
+        <button type="button" data-opt="C">C · 10 cm</button>
+        <button type="button" data-opt="D">D · √28 cm</button>
+        <button type="button" data-opt="E">E · 48 cm</button>
+      </div>
+      <p class="law-ref">Gesetz: <a href="#law-pythagoras">Satz des Pythagoras</a>.</p>
+      <div class="solution"><span class="math" data-tex="\sqrt{36 + 64} = 10"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msqrt><mrow><mn>36</mn><mo>&#x0002B;</mo><mn>64</mn></mrow></msqrt><mo>&#x0003D;</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">\sqrt{36 + 64} = 10</annotation></semantics></math></span>. 14 ist die Summe der Katheten, √28 die Differenz der Quadrate.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="15" data-limit="">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p>Zwei Seiten eines Dreiecks sind 6 cm und 10 cm, der Winkel zwischen ihnen beträgt 30°. Finde den Flächeninhalt des Dreiecks (in cm²).</p>
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetz: <a href="#law-areas">die Dreiecksfläche über den Sinus</a>.</p>
+      <div class="solution"><span class="math" data-tex="\frac{1}{2} \cdot 6 \cdot 10 \cdot \sin 30^\circ = 30 \cdot \frac{1}{2} = 15"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x000B7;</mo><mn>6</mn><mo>&#x000B7;</mo><mn>10</mn><mo>&#x000B7;</mo><mi>sin</mi><msup><mn>30</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><mn>30</mn><mo>&#x000B7;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x0003D;</mo><mn>15</mn></mrow><annotation encoding="application/x-tex">\frac{1}{2} \cdot 6 \cdot 10 \cdot \sin 30^\circ = 30 \cdot \frac{1}{2} = 15</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="35" data-limit="">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p>Die Grundseiten eines Trapezes sind 4 cm und 10 cm, die Höhe ist 5 cm. Finde den Flächeninhalt des Trapezes (in cm²).</p>
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetz: <a href="#law-areas">die Fläche eines Trapezes</a>.</p>
+      <div class="solution"><span class="math" data-tex="\frac{4 + 10}{2} \cdot 5 = 35"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>4</mn><mo>&#x0002B;</mo><mn>10</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x000B7;</mo><mn>5</mn><mo>&#x0003D;</mo><mn>35</mn></mrow><annotation encoding="application/x-tex">\frac{4 + 10}{2} \cdot 5 = 35</annotation></semantics></math></span>: die Mittellinie mal die Höhe.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="C" data-limit="limit-obtuse">
+      <p class="task-kind">Eine Antwort aus fünf · 1 Punkt</p>
+      <p>Zwei Seiten eines Dreiecks sind 3 und 5, der Winkel zwischen ihnen beträgt 120°. Finde die dritte Seite.</p>
+      <div class="opts">
+        <button type="button" data-opt="A">A · 4</button>
+        <button type="button" data-opt="B">B · √19</button>
+        <button type="button" data-opt="C">C · 7</button>
+        <button type="button" data-opt="D">D · 8</button>
+        <button type="button" data-opt="E">E · √34</button>
+      </div>
+      <p class="law-ref">Gesetz: der <a href="#law-cosines">Kosinussatz</a>.</p>
+      <div class="solution"><span class="math" data-tex="c^2 = 9 + 25 - 2 \cdot 15 \cdot \left(-\frac{1}{2}\right) = 49"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mn>9</mn><mo>&#x0002B;</mo><mn>25</mn><mo>&#x02212;</mo><mn>2</mn><mo>&#x000B7;</mo><mn>15</mn><mo>&#x000B7;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mo>&#x02212;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mo>&#x0003D;</mo><mn>49</mn></mrow><annotation encoding="application/x-tex">c^2 = 9 + 25 - 2 \cdot 15 \cdot \left(-\frac{1}{2}\right) = 49</annotation></semantics></math></span>, c = 7. √19 - der Kosinus wurde mit «+» genommen, √34 - Pythagoras für ein stumpfwinkliges Dreieck.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="12" data-limit="" data-claim="11-task-height">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p>Im rechtwinkligen Dreieck ABC ist der Winkel C ein rechter, die Katheten sind AC = 15 cm und BC = 20 cm. Finde die Höhe CH auf die Hypotenuse (in cm).</p>
+      <!-- fig:11-task-height -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 200" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Das rechtwinklige Dreieck ABC mit dem rechten Winkel bei C: die Kathete AC = 15 ist senkrecht, die Kathete BC = 20 waagerecht. Von der Ecke C ist die Höhe CH, mit h markiert, auf die Hypotenuse AB gezogen.">
+        <polygon points="70.0,35.0 250.0,170.0 70.0,170.0" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="70.0" y1="170.0" x2="134.8" y2="83.6" stroke="currentColor" stroke-width="1.8" stroke-dasharray="5 3" opacity="1.0" style="stroke:var(--acc)"/>
+        <polyline points="70.0,158.0 82.0,158.0 82.0,170.0" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <text x="62.0" y="39.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">A</text>
+        <text x="256.0" y="175.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">B</text>
+        <text x="62.0" y="184.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">C</text>
+        <text x="140.8" y="77.6" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">H</text>
+        <text x="60.0" y="107.5" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end">15</text>
+        <text x="160.0" y="188.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">20</text>
+        <text x="110.4" y="140.8" fill="currentColor" font-size="14" opacity="1.0" font-style="italic" style="fill:var(--acc)">h</text>
+      </svg>
+      <p class="dim">Abbildung 52. Zur Aufgabe: die Höhe CH eines rechtwinkligen Dreiecks auf die Hypotenuse.</p>
+    </div>
+    <!-- /fig:11-task-height -->
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetze: <a href="#law-pythagoras">Satz des Pythagoras</a> und die <a href="#law-areas">Dreiecksfläche</a>, auf zwei Arten geschrieben.</p>
+      <div class="solution">Die Hypotenuse ist <span class="math" data-tex="AB = \sqrt{15^2 + 20^2} = 25"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>A</mi><mi>B</mi><mo>&#x0003D;</mo><msqrt><mrow><msup><mn>15</mn><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mn>20</mn><mn>2</mn></msup></mrow></msqrt><mo>&#x0003D;</mo><mn>25</mn></mrow><annotation encoding="application/x-tex">AB = \sqrt{15^2 + 20^2} = 25</annotation></semantics></math></span>. Die Fläche ist sowohl das halbe Produkt der Katheten als auch das halbe Produkt aus Hypotenuse und Höhe: <span class="math" data-tex="15 \cdot 20 = 25 \cdot h"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>15</mn><mo>&#x000B7;</mo><mn>20</mn><mo>&#x0003D;</mo><mn>25</mn><mo>&#x000B7;</mo><mi>h</mi></mrow><annotation encoding="application/x-tex">15 \cdot 20 = 25 \cdot h</annotation></semantics></math></span>, daher h = 12.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="8" data-limit="" data-claim="11-task-trapezoid">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p>Die Grundseiten eines gleichschenkligen Trapezes sind 4 cm und 16 cm, der Schenkel ist 10 cm. Finde die Höhe des Trapezes (in cm).</p>
+      <!-- fig:11-task-trapezoid -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 180" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Das gleichschenklige Trapez ABCD: untere Grundseite AD = 16, obere Grundseite BC = 4, Schenkel AB = 10. Von der Ecke B ist die Höhe h auf die Grundseite AD gefällt.">
+        <polygon points="40.0,150.0 130.0,30.0 190.0,30.0 280.0,150.0" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="130.0" y1="30.0" x2="130.0" y2="150.0" stroke="currentColor" stroke-width="1.8" stroke-dasharray="5 3" opacity="1.0" style="stroke:var(--acc)"/>
+        <polyline points="130.0,140.0 140.0,140.0 140.0,150.0" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <text x="34.0" y="155.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">A</text>
+        <text x="124.0" y="26.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">B</text>
+        <text x="196.0" y="26.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">C</text>
+        <text x="286.0" y="155.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">D</text>
+        <text x="190.0" y="168.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">16</text>
+        <text x="160.0" y="22.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">4</text>
+        <text x="77.0" y="90.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end">10</text>
+        <text x="138.0" y="95.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic" style="fill:var(--acc)">h</text>
+      </svg>
+      <p class="dim">Abbildung 53. Zur Aufgabe: die Höhe eines gleichschenkligen Trapezes, von einer Ecke der kürzeren Grundseite gefällt.</p>
+    </div>
+    <!-- /fig:11-task-trapezoid -->
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetz: <a href="#law-pythagoras">Satz des Pythagoras</a> im von der Höhe abgeschnittenen Dreieck.</p>
+      <div class="solution">Die Höhe schneidet von der längeren Grundseite ein Stück (16 − 4) : 2 = 6 ab, dann <span class="math" data-tex="h = \sqrt{10^2 - 6^2} = 8"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>h</mi><mo>&#x0003D;</mo><msqrt><mrow><msup><mn>10</mn><mn>2</mn></msup><mo>&#x02212;</mo><msup><mn>6</mn><mn>2</mn></msup></mrow></msqrt><mo>&#x0003D;</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">h = \sqrt{10^2 - 6^2} = 8</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="10" data-limit="" data-claim="11-task-tangential">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p>Dem Viereck ABCD ist ein Kreis einbeschrieben. AB = 7 cm, BC = 9 cm, CD = 12 cm. Finde AD (in cm).</p>
+      <!-- fig:11-task-tangential -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 230" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Das Viereck ABCD ist einem Kreis umbeschrieben: jede Seite berührt den Kreis. Die Seiten AB = 7, BC = 9, CD = 12 sind beschriftet; die Seite AD ist mit einem Fragezeichen markiert.">
+        <circle cx="147.9" cy="126.7" r="63.3" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1.4" style="stroke:var(--acc)"/>
+        <polygon points="78.8,158.2 162.0,210.0 241.2,112.1 100.7,20.0" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <text x="66.1" y="169.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">A</text>
+        <text x="164.3" y="228.8" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">B</text>
+        <text x="255.0" y="114.9" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">C</text>
+        <text x="95.1" y="12.2" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">D</text>
+        <text x="114.4" y="201.7" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">7</text>
+        <text x="213.4" y="173.6" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">9</text>
+        <text x="175.9" y="57.9" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">12</text>
+        <text x="78.0" y="86.5" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-weight="700">?</text>
+      </svg>
+      <p class="dim">Abbildung 54. Zur Aufgabe: ein einem Kreis umbeschriebenes Viereck.</p>
+    </div>
+    <!-- /fig:11-task-tangential -->
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Folgerung: <a href="#cor-tangents">Tangentenabschnitte und Tangentenviereck</a>.</p>
+      <div class="solution">In einem Tangentenviereck ist AB + CD = BC + AD, also AD = 7 + 12 − 9 = 10. Die Summen gegenüberliegender Seiten sind gleich, weil jede aus denselben vier Tangentenabschnitten besteht.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="13" data-limit="" data-claim="11-read-rect">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p class="task-class"><strong>Daten in der Abbildung · ablesen und anwenden.</strong> Die Zahlen für die Lösung stehen nur in der Abbildung: schreib sie zuerst heraus, dann löse.</p>
+      <p>Finde die Länge der Diagonale AC des abgebildeten Rechtecks ABCD (in cm).</p>
+      <!-- fig:11-read-rect -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 186" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Das Rechteck ABCD. Auf der Abbildung sind die Seiten beschriftet: AD = 5 cm, AB = 12 cm. Die Diagonale AC ist gestrichelt und mit einem Fragezeichen markiert.">
+        <polygon points="50.0,150.0 290.0,150.0 290.0,50.0 50.0,50.0" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="50.0" y1="150.0" x2="290.0" y2="50.0" stroke="currentColor" stroke-width="1.6" stroke-dasharray="6 4" opacity="1.0" style="stroke:var(--acc)"/>
+        <text x="164.0" y="92.0" fill="currentColor" font-size="15" opacity="1.0" font-weight="700" style="fill:var(--acc)">?</text>
+        <text x="170.0" y="170.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">12 cm</text>
+        <text x="42.0" y="105.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end">5 cm</text>
+        <text x="44.0" y="166.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">A</text>
+        <text x="296.0" y="166.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">B</text>
+        <text x="296.0" y="46.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">C</text>
+        <text x="44.0" y="46.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">D</text>
+      </svg>
+      <p class="dim">Abbildung 55. Zur Aufgabe: ein Rechteck mit beschrifteten Seiten und einer Diagonalen.</p>
+    </div>
+    <!-- /fig:11-read-rect -->
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetz: <a href="#law-pythagoras">Satz des Pythagoras</a>.</p>
+      <div class="solution">Aus der Abbildung: AB = 12, AD = 5. Die Diagonale AC ist die Hypotenuse des rechtwinkligen Dreiecks ABC: <span class="math" data-tex="AC = \sqrt{12^2 + 5^2} = 13"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>A</mi><mi>C</mi><mo>&#x0003D;</mo><msqrt><mrow><msup><mn>12</mn><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mn>5</mn><mn>2</mn></msup></mrow></msqrt><mo>&#x0003D;</mo><mn>13</mn></mrow><annotation encoding="application/x-tex">AC = \sqrt{12^2 + 5^2} = 13</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="B" data-limit="" data-claim="11-read-trap">
+      <p class="task-kind">Eine Antwort aus fünf · 1 Punkt</p>
+      <p class="task-class"><strong>Daten in der Abbildung · das Nötige auswählen.</strong> Die Zahlen stehen nur in der Abbildung, und darunter ist eine überflüssige oder eine Falle: der Gitterschritt, eine Skala, die nicht bei null beginnt. Schreib nur heraus, was die Lösung braucht.</p>
+      <p>Finde den Flächeninhalt des abgebildeten Trapezes ABCD (in cm²).</p>
+      <!-- fig:11-read-trap -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 196" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Das gleichschenklige Trapez ABCD. Auf der Abbildung sind beschriftet: obere Grundseite BC = 6 cm, untere Grundseite AD = 12 cm, Höhe BH = 4 cm (gestrichelt), Schenkel CD = 5 cm.">
+        <polygon points="40.0,160.0 100.0,80.0 220.0,80.0 280.0,160.0" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="100.0" y1="80.0" x2="100.0" y2="160.0" stroke="currentColor" stroke-width="1.4" stroke-dasharray="5 4" opacity="1.0" style="stroke:var(--acc)"/>
+        <polyline points="100.0,151.0 109.0,151.0 109.0,160.0" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="160.0" y="72.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">6 cm</text>
+        <text x="160.0" y="180.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">12 cm</text>
+        <text x="106.0" y="125.0" fill="currentColor" font-size="13" opacity="1.0" style="fill:var(--acc)">4 cm</text>
+        <text x="260.0" y="122.0" fill="currentColor" font-size="13" opacity="1.0">5 cm</text>
+        <text x="34.0" y="176.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">A</text>
+        <text x="94.0" y="76.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">B</text>
+        <text x="226.0" y="76.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">C</text>
+        <text x="286.0" y="176.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">D</text>
+        <text x="100.0" y="178.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">H</text>
+      </svg>
+      <p class="dim">Abbildung 56. Zur Aufgabe: ein Trapez mit vier beschrifteten Längen.</p>
+    </div>
+    <!-- /fig:11-read-trap -->
+      <div class="opts">
+        <button type="button" data-opt="A">A · 18</button>
+        <button type="button" data-opt="B">B · 36</button>
+        <button type="button" data-opt="C">C · 45</button>
+        <button type="button" data-opt="D">D · 72</button>
+        <button type="button" data-opt="E">E · 90</button>
+      </div>
+      <p class="law-ref">Gesetz: <a href="#law-areas">die Fläche eines Trapezes</a>.</p>
+      <div class="solution">Für die Fläche braucht man die Grundseiten und die Höhe: 6, 12 und 4. <span class="math" data-tex="S = \frac{6 + 12}{2} \cdot 4 = 36"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>S</mi><mo>&#x0003D;</mo><mfrac><mrow><mn>6</mn><mo>&#x0002B;</mo><mn>12</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x000B7;</mo><mn>4</mn><mo>&#x0003D;</mo><mn>36</mn></mrow><annotation encoding="application/x-tex">S = \frac{6 + 12}{2} \cdot 4 = 36</annotation></semantics></math></span>. Der Schenkel 5 wird hier nicht gebraucht: wer ihn statt der Höhe einsetzt, erhält 45; wer das Teilen durch 2 vergisst, 72.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="52" data-limit="" data-claim="11-read-rhombus">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p class="task-class"><strong>Daten in der Abbildung · ablesen und verknüpfen.</strong> Die Zahlen stehen nur in der Abbildung, und das Abgelesene geht in zwei Gesetze ein: schreib die Zahlen heraus, dann nenne beide Gesetze.</p>
+      <p>Finde den Umfang der abgebildeten Raute ABCD (in cm).</p>
+      <!-- fig:11-read-rhombus -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 186" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Die Raute ABCD, deren Diagonalen sich im Punkt O im rechten Winkel schneiden. Auf der Abbildung sind die Diagonalen beschriftet: AC = 24 cm, BD = 10 cm.">
+        <polygon points="40.0,92.0 160.0,27.0 280.0,92.0 160.0,157.0" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="40.0" y1="92.0" x2="280.0" y2="92.0" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="1.0" style="stroke:var(--acc)"/>
+        <line x1="160.0" y1="27.0" x2="160.0" y2="157.0" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="1.0" style="stroke:var(--acc)"/>
+        <polyline points="160.0,83.0 169.0,83.0 169.0,92.0" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="100.0" y="110.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" style="fill:var(--acc)">AC = 24 cm</text>
+        <text x="168.0" y="57.5" fill="currentColor" font-size="13" opacity="1.0" style="fill:var(--acc)">BD = 10 cm</text>
+        <text x="32.0" y="97.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">A</text>
+        <text x="160.0" y="19.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">B</text>
+        <text x="288.0" y="97.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">C</text>
+        <text x="160.0" y="175.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">D</text>
+        <text x="154.0" y="86.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">O</text>
+      </svg>
+      <p class="dim">Abbildung 57. Zur Aufgabe: eine Raute und ihre zwei Diagonalen.</p>
+    </div>
+    <!-- /fig:11-read-rhombus -->
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetz: <a href="#law-pythagoras">Satz des Pythagoras</a> zusammen mit der Eigenschaft der Diagonalen einer Raute.</p>
+      <div class="solution">Aus der Abbildung: die Diagonalen sind 24 und 10. Die Diagonalen einer Raute schneiden sich im rechten Winkel und halbieren sich, also AO = 12, BO = 5. Die Seite ist die Hypotenuse des Dreiecks AOB: <span class="math" data-tex="AB = \sqrt{12^2 + 5^2} = 13"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>A</mi><mi>B</mi><mo>&#x0003D;</mo><msqrt><mrow><msup><mn>12</mn><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mn>5</mn><mn>2</mn></msup></mrow></msqrt><mo>&#x0003D;</mo><mn>13</mn></mrow><annotation encoding="application/x-tex">AB = \sqrt{12^2 + 5^2} = 13</annotation></semantics></math></span>, der Umfang ist 4 · 13 = 52.</div>
+    </div>
+
+    <span class="step">Schritt 6 · Rückwärtszug</span>
+    <h2 id="reverse">7 · Nenne das Gesetz selbst <a class="anchor-link" href="#reverse">#</a></h2>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="3" data-limit="limit-square">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p>Der Flächeninhalt eines Quadrats wurde 9-mal größer. Wie viel Mal wurde seine Seite größer?</p>
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetz: <a href="#law-scale">Flächen ähnlicher Figuren</a>.</p>
+      <div class="solution"><span class="math" data-tex="k^2 = 9"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">k^2 = 9</annotation></semantics></math></span>, k = 3.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="5" data-limit="">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p>Die Hypotenuse eines rechtwinkligen Dreiecks ist 10 cm, einer der spitzen Winkel beträgt 30°. Finde die diesem Winkel gegenüberliegende Kathete (in cm).</p>
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Begriff: <a href="#concept">der Sinus eines spitzen Winkels</a>.</p>
+      <div class="solution"><span class="math" data-tex="10 \cdot \sin 30^\circ = 5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>10</mn><mo>&#x000B7;</mo><mi>sin</mi><msup><mn>30</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">10 \cdot \sin 30^\circ = 5</annotation></semantics></math></span>. Die bekannte Tatsache «die Kathete gegenüber 30° ist die halbe Hypotenuse» ist dieselbe Definition des Sinus.</div>
+    </div>
+
+    <h2 id="error">8 · Finde den Fehler in einer fremden Lösung <a class="anchor-link" href="#error">#</a></h2>
+    <p>Natalia schreibt: «Der Radius eines Kreises wurde verdreifacht, also hat sich die Kreisfläche verdreifacht».</p>
+    <details>
+      <summary>Wo ist der Fehler?</summary>
+      <p><span class="math" data-tex="\pi (3r)^2 = 9\pi r^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>&#x003C0;</mi><mo stretchy="false">&#x00028;</mo><mn>3</mn><mi>r</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><mn>9</mn><mi>&#x003C0;</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\pi (3r)^2 = 9\pi r^2</annotation></semantics></math></span>: die Fläche wurde 9-mal größer. Die Fläche hängt vom Quadrat einer Länge ab (die <a href="#limit-square">dritte Grenze</a>). Verdreifacht hätte sich der Kreisumfang.</p>
+    </details>
+    <!-- sources -->
+    <h2 id="external">9 · Links zu Aufgaben aus externen Quellen <a class="anchor-link" href="#external">#</a></h2>
+    <p class="dim">Echte Aufgaben von anderen Seiten zur NMT-Vorbereitung, die auf den Gesetzen dieses Blocks beruhen. Die Aufgabe liest du auf der Quellseite hinter dem Link; die Zuordnung zu den Gesetzen ist unsere. Quellen und Jahre werden in den Einstellungen ein- und ausgeschaltet (das Zahnrad oben).</p>
+    <p class="dim ext-off" hidden>Alle externen Quellen sind in den Einstellungen ausgeschaltet.</p>
+    <div class="ext-source" data-ext-source="nmt-ua" id="ext-nmt-ua">
+      <h3 class="ext-head">NMT auf der Seite ZNO-ONLINE (zno.osvita.ua, auf Ukrainisch)</h3>
+      <p class="dim ext-lead">Aufgaben der Hauptsitzungen des NMT 2024-2026 von der Seite ZNO-ONLINE, nach Jahren. Jedes Jahr wird einzeln eingeschaltet.</p>
+      <div class="ext" data-ext="nmt-ua:2026" id="ext-nmt-ua-2026">
+        <h4>NMT 2026</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q13" rel="noopener" target="_blank">Sitzung 1, Aufgabe 13</a> (mit Abbildung) - Flächen von Dreieck, Trapez und Kreis</li>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q18" rel="noopener" target="_blank">Sitzung 1, Aufgabe 18</a> (mit Abbildung) - Satz des Pythagoras</li>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q21" rel="noopener" target="_blank">Sitzung 1, Aufgabe 21</a> (mit Abbildung) - Satz des Pythagoras</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q10" rel="noopener" target="_blank">Sitzung 2, Aufgabe 10</a> - Sehnen und Bögen</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q13" rel="noopener" target="_blank">Sitzung 2, Aufgabe 13</a> (mit Abbildung) - Flächen von Dreieck, Trapez und Kreis</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q18" rel="noopener" target="_blank">Sitzung 2, Aufgabe 18</a> (mit Abbildung) - Satz des Pythagoras</li>
+        </ul>
+      </div>
+      <div class="ext" data-ext="nmt-ua:2025" id="ext-nmt-ua-2025">
+        <h4>NMT 2025</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q15" rel="noopener" target="_blank">Sitzung 1, Aufgabe 15</a> (mit Abbildung) - Flächen von Dreieck, Trapez und Kreis</li>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q18" rel="noopener" target="_blank">Sitzung 1, Aufgabe 18</a> (mit Abbildung) - Satz des Pythagoras</li>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q21" rel="noopener" target="_blank">Sitzung 1, Aufgabe 21</a> - Satz des Pythagoras</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q10" rel="noopener" target="_blank">Sitzung 2, Aufgabe 10</a> - Tangentenabschnitte und Tangentenviereck</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q15" rel="noopener" target="_blank">Sitzung 2, Aufgabe 15</a> (mit Abbildung) - Länge, Winkel, Fläche</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q18" rel="noopener" target="_blank">Sitzung 2, Aufgabe 18</a> (mit Abbildung) - Satz des Pythagoras</li>
+        </ul>
+      </div>
+      <div class="ext" data-ext="nmt-ua:2024" id="ext-nmt-ua-2024">
+        <h4>NMT 2024</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q15" rel="noopener" target="_blank">Sitzung 1, Aufgabe 15</a> (mit Abbildung) - Länge, Winkel, Fläche</li>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q18" rel="noopener" target="_blank">Sitzung 1, Aufgabe 18</a> (mit Abbildung) - Tangentenabschnitte und Tangentenviereck</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q8" rel="noopener" target="_blank">Sitzung 2, Aufgabe 8</a> - Flächen von Dreieck, Trapez und Kreis</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q15" rel="noopener" target="_blank">Sitzung 2, Aufgabe 15</a> (mit Abbildung) - Flächen von Dreieck, Trapez und Kreis</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q18" rel="noopener" target="_blank">Sitzung 2, Aufgabe 18</a> (mit Abbildung) - Flächen von Dreieck, Trapez und Kreis</li>
+        </ul>
       </div>
     </div>
+    <!-- /sources -->
+
+    <h2 id="artifacts">Was du nach dieser Seite hast <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>Pythagoras, die Rechteckfläche und das Quadrat des Faktors.</strong> Der Kosinussatz ist Pythagoras, um den Winkel korrigiert, die Fläche über den Sinus ist die über den Winkel geschriebene Höhe, die Flächen der Figuren kommen vom Zerschneiden. Und die Fläche wächst immer mit dem Quadrat.</p>
+    </div>
+    <!-- freq -->
+    <p class="dim law-freq" data-tasks="12">Häufigkeit auf dieser Seite, nicht im NMT: diese Seite hat 12 Aufgaben im Trainer, und sie stützen sich auf diese Gesetze: Satz des Pythagoras - 6, Flächen von Dreieck, Trapez und Kreis - 4, Der Sinus eines spitzen Winkels - 1, Flächen ähnlicher Figuren - 1, Kosinussatz und Sinussatz - 1. In echten NMT-Varianten 2024-2026 wird dieser Block in 17 Aufgaben von 132 gebraucht: Satz des Pythagoras - 8, Flächen von Dreieck, Trapez und Kreis - 6, Länge, Winkel, Fläche - 2, Kosinussatz und Sinussatz - 1.</p>
+    <!-- /freq -->
+    <p>Du kannst diesen Block, wenn du:</p>
+    <ol>
+      <li>8 von 10 Aufgaben zu Längen und Flächen ohne Hinweis löst;</li>
+      <li>laut erklären kannst, warum der Kosinussatz bei einem rechten Winkel zum Satz des Pythagoras wird;</li>
+      <li>den Fehler in einer fremden Lösung findest, wie in der von Natalia.</li>
+    </ol>
+  
+
+    <footer>
+      <nav class="pager" aria-label="Benachbarte Themen">
+        <p class="pager-next">Nächstes Thema: <a href="12.html">Koordinaten und Vektoren</a></p>
+        <p class="pager-prev">Vorheriges Thema: <a href="10.html">Figuren in der Ebene</a></p>
+      </nav>
+      <p class="footer-note">Eine Website der AI Factory-Serie. Mit denselben Werkzeugen erstellt: einfaches HTML und CSS, Bash-Prüfung, Veröffentlichung über GitHub Pages.</p>
+    </footer>
   </main>
 
 </div>
