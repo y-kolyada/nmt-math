@@ -714,6 +714,13 @@ body { padding-bottom: 72px; }
   line-height: 1.45;
   color: var(--fg);
   text-align: left;
+  /* The card is a child of the word it explains. On a word in <strong> or
+     <em> it inherited bold or italic, and the description read as shouting.
+     The card sets its own type; only .term-title is bold. */
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: normal;
 }
 .term-card[hidden] {
   display: none !important;
