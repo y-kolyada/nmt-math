@@ -2,6 +2,19 @@
 # Our own reading of each task condition (no task text, no paid explanation is copied). Fetched 2026-11-09:
 # 8 requests in total (robots.txt, the sessions list, six test pages), 5 s apart, robots.txt Crawl-delay is 3.
 # laws: block:law-id of this site, block:concept for a concept section, missing:<topic> where the site has no law yet.
+# names of missing topics: tag, Ukrainian, Russian
+#missing	рівняння_з_параметром	рівняння з параметром	уравнения с параметром
+#missing	середня_лінія	середня лінія трикутника і трапеції	средняя линия треугольника и трапеции
+#missing	читання_діаграм	читання діаграм і графіків даних	чтение диаграмм и графиков данных
+#missing	тіла_обертання	тіла обертання та їхні елементи	тела вращения и их элементы
+#missing	паралельність_у_просторі	паралельність прямих і площин у просторі	параллельность прямых и плоскостей в пространстве
+#missing	графічний_метод	графічний метод: спільні точки графіків	графический метод: общие точки графиков
+#missing	вписані_й_описані_чотирикутники	вписані й описані чотирикутники	вписанные и описанные четырёхугольники
+#missing	дії_зі_звичайними_дробами	дії зі звичайними дробами	действия с обыкновенными дробями
+#missing	хорди_і_дуги_кола	хорди і дуги кола	хорды и дуги окружности
+#missing	рівняння_прямої	рівняння прямої і кутовий коефіцієнт	уравнение прямой и угловой коэффициент
+#missing	властивості_чотирикутників	властивості паралелограма та інших чотирикутників	свойства параллелограмма и других четырёхугольников
+#missing	чудові_точки_трикутника	чудові точки трикутника	замечательные точки треугольника
 year	session	test	n	form	figure	laws	url
 2026	1	846	1	choice	yes	missing:читання_діаграм	https://zno.osvita.ua/mathematics/846/
 2026	1	846	2	choice	no	02:law-part	https://zno.osvita.ua/mathematics/846/
