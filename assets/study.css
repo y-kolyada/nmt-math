@@ -56,11 +56,13 @@ nav.contents .num { width: 1.9em; }
    который читатель включает и выключает в настройках. Рамка - та же .box,
    что держит другие блоки страницы, чтобы чужие ссылки не выглядели чужим сайтом. */
 .ext { border: 1px solid var(--line); border-radius: 10px; padding: 10px 16px 6px; margin: .8rem 0; }
-.ext h3 { margin: 0 0 .4rem; }
+.ext h4 { font-size: .98rem; margin: 0 0 .4rem; }
+.ext-source > h3 { margin-top: 1rem; }
+.ext-source > .ext-lead { margin: 0 0 .6rem; }
 .ext ul { margin: 0 0 .5rem; padding-left: 1.2rem; }
 .ext li { margin: 0 0 4px; }
 @media (max-width: 48rem) { .ext { padding: 8px 12px 4px; } .ext ul { padding-left: 1rem; } }
-.ext[hidden], .ext-off[hidden], .search-facet[hidden] { display: none; }
+.ext[hidden], .ext-source[hidden], .ext-off[hidden], .search-facet[hidden] { display: none; }
 
 /* Шестерня в лотке - по образцу кнопки поиска; окно настроек - по образцу
    окна поиска: та же рамка, шапка, крестик и подложка. Флажок «включено»
@@ -68,6 +70,7 @@ nav.contents .num { width: 1.9em; }
 .settings-btn { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 26px;
   background: none; border: 1px solid transparent; border-radius: 6px; color: var(--dim); cursor: pointer; }
 .settings-btn:hover, .settings-btn:focus-visible { color: var(--fg); border-color: var(--line); }
+.settings-btn:hover .icon, .settings-btn:focus-visible .icon { fill: currentColor; }
 .settings-panel { width: calc(100% - 32px); max-width: 36rem; max-height: 72vh; margin: 10vh auto auto; padding: 0;
   color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 12px;
   box-shadow: 0 18px 50px rgba(0, 0, 0, .28); overflow: auto; }

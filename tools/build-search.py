@@ -50,8 +50,10 @@ MATH = re.compile(r'<math\b.*?</math>', re.S | re.I)
 # на него свой переключатель, а выключенный в настройках год не искался.
 # На сайтах без таких блоков индекс не меняется ни на байт.
 EXT = re.compile(r'<div class="ext" data-ext="([^"]+)" id="([^"]+)">(.*?)</div>', re.S | re.I)
-EXT_OFF = re.compile(r'<p class="[^"]*\bext-off\b[^"]*"[^>]*>.*?</p>', re.S | re.I)
-H3 = re.compile(r'<h3\b[^>]*>(.*?)</h3>', re.S | re.I)
+# Заметка «всё выключено», заголовок и вводка источника принадлежат не
+# разделу, а источнику: в запись раздела они не идут.
+EXT_OFF = re.compile(r'<p class="[^"]*\bext-(?:off|lead)\b[^"]*"[^>]*>.*?</p>|<h3 class="ext-head">.*?</h3>', re.S | re.I)
+H3 = re.compile(r'<h[3-6]\b[^>]*>(.*?)</h[3-6]>', re.S | re.I)
 
 
 def drop_cards(chunk):

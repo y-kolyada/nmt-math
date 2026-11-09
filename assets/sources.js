@@ -64,18 +64,20 @@
     if (id !== src) years[src].push(id);
   });
 
-  // The page: a year block is hidden when it or its source is off; the note
-  // "switched off" shows when nothing of that source is left on the page.
+  // The page: a year block is hidden when it or its source is off; a source
+  // block (its heading and lead) leaves with its last year; the note "all
+  // sources are off" shows when no source is left in the section.
   function apply() {
     const off = readOff();
     document.querySelectorAll('.ext[data-ext]').forEach((el) => {
       el.hidden = isOff(off, el.dataset.ext);
     });
-    document.querySelectorAll('.ext-off[data-ext-source]').forEach((note) => {
-      const src = note.dataset.extSource;
-      const mine = [...document.querySelectorAll('.ext[data-ext]')]
-        .filter((el) => sourceOf(el.dataset.ext) === src);
-      note.hidden = !mine.length || mine.some((el) => !el.hidden);
+    document.querySelectorAll('.ext-source').forEach((box) => {
+      box.hidden = ![...box.querySelectorAll('.ext[data-ext]')].some((el) => !el.hidden);
+    });
+    document.querySelectorAll('.ext-off').forEach((note) => {
+      const scope = note.parentElement;
+      note.hidden = [...scope.querySelectorAll('.ext-source')].some((box) => !box.hidden);
     });
   }
 
@@ -85,12 +87,13 @@
   gear.setAttribute('aria-label', say.open);
   gear.setAttribute('aria-haspopup', 'dialog');
   gear.title = say.open;
+  // The shape follows the Conductor's sample (courses/nmt-math/gear.png): six
+  // wide teeth and a hole. evenodd keeps the hole when hover fills the body.
   gear.innerHTML = '<svg class="icon" data-icon="gear" viewBox="0 0 20 20" width="16" height="16"'
-    + ' fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"'
-    + ' stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="2.6"/>'
-    + '<path d="M18.2 8.2L18.2 11.8L15.9 12.2L15.7 12.6L17.1 14.5L14.5 17.1L12.6 15.7L12.2 15.9L11.8 18.2'
-    + 'L8.2 18.2L7.8 15.9L7.4 15.7L5.5 17.1L2.9 14.5L4.3 12.6L4.1 12.2L1.8 11.8L1.8 8.2L4.1 7.8L4.3 7.4'
-    + 'L2.9 5.5L5.5 2.9L7.4 4.3L7.8 4.1L8.2 1.8L11.8 1.8L12.2 4.1L12.6 4.3L14.5 2.9L17.1 5.5L15.7 7.4L15.9 7.8Z"/></svg>';
+    + ' fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1.5"'
+    + ' stroke-linejoin="round" aria-hidden="true"><path d="M7.9 1.9L12.1 1.9L12.6 4.6L13.4 5.1L16.0 4.1L18.1 7.7L16.0 9.5L16.0 10.5L18.1 12.3L16.0 15.9L13.4 14.9L12.6 15.4'
+    + 'L12.1 18.1L7.9 18.1L7.4 15.4L6.6 14.9L4.0 15.9L1.9 12.3L4.0 10.5L4.0 9.5L1.9 7.7L4.0 4.1L6.6 5.1L7.4 4.6Z'
+    + 'M10 7.7a2.3 2.3 0 1 0 0 4.6a2.3 2.3 0 1 0 0-4.6Z"/></svg>';
   tray.appendChild(gear);
 
   const dlg = document.createElement('dialog');
