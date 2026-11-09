@@ -9,13 +9,24 @@ answer when the task agrees with it on every language page: the data-answer of
 a short task, or the text of the chosen option of a choice task. Otherwise it
 prints the disagreement. tools/claims.tsv calls it, one line per task, so a
 task whose answer cannot be computed from its own text turns the check red.
+
+    python3 diagrams/answer.py --figure ID 'EXPR'
+
+A task of the class "data on the figure" gives its numbers only on the figure.
+EXPR is computed over the names of DATA in the generator diagrams/ID.py. The
+script also checks that every number of DATA is a label of the baked figure and
+is named in its aria-label, and that it is absent from the condition text. A
+choice whose options are formulas compares the whole option text when EXPR
+gives a string.
 """
+import importlib.util
 import math
 import pathlib
 import re
 import sys
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent
+HERE = pathlib.Path(__file__).resolve().parent
+ROOT = HERE.parent
 LANGS = ('uk', 'ru')
 
 
@@ -36,9 +47,51 @@ def task(lang, tid):
     return None
 
 
+def numbers(s):
+    """The unsigned numbers written in a piece of text, decimal comma kept."""
+    return set(re.findall(r'\d+(?:,\d+)?', s))
+
+
+def data(tid):
+    sys.path.insert(0, str(HERE))
+    spec = importlib.util.spec_from_file_location(tid.replace('-', '_'), HERE / (tid + '.py'))
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod.DATA
+
+
+def figure_faults(lang, tid, body, values):
+    """Where a number of DATA is missing from the figure or leaks into the condition."""
+    m = re.search(r'<!-- fig:%s -->(.*?)<!-- /fig:%s -->' % (tid, tid), body, re.S)
+    if not m:
+        return ['%s: рисунок не запечён' % lang]
+    svg = m.group(1)
+    labels = numbers(' '.join(re.findall(r'<text[^>]*>([^<]*)</text>', svg)))
+    aria = numbers(' '.join(re.findall(r'aria-label="([^"]*)"', svg)))
+    head = body[:m.start()]
+    head = re.sub(r'<p class="task-(?:kind|class)">.*?</p>', '', head, flags=re.S)
+    cond = numbers(re.sub(r'<[^>]+>', ' ', head))
+    bad = []
+    for name, v in values.items():
+        s = fmt(abs(v))
+        if s not in labels:
+            bad.append('%s: %s = %s нет подписью на рисунке' % (lang, name, s))
+        if s not in aria:
+            bad.append('%s: %s = %s нет в aria-label' % (lang, name, s))
+        if s in cond:
+            bad.append('%s: %s = %s есть в условии' % (lang, name, s))
+    return bad
+
+
 def main():
-    tid, expr = sys.argv[1], sys.argv[2]
-    value = fmt(eval(expr, {'math': math}))
+    figure = sys.argv[1] == '--figure'
+    tid, expr = sys.argv[1 + figure], sys.argv[2 + figure]
+    names = {'math': math}
+    if figure:
+        values = data(tid)
+        names.update(values)
+    raw = eval(expr, names)
+    value = fmt(raw)
     bad = []
     for lang in LANGS:
         found = task(lang, tid)
@@ -48,11 +101,15 @@ def main():
         kind, answer, body = found
         if kind == 'choice':
             m = re.search(r'data-opt="%s">%s · ([^<]*)</button>' % (answer, answer), body)
-            got = m.group(1).split(' ')[0].rstrip('°') if m else '?'
+            got = m.group(1) if m else '?'
+            if not isinstance(raw, str):
+                got = got.split(' ')[0].rstrip('°').replace('−', '-')
         else:
             got = answer
         if got != value:
             bad.append('%s: на странице %s' % (lang, got))
+        if figure:
+            bad += figure_faults(lang, tid, body, values)
     print(value if not bad else 'вычислено %s, %s' % (value, '; '.join(bad)))
 
 
