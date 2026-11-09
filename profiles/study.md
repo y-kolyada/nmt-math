@@ -49,6 +49,24 @@ laws at the end; the order of steps inside one law does not change.
 usually one or two. A story about a video sped up 1.5 times is `t = S / k`,
 not three "laws".
 
+**Three levels of foundation** (Conductor, 2026-11-09). If an exam task has a
+solution, the site holds what it rests on, at one of three levels:
+
+1. **Law** - the frame `.law`. Few of them: a new law appears only when the
+   topic cannot be derived from the laws already on the site.
+2. **Corollary** - a theorem derived from a law of the block, standing under
+   its law: `<div class="corollary" id="cor-..." data-law="law-...">` with
+   `<p class="corollary-of">` (a link to the law), `<p class="corollary-name">`
+   and a derivation of two to five lines. It counts for its law in the
+   frequency and the exam slice (`tools/examslice.py` parent()), so laws do not
+   multiply while every task has a foundation.
+3. **Method** - not a new statement but a scheme of applying laws, in step 5:
+   `<div class="method">` with `<h3 id="method-...">` and a trainer task tied
+   to the laws it uses.
+
+The exam slice tags a task `NN:law-...`, `NN:cor-...` or `NN:method-...`;
+`tools/build-frequency.py` is red on a tag that names nothing on its page.
+
 **Three predicates close every block**: I solve 8 of 10 tasks of this kind
 without a hint; I explain aloud why the formula works; I find the error in
 someone else's solution. Every block carries one "find the error" item.
@@ -81,3 +99,54 @@ TeX in `data-tex`, baked by `tools/build-math.py`. **The decimal comma is
 written `0\text{,}25`**: `0{,}25` bakes into an operator comma and the reader
 sees "0, 25". Every second number in Ukrainian mathematics has a comma, so
 this is not a corner case.
+
+## 6. Figures
+
+Decided with the Conductor 2026-11-09.
+
+1. **A figure complements the text and never replaces it.** The text of every
+   step stays complete without the figure: reading and drawing figures are
+   skills of their own that a pupil is still building, and a page must read in
+   full to a screen reader on a phone. Every figure carries a non-empty
+   `aria-label` that says what the figure shows, and a caption.
+2. **Figures live inside the steps**, mostly in "Чому так" and "Межі", as many
+   as the law needs (usually two to four per block). There is no separate
+   "figures" axis: it would tear the picture away from the law it explains.
+3. **Two kinds of source in `diagrams/`.** Schemes (links, chains of
+   derivation, order of steps) have a Mermaid source `NN-name.mmd`.
+   Mathematical figures (graphs, circles, triangles, solids) have a generator
+   `NN-name.py` that computes exact coordinates from the same formula the page
+   states and prints the SVG: a parabola drawn from its equation, not by eye.
+   `tools/check-diagrams.mjs` accepts both kinds as sources.
+4. Captions read `Рисунок N.`, numbered through the language folder; the
+   series rules of rule 18 (canvas 320, labels of at least 12 units,
+   `currentColor`) hold for both kinds.
+
+## 7. External sources and the settings window
+
+A study site may point beyond itself, to the real exam tasks that lean on a
+block's laws. The rule is the same as in section 4: **a link, never a copy**.
+
+1. **The slice.** `site.conf slice = lessons/<file>.tsv` holds the tagged tasks
+   (year, session, number, figure, our laws, url); `tools/examslice.py` reads
+   it. The frequency line prints the second number from it
+   (`tools/build-frequency.py`), and `tools/build-sources.py` prints the section
+   "Посилання на завдання із зовнішніх джерел" before the artifacts of each block.
+   The section speaks of sources in general, because there may be several
+   platforms; what belongs to one source (its heading and lead) lives in its own
+   block `<div class="ext-source" data-ext-source="<source>">` and leaves the page
+   with its last year.
+2. **A year is a block of its own**: `<div class="ext" data-ext="<source>:<year>">`.
+   The reader switches a whole source or a single year off in the settings
+   (`assets/sources.js`, the gear in the tray); the choice is stored in
+   `localStorage swa-<site>-ext-off`, and the search (`assets/search.js`) offers
+   every year that is on as a filter of its own and does not search the years
+   that are off.
+3. **The look is the site's own.** The settings window repeats the search
+   window (frame, head, cross, backdrop, full screen on a phone); a year block
+   wears the `.box` frame; a checked box wears the accent of a pressed search
+   filter. The gear follows the Conductor's sample: six wide teeth and a hole, filled on hover. A new external source adds its texts to `build-sources.py` and `sources.js`, not a new style.
+4. **Polite collection.** Before any request to a source site the volume and the
+   rate are agreed with the Conductor; robots.txt is read first, requests go one
+   at a time, at most one per five seconds, each file once, and the run stops
+   on 429, 5xx or a disallow.

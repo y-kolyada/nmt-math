@@ -1,0 +1,138 @@
+# NMT slice: real main-session tasks 2024-2026 from zno.osvita.ua, tagged with the laws of this site.
+# Our own reading of each task condition (no task text, no paid explanation is copied). Fetched 2026-11-09:
+# 8 requests in total (robots.txt, the sessions list, six test pages), 5 s apart, robots.txt Crawl-delay is 3.
+# laws: block:law-id (a law frame), block:cor-id (a corollary, counted for its law), block:method-id (a method in the
+# applications), block:concept (a concept section). Step 04 (2026-11-09) gave every task a foundation: no task is left without one.
+year	session	test	n	form	figure	laws	url
+2026	1	846	1	choice	yes	02:cor-diagram	https://zno.osvita.ua/mathematics/846/#q1
+2026	1	846	2	choice	no	02:law-part	https://zno.osvita.ua/mathematics/846/#q2
+2026	1	846	3	choice	yes	10:law-parallel	https://zno.osvita.ua/mathematics/846/#q3
+2026	1	846	4	choice	no	04:law-equiv	https://zno.osvita.ua/mathematics/846/#q4
+2026	1	846	5	choice	no	13:cor-revolution	https://zno.osvita.ua/mathematics/846/#q5
+2026	1	846	6	choice	yes	05:concept	https://zno.osvita.ua/mathematics/846/#q6
+2026	1	846	7	choice	no	09:law-probability	https://zno.osvita.ua/mathematics/846/#q7
+2026	1	846	8	choice	yes	12:law-vector	https://zno.osvita.ua/mathematics/846/#q8
+2026	1	846	9	choice	no	03:law-diff	https://zno.osvita.ua/mathematics/846/#q9
+2026	1	846	10	choice	yes	10:law-inscribed	https://zno.osvita.ua/mathematics/846/#q10
+2026	1	846	11	choice	no	06:law-power	https://zno.osvita.ua/mathematics/846/#q11
+2026	1	846	12	choice	yes	08:law-nl	https://zno.osvita.ua/mathematics/846/#q12
+2026	1	846	13	choice	yes	11:law-areas 10:cor-midline	https://zno.osvita.ua/mathematics/846/#q13
+2026	1	846	14	choice	no	01:law-abs 06:law-power	https://zno.osvita.ua/mathematics/846/#q14
+2026	1	846	15	choice	no	04:law-equiv	https://zno.osvita.ua/mathematics/846/#q15
+2026	1	846	16	match	no	05:concept	https://zno.osvita.ua/mathematics/846/#q16
+2026	1	846	17	match	no	06:law-power 06:law-identity 07:law-reduction	https://zno.osvita.ua/mathematics/846/#q17
+2026	1	846	18	match	yes	11:law-pythagoras	https://zno.osvita.ua/mathematics/846/#q18
+2026	1	846	19	short	no	08:law-monotone	https://zno.osvita.ua/mathematics/846/#q19
+2026	1	846	20	short	no	02:law-part 02:law-change	https://zno.osvita.ua/mathematics/846/#q20
+2026	1	846	21	short	yes	13:law-lateral 13:law-volumes 11:law-pythagoras	https://zno.osvita.ua/mathematics/846/#q21
+2026	1	846	22	short	yes	06:law-identity 04:method-param	https://zno.osvita.ua/mathematics/846/#q22
+2026	2	847	1	choice	yes	02:cor-diagram	https://zno.osvita.ua/mathematics/847/#q1
+2026	2	847	2	choice	no	02:law-inverse	https://zno.osvita.ua/mathematics/847/#q2
+2026	2	847	3	choice	yes	10:law-angles	https://zno.osvita.ua/mathematics/847/#q3
+2026	2	847	4	choice	no	04:law-equiv	https://zno.osvita.ua/mathematics/847/#q4
+2026	2	847	5	choice	no	13:cor-revolution	https://zno.osvita.ua/mathematics/847/#q5
+2026	2	847	6	choice	yes	05:concept	https://zno.osvita.ua/mathematics/847/#q6
+2026	2	847	7	choice	no	09:law-probability	https://zno.osvita.ua/mathematics/847/#q7
+2026	2	847	8	choice	no	12:law-vector 12:law-distance	https://zno.osvita.ua/mathematics/847/#q8
+2026	2	847	9	choice	no	03:law-fraction	https://zno.osvita.ua/mathematics/847/#q9
+2026	2	847	10	choice	no	11:cor-chords	https://zno.osvita.ua/mathematics/847/#q10
+2026	2	847	11	choice	no	06:law-power	https://zno.osvita.ua/mathematics/847/#q11
+2026	2	847	12	choice	no	08:law-table	https://zno.osvita.ua/mathematics/847/#q12
+2026	2	847	13	choice	yes	11:law-areas	https://zno.osvita.ua/mathematics/847/#q13
+2026	2	847	14	choice	no	07:law-reduction	https://zno.osvita.ua/mathematics/847/#q14
+2026	2	847	15	choice	no	06:law-identity 02:law-proportion	https://zno.osvita.ua/mathematics/847/#q15
+2026	2	847	16	match	no	05:method-graphic	https://zno.osvita.ua/mathematics/847/#q16
+2026	2	847	17	match	no	06:law-power 06:law-identity 03:law-square	https://zno.osvita.ua/mathematics/847/#q17
+2026	2	847	18	match	yes	11:law-pythagoras	https://zno.osvita.ua/mathematics/847/#q18
+2026	2	847	19	short	no	08:law-monotone	https://zno.osvita.ua/mathematics/847/#q19
+2026	2	847	20	short	no	02:law-change	https://zno.osvita.ua/mathematics/847/#q20
+2026	2	847	21	short	yes	13:law-diagonal 13:law-volumes	https://zno.osvita.ua/mathematics/847/#q21
+2026	2	847	22	short	no	01:law-abs 04:law-equiv 04:method-param	https://zno.osvita.ua/mathematics/847/#q22
+2025	1	671	1	choice	yes	05:concept	https://zno.osvita.ua/mathematics/671/#q1
+2025	1	671	2	choice	yes	10:concept	https://zno.osvita.ua/mathematics/671/#q2
+2025	1	671	3	choice	no	04:law-equiv	https://zno.osvita.ua/mathematics/671/#q3
+2025	1	671	4	choice	no	06:law-power	https://zno.osvita.ua/mathematics/671/#q4
+2025	1	671	5	choice	yes	13:law-space	https://zno.osvita.ua/mathematics/671/#q5
+2025	1	671	6	choice	yes	05:law-shift	https://zno.osvita.ua/mathematics/671/#q6
+2025	1	671	7	choice	no	02:law-part	https://zno.osvita.ua/mathematics/671/#q7
+2025	1	671	8	choice	no	12:law-vector	https://zno.osvita.ua/mathematics/671/#q8
+2025	1	671	9	choice	no	06:law-identity	https://zno.osvita.ua/mathematics/671/#q9
+2025	1	671	10	choice	no	10:law-triangle-ineq 10:law-angles	https://zno.osvita.ua/mathematics/671/#q10
+2025	1	671	11	choice	no	02:law-proportion 04:law-equiv	https://zno.osvita.ua/mathematics/671/#q11
+2025	1	671	12	choice	no	05:law-arith	https://zno.osvita.ua/mathematics/671/#q12
+2025	1	671	13	choice	no	03:law-square	https://zno.osvita.ua/mathematics/671/#q13
+2025	1	671	14	choice	no	06:law-identity	https://zno.osvita.ua/mathematics/671/#q14
+2025	1	671	15	choice	yes	11:law-areas	https://zno.osvita.ua/mathematics/671/#q15
+2025	1	671	16	match	no	05:concept	https://zno.osvita.ua/mathematics/671/#q16
+2025	1	671	17	match	no	07:law-reduction 01:law-abs 06:law-power	https://zno.osvita.ua/mathematics/671/#q17
+2025	1	671	18	match	yes	11:law-pythagoras	https://zno.osvita.ua/mathematics/671/#q18
+2025	1	671	19	short	no	08:law-tangent 08:law-table	https://zno.osvita.ua/mathematics/671/#q19
+2025	1	671	20	short	yes	09:law-probability	https://zno.osvita.ua/mathematics/671/#q20
+2025	1	671	21	short	no	13:law-lateral 13:law-volumes 11:law-pythagoras	https://zno.osvita.ua/mathematics/671/#q21
+2025	1	671	22	short	no	06:law-power 04:method-param	https://zno.osvita.ua/mathematics/671/#q22
+2025	2	672	1	choice	yes	02:cor-diagram	https://zno.osvita.ua/mathematics/672/#q1
+2025	2	672	2	choice	yes	10:law-angles	https://zno.osvita.ua/mathematics/672/#q2
+2025	2	672	3	choice	no	01:law-abs	https://zno.osvita.ua/mathematics/672/#q3
+2025	2	672	4	choice	no	01:law-dist	https://zno.osvita.ua/mathematics/672/#q4
+2025	2	672	5	choice	yes	13:law-space	https://zno.osvita.ua/mathematics/672/#q5
+2025	2	672	6	choice	no	05:law-shift	https://zno.osvita.ua/mathematics/672/#q6
+2025	2	672	7	choice	no	02:law-part	https://zno.osvita.ua/mathematics/672/#q7
+2025	2	672	8	choice	yes	12:law-distance	https://zno.osvita.ua/mathematics/672/#q8
+2025	2	672	9	choice	no	04:law-equiv	https://zno.osvita.ua/mathematics/672/#q9
+2025	2	672	10	choice	no	11:cor-tangents 10:cor-cyclic 10:cor-midline	https://zno.osvita.ua/mathematics/672/#q10
+2025	2	672	11	choice	no	06:law-power	https://zno.osvita.ua/mathematics/672/#q11
+2025	2	672	12	choice	no	08:law-table	https://zno.osvita.ua/mathematics/672/#q12
+2025	2	672	13	choice	no	06:law-power	https://zno.osvita.ua/mathematics/672/#q13
+2025	2	672	14	choice	no	06:law-identity	https://zno.osvita.ua/mathematics/672/#q14
+2025	2	672	15	choice	yes	11:concept	https://zno.osvita.ua/mathematics/672/#q15
+2025	2	672	16	match	no	12:cor-line	https://zno.osvita.ua/mathematics/672/#q16
+2025	2	672	17	match	no	06:law-power 03:law-diff 06:law-identity	https://zno.osvita.ua/mathematics/672/#q17
+2025	2	672	18	match	yes	11:law-pythagoras 10:cor-midline	https://zno.osvita.ua/mathematics/672/#q18
+2025	2	672	19	short	no	05:concept	https://zno.osvita.ua/mathematics/672/#q19
+2025	2	672	20	short	yes	09:law-probability	https://zno.osvita.ua/mathematics/672/#q20
+2025	2	672	21	short	no	13:law-lateral	https://zno.osvita.ua/mathematics/672/#q21
+2025	2	672	22	short	yes	12:law-circle 05:law-shift 04:method-param	https://zno.osvita.ua/mathematics/672/#q22
+2024	1	585	1	choice	yes	05:concept	https://zno.osvita.ua/mathematics/585/#q1
+2024	1	585	2	choice	yes	10:law-angles	https://zno.osvita.ua/mathematics/585/#q2
+2024	1	585	3	choice	no	03:law-diff	https://zno.osvita.ua/mathematics/585/#q3
+2024	1	585	4	choice	yes	13:cor-revolution	https://zno.osvita.ua/mathematics/585/#q4
+2024	1	585	5	choice	no	01:law-abs	https://zno.osvita.ua/mathematics/585/#q5
+2024	1	585	6	choice	no	02:law-proportion	https://zno.osvita.ua/mathematics/585/#q6
+2024	1	585	7	choice	yes	05:law-shift	https://zno.osvita.ua/mathematics/585/#q7
+2024	1	585	8	choice	no	06:law-power	https://zno.osvita.ua/mathematics/585/#q8
+2024	1	585	9	choice	no	13:law-lateral	https://zno.osvita.ua/mathematics/585/#q9
+2024	1	585	10	choice	no	10:law-triangle-ineq 10:cor-parallelogram	https://zno.osvita.ua/mathematics/585/#q10
+2024	1	585	11	choice	no	06:law-power 04:law-equiv	https://zno.osvita.ua/mathematics/585/#q11
+2024	1	585	12	choice	no	05:law-arith	https://zno.osvita.ua/mathematics/585/#q12
+2024	1	585	13	choice	no	06:law-identity	https://zno.osvita.ua/mathematics/585/#q13
+2024	1	585	14	choice	no	07:law-equations	https://zno.osvita.ua/mathematics/585/#q14
+2024	1	585	15	choice	yes	11:concept	https://zno.osvita.ua/mathematics/585/#q15
+2024	1	585	16	match	yes	05:method-graphic	https://zno.osvita.ua/mathematics/585/#q16
+2024	1	585	17	match	no	06:law-power 07:law-reduction 01:concept	https://zno.osvita.ua/mathematics/585/#q17
+2024	1	585	18	match	yes	11:cor-tangents 10:cor-midline	https://zno.osvita.ua/mathematics/585/#q18
+2024	1	585	19	short	no	03:law-square 08:law-nl	https://zno.osvita.ua/mathematics/585/#q19
+2024	1	585	20	short	no	09:concept 04:law-equiv	https://zno.osvita.ua/mathematics/585/#q20
+2024	1	585	21	short	no	12:law-distance 13:law-volumes	https://zno.osvita.ua/mathematics/585/#q21
+2024	1	585	22	short	yes	04:law-quadratic 04:method-param	https://zno.osvita.ua/mathematics/585/#q22
+2024	2	606	1	choice	yes	09:law-probability	https://zno.osvita.ua/mathematics/606/#q1
+2024	2	606	2	choice	no	03:law-square	https://zno.osvita.ua/mathematics/606/#q2
+2024	2	606	3	choice	no	01:law-abs	https://zno.osvita.ua/mathematics/606/#q3
+2024	2	606	4	choice	yes	10:concept	https://zno.osvita.ua/mathematics/606/#q4
+2024	2	606	5	choice	yes	13:law-space	https://zno.osvita.ua/mathematics/606/#q5
+2024	2	606	6	choice	yes	05:concept	https://zno.osvita.ua/mathematics/606/#q6
+2024	2	606	7	choice	no	06:law-power	https://zno.osvita.ua/mathematics/606/#q7
+2024	2	606	8	choice	no	13:law-volumes 11:law-areas	https://zno.osvita.ua/mathematics/606/#q8
+2024	2	606	9	choice	no	06:law-power	https://zno.osvita.ua/mathematics/606/#q9
+2024	2	606	10	choice	no	10:cor-circumcenter	https://zno.osvita.ua/mathematics/606/#q10
+2024	2	606	11	choice	no	04:law-equiv	https://zno.osvita.ua/mathematics/606/#q11
+2024	2	606	12	choice	no	05:law-geom	https://zno.osvita.ua/mathematics/606/#q12
+2024	2	606	13	choice	no	06:law-log	https://zno.osvita.ua/mathematics/606/#q13
+2024	2	606	14	choice	no	06:law-power	https://zno.osvita.ua/mathematics/606/#q14
+2024	2	606	15	choice	yes	11:law-areas	https://zno.osvita.ua/mathematics/606/#q15
+2024	2	606	16	match	yes	05:concept	https://zno.osvita.ua/mathematics/606/#q16
+2024	2	606	17	match	no	07:law-reduction 01:concept 06:law-power	https://zno.osvita.ua/mathematics/606/#q17
+2024	2	606	18	match	yes	10:cor-midline 11:law-areas	https://zno.osvita.ua/mathematics/606/#q18
+2024	2	606	19	short	yes	08:law-nl	https://zno.osvita.ua/mathematics/606/#q19
+2024	2	606	20	short	no	09:law-formulas	https://zno.osvita.ua/mathematics/606/#q20
+2024	2	606	21	short	no	12:law-distance 13:law-lateral	https://zno.osvita.ua/mathematics/606/#q21
+2024	2	606	22	short	yes	06:law-identity 04:method-param	https://zno.osvita.ua/mathematics/606/#q22

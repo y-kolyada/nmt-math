@@ -2,26 +2,28 @@
 <html lang="ru" data-site="nmt-math">
 <head>
 <meta charset="utf-8">
+<meta name="swa-sources" content="nmt-ua:2024 nmt-ua:2025 nmt-ua:2026">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Раздел 12 · nmt-math · ai|</title>
+<title>Координаты и векторы · nmt-math · ai|</title>
 <!-- meta: built by tools/build-meta.py - do not edit by hand -->
-<meta name="description" content="">
+<meta name="description" content="Точка становится парой (в пространстве - тройкой) чисел, и геометрическая задача решается уравнением.">
 <link rel="canonical" href="https://y-kolyada.github.io/nmt-math/ru/12.html">
 <link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/12.html">
 <link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/12.html">
+<link rel="alternate" hreflang="en" href="https://y-kolyada.github.io/nmt-math/en/12.html">
 <link rel="alternate" hreflang="x-default" href="https://y-kolyada.github.io/nmt-math/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="nmt-math">
-<meta property="og:title" content="Раздел 12">
-<meta property="og:description" content="">
+<meta property="og:title" content="Координаты и векторы">
+<meta property="og:description" content="Точка становится парой (в пространстве - тройкой) чисел, и геометрическая задача решается уравнением.">
 <meta property="og:url" content="https://y-kolyada.github.io/nmt-math/ru/12.html">
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Раздел 12","description":"","url":"https://y-kolyada.github.io/nmt-math/ru/12.html","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Координаты и векторы","description":"Точка становится парой (в пространстве - тройкой) чисел, и геометрическая задача решается уравнением.","url":"https://y-kolyada.github.io/nmt-math/ru/12.html","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
 <!-- /meta -->
-<link rel="stylesheet" href="../assets/style.css?v=1">
-<link rel="stylesheet" href="../assets/study.css?v=1">
+<link rel="stylesheet" href="../assets/style.css?v=3">
+<link rel="stylesheet" href="../assets/study.css?v=3">
 <script>
   (function() {
     var s = document.documentElement.dataset.site || 'swa';
@@ -44,17 +46,18 @@
     </a>
     <div class="three" aria-hidden="true">закон · <span class="topic">Математика</span> · границы · применение</div>
   </div>
-  <div class="utility-tray" role="toolbar" aria-label="Anzeigeeinstellungen und Sprache">
+  <div class="utility-tray" role="toolbar" aria-label="Настройки отображения и язык">
     <nav class="lang-switcher" aria-label="Язык страницы">
       <a href="../uk/12.html" lang="uk" hreflang="uk" aria-label="Українська">UK</a>
       <a href="12.html" lang="ru" hreflang="ru" aria-label="Русский" class="active" aria-current="page">RU</a>
+      <a href="../en/12.html" lang="en" hreflang="en" aria-label="English">EN</a>
     </nav>
-    <div class="font-scaler" role="group" aria-label="Schriftgröße">
-      <button type="button" class="font-btn font-s" data-size="s" title="Kleine Schrift" aria-label="Kleine Schrift">A</button>
-      <button type="button" class="font-btn font-m active" data-size="m" title="Standardschrift" aria-label="Standardschrift">A</button>
-      <button type="button" class="font-btn font-l" data-size="l" title="Große Schrift" aria-label="Große Schrift">A</button>
+    <div class="font-scaler" role="group" aria-label="Размер шрифта">
+      <button type="button" class="font-btn font-s" data-size="s" title="Мелкий шрифт" aria-label="Мелкий шрифт">A</button>
+      <button type="button" class="font-btn font-m active" data-size="m" title="Стандартный шрифт" aria-label="Стандартный шрифт">A</button>
+      <button type="button" class="font-btn font-l" data-size="l" title="Крупный шрифт" aria-label="Крупный шрифт">A</button>
     </div>
-    <button type="button" class="theme-toggle" id="themeToggle" title="Thema wechseln (Tag/Nacht)" aria-label="Thema Tag/Nacht wechseln">
+    <button type="button" class="theme-toggle" id="themeToggle" title="Сменить тему (День/Ночь)" aria-label="Сменить тему день/ночь">
       <span class="theme-icon" aria-hidden="true"><svg class="icon" data-icon="sun" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="3.8"/><path d="M10 1.2v2.2M10 16.6v2.2M1.2 10h2.2M16.6 10h2.2M3.7 3.7l1.6 1.6M14.7 14.7l1.6 1.6M16.3 3.7l-1.6 1.6M5.3 14.7l-1.6 1.6"/></svg></span>
     </button>
   </div>
@@ -62,48 +65,540 @@
 
 <div class="cols">
 
-  <nav class="contents" aria-label="Bereiche der Website">
+  <nav class="contents" aria-label="Блоки курса">
     <ol>
-      <li><a href="01.html"><span class="num">1</span>Раздел 1</a></li>
-      <li><a href="02.html"><span class="num">2</span>Раздел 2</a></li>
-      <li><a href="03.html"><span class="num">3</span>Раздел 3</a></li>
-      <li><a href="04.html"><span class="num">4</span>Раздел 4</a></li>
-      <li><a href="05.html"><span class="num">5</span>Раздел 5</a></li>
-      <li><a href="06.html"><span class="num">6</span>Раздел 6</a></li>
-      <li><a href="07.html"><span class="num">7</span>Раздел 7</a></li>
-      <li><a href="08.html"><span class="num">8</span>Раздел 8</a></li>
-      <li><a href="09.html"><span class="num">9</span>Раздел 9</a></li>
-      <li><a href="10.html"><span class="num">10</span>Раздел 10</a></li>
-      <li><a href="11.html"><span class="num">11</span>Раздел 11</a></li>
-      <li><a href="12.html" aria-current="page"><span class="num">12</span>Раздел 12</a></li>
-      <li><a href="13.html"><span class="num">13</span>Раздел 13</a></li>
+      <li class="group">Алгебра и начала анализа</li>
+      <li><a href="01.html"><span class="num">1</span>Число и действия</a></li>
+      <li><a href="02.html"><span class="num">2</span>Пропорция и процент</a></li>
+      <li><a href="03.html"><span class="num">3</span>Выражения</a></li>
+      <li><a href="04.html"><span class="num">4</span>Уравнения и неравенства</a></li>
+      <li><a href="05.html"><span class="num">5</span>Функции и прогрессии</a></li>
+      <li><a href="06.html"><span class="num">6</span>Степени и логарифмы</a></li>
+      <li><a href="07.html"><span class="num">7</span>Тригонометрия</a></li>
+      <li><a href="08.html"><span class="num">8</span>Производная, интеграл</a></li>
+      <li><a href="09.html"><span class="num">9</span>Счёт и вероятность</a></li>
+      <li class="group">Геометрия</li>
+      <li><a href="10.html"><span class="num">10</span>Фигуры на плоскости</a></li>
+      <li><a href="11.html"><span class="num">11</span>Измерение фигур</a></li>
+      <li><a href="12.html" aria-current="page"><span class="num">12</span>Координаты и векторы</a></li>
+      <li><a href="13.html"><span class="num">13</span>Пространство и тела</a></li>
     </ol>
     <div class="nav-extra">
       <div><a href="navigator.html"><svg class="icon" data-icon="target" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7.4"/><circle cx="10" cy="10" r="3.6"/><circle cx="10" cy="10" r="0.7" fill="currentColor"/></svg> Навигатор</a></div>
       <div><a href="glossary.html"><svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg> Словарь понятий</a></div>
     </div>
-    <div class="page-toc" id="pageToc" aria-label="Abschnitte dieser Seite" hidden>
+    <div class="page-toc" id="pageToc" aria-label="Разделы этой страницы" hidden>
       <ul class="toc-list" id="tocList"></ul>
     </div>
   </nav>
 
   <main id="main">
-    <h1>Раздел 12</h1>
-    <p class="page-size" data-words="19">Слов: 19</p>
+    <h1>Координаты и векторы</h1>
+    <p class="page-size" data-words="1470">Слов: 1470</p>
+    <p class="lead">Точка становится парой (в пространстве - тройкой) чисел, и геометрическая задача решается уравнением.
+    Плоскость и пространство здесь вместе: формулы отличаются только третьей координатой.</p>
 
-    <div class="stub-card">
-      <h2>Русская версия готовится</h2>
-      <p>Полная рабочая версия этой страницы опубликована на украинском языке.</p>
-      <p>Открыть полную версию:</p>
-      <div class="stub-actions">
-        <a href="../uk/12.html" class="btn-primary">Раздел 12 →</a>
+    <div class="box key" id="key-idea">
+      <h2>Главная мысль страницы <a class="anchor-link" href="#key-idea" aria-label="ссылка на этот блок">#</a></h2>
+      <p>Координаты соединяют геометрию (блоки 10, 11) с алгеброй (блоки 3, 4): расстояние между точками - это теорема
+      Пифагора, записанная числами, а угол между векторами - теорема косинусов. Вектор - величина с направлением, и его
+      координаты - это «на сколько сдвинуться по каждой оси». Программа прямо требует видеть аналогию между плоскостью и
+      пространством, поэтому каждая формула ниже записана так, что третья координата просто добавляется.</p>
+    </div>
+
+    <span class="step">Шаг 0 · Зацепка</span>
+    <h2 id="hook">1 · Вектор из A в B <a class="anchor-link" href="#hook">#</a></h2>
+    <p>Даны <span class="math" data-tex="A(5;\ 1)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>A</mi><mo stretchy="false">&#x00028;</mo><mn>5</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>1</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">A(5;\ 1)</annotation></semantics></math></span> и <span class="math" data-tex="B(2;\ 4)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>B</mi><mo stretchy="false">&#x00028;</mo><mn>2</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>4</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">B(2;\ 4)</annotation></semantics></math></span>. Каковы координаты вектора
+    <span class="math" data-tex="\overrightarrow{AB}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mrow><mi>A</mi><mi>B</mi></mrow><mo>&#x02192;</mo></mover></mrow><annotation encoding="application/x-tex">\overrightarrow{AB}</annotation></semantics></math></span>? Привычный ход: «из первой точки вычесть вторую»:
+    <span class="math" data-tex="(3;\ -3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mn>3</mn><mi>;</mi><mtext>&#x000A0;</mtext><mo>&#x02212;</mo><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(3;\ -3)</annotation></semantics></math></span>. Но вектор показывает, как дойти из A в B: по оси x с 5 до 2 - это −3, по оси y с 1
+    до 4 - это +3. Значит <span class="math" data-tex="\overrightarrow{AB} = (-3;\ 3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mrow><mi>A</mi><mi>B</mi></mrow><mo>&#x02192;</mo></mover><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mn>3</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">\overrightarrow{AB} = (-3;\ 3)</annotation></semantics></math></span>: конец минус начало.</p>
+    <!-- fig:12-vector -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 220" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Координатная сетка с точками A(5; 1) и B(2; 4). Вектор AB идёт от A к B: по оси x на −3, по оси y на +3, поэтому AB = (−3; 3), конец минус начало.">
+        <line x1="43.3" y1="193.3" x2="43.3" y2="16.7" stroke="currentColor" stroke-width="0.6" opacity="0.3"/>
+        <line x1="81.9" y1="193.3" x2="81.9" y2="16.7" stroke="currentColor" stroke-width="0.6" opacity="0.3"/>
+        <line x1="120.4" y1="193.3" x2="120.4" y2="16.7" stroke="currentColor" stroke-width="0.6" opacity="0.3"/>
+        <line x1="159.0" y1="193.3" x2="159.0" y2="16.7" stroke="currentColor" stroke-width="0.6" opacity="0.3"/>
+        <line x1="197.6" y1="193.3" x2="197.6" y2="16.7" stroke="currentColor" stroke-width="0.6" opacity="0.3"/>
+        <line x1="236.1" y1="193.3" x2="236.1" y2="16.7" stroke="currentColor" stroke-width="0.6" opacity="0.3"/>
+        <line x1="274.7" y1="193.3" x2="274.7" y2="16.7" stroke="currentColor" stroke-width="0.6" opacity="0.3"/>
+        <line x1="31.7" y1="183.3" x2="286.3" y2="183.3" stroke="currentColor" stroke-width="0.6" opacity="0.3"/>
+        <line x1="31.7" y1="150.0" x2="286.3" y2="150.0" stroke="currentColor" stroke-width="0.6" opacity="0.3"/>
+        <line x1="31.7" y1="116.7" x2="286.3" y2="116.7" stroke="currentColor" stroke-width="0.6" opacity="0.3"/>
+        <line x1="31.7" y1="83.3" x2="286.3" y2="83.3" stroke="currentColor" stroke-width="0.6" opacity="0.3"/>
+        <line x1="31.7" y1="50.0" x2="286.3" y2="50.0" stroke="currentColor" stroke-width="0.6" opacity="0.3"/>
+        <line x1="31.7" y1="16.7" x2="286.3" y2="16.7" stroke="currentColor" stroke-width="0.6" opacity="0.3"/>
+        <line x1="24.0" y1="183.3" x2="294.0" y2="183.3" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="294.0,183.3 287.6,186.1 287.6,180.6" fill="currentColor"/>
+        <line x1="43.3" y1="200.0" x2="43.3" y2="10.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="43.3,10.0 46.0,16.4 40.6,16.4" fill="currentColor"/>
+        <text x="290.0" y="199.3" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <text x="51.3" y="22.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <line x1="120.4" y1="180.3" x2="120.4" y2="186.3" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="120.4" y="199.3" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">2</text>
+        <line x1="236.1" y1="180.3" x2="236.1" y2="186.3" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="236.1" y="199.3" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">5</text>
+        <line x1="40.3" y1="150.0" x2="46.3" y2="150.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="37.3" y="154.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">1</text>
+        <line x1="40.3" y1="50.0" x2="46.3" y2="50.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="37.3" y="54.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">4</text>
+        <line x1="236.1" y1="150.0" x2="120.4" y2="150.0" stroke="currentColor" stroke-width="1.4" stroke-dasharray="4 3" opacity="1.0"/>
+        <line x1="120.4" y1="150.0" x2="120.4" y2="50.0" stroke="currentColor" stroke-width="1.4" stroke-dasharray="4 3" opacity="1.0"/>
+        <line x1="236.1" y1="150.0" x2="123.5" y2="52.7" stroke="currentColor" stroke-width="2.2" opacity="1.0" style="stroke:var(--acc)"/>
+        <polygon points="123.5,52.7 130.2,54.8 126.6,58.9" fill="currentColor" style="fill:var(--acc)"/>
+        <circle cx="236.1" cy="150.0" r="4" fill="currentColor"/>
+        <circle cx="120.4" cy="50.0" r="4" fill="currentColor"/>
+        <text x="244.1" y="154.0" fill="currentColor" font-size="12" opacity="1.0">A(5; 1)</text>
+        <text x="128.4" y="44.0" fill="currentColor" font-size="12" opacity="1.0">B(2; 4)</text>
+        <text x="178.3" y="166.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-weight="700">−3</text>
+        <text x="112.4" y="100.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-weight="700">+3</text>
+      </svg>
+      <p class="dim">Рисунок 58. Координаты вектора - конец минус начало: AB = (2 − 5; 4 − 1) = (−3; 3).</p>
+    </div>
+    <!-- /fig:12-vector -->
+
+    <span class="step">Шаг 1 · Понятие</span>
+    <h2 id="concept">2 · Координаты, вектор, скалярное произведение <a class="anchor-link" href="#concept">#</a></h2>
+    <ul>
+      <li><strong>Координаты точки</strong> - её проекции на оси: <span class="math" data-tex="(x;\ y)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>x</mi><mi>;</mi><mtext>&#x000A0;</mtext><mi>y</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(x;\ y)</annotation></semantics></math></span> на плоскости,
+      <span class="math" data-tex="(x;\ y;\ z)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>x</mi><mi>;</mi><mtext>&#x000A0;</mtext><mi>y</mi><mi>;</mi><mtext>&#x000A0;</mtext><mi>z</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(x;\ y;\ z)</annotation></semantics></math></span> в пространстве. Первая координата - <span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">абсцисса</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Абсцисса</strong><button type="button" class="term-close" aria-label="Закрыть">&times;</button></span><span class="term-desc">Первая координата точки: её проекция на ось Ox.</span><span class="term-links"><a href="glossary.html#term-abscissa">В словарь <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span>, вторая - <span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">ордината</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Ордината</strong><button type="button" class="term-close" aria-label="Закрыть">&times;</button></span><span class="term-desc">Вторая координата точки: её проекция на ось Oy.</span><span class="term-links"><a href="glossary.html#term-ordinate">В словарь <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span>.</li>
+      <li><strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Вектор</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Вектор</strong><button type="button" class="term-close" aria-label="Закрыть">&times;</button></span><span class="term-desc">Направленный отрезок; его координаты показывают сдвиг по каждой оси.</span><span class="term-links"><a href="glossary.html#term-vector">В словарь <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> - направленный отрезок. Равные векторы имеют одинаковые длину и направление, где бы они ни стояли.
+      <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Коллинеарные</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Коллинеарные векторы</strong><button type="button" class="term-close" aria-label="Закрыть">&times;</button></span><span class="term-desc">Векторы, лежащие на параллельных прямых или на одной прямой.</span><span class="term-links"><a href="glossary.html#term-collinear">В словарь <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> векторы лежат на параллельных прямых (или на одной).</li>
+      <li><strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Скалярное произведение</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Скалярное произведение</strong><button type="button" class="term-close" aria-label="Закрыть">&times;</button></span><span class="term-desc">Число: произведение длин двух векторов на косинус угла между ними.</span><span class="term-links"><a href="glossary.html#term-dot">В словарь <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> двух векторов - <strong>число</strong>: произведение их длин на косинус угла между ними.</li>
+    </ul>
+
+    <span class="step">Шаг 2 · Закон</span>
+    <h2 id="law">3 · Законы координат <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-vector">
+      <p class="law-name">Координаты вектора и середина отрезка</p>
+      <div class="math-block" data-tex="\overrightarrow{AB} = (x_B - x_A;\ y_B - y_A;\ z_B - z_A),\qquad M = \left(\frac{x_A + x_B}{2};\ \frac{y_A + y_B}{2};\ \frac{z_A + z_B}{2}\right)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mover><mrow><mi>A</mi><mi>B</mi></mrow><mo>&#x02192;</mo></mover><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><msub><mi>x</mi><mi>B</mi></msub><mo>&#x02212;</mo><msub><mi>x</mi><mi>A</mi></msub><mi>;</mi><mtext>&#x000A0;</mtext><msub><mi>y</mi><mi>B</mi></msub><mo>&#x02212;</mo><msub><mi>y</mi><mi>A</mi></msub><mi>;</mi><mtext>&#x000A0;</mtext><msub><mi>z</mi><mi>B</mi></msub><mo>&#x02212;</mo><msub><mi>z</mi><mi>A</mi></msub><mo stretchy="false">&#x00029;</mo><mo>&#x0002C;</mo><mspace width="2em" /><mi>M</mi><mo>&#x0003D;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mfrac><mrow><msub><mi>x</mi><mi>A</mi></msub><mo>&#x0002B;</mo><msub><mi>x</mi><mi>B</mi></msub></mrow><mrow><mn>2</mn></mrow></mfrac><mi>;</mi><mtext>&#x000A0;</mtext><mfrac><mrow><msub><mi>y</mi><mi>A</mi></msub><mo>&#x0002B;</mo><msub><mi>y</mi><mi>B</mi></msub></mrow><mrow><mn>2</mn></mrow></mfrac><mi>;</mi><mtext>&#x000A0;</mtext><mfrac><mrow><msub><mi>z</mi><mi>A</mi></msub><mo>&#x0002B;</mo><msub><mi>z</mi><mi>B</mi></msub></mrow><mrow><mn>2</mn></mrow></mfrac><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow></mrow><annotation encoding="application/x-tex">\overrightarrow{AB} = (x_B - x_A;\ y_B - y_A;\ z_B - z_A),\qquad M = \left(\frac{x_A + x_B}{2};\ \frac{y_A + y_B}{2};\ \frac{z_A + z_B}{2}\right)</annotation></semantics></math></div>
+    </div>
+    <div class="corollary" id="cor-line" data-law="law-vector">
+      <p class="corollary-of">Следствие закона <a href="#law-vector">«Координаты вектора и середина отрезка»</a></p>
+      <p class="corollary-name">Уравнение прямой</p>
+      <div class="math-block" data-tex="y = kx + b,\qquad k = \frac{y_B - y_A}{x_B - x_A}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><mi>k</mi><mi>x</mi><mo>&#x0002B;</mo><mi>b</mi><mo>&#x0002C;</mo><mspace width="2em" /><mi>k</mi><mo>&#x0003D;</mo><mfrac><mrow><msub><mi>y</mi><mi>B</mi></msub><mo>&#x02212;</mo><msub><mi>y</mi><mi>A</mi></msub></mrow><mrow><msub><mi>x</mi><mi>B</mi></msub><mo>&#x02212;</mo><msub><mi>x</mi><mi>A</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">y = kx + b,\qquad k = \frac{y_B - y_A}{x_B - x_A}</annotation></semantics></math></div>
+      <p>Невертикальная прямая имеет уравнение y = kx + b: k - угловой коэффициент, b - точка пересечения с осью y. Если k > 0, прямая образует острый угол с положительным направлением оси x; прямые с равными k параллельны; прямая y = kx проходит через начало координат.</p>
+      <!-- fig:12-cor-line -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 210" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Прямая y = kx + b в координатах. Она пересекает ось y в точке, отмеченной b. Ступенька под прямой: шаг 1 вправо - подъём k вверх.">
+        <line x1="20.0" y1="166.0" x2="306.0" y2="166.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="306.0,166.0 299.6,168.7 299.6,163.3" fill="currentColor"/>
+        <line x1="73.6" y1="194.0" x2="73.6" y2="12.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="73.6,12.0 76.4,18.4 70.9,18.4" fill="currentColor"/>
+        <text x="302.0" y="182.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <text x="81.6" y="24.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <polyline points="20.0,134.5 22.4,133.6 24.8,132.6 27.1,131.7 29.5,130.8 31.9,129.8 34.3,128.9 36.7,128.0 39.1,127.0 41.5,126.1 43.8,125.2 46.2,124.2 48.6,123.3 51.0,122.4 53.4,121.4 55.8,120.5 58.1,119.6 60.5,118.6 62.9,117.7 65.3,116.8 67.7,115.8 70.1,114.9 72.4,114.0 74.8,113.0 77.2,112.1 79.6,111.2 82.0,110.2 84.4,109.3 86.7,108.4 89.1,107.4 91.5,106.5 93.9,105.6 96.3,104.6 98.7,103.7 101.0,102.8 103.4,101.8 105.8,100.9 108.2,100.0 110.6,99.0 113.0,98.1 115.3,97.2 117.7,96.2 120.1,95.3 122.5,94.4 124.9,93.4 127.2,92.5 129.6,91.6 132.0,90.6 134.4,89.7 136.8,88.8 139.2,87.8 141.6,86.9 143.9,86.0 146.3,85.0 148.7,84.1 151.1,83.2 153.5,82.2 155.8,81.3 158.2,80.4 160.6,79.4 163.0,78.5 165.4,77.6 167.8,76.6 170.2,75.7 172.5,74.8 174.9,73.8 177.3,72.9 179.7,72.0 182.1,71.0 184.5,70.1 186.8,69.2 189.2,68.2 191.6,67.3 194.0,66.4 196.4,65.4 198.8,64.5 201.1,63.6 203.5,62.6 205.9,61.7 208.3,60.8 210.7,59.8 213.0,58.9 215.4,58.0 217.8,57.0 220.2,56.1 222.6,55.2 225.0,54.2 227.4,53.3 229.7,52.4 232.1,51.4 234.5,50.5 236.9,49.6 239.3,48.6 241.6,47.7 244.0,46.8 246.4,45.8 248.8,44.9 251.2,44.0 253.6,43.0 255.9,42.1 258.3,41.2 260.7,40.2 263.1,39.3 265.5,38.4 267.9,37.4 270.2,36.5 272.6,35.6 275.0,34.6 277.4,33.7 279.8,32.8 282.2,31.8 284.6,30.9 286.9,30.0 289.3,29.0 291.7,28.1 294.1,27.2 296.5,26.2 298.8,25.3 301.2,24.4 303.6,23.4 306.0,22.5" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="2" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="73.6" cy="113.5" r="3.5" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="65.6" y="107.5" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic" style="fill:var(--acc)">b</text>
+        <line x1="180.9" y1="71.5" x2="225.6" y2="71.5" stroke="currentColor" stroke-width="1.4" opacity="1.0"/>
+        <line x1="225.6" y1="71.5" x2="225.6" y2="54.0" stroke="currentColor" stroke-width="1.4" opacity="1.0"/>
+        <text x="203.2" y="88.5" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">1</text>
+        <text x="232.6" y="67.8" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">k</text>
+        <text x="91.5" y="26.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic" style="fill:var(--acc)">y = kx + b</text>
+      </svg>
+      <p class="dim">Рисунок 59. Следствие: b - точка пересечения с осью y, k - подъём прямой на один шаг вправо.</p>
+    </div>
+    <!-- /fig:12-cor-line -->
+      <p><strong>Почему так.</strong> Вектор AB = (x_B − x_A; y_B − y_A) задаёт направление прямой: на каждую единицу вправо она поднимается на k = Δy/Δx, и это число одинаково для любых двух её точек. При x = 0 имеем y = b. Одинаковое направление - одинаковое k, поэтому прямые с равными k параллельны. Замена x на −x отражает прямую относительно оси y: y = kx + b переходит в y = −kx + b.</p>
+    </div>
+    <div class="law" id="law-distance">
+      <p class="law-name">Расстояние между точками</p>
+      <div class="math-block" data-tex="AB = \sqrt{(x_B - x_A)^2 + (y_B - y_A)^2 + (z_B - z_A)^2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mi>B</mi><mo>&#x0003D;</mo><msqrt><mrow><mo stretchy="false">&#x00028;</mo><msub><mi>x</mi><mi>B</mi></msub><mo>&#x02212;</mo><msub><mi>x</mi><mi>A</mi></msub><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0002B;</mo><mo stretchy="false">&#x00028;</mo><msub><mi>y</mi><mi>B</mi></msub><mo>&#x02212;</mo><msub><mi>y</mi><mi>A</mi></msub><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0002B;</mo><mo stretchy="false">&#x00028;</mo><msub><mi>z</mi><mi>B</mi></msub><mo>&#x02212;</mo><msub><mi>z</mi><mi>A</mi></msub><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">AB = \sqrt{(x_B - x_A)^2 + (y_B - y_A)^2 + (z_B - z_A)^2}</annotation></semantics></math></div>
+      <p>На плоскости третьего слагаемого нет.</p>
+    </div>
+    <div class="law" id="law-dot">
+      <p class="law-name">Скалярное произведение</p>
+      <div class="math-block" data-tex="\vec a \cdot \vec b = x_1x_2 + y_1y_2 + z_1z_2 = |\vec a|\,|\vec b|\cos\varphi"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mover><mi>a</mi><mo stretchy="true">&#x02192;</mo></mover><mo>&#x000B7;</mo><mover><mi>b</mi><mo stretchy="true">&#x02192;</mo></mover><mo>&#x0003D;</mo><msub><mi>x</mi><mn>1</mn></msub><msub><mi>x</mi><mn>2</mn></msub><mo>&#x0002B;</mo><msub><mi>y</mi><mn>1</mn></msub><msub><mi>y</mi><mn>2</mn></msub><mo>&#x0002B;</mo><msub><mi>z</mi><mn>1</mn></msub><msub><mi>z</mi><mn>2</mn></msub><mo>&#x0003D;</mo><mo stretchy="false">&#x0007C;</mo><mover><mi>a</mi><mo stretchy="true">&#x02192;</mo></mover><mo stretchy="false">&#x0007C;</mo><mspace width="0.167em" /><mo stretchy="false">&#x0007C;</mo><mover><mi>b</mi><mo stretchy="true">&#x02192;</mo></mover><mo stretchy="false">&#x0007C;</mo><mi>cos</mi><mi>&#x003C6;</mi></mrow><annotation encoding="application/x-tex">\vec a \cdot \vec b = x_1x_2 + y_1y_2 + z_1z_2 = |\vec a|\,|\vec b|\cos\varphi</annotation></semantics></math></div>
+      <p>Векторы перпендикулярны тогда и только тогда, когда скалярное произведение равно нулю. Коллинеарны - когда их
+      координаты пропорциональны.</p>
+    </div>
+    <div class="law" id="law-circle">
+      <p class="law-name">Уравнение окружности и сферы</p>
+      <div class="math-block" data-tex="(x - a)^2 + (y - b)^2 = R^2,\qquad (x - a)^2 + (y - b)^2 + (z - c)^2 = R^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mi>a</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0002B;</mo><mo stretchy="false">&#x00028;</mo><mi>y</mi><mo>&#x02212;</mo><mi>b</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>R</mi><mn>2</mn></msup><mo>&#x0002C;</mo><mspace width="2em" /><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mi>a</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0002B;</mo><mo stretchy="false">&#x00028;</mo><mi>y</mi><mo>&#x02212;</mo><mi>b</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0002B;</mo><mo stretchy="false">&#x00028;</mo><mi>z</mi><mo>&#x02212;</mo><mi>c</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>R</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(x - a)^2 + (y - b)^2 = R^2,\qquad (x - a)^2 + (y - b)^2 + (z - c)^2 = R^2</annotation></semantics></math></div>
+      <p>Центр <span class="math" data-tex="(a;\ b)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mi>;</mi><mtext>&#x000A0;</mtext><mi>b</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(a;\ b)</annotation></semantics></math></span> или <span class="math" data-tex="(a;\ b;\ c)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mi>;</mi><mtext>&#x000A0;</mtext><mi>b</mi><mi>;</mi><mtext>&#x000A0;</mtext><mi>c</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(a;\ b;\ c)</annotation></semantics></math></span>, радиус R.</p>
+    </div>
+
+    <span class="step">Шаг 3 · Почему так</span>
+    <h2 id="why">4 · Откуда формулы <a class="anchor-link" href="#why">#</a></h2>
+    <p><strong>Расстояние.</strong> Разности координат - катеты прямоугольного треугольника, отрезок AB - его гипотенуза. Это
+    теорема Пифагора (блок 11). В пространстве её применяют дважды: сначала к диагонали основания, потом к высоте.</p>
+    <!-- fig:12-distance -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 220" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Точки A(1; 2) и B(4; 6). Разности координат 3 и 4 - катеты прямоугольного треугольника, отрезок AB - гипотенуза: AB = √(3² + 4²) = 5.">
+        <line x1="24.0" y1="187.3" x2="284.0" y2="187.3" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="284.0,187.3 277.6,190.1 277.6,184.6" fill="currentColor"/>
+        <line x1="45.7" y1="200.0" x2="45.7" y2="10.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="45.7,10.0 48.4,16.4 42.9,16.4" fill="currentColor"/>
+        <text x="280.0" y="203.3" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <text x="53.7" y="22.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <line x1="89.0" y1="184.3" x2="89.0" y2="190.3" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="89.0" y="203.3" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">1</text>
+        <line x1="219.0" y1="184.3" x2="219.0" y2="190.3" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="219.0" y="203.3" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">4</text>
+        <line x1="42.7" y1="136.7" x2="48.7" y2="136.7" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="39.7" y="140.7" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">2</text>
+        <line x1="42.7" y1="35.3" x2="48.7" y2="35.3" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="39.7" y="39.3" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">6</text>
+        <polygon points="89.0,136.7 219.0,136.7 219.0,35.3" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3" opacity="1.0"/>
+        <line x1="89.0" y1="136.7" x2="219.0" y2="35.3" stroke="currentColor" stroke-width="2.2" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="89.0" cy="136.7" r="4" fill="currentColor"/>
+        <circle cx="219.0" cy="35.3" r="4" fill="currentColor"/>
+        <text x="85.0" y="154.7" fill="currentColor" font-size="13" opacity="1.0" font-weight="700">A</text>
+        <text x="227.0" y="39.3" fill="currentColor" font-size="13" opacity="1.0" font-weight="700">B</text>
+        <text x="154.0" y="152.7" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-weight="700">3</text>
+        <text x="227.0" y="90.0" fill="currentColor" font-size="13" opacity="1.0" font-weight="700">4</text>
+        <text x="141.0" y="75.9" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-weight="700" style="fill:var(--acc)">5</text>
+      </svg>
+      <p class="dim">Рисунок 60. Расстояние между точками - теорема Пифагора: √(3² + 4²) = 5.</p>
+    </div>
+    <!-- /fig:12-distance -->
+    <p><strong>Окружность.</strong> Окружность - множество точек на расстоянии R от центра. Запишите это расстояние формулой и возведите в
+    квадрат - получится уравнение окружности.</p>
+    <p><strong>Скалярное произведение.</strong> Примените теорему косинусов к треугольнику, построенному на векторах
+    <span class="math" data-tex="\vec a"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mi>a</mi><mo stretchy="true">&#x02192;</mo></mover></mrow><annotation encoding="application/x-tex">\vec a</annotation></semantics></math></span> и <span class="math" data-tex="\vec b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mi>b</mi><mo stretchy="true">&#x02192;</mo></mover></mrow><annotation encoding="application/x-tex">\vec b</annotation></semantics></math></span>, и распишите длины через координаты: квадраты сократятся, и
+    останется <span class="math" data-tex="x_1x_2 + y_1y_2 + z_1z_2 = |\vec a||\vec b|\cos\varphi"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><msub><mi>x</mi><mn>2</mn></msub><mo>&#x0002B;</mo><msub><mi>y</mi><mn>1</mn></msub><msub><mi>y</mi><mn>2</mn></msub><mo>&#x0002B;</mo><msub><mi>z</mi><mn>1</mn></msub><msub><mi>z</mi><mn>2</mn></msub><mo>&#x0003D;</mo><mo stretchy="false">&#x0007C;</mo><mover><mi>a</mi><mo stretchy="true">&#x02192;</mo></mover><mo stretchy="false">&#x0007C;</mo><mo stretchy="false">&#x0007C;</mo><mover><mi>b</mi><mo stretchy="true">&#x02192;</mo></mover><mo stretchy="false">&#x0007C;</mo><mi>cos</mi><mi>&#x003C6;</mi></mrow><annotation encoding="application/x-tex">x_1x_2 + y_1y_2 + z_1z_2 = |\vec a||\vec b|\cos\varphi</annotation></semantics></math></span>. При угле 90° косинус ноль -
+    отсюда условие перпендикулярности.</p>
+
+    <span class="step">Шаг 4 · Границы</span>
+    <h2 id="limits">5 · Где законы ломаются <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-order">
+      <p><strong>Конец минус начало.</strong> <span class="math" data-tex="\overrightarrow{BA} = -\overrightarrow{AB}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mrow><mi>B</mi><mi>A</mi></mrow><mo>&#x02192;</mo></mover><mo>&#x0003D;</mo><mo>&#x02212;</mo><mover><mrow><mi>A</mi><mi>B</mi></mrow><mo>&#x02192;</mo></mover></mrow><annotation encoding="application/x-tex">\overrightarrow{BA} = -\overrightarrow{AB}</annotation></semantics></math></span>: переставив точки,
+      получишь противоположный вектор.</p>
+    </div>
+    <div class="limit" id="limit-number">
+      <p><strong>Скалярное произведение - число, а не вектор.</strong> Его нельзя «прибавить к вектору», а его знак показывает угол:
+      положительный - острый, отрицательный - тупой.</p>
+    </div>
+    <div class="limit" id="limit-radius">
+      <p><strong>Справа в уравнении окружности - квадрат радиуса.</strong> Для <span class="math" data-tex="(x - 3)^2 + (y + 1)^2 = 16"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mn>3</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0002B;</mo><mo stretchy="false">&#x00028;</mo><mi>y</mi><mo>&#x0002B;</mo><mn>1</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><mn>16</mn></mrow><annotation encoding="application/x-tex">(x - 3)^2 + (y + 1)^2 = 16</annotation></semantics></math></span>
+      радиус 4, а центр <span class="math" data-tex="(3;\ -1)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mn>3</mn><mi>;</mi><mtext>&#x000A0;</mtext><mo>&#x02212;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(3;\ -1)</annotation></semantics></math></span>: знаки в скобках обратные, как при сдвиге графика (блок 5).</p>
+    </div>
+
+    <span class="step">Шаг 5 · Применение</span>
+    <h2 id="apply">6 · Задачи в форме НМТ <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="Б" data-limit="">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p>Найдите расстояние между точками <span class="math" data-tex="A(1;\ 2)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>A</mi><mo stretchy="false">&#x00028;</mo><mn>1</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>2</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">A(1;\ 2)</annotation></semantics></math></span> и <span class="math" data-tex="B(4;\ 6)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>B</mi><mo stretchy="false">&#x00028;</mo><mn>4</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>6</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">B(4;\ 6)</annotation></semantics></math></span>.</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · 7</button>
+        <button type="button" data-opt="Б">Б · 5</button>
+        <button type="button" data-opt="В">В · 25</button>
+        <button type="button" data-opt="Г">Г · √7</button>
+        <button type="button" data-opt="Д">Д · 1</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#law-distance">расстояние между точками</a>.</p>
+      <div class="solution"><span class="math" data-tex="\sqrt{3^2 + 4^2} = 5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msqrt><mrow><msup><mn>3</mn><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mn>4</mn><mn>2</mn></msup></mrow></msqrt><mo>&#x0003D;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">\sqrt{3^2 + 4^2} = 5</annotation></semantics></math></span>. 7 - сумма разностей, 25 - забытый корень.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="2" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Точка M - середина отрезка AB, <span class="math" data-tex="A(-2;\ 5)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>A</mi><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mn>2</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>5</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">A(-2;\ 5)</annotation></semantics></math></span>, <span class="math" data-tex="B(6;\ -1)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>B</mi><mo stretchy="false">&#x00028;</mo><mn>6</mn><mi>;</mi><mtext>&#x000A0;</mtext><mo>&#x02212;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">B(6;\ -1)</annotation></semantics></math></span>. Найдите абсциссу точки M.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-vector">середина отрезка</a>.</p>
+      <div class="solution"><span class="math" data-tex="\frac{-2 + 6}{2} = 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mo>&#x02212;</mo><mn>2</mn><mo>&#x0002B;</mo><mn>6</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x0003D;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\frac{-2 + 6}{2} = 2</annotation></semantics></math></span>. Середина - среднее арифметическое концов.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="0" data-limit="limit-number">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Найдите скалярное произведение векторов <span class="math" data-tex="\vec a(2;\ -3;\ 1)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mi>a</mi><mo stretchy="true">&#x02192;</mo></mover><mo stretchy="false">&#x00028;</mo><mn>2</mn><mi>;</mi><mtext>&#x000A0;</mtext><mo>&#x02212;</mo><mn>3</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>1</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">\vec a(2;\ -3;\ 1)</annotation></semantics></math></span> и
+      <span class="math" data-tex="\vec b(4;\ 1;\ -5)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mi>b</mi><mo stretchy="true">&#x02192;</mo></mover><mo stretchy="false">&#x00028;</mo><mn>4</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>1</mn><mi>;</mi><mtext>&#x000A0;</mtext><mo>&#x02212;</mo><mn>5</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">\vec b(4;\ 1;\ -5)</annotation></semantics></math></span>.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-dot">скалярное произведение</a>.</p>
+      <div class="solution"><span class="math" data-tex="8 - 3 - 5 = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>8</mn><mo>&#x02212;</mo><mn>3</mn><mo>&#x02212;</mo><mn>5</mn><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">8 - 3 - 5 = 0</annotation></semantics></math></span>: векторы перпендикулярны, хотя на рисунке этого не видно.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="Г" data-limit="limit-radius">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p>Найдите радиус окружности <span class="math" data-tex="(x - 3)^2 + (y + 1)^2 = 16"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mn>3</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0002B;</mo><mo stretchy="false">&#x00028;</mo><mi>y</mi><mo>&#x0002B;</mo><mn>1</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><mn>16</mn></mrow><annotation encoding="application/x-tex">(x - 3)^2 + (y + 1)^2 = 16</annotation></semantics></math></span>.</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · 16</button>
+        <button type="button" data-opt="Б">Б · 3</button>
+        <button type="button" data-opt="В">В · 8</button>
+        <button type="button" data-opt="Г">Г · 4</button>
+        <button type="button" data-opt="Д">Д · 1</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#law-circle">уравнение окружности</a>.</p>
+      <div class="solution"><span class="math" data-tex="R^2 = 16"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mn>16</mn></mrow><annotation encoding="application/x-tex">R^2 = 16</annotation></semantics></math></span>, R = 4. 16 - забытый квадрат, 8 - «разделили на 2».</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="6" data-limit="" data-claim="12-task-parallelogram">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>ABCD - параллелограмм, A(1; 1), B(4; 2), C(5; 5). Найдите сумму координат вершины D.</p>
+      <!-- fig:12-task-parallelogram -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 220" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Координатная плоскость с вершинами параллелограмма A(1; 1), B(4; 2), C(5; 5). Четвёртая вершина D отмечена без координат; стороны CD и DA - пунктиром.">
+        <line x1="24.0" y1="187.7" x2="294.0" y2="187.7" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="294.0,187.7 287.6,190.4 287.6,184.9" fill="currentColor"/>
+        <line x1="43.3" y1="202.0" x2="43.3" y2="10.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="43.3,10.0 46.0,16.4 40.6,16.4" fill="currentColor"/>
+        <text x="290.0" y="203.7" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <text x="51.3" y="22.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <line x1="81.9" y1="184.7" x2="81.9" y2="190.7" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="81.9" y="203.7" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">1</text>
+        <line x1="197.6" y1="184.7" x2="197.6" y2="190.7" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="197.6" y="203.7" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">4</text>
+        <line x1="236.1" y1="184.7" x2="236.1" y2="190.7" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="236.1" y="203.7" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">5</text>
+        <line x1="40.3" y1="159.0" x2="46.3" y2="159.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="37.3" y="163.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">1</text>
+        <line x1="40.3" y1="130.4" x2="46.3" y2="130.4" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="37.3" y="134.4" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">2</text>
+        <line x1="40.3" y1="44.4" x2="46.3" y2="44.4" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="37.3" y="48.4" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">5</text>
+        <polyline points="120.4,73.0 81.9,159.0 197.6,130.4 236.1,44.4" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="2" opacity="1.0"/>
+        <polyline points="236.1,44.4 120.4,73.0 81.9,159.0" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="2" stroke-dasharray="6 4" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="81.9" cy="159.0" r="4" fill="currentColor"/>
+        <text x="87.9" y="175.0" fill="currentColor" font-size="13" opacity="1.0">A(1; 1)</text>
+        <circle cx="197.6" cy="130.4" r="4" fill="currentColor"/>
+        <text x="205.6" y="144.4" fill="currentColor" font-size="13" opacity="1.0">B(4; 2)</text>
+        <circle cx="236.1" cy="44.4" r="4" fill="currentColor"/>
+        <text x="226.1" y="34.4" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end">C(5; 5)</text>
+        <circle cx="120.4" cy="73.0" r="4" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="104.4" y="67.0" fill="currentColor" font-size="13" opacity="1.0" font-weight="700">D</text>
+      </svg>
+      <p class="dim">Рисунок 61. К задаче: параллелограмм ABCD, у которого неизвестна вершина D.</p>
+    </div>
+    <!-- /fig:12-task-parallelogram -->
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-vector">координаты вектора</a>: противоположные стороны параллелограмма - равные векторы.</p>
+      <div class="solution">В параллелограмме вектор AD равен вектору BC = (5 − 4; 5 − 2) = (1; 3). Тогда D = (1 + 1; 1 + 3) = (2; 4), сумма координат 6.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="10" data-limit="" data-claim="12-read-dist">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p class="task-class"><strong>Данные на рисунке · прочитать и применить.</strong> Числа для решения есть только на рисунке: сначала выпишите их, потом решайте.</p>
+      <p>Найдите расстояние между точками A и B, изображёнными на рисунке.</p>
+      <!-- fig:12-read-dist -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 230" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Координатная плоскость с точками A и B. От точек к осям проведён пунктир: точка A имеет абсциссу 1 и ординату 2, точка B - абсциссу 7 и ординату 10. На осях подписаны 1, 7 и 2, 10.">
+        <line x1="30.0" y1="194.0" x2="290.0" y2="194.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="290.0,194.0 283.6,196.7 283.6,191.3" fill="currentColor"/>
+        <line x1="56.0" y1="210.0" x2="56.0" y2="10.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="56.0,10.0 58.7,16.4 53.3,16.4" fill="currentColor"/>
+        <text x="286.0" y="210.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <text x="64.0" y="22.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <line x1="82.0" y1="191.0" x2="82.0" y2="197.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="82.0" y="210.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">1</text>
+        <line x1="238.0" y1="191.0" x2="238.0" y2="197.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="238.0" y="210.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">7</text>
+        <line x1="53.0" y1="162.0" x2="59.0" y2="162.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="50.0" y="166.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">2</text>
+        <line x1="53.0" y1="34.0" x2="59.0" y2="34.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="50.0" y="38.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">10</text>
+        <line x1="82.0" y1="194.0" x2="82.0" y2="162.0" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" opacity="0.7"/>
+        <line x1="56.0" y1="162.0" x2="82.0" y2="162.0" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" opacity="0.7"/>
+        <line x1="238.0" y1="194.0" x2="238.0" y2="34.0" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" opacity="0.7"/>
+        <line x1="56.0" y1="34.0" x2="238.0" y2="34.0" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" opacity="0.7"/>
+        <line x1="82.0" y1="162.0" x2="238.0" y2="34.0" stroke="currentColor" stroke-width="2" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="82.0" cy="162.0" r="4" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="92.0" y="166.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic" font-weight="700">A</text>
+        <circle cx="238.0" cy="34.0" r="4" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="248.0" y="38.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic" font-weight="700">B</text>
+      </svg>
+      <p class="dim">Рисунок 62. К задаче: две точки, координаты которых видны на осях.</p>
+    </div>
+    <!-- /fig:12-read-dist -->
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-distance">расстояние между точками</a>.</p>
+      <div class="solution">С рисунка: A(1; 2), B(7; 10). <span class="math" data-tex="AB = \sqrt{(7 - 1)^2 + (10 - 2)^2} = \sqrt{36 + 64} = 10"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>A</mi><mi>B</mi><mo>&#x0003D;</mo><msqrt><mrow><mo stretchy="false">&#x00028;</mo><mn>7</mn><mo>&#x02212;</mo><mn>1</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0002B;</mo><mo stretchy="false">&#x00028;</mo><mn>10</mn><mo>&#x02212;</mo><mn>2</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup></mrow></msqrt><mo>&#x0003D;</mo><msqrt><mrow><mn>36</mn><mo>&#x0002B;</mo><mn>64</mn></mrow></msqrt><mo>&#x0003D;</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">AB = \sqrt{(7 - 1)^2 + (10 - 2)^2} = \sqrt{36 + 64} = 10</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="В" data-limit="" data-claim="12-read-slope">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p class="task-class"><strong>Данные на рисунке · выбрать нужное.</strong> Числа есть только на рисунке, и среди них есть лишнее или ловушка: шаг сетки, шкала не от нуля. Выпишите только то, что нужно для решения.</p>
+      <p>Прямая на рисунке проходит через точки P и Q. Найдите её угловой коэффициент k.</p>
+      <!-- fig:12-read-slope -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 244" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Прямая проходит через точки P и Q. Клетки сетки квадратные на вид, но по оси x одна клетка - 2 единицы (подписано 2, 4, 6, 8), а по оси y - 1 единица (подписано 1, 2, 3, 4). Точка P имеет координаты (2; 1), точка Q - (6; 3).">
+        <line x1="90.0" y1="216.0" x2="90.0" y2="8.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <line x1="130.0" y1="216.0" x2="130.0" y2="8.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <line x1="170.0" y1="216.0" x2="170.0" y2="8.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <line x1="210.0" y1="216.0" x2="210.0" y2="8.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <line x1="30.0" y1="144.0" x2="250.0" y2="144.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <line x1="30.0" y1="104.0" x2="250.0" y2="104.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <line x1="30.0" y1="64.0" x2="250.0" y2="64.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <line x1="30.0" y1="24.0" x2="250.0" y2="24.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <line x1="30.0" y1="184.0" x2="250.0" y2="184.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="250.0,184.0 243.6,186.7 243.6,181.3" fill="currentColor"/>
+        <line x1="50.0" y1="216.0" x2="50.0" y2="8.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="50.0,8.0 52.7,14.4 47.3,14.4" fill="currentColor"/>
+        <text x="246.0" y="200.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <text x="58.0" y="20.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <line x1="90.0" y1="181.0" x2="90.0" y2="187.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="90.0" y="200.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">2</text>
+        <line x1="130.0" y1="181.0" x2="130.0" y2="187.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="130.0" y="200.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">4</text>
+        <line x1="170.0" y1="181.0" x2="170.0" y2="187.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="170.0" y="200.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">6</text>
+        <line x1="210.0" y1="181.0" x2="210.0" y2="187.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="210.0" y="200.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">8</text>
+        <line x1="47.0" y1="144.0" x2="53.0" y2="144.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="44.0" y="148.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">1</text>
+        <line x1="47.0" y1="104.0" x2="53.0" y2="104.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="44.0" y="108.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">2</text>
+        <line x1="47.0" y1="64.0" x2="53.0" y2="64.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="44.0" y="68.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">3</text>
+        <line x1="47.0" y1="24.0" x2="53.0" y2="24.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="44.0" y="28.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">4</text>
+        <polyline points="30.0,204.0 31.6,202.4 33.2,200.8 34.8,199.2 36.4,197.6 38.0,196.0 39.6,194.4 41.2,192.8 42.8,191.2 44.4,189.6 46.0,188.0 47.6,186.4 49.2,184.8 50.8,183.2 52.4,181.6 54.0,180.0 55.6,178.4 57.2,176.8 58.8,175.2 60.4,173.6 62.0,172.0 63.6,170.4 65.2,168.8 66.8,167.2 68.4,165.6 70.0,164.0 71.6,162.4 73.2,160.8 74.8,159.2 76.4,157.6 78.0,156.0 79.6,154.4 81.2,152.8 82.8,151.2 84.4,149.6 86.0,148.0 87.6,146.4 89.2,144.8 90.8,143.2 92.4,141.6 94.0,140.0 95.6,138.4 97.2,136.8 98.8,135.2 100.4,133.6 102.0,132.0 103.6,130.4 105.2,128.8 106.8,127.2 108.4,125.6 110.0,124.0 111.6,122.4 113.2,120.8 114.8,119.2 116.4,117.6 118.0,116.0 119.6,114.4 121.2,112.8 122.8,111.2 124.4,109.6 126.0,108.0 127.6,106.4 129.2,104.8 130.8,103.2 132.4,101.6 134.0,100.0 135.6,98.4 137.2,96.8 138.8,95.2 140.4,93.6 142.0,92.0 143.6,90.4 145.2,88.8 146.8,87.2 148.4,85.6 150.0,84.0 151.6,82.4 153.2,80.8 154.8,79.2 156.4,77.6 158.0,76.0 159.6,74.4 161.2,72.8 162.8,71.2 164.4,69.6 166.0,68.0 167.6,66.4 169.2,64.8 170.8,63.2 172.4,61.6 174.0,60.0 175.6,58.4 177.2,56.8 178.8,55.2 180.4,53.6 182.0,52.0 183.6,50.4 185.2,48.8 186.8,47.2 188.4,45.6 190.0,44.0 191.6,42.4 193.2,40.8 194.8,39.2 196.4,37.6 198.0,36.0 199.6,34.4 201.2,32.8 202.8,31.2 204.4,29.6 206.0,28.0 207.6,26.4 209.2,24.8 210.8,23.2 212.4,21.6 214.0,20.0 215.6,18.4 217.2,16.8 218.8,15.2 220.4,13.6 222.0,12.0" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="2" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="90.0" cy="144.0" r="4" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="86.0" y="134.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic" font-weight="700">P</text>
+        <circle cx="170.0" cy="64.0" r="4" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="166.0" y="54.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic" font-weight="700">Q</text>
+      </svg>
+      <p class="dim">Рисунок 63. К задаче: прямая на сетке, у которой шаг по осям разный.</p>
+    </div>
+    <!-- /fig:12-read-slope -->
+      <div class="opts">
+        <button type="button" data-opt="А">А · −2</button>
+        <button type="button" data-opt="Б">Б · −0,5</button>
+        <button type="button" data-opt="В">В · 0,5</button>
+        <button type="button" data-opt="Г">Г · 1</button>
+        <button type="button" data-opt="Д">Д · 2</button>
+      </div>
+      <p class="law-ref">Следствие: <a href="#cor-line">уравнение прямой</a>.</p>
+      <div class="solution">Шаг сетки по осям разный: по x клетка - 2, по y - 1. С рисунка P(2; 1), Q(6; 3). k = (3 − 1) : (6 − 2) = 0,5. На вид прямая идёт под углом 45°, и кто считает клетки, получит 1.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="30" data-limit="" data-claim="12-read-circle">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p class="task-class"><strong>Данные на рисунке · прочитать и связать.</strong> Числа есть только на рисунке, а прочитанное пойдёт в два закона: выпишите числа, потом назовите оба закона.</p>
+      <p>Уравнение окружности, изображённой на рисунке, имеет вид (x − a)² + (y − b)² = r². Найдите a + b + r².</p>
+      <!-- fig:12-read-circle -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 262" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Окружность с центром в точке C и точка M на окружности. От точек к осям проведён пунктир: центр C имеет координаты (2; 3), точка M - (5; 7). На осях подписаны 2, 5 и 3, 7.">
+        <line x1="22.0" y1="197.0" x2="295.0" y2="197.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="295.0,197.0 288.6,199.7 288.6,194.3" fill="currentColor"/>
+        <line x1="106.0" y1="251.6" x2="106.0" y2="8.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="106.0,8.0 108.7,14.4 103.3,14.4" fill="currentColor"/>
+        <text x="291.0" y="213.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <text x="114.0" y="20.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <line x1="148.0" y1="194.0" x2="148.0" y2="200.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="148.0" y="213.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">2</text>
+        <line x1="211.0" y1="194.0" x2="211.0" y2="200.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="211.0" y="213.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">5</text>
+        <line x1="103.0" y1="134.0" x2="109.0" y2="134.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="100.0" y="138.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">3</text>
+        <line x1="103.0" y1="50.0" x2="109.0" y2="50.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="100.0" y="54.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">7</text>
+        <circle cx="148.0" cy="134.0" r="105.0" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-width="1.8" style="stroke:var(--acc)"/>
+        <line x1="148.0" y1="197.0" x2="148.0" y2="134.0" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" opacity="0.7"/>
+        <line x1="106.0" y1="134.0" x2="148.0" y2="134.0" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" opacity="0.7"/>
+        <circle cx="148.0" cy="134.0" r="4" fill="currentColor" style="fill:var(--acc)"/>
+        <line x1="211.0" y1="197.0" x2="211.0" y2="50.0" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" opacity="0.7"/>
+        <line x1="106.0" y1="50.0" x2="211.0" y2="50.0" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" opacity="0.7"/>
+        <circle cx="211.0" cy="50.0" r="4" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="156.0" y="126.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic" font-weight="700">C</text>
+        <text x="219.0" y="44.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic" font-weight="700">M</text>
+      </svg>
+      <p class="dim">Рисунок 64. К задаче: окружность, её центр и точка на окружности.</p>
+    </div>
+    <!-- /fig:12-read-circle -->
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Законы: <a href="#law-circle">уравнение окружности</a> и <a href="#law-distance">расстояние между точками</a>.</p>
+      <div class="solution">С рисунка: центр C(2; 3), точка окружности M(5; 7). Радиус - расстояние CM: r² = (5 − 2)² + (7 − 3)² = 9 + 16 = 25. Тогда a + b + r² = 2 + 3 + 25 = 30.</div>
+    </div>
+
+    <span class="step">Шаг 6 · Обратный ход</span>
+    <h2 id="reverse">7 · Назови закон сам <a class="anchor-link" href="#reverse">#</a></h2>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="1" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>При каком значении m векторы <span class="math" data-tex="\vec a(2;\ m)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mi>a</mi><mo stretchy="true">&#x02192;</mo></mover><mo stretchy="false">&#x00028;</mo><mn>2</mn><mi>;</mi><mtext>&#x000A0;</mtext><mi>m</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">\vec a(2;\ m)</annotation></semantics></math></span> и <span class="math" data-tex="\vec b(3;\ -6)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mi>b</mi><mo stretchy="true">&#x02192;</mo></mover><mo stretchy="false">&#x00028;</mo><mn>3</mn><mi>;</mi><mtext>&#x000A0;</mtext><mo>&#x02212;</mo><mn>6</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">\vec b(3;\ -6)</annotation></semantics></math></span>
+      перпендикулярны?</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-dot">скалярное произведение равно нулю</a>.</p>
+      <div class="solution"><span class="math" data-tex="6 - 6m = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>6</mn><mo>&#x02212;</mo><mn>6</mn><mi>m</mi><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">6 - 6m = 0</annotation></semantics></math></span>, m = 1. «Перпендикулярны» в условии - это уравнение из блока 4.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="3" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Найдите длину отрезка с концами <span class="math" data-tex="A(1;\ 2;\ 3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>A</mi><mo stretchy="false">&#x00028;</mo><mn>1</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>2</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">A(1;\ 2;\ 3)</annotation></semantics></math></span> и <span class="math" data-tex="B(3;\ 4;\ 4)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>B</mi><mo stretchy="false">&#x00028;</mo><mn>3</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>4</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>4</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">B(3;\ 4;\ 4)</annotation></semantics></math></span>.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-distance">расстояние в пространстве</a>.</p>
+      <div class="solution"><span class="math" data-tex="\sqrt{4 + 4 + 1} = 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msqrt><mrow><mn>4</mn><mo>&#x0002B;</mo><mn>4</mn><mo>&#x0002B;</mo><mn>1</mn></mrow></msqrt><mo>&#x0003D;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">\sqrt{4 + 4 + 1} = 3</annotation></semantics></math></span>. Та же формула, что и на плоскости, с одним слагаемым больше.</div>
+    </div>
+
+    <h2 id="error">8 · Найди ошибку в чужом решении <a class="anchor-link" href="#error">#</a></h2>
+    <p>Иван находит вектор <span class="math" data-tex="\overrightarrow{AB}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mrow><mi>A</mi><mi>B</mi></mrow><mo>&#x02192;</mo></mover></mrow><annotation encoding="application/x-tex">\overrightarrow{AB}</annotation></semantics></math></span> для <span class="math" data-tex="A(5;\ 1)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>A</mi><mo stretchy="false">&#x00028;</mo><mn>5</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>1</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">A(5;\ 1)</annotation></semantics></math></span>,
+    <span class="math" data-tex="B(2;\ 4)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>B</mi><mo stretchy="false">&#x00028;</mo><mn>2</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>4</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">B(2;\ 4)</annotation></semantics></math></span>: «<span class="math" data-tex="\overrightarrow{AB} = (5 - 2;\ 1 - 4) = (3;\ -3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mrow><mi>A</mi><mi>B</mi></mrow><mo>&#x02192;</mo></mover><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mn>5</mn><mo>&#x02212;</mo><mn>2</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>1</mn><mo>&#x02212;</mo><mn>4</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mn>3</mn><mi>;</mi><mtext>&#x000A0;</mtext><mo>&#x02212;</mo><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">\overrightarrow{AB} = (5 - 2;\ 1 - 4) = (3;\ -3)</annotation></semantics></math></span>».</p>
+    <details>
+      <summary>Где ошибка?</summary>
+      <p>Иван вычел конец из начала и получил вектор <span class="math" data-tex="\overrightarrow{BA}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mrow><mi>B</mi><mi>A</mi></mrow><mo>&#x02192;</mo></mover></mrow><annotation encoding="application/x-tex">\overrightarrow{BA}</annotation></semantics></math></span>. Правильно
+      <span class="math" data-tex="(2 - 5;\ 4 - 1) = (-3;\ 3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mn>2</mn><mo>&#x02212;</mo><mn>5</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>4</mn><mo>&#x02212;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mn>3</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(2 - 5;\ 4 - 1) = (-3;\ 3)</annotation></semantics></math></span> (<a href="#limit-order">первая граница</a>). Длина та же, направление противоположное.</p>
+    </details>
+    <!-- sources -->
+    <h2 id="external">9 · Ссылки на задания из внешних источников <a class="anchor-link" href="#external">#</a></h2>
+    <p class="dim">Реальные задания с других сайтов подготовки к НМТ, которые опираются на законы этого блока. Условие читай на сайте источника по ссылке, разметка законами - наша. Источники и годы включаются и выключаются в настройках (шестерёнка вверху).</p>
+    <p class="dim ext-off" hidden>Все внешние источники выключены в настройках.</p>
+    <div class="ext-source" data-ext-source="nmt-ua" id="ext-nmt-ua">
+      <h3 class="ext-head">НМТ на сайте ЗНО-ОНЛАЙН (zno.osvita.ua)</h3>
+      <p class="dim ext-lead">Задания основных сессий НМТ 2024-2026 с сайта ЗНО-ОНЛАЙН, по годам. Каждый год включается отдельно.</p>
+      <div class="ext" data-ext="nmt-ua:2026" id="ext-nmt-ua-2026">
+        <h4>НМТ 2026</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q8" rel="noopener" target="_blank">1 сессия, задание 8</a> (с рисунком) - Координаты вектора и середина отрезка</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q8" rel="noopener" target="_blank">2 сессия, задание 8</a> - Координаты вектора и середина отрезка, Расстояние между точками</li>
+        </ul>
+      </div>
+      <div class="ext" data-ext="nmt-ua:2025" id="ext-nmt-ua-2025">
+        <h4>НМТ 2025</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q8" rel="noopener" target="_blank">1 сессия, задание 8</a> - Координаты вектора и середина отрезка</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q8" rel="noopener" target="_blank">2 сессия, задание 8</a> (с рисунком) - Расстояние между точками</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q16" rel="noopener" target="_blank">2 сессия, задание 16</a> - Уравнение прямой</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q22" rel="noopener" target="_blank">2 сессия, задание 22</a> (с рисунком) - Уравнение окружности и сферы</li>
+        </ul>
+      </div>
+      <div class="ext" data-ext="nmt-ua:2024" id="ext-nmt-ua-2024">
+        <h4>НМТ 2024</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q21" rel="noopener" target="_blank">1 сессия, задание 21</a> - Расстояние между точками</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q21" rel="noopener" target="_blank">2 сессия, задание 21</a> - Расстояние между точками</li>
+        </ul>
       </div>
     </div>
+    <!-- /sources -->
+
+    <h2 id="artifacts">Что у тебя есть после этой страницы <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>Пифагор и теорема косинусов, записанные координатами.</strong> Расстояние, уравнения окружности и сферы - это Пифагор;
+      скалярное произведение - теорема косинусов; пространство отличается от плоскости только третьей координатой.</p>
+    </div>
+    <!-- freq -->
+    <p class="dim law-freq" data-tasks="10">Частота на этом сайте, а не на НМТ: на этой странице 10 задач тренажёра, и они опираются на такие законы: Расстояние между точками - 4, Координаты вектора и середина отрезка - 3, Скалярное произведение - 2, Уравнение окружности и сферы - 2. В реальных вариантах НМТ 2024-2026 этот блок нужен в 8 заданиях из 132: Координаты вектора и середина отрезка - 4, Расстояние между точками - 4, Уравнение окружности и сферы - 1.</p>
+    <!-- /freq -->
+    <p>Ты знаешь этот блок, если:</p>
+    <ol>
+      <li>решаешь 8 из 10 задач на координаты и векторы без подсказки;</li>
+      <li>можешь объяснить вслух, почему формула расстояния - это теорема Пифагора;</li>
+      <li>находишь ошибку в чужом решении, как у Ивана.</li>
+    </ol>
+  
+
+    <footer>
+      <nav class="pager" aria-label="Соседние темы">
+        <p class="pager-next">Следующая тема: <a href="13.html">Пространство: прямые, плоскости, тела</a></p>
+        <p class="pager-prev">Предыдущая тема: <a href="11.html">Измерения на плоскости</a></p>
+      </nav>
+      <p class="footer-note">Сайт серии AI Factory. Сделан той же оснасткой, что и остальные: обычный HTML и CSS, проверка на bash, публикация через GitHub Pages.</p>
+    </footer>
   </main>
 
 </div>
 </div>
-<script src="../assets/swa.js?v=1"></script>
-<script src="../assets/trainer.js?v=1"></script>
+<script src="../assets/swa.js?v=3"></script>
+<script src="../assets/trainer.js?v=3"></script>
+<script src="../assets/sources.js?v=3"></script>
+<script src="../assets/terms.js?v=3"></script>
+<script src="../assets/cp.js?v=3"></script>
 </body>
 </html>

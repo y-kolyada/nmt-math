@@ -6,22 +6,30 @@
 // После второй ошибки появляется кнопка «Показати розбір»: застрять навсегда
 // на одной задаче хуже, чем увидеть разбор.
 (function () {
+  // Messages in the language of the page: the trainer is the same file on
+  // every page, the words are not.
+  const SAY = {
+    uk: { right: 'Правильно.', wrong: 'Ні. Перечитай', law: 'закон', and: ' і його ', limits: 'межі', again: ', потім спробуй ще раз.', reveal: 'Показати розбір' },
+    ru: { right: 'Правильно.', wrong: 'Нет. Перечитай', law: 'закон', and: ' и его ', limits: 'границы', again: ', потом попробуй ещё раз.', reveal: 'Показать разбор' },
+    en: { right: 'Correct.', wrong: 'No. Reread the', law: 'law', and: ' and its ', limits: 'limits', again: ', then try again.', reveal: 'Show the solution' },
+  };
+  const say = SAY[document.documentElement.lang] || SAY.uk;
   const norm = (s) => s.trim().replace(',', '.').replace(/[\u2212\u2013]/g, '-').replace(/\s+/g, '');
 
   function verdict(task, ok) {
     let v = task.querySelector('.verdict');
     if (!v) { v = document.createElement('p'); v.className = 'verdict'; task.querySelector('.law-ref').before(v); }
     v.className = 'verdict ' + (ok ? 'right' : 'wrong');
-    if (ok) { v.textContent = 'Правильно.'; task.classList.add('solved'); return; }
+    if (ok) { v.textContent = say.right; task.classList.add('solved'); return; }
     const tries = (Number(task.dataset.tries) || 0) + 1;
     task.dataset.tries = String(tries);
     const limit = task.dataset.limit;
     const law = task.querySelector('.law-ref a');
-    v.innerHTML = 'Ні. Перечитай ' + (law ? '<a href="' + law.getAttribute('href') + '">закон</a>' : 'закон') +
-      (limit ? ' і його <a href="#' + limit + '">межі</a>' : '') + ', потім спробуй ще раз.';
+    v.innerHTML = say.wrong + ' ' + (law ? '<a href="' + law.getAttribute('href') + '">' + say.law + '</a>' : say.law) +
+      (limit ? say.and + '<a href="#' + limit + '">' + say.limits + '</a>' : '') + say.again;
     if (tries >= 2) {
       const b = document.createElement('button');
-      b.type = 'button'; b.className = 'reveal'; b.textContent = 'Показати розбір';
+      b.type = 'button'; b.className = 'reveal'; b.textContent = say.reveal;
       b.addEventListener('click', () => task.classList.add('solved'));
       v.append(b);
     }

@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en" data-site="nmt-math">
+<head>
+<meta charset="utf-8">
+<meta name="swa-sources" content="nmt-ua:2024 nmt-ua:2025 nmt-ua:2026">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Space: lines, planes, solids · nmt-math · ai|</title>
+<!-- meta: built by tools/build-meta.py - do not edit by hand -->
+<meta name="description" content="Plane geometry plus one more dimension.">
+<link rel="canonical" href="https://y-kolyada.github.io/nmt-math/en/13.html">
+<link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/13.html">
+<link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/13.html">
+<link rel="alternate" hreflang="en" href="https://y-kolyada.github.io/nmt-math/en/13.html">
+<link rel="alternate" hreflang="x-default" href="https://y-kolyada.github.io/nmt-math/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="nmt-math">
+<meta property="og:title" content="Space: lines, planes, solids">
+<meta property="og:description" content="Plane geometry plus one more dimension.">
+<meta property="og:url" content="https://y-kolyada.github.io/nmt-math/en/13.html">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Space: lines, planes, solids","description":"Plane geometry plus one more dimension.","url":"https://y-kolyada.github.io/nmt-math/en/13.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<!-- /meta -->
+<link rel="stylesheet" href="../assets/style.css?v=3">
+<link rel="stylesheet" href="../assets/study.css?v=3">
+<script>
+  (function() {
+    var s = document.documentElement.dataset.site || 'swa';
+    var t = localStorage.getItem('swa-' + s + '-theme');
+    if (t) document.documentElement.setAttribute('data-theme', t);
+    var f = localStorage.getItem('swa-' + s + '-font');
+    if (f) document.documentElement.setAttribute('data-font', f);
+  })();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+
+<header class="top">
+  <div class="brand-group">
+    <a class="home" href="index.html">
+      <span class="badge-ai">ai|</span>
+      <span class="sub-brand">nmt-math</span>
+    </a>
+    <div class="three" aria-hidden="true">law · <span class="topic">Mathematics</span> · limits · practice</div>
+  </div>
+  <div class="utility-tray" role="toolbar" aria-label="Display settings and language">
+    <nav class="lang-switcher" aria-label="Page language">
+      <a href="../uk/13.html" lang="uk" hreflang="uk" aria-label="Українська">UK</a>
+      <a href="../ru/13.html" lang="ru" hreflang="ru" aria-label="Русский">RU</a>
+      <a href="13.html" lang="en" hreflang="en" aria-label="English" class="active" aria-current="page">EN</a>
+    </nav>
+    <div class="font-scaler" role="group" aria-label="Font size">
+      <button type="button" class="font-btn font-s" data-size="s" title="Small font" aria-label="Small font">A</button>
+      <button type="button" class="font-btn font-m active" data-size="m" title="Standard font" aria-label="Standard font">A</button>
+      <button type="button" class="font-btn font-l" data-size="l" title="Large font" aria-label="Large font">A</button>
+    </div>
+    <button type="button" class="theme-toggle" id="themeToggle" title="Switch theme (day/night)" aria-label="Switch theme day/night">
+      <span class="theme-icon" aria-hidden="true"><svg class="icon" data-icon="sun" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="3.8"/><path d="M10 1.2v2.2M10 16.6v2.2M1.2 10h2.2M16.6 10h2.2M3.7 3.7l1.6 1.6M14.7 14.7l1.6 1.6M16.3 3.7l-1.6 1.6M5.3 14.7l-1.6 1.6"/></svg></span>
+    </button>
+  </div>
+</header>
+
+<div class="cols">
+
+  <nav class="contents" aria-label="Course blocks">
+    <ol>
+      <li class="group">Algebra and analysis</li>
+      <li><a href="01.html"><span class="num">1</span>Number, operations</a></li>
+      <li><a href="02.html"><span class="num">2</span>Ratio and percent</a></li>
+      <li><a href="03.html"><span class="num">3</span>Expressions</a></li>
+      <li><a href="04.html"><span class="num">4</span>Equations, inequalities</a></li>
+      <li><a href="05.html"><span class="num">5</span>Function, sequence</a></li>
+      <li><a href="06.html"><span class="num">6</span>Powers, logarithms</a></li>
+      <li><a href="07.html"><span class="num">7</span>Trigonometry</a></li>
+      <li><a href="08.html"><span class="num">8</span>Derivative, integral</a></li>
+      <li><a href="09.html"><span class="num">9</span>Counting, probability</a></li>
+      <li class="group">Geometry</li>
+      <li><a href="10.html"><span class="num">10</span>Plane figures</a></li>
+      <li><a href="11.html"><span class="num">11</span>Measuring figures</a></li>
+      <li><a href="12.html"><span class="num">12</span>Coordinates, vectors</a></li>
+      <li><a href="13.html" aria-current="page"><span class="num">13</span>Space and solids</a></li>
+    </ol>
+    <div class="nav-extra">
+      <div><a href="navigator.html"><svg class="icon" data-icon="target" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7.4"/><circle cx="10" cy="10" r="3.6"/><circle cx="10" cy="10" r="0.7" fill="currentColor"/></svg> Navigator</a></div>
+      <div><a href="glossary.html"><svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg> Glossary</a></div>
+    </div>
+    <div class="page-toc" id="pageToc" aria-label="Sections of this page" hidden>
+      <ul class="toc-list" id="tocList"></ul>
+    </div>
+  </nav>
+
+  <main id="main">
+    <h1>Space: lines, planes, solids</h1>
+    <p class="page-size" data-words="2557">Words: 2557</p>
+    <p class="lead">Plane geometry plus one more dimension. Almost every task of solid geometry is solved by finding a flat figure in the solid: a cross-section, a net, a right triangle inside.</p>
+
+    <div class="box key" id="key-idea">
+      <h2>Main idea of the page <a class="anchor-link" href="#key-idea" aria-label="link to this block">#</a></h2>
+      <p>Space does not demand new laws as much as it seems: distances in it are Pythagoras' theorem (applied twice), lateral surfaces are areas of the rectangles and triangles of a net, volumes are «base area times height», with a factor of one third for pointed solids. Only one thing is new: volume grows as the cube of a linear size. The block closes geometry; the coordinate view of space is in block 12.</p>
+    </div>
+
+    <span class="step">Step 0 · Hook</span>
+    <h2 id="hook">1 · The edge doubled, so the volume doubled? <a class="anchor-link" href="#hook">#</a></h2>
+    <p>A cube with edge 1 has volume 1. The edge was doubled. «The volume doubled»? A cube with edge 2 is made of eight unit cubes: two layers of four. The volume grew 8 times. The area of each face grew 4 times. The same rule as in block 11, but with a third dimension.</p>
+    <!-- fig:13-cube -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 190" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="On the left, a unit cube. On the right, a cube with edge 2, made of eight such cubes: two layers of four. The edge doubled, the volume grew 8 times.">
+        <polygon points="70.0,130.0 90.0,116.0 90.0,76.0 70.0,90.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="70.0,130.0 90.0,116.0 90.0,76.0 70.0,90.0" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="1" opacity="1.0" style="stroke:var(--acc);fill:var(--acc)"/>
+        <polygon points="30.0,90.0 70.0,90.0 90.0,76.0 50.0,76.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="30.0,90.0 70.0,90.0 90.0,76.0 50.0,76.0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1" opacity="1.0" style="stroke:var(--acc);fill:var(--acc)"/>
+        <polygon points="30.0,130.0 70.0,130.0 70.0,90.0 30.0,90.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="30.0,130.0 70.0,130.0 70.0,90.0 30.0,90.0" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1" opacity="1.0" style="stroke:var(--acc);fill:var(--acc)"/>
+        <text x="60.0" y="160.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">V = 1</text>
+        <polygon points="210.0,136.0 230.0,122.0 230.0,82.0 210.0,96.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="210.0,136.0 230.0,122.0 230.0,82.0 210.0,96.0" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="170.0,96.0 210.0,96.0 230.0,82.0 190.0,82.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="170.0,96.0 210.0,96.0 230.0,82.0 190.0,82.0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="170.0,136.0 210.0,136.0 210.0,96.0 170.0,96.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="170.0,136.0 210.0,136.0 210.0,96.0 170.0,96.0" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="250.0,136.0 270.0,122.0 270.0,82.0 250.0,96.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="250.0,136.0 270.0,122.0 270.0,82.0 250.0,96.0" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="210.0,96.0 250.0,96.0 270.0,82.0 230.0,82.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="210.0,96.0 250.0,96.0 270.0,82.0 230.0,82.0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="210.0,136.0 250.0,136.0 250.0,96.0 210.0,96.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="210.0,136.0 250.0,136.0 250.0,96.0 210.0,96.0" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="210.0,96.0 230.0,82.0 230.0,42.0 210.0,56.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="210.0,96.0 230.0,82.0 230.0,42.0 210.0,56.0" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="170.0,56.0 210.0,56.0 230.0,42.0 190.0,42.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="170.0,56.0 210.0,56.0 230.0,42.0 190.0,42.0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="170.0,96.0 210.0,96.0 210.0,56.0 170.0,56.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="170.0,96.0 210.0,96.0 210.0,56.0 170.0,56.0" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="250.0,96.0 270.0,82.0 270.0,42.0 250.0,56.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="250.0,96.0 270.0,82.0 270.0,42.0 250.0,56.0" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="210.0,56.0 250.0,56.0 270.0,42.0 230.0,42.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="210.0,56.0 250.0,56.0 270.0,42.0 230.0,42.0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="210.0,96.0 250.0,96.0 250.0,56.0 210.0,56.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="210.0,96.0 250.0,96.0 250.0,56.0 210.0,56.0" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="190.0,150.0 210.0,136.0 210.0,96.0 190.0,110.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="190.0,150.0 210.0,136.0 210.0,96.0 190.0,110.0" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="150.0,110.0 190.0,110.0 210.0,96.0 170.0,96.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="150.0,110.0 190.0,110.0 210.0,96.0 170.0,96.0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="150.0,150.0 190.0,150.0 190.0,110.0 150.0,110.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="150.0,150.0 190.0,150.0 190.0,110.0 150.0,110.0" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="230.0,150.0 250.0,136.0 250.0,96.0 230.0,110.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="230.0,150.0 250.0,136.0 250.0,96.0 230.0,110.0" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="190.0,110.0 230.0,110.0 250.0,96.0 210.0,96.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="190.0,110.0 230.0,110.0 250.0,96.0 210.0,96.0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="190.0,150.0 230.0,150.0 230.0,110.0 190.0,110.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="190.0,150.0 230.0,150.0 230.0,110.0 190.0,110.0" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="190.0,110.0 210.0,96.0 210.0,56.0 190.0,70.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="190.0,110.0 210.0,96.0 210.0,56.0 190.0,70.0" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="150.0,70.0 190.0,70.0 210.0,56.0 170.0,56.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="150.0,70.0 190.0,70.0 210.0,56.0 170.0,56.0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="150.0,110.0 190.0,110.0 190.0,70.0 150.0,70.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="150.0,110.0 190.0,110.0 190.0,70.0 150.0,70.0" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="230.0,110.0 250.0,96.0 250.0,56.0 230.0,70.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="230.0,110.0 250.0,96.0 250.0,56.0 230.0,70.0" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="190.0,70.0 230.0,70.0 250.0,56.0 210.0,56.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="190.0,70.0 230.0,70.0 250.0,56.0 210.0,56.0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="190.0,110.0 230.0,110.0 230.0,70.0 190.0,70.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="190.0,110.0 230.0,110.0 230.0,70.0 190.0,70.0" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="210.0" y="178.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">V = 8</text>
+      </svg>
+      <p class="dim">Figure 65. Twice the edge - 2³ = 8 times the volume.</p>
+    </div>
+    <!-- /fig:13-cube -->
+
+    <span class="step">Step 1 · Concept</span>
+    <h2 id="concept">2 · Lines, planes, solids <a class="anchor-link" href="#concept">#</a></h2>
+    <ul>
+      <li>Two lines in space can meet, be parallel or be <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">skew</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Skew lines</strong><button type="button" class="term-close" aria-label="Close">&times;</button></span><span class="term-desc">Lines that do not meet and do not lie in one plane.</span><span class="term-links"><a href="glossary.html#term-skew">To the glossary <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong>: not meet and not lie in one plane.</li>
+      <li>A line is <strong>perpendicular to a plane</strong> if it is perpendicular to two intersecting lines of that plane. Its segment from a point to the plane is the distance from the point to the plane.</li>
+      <li>A <strong>prism</strong> and a <strong>cylinder</strong> have two equal parallel bases; a <strong>pyramid</strong> and a <strong>cone</strong> have one base and an apex. The <strong>height</strong> is the perpendicular from the apex (or from the upper base) to the plane of the base. The <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">apothem</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Apothem</strong><button type="button" class="term-close" aria-label="Close">&times;</button></span><span class="term-desc">The height of a side face of a regular pyramid.</span><span class="term-links"><a href="glossary.html#term-apothem">To the glossary <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> of a regular pyramid is the height of a side face.</li>
+      <li>The <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">lateral surface</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Lateral and total surface</strong><button type="button" class="term-close" aria-label="Close">&times;</button></span><span class="term-desc">The lateral surface is all the faces except the bases; the total one includes the bases.</span><span class="term-links"><a href="glossary.html#term-lateral">To the glossary <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> is all the faces except the bases; the <strong>total</strong> one includes the bases.</li>
+    </ul>
+
+    <span class="step">Step 2 · Law</span>
+    <h2 id="law">3 · Laws of space <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-volumes">
+      <p class="law-name">Volume: a prism is S·h, a pyramid is a third</p>
+      <div class="math-block" data-tex="V_{\text{prism}} = V_{\text{cylinder}} = S_{\text{base}} \cdot h,\qquad V_{\text{pyramid}} = V_{\text{cone}} = \frac{1}{3} S_{\text{base}} \cdot h"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>V</mi><mrow><mtext>prism</mtext></mrow></msub><mo>&#x0003D;</mo><msub><mi>V</mi><mrow><mtext>cylinder</mtext></mrow></msub><mo>&#x0003D;</mo><msub><mi>S</mi><mrow><mtext>base</mtext></mrow></msub><mo>&#x000B7;</mo><mi>h</mi><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>V</mi><mrow><mtext>pyramid</mtext></mrow></msub><mo>&#x0003D;</mo><msub><mi>V</mi><mrow><mtext>cone</mtext></mrow></msub><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><msub><mi>S</mi><mrow><mtext>base</mtext></mrow></msub><mo>&#x000B7;</mo><mi>h</mi></mrow><annotation encoding="application/x-tex">V_{\text{prism}} = V_{\text{cylinder}} = S_{\text{base}} \cdot h,\qquad V_{\text{pyramid}} = V_{\text{cone}} = \frac{1}{3} S_{\text{base}} \cdot h</annotation></semantics></math></div>
+      <div class="math-block" data-tex="V_{\text{ball}} = \frac{4}{3}\pi R^3,\qquad S_{\text{sphere}} = 4\pi R^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>V</mi><mrow><mtext>ball</mtext></mrow></msub><mo>&#x0003D;</mo><mfrac><mrow><mn>4</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mi>&#x003C0;</mi><msup><mi>R</mi><mn>3</mn></msup><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>S</mi><mrow><mtext>sphere</mtext></mrow></msub><mo>&#x0003D;</mo><mn>4</mn><mi>&#x003C0;</mi><msup><mi>R</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">V_{\text{ball}} = \frac{4}{3}\pi R^3,\qquad S_{\text{sphere}} = 4\pi R^2</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-lateral">
+      <p class="law-name">The lateral surface is the perimeter of the base times the height</p>
+      <div class="math-block" data-tex="S_{\text{lat. prism}} = P_{\text{base}} \cdot h,\qquad S_{\text{lat. cylinder}} = 2\pi R h"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>S</mi><mrow><mtext>lat.&#x000A0;prism</mtext></mrow></msub><mo>&#x0003D;</mo><msub><mi>P</mi><mrow><mtext>base</mtext></mrow></msub><mo>&#x000B7;</mo><mi>h</mi><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>S</mi><mrow><mtext>lat.&#x000A0;cylinder</mtext></mrow></msub><mo>&#x0003D;</mo><mn>2</mn><mi>&#x003C0;</mi><mi>R</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">S_{\text{lat. prism}} = P_{\text{base}} \cdot h,\qquad S_{\text{lat. cylinder}} = 2\pi R h</annotation></semantics></math></div>
+      <p>for a right prism and a right cylinder.</p>
+    </div>
+    <div class="corollary" id="cor-revolution" data-law="law-lateral">
+      <p class="corollary-of">Corollary of the law <a href="#law-lateral">«The lateral surface is the perimeter of the base times the height»</a></p>
+      <p class="corollary-name">Solids of revolution</p>
+      <div class="math-block" data-tex="l_{\text{cylinder}} = h,\qquad l_{\text{cone}}^2 = R^2 + h^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>l</mi><mrow><mtext>cylinder</mtext></mrow></msub><mo>&#x0003D;</mo><mi>h</mi><mo>&#x0002C;</mo><mspace width="2em" /><msubsup><mi>l</mi><mrow><mtext>cone</mtext></mrow><mn>2</mn></msubsup><mo>&#x0003D;</mo><msup><mi>R</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>h</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">l_{\text{cylinder}} = h,\qquad l_{\text{cone}}^2 = R^2 + h^2</annotation></semantics></math></div>
+      <p>A cylinder is formed by rotating a rectangle about a side, a cone by rotating a right triangle about a leg, a ball by rotating a disc about a diameter. The axial section of a cylinder is a rectangle 2R × h, of a cone an isosceles triangle with base 2R. The <span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">slant height</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Slant height</strong><button type="button" class="term-close" aria-label="Close">&times;</button></span><span class="term-desc">The segment that sweeps out the lateral surface of a cylinder or a cone as it rotates.</span><span class="term-links"><a href="glossary.html#term-generatrix">To the glossary <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span> of a cylinder equals its height, the slant height of a cone l is found from l² = R² + h².</p>
+      <!-- fig:13-cor-revolution -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 220" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="A cone. A right triangle is highlighted: its leg h lies on the axis of rotation, dashed; the other leg r is the radius of the base; the hypotenuse l is the slant height of the cone. Rotating the triangle about h gives the cone.">
+        <path d="M 64.0 176.0 A 96 24 0 0 1 256.0 176.0" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.8"/>
+        <path d="M 64.0 176.0 A 96 24 0 0 0 256.0 176.0" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <line x1="160.0" y1="24.0" x2="64.0" y2="176.0" stroke="currentColor" stroke-width="1.6" opacity="1.0"/>
+        <polygon points="160.0,24.0 160.0,176.0 256.0,176.0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="2.2" opacity="1.0" style="stroke:var(--acc);fill:var(--acc)"/>
+        <line x1="160.0" y1="16.0" x2="160.0" y2="206.0" stroke="currentColor" stroke-width="1.1" stroke-dasharray="3 4" opacity="0.8"/>
+        <polyline points="160.0,166.0 170.0,166.0 170.0,176.0" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="152.0" y="105.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">h</text>
+        <text x="208.0" y="170.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">r</text>
+        <text x="218.0" y="100.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic" style="fill:var(--acc)">l</text>
+      </svg>
+      <p class="dim">Figure 66. Corollary: a cone is formed by rotating a right triangle about a leg; the hypotenuse becomes the slant height.</p>
+    </div>
+    <!-- /fig:13-cor-revolution -->
+      <p><strong>Why it is so.</strong> The side about which the figure rotates becomes the axis of the solid, and the opposite side of the rectangle or the hypotenuse of the triangle sweeps out the lateral surface - that is the slant height. In the axial section of a cone the height, the radius of the base and the slant height form a right triangle, so Pythagoras' theorem works (block 11). The lateral surface of a cylinder unrolls into a rectangle 2πR × l, and with l = h this is the law of the lateral surface.</p>
+    </div>
+    <div class="law" id="law-diagonal">
+      <p class="law-name">Diagonal of a cuboid</p>
+      <div class="math-block" data-tex="d^2 = a^2 + b^2 + c^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">d^2 = a^2 + b^2 + c^2</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-cube-scale">
+      <p class="law-name">Volumes of similar solids</p>
+      <div class="math-block" data-tex="\frac{V_1}{V_2} = k^3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><msub><mi>V</mi><mn>1</mn></msub></mrow><mrow><msub><mi>V</mi><mn>2</mn></msub></mrow></mfrac><mo>&#x0003D;</mo><msup><mi>k</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">\frac{V_1}{V_2} = k^3</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-space">
+      <p class="law-name">Tests for parallelism and perpendicularity in space</p>
+      <p>A line is parallel to a plane if it is parallel to some line of that plane. Two planes are parallel if two intersecting lines of one of them are parallel to the other; through a point outside a plane there passes exactly one plane parallel to it. A line is perpendicular to a plane if it is perpendicular to two intersecting lines of that plane.</p>
+      <p>Space is checked with a plane: to prove parallelism or perpendicularity, look for the right line in the plane itself, and there the laws of block 10 already work.</p>
+    </div>
+
+    <span class="step">Step 3 · Why it is so</span>
+    <h2 id="why">4 · Where the formulas come from <a class="anchor-link" href="#why">#</a></h2>
+    <p><strong>Base area times height.</strong> A prism can be pictured as a stack of thin equal «tiles» in the shape of the base; their number is proportional to the height.</p>
+    <p><strong>One third.</strong> A cube can be cut into three equal pyramids with their apex at one vertex of the cube, each standing on one of the three opposite faces. So a pyramid with the same base and height takes a third of the prism. The same holds for a cone and a cylinder.</p>
+    <p><strong>Lateral surface.</strong> The net of the lateral surface of a right prism is a rectangle with sides <span class="math" data-tex="P_{\text{base}}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>P</mi><mrow><mtext>base</mtext></mrow></msub></mrow><annotation encoding="application/x-tex">P_{\text{base}}</annotation></semantics></math></span> and h; of a cylinder, a rectangle with sides <span class="math" data-tex="2\pi R"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>2</mn><mi>&#x003C0;</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">2\pi R</annotation></semantics></math></span> and h.</p>
+    <!-- fig:13-unfold -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 150" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="The net of the lateral surface of a right square prism: the four side faces stand in a row and form a rectangle. Its width is the perimeter of the base a + b + a + b, its height is the height of the prism h, so the lateral surface equals P · h.">
+        <rect x="20.0" y="20.0" width="80.0" height="80.0" rx="0" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="60.0" y="65.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">a</text>
+        <rect x="100.0" y="20.0" width="50.0" height="80.0" rx="0" fill="currentColor" fill-opacity="0.16" stroke="currentColor" stroke-width="1.2"/>
+        <text x="125.0" y="65.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">b</text>
+        <rect x="150.0" y="20.0" width="80.0" height="80.0" rx="0" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.2"/>
+        <text x="190.0" y="65.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">a</text>
+        <rect x="230.0" y="20.0" width="50.0" height="80.0" rx="0" fill="currentColor" fill-opacity="0.16" stroke="currentColor" stroke-width="1.2"/>
+        <text x="255.0" y="65.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">b</text>
+        <text x="286.0" y="65.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">h</text>
+        <line x1="20.0" y1="114.0" x2="280.0" y2="114.0" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+        <text x="150.0" y="134.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-style="italic">P = a + b + a + b</text>
+      </svg>
+      <p class="dim">Figure 67. The lateral surface of a right prism is a rectangle with sides P and h.</p>
+    </div>
+    <!-- /fig:13-unfold -->
+    <p><strong>Diagonal.</strong> Pythagoras twice: the diagonal of the base is <span class="math" data-tex="\sqrt{a^2 + b^2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">\sqrt{a^2 + b^2}</annotation></semantics></math></span>, then it and the side edge c are the legs of a triangle with hypotenuse d.</p>
+    <!-- fig:13-diagonal -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 200" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="A cuboid with edges a, b, c. Dashed: the diagonal of the base, √(a² + b²). Together with the side edge c it forms a right triangle whose hypotenuse is the diagonal of the cuboid d, so d² = a² + b² + c².">
+        <line x1="40.0" y1="176.0" x2="190.0" y2="176.0" stroke="currentColor" stroke-width="1.4" opacity="1.0"/>
+        <line x1="190.0" y1="176.0" x2="190.0" y2="76.0" stroke="currentColor" stroke-width="1.4" opacity="1.0"/>
+        <line x1="190.0" y1="76.0" x2="40.0" y2="76.0" stroke="currentColor" stroke-width="1.4" opacity="1.0"/>
+        <line x1="40.0" y1="76.0" x2="40.0" y2="176.0" stroke="currentColor" stroke-width="1.4" opacity="1.0"/>
+        <line x1="190.0" y1="176.0" x2="235.0" y2="144.5" stroke="currentColor" stroke-width="1.4" opacity="1.0"/>
+        <line x1="235.0" y1="144.5" x2="235.0" y2="44.5" stroke="currentColor" stroke-width="1.4" opacity="1.0"/>
+        <line x1="235.0" y1="44.5" x2="190.0" y2="76.0" stroke="currentColor" stroke-width="1.4" opacity="1.0"/>
+        <line x1="40.0" y1="76.0" x2="85.0" y2="44.5" stroke="currentColor" stroke-width="1.4" opacity="1.0"/>
+        <line x1="85.0" y1="44.5" x2="235.0" y2="44.5" stroke="currentColor" stroke-width="1.4" opacity="1.0"/>
+        <line x1="40.0" y1="176.0" x2="85.0" y2="144.5" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+        <line x1="85.0" y1="144.5" x2="235.0" y2="144.5" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+        <line x1="85.0" y1="144.5" x2="85.0" y2="44.5" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+        <line x1="40.0" y1="176.0" x2="235.0" y2="144.5" stroke="currentColor" stroke-width="1.6" stroke-dasharray="5 3" opacity="1.0" style="stroke:var(--acc)"/>
+        <line x1="40.0" y1="176.0" x2="235.0" y2="44.5" stroke="currentColor" stroke-width="2.4" opacity="1.0" style="stroke:var(--acc)"/>
+        <text x="115.0" y="194.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">a</text>
+        <text x="222.5" y="172.2" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">b</text>
+        <text x="243.0" y="94.5" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">c</text>
+        <text x="131.5" y="104.2" fill="currentColor" font-size="15" opacity="1.0" text-anchor="end" font-style="italic" font-weight="700" style="fill:var(--acc)">d</text>
+      </svg>
+      <p class="dim">Figure 68. The diagonal of a cuboid: Pythagoras twice, d² = a² + b² + c².</p>
+    </div>
+    <!-- /fig:13-diagonal -->
+
+    <span class="step">Step 4 · Limits</span>
+    <h2 id="limits">5 · Where the laws break <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-full">
+      <p><strong>The lateral and the total surface are different quantities.</strong> The total surface of a cylinder is <span class="math" data-tex="2\pi R h + 2\pi R^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>2</mn><mi>&#x003C0;</mi><mi>R</mi><mi>h</mi><mo>&#x0002B;</mo><mn>2</mn><mi>&#x003C0;</mi><msup><mi>R</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">2\pi R h + 2\pi R^2</annotation></semantics></math></span>: two bases are added.</p>
+    </div>
+    <div class="limit" id="limit-height">
+      <p><strong>The height of a pyramid is neither the apothem nor a side edge.</strong> The volume takes the height, the lateral surface of a regular pyramid takes the apothem.</p>
+    </div>
+    <div class="limit" id="limit-cube">
+      <p><strong>Volume grows as the cube.</strong> Increasing all sizes k times increases the volume <span class="math" data-tex="k^3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>k</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">k^3</annotation></semantics></math></span> times and the surface area <span class="math" data-tex="k^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>k</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">k^2</annotation></semantics></math></span> times.</p>
+    </div>
+
+    <span class="step">Step 5 · Practice</span>
+    <h2 id="apply">6 · Tasks in the NMT format <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="D" data-limit="">
+      <p class="task-kind">One answer out of five · 1 point</p>
+      <p>The dimensions of a cuboid are 2 cm, 3 cm and 4 cm. Find its volume.</p>
+      <div class="opts">
+        <button type="button" data-opt="A">A · 9 cm³</button>
+        <button type="button" data-opt="B">B · 12 cm³</button>
+        <button type="button" data-opt="C">C · 18 cm³</button>
+        <button type="button" data-opt="D">D · 24 cm³</button>
+        <button type="button" data-opt="E">E · 52 cm³</button>
+      </div>
+      <p class="law-ref">Law: <a href="#law-volumes">base area times height</a>.</p>
+      <div class="solution"><span class="math" data-tex="2 \cdot 3 \cdot 4 = 24"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>2</mn><mo>&#x000B7;</mo><mn>3</mn><mo>&#x000B7;</mo><mn>4</mn><mo>&#x0003D;</mo><mn>24</mn></mrow><annotation encoding="application/x-tex">2 \cdot 3 \cdot 4 = 24</annotation></semantics></math></span>. 52 is the total surface area, not the volume.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="45" data-limit="limit-full">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p>The side of the base of a regular square prism is 3 cm, the lateral surface area is 60 cm². Find the volume of the prism (in cm³).</p>
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Laws: <a href="#law-lateral">lateral surface</a> and <a href="#law-volumes">volume of a prism</a>.</p>
+      <div class="solution">The perimeter of the base is 12, so <span class="math" data-tex="h = 60 : 12 = 5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>h</mi><mo>&#x0003D;</mo><mn>60</mn><mi>:</mi><mn>12</mn><mo>&#x0003D;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">h = 60 : 12 = 5</annotation></semantics></math></span>. The base is a square of area 9; <span class="math" data-tex="V = 9 \cdot 5 = 45"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>V</mi><mo>&#x0003D;</mo><mn>9</mn><mo>&#x000B7;</mo><mn>5</mn><mo>&#x0003D;</mo><mn>45</mn></mrow><annotation encoding="application/x-tex">V = 9 \cdot 5 = 45</annotation></semantics></math></span>. A task of this type was among the hardest at NMT 2026: two laws in one task, and the first of them «hides» in the word «lateral».</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="12" data-limit="limit-height">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p>The radius of the base of a cone is 3 cm, the height is 4 cm. Find the volume of the cone. Write the value of <span class="math" data-tex="\frac{V}{\pi}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mi>V</mi></mrow><mrow><mi>&#x003C0;</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{V}{\pi}</annotation></semantics></math></span> as your answer.</p>
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Law: <a href="#law-volumes">volume of a cone</a>.</p>
+      <div class="solution"><span class="math" data-tex="V = \frac{1}{3}\pi \cdot 9 \cdot 4 = 12\pi"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>V</mi><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mi>&#x003C0;</mi><mo>&#x000B7;</mo><mn>9</mn><mo>&#x000B7;</mo><mn>4</mn><mo>&#x0003D;</mo><mn>12</mn><mi>&#x003C0;</mi></mrow><annotation encoding="application/x-tex">V = \frac{1}{3}\pi \cdot 9 \cdot 4 = 12\pi</annotation></semantics></math></span>. The slant height here is 5, but the volume takes the height.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="C" data-limit="">
+      <p class="task-kind">One answer out of five · 1 point</p>
+      <p>Find the diagonal of a cube with edge 2.</p>
+      <div class="opts">
+        <button type="button" data-opt="A">A · 2</button>
+        <button type="button" data-opt="B">B · 2√2</button>
+        <button type="button" data-opt="C">C · 2√3</button>
+        <button type="button" data-opt="D">D · 4</button>
+        <button type="button" data-opt="E">E · 6</button>
+      </div>
+      <p class="law-ref">Law: <a href="#law-diagonal">diagonal of a cuboid</a>.</p>
+      <div class="solution"><span class="math" data-tex="d = \sqrt{4 + 4 + 4} = 2\sqrt{3}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>d</mi><mo>&#x0003D;</mo><msqrt><mrow><mn>4</mn><mo>&#x0002B;</mo><mn>4</mn><mo>&#x0002B;</mo><mn>4</mn></mrow></msqrt><mo>&#x0003D;</mo><mn>2</mn><msqrt><mrow><mn>3</mn></mrow></msqrt></mrow><annotation encoding="application/x-tex">d = \sqrt{4 + 4 + 4} = 2\sqrt{3}</annotation></semantics></math></span>. 2√2 is the diagonal of a face, not of the cube.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="4" data-limit="">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p>How many edges of the cube ABCDA₁B₁C₁D₁ are parallel to the plane of the face ABCD?</p>
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Law: <a href="#law-space">test for a line parallel to a plane</a>.</p>
+      <div class="solution">The four edges of the upper face: each is parallel to an edge of the lower face that lies in the plane ABCD. The edges of the lower face lie in the plane itself, and the side edges cross it.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="C" data-limit="" data-claim="13-task-perp">
+      <p class="task-kind">One answer out of five · 1 point</p>
+      <p>ABCDA₁B₁C₁D₁ is a cuboid: ABCD is the lower base, AA₁, BB₁, CC₁, DD₁ are the side edges. Which of the lines is perpendicular to the plane ABCD?</p>
+      <!-- fig:13-task-perp -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 220" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Cuboid ABCDA₁B₁C₁D₁ in oblique projection: ABCD is the lower base, A₁B₁C₁D₁ the upper one, AA₁, BB₁, CC₁, DD₁ are the side edges. Hidden edges are dashed.">
+        <polygon points="50.0,190.0 220.0,190.0 290.0,142.0 120.0,142.0" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="0" opacity="1.0" style="stroke:var(--acc);fill:var(--acc)"/>
+        <line x1="50.0" y1="190.0" x2="120.0" y2="142.0" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="0.8"/>
+        <line x1="120.0" y1="142.0" x2="290.0" y2="142.0" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="0.8"/>
+        <line x1="120.0" y1="142.0" x2="120.0" y2="22.0" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="0.8"/>
+        <line x1="50.0" y1="190.0" x2="220.0" y2="190.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="220.0" y1="190.0" x2="290.0" y2="142.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="50.0" y1="190.0" x2="50.0" y2="70.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="220.0" y1="190.0" x2="220.0" y2="70.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="290.0" y1="142.0" x2="290.0" y2="22.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="50.0" y1="70.0" x2="220.0" y2="70.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="220.0" y1="70.0" x2="290.0" y2="22.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="290.0" y1="22.0" x2="120.0" y2="22.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="120.0" y1="22.0" x2="50.0" y2="70.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <text x="36.0" y="204.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">A</text>
+        <text x="224.0" y="206.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">B</text>
+        <text x="298.0" y="148.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">C</text>
+        <text x="104.0" y="138.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">D</text>
+        <text x="28.0" y="70.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">A₁</text>
+        <text x="214.0" y="62.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">B₁</text>
+        <text x="298.0" y="20.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">C₁</text>
+        <text x="112.0" y="14.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">D₁</text>
+      </svg>
+      <p class="dim">Figure 69. For the task: a cuboid and the plane of its lower base.</p>
+    </div>
+    <!-- /fig:13-task-perp -->
+      <div class="opts">
+        <button type="button" data-opt="A">A · AB</button>
+        <button type="button" data-opt="B">B · AC₁</button>
+        <button type="button" data-opt="C">C · CC₁</button>
+        <button type="button" data-opt="D">D · B₁D₁</button>
+        <button type="button" data-opt="E">E · A₁C</button>
+      </div>
+      <p class="law-ref">Law: <a href="#law-space">test for a line perpendicular to a plane</a>.</p>
+      <div class="solution">The edge CC₁ is perpendicular to two intersecting lines of the base, CB and CD, so by the test it is perpendicular to the plane ABCD. AB lies in the plane, B₁D₁ is parallel to it, AC₁ and A₁C are oblique.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="48" data-limit="" data-claim="13-task-pyramid">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p>The side of the base of a regular square pyramid is 6 cm, and the height is 4 cm. Find the volume of the pyramid (in cm³).</p>
+      <!-- fig:13-task-pyramid -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 230" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="A regular square pyramid SABCD: the base is the square ABCD with side 6, the apex S stands above the centre O of the square, height SO = 4. Hidden edges are dashed.">
+        <line x1="60.0" y1="200.0" x2="118.8" y2="158.0" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.7"/>
+        <line x1="118.8" y1="158.0" x2="286.8" y2="158.0" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.7"/>
+        <line x1="118.8" y1="158.0" x2="173.4" y2="67.0" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.7"/>
+        <line x1="60.0" y1="200.0" x2="286.8" y2="158.0" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.7"/>
+        <line x1="228.0" y1="200.0" x2="118.8" y2="158.0" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.7"/>
+        <line x1="60.0" y1="200.0" x2="228.0" y2="200.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="228.0" y1="200.0" x2="286.8" y2="158.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="173.4" y1="67.0" x2="60.0" y2="200.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="173.4" y1="67.0" x2="228.0" y2="200.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="173.4" y1="67.0" x2="286.8" y2="158.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="173.4" y1="67.0" x2="173.4" y2="179.0" stroke="currentColor" stroke-width="2" stroke-dasharray="5 3" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="173.4" cy="179.0" r="3" fill="currentColor"/>
+        <text x="46.0" y="212.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">A</text>
+        <text x="232.0" y="214.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">B</text>
+        <text x="294.8" y="162.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">C</text>
+        <text x="102.8" y="156.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">D</text>
+        <text x="169.4" y="59.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">S</text>
+        <text x="179.4" y="193.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">O</text>
+        <text x="144.0" y="218.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">6</text>
+        <text x="181.4" y="123.0" fill="currentColor" font-size="13" opacity="1.0" style="fill:var(--acc)">4</text>
+      </svg>
+      <p class="dim">Figure 70. For the task: a regular square pyramid and its height.</p>
+    </div>
+    <!-- /fig:13-task-pyramid -->
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Law: <a href="#law-volumes">the volume of a pyramid is a third of the base area times the height</a>.</p>
+      <div class="solution">The base is a square: S = 6² = 36, <span class="math" data-tex="V = \frac{1}{3} \cdot 36 \cdot 4 = 48"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>V</mi><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mo>&#x000B7;</mo><mn>36</mn><mo>&#x000B7;</mo><mn>4</mn><mo>&#x0003D;</mo><mn>48</mn></mrow><annotation encoding="application/x-tex">V = \frac{1}{3} \cdot 36 \cdot 4 = 48</annotation></semantics></math></span>. Without the third you get 144, the volume of a prism.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="13" data-limit="" data-claim="13-read-diag">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p class="task-class"><strong>Data on the figure · read and apply.</strong> The numbers for the solution are only on the figure: first write them down, then solve.</p>
+      <p>Find the length of the diagonal AC₁ of the cuboid shown in the figure (in cm).</p>
+      <!-- fig:13-read-diag -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 190" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Cuboid ABCDA₁B₁C₁D₁. The figure labels the edges: AB = 12 cm, AD = 4 cm, AA₁ = 3 cm. The diagonal AC₁ is dashed and marked with a question mark.">
+        <line x1="50.0" y1="160.0" x2="94.8" y2="126.4" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="0.8"/>
+        <line x1="94.8" y1="126.4" x2="262.8" y2="126.4" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="0.8"/>
+        <line x1="94.8" y1="126.4" x2="94.8" y2="84.4" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="0.8"/>
+        <line x1="50.0" y1="160.0" x2="218.0" y2="160.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="218.0" y1="160.0" x2="262.8" y2="126.4" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="50.0" y1="160.0" x2="50.0" y2="118.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="218.0" y1="160.0" x2="218.0" y2="118.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="262.8" y1="126.4" x2="262.8" y2="84.4" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="50.0" y1="118.0" x2="218.0" y2="118.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="218.0" y1="118.0" x2="262.8" y2="84.4" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="262.8" y1="84.4" x2="94.8" y2="84.4" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="94.8" y1="84.4" x2="50.0" y2="118.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <text x="36.0" y="174.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">A</text>
+        <text x="222.0" y="176.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">B</text>
+        <text x="270.8" y="132.4" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">C</text>
+        <text x="78.8" y="122.4" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">D</text>
+        <text x="28.0" y="118.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">A₁</text>
+        <text x="210.0" y="110.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">B₁</text>
+        <text x="270.8" y="82.4" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">C₁</text>
+        <text x="86.8" y="76.4" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">D₁</text>
+        <line x1="50.0" y1="160.0" x2="262.8" y2="84.4" stroke="currentColor" stroke-width="1.6" stroke-dasharray="6 4" opacity="1.0" style="stroke:var(--acc)"/>
+        <text x="152.4" y="140.2" fill="currentColor" font-size="15" opacity="1.0" font-weight="700" style="fill:var(--acc)">?</text>
+        <text x="134.0" y="180.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">12 cm</text>
+        <text x="240.0" y="156.0" fill="currentColor" font-size="13" opacity="1.0">4 cm</text>
+        <text x="44.0" y="151.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end">3 cm</text>
+      </svg>
+      <p class="dim">Figure 71. For the task: a cuboid with labelled edges and its diagonal.</p>
+    </div>
+    <!-- /fig:13-read-diag -->
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Law: <a href="#law-diagonal">diagonal of a cuboid</a>.</p>
+      <div class="solution">From the figure: the edges are 12, 4 and 3. <span class="math" data-tex="d = \sqrt{12^2 + 4^2 + 3^2} = \sqrt{169} = 13"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>d</mi><mo>&#x0003D;</mo><msqrt><mrow><msup><mn>12</mn><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mn>4</mn><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mn>3</mn><mn>2</mn></msup></mrow></msqrt><mo>&#x0003D;</mo><msqrt><mrow><mn>169</mn></mrow></msqrt><mo>&#x0003D;</mo><mn>13</mn></mrow><annotation encoding="application/x-tex">d = \sqrt{12^2 + 4^2 + 3^2} = \sqrt{169} = 13</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="C" data-limit="" data-claim="13-read-volume">
+      <p class="task-kind">One answer out of five · 1 point</p>
+      <p class="task-class"><strong>Data on the figure · pick what is needed.</strong> The numbers are only on the figure, and among them is an extra one or a trap: the grid step, a scale that does not start at zero. Write down only what the solution needs.</p>
+      <p>Find the volume of the cuboid shown in the figure (in cm³).</p>
+      <!-- fig:13-read-volume -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 232" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Cuboid ABCDA₁B₁C₁D₁. The figure labels the edges AB = 5 cm, AD = 2 cm, AA₁ = 4 cm and the diagonal of the base AC = √29 cm (dashed).">
+        <line x1="52.0" y1="208.0" x2="128.8" y2="150.4" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="0.8"/>
+        <line x1="128.8" y1="150.4" x2="278.8" y2="150.4" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="0.8"/>
+        <line x1="128.8" y1="150.4" x2="128.8" y2="30.4" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="0.8"/>
+        <line x1="52.0" y1="208.0" x2="202.0" y2="208.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="202.0" y1="208.0" x2="278.8" y2="150.4" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="52.0" y1="208.0" x2="52.0" y2="88.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="202.0" y1="208.0" x2="202.0" y2="88.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="278.8" y1="150.4" x2="278.8" y2="30.4" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="52.0" y1="88.0" x2="202.0" y2="88.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="202.0" y1="88.0" x2="278.8" y2="30.4" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="278.8" y1="30.4" x2="128.8" y2="30.4" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="128.8" y1="30.4" x2="52.0" y2="88.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <text x="38.0" y="222.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">A</text>
+        <text x="206.0" y="224.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">B</text>
+        <text x="286.8" y="156.4" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">C</text>
+        <text x="112.8" y="146.4" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">D</text>
+        <text x="30.0" y="88.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">A₁</text>
+        <text x="194.0" y="80.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">B₁</text>
+        <text x="286.8" y="28.4" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">C₁</text>
+        <text x="120.8" y="22.4" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">D₁</text>
+        <line x1="52.0" y1="208.0" x2="278.8" y2="150.4" stroke="currentColor" stroke-width="1.4" stroke-dasharray="6 4" opacity="1.0" style="stroke:var(--acc)"/>
+        <text x="169.4" y="167.2" fill="currentColor" font-size="13" opacity="1.0" style="fill:var(--acc)">√29 cm</text>
+        <text x="127.0" y="228.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">5 cm</text>
+        <text x="252.4" y="191.2" fill="currentColor" font-size="13" opacity="1.0">2 cm</text>
+        <text x="46.0" y="160.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end">4 cm</text>
+      </svg>
+      <p class="dim">Figure 72. For the task: a cuboid with three edges and the diagonal of the base labelled.</p>
+    </div>
+    <!-- /fig:13-read-volume -->
+      <div class="opts">
+        <button type="button" data-opt="A">A · 11</button>
+        <button type="button" data-opt="B">B · 29</button>
+        <button type="button" data-opt="C">C · 40</button>
+        <button type="button" data-opt="D">D · 76</button>
+        <button type="button" data-opt="E">E · 80</button>
+      </div>
+      <p class="law-ref">Law: <a href="#law-volumes">base area times height</a>.</p>
+      <div class="solution">The volume needs three edges: 5, 2 and 4. V = 5 · 2 · 4 = 40. The diagonal of the base √29 is not needed here. 76 is the total surface area, 11 is the sum of the three edges.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="7" data-limit="" data-claim="13-read-vector">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p class="task-class"><strong>Data on the figure · read and connect.</strong> The numbers are only on the figure, and what you read goes into two laws: write the numbers down, then name both laws.</p>
+      <p>Find the length of the vector BD₁ (see the figure).</p>
+      <!-- fig:13-read-vector -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 222" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Cuboid ABCDA₁B₁C₁D₁, vertex A is the origin. The x-axis runs along AB, the y-axis along AD, the z-axis along AA₁. The figure labels the edges: AB = 6, AD = 2, AA₁ = 3. The vector BD₁ is highlighted.">
+        <line x1="40.0" y1="182.0" x2="112.0" y2="128.0" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="0.8"/>
+        <line x1="112.0" y1="128.0" x2="292.0" y2="128.0" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="0.8"/>
+        <line x1="112.0" y1="128.0" x2="112.0" y2="38.0" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="0.8"/>
+        <line x1="40.0" y1="182.0" x2="220.0" y2="182.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="220.0" y1="182.0" x2="292.0" y2="128.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="40.0" y1="182.0" x2="40.0" y2="92.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="220.0" y1="182.0" x2="220.0" y2="92.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="292.0" y1="128.0" x2="292.0" y2="38.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="40.0" y1="92.0" x2="220.0" y2="92.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="220.0" y1="92.0" x2="292.0" y2="38.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="292.0" y1="38.0" x2="112.0" y2="38.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="112.0" y1="38.0" x2="40.0" y2="92.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="220.0" y1="182.0" x2="246.0" y2="182.0" stroke="currentColor" stroke-width="1.1" opacity="1.0"/>
+        <polygon points="246.0,182.0 239.6,184.7 239.6,179.3" fill="currentColor"/>
+        <text x="248.0" y="198.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <line x1="112.0" y1="128.0" x2="155.2" y2="95.6" stroke="currentColor" stroke-width="1.1" opacity="1.0"/>
+        <polygon points="155.2,95.6 151.7,101.6 148.4,97.3" fill="currentColor"/>
+        <text x="161.2" y="99.6" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <line x1="40.0" y1="92.0" x2="40.0" y2="70.0" stroke="currentColor" stroke-width="1.1" opacity="1.0"/>
+        <polygon points="40.0,70.0 42.7,76.4 37.3,76.4" fill="currentColor"/>
+        <text x="32.0" y="78.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">z</text>
+        <line x1="220.0" y1="182.0" x2="112.0" y2="38.0" stroke="currentColor" stroke-width="2.2" opacity="1.0" style="stroke:var(--acc)"/>
+        <polygon points="112.0,38.0 118.0,41.5 113.7,44.8" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="130.0" y="202.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">6</text>
+        <text x="66.0" y="157.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end">2</text>
+        <text x="32.0" y="142.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end">3</text>
+        <text x="28.0" y="198.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">A</text>
+        <text x="224.0" y="200.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">B</text>
+        <text x="118.0" y="122.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">D</text>
+        <text x="18.0" y="90.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">A₁</text>
+        <text x="106.0" y="28.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">D₁</text>
+      </svg>
+      <p class="dim">Figure 73. For the task: a cuboid on coordinate axes and the vector BD₁.</p>
+    </div>
+    <!-- /fig:13-read-vector -->
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Laws: <a href="12.html#law-vector">coordinates of a vector</a> (block 12) and the <a href="#law-diagonal">diagonal of a cuboid</a>: the length of the vector BD₁ is that very diagonal.</p>
+      <div class="solution">From the figure: AB = 6, AD = 2, AA₁ = 3, so B(6; 0; 0), D₁(0; 2; 3). The coordinates of a vector are end minus start: <span class="math" data-tex="\overrightarrow{BD_1} = (-6;\ 2;\ 3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mover><mrow><mi>B</mi><msub><mi>D</mi><mn>1</mn></msub></mrow><mo>&#x02192;</mo></mover><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mn>6</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>2</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">\overrightarrow{BD_1} = (-6;\ 2;\ 3)</annotation></semantics></math></span>, the length is <span class="math" data-tex="\sqrt{36 + 4 + 9} = 7"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msqrt><mrow><mn>36</mn><mo>&#x0002B;</mo><mn>4</mn><mo>&#x0002B;</mo><mn>9</mn></mrow></msqrt><mo>&#x0003D;</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">\sqrt{36 + 4 + 9} = 7</annotation></semantics></math></span>.</div>
+    </div>
+
+    <span class="step">Step 6 · Reverse move</span>
+    <h2 id="reverse">7 · Name the law yourself <a class="anchor-link" href="#reverse">#</a></h2>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="8" data-limit="limit-cube">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p>The edge of a cube was doubled. How many times did its volume increase?</p>
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Law: <a href="#law-cube-scale">volumes of similar solids</a>.</p>
+      <div class="solution"><span class="math" data-tex="2^3 = 8"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>&#x0003D;</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">2^3 = 8</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="36" data-limit="">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p>The radius of a ball is 3 cm. Find the area of its surface. Write the value of <span class="math" data-tex="\frac{S}{\pi}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mi>S</mi></mrow><mrow><mi>&#x003C0;</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{S}{\pi}</annotation></semantics></math></span> as your answer.</p>
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Law: <a href="#law-volumes">area of a sphere</a>.</p>
+      <div class="solution"><span class="math" data-tex="4\pi \cdot 9 = 36\pi"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>4</mn><mi>&#x003C0;</mi><mo>&#x000B7;</mo><mn>9</mn><mo>&#x0003D;</mo><mn>36</mn><mi>&#x003C0;</mi></mrow><annotation encoding="application/x-tex">4\pi \cdot 9 = 36\pi</annotation></semantics></math></span>. Curiously, at R = 3 the area of the sphere and the volume of the ball (<span class="math" data-tex="\frac{4}{3}\pi \cdot 27 = 36\pi"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>4</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mi>&#x003C0;</mi><mo>&#x000B7;</mo><mn>27</mn><mo>&#x0003D;</mo><mn>36</mn><mi>&#x003C0;</mi></mrow><annotation encoding="application/x-tex">\frac{4}{3}\pi \cdot 27 = 36\pi</annotation></semantics></math></span>) are numerically equal - but they are different quantities with different units.</div>
+    </div>
+
+    <h2 id="error">8 · Find the mistake in someone else's solution <a class="anchor-link" href="#error">#</a></h2>
+    <p>Bohdan works out the paint for a cylindrical tank with a lid and a bottom: «The surface area is <span class="math" data-tex="S = 2\pi R h"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>S</mi><mo>&#x0003D;</mo><mn>2</mn><mi>&#x003C0;</mi><mi>R</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">S = 2\pi R h</annotation></semantics></math></span>».</p>
+    <details>
+      <summary>Where is the mistake?</summary>
+      <p>That is only the lateral surface. The bottom and the lid are two more discs: <span class="math" data-tex="S = 2\pi R h + 2\pi R^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>S</mi><mo>&#x0003D;</mo><mn>2</mn><mi>&#x003C0;</mi><mi>R</mi><mi>h</mi><mo>&#x0002B;</mo><mn>2</mn><mi>&#x003C0;</mi><msup><mi>R</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">S = 2\pi R h + 2\pi R^2</annotation></semantics></math></span> (the <a href="#limit-full">first limit</a>).</p>
+    </details>
+    <!-- sources -->
+    <h2 id="external">9 · Links to tasks from external sources <a class="anchor-link" href="#external">#</a></h2>
+    <p class="dim">Real tasks from other NMT preparation sites that lean on the laws of this block. Read the condition on the source site behind the link; the tagging by laws is ours. Sources and years are switched on and off in the settings (the gear at the top).</p>
+    <p class="dim ext-off" hidden>All external sources are switched off in the settings.</p>
+    <div class="ext-source" data-ext-source="nmt-ua" id="ext-nmt-ua">
+      <h3 class="ext-head">NMT on the ZNO-ONLINE site (zno.osvita.ua, in Ukrainian)</h3>
+      <p class="dim ext-lead">Tasks of the main NMT sessions of 2024-2026 from the ZNO-ONLINE site, by year. Each year is switched on separately.</p>
+      <div class="ext" data-ext="nmt-ua:2026" id="ext-nmt-ua-2026">
+        <h4>NMT 2026</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q5" rel="noopener" target="_blank">Session 1, task 5</a> - Solids of revolution</li>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q21" rel="noopener" target="_blank">Session 1, task 21</a> (with a figure) - The lateral surface is the perimeter of the base times the height, Volume: a prism is S·h, a pyramid is a third</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q5" rel="noopener" target="_blank">Session 2, task 5</a> - Solids of revolution</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q21" rel="noopener" target="_blank">Session 2, task 21</a> (with a figure) - Diagonal of a cuboid, Volume: a prism is S·h, a pyramid is a third</li>
+        </ul>
+      </div>
+      <div class="ext" data-ext="nmt-ua:2025" id="ext-nmt-ua-2025">
+        <h4>NMT 2025</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q5" rel="noopener" target="_blank">Session 1, task 5</a> (with a figure) - Tests for parallelism and perpendicularity in space</li>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q21" rel="noopener" target="_blank">Session 1, task 21</a> - The lateral surface is the perimeter of the base times the height, Volume: a prism is S·h, a pyramid is a third</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q5" rel="noopener" target="_blank">Session 2, task 5</a> (with a figure) - Tests for parallelism and perpendicularity in space</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q21" rel="noopener" target="_blank">Session 2, task 21</a> - The lateral surface is the perimeter of the base times the height</li>
+        </ul>
+      </div>
+      <div class="ext" data-ext="nmt-ua:2024" id="ext-nmt-ua-2024">
+        <h4>NMT 2024</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q4" rel="noopener" target="_blank">Session 1, task 4</a> (with a figure) - Solids of revolution</li>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q9" rel="noopener" target="_blank">Session 1, task 9</a> - The lateral surface is the perimeter of the base times the height</li>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q21" rel="noopener" target="_blank">Session 1, task 21</a> - Volume: a prism is S·h, a pyramid is a third</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q5" rel="noopener" target="_blank">Session 2, task 5</a> (with a figure) - Tests for parallelism and perpendicularity in space</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q8" rel="noopener" target="_blank">Session 2, task 8</a> - Volume: a prism is S·h, a pyramid is a third</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q21" rel="noopener" target="_blank">Session 2, task 21</a> - The lateral surface is the perimeter of the base times the height</li>
+        </ul>
+      </div>
+    </div>
+    <!-- /sources -->
+
+    <h2 id="artifacts">What you have after this page <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>Space comes down to the plane.</strong> Distances are Pythagoras twice, lateral surfaces are nets, volumes are base area times height and one third for pointed solids. Area grows as the square, volume as the cube.</p>
+    </div>
+    <!-- freq -->
+    <p class="dim law-freq" data-tasks="12">Frequency on this site, not in the NMT: this page has 12 trainer tasks, and they lean on these laws: Volume: a prism is S·h, a pyramid is a third - 6, Diagonal of a cuboid - 3, Tests for parallelism and perpendicularity in space - 2, Coordinates of a vector and the midpoint of a segment - 1, The lateral surface is the perimeter of the base times the height - 1, Volumes of similar solids - 1. In real NMT papers of 2024-2026 this block is needed in 14 tasks out of 132: The lateral surface is the perimeter of the base times the height - 8, Volume: a prism is S·h, a pyramid is a third - 5, Tests for parallelism and perpendicularity in space - 3, Diagonal of a cuboid - 1.</p>
+    <!-- /freq -->
+    <p>You know this block if you:</p>
+    <ol>
+      <li>solve 8 tasks out of 10 on volumes and surfaces without a hint;</li>
+      <li>can explain aloud where the one third in the volume of a pyramid comes from;</li>
+      <li>find the mistake in someone else's solution, as in Bohdan's.</li>
+    </ol>
+  
+
+    <footer>
+      <nav class="pager" aria-label="Neighbouring topics">
+        <p class="pager-next">Next topic: <a href="glossary.html">Glossary of terms and signs</a></p>
+        <p class="pager-prev">Previous topic: <a href="12.html">Coordinates and vectors</a></p>
+      </nav>
+      <p class="footer-note">An AI Factory series site. Built with the same harness: plain HTML and CSS, checked with bash, published via GitHub Pages.</p>
+    </footer>
+  </main>
+
+</div>
+</div>
+<script src="../assets/swa.js?v=3"></script>
+<script src="../assets/trainer.js?v=3"></script>
+<script src="../assets/sources.js?v=3"></script>
+<script src="../assets/terms.js?v=3"></script>
+<script src="../assets/cp.js?v=3"></script>
+</body>
+</html>

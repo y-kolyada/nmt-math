@@ -2,26 +2,28 @@
 <html lang="ru" data-site="nmt-math">
 <head>
 <meta charset="utf-8">
+<meta name="swa-sources" content="nmt-ua:2024 nmt-ua:2025 nmt-ua:2026">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Раздел 2 · nmt-math · ai|</title>
+<title>Отношение, пропорция, процент · nmt-math · ai|</title>
 <!-- meta: built by tools/build-meta.py - do not edit by hand -->
-<meta name="description" content="">
+<meta name="description" content="Часть от целого и постоянное произведение: два закона, которые стоят за процентами, смесями, скоростью воспроизведения и скидками.">
 <link rel="canonical" href="https://y-kolyada.github.io/nmt-math/ru/02.html">
 <link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/02.html">
 <link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/02.html">
+<link rel="alternate" hreflang="en" href="https://y-kolyada.github.io/nmt-math/en/02.html">
 <link rel="alternate" hreflang="x-default" href="https://y-kolyada.github.io/nmt-math/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="nmt-math">
-<meta property="og:title" content="Раздел 2">
-<meta property="og:description" content="">
+<meta property="og:title" content="Отношение, пропорция, процент">
+<meta property="og:description" content="Часть от целого и постоянное произведение: два закона, которые стоят за процентами, смесями, скоростью воспроизведения и скидками.">
 <meta property="og:url" content="https://y-kolyada.github.io/nmt-math/ru/02.html">
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Раздел 2","description":"","url":"https://y-kolyada.github.io/nmt-math/ru/02.html","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Отношение, пропорция, процент","description":"Часть от целого и постоянное произведение: два закона, которые стоят за процентами, смесями, скоростью воспроизведения и скидками.","url":"https://y-kolyada.github.io/nmt-math/ru/02.html","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
 <!-- /meta -->
-<link rel="stylesheet" href="../assets/style.css?v=1">
-<link rel="stylesheet" href="../assets/study.css?v=1">
+<link rel="stylesheet" href="../assets/style.css?v=3">
+<link rel="stylesheet" href="../assets/study.css?v=3">
 <script>
   (function() {
     var s = document.documentElement.dataset.site || 'swa';
@@ -44,17 +46,18 @@
     </a>
     <div class="three" aria-hidden="true">закон · <span class="topic">Математика</span> · границы · применение</div>
   </div>
-  <div class="utility-tray" role="toolbar" aria-label="Anzeigeeinstellungen und Sprache">
+  <div class="utility-tray" role="toolbar" aria-label="Настройки отображения и язык">
     <nav class="lang-switcher" aria-label="Язык страницы">
       <a href="../uk/02.html" lang="uk" hreflang="uk" aria-label="Українська">UK</a>
       <a href="02.html" lang="ru" hreflang="ru" aria-label="Русский" class="active" aria-current="page">RU</a>
+      <a href="../en/02.html" lang="en" hreflang="en" aria-label="English">EN</a>
     </nav>
-    <div class="font-scaler" role="group" aria-label="Schriftgröße">
-      <button type="button" class="font-btn font-s" data-size="s" title="Kleine Schrift" aria-label="Kleine Schrift">A</button>
-      <button type="button" class="font-btn font-m active" data-size="m" title="Standardschrift" aria-label="Standardschrift">A</button>
-      <button type="button" class="font-btn font-l" data-size="l" title="Große Schrift" aria-label="Große Schrift">A</button>
+    <div class="font-scaler" role="group" aria-label="Размер шрифта">
+      <button type="button" class="font-btn font-s" data-size="s" title="Мелкий шрифт" aria-label="Мелкий шрифт">A</button>
+      <button type="button" class="font-btn font-m active" data-size="m" title="Стандартный шрифт" aria-label="Стандартный шрифт">A</button>
+      <button type="button" class="font-btn font-l" data-size="l" title="Крупный шрифт" aria-label="Крупный шрифт">A</button>
     </div>
-    <button type="button" class="theme-toggle" id="themeToggle" title="Thema wechseln (Tag/Nacht)" aria-label="Thema Tag/Nacht wechseln">
+    <button type="button" class="theme-toggle" id="themeToggle" title="Сменить тему (День/Ночь)" aria-label="Сменить тему день/ночь">
       <span class="theme-icon" aria-hidden="true"><svg class="icon" data-icon="sun" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="3.8"/><path d="M10 1.2v2.2M10 16.6v2.2M1.2 10h2.2M16.6 10h2.2M3.7 3.7l1.6 1.6M14.7 14.7l1.6 1.6M16.3 3.7l-1.6 1.6M5.3 14.7l-1.6 1.6"/></svg></span>
     </button>
   </div>
@@ -62,48 +65,528 @@
 
 <div class="cols">
 
-  <nav class="contents" aria-label="Bereiche der Website">
+  <nav class="contents" aria-label="Блоки курса">
     <ol>
-      <li><a href="01.html"><span class="num">1</span>Раздел 1</a></li>
-      <li><a href="02.html" aria-current="page"><span class="num">2</span>Раздел 2</a></li>
-      <li><a href="03.html"><span class="num">3</span>Раздел 3</a></li>
-      <li><a href="04.html"><span class="num">4</span>Раздел 4</a></li>
-      <li><a href="05.html"><span class="num">5</span>Раздел 5</a></li>
-      <li><a href="06.html"><span class="num">6</span>Раздел 6</a></li>
-      <li><a href="07.html"><span class="num">7</span>Раздел 7</a></li>
-      <li><a href="08.html"><span class="num">8</span>Раздел 8</a></li>
-      <li><a href="09.html"><span class="num">9</span>Раздел 9</a></li>
-      <li><a href="10.html"><span class="num">10</span>Раздел 10</a></li>
-      <li><a href="11.html"><span class="num">11</span>Раздел 11</a></li>
-      <li><a href="12.html"><span class="num">12</span>Раздел 12</a></li>
-      <li><a href="13.html"><span class="num">13</span>Раздел 13</a></li>
+      <li class="group">Алгебра и начала анализа</li>
+      <li><a href="01.html"><span class="num">1</span>Число и действия</a></li>
+      <li><a href="02.html" aria-current="page"><span class="num">2</span>Пропорция и процент</a></li>
+      <li><a href="03.html"><span class="num">3</span>Выражения</a></li>
+      <li><a href="04.html"><span class="num">4</span>Уравнения и неравенства</a></li>
+      <li><a href="05.html"><span class="num">5</span>Функции и прогрессии</a></li>
+      <li><a href="06.html"><span class="num">6</span>Степени и логарифмы</a></li>
+      <li><a href="07.html"><span class="num">7</span>Тригонометрия</a></li>
+      <li><a href="08.html"><span class="num">8</span>Производная, интеграл</a></li>
+      <li><a href="09.html"><span class="num">9</span>Счёт и вероятность</a></li>
+      <li class="group">Геометрия</li>
+      <li><a href="10.html"><span class="num">10</span>Фигуры на плоскости</a></li>
+      <li><a href="11.html"><span class="num">11</span>Измерение фигур</a></li>
+      <li><a href="12.html"><span class="num">12</span>Координаты и векторы</a></li>
+      <li><a href="13.html"><span class="num">13</span>Пространство и тела</a></li>
     </ol>
     <div class="nav-extra">
       <div><a href="navigator.html"><svg class="icon" data-icon="target" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7.4"/><circle cx="10" cy="10" r="3.6"/><circle cx="10" cy="10" r="0.7" fill="currentColor"/></svg> Навигатор</a></div>
       <div><a href="glossary.html"><svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg> Словарь понятий</a></div>
     </div>
-    <div class="page-toc" id="pageToc" aria-label="Abschnitte dieser Seite" hidden>
+    <div class="page-toc" id="pageToc" aria-label="Разделы этой страницы" hidden>
       <ul class="toc-list" id="tocList"></ul>
     </div>
   </nav>
 
   <main id="main">
-    <h1>Раздел 2</h1>
-    <p class="page-size" data-words="19">Слов: 19</p>
+    <h1>Отношение, пропорция, процент</h1>
+    <p class="page-size" data-words="1935">Слов: 1935</p>
+    <p class="lead">Часть от целого и постоянное произведение: два закона, которые стоят за процентами,
+    смесями, скоростью воспроизведения и скидками. Один закон, три вопроса к нему и одна граница. На этой границе в 2026 году
+    потеряли балл четыре участника НМТ из пяти: задачу на проценты правильно решили 20,4 %.</p>
 
-    <div class="stub-card">
-      <h2>Русская версия готовится</h2>
-      <p>Полная рабочая версия этой страницы опубликована на украинском языке.</p>
-      <p>Открыть полную версию:</p>
-      <div class="stub-actions">
-        <a href="../uk/02.html" class="btn-primary">Раздел 2 →</a>
+    <div class="box key" id="key-idea">
+      <h2>Главная мысль страницы <a class="anchor-link" href="#key-idea" aria-label="ссылка на этот блок">#</a></h2>
+      <p>Процент не существует сам по себе. «20 %» - это всегда «20 % <em>от чего-то</em>». Почти все
+      ошибки в задачах на проценты - не незнание формулы, а забытое «от чего». Формула здесь одна,
+      а целое, от которого считают, меняется после каждого шага.</p>
+    </div>
+
+    <span class="step">Шаг 0 · Зацепка</span>
+    <h2 id="hook">1 · Цена поднялась на 20 % и упала на 20 % <a class="anchor-link" href="#hook">#</a></h2>
+    <p>Товар стоил 100 грн. Цену повысили на 20 %, а через неделю снизили на 20 %. Сколько
+    стоит товар теперь?</p>
+    <p>Привычный ответ: «+20 и −20 дают ноль, значит 100 грн». Проверим по шагам:</p>
+    <ul>
+      <li>после повышения: 100 + 20 % от 100 = 100 + 20 = <strong>120 грн</strong>;</li>
+      <li>после снижения: 120 − 20 % от <strong>120</strong> = 120 − 24 = <strong>96 грн</strong>.</li>
+    </ul>
+    <p>Цена не вернулась: она упала на 4 %. Оба раза было «20 %», но от разных целых: сначала
+    от 100, потом от 120. Привычка складывать проценты только что дала неверный ответ. Ниже - почему.</p>
+    <!-- fig:02-chain -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 200" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Три столбика: 100 гривен, после повышения на 20 % от 100 - 120 гривен, после снижения на 20 % от 120 - 96 гривен. Пунктир показывает уровень 100, к которому цена не вернулась.">
+        <rect x="30.0" y="55.0" width="60.0" height="115.0" rx="3" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.2"/>
+        <text x="60.0" y="49.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-weight="700">100 грн</text>
+        <rect x="130.0" y="32.0" width="60.0" height="138.0" rx="3" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.2"/>
+        <text x="160.0" y="26.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-weight="700">120 грн</text>
+        <rect x="230.0" y="59.6" width="60.0" height="110.4" rx="3" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="260.0" y="53.6" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-weight="700">96 грн</text>
+        <line x1="14.0" y1="55.0" x2="306.0" y2="55.0" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" opacity="0.7"/>
+        <line x1="14.0" y1="170.0" x2="306.0" y2="170.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <text x="110.0" y="192.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">+20 % от 100</text>
+        <text x="210.0" y="192.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">−20 % от 120</text>
+        <line x1="92.0" y1="110.0" x2="128.0" y2="110.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="128.0,110.0 121.6,112.7 121.6,107.3" fill="currentColor"/>
+        <line x1="192.0" y1="110.0" x2="228.0" y2="110.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="228.0,110.0 221.6,112.7 221.6,107.3" fill="currentColor"/>
+      </svg>
+      <p class="dim">Рисунок 4. Два шага по 20 % от разных целых: 100 → 120 → 96.</p>
+    </div>
+    <!-- /fig:02-chain -->
+
+    <span class="step">Шаг 1 · Понятие</span>
+    <h2 id="concept">2 · Что такое процент <a class="anchor-link" href="#concept">#</a></h2>
+    <p><strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Процент</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Процент</strong><button type="button" class="term-close" aria-label="Закрыть">&times;</button></span><span class="term-desc">Одна сотая часть; процент всегда берётся от определённого целого.</span><span class="term-links"><a href="glossary.html#term-percent">В словарь <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> - это одна сотая часть: <span class="math" data-tex="1\% = \frac{1}{100}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>1</mn><mi>&#x00025;</mi><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>100</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">1\% = \frac{1}{100}</annotation></semantics></math></span>.
+    Значит, <span class="math" data-tex="p\% = \frac{p}{100}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>p</mi><mi>&#x00025;</mi><mo>&#x0003D;</mo><mfrac><mrow><mi>p</mi></mrow><mrow><mn>100</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">p\% = \frac{p}{100}</annotation></semantics></math></span>, а любой процент - это просто
+    дробь, записанная другим языком:</p>
+    <div class="math-block" data-tex="25\% = \frac{25}{100} = 0\text{,}25 = \frac{1}{4}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>25</mn><mi>&#x00025;</mi><mo>&#x0003D;</mo><mfrac><mrow><mn>25</mn></mrow><mrow><mn>100</mn></mrow></mfrac><mo>&#x0003D;</mo><mn>0</mn><mtext>,</mtext><mn>25</mn><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>4</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">25\% = \frac{25}{100} = 0\text{,}25 = \frac{1}{4}</annotation></semantics></math></div>
+    <p>Здесь три слова, которые нужно различать:</p>
+    <ul>
+      <li><strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">целое</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Целое, часть, доля</strong><button type="button" class="term-close" aria-label="Закрыть">&times;</button></span><span class="term-desc">Целое - от чего считают, часть - что взяли, доля - какую часть составляет часть.</span><span class="term-links"><a href="glossary.html#term-whole-part">В словарь <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> - величина, от которой считают (цена до изменения, вся масса раствора, весь путь);</li>
+      <li><strong>часть</strong> - то, что от целого взяли;</li>
+      <li><strong>доля</strong> - число, которое показывает, какую часть целого составляет часть. Долю
+      записывают дробью, десятичной дробью или в процентах - это одно и то же число.</li>
+    </ul>
+
+    <span class="step">Шаг 2 · Закон</span>
+    <h2 id="law">3 · Часть = целое × доля <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-part">
+      <p class="law-name">Закон части</p>
+      <div class="math-block" data-tex="A = B \cdot \frac{p}{100}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mo>&#x0003D;</mo><mi>B</mi><mo>&#x000B7;</mo><mfrac><mrow><mi>p</mi></mrow><mrow><mn>100</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">A = B \cdot \frac{p}{100}</annotation></semantics></math></div>
+      <p><span class="math" data-tex="B"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span> - целое, <span class="math" data-tex="A"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span> - часть,
+      <span class="math" data-tex="p"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span> - сколько процентов часть составляет от целого.</p>
+    </div>
+    <div class="corollary" id="cor-diagram" data-law="law-part">
+      <p class="corollary-of">Следствие закона <a href="#law-part">«Закон части»</a></p>
+      <p class="corollary-name">Диаграмма читается законом части</p>
+      <div class="math-block" data-tex="\alpha_{\text{сектора}} = 360^\circ \cdot \frac{p}{100}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>&#x003B1;</mi><mrow><mtext>сектора</mtext></mrow></msub><mo>&#x0003D;</mo><msup><mn>360</mn><mo>&#x02218;</mo></msup><mo>&#x000B7;</mo><mfrac><mrow><mi>p</mi></mrow><mrow><mn>100</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\alpha_{\text{сектора}} = 360^\circ \cdot \frac{p}{100}</annotation></semantics></math></div>
+      <p>Столбчатая диаграмма показывает количества, и целое - их сумма. Круговая показывает доли: сектор в p % занимает 360° · p/100. Диаграмма изменений показывает отклонение от базы: новое значение = база + отклонение.</p>
+      <p><strong>Почему так.</strong> Диаграмма - тот же закон части, нарисованный: целое - сумма всех столбцов или вся окружность, 360°, часть - один столбец или сектор. Поэтому сначала выясни, что на диаграмме целое и в каких единицах подписана ось, а потом считай, как в любой задаче на часть.</p>
+    </div>
+    <p>В формуле три участника, и спросить можно о любом из них. Это не три разные задачи, а один
+    закон, прочитанный тремя способами:</p>
+    <ul>
+      <li>найти часть: <span class="math" data-tex="A = B \cdot \frac{p}{100}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>A</mi><mo>&#x0003D;</mo><mi>B</mi><mo>&#x000B7;</mo><mfrac><mrow><mi>p</mi></mrow><mrow><mn>100</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">A = B \cdot \frac{p}{100}</annotation></semantics></math></span>;</li>
+      <li>найти целое: <span class="math" data-tex="B = A : \frac{p}{100}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>B</mi><mo>&#x0003D;</mo><mi>A</mi><mi>:</mi><mfrac><mrow><mi>p</mi></mrow><mrow><mn>100</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">B = A : \frac{p}{100}</annotation></semantics></math></span>;</li>
+      <li>найти процент: <span class="math" data-tex="p = \frac{A}{B} \cdot 100"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>p</mi><mo>&#x0003D;</mo><mfrac><mrow><mi>A</mi></mrow><mrow><mi>B</mi></mrow></mfrac><mo>&#x000B7;</mo><mn>100</mn></mrow><annotation encoding="application/x-tex">p = \frac{A}{B} \cdot 100</annotation></semantics></math></span>.</li>
+    </ul>
+    <p>Из него следует второй закон - об изменении величины на процент:</p>
+    <div class="law" id="law-change">
+      <p class="law-name">Закон изменения</p>
+      <div class="math-block" data-tex="B_{\text{новое}} = B \cdot \left(1 + \frac{p}{100}\right)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>B</mi><mrow><mtext>новое</mtext></mrow></msub><mo>&#x0003D;</mo><mi>B</mi><mo>&#x000B7;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mn>1</mn><mo>&#x0002B;</mo><mfrac><mrow><mi>p</mi></mrow><mrow><mn>100</mn></mrow></mfrac><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow></mrow><annotation encoding="application/x-tex">B_{\text{новое}} = B \cdot \left(1 + \frac{p}{100}\right)</annotation></semantics></math></div>
+      <p>Для уменьшения <span class="math" data-tex="p"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span> берут со знаком минус. Несколько изменений подряд
+      <strong>умножаются</strong>, а не складываются:</p>
+      <div class="math-block" data-tex="B \cdot \left(1 + \frac{p}{100}\right) \cdot \left(1 + \frac{q}{100}\right)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>B</mi><mo>&#x000B7;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mn>1</mn><mo>&#x0002B;</mo><mfrac><mrow><mi>p</mi></mrow><mrow><mn>100</mn></mrow></mfrac><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mo>&#x000B7;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mn>1</mn><mo>&#x0002B;</mo><mfrac><mrow><mi>q</mi></mrow><mrow><mn>100</mn></mrow></mfrac><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow></mrow><annotation encoding="application/x-tex">B \cdot \left(1 + \frac{p}{100}\right) \cdot \left(1 + \frac{q}{100}\right)</annotation></semantics></math></div>
+    </div>
+    <p>И два закона пропорциональности, из которых выросли проценты:</p>
+    <div class="law" id="law-proportion">
+      <p class="law-name">Основное свойство пропорции</p>
+      <div class="math-block" data-tex="\frac{a}{b} = \frac{c}{d} \iff ad = bc \quad (b, d \neq 0)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mi>c</mi></mrow><mrow><mi>d</mi></mrow></mfrac><mi>&#x027FA;</mi><mi>a</mi><mi>d</mi><mo>&#x0003D;</mo><mi>b</mi><mi>c</mi><mspace width="1em" /><mo stretchy="false">&#x00028;</mo><mi>b</mi><mo>&#x0002C;</mo><mi>d</mi><mo>&#x02260;</mo><mn>0</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">\frac{a}{b} = \frac{c}{d} \iff ad = bc \quad (b, d \neq 0)</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-inverse">
+      <p class="law-name">Обратная пропорциональность: произведение постоянно</p>
+      <div class="math-block" data-tex="v \cdot t = S = \text{const} \implies t = \frac{S}{v}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>v</mi><mo>&#x000B7;</mo><mi>t</mi><mo>&#x0003D;</mo><mi>S</mi><mo>&#x0003D;</mo><mtext>const</mtext><mi>&#x027F9;</mi><mi>t</mi><mo>&#x0003D;</mo><mfrac><mrow><mi>S</mi></mrow><mrow><mi>v</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">v \cdot t = S = \text{const} \implies t = \frac{S}{v}</annotation></semantics></math></div>
+      <p>Если одну величину увеличить в k раз, другая уменьшится в k раз. Скорость и время, количество
+      рабочих и продолжительность работы, цена и количество товара на постоянную сумму.</p>
+    </div>
+
+    <span class="step">Шаг 3 · Почему так</span>
+    <h2 id="why">4 · Откуда берётся формула <a class="anchor-link" href="#why">#</a></h2>
+    <p>«p процентов от B» означает: разделить B на 100 равных частей и взять p из них. Одна часть -
+    это <span class="math" data-tex="\frac{B}{100}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mi>B</mi></mrow><mrow><mn>100</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{B}{100}</annotation></semantics></math></span>, p частей - <span class="math" data-tex="\frac{B}{100} \cdot p"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mi>B</mi></mrow><mrow><mn>100</mn></mrow></mfrac><mo>&#x000B7;</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">\frac{B}{100} \cdot p</annotation></semantics></math></span>.
+    Больше в законе части ничего нет.</p>
+    <p>Закон изменения - это закон части вместе с распределительным законом из блока 1. Новое значение - это
+    старое плюс его часть:</p>
+    <div class="math-block" data-tex="B + B \cdot \frac{p}{100} = B \cdot \left(1 + \frac{p}{100}\right)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>B</mi><mo>&#x0002B;</mo><mi>B</mi><mo>&#x000B7;</mo><mfrac><mrow><mi>p</mi></mrow><mrow><mn>100</mn></mrow></mfrac><mo>&#x0003D;</mo><mi>B</mi><mo>&#x000B7;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mn>1</mn><mo>&#x0002B;</mo><mfrac><mrow><mi>p</mi></mrow><mrow><mn>100</mn></mrow></mfrac><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow></mrow><annotation encoding="application/x-tex">B + B \cdot \frac{p}{100} = B \cdot \left(1 + \frac{p}{100}\right)</annotation></semantics></math></div>
+    <p><strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Пропорция</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Пропорция</strong><button type="button" class="term-close" aria-label="Закрыть">&times;</button></span><span class="term-desc">Равенство двух отношений; её основное свойство - ad = bc.</span><span class="term-links"><a href="glossary.html#term-proportion">В словарь <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> - это равенство двух долей; умножим обе части на
+    <span class="math" data-tex="bd"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>b</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">bd</annotation></semantics></math></span> и получим <span class="math" data-tex="ad = bc"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mi>d</mi><mo>&#x0003D;</mo><mi>b</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">ad = bc</annotation></semantics></math></span>. <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Обратная
+    пропорциональность</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Обратная пропорциональность</strong><button type="button" class="term-close" aria-label="Закрыть">&times;</button></span><span class="term-desc">Зависимость, при которой произведение двух величин постоянно.</span><span class="term-links"><a href="glossary.html#term-inverse">В словарь <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span>:</strong> если <span class="math" data-tex="v \cdot t"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>v</mi><mo>&#x000B7;</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">v \cdot t</annotation></semantics></math></span> постоянно, то увеличение v в k раз
+    можно компенсировать только уменьшением t в k раз, иначе произведение изменится.</p>
+    <!-- fig:02-inverse -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 150" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Два прямоугольника одинаковой площади 12: со сторонами 2 на 6 и 3 на 4. Скорость - высота, время - ширина, путь - площадь. Увеличили высоту в 1,5 раза - ширина уменьшилась в 1,5 раза.">
+        <rect x="20.0" y="80.0" width="120.0" height="40.0" rx="0" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="1.2"/>
+        <text x="80.0" y="105.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">S = 12</text>
+        <text x="80.0" y="138.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-style="italic">t = 6</text>
+        <text x="146.0" y="105.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">v = 2</text>
+        <rect x="200.0" y="60.0" width="80.0" height="60.0" rx="0" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="240.0" y="95.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">S = 12</text>
+        <text x="240.0" y="138.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-style="italic">t = 4</text>
+        <text x="194.0" y="52.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">v = 3</text>
+      </svg>
+      <p class="dim">Рисунок 5. Обратная пропорциональность: произведение v · t постоянно, как площадь прямоугольника.</p>
+    </div>
+    <!-- /fig:02-inverse -->
+    <p>Второе изменение применяется уже к новому значению, то есть к новому целому. Поэтому множитель
+    второго изменения умножается на результат первого. В зацепке:
+    <span class="math" data-tex="100 \cdot 1\text{,}2 \cdot 0\text{,}8 = 96"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>100</mn><mo>&#x000B7;</mo><mn>1</mn><mtext>,</mtext><mn>2</mn><mo>&#x000B7;</mo><mn>0</mn><mtext>,</mtext><mn>8</mn><mo>&#x0003D;</mo><mn>96</mn></mrow><annotation encoding="application/x-tex">100 \cdot 1\text{,}2 \cdot 0\text{,}8 = 96</annotation></semantics></math></span>. Произведение
+    <span class="math" data-tex="1\text{,}2 \cdot 0\text{,}8 = 0\text{,}96"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>1</mn><mtext>,</mtext><mn>2</mn><mo>&#x000B7;</mo><mn>0</mn><mtext>,</mtext><mn>8</mn><mo>&#x0003D;</mo><mn>0</mn><mtext>,</mtext><mn>96</mn></mrow><annotation encoding="application/x-tex">1\text{,}2 \cdot 0\text{,}8 = 0\text{,}96</annotation></semantics></math></span> и есть те самые минус 4 %.</p>
+
+    <span class="step">Шаг 4 · Границы</span>
+    <h2 id="limits">5 · Где закон ломается, если забыть целое <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-base">
+      <p><strong>Целое - это то, с чем сравнивают.</strong> «На сколько процентов 50 больше 40?» -
+      сравнивают с 40: разность 10 составляет 25 % от 40. «На сколько процентов 40 меньше 50?» -
+      сравнивают с 50: та же разность 10 составляет лишь 20 % от 50. Одна разность, два целых, два
+      ответа.</p>
+    </div>
+    <div class="limit" id="limit-chain">
+      <p><strong>Проценты подряд не складываются.</strong> Складывать можно только проценты от одного и
+      того же целого. После первого изменения целое уже другое.</p>
+    </div>
+    <div class="limit" id="limit-times">
+      <p><strong>«В 3 раза больше» - это «на 200 % больше», а не на 300 %.</strong> Новое значение
+      <span class="math" data-tex="3B = B \cdot (1 + 2)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>3</mn><mi>B</mi><mo>&#x0003D;</mo><mi>B</mi><mo>&#x000B7;</mo><mo stretchy="false">&#x00028;</mo><mn>1</mn><mo>&#x0002B;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">3B = B \cdot (1 + 2)</annotation></semantics></math></span>: прирост - два целых, то есть 200 %.</p>
+    </div>
+    <div class="limit" id="limit-hundred">
+      <p><strong>Уменьшить больше чем на 100 % невозможно</strong> для цены, массы, длины: множитель
+      <span class="math" data-tex="1 - \frac{p}{100}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>1</mn><mo>&#x02212;</mo><mfrac><mrow><mi>p</mi></mrow><mrow><mn>100</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">1 - \frac{p}{100}</annotation></semantics></math></span> стал бы отрицательным. Увеличивать можно на сколько
+      угодно процентов.</p>
+    </div>
+
+    <span class="step">Шаг 5 · Применение</span>
+    <h2 id="apply">6 · Задачи в форме НМТ <a class="anchor-link" href="#apply">#</a></h2>
+    <p>Каждая задача здесь знает свой закон. Если ответ неверный, задача ведёт к закону и его
+    границам, а не к «правильному ответу».</p>
+
+    <div class="task" data-kind="choice" data-answer="Б" data-limit="limit-base">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p>Найдите три восьмых от числа 320.</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · 40</button>
+        <button type="button" data-opt="Б">Б · 120</button>
+        <button type="button" data-opt="В">В · 200</button>
+        <button type="button" data-opt="Г">Г · 280</button>
+        <button type="button" data-opt="Д">Д · 960</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#law-part">часть = целое × доля</a>.</p>
+      <div class="solution">Доля <span class="math" data-tex="\frac{3}{8}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>3</mn></mrow><mrow><mn>8</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{3}{8}</annotation></semantics></math></span>. Неверные варианты - это слепые ходы: 40 - нашли только одну
+      восьмую, 200 - нашли остаток, 280 - вычли одну восьмую, 960 - умножили на 3 и забыли разделить.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="308" data-limit="limit-chain">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Тариф 250 грн сначала повысили на 12 %, а потом ещё на 10 %. Сколько гривен составляет новый
+      тариф?</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-change">закон изменения</a>.</p>
+      <div class="solution">Два изменения умножаются: <span class="math" data-tex="250 \cdot 1\text{,}12 \cdot 1\text{,}1 = 308"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>250</mn><mo>&#x000B7;</mo><mn>1</mn><mtext>,</mtext><mn>12</mn><mo>&#x000B7;</mo><mn>1</mn><mtext>,</mtext><mn>1</mn><mo>&#x0003D;</mo><mn>308</mn></mrow><annotation encoding="application/x-tex">250 \cdot 1\text{,}12 \cdot 1\text{,}1 = 308</annotation></semantics></math></span>. Слепой ход
+      «12 + 10 = 22 %» даёт 305: разница в три гривны и есть та самая граница.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="24" data-limit="limit-base">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Видеоурок длится 36 минут. Перед просмотром скорость воспроизведения увеличили в 1,5 раза.
+      Сколько минут продлится просмотр?</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-inverse">обратная пропорциональность</a>.</p>
+      <div class="solution">Объём ролика постоянен, поэтому время = объём : скорость,
+      <span class="math" data-tex="t = \frac{36}{1\text{,}5} = 24"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>t</mi><mo>&#x0003D;</mo><mfrac><mrow><mn>36</mn></mrow><mrow><mn>1</mn><mtext>,</mtext><mn>5</mn></mrow></mfrac><mo>&#x0003D;</mo><mn>24</mn></mrow><annotation encoding="application/x-tex">t = \frac{36}{1\text{,}5} = 24</annotation></semantics></math></span>. Граница: если коэффициент меньше
+      1, просмотр становится дольше. И ещё одна проверка закона части: скорость выросла на 50 %, а время
+      сократилось на 12 минут из 36, то есть на <span class="math" data-tex="33\frac{1}{3}\%"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>33</mn><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mi>&#x00025;</mi></mrow><annotation encoding="application/x-tex">33\frac{1}{3}\%</annotation></semantics></math></span>, а не на 50 %.</div>
+    </div>
+
+    <div class="task" data-kind="match" data-answer="В Б А" data-limit="limit-base">
+      <p class="task-kind">Установление соответствия · 3 балла</p>
+      <p>Числа 80 и 100. К каждому вопросу (1-3) подберите ответ (А-Д).</p>
+      <ul class="pairs">
+        <li><label>1. Сколько процентов составляет 80 от 100?
+          <select aria-label="Ответ к вопросу 1"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+        <li><label>2. На сколько процентов 100 больше 80?
+          <select aria-label="Ответ к вопросу 2"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+        <li><label>3. На сколько процентов 80 меньше 100?
+          <select aria-label="Ответ к вопросу 3"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+      </ul>
+      <p>А · 20 % &nbsp; Б · 25 % &nbsp; В · 80 % &nbsp; Г · 120 % &nbsp; Д · 125 %</p>
+      <p><button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-part">найти процент</a>.</p>
+      <div class="solution">Процент: <span class="math" data-tex="p = \frac{A}{B} \cdot 100"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>p</mi><mo>&#x0003D;</mo><mfrac><mrow><mi>A</mi></mrow><mrow><mi>B</mi></mrow></mfrac><mo>&#x000B7;</mo><mn>100</mn></mrow><annotation encoding="application/x-tex">p = \frac{A}{B} \cdot 100</annotation></semantics></math></span>.
+      Три вопроса, одна пара чисел, но целое каждый раз другое: в первом и третьем - 100, во втором - 80.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="В" data-limit="" data-claim="02-task-pie">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p>40 учеников назвали любимую игру: 10 - футбол, 14 - баскетбол, 16 - волейбол. Каким будет угол сектора «баскетбол» на круговой диаграмме этих данных?</p>
+      <!-- fig:02-task-pie -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 190" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Круговая диаграмма: 40 учеников по любимой игре - футбол 10, баскетбол 14, волейбол 16. Сектор баскетбола выделен цветом, его угол отмечен знаком вопроса.">
+        <path d="M 88.0 95.0 L 88.0 17.0 A 78.0 78.0 0 0 0 10.0 95.0 Z" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.4"/>
+        <rect x="180.0" y="51.0" width="12.0" height="12.0" rx="2" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.2"/>
+        <text x="198.0" y="62.0" fill="currentColor" font-size="13" opacity="1.0">футбол - 10</text>
+        <path d="M 88.0 95.0 L 10.0 95.0 A 78.0 78.0 0 0 0 133.8 158.1 Z" fill="currentColor" fill-opacity="0.45" stroke="currentColor" stroke-width="1.4" style="fill:var(--acc)"/>
+        <text x="68.0" y="140.2" fill="currentColor" font-size="16" opacity="1.0" text-anchor="middle" font-weight="700">?</text>
+        <rect x="180.0" y="81.0" width="12.0" height="12.0" rx="2" fill="currentColor" fill-opacity="0.45" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="198.0" y="92.0" fill="currentColor" font-size="13" opacity="1.0">баскетбол - 14</text>
+        <path d="M 88.0 95.0 L 133.8 158.1 A 78.0 78.0 0 0 0 88.0 17.0 Z" fill="currentColor" fill-opacity="0.28" stroke="currentColor" stroke-width="1.4"/>
+        <rect x="180.0" y="111.0" width="12.0" height="12.0" rx="2" fill="currentColor" fill-opacity="0.28" stroke="currentColor" stroke-width="1.2"/>
+        <text x="198.0" y="122.0" fill="currentColor" font-size="13" opacity="1.0">волейбол - 16</text>
+      </svg>
+      <p class="dim">Рисунок 6. К задаче: круговая диаграмма, в которой сектор - доля целого.</p>
+    </div>
+    <!-- /fig:02-task-pie -->
+      <div class="opts">
+        <button type="button" data-opt="А">А · 90°</button>
+        <button type="button" data-opt="Б">Б · 108°</button>
+        <button type="button" data-opt="В">В · 126°</button>
+        <button type="button" data-opt="Г">Г · 140°</button>
+        <button type="button" data-opt="Д">Д · 144°</button>
+      </div>
+      <p class="law-ref">Следствие: <a href="#cor-diagram">диаграмма читается законом части</a>.</p>
+      <div class="solution">Сектор - та же доля от 360°, что и часть от целого: <span class="math" data-tex="\frac{14}{40} \cdot 360^\circ = 126^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>14</mn></mrow><mrow><mn>40</mn></mrow></mfrac><mo>&#x000B7;</mo><msup><mn>360</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><msup><mn>126</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">\frac{14}{40} \cdot 360^\circ = 126^\circ</annotation></semantics></math></span>. 90° - сектор футбола, 144° - волейбола.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="60" data-limit="" data-claim="02-read-share">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p class="task-class"><strong>Данные на рисунке · прочитать и применить.</strong> Числа для решения есть только на рисунке: сначала выпишите их, потом решайте.</p>
+      <p>По диаграмме найдите, сколько процентов всех книг, проданных за пять дней, продано в среду и четверг вместе.</p>
+      <!-- fig:02-read-share -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 200" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Столбчатая диаграмма: сколько книг продал магазин за день. Шкала от 0 до 30 с шагом 6. Понедельник - 12, вторник - 18, среда - 30, четверг - 24, пятница - 6.">
+        <line x1="50.0" y1="174.0" x2="300.0" y2="174.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <text x="42.0" y="178.0" fill="currentColor" font-size="12" opacity="0.85" text-anchor="end">0</text>
+        <line x1="50.0" y1="142.0" x2="300.0" y2="142.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <text x="42.0" y="146.0" fill="currentColor" font-size="12" opacity="0.85" text-anchor="end">6</text>
+        <line x1="50.0" y1="110.0" x2="300.0" y2="110.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <text x="42.0" y="114.0" fill="currentColor" font-size="12" opacity="0.85" text-anchor="end">12</text>
+        <line x1="50.0" y1="78.0" x2="300.0" y2="78.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <text x="42.0" y="82.0" fill="currentColor" font-size="12" opacity="0.85" text-anchor="end">18</text>
+        <line x1="50.0" y1="46.0" x2="300.0" y2="46.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <text x="42.0" y="50.0" fill="currentColor" font-size="12" opacity="0.85" text-anchor="end">24</text>
+        <line x1="50.0" y1="14.0" x2="300.0" y2="14.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <text x="42.0" y="18.0" fill="currentColor" font-size="12" opacity="0.85" text-anchor="end">30</text>
+        <line x1="50.0" y1="174.0" x2="300.0" y2="174.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <line x1="50.0" y1="10.0" x2="50.0" y2="174.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <rect x="60.0" y="110.0" width="30.0" height="64.0" rx="2" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="75.0" y="192.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">Пн</text>
+        <rect x="110.0" y="78.0" width="30.0" height="96.0" rx="2" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="125.0" y="192.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">Вт</text>
+        <rect x="160.0" y="14.0" width="30.0" height="160.0" rx="2" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="175.0" y="192.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">Ср</text>
+        <rect x="210.0" y="46.0" width="30.0" height="128.0" rx="2" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="225.0" y="192.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">Чт</text>
+        <rect x="260.0" y="142.0" width="30.0" height="32.0" rx="2" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="275.0" y="192.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">Пт</text>
+      </svg>
+      <p class="dim">Рисунок 7. К задаче: продажа книг за пять дней.</p>
+    </div>
+    <!-- /fig:02-read-share -->
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-part">часть = целое × доля</a>.</p>
+      <div class="solution">С диаграммы: 12, 18, 30, 24, 6, всего 90. Среда и четверг: 30 + 24 = 54. Доля 54 : 90 = 0,6, то есть 60%.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="А" data-limit="" data-claim="02-read-base">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p class="task-class"><strong>Данные на рисунке · выбрать нужное.</strong> Числа есть только на рисунке, и среди них есть лишнее или ловушка: шаг сетки, шкала не от нуля. Выпишите только то, что нужно для решения.</p>
+      <p>По диаграмме определите, во сколько раз посетителей в субботу было больше, чем во вторник.</p>
+      <!-- fig:02-read-base -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 214" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Столбчатая диаграмма посетителей музея. Шкала начинается не с нуля, а с 40 (излом на оси), шаг 10, до 90. Понедельник - 60, вторник - 50, пятница - 70, суббота - 80. Столбик субботы на вид в 4 раза выше столбика вторника.">
+        <line x1="50.0" y1="174.0" x2="300.0" y2="174.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <text x="42.0" y="178.0" fill="currentColor" font-size="12" opacity="0.85" text-anchor="end">40</text>
+        <line x1="50.0" y1="142.0" x2="300.0" y2="142.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <text x="42.0" y="146.0" fill="currentColor" font-size="12" opacity="0.85" text-anchor="end">50</text>
+        <line x1="50.0" y1="110.0" x2="300.0" y2="110.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <text x="42.0" y="114.0" fill="currentColor" font-size="12" opacity="0.85" text-anchor="end">60</text>
+        <line x1="50.0" y1="78.0" x2="300.0" y2="78.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <text x="42.0" y="82.0" fill="currentColor" font-size="12" opacity="0.85" text-anchor="end">70</text>
+        <line x1="50.0" y1="46.0" x2="300.0" y2="46.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <text x="42.0" y="50.0" fill="currentColor" font-size="12" opacity="0.85" text-anchor="end">80</text>
+        <line x1="50.0" y1="14.0" x2="300.0" y2="14.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <text x="42.0" y="18.0" fill="currentColor" font-size="12" opacity="0.85" text-anchor="end">90</text>
+        <line x1="50.0" y1="174.0" x2="300.0" y2="174.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <line x1="50.0" y1="10.0" x2="50.0" y2="174.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <polyline points="44.0,182.0 50.0,178.0 56.0,182.0" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <polyline points="44.0,187.0 50.0,183.0 56.0,187.0" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <rect x="62.5" y="110.0" width="37.5" height="64.0" rx="2" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="81.2" y="204.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">Пн</text>
+        <rect x="125.0" y="142.0" width="37.5" height="32.0" rx="2" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="143.8" y="204.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">Вт</text>
+        <rect x="187.5" y="78.0" width="37.5" height="96.0" rx="2" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="206.2" y="204.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">Пт</text>
+        <rect x="250.0" y="46.0" width="37.5" height="128.0" rx="2" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="268.8" y="204.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">Сб</text>
+      </svg>
+      <p class="dim">Рисунок 8. К задаче: диаграмма, шкала которой начинается не с нуля.</p>
+    </div>
+    <!-- /fig:02-read-base -->
+      <div class="opts">
+        <button type="button" data-opt="А">А · 1,6</button>
+        <button type="button" data-opt="Б">Б · 2</button>
+        <button type="button" data-opt="В">В · 2,5</button>
+        <button type="button" data-opt="Г">Г · 3</button>
+        <button type="button" data-opt="Д">Д · 4</button>
+      </div>
+      <p class="law-ref">Следствие: <a href="#cor-diagram">диаграмма читается законом части</a>.</p>
+      <div class="solution">Шкала начинается с 40, поэтому высоты столбиков не пропорциональны числам. Читаем числа: суббота 80, вторник 50. 80 : 50 = 1,6. Ответ 4 - это отношение высот столбиков, а не чисел.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="25" data-limit="" data-claim="02-read-change">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p class="task-class"><strong>Данные на рисунке · прочитать и связать.</strong> Числа есть только на рисунке, а прочитанное пойдёт в два закона: выпишите числа, потом назовите оба закона.</p>
+      <p>По диаграмме определите, на сколько процентов цена в марте больше, чем в январе.</p>
+      <!-- fig:02-read-change -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 200" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Столбчатая диаграмма: цена килограмма яблок, грн, за четыре месяца. Шкала от 0 до 60 с шагом 10. Январь - 40, февраль - 30, март - 50, апрель - 60.">
+        <line x1="50.0" y1="174.0" x2="300.0" y2="174.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <text x="42.0" y="178.0" fill="currentColor" font-size="12" opacity="0.85" text-anchor="end">0</text>
+        <line x1="50.0" y1="147.3" x2="300.0" y2="147.3" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <text x="42.0" y="151.3" fill="currentColor" font-size="12" opacity="0.85" text-anchor="end">10</text>
+        <line x1="50.0" y1="120.7" x2="300.0" y2="120.7" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <text x="42.0" y="124.7" fill="currentColor" font-size="12" opacity="0.85" text-anchor="end">20</text>
+        <line x1="50.0" y1="94.0" x2="300.0" y2="94.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <text x="42.0" y="98.0" fill="currentColor" font-size="12" opacity="0.85" text-anchor="end">30</text>
+        <line x1="50.0" y1="67.3" x2="300.0" y2="67.3" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <text x="42.0" y="71.3" fill="currentColor" font-size="12" opacity="0.85" text-anchor="end">40</text>
+        <line x1="50.0" y1="40.7" x2="300.0" y2="40.7" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <text x="42.0" y="44.7" fill="currentColor" font-size="12" opacity="0.85" text-anchor="end">50</text>
+        <line x1="50.0" y1="14.0" x2="300.0" y2="14.0" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <text x="42.0" y="18.0" fill="currentColor" font-size="12" opacity="0.85" text-anchor="end">60</text>
+        <line x1="50.0" y1="174.0" x2="300.0" y2="174.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <line x1="50.0" y1="10.0" x2="50.0" y2="174.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <rect x="62.5" y="67.3" width="37.5" height="106.7" rx="2" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="81.2" y="192.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">янв</text>
+        <rect x="125.0" y="94.0" width="37.5" height="80.0" rx="2" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="143.8" y="192.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">фев</text>
+        <rect x="187.5" y="40.7" width="37.5" height="133.3" rx="2" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="206.2" y="192.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">мар</text>
+        <rect x="250.0" y="14.0" width="37.5" height="160.0" rx="2" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="268.8" y="192.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">апр</text>
+      </svg>
+      <p class="dim">Рисунок 9. К задаче: цена яблок за четыре месяца.</p>
+    </div>
+    <!-- /fig:02-read-change -->
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Законы: <a href="#law-change">закон изменения</a> и <a href="#law-part">часть = целое × доля</a>.</p>
+      <div class="solution">С диаграммы: январь 40 грн, март 50 грн. Изменение 50 − 40 = 10 грн считается от января, с которым сравнивают: 10 : 40 = 0,25, то есть 25%. Кто разделит на 50, получит 20%.</div>
+    </div>
+
+    <span class="step">Шаг 6 · Обратный ход</span>
+    <h2 id="reverse">7 · Назови закон сам <a class="anchor-link" href="#reverse">#</a></h2>
+    <p>Здесь закон не подсказан. Сначала скажи себе, какой закон работает и от какого целого считать,
+    и только потом считай. Разбор открывается после ответа.</p>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="6,25" data-limit="limit-chain">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Цену снизили на 25 %, а потом повысили на 25 %. На сколько процентов новая цена меньше
+      начальной?</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-change">закон изменения</a>.</p>
+      <div class="solution"><span class="math" data-tex="0\text{,}75 \cdot 1\text{,}25 = 0\text{,}9375"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>0</mn><mtext>,</mtext><mn>75</mn><mo>&#x000B7;</mo><mn>1</mn><mtext>,</mtext><mn>25</mn><mo>&#x0003D;</mo><mn>0</mn><mtext>,</mtext><mn>9375</mn></mrow><annotation encoding="application/x-tex">0\text{,}75 \cdot 1\text{,}25 = 0\text{,}9375</annotation></semantics></math></span>,
+      то есть цена меньше на 6,25 %. Зацепка из начала страницы, но с другими числами.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="300" data-limit="limit-base">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>В растворе 18 г соли, и это 6 % массы раствора. Какова масса раствора в граммах?</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-part">закон части</a>, прочитанный на целое.</p>
+      <div class="solution"><span class="math" data-tex="B = 18 : 0\text{,}06 = 300"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>B</mi><mo>&#x0003D;</mo><mn>18</mn><mi>:</mi><mn>0</mn><mtext>,</mtext><mn>06</mn><mo>&#x0003D;</mo><mn>300</mn></mrow><annotation encoding="application/x-tex">B = 18 : 0\text{,}06 = 300</annotation></semantics></math></span>. Сюжет про соль ничего не добавляет к
+      математике: это то же самое «найти целое».</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="96" data-limit="limit-base">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Велосипедист преодолевает расстояние между сёлами за 2 часа. За сколько минут он преодолеет это
+      расстояние, если увеличит скорость на 25 %?</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Законы: <a href="#law-change">закон изменения</a> и <a href="#law-inverse">обратная пропорциональность</a>.</p>
+      <div class="solution">Новая скорость - это
+      <span class="math" data-tex="1\text{,}25"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>1</mn><mtext>,</mtext><mn>25</mn></mrow><annotation encoding="application/x-tex">1\text{,}25</annotation></semantics></math></span> старой. Обратная пропорциональность: время делится на тот же множитель,
+      <span class="math" data-tex="120 : 1\text{,}25 = 96"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>120</mn><mi>:</mi><mn>1</mn><mtext>,</mtext><mn>25</mn><mo>&#x0003D;</mo><mn>96</mn></mrow><annotation encoding="application/x-tex">120 : 1\text{,}25 = 96</annotation></semantics></math></span> минут. Слепой ход «время тоже на 25 % меньше»
+      даёт 90 минут.</div>
+    </div>
+
+    <h2 id="error">8 · Найди ошибку в чужом решении <a class="anchor-link" href="#error">#</a></h2>
+    <p>Алёнка рассуждает: «Товар подешевел на 20 %. Чтобы вернуть прежнюю цену, его надо
+    подорожить на те же 20 %».</p>
+    <details>
+      <summary>Где ошибка?</summary>
+      <p>Второе изменение считается от новой, меньшей цены. Цена стала
+      <span class="math" data-tex="0\text{,}8B"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>0</mn><mtext>,</mtext><mn>8</mn><mi>B</mi></mrow><annotation encoding="application/x-tex">0\text{,}8B</annotation></semantics></math></span>, и чтобы вернуть <span class="math" data-tex="B"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span>, её надо умножить
+      на <span class="math" data-tex="\frac{1}{0\text{,}8} = 1\text{,}25"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>0</mn><mtext>,</mtext><mn>8</mn></mrow></mfrac><mo>&#x0003D;</mo><mn>1</mn><mtext>,</mtext><mn>25</mn></mrow><annotation encoding="application/x-tex">\frac{1}{0\text{,}8} = 1\text{,}25</annotation></semantics></math></span>, то есть повысить на 25 %.
+      Алёнка забыла, что целое изменилось. Это <a href="#limit-chain">вторая граница</a> закона.</p>
+    </details>
+    <!-- sources -->
+    <h2 id="external">9 · Ссылки на задания из внешних источников <a class="anchor-link" href="#external">#</a></h2>
+    <p class="dim">Реальные задания с других сайтов подготовки к НМТ, которые опираются на законы этого блока. Условие читай на сайте источника по ссылке, разметка законами - наша. Источники и годы включаются и выключаются в настройках (шестерёнка вверху).</p>
+    <p class="dim ext-off" hidden>Все внешние источники выключены в настройках.</p>
+    <div class="ext-source" data-ext-source="nmt-ua" id="ext-nmt-ua">
+      <h3 class="ext-head">НМТ на сайте ЗНО-ОНЛАЙН (zno.osvita.ua)</h3>
+      <p class="dim ext-lead">Задания основных сессий НМТ 2024-2026 с сайта ЗНО-ОНЛАЙН, по годам. Каждый год включается отдельно.</p>
+      <div class="ext" data-ext="nmt-ua:2026" id="ext-nmt-ua-2026">
+        <h4>НМТ 2026</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q1" rel="noopener" target="_blank">1 сессия, задание 1</a> (с рисунком) - Диаграмма читается законом части</li>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q2" rel="noopener" target="_blank">1 сессия, задание 2</a> - Закон части</li>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q20" rel="noopener" target="_blank">1 сессия, задание 20</a> - Закон части, Закон изменения</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q1" rel="noopener" target="_blank">2 сессия, задание 1</a> (с рисунком) - Диаграмма читается законом части</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q2" rel="noopener" target="_blank">2 сессия, задание 2</a> - Обратная пропорциональность: произведение постоянно</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q15" rel="noopener" target="_blank">2 сессия, задание 15</a> - Основное свойство пропорции</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q20" rel="noopener" target="_blank">2 сессия, задание 20</a> - Закон изменения</li>
+        </ul>
+      </div>
+      <div class="ext" data-ext="nmt-ua:2025" id="ext-nmt-ua-2025">
+        <h4>НМТ 2025</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q7" rel="noopener" target="_blank">1 сессия, задание 7</a> - Закон части</li>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q11" rel="noopener" target="_blank">1 сессия, задание 11</a> - Основное свойство пропорции</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q1" rel="noopener" target="_blank">2 сессия, задание 1</a> (с рисунком) - Диаграмма читается законом части</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q7" rel="noopener" target="_blank">2 сессия, задание 7</a> - Закон части</li>
+        </ul>
+      </div>
+      <div class="ext" data-ext="nmt-ua:2024" id="ext-nmt-ua-2024">
+        <h4>НМТ 2024</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q6" rel="noopener" target="_blank">1 сессия, задание 6</a> - Основное свойство пропорции</li>
+        </ul>
       </div>
     </div>
+    <!-- /sources -->
+
+    <h2 id="artifacts">Что у тебя есть после этой страницы <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>Один закон вместо десяти типов задач.</strong> Найти часть, найти целое, найти
+      процент, повысить, понизить, сравнить - это один закон части и вопрос «от чего».</p>
+    </div>
+    <!-- freq -->
+    <p class="dim law-freq" data-tasks="11">Частота на этом сайте, а не на НМТ: на этой странице 11 задач тренажёра, и они опираются на такие законы: Закон части - 7, Закон изменения - 4, Обратная пропорциональность: произведение постоянно - 2. В реальных вариантах НМТ 2024-2026 этот блок нужен в 12 заданиях из 132: Закон части - 7, Основное свойство пропорции - 3, Закон изменения - 2, Обратная пропорциональность: произведение постоянно - 1.</p>
+    <!-- /freq -->
+    <p>Проверь себя тремя вопросами. Ты знаешь этот закон, если:</p>
+    <ol>
+      <li>решаешь 8 из 10 задач на проценты без подсказки;</li>
+      <li>можешь объяснить вслух, почему два изменения на 20 % не возвращают цену назад;</li>
+      <li>находишь ошибку в чужом решении, как у Алёнки.</li>
+    </ol>
+  
+
+    <footer>
+      <nav class="pager" aria-label="Соседние темы">
+        <p class="pager-next">Следующая тема: <a href="03.html">Алгебраические выражения</a></p>
+        <p class="pager-prev">Предыдущая тема: <a href="01.html">Число и действия</a></p>
+      </nav>
+      <p class="footer-note">Сайт серии AI Factory. Сделан той же оснасткой, что и остальные: обычный HTML и CSS, проверка на bash, публикация через GitHub Pages.</p>
+    </footer>
   </main>
 
 </div>
 </div>
-<script src="../assets/swa.js?v=1"></script>
-<script src="../assets/trainer.js?v=1"></script>
+<script src="../assets/swa.js?v=3"></script>
+<script src="../assets/trainer.js?v=3"></script>
+<script src="../assets/sources.js?v=3"></script>
+<script src="../assets/terms.js?v=3"></script>
+<script src="../assets/cp.js?v=3"></script>
 </body>
 </html>

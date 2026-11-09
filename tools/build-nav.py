@@ -44,11 +44,43 @@ SKIP = {'ru': 'К содержанию', 'en': 'Skip to content',
 LANG_NAME = {'ru': 'Русский', 'en': 'English', 'uk': 'Українська', 'de': 'Deutsch'}
 LANG_GROUP = {'ru': 'Язык страницы', 'en': 'Page language',
               'uk': 'Мова сторінки', 'de': 'Seitensprache'}
+# Подписи кнопок и областей шапки. Заготовка непереведённой страницы подписана
+# по-немецки, остальные оболочки по-русски, а генератор переводил только на
+# украинский: на ru, uk и en читалка говорила по-немецки (nmt-math, шаг 11).
+# Поэтому подпись ставится здесь, по форме элемента, на языке папки страницы.
+# Значение - (подсказка title, подпись для читалки aria-label); у областей
+# подсказки нет.
+SHELL = {
+    'ru': {'tray': 'Настройки отображения и язык', 'scaler': 'Размер шрифта',
+           's': 'Мелкий шрифт', 'm': 'Стандартный шрифт', 'l': 'Крупный шрифт',
+           'theme': ('Сменить тему (День/Ночь)', 'Сменить тему день/ночь'),
+           'nav': 'Разделы сайта', 'nav-study': 'Блоки курса', 'toc': 'Разделы этой страницы'},
+    'uk': {'tray': 'Налаштування відображення і мова', 'scaler': 'Розмір шрифту',
+           's': 'Дрібний шрифт', 'm': 'Звичайний шрифт', 'l': 'Великий шрифт',
+           'theme': ('Змінити тему (день/ніч)', 'Змінити тему день/ніч'),
+           'nav': 'Розділи сайту', 'nav-study': 'Блоки курсу', 'toc': 'Розділи цієї сторінки'},
+    'en': {'tray': 'Display settings and language', 'scaler': 'Font size',
+           's': 'Small font', 'm': 'Standard font', 'l': 'Large font',
+           'theme': ('Switch theme (day/night)', 'Switch theme day/night'),
+           'nav': 'Site sections', 'nav-study': 'Course blocks', 'toc': 'Sections of this page'},
+    'de': {'tray': 'Anzeigeeinstellungen und Sprache', 'scaler': 'Schriftgröße',
+           's': 'Kleine Schrift', 'm': 'Standardschrift', 'l': 'Große Schrift',
+           'theme': ('Thema wechseln (Tag/Nacht)', 'Thema Tag/Nacht wechseln'),
+           'nav': 'Bereiche der Website', 'nav-study': 'Kursblöcke', 'toc': 'Abschnitte dieser Seite'},
+}
+SHELL_TAG = (
+    ('tray', re.compile(r'<div class="utility-tray"[^>]*>')),
+    ('scaler', re.compile(r'<div class="font-scaler"[^>]*>')),
+    ('font', re.compile(r'<button[^>]*class="font-btn[^"]*"[^>]*>')),
+    ('theme', re.compile(r'<button[^>]*class="theme-toggle"[^>]*>')),
+    ('nav', re.compile(r'<nav class="contents"[^>]*>')),
+    ('toc', re.compile(r'<div class="page-toc"[^>]*>')),
+)
 SKIP_LINK = re.compile(r'\s*<a class="skip"[^>]*>.*?</a>', re.S)
 SWITCHER = re.compile(r'<(div|nav) class="lang-switcher"[^>]*>(.*?)</\1>', re.S)
 SWITCH_LINK = re.compile(r'<a ([^>]*?)href="([^"]+)"([^>]*)>(.*?)</a>', re.S)
-# study.css and trainer.js are loaded only by pages of study-profile sites.
-ASSETS = ('style.css', 'swa.js', 'terms.js', 'cp.js', 'study.css', 'trainer.js')
+# study.css, trainer.js and sources.js are loaded only by pages of study-profile sites.
+ASSETS = ('style.css', 'swa.js', 'terms.js', 'cp.js', 'study.css', 'trainer.js', 'sources.js')
 NAV_ITEM = re.compile(r'(<nav class="contents"[^>]*>.*?</nav>)', re.S | re.I)
 NAV_LINK = re.compile(r'(<a\b[^>]*href="(?:\.\./\w\w/)?(\d\d)\.html"[^>]*>)(.*?)(</a>)', re.S | re.I)
 
@@ -140,7 +172,39 @@ def accessible(text, lang):
                 % (LANG_GROUP[lang], SWITCH_LINK.sub(link, inner)))
 
     text, switched = SWITCHER.subn(switcher, text, count=1)
-    return text, count + switched
+
+    # 3. Подписи шапки на языке страницы. Стоящий атрибут получает слово
+    #    таблицы, отсутствующий не добавляется.
+    words = SHELL.get(lang)
+    relabeled = 0
+    if words:
+        def put(tag, attr, value):
+            return re.sub(r'(\s%s=")[^"]*(")' % attr, lambda m: m.group(1) + value + m.group(2), tag, count=1)
+
+        def label(kind):
+            def fix(m):
+                nonlocal relabeled
+                tag = m.group(0)
+                if kind == 'font':
+                    size = re.search(r'data-size="(\w)"', tag)
+                    if not size or size.group(1) not in words:
+                        return tag
+                    title = aria = words[size.group(1)]
+                elif kind == 'theme':
+                    title, aria = words['theme']
+                else:
+                    key = 'nav-study' if kind == 'nav' and PROFILE['name'] == 'study' else kind
+                    title, aria = None, words[key]
+                new = put(tag, 'aria-label', aria)
+                if title:
+                    new = put(new, 'title', title)
+                relabeled += new != tag
+                return new
+            return fix
+
+        for kind, tag_re in SHELL_TAG:
+            text = tag_re.sub(label(kind), text)
+    return text, count + switched + relabeled
 
 
 def version(text, counts):

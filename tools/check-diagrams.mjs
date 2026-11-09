@@ -46,7 +46,9 @@ for (const lang of LANGS) {
     .filter((n) => has.test(readFileSync(join(lang, n), 'utf8').split('<main')[1] || ''));
 }
 const sources = existsSync('diagrams')
-  ? readdirSync('diagrams').sort().filter((n) => n.endsWith('.mmd'))
+  // A Mermaid source for schemes; on study sites also a generator (.py) for
+  // mathematical figures that Mermaid cannot draw (profiles/study.md).
+  ? readdirSync('diagrams').sort().filter((n) => n.endsWith('.mmd') || /^\d\d-.*\.py$/.test(n))
   : [];
 const total = Object.values(pages).reduce((n, list) => n + list.length, 0);
 
@@ -164,11 +166,11 @@ for (const lang of Object.keys(seen)) {
 const keyOf = (name) => name.replace(/\.html$/, '');
 const basePages = new Set((pages[BASE] || []).map(keyOf));
 for (const src of sources) {
-  const key = src.split('-')[0].replace(/\.mmd$/, '');
+  const key = src.split('-')[0].replace(/\.(mmd|py)$/, '');
   if (!basePages.has(key)) bad.push(['diagrams/' + src, 'исходник есть, а схемы на ' + BASE + '/' + key + '.html нет']);
 }
 for (const key of basePages) {
-  if (!sources.some((s) => s.split('-')[0].replace(/\.mmd$/, '') === key)) {
+  if (!sources.some((s) => s.split('-')[0].replace(/\.(mmd|py)$/, '') === key)) {
     bad.push([BASE + '/' + key + '.html', 'схема есть, а исходника diagrams/' + key + '-*.mmd нет']);
   }
 }

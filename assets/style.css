@@ -538,14 +538,63 @@ mark.search-mark {
   border-color: var(--term-accent);
 }
 
-/* How many were found, not how many fit: forty is the ceiling of the list. */
+/* How many were found, not how many fit, and which forty of them are on
+   screen. The pager stands to the right of the count, so on a wide screen it
+   costs no height; on a phone it wraps under the count. Its buttons wear the
+   shape of the search facets, because they too choose what the list shows. */
+.search-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 12px;
+  padding: 8px 14px 0;
+}
+.search-meta[hidden] { display: none; }
 .search-count {
   margin: 0;
-  padding: 8px 14px 0;
   color: var(--dim);
   font-size: .78rem;
 }
-.search-count[hidden] { display: none; }
+.search-pager {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+.search-pager[hidden] { display: none; }
+.search-pg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 26px;
+  padding: 0 8px;
+  font: inherit;
+  font-size: .78rem;
+  line-height: 1.6;
+  color: var(--fg);
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+}
+.search-pg[aria-current="page"] {
+  background: var(--term-bg-hover);
+  border-color: var(--term-accent);
+}
+.search-pg:hover:not(:disabled) { border-color: var(--term-accent); }
+.search-pg:disabled { opacity: .55; cursor: default; }
+.search-pg-arrow { padding: 0 6px; }
+.search-pg-arrow svg { display: block; }
+.search-pg-gap {
+  padding: 0 2px;
+  color: var(--dim);
+  font-size: .78rem;
+}
+@media (max-width: 640px) {
+  .search-pager { flex-basis: 100%; margin-left: 0; }
+}
 .search-facet:hover { border-color: var(--term-accent); }
 
 /* --- chips: a list of links that a comma cannot separate ---
@@ -714,6 +763,13 @@ body { padding-bottom: 72px; }
   line-height: 1.45;
   color: var(--fg);
   text-align: left;
+  /* The card is a child of the word it explains. On a word in <strong> or
+     <em> it inherited bold or italic, and the description read as shouting.
+     The card sets its own type; only .term-title is bold. */
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: normal;
 }
 .term-card[hidden] {
   display: none !important;

@@ -2,26 +2,28 @@
 <html lang="ru" data-site="nmt-math">
 <head>
 <meta charset="utf-8">
+<meta name="swa-sources" content="nmt-ua:2024 nmt-ua:2025 nmt-ua:2026">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Раздел 8 · nmt-math · ai|</title>
+<title>Производная и интеграл · nmt-math · ai|</title>
 <!-- meta: built by tools/build-meta.py - do not edit by hand -->
-<meta name="description" content="">
+<meta name="description" content="Два вопроса к функции: как быстро она меняется в точке и сколько накопилось на промежутке.">
 <link rel="canonical" href="https://y-kolyada.github.io/nmt-math/ru/08.html">
 <link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/08.html">
 <link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/08.html">
+<link rel="alternate" hreflang="en" href="https://y-kolyada.github.io/nmt-math/en/08.html">
 <link rel="alternate" hreflang="x-default" href="https://y-kolyada.github.io/nmt-math/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="nmt-math">
-<meta property="og:title" content="Раздел 8">
-<meta property="og:description" content="">
+<meta property="og:title" content="Производная и интеграл">
+<meta property="og:description" content="Два вопроса к функции: как быстро она меняется в точке и сколько накопилось на промежутке.">
 <meta property="og:url" content="https://y-kolyada.github.io/nmt-math/ru/08.html">
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Раздел 8","description":"","url":"https://y-kolyada.github.io/nmt-math/ru/08.html","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Производная и интеграл","description":"Два вопроса к функции: как быстро она меняется в точке и сколько накопилось на промежутке.","url":"https://y-kolyada.github.io/nmt-math/ru/08.html","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
 <!-- /meta -->
-<link rel="stylesheet" href="../assets/style.css?v=1">
-<link rel="stylesheet" href="../assets/study.css?v=1">
+<link rel="stylesheet" href="../assets/style.css?v=3">
+<link rel="stylesheet" href="../assets/study.css?v=3">
 <script>
   (function() {
     var s = document.documentElement.dataset.site || 'swa';
@@ -44,17 +46,18 @@
     </a>
     <div class="three" aria-hidden="true">закон · <span class="topic">Математика</span> · границы · применение</div>
   </div>
-  <div class="utility-tray" role="toolbar" aria-label="Anzeigeeinstellungen und Sprache">
+  <div class="utility-tray" role="toolbar" aria-label="Настройки отображения и язык">
     <nav class="lang-switcher" aria-label="Язык страницы">
       <a href="../uk/08.html" lang="uk" hreflang="uk" aria-label="Українська">UK</a>
       <a href="08.html" lang="ru" hreflang="ru" aria-label="Русский" class="active" aria-current="page">RU</a>
+      <a href="../en/08.html" lang="en" hreflang="en" aria-label="English">EN</a>
     </nav>
-    <div class="font-scaler" role="group" aria-label="Schriftgröße">
-      <button type="button" class="font-btn font-s" data-size="s" title="Kleine Schrift" aria-label="Kleine Schrift">A</button>
-      <button type="button" class="font-btn font-m active" data-size="m" title="Standardschrift" aria-label="Standardschrift">A</button>
-      <button type="button" class="font-btn font-l" data-size="l" title="Große Schrift" aria-label="Große Schrift">A</button>
+    <div class="font-scaler" role="group" aria-label="Размер шрифта">
+      <button type="button" class="font-btn font-s" data-size="s" title="Мелкий шрифт" aria-label="Мелкий шрифт">A</button>
+      <button type="button" class="font-btn font-m active" data-size="m" title="Стандартный шрифт" aria-label="Стандартный шрифт">A</button>
+      <button type="button" class="font-btn font-l" data-size="l" title="Крупный шрифт" aria-label="Крупный шрифт">A</button>
     </div>
-    <button type="button" class="theme-toggle" id="themeToggle" title="Thema wechseln (Tag/Nacht)" aria-label="Thema Tag/Nacht wechseln">
+    <button type="button" class="theme-toggle" id="themeToggle" title="Сменить тему (День/Ночь)" aria-label="Сменить тему день/ночь">
       <span class="theme-icon" aria-hidden="true"><svg class="icon" data-icon="sun" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="3.8"/><path d="M10 1.2v2.2M10 16.6v2.2M1.2 10h2.2M16.6 10h2.2M3.7 3.7l1.6 1.6M14.7 14.7l1.6 1.6M16.3 3.7l-1.6 1.6M5.3 14.7l-1.6 1.6"/></svg></span>
     </button>
   </div>
@@ -62,48 +65,398 @@
 
 <div class="cols">
 
-  <nav class="contents" aria-label="Bereiche der Website">
+  <nav class="contents" aria-label="Блоки курса">
     <ol>
-      <li><a href="01.html"><span class="num">1</span>Раздел 1</a></li>
-      <li><a href="02.html"><span class="num">2</span>Раздел 2</a></li>
-      <li><a href="03.html"><span class="num">3</span>Раздел 3</a></li>
-      <li><a href="04.html"><span class="num">4</span>Раздел 4</a></li>
-      <li><a href="05.html"><span class="num">5</span>Раздел 5</a></li>
-      <li><a href="06.html"><span class="num">6</span>Раздел 6</a></li>
-      <li><a href="07.html"><span class="num">7</span>Раздел 7</a></li>
-      <li><a href="08.html" aria-current="page"><span class="num">8</span>Раздел 8</a></li>
-      <li><a href="09.html"><span class="num">9</span>Раздел 9</a></li>
-      <li><a href="10.html"><span class="num">10</span>Раздел 10</a></li>
-      <li><a href="11.html"><span class="num">11</span>Раздел 11</a></li>
-      <li><a href="12.html"><span class="num">12</span>Раздел 12</a></li>
-      <li><a href="13.html"><span class="num">13</span>Раздел 13</a></li>
+      <li class="group">Алгебра и начала анализа</li>
+      <li><a href="01.html"><span class="num">1</span>Число и действия</a></li>
+      <li><a href="02.html"><span class="num">2</span>Пропорция и процент</a></li>
+      <li><a href="03.html"><span class="num">3</span>Выражения</a></li>
+      <li><a href="04.html"><span class="num">4</span>Уравнения и неравенства</a></li>
+      <li><a href="05.html"><span class="num">5</span>Функции и прогрессии</a></li>
+      <li><a href="06.html"><span class="num">6</span>Степени и логарифмы</a></li>
+      <li><a href="07.html"><span class="num">7</span>Тригонометрия</a></li>
+      <li><a href="08.html" aria-current="page"><span class="num">8</span>Производная, интеграл</a></li>
+      <li><a href="09.html"><span class="num">9</span>Счёт и вероятность</a></li>
+      <li class="group">Геометрия</li>
+      <li><a href="10.html"><span class="num">10</span>Фигуры на плоскости</a></li>
+      <li><a href="11.html"><span class="num">11</span>Измерение фигур</a></li>
+      <li><a href="12.html"><span class="num">12</span>Координаты и векторы</a></li>
+      <li><a href="13.html"><span class="num">13</span>Пространство и тела</a></li>
     </ol>
     <div class="nav-extra">
       <div><a href="navigator.html"><svg class="icon" data-icon="target" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7.4"/><circle cx="10" cy="10" r="3.6"/><circle cx="10" cy="10" r="0.7" fill="currentColor"/></svg> Навигатор</a></div>
       <div><a href="glossary.html"><svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg> Словарь понятий</a></div>
     </div>
-    <div class="page-toc" id="pageToc" aria-label="Abschnitte dieser Seite" hidden>
+    <div class="page-toc" id="pageToc" aria-label="Разделы этой страницы" hidden>
       <ul class="toc-list" id="tocList"></ul>
     </div>
   </nav>
 
   <main id="main">
-    <h1>Раздел 8</h1>
-    <p class="page-size" data-words="19">Слов: 19</p>
+    <h1>Производная и интеграл</h1>
+    <p class="page-size" data-words="1139">Слов: 1139</p>
+    <p class="lead">Два вопроса к функции: как быстро она меняется в точке и сколько накопилось на
+    промежутке. Производная отвечает на первый, интеграл - на второй, и они обратны друг другу.</p>
 
-    <div class="stub-card">
-      <h2>Русская версия готовится</h2>
-      <p>Полная рабочая версия этой страницы опубликована на украинском языке.</p>
-      <p>Открыть полную версию:</p>
-      <div class="stub-actions">
-        <a href="../uk/08.html" class="btn-primary">Раздел 8 →</a>
+    <div class="box key" id="key-idea">
+      <h2>Главная мысль страницы <a class="anchor-link" href="#key-idea" aria-label="ссылка на этот блок">#</a></h2>
+      <p>Функция (блок 5) описывает зависимость целиком, но не говорит, насколько круто она меняется в данной точке.
+      Производная - это мгновенная скорость изменения, геометрически - угловой коэффициент касательной. Интеграл - обратное действие:
+      зная скорость, восстановить накопленное, геометрически - площадь под графиком. Формула Ньютона - Лейбница
+      соединяет эти две идеи в одно равенство. Блок умеет находить наилучшее и суммарное; случайного он не описывает
+      (блок 9).</p>
+    </div>
+
+    <span class="step">Шаг 0 · Зацепка</span>
+    <h2 id="hook">1 · Производная ноль - значит, экстремум? <a class="anchor-link" href="#hook">#</a></h2>
+    <p>Привычка: «приравнял производную к нулю - нашёл максимум или минимум». Возьмём
+    <span class="math" data-tex="f(x) = x^3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">f(x) = x^3</annotation></semantics></math></span>. <span class="math" data-tex="f'(x) = 3x^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">f'(x) = 3x^2</annotation></semantics></math></span>, и
+    <span class="math" data-tex="f'(0) = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mn>0</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f'(0) = 0</annotation></semantics></math></span>. Но функция возрастает и слева, и справа от нуля: в нуле она лишь
+    на миг «останавливается», не поворачивая назад. Экстремум решает не ноль производной, а <strong>смена её знака</strong>.</p>
+
+    <span class="step">Шаг 1 · Понятие</span>
+    <h2 id="concept">2 · Производная, первообразная, интеграл <a class="anchor-link" href="#concept">#</a></h2>
+    <ul>
+      <li><strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Производная</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Производная</strong><button type="button" class="term-close" aria-label="Закрыть">&times;</button></span><span class="term-desc">Мгновенная скорость изменения функции; угловой коэффициент касательной к графику.</span><span class="term-links"><a href="glossary.html#term-derivative">В словарь <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> <span class="math" data-tex="f'(x_0)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">f'(x_0)</annotation></semantics></math></span> - предел, к которому стремится отношение
+      <span class="math" data-tex="\frac{f(x_0 + h) - f(x_0)}{h}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><msub><mi>x</mi><mn>0</mn></msub><mo>&#x0002B;</mo><mi>h</mi><mo stretchy="false">&#x00029;</mo><mo>&#x02212;</mo><mi>f</mi><mo stretchy="false">&#x00028;</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">&#x00029;</mo></mrow><mrow><mi>h</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{f(x_0 + h) - f(x_0)}{h}</annotation></semantics></math></span>, когда h стремится к нулю. Физически - мгновенная
+      скорость, геометрически - угловой коэффициент касательной.</li>
+      <li><strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Точка экстремума</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Точка экстремума</strong><button type="button" class="term-close" aria-label="Закрыть">&times;</button></span><span class="term-desc">Внутренняя точка, где функция переходит от возрастания к убыванию или наоборот.</span><span class="term-links"><a href="glossary.html#term-extremum">В словарь <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> - внутренняя точка, где функция переходит от возрастания к убыванию (максимум) или
+      наоборот (минимум).</li>
+      <li><strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Первообразная</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Первообразная</strong><button type="button" class="term-close" aria-label="Закрыть">&times;</button></span><span class="term-desc">Функция, производная которой равна данной функции.</span><span class="term-links"><a href="glossary.html#term-antiderivative">В словарь <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> F для функции f - такая функция, что <span class="math" data-tex="F'(x) = f(x)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>F</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">F'(x) = f(x)</annotation></semantics></math></span>.</li>
+      <li><strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Определённый интеграл</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Определённый интеграл</strong><button type="button" class="term-close" aria-label="Закрыть">&times;</button></span><span class="term-desc">Накопленная величина на промежутке; для неотрицательной функции - площадь под графиком.</span><span class="term-links"><a href="glossary.html#term-integral">В словарь <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> <span class="math" data-tex="\int_a^b f(x)\,dx"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msubsup><mo>&#x0222B;</mo><mi>a</mi><mi>b</mi></msubsup><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mspace width="0.167em" /><mi>d</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\int_a^b f(x)\,dx</annotation></semantics></math></span> - накопленная величина;
+      для неотрицательной f это площадь криволинейной трапеции под графиком на <span class="math" data-tex="[a;\ b]"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">[</mo><mi>a</mi><mi>;</mi><mtext>&#x000A0;</mtext><mi>b</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[a;\ b]</annotation></semantics></math></span>.</li>
+    </ul>
+
+    <span class="step">Шаг 2 · Закон</span>
+    <h2 id="law">3 · Законы производной и интеграла <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-table">
+      <p class="law-name">Таблица производных</p>
+      <div class="math-block" data-tex="(x^n)' = nx^{n-1},\quad (e^x)' = e^x,\quad (\ln x)' = \frac{1}{x},\quad (\sin x)' = \cos x,\quad (\cos x)' = -\sin x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">&#x00028;</mo><msup><mi>x</mi><mi>n</mi></msup><msup><mo stretchy="false">&#x00029;</mo><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><mi>n</mi><msup><mi>x</mi><mrow><mi>n</mi><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo>&#x0002C;</mo><mspace width="1em" /><mo stretchy="false">&#x00028;</mo><msup><mi>e</mi><mi>x</mi></msup><msup><mo stretchy="false">&#x00029;</mo><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><msup><mi>e</mi><mi>x</mi></msup><mo>&#x0002C;</mo><mspace width="1em" /><mo stretchy="false">&#x00028;</mo><mi>ln</mi><mi>x</mi><msup><mo stretchy="false">&#x00029;</mo><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mi>x</mi></mrow></mfrac><mo>&#x0002C;</mo><mspace width="1em" /><mo stretchy="false">&#x00028;</mo><mi>sin</mi><mi>x</mi><msup><mo stretchy="false">&#x00029;</mo><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><mi>cos</mi><mi>x</mi><mo>&#x0002C;</mo><mspace width="1em" /><mo stretchy="false">&#x00028;</mo><mi>cos</mi><mi>x</mi><msup><mo stretchy="false">&#x00029;</mo><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><mo>&#x02212;</mo><mi>sin</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">(x^n)' = nx^{n-1},\quad (e^x)' = e^x,\quad (\ln x)' = \frac{1}{x},\quad (\sin x)' = \cos x,\quad (\cos x)' = -\sin x</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-rules">
+      <p class="law-name">Правила дифференцирования</p>
+      <div class="math-block" data-tex="(u + v)' = u' + v',\quad (uv)' = u'v + uv',\quad \left(f(g(x))\right)' = f'(g(x)) \cdot g'(x)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>u</mi><mo>&#x0002B;</mo><mi>v</mi><msup><mo stretchy="false">&#x00029;</mo><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><msup><mi>u</mi><mi>&#x02032;</mi></msup><mo>&#x0002B;</mo><msup><mi>v</mi><mi>&#x02032;</mi></msup><mo>&#x0002C;</mo><mspace width="1em" /><mo stretchy="false">&#x00028;</mo><mi>u</mi><mi>v</mi><msup><mo stretchy="false">&#x00029;</mo><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><msup><mi>u</mi><mi>&#x02032;</mi></msup><mi>v</mi><mo>&#x0002B;</mo><mi>u</mi><msup><mi>v</mi><mi>&#x02032;</mi></msup><mo>&#x0002C;</mo><mspace width="1em" /><msup><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>g</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00029;</mo><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mi>g</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00029;</mo><mo>&#x000B7;</mo><msup><mi>g</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(u + v)' = u' + v',\quad (uv)' = u'v + uv',\quad \left(f(g(x))\right)' = f'(g(x)) \cdot g'(x)</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-tangent">
+      <p class="law-name">Уравнение касательной: наклон равен производной</p>
+      <div class="math-block" data-tex="y = f(x_0) + f'(x_0)(x - x_0)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><mi>f</mi><mo stretchy="false">&#x00028;</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">&#x00029;</mo><mo>&#x0002B;</mo><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">y = f(x_0) + f'(x_0)(x - x_0)</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-monotone">
+      <p class="law-name">Монотонность и экстремум</p>
+      <p><span class="math" data-tex="f' > 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo>&#x0003E;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f' &gt; 0</annotation></semantics></math></span> на промежутке - функция возрастает, <span class="math" data-tex="f' < 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo>&#x0003C;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f' &lt; 0</annotation></semantics></math></span> - убывает.
+      Производная меняет знак с «+» на «−» - максимум, с «−» на «+» - минимум.</p>
+    </div>
+    <div class="law" id="law-nl">
+      <p class="law-name">Формула Ньютона - Лейбница</p>
+      <div class="math-block" data-tex="\int_a^b f(x)\,dx = F(b) - F(a),\qquad F' = f"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msubsup><mo>&#x0222B;</mo><mi>a</mi><mi>b</mi></msubsup><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mspace width="0.167em" /><mi>d</mi><mi>x</mi><mo>&#x0003D;</mo><mi>F</mi><mo stretchy="false">&#x00028;</mo><mi>b</mi><mo stretchy="false">&#x00029;</mo><mo>&#x02212;</mo><mi>F</mi><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0002C;</mo><mspace width="2em" /><msup><mi>F</mi><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><mi>f</mi></mrow><annotation encoding="application/x-tex">\int_a^b f(x)\,dx = F(b) - F(a),\qquad F' = f</annotation></semantics></math></div>
+    </div>
+
+    <span class="step">Шаг 3 · Почему так</span>
+    <h2 id="why">4 · Откуда законы <a class="anchor-link" href="#why">#</a></h2>
+    <p><strong>Производная квадрата</strong> по определению:</p>
+    <div class="math-block" data-tex="\frac{(x + h)^2 - x^2}{h} = \frac{2xh + h^2}{h} = 2x + h \to 2x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002B;</mo><mi>h</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x02212;</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mrow><mi>h</mi></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mn>2</mn><mi>x</mi><mi>h</mi><mo>&#x0002B;</mo><msup><mi>h</mi><mn>2</mn></msup></mrow><mrow><mi>h</mi></mrow></mfrac><mo>&#x0003D;</mo><mn>2</mn><mi>x</mi><mo>&#x0002B;</mo><mi>h</mi><mo>&#x02192;</mo><mn>2</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">\frac{(x + h)^2 - x^2}{h} = \frac{2xh + h^2}{h} = 2x + h \to 2x</annotation></semantics></math></div>
+    <p>Так же, через бином, получается <span class="math" data-tex="(x^n)' = nx^{n-1}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><msup><mi>x</mi><mi>n</mi></msup><msup><mo stretchy="false">&#x00029;</mo><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><mi>n</mi><msup><mi>x</mi><mrow><mi>n</mi><mo>&#x02212;</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">(x^n)' = nx^{n-1}</annotation></semantics></math></span>.</p>
+    <!-- fig:08-tangent -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 220" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Парабола y = x² и касательная к ней в точке x₀ = 1. Касательная поднимается на 2 единицы на каждую единицу вправо: её угловой коэффициент 2 равен производной 2x в точке 1.">
+        <line x1="20.0" y1="147.0" x2="300.0" y2="147.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="300.0,147.0 293.6,149.7 293.6,144.3" fill="currentColor"/>
+        <line x1="113.3" y1="192.0" x2="113.3" y2="12.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="113.3,12.0 116.1,18.4 110.6,18.4" fill="currentColor"/>
+        <text x="296.0" y="163.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <text x="121.3" y="24.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <line x1="175.6" y1="144.0" x2="175.6" y2="150.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="175.6" y="163.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">1</text>
+        <line x1="237.8" y1="144.0" x2="237.8" y2="150.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="237.8" y="163.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">2</text>
+        <line x1="110.3" y1="117.0" x2="116.3" y2="117.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="107.3" y="121.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">1</text>
+        <line x1="110.3" y1="57.0" x2="116.3" y2="57.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="107.3" y="61.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">3</text>
+        <polyline points="20.0,79.5 21.9,82.2 23.7,84.8 25.6,87.4 27.5,89.9 29.3,92.3 31.2,94.7 33.1,97.1 34.9,99.4 36.8,101.6 38.7,103.8 40.5,105.9 42.4,108.0 44.3,110.0 46.1,112.0 48.0,113.9 49.9,115.8 51.7,117.6 53.6,119.4 55.5,121.1 57.3,122.7 59.2,124.3 61.1,125.8 62.9,127.3 64.8,128.7 66.7,130.1 68.5,131.4 70.4,132.7 72.3,133.9 74.1,135.1 76.0,136.2 77.9,137.3 79.7,138.3 81.6,139.2 83.5,140.1 85.3,140.9 87.2,141.7 89.1,142.4 90.9,143.1 92.8,143.7 94.7,144.3 96.5,144.8 98.4,145.3 100.3,145.7 102.1,146.0 104.0,146.3 105.9,146.6 107.7,146.8 109.6,146.9 111.5,147.0 113.3,147.0 115.2,147.0 117.1,146.9 118.9,146.8 120.8,146.6 122.7,146.3 124.5,146.0 126.4,145.7 128.3,145.3 130.1,144.8 132.0,144.3 133.9,143.7 135.7,143.1 137.6,142.4 139.5,141.7 141.3,140.9 143.2,140.1 145.1,139.2 146.9,138.3 148.8,137.3 150.7,136.2 152.5,135.1 154.4,133.9 156.3,132.7 158.1,131.4 160.0,130.1 161.9,128.7 163.7,127.3 165.6,125.8 167.5,124.3 169.3,122.7 171.2,121.1 173.1,119.4 174.9,117.6 176.8,115.8 178.7,113.9 180.5,112.0 182.4,110.0 184.3,108.0 186.1,105.9 188.0,103.8 189.9,101.6 191.7,99.4 193.6,97.1 195.5,94.7 197.3,92.3 199.2,89.9 201.1,87.4 202.9,84.8 204.8,82.2 206.7,79.5 208.5,76.8 210.4,74.0 212.3,71.2 214.1,68.3 216.0,65.3 217.9,62.3 219.7,59.3 221.6,56.2 223.5,53.0 225.3,49.8 227.2,46.5 229.1,43.2 230.9,39.8 232.8,36.4 234.7,32.9 236.5,29.4 238.4,25.8 240.3,22.2 242.1,18.5 244.0,14.7" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="2" opacity="1.0"/>
+        <polyline points="100.9,189.0 102.4,187.6 103.9,186.1 105.4,184.6 106.9,183.2 108.4,181.8 109.9,180.3 111.4,178.8 112.9,177.4 114.4,175.9 115.9,174.5 117.4,173.0 118.9,171.6 120.4,170.2 121.9,168.7 123.4,167.2 124.9,165.8 126.5,164.3 128.0,162.9 129.5,161.4 131.0,160.0 132.5,158.5 134.0,157.1 135.5,155.7 137.0,154.2 138.5,152.8 140.0,151.3 141.5,149.8 143.0,148.4 144.5,146.9 146.0,145.5 147.5,144.1 149.0,142.6 150.5,141.1 152.0,139.7 153.5,138.2 155.0,136.8 156.5,135.3 158.0,133.9 159.5,132.4 161.0,131.0 162.5,129.5 164.0,128.1 165.5,126.6 167.1,125.2 168.6,123.7 170.1,122.3 171.6,120.8 173.1,119.4 174.6,117.9 176.1,116.5 177.6,115.0 179.1,113.6 180.6,112.1 182.1,110.7 183.6,109.2 185.1,107.8 186.6,106.3 188.1,104.9 189.6,103.4 191.1,102.0 192.6,100.5 194.1,99.1 195.6,97.6 197.1,96.2 198.6,94.7 200.1,93.3 201.6,91.8 203.1,90.4 204.6,88.9 206.1,87.5 207.7,86.0 209.2,84.6 210.7,83.1 212.2,81.7 213.7,80.2 215.2,78.8 216.7,77.3 218.2,75.9 219.7,74.4 221.2,73.0 222.7,71.5 224.2,70.1 225.7,68.6 227.2,67.2 228.7,65.8 230.2,64.3 231.7,62.8 233.2,61.4 234.7,59.9 236.2,58.5 237.7,57.0 239.2,55.6 240.7,54.1 242.2,52.7 243.7,51.2 245.2,49.8 246.7,48.4 248.3,46.9 249.8,45.5 251.3,44.0 252.8,42.6 254.3,41.1 255.8,39.6 257.3,38.2 258.8,36.7 260.3,35.3 261.8,33.9 263.3,32.4 264.8,31.0 266.3,29.5 267.8,28.1 269.3,26.6 270.8,25.1 272.3,23.7 273.8,22.2 275.3,20.8 276.8,19.3 278.3,17.9 279.8,16.5 281.3,15.0" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.6" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="175.6" cy="117.0" r="4.5" fill="currentColor" style="fill:var(--acc)"/>
+        <line x1="175.6" y1="117.0" x2="237.8" y2="117.0" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 3" opacity="1.0"/>
+        <line x1="237.8" y1="117.0" x2="237.8" y2="57.0" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 3" opacity="1.0"/>
+        <text x="243.8" y="91.0" fill="currentColor" font-size="12" opacity="1.0" style="fill:var(--acc)">наклон 2</text>
+        <text x="206.7" y="133.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">1</text>
+        <text x="26.2" y="30.0" fill="currentColor" font-size="12" opacity="1.0">y = x²</text>
+      </svg>
+      <p class="dim">Рисунок 29. Производная как наклон касательной: для y = x² в точке 1 наклон равен 2.</p>
+    </div>
+    <!-- /fig:08-tangent -->
+    <p><strong>Монотонность.</strong> Если касательная в каждой точке идёт вверх (угловой коэффициент положителен), то и график идёт вверх.</p>
+    <p><strong>Ньютон - Лейбниц.</strong> Пусть S(x) - площадь под графиком от a до x. Если x сдвинуть на маленькое h, площадь
+    вырастет примерно на полоску <span class="math" data-tex="f(x) \cdot h"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x000B7;</mo><mi>h</mi></mrow><annotation encoding="application/x-tex">f(x) \cdot h</annotation></semantics></math></span>. Значит, скорость роста площади
+    <span class="math" data-tex="S'(x) = f(x)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>S</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">S'(x) = f(x)</annotation></semantics></math></span>: площадь - это первообразная. Две первообразные отличаются на постоянную, поэтому
+    площадь на <span class="math" data-tex="[a;\ b]"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">[</mo><mi>a</mi><mi>;</mi><mtext>&#x000A0;</mtext><mi>b</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[a;\ b]</annotation></semantics></math></span> равна <span class="math" data-tex="F(b) - F(a)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>F</mi><mo stretchy="false">&#x00028;</mo><mi>b</mi><mo stretchy="false">&#x00029;</mo><mo>&#x02212;</mo><mi>F</mi><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">F(b) - F(a)</annotation></semantics></math></span> для любой первообразной F.</p>
+    <!-- fig:08-area -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 220" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Площадь под графиком y = 0,5x² + 0,5 от a до x закрашена. Если x сдвинуть на малое h, площадь вырастет на узкую полоску высотой f(x): поэтому скорость роста площади равна f(x), и площадь - первообразная.">
+        <polygon points="76.0,178.4 76.0,159.8 79.6,159.2 83.2,158.6 86.8,157.8 90.4,157.0 94.0,156.2 97.6,155.2 101.2,154.2 104.8,153.2 108.4,152.0 112.0,150.8 115.6,149.6 119.2,148.3 122.8,146.9 126.4,145.4 130.0,143.9 133.6,142.3 137.2,140.7 140.8,139.0 144.4,137.2 148.0,135.4 151.6,133.5 155.2,131.5 158.8,129.5 162.4,127.4 166.0,125.2 169.6,123.0 173.2,120.7 176.8,118.3 180.4,115.9 184.0,113.4 187.6,110.8 191.2,108.2 194.8,105.5 198.4,102.8 202.0,100.0 205.6,97.1 209.2,94.2 212.8,91.2 216.4,88.1 220.0,85.0 220.0,178.4" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="0.8" opacity="1.0"/>
+        <polygon points="220.0,178.4 220.0,85.0 242.4,85.0 242.4,178.4" fill="currentColor" fill-opacity="0.35" stroke="currentColor" stroke-width="1.2" opacity="1.0" style="stroke:var(--acc);fill:var(--acc)"/>
+        <line x1="20.0" y1="178.4" x2="300.0" y2="178.4" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="300.0,178.4 293.6,181.1 293.6,175.7" fill="currentColor"/>
+        <line x1="44.0" y1="188.0" x2="44.0" y2="12.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="44.0,12.0 46.7,18.4 41.3,18.4" fill="currentColor"/>
+        <text x="296.0" y="194.4" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <text x="52.0" y="24.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <polyline points="28.0,161.8 30.2,161.9 32.4,162.1 34.6,162.2 36.8,162.3 39.0,162.3 41.2,162.4 43.4,162.4 45.6,162.4 47.8,162.4 50.0,162.3 52.2,162.2 54.4,162.1 56.6,162.0 58.8,161.9 61.0,161.7 63.2,161.5 65.4,161.3 67.6,161.0 69.8,160.7 72.0,160.4 74.2,160.1 76.4,159.8 78.6,159.4 80.8,159.0 83.0,158.6 85.2,158.2 87.4,157.7 89.6,157.2 91.8,156.7 94.0,156.2 96.2,155.6 98.4,155.0 100.6,154.4 102.8,153.8 105.0,153.1 107.2,152.4 109.4,151.7 111.6,151.0 113.8,150.2 116.0,149.4 118.2,148.6 120.4,147.8 122.6,147.0 124.8,146.1 127.0,145.2 129.2,144.3 131.4,143.3 133.6,142.3 135.8,141.3 138.0,140.3 140.2,139.3 142.4,138.2 144.6,137.1 146.8,136.0 149.0,134.8 151.2,133.7 153.4,132.5 155.6,131.3 157.8,130.0 160.0,128.8 162.2,127.5 164.4,126.2 166.6,124.8 168.8,123.5 171.0,122.1 173.2,120.7 175.4,119.2 177.6,117.8 179.8,116.3 182.0,114.8 184.2,113.3 186.4,111.7 188.6,110.1 190.8,108.5 193.0,106.9 195.2,105.2 197.4,103.6 199.6,101.9 201.8,100.1 204.0,98.4 206.2,96.6 208.4,94.8 210.6,93.0 212.8,91.2 215.0,89.3 217.2,87.4 219.4,85.5 221.6,83.5 223.8,81.6 226.0,79.6 228.2,77.6 230.4,75.5 232.6,73.5 234.8,71.4 237.0,69.3 239.2,67.1 241.4,65.0 243.6,62.8 245.8,60.6 248.0,58.4 250.2,56.1 252.4,53.8 254.6,51.5 256.8,49.2 259.0,46.8 261.2,44.5 263.4,42.1 265.6,39.6 267.8,37.2 270.0,34.7 272.2,32.2 274.4,29.7 276.6,27.1 278.8,24.6 281.0,22.0 283.2,19.4 285.4,16.7 287.6,14.0" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="2" opacity="1.0"/>
+        <text x="76.0" y="194.4" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-style="italic">a</text>
+        <text x="220.0" y="194.4" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-style="italic">x</text>
+        <text x="248.4" y="194.4" fill="currentColor" font-size="12" opacity="1.0" font-style="italic">x + h</text>
+        <text x="60.0" y="40.8" fill="currentColor" font-size="12" opacity="1.0" style="fill:var(--acc)">полоска f(x) · h</text>
+        <line x1="172.0" y1="45.6" x2="231.2" y2="81.0" stroke="currentColor" stroke-width="1.2" opacity="1.0" style="stroke:var(--acc)"/>
+        <polygon points="231.2,81.0 224.3,80.0 227.1,75.3" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="140.0" y="159.2" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-style="italic">S(x)</text>
+      </svg>
+      <p class="dim">Рисунок 30. Ньютон - Лейбниц: площадь растёт на полоску f(x) · h, значит площадь - первообразная функции.</p>
+    </div>
+    <!-- /fig:08-area -->
+
+    <span class="step">Шаг 4 · Границы</span>
+    <h2 id="limits">5 · Где законы ломаются <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-zero">
+      <p><strong><span class="math" data-tex="f'(x_0) = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f'(x_0) = 0</annotation></semantics></math></span> не гарантирует экстремума</strong> (пример
+      <span class="math" data-tex="x^3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>x</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">x^3</annotation></semantics></math></span> в зацепке). Нужна смена знака производной.</p>
+    </div>
+    <!-- fig:08-cubic -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 230" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="График f(x) = x³ − 3x². Производная 3x(x − 2) меняет знак с плюса на минус в точке 0 - там максимум, и с минуса на плюс в точке 2 - там минимум. Знаки производной подписаны под осью.">
+        <line x1="30.0" y1="53.8" x2="290.0" y2="53.8" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="290.0,53.8 283.6,56.5 283.6,51.1" fill="currentColor"/>
+        <line x1="101.9" y1="182.0" x2="101.9" y2="12.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="101.9,12.0 104.6,18.4 99.2,18.4" fill="currentColor"/>
+        <text x="286.0" y="69.8" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <text x="109.9" y="24.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <line x1="212.6" y1="50.8" x2="212.6" y2="56.8" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="212.6" y="69.8" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">2</text>
+        <line x1="98.9" y1="165.3" x2="104.9" y2="165.3" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="95.9" y="169.3" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">−4</text>
+        <polyline points="43.9,177.8 46.0,167.9 48.1,158.5 50.2,149.6 52.3,141.1 54.4,133.1 56.5,125.5 58.6,118.4 60.7,111.7 62.8,105.5 64.9,99.6 67.0,94.1 69.1,89.1 71.2,84.4 73.3,80.1 75.4,76.1 77.5,72.5 79.6,69.3 81.7,66.4 83.8,63.8 85.9,61.5 88.0,59.6 90.1,57.9 92.2,56.6 94.3,55.5 96.4,54.7 98.5,54.1 100.6,53.9 102.7,53.8 104.8,54.0 106.8,54.4 108.9,55.1 111.0,56.0 113.1,57.0 115.2,58.3 117.3,59.7 119.4,61.3 121.5,63.1 123.6,65.0 125.7,67.1 127.8,69.3 129.9,71.6 132.0,74.1 134.1,76.6 136.2,79.3 138.3,82.1 140.4,84.9 142.5,87.8 144.6,90.8 146.7,93.8 148.8,96.9 150.9,100.0 153.0,103.1 155.1,106.3 157.2,109.5 159.3,112.6 161.4,115.8 163.5,118.9 165.6,122.1 167.7,125.1 169.8,128.2 171.9,131.1 174.0,134.1 176.1,136.9 178.2,139.7 180.3,142.3 182.4,144.9 184.5,147.4 186.6,149.7 188.7,151.9 190.7,154.0 192.8,155.9 194.9,157.7 197.0,159.3 199.1,160.8 201.2,162.0 203.3,163.1 205.4,164.0 207.5,164.6 209.6,165.0 211.7,165.3 213.8,165.2 215.9,165.0 218.0,164.4 220.1,163.6 222.2,162.6 224.3,161.2 226.4,159.6 228.5,157.7 230.6,155.4 232.7,152.8 234.8,150.0 236.9,146.7 239.0,143.1 241.1,139.2 243.2,134.9 245.3,130.2 247.4,125.2 249.5,119.7 251.6,113.9 253.7,107.6 255.8,101.0 257.9,93.9 260.0,86.3 262.1,78.3 264.2,69.9 266.3,61.0 268.4,51.6 270.5,41.7 272.6,31.4 274.6,20.5" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="2" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="101.9" cy="53.8" r="4.5" fill="currentColor"/>
+        <circle cx="212.6" cy="165.3" r="4.5" fill="currentColor"/>
+        <text x="101.9" y="43.8" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" font-weight="700">max</text>
+        <text x="212.6" y="185.3" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" font-weight="700">min</text>
+        <text x="18.0" y="214.0" fill="currentColor" font-size="12" opacity="0.8">f′:</text>
+        <text x="63.2" y="214.0" fill="currentColor" font-size="16" opacity="1.0" text-anchor="middle" font-weight="700">+</text>
+        <text x="157.2" y="214.0" fill="currentColor" font-size="16" opacity="1.0" text-anchor="middle" font-weight="700">−</text>
+        <text x="256.8" y="214.0" fill="currentColor" font-size="16" opacity="1.0" text-anchor="middle" font-weight="700">+</text>
+        <line x1="101.9" y1="200.0" x2="101.9" y2="218.0" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+        <line x1="212.6" y1="200.0" x2="212.6" y2="218.0" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+      </svg>
+      <p class="dim">Рисунок 31. Экстремум там, где производная меняет знак: максимум в 0, минимум в 2.</p>
+    </div>
+    <!-- /fig:08-cubic -->
+    <div class="limit" id="limit-ends">
+      <p><strong>Наибольшее значение на отрезке ищут и на концах.</strong> Производная находит только внутренние «вершины», а
+      функция на отрезке может быть наибольшей именно на краю.</p>
+    </div>
+    <div class="limit" id="limit-sign">
+      <p><strong>Интеграл отрицательной функции отрицателен.</strong> Площадь части под осью Ox входит в интеграл со знаком «−»;
+      чтобы найти площадь фигуры, такую часть берут с противоположным знаком.</p>
+    </div>
+    <div class="limit" id="limit-chain">
+      <p><strong>Производная сложной функции - с множителем.</strong> <span class="math" data-tex="(\sin 3x)' = 3\cos 3x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>sin</mi><mn>3</mn><mi>x</mi><msup><mo stretchy="false">&#x00029;</mo><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><mn>3</mn><mi>cos</mi><mn>3</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">(\sin 3x)' = 3\cos 3x</annotation></semantics></math></span>, а не
+      <span class="math" data-tex="\cos 3x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>cos</mi><mn>3</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">\cos 3x</annotation></semantics></math></span>: внутренняя функция тоже меняется.</p>
+    </div>
+
+    <span class="step">Шаг 5 · Применение</span>
+    <h2 id="apply">6 · Задачи в форме НМТ <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="В" data-limit="">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p>Найдите <span class="math" data-tex="f'(2)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">f'(2)</annotation></semantics></math></span>, если <span class="math" data-tex="f(x) = x^3 - 3x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>x</mi><mn>3</mn></msup><mo>&#x02212;</mo><mn>3</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">f(x) = x^3 - 3x</annotation></semantics></math></span>.</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · 2</button>
+        <button type="button" data-opt="Б">Б · 6</button>
+        <button type="button" data-opt="В">В · 9</button>
+        <button type="button" data-opt="Г">Г · 12</button>
+        <button type="button" data-opt="Д">Д · 3</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#law-table">таблица производных</a> и <a href="#law-rules">производная суммы</a>.</p>
+      <div class="solution"><span class="math" data-tex="f'(x) = 3x^2 - 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">f'(x) = 3x^2 - 3</annotation></semantics></math></span>, <span class="math" data-tex="f'(2) = 12 - 3 = 9"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>12</mn><mo>&#x02212;</mo><mn>3</mn><mo>&#x0003D;</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">f'(2) = 12 - 3 = 9</annotation></semantics></math></span>.
+      Вариант А - значение самой функции <span class="math" data-tex="f(2) = 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">f(2) = 2</annotation></semantics></math></span>, а не производной.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="6" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Найдите угловой коэффициент касательной к графику <span class="math" data-tex="y = x^2 - 4x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>4</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">y = x^2 - 4x</annotation></semantics></math></span> в точке
+      <span class="math" data-tex="x_0 = 5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>&#x0003D;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">x_0 = 5</annotation></semantics></math></span>.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-tangent">касательная</a>: угловой коэффициент равен производной.</p>
+      <div class="solution"><span class="math" data-tex="y' = 2x - 4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>y</mi><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><mn>2</mn><mi>x</mi><mo>&#x02212;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">y' = 2x - 4</annotation></semantics></math></span>, <span class="math" data-tex="y'(5) = 6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>y</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mn>5</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">y'(5) = 6</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="0" data-limit="limit-zero">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Найдите точку максимума функции <span class="math" data-tex="f(x) = x^3 - 3x^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>x</mi><mn>3</mn></msup><mo>&#x02212;</mo><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">f(x) = x^3 - 3x^2</annotation></semantics></math></span>.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-monotone">смена знака производной</a>.</p>
+      <div class="solution"><span class="math" data-tex="f'(x) = 3x^2 - 6x = 3x(x - 2)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>6</mn><mi>x</mi><mo>&#x0003D;</mo><mn>3</mn><mi>x</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">f'(x) = 3x^2 - 6x = 3x(x - 2)</annotation></semantics></math></span>. Знаки: «+» до 0,
+      «−» между 0 и 2, «+» после 2. С «+» на «−» - в точке 0: это максимум. Точка 2 - минимум. Задача такого типа была
+      среди самых трудных на НМТ 2026: ответ часто путали с минимумом.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="8" data-limit="limit-sign">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Найдите площадь фигуры, ограниченной графиком <span class="math" data-tex="y = 3x^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">y = 3x^2</annotation></semantics></math></span>, осью Ox и прямой
+      <span class="math" data-tex="x = 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x = 2</annotation></semantics></math></span>.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-nl">Ньютон - Лейбниц</a>.</p>
+      <div class="solution">Первообразная <span class="math" data-tex="F(x) = x^3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>F</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">F(x) = x^3</annotation></semantics></math></span>;
+      <span class="math" data-tex="\int_0^2 3x^2\,dx = 2^3 - 0^3 = 8"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msubsup><mo>&#x0222B;</mo><mn>0</mn><mn>2</mn></msubsup><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup><mspace width="0.167em" /><mi>d</mi><mi>x</mi><mo>&#x0003D;</mo><msup><mn>2</mn><mn>3</mn></msup><mo>&#x02212;</mo><msup><mn>0</mn><mn>3</mn></msup><mo>&#x0003D;</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">\int_0^2 3x^2\,dx = 2^3 - 0^3 = 8</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="match" data-answer="А Б В" data-limit="">
+      <p class="task-kind">Установление соответствия · 3 балла</p>
+      <p>К каждой функции (1-3) подберите её производную (А-Д).</p>
+      <ul class="pairs">
+        <li><label>1. <span class="math" data-tex="x^5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>x</mi><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">x^5</annotation></semantics></math></span>
+          <select aria-label="Ответ к функции 1"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+        <li><label>2. <span class="math" data-tex="\sin x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>sin</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\sin x</annotation></semantics></math></span>
+          <select aria-label="Ответ к функции 2"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+        <li><label>3. <span class="math" data-tex="e^x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>e</mi><mi>x</mi></msup></mrow><annotation encoding="application/x-tex">e^x</annotation></semantics></math></span>
+          <select aria-label="Ответ к функции 3"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+      </ul>
+      <p>А · 5x⁴ &nbsp; Б · cos x &nbsp; В · eˣ &nbsp; Г · x⁶/6 &nbsp; Д · −cos x</p>
+      <p><button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-table">таблица производных</a>.</p>
+      <div class="solution">Г - первообразная, а не производная: направление действия перепутано. Д - производная, которую даёт
+      <span class="math" data-tex="-\sin x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02212;</mo><mi>sin</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">-\sin x</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="9" data-limit="" data-claim="08-task-area">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Найдите площадь фигуры, ограниченной графиком функции y = x², осью Ox и прямой x = 3.</p>
+      <!-- fig:08-task-area -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 220" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="График y = x² для x от 0 и дальше. Фигура под графиком между осью Ox и прямой x = 3 закрашена: её ограничивают парабола сверху, ось Ox снизу и вертикальная прямая x = 3 справа.">
+        <line x1="20.0" y1="189.7" x2="300.0" y2="189.7" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="300.0,189.7 293.6,192.4 293.6,186.9" fill="currentColor"/>
+        <line x1="58.2" y1="206.0" x2="58.2" y2="10.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="58.2,10.0 60.9,16.4 55.5,16.4" fill="currentColor"/>
+        <text x="296.0" y="205.7" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <text x="66.2" y="22.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <line x1="249.1" y1="186.7" x2="249.1" y2="192.7" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="249.1" y="205.7" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">3</text>
+        <polygon points="58.2,189.7 61.4,189.6 64.5,189.5 67.7,189.3 70.9,189.0 74.1,188.6 77.3,188.2 80.5,187.7 83.6,187.1 86.8,186.4 90.0,185.6 93.2,184.7 96.4,183.8 99.5,182.8 102.7,181.7 105.9,180.5 109.1,179.2 112.3,177.9 115.5,176.4 118.6,174.9 121.8,173.3 125.0,171.7 128.2,169.9 131.4,168.1 134.5,166.1 137.7,164.1 140.9,162.1 144.1,159.9 147.3,157.7 150.5,155.3 153.6,152.9 156.8,150.4 160.0,147.9 163.2,145.2 166.4,142.5 169.5,139.6 172.7,136.7 175.9,133.8 179.1,130.7 182.3,127.6 185.5,124.3 188.6,121.0 191.8,117.6 195.0,114.2 198.2,110.6 201.4,107.0 204.5,103.3 207.7,99.5 210.9,95.6 214.1,91.6 217.3,87.6 220.5,83.5 223.6,79.3 226.8,75.0 230.0,70.6 233.2,66.1 236.4,61.6 239.5,57.0 242.7,52.3 245.9,47.5 249.1,42.7 249.1,189.7 58.2,189.7" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="0" opacity="1.0" style="stroke:var(--acc);fill:var(--acc)"/>
+        <polyline points="20.0,183.8 22.1,184.4 24.1,185.0 26.2,185.5 28.3,186.1 30.3,186.5 32.4,187.0 34.5,187.4 36.5,187.8 38.6,188.1 40.7,188.4 42.8,188.7 44.8,188.9 46.9,189.2 49.0,189.3 51.0,189.5 53.1,189.6 55.2,189.6 57.2,189.7 59.3,189.7 61.4,189.6 63.4,189.6 65.5,189.5 67.6,189.3 69.6,189.1 71.7,188.9 73.8,188.7 75.8,188.4 77.9,188.1 80.0,187.8 82.0,187.4 84.1,187.0 86.2,186.5 88.2,186.0 90.3,185.5 92.4,184.9 94.5,184.4 96.5,183.7 98.6,183.1 100.7,182.4 102.7,181.7 104.8,180.9 106.9,180.1 108.9,179.3 111.0,178.4 113.1,177.5 115.1,176.6 117.2,175.6 119.3,174.6 121.3,173.6 123.4,172.5 125.5,171.4 127.5,170.3 129.6,169.1 131.7,167.9 133.8,166.6 135.8,165.4 137.9,164.0 140.0,162.7 142.0,161.3 144.1,159.9 146.2,158.4 148.2,157.0 150.3,155.4 152.4,153.9 154.4,152.3 156.5,150.7 158.6,149.0 160.6,147.3 162.7,145.6 164.8,143.8 166.8,142.0 168.9,140.2 171.0,138.4 173.0,136.5 175.1,134.5 177.2,132.6 179.3,130.5 181.3,128.5 183.4,126.4 185.5,124.3 187.5,122.2 189.6,120.0 191.7,117.8 193.7,115.6 195.8,113.3 197.9,111.0 199.9,108.6 202.0,106.2 204.1,103.8 206.1,101.4 208.2,98.9 210.3,96.4 212.3,93.8 214.4,91.2 216.5,88.6 218.5,85.9 220.6,83.3 222.7,80.5 224.8,77.8 226.8,75.0 228.9,72.1 231.0,69.3 233.0,66.4 235.1,63.4 237.2,60.5 239.2,57.5 241.3,54.4 243.4,51.4 245.4,48.2 247.5,45.1 249.6,41.9 251.6,38.7 253.7,35.5 255.8,32.2 257.8,28.9 259.9,25.5 262.0,22.2 264.0,18.7 266.1,15.3 268.2,11.8" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="2.2" opacity="1.0"/>
+        <line x1="249.1" y1="189.7" x2="249.1" y2="42.7" stroke="currentColor" stroke-width="1.6" stroke-dasharray="5 3" opacity="1.0"/>
+        <text x="140.9" y="55.7" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y = x²</text>
+        <text x="191.8" y="163.5" fill="currentColor" font-size="16" opacity="1.0" text-anchor="middle" font-style="italic" font-weight="700">S</text>
+      </svg>
+      <p class="dim">Рисунок 32. К задаче: криволинейная трапеция под параболой.</p>
+    </div>
+    <!-- /fig:08-task-area -->
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-nl">формула Ньютона - Лейбница</a>.</p>
+      <div class="solution">Первообразная для x² - это x³/3, поэтому <span class="math" data-tex="S = \int_0^3 x^2\,dx = \frac{27}{3} - 0 = 9"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>S</mi><mo>&#x0003D;</mo><msubsup><mo>&#x0222B;</mo><mn>0</mn><mn>3</mn></msubsup><msup><mi>x</mi><mn>2</mn></msup><mspace width="0.167em" /><mi>d</mi><mi>x</mi><mo>&#x0003D;</mo><mfrac><mrow><mn>27</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mo>&#x02212;</mo><mn>0</mn><mo>&#x0003D;</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">S = \int_0^3 x^2\,dx = \frac{27}{3} - 0 = 9</annotation></semantics></math></span>.</div>
+    </div>
+
+    <span class="step">Шаг 6 · Обратный ход</span>
+    <h2 id="reverse">7 · Назови закон сам <a class="anchor-link" href="#reverse">#</a></h2>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="6" data-limit="limit-ends">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Найдите наибольшее значение функции <span class="math" data-tex="f(x) = x^2 - 4x + 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>4</mn><mi>x</mi><mo>&#x0002B;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">f(x) = x^2 - 4x + 1</annotation></semantics></math></span> на отрезке
+      <span class="math" data-tex="[0;\ 5]"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">[</mo><mn>0</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>5</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[0;\ 5]</annotation></semantics></math></span>.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Граница: <a href="#limit-ends">концы отрезка</a>.</p>
+      <div class="solution"><span class="math" data-tex="f'(x) = 2x - 4 = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>2</mn><mi>x</mi><mo>&#x02212;</mo><mn>4</mn><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f'(x) = 2x - 4 = 0</annotation></semantics></math></span> при x = 2, но это минимум:
+      <span class="math" data-tex="f(2) = -3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">f(2) = -3</annotation></semantics></math></span>. На концах <span class="math" data-tex="f(0) = 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mn>0</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">f(0) = 1</annotation></semantics></math></span>,
+      <span class="math" data-tex="f(5) = 6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mn>5</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">f(5) = 6</annotation></semantics></math></span>. Наибольшее - 6, на краю.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="10" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Тело движется прямолинейно по закону <span class="math" data-tex="s(t) = t^3 - 2t"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>s</mi><mo stretchy="false">&#x00028;</mo><mi>t</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>t</mi><mn>3</mn></msup><mo>&#x02212;</mo><mn>2</mn><mi>t</mi></mrow><annotation encoding="application/x-tex">s(t) = t^3 - 2t</annotation></semantics></math></span> (s - в метрах, t - в
+      секундах). Найдите скорость тела (в м/с) в момент <span class="math" data-tex="t = 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>t</mi><mo>&#x0003D;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">t = 2</annotation></semantics></math></span>.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Понятие: <a href="#concept">производная как мгновенная скорость</a>.</p>
+      <div class="solution"><span class="math" data-tex="v(t) = s'(t) = 3t^2 - 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>v</mi><mo stretchy="false">&#x00028;</mo><mi>t</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>s</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mi>t</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>3</mn><msup><mi>t</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">v(t) = s'(t) = 3t^2 - 2</annotation></semantics></math></span>,
+      <span class="math" data-tex="v(2) = 10"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>v</mi><mo stretchy="false">&#x00028;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">v(2) = 10</annotation></semantics></math></span>. Сюжет про тело - это производная в точке.</div>
+    </div>
+
+    <h2 id="error">8 · Найди ошибку в чужом решении <a class="anchor-link" href="#error">#</a></h2>
+    <p>Артём исследует <span class="math" data-tex="f(x) = x^3 + 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>x</mi><mn>3</mn></msup><mo>&#x0002B;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">f(x) = x^3 + 1</annotation></semantics></math></span>: «<span class="math" data-tex="f'(x) = 3x^2 = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f'(x) = 3x^2 = 0</annotation></semantics></math></span>
+    при <span class="math" data-tex="x = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x = 0</annotation></semantics></math></span>, значит 0 - точка экстремума».</p>
+    <details>
+      <summary>Где ошибка?</summary>
+      <p>Производная <span class="math" data-tex="3x^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">3x^2</annotation></semantics></math></span> неотрицательна и с обеих сторон от нуля положительна: знак не меняется, функция
+      возрастает везде. Ноль производной - лишь кандидат, экстремум решает смена знака (<a href="#limit-zero">первая граница</a>).</p>
+    </details>
+    <!-- sources -->
+    <h2 id="external">9 · Ссылки на задания из внешних источников <a class="anchor-link" href="#external">#</a></h2>
+    <p class="dim">Реальные задания с других сайтов подготовки к НМТ, которые опираются на законы этого блока. Условие читай на сайте источника по ссылке, разметка законами - наша. Источники и годы включаются и выключаются в настройках (шестерёнка вверху).</p>
+    <p class="dim ext-off" hidden>Все внешние источники выключены в настройках.</p>
+    <div class="ext-source" data-ext-source="nmt-ua" id="ext-nmt-ua">
+      <h3 class="ext-head">НМТ на сайте ЗНО-ОНЛАЙН (zno.osvita.ua)</h3>
+      <p class="dim ext-lead">Задания основных сессий НМТ 2024-2026 с сайта ЗНО-ОНЛАЙН, по годам. Каждый год включается отдельно.</p>
+      <div class="ext" data-ext="nmt-ua:2026" id="ext-nmt-ua-2026">
+        <h4>НМТ 2026</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q12" rel="noopener" target="_blank">1 сессия, задание 12</a> (с рисунком) - Формула Ньютона - Лейбница</li>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q19" rel="noopener" target="_blank">1 сессия, задание 19</a> - Монотонность и экстремум</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q12" rel="noopener" target="_blank">2 сессия, задание 12</a> - Таблица производных</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q19" rel="noopener" target="_blank">2 сессия, задание 19</a> - Монотонность и экстремум</li>
+        </ul>
+      </div>
+      <div class="ext" data-ext="nmt-ua:2025" id="ext-nmt-ua-2025">
+        <h4>НМТ 2025</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q19" rel="noopener" target="_blank">1 сессия, задание 19</a> - Уравнение касательной: наклон равен производной, Таблица производных</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q12" rel="noopener" target="_blank">2 сессия, задание 12</a> - Таблица производных</li>
+        </ul>
+      </div>
+      <div class="ext" data-ext="nmt-ua:2024" id="ext-nmt-ua-2024">
+        <h4>НМТ 2024</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q19" rel="noopener" target="_blank">1 сессия, задание 19</a> - Формула Ньютона - Лейбница</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q19" rel="noopener" target="_blank">2 сессия, задание 19</a> (с рисунком) - Формула Ньютона - Лейбница</li>
+        </ul>
       </div>
     </div>
+    <!-- /sources -->
+
+    <h2 id="artifacts">Что у тебя есть после этой страницы <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>Скорость и накопление как две стороны одной идеи.</strong> Производная - угловой коэффициент касательной и
+      мгновенная скорость; её знак показывает, где функция растёт. Интеграл - площадь и накопленное, а Ньютон - Лейбниц говорит:
+      чтобы найти накопленное, достаточно найти функцию, скорость которой известна.</p>
+    </div>
+    <!-- freq -->
+    <p class="dim law-freq" data-tasks="8">Частота на этом сайте, а не на НМТ: на этой странице 8 задач тренажёра, и они опираются на такие законы: Таблица производных - 2, Формула Ньютона - Лейбница - 2, Концы отрезка - 1, Монотонность и экстремум - 1, Правила дифференцирования - 1, Производная как мгновенная скорость - 1, Уравнение касательной: наклон равен производной - 1. В реальных вариантах НМТ 2024-2026 этот блок нужен в 8 заданиях из 132: Таблица производных - 3, Формула Ньютона - Лейбница - 3, Монотонность и экстремум - 2, Уравнение касательной: наклон равен производной - 1.</p>
+    <!-- /freq -->
+    <p>Ты знаешь этот блок, если:</p>
+    <ol>
+      <li>решаешь 8 из 10 задач на производную, экстремум и площадь без подсказки;</li>
+      <li>можешь объяснить вслух, почему <span class="math" data-tex="f'(x_0) = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f'(x_0) = 0</annotation></semantics></math></span> ещё не означает экстремум;</li>
+      <li>находишь ошибку в чужом решении, как у Артёма.</li>
+    </ol>
+  
+
+    <footer>
+      <nav class="pager" aria-label="Соседние темы">
+        <p class="pager-next">Следующая тема: <a href="09.html">Комбинаторика, вероятность, статистика</a></p>
+        <p class="pager-prev">Предыдущая тема: <a href="07.html">Тригонометрия</a></p>
+      </nav>
+      <p class="footer-note">Сайт серии AI Factory. Сделан той же оснасткой, что и остальные: обычный HTML и CSS, проверка на bash, публикация через GitHub Pages.</p>
+    </footer>
   </main>
 
 </div>
 </div>
-<script src="../assets/swa.js?v=1"></script>
-<script src="../assets/trainer.js?v=1"></script>
+<script src="../assets/swa.js?v=3"></script>
+<script src="../assets/trainer.js?v=3"></script>
+<script src="../assets/sources.js?v=3"></script>
+<script src="../assets/terms.js?v=3"></script>
+<script src="../assets/cp.js?v=3"></script>
 </body>
 </html>

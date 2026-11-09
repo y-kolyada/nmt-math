@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en" data-site="nmt-math">
+<head>
+<meta charset="utf-8">
+<meta name="swa-sources" content="nmt-ua:2024 nmt-ua:2025 nmt-ua:2026">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Derivative and integral · nmt-math · ai|</title>
+<!-- meta: built by tools/build-meta.py - do not edit by hand -->
+<meta name="description" content="Two questions to a function: how fast it changes at a point, and how much has accumulated over an interval.">
+<link rel="canonical" href="https://y-kolyada.github.io/nmt-math/en/08.html">
+<link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/08.html">
+<link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/08.html">
+<link rel="alternate" hreflang="en" href="https://y-kolyada.github.io/nmt-math/en/08.html">
+<link rel="alternate" hreflang="x-default" href="https://y-kolyada.github.io/nmt-math/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="nmt-math">
+<meta property="og:title" content="Derivative and integral">
+<meta property="og:description" content="Two questions to a function: how fast it changes at a point, and how much has accumulated over an interval.">
+<meta property="og:url" content="https://y-kolyada.github.io/nmt-math/en/08.html">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Derivative and integral","description":"Two questions to a function: how fast it changes at a point, and how much has accumulated over an interval.","url":"https://y-kolyada.github.io/nmt-math/en/08.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<!-- /meta -->
+<link rel="stylesheet" href="../assets/style.css?v=3">
+<link rel="stylesheet" href="../assets/study.css?v=3">
+<script>
+  (function() {
+    var s = document.documentElement.dataset.site || 'swa';
+    var t = localStorage.getItem('swa-' + s + '-theme');
+    if (t) document.documentElement.setAttribute('data-theme', t);
+    var f = localStorage.getItem('swa-' + s + '-font');
+    if (f) document.documentElement.setAttribute('data-font', f);
+  })();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+
+<header class="top">
+  <div class="brand-group">
+    <a class="home" href="index.html">
+      <span class="badge-ai">ai|</span>
+      <span class="sub-brand">nmt-math</span>
+    </a>
+    <div class="three" aria-hidden="true">law · <span class="topic">Mathematics</span> · limits · practice</div>
+  </div>
+  <div class="utility-tray" role="toolbar" aria-label="Display settings and language">
+    <nav class="lang-switcher" aria-label="Page language">
+      <a href="../uk/08.html" lang="uk" hreflang="uk" aria-label="Українська">UK</a>
+      <a href="../ru/08.html" lang="ru" hreflang="ru" aria-label="Русский">RU</a>
+      <a href="08.html" lang="en" hreflang="en" aria-label="English" class="active" aria-current="page">EN</a>
+    </nav>
+    <div class="font-scaler" role="group" aria-label="Font size">
+      <button type="button" class="font-btn font-s" data-size="s" title="Small font" aria-label="Small font">A</button>
+      <button type="button" class="font-btn font-m active" data-size="m" title="Standard font" aria-label="Standard font">A</button>
+      <button type="button" class="font-btn font-l" data-size="l" title="Large font" aria-label="Large font">A</button>
+    </div>
+    <button type="button" class="theme-toggle" id="themeToggle" title="Switch theme (day/night)" aria-label="Switch theme day/night">
+      <span class="theme-icon" aria-hidden="true"><svg class="icon" data-icon="sun" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="3.8"/><path d="M10 1.2v2.2M10 16.6v2.2M1.2 10h2.2M16.6 10h2.2M3.7 3.7l1.6 1.6M14.7 14.7l1.6 1.6M16.3 3.7l-1.6 1.6M5.3 14.7l-1.6 1.6"/></svg></span>
+    </button>
+  </div>
+</header>
+
+<div class="cols">
+
+  <nav class="contents" aria-label="Course blocks">
+    <ol>
+      <li class="group">Algebra and analysis</li>
+      <li><a href="01.html"><span class="num">1</span>Number, operations</a></li>
+      <li><a href="02.html"><span class="num">2</span>Ratio and percent</a></li>
+      <li><a href="03.html"><span class="num">3</span>Expressions</a></li>
+      <li><a href="04.html"><span class="num">4</span>Equations, inequalities</a></li>
+      <li><a href="05.html"><span class="num">5</span>Function, sequence</a></li>
+      <li><a href="06.html"><span class="num">6</span>Powers, logarithms</a></li>
+      <li><a href="07.html"><span class="num">7</span>Trigonometry</a></li>
+      <li><a href="08.html" aria-current="page"><span class="num">8</span>Derivative, integral</a></li>
+      <li><a href="09.html"><span class="num">9</span>Counting, probability</a></li>
+      <li class="group">Geometry</li>
+      <li><a href="10.html"><span class="num">10</span>Plane figures</a></li>
+      <li><a href="11.html"><span class="num">11</span>Measuring figures</a></li>
+      <li><a href="12.html"><span class="num">12</span>Coordinates, vectors</a></li>
+      <li><a href="13.html"><span class="num">13</span>Space and solids</a></li>
+    </ol>
+    <div class="nav-extra">
+      <div><a href="navigator.html"><svg class="icon" data-icon="target" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7.4"/><circle cx="10" cy="10" r="3.6"/><circle cx="10" cy="10" r="0.7" fill="currentColor"/></svg> Navigator</a></div>
+      <div><a href="glossary.html"><svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg> Glossary</a></div>
+    </div>
+    <div class="page-toc" id="pageToc" aria-label="Sections of this page" hidden>
+      <ul class="toc-list" id="tocList"></ul>
+    </div>
+  </nav>
+
+  <main id="main">
+    <h1>Derivative and integral</h1>
+    <p class="page-size" data-words="1553">Words: 1553</p>
+    <p class="lead">Two questions to a function: how fast it changes at a point, and how much has accumulated over an interval. The derivative answers the first, the integral the second, and they are inverse to each other.</p>
+
+    <div class="box key" id="key-idea">
+      <h2>Main idea of the page <a class="anchor-link" href="#key-idea" aria-label="link to this block">#</a></h2>
+      <p>A function (block 5) describes a dependence as a whole but does not say how steeply it changes at a given point. The derivative is the instantaneous rate of change, geometrically the gradient of the tangent. The integral is the reverse operation: knowing the rate, recover what has accumulated, geometrically the area under the graph. The Newton - Leibniz formula joins these two ideas into one equality. The block can find the best and the total; it does not describe the random (block 9).</p>
+    </div>
+
+    <span class="step">Step 0 · Hook</span>
+    <h2 id="hook">1 · The derivative is zero, so an extremum? <a class="anchor-link" href="#hook">#</a></h2>
+    <p>The habit: «set the derivative to zero and you have found a maximum or a minimum». Take <span class="math" data-tex="f(x) = x^3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">f(x) = x^3</annotation></semantics></math></span>. <span class="math" data-tex="f'(x) = 3x^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">f'(x) = 3x^2</annotation></semantics></math></span>, and <span class="math" data-tex="f'(0) = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mn>0</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f'(0) = 0</annotation></semantics></math></span>. But the function increases both to the left and to the right of zero: at zero it only «pauses» for a moment without turning back. An extremum is decided not by a zero of the derivative but by <strong>a change of its sign</strong>.</p>
+
+    <span class="step">Step 1 · Concept</span>
+    <h2 id="concept">2 · Derivative, antiderivative, integral <a class="anchor-link" href="#concept">#</a></h2>
+    <ul>
+      <li>The <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">derivative</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Derivative</strong><button type="button" class="term-close" aria-label="Close">&times;</button></span><span class="term-desc">The instantaneous rate of change of a function; the gradient (US: slope) of the tangent to its graph.</span><span class="term-links"><a href="glossary.html#term-derivative">To the glossary <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> <span class="math" data-tex="f'(x_0)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">f'(x_0)</annotation></semantics></math></span> is the limit that the ratio <span class="math" data-tex="\frac{f(x_0 + h) - f(x_0)}{h}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><msub><mi>x</mi><mn>0</mn></msub><mo>&#x0002B;</mo><mi>h</mi><mo stretchy="false">&#x00029;</mo><mo>&#x02212;</mo><mi>f</mi><mo stretchy="false">&#x00028;</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">&#x00029;</mo></mrow><mrow><mi>h</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{f(x_0 + h) - f(x_0)}{h}</annotation></semantics></math></span> tends to as h tends to zero. Physically it is the instantaneous speed, geometrically the gradient of the tangent.</li>
+      <li>An <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">extremum point</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Extremum point</strong><button type="button" class="term-close" aria-label="Close">&times;</button></span><span class="term-desc">An interior point where the function goes from increasing to decreasing or the other way round.</span><span class="term-links"><a href="glossary.html#term-extremum">To the glossary <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> is an interior point where the function goes from increasing to decreasing (a maximum) or the other way round (a minimum).</li>
+      <li>An <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">antiderivative</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Antiderivative</strong><button type="button" class="term-close" aria-label="Close">&times;</button></span><span class="term-desc">A function whose derivative equals the given function.</span><span class="term-links"><a href="glossary.html#term-antiderivative">To the glossary <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> F of a function f is a function such that <span class="math" data-tex="F'(x) = f(x)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>F</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">F'(x) = f(x)</annotation></semantics></math></span>.</li>
+      <li>The <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">definite integral</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Definite integral</strong><button type="button" class="term-close" aria-label="Close">&times;</button></span><span class="term-desc">The quantity accumulated over an interval; for a non-negative function, the area under the graph.</span><span class="term-links"><a href="glossary.html#term-integral">To the glossary <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> <span class="math" data-tex="\int_a^b f(x)\,dx"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msubsup><mo>&#x0222B;</mo><mi>a</mi><mi>b</mi></msubsup><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mspace width="0.167em" /><mi>d</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\int_a^b f(x)\,dx</annotation></semantics></math></span> is the accumulated quantity; for a non-negative f it is the area of the curvilinear trapezium under the graph on <div class="math-block" data-tex="a;\ b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>a</mi><mi>;</mi><mtext>&#x000A0;</mtext><mi>b</mi></mrow><annotation encoding="application/x-tex">a;\ b</annotation></semantics></math></div>.</li>
+    </ul>
+
+    <span class="step">Step 2 · Law</span>
+    <h2 id="law">3 · Laws of the derivative and the integral <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-table">
+      <p class="law-name">Table of derivatives</p>
+      <div class="math-block" data-tex="(x^n)' = nx^{n-1},\quad (e^x)' = e^x,\quad (\ln x)' = \frac{1}{x},\quad (\sin x)' = \cos x,\quad (\cos x)' = -\sin x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">&#x00028;</mo><msup><mi>x</mi><mi>n</mi></msup><msup><mo stretchy="false">&#x00029;</mo><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><mi>n</mi><msup><mi>x</mi><mrow><mi>n</mi><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo>&#x0002C;</mo><mspace width="1em" /><mo stretchy="false">&#x00028;</mo><msup><mi>e</mi><mi>x</mi></msup><msup><mo stretchy="false">&#x00029;</mo><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><msup><mi>e</mi><mi>x</mi></msup><mo>&#x0002C;</mo><mspace width="1em" /><mo stretchy="false">&#x00028;</mo><mi>ln</mi><mi>x</mi><msup><mo stretchy="false">&#x00029;</mo><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mi>x</mi></mrow></mfrac><mo>&#x0002C;</mo><mspace width="1em" /><mo stretchy="false">&#x00028;</mo><mi>sin</mi><mi>x</mi><msup><mo stretchy="false">&#x00029;</mo><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><mi>cos</mi><mi>x</mi><mo>&#x0002C;</mo><mspace width="1em" /><mo stretchy="false">&#x00028;</mo><mi>cos</mi><mi>x</mi><msup><mo stretchy="false">&#x00029;</mo><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><mo>&#x02212;</mo><mi>sin</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">(x^n)' = nx^{n-1},\quad (e^x)' = e^x,\quad (\ln x)' = \frac{1}{x},\quad (\sin x)' = \cos x,\quad (\cos x)' = -\sin x</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-rules">
+      <p class="law-name">Rules of differentiation</p>
+      <div class="math-block" data-tex="(u + v)' = u' + v',\quad (uv)' = u'v + uv',\quad \left(f(g(x))\right)' = f'(g(x)) \cdot g'(x)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>u</mi><mo>&#x0002B;</mo><mi>v</mi><msup><mo stretchy="false">&#x00029;</mo><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><msup><mi>u</mi><mi>&#x02032;</mi></msup><mo>&#x0002B;</mo><msup><mi>v</mi><mi>&#x02032;</mi></msup><mo>&#x0002C;</mo><mspace width="1em" /><mo stretchy="false">&#x00028;</mo><mi>u</mi><mi>v</mi><msup><mo stretchy="false">&#x00029;</mo><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><msup><mi>u</mi><mi>&#x02032;</mi></msup><mi>v</mi><mo>&#x0002B;</mo><mi>u</mi><msup><mi>v</mi><mi>&#x02032;</mi></msup><mo>&#x0002C;</mo><mspace width="1em" /><msup><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>g</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00029;</mo><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mi>g</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00029;</mo><mo>&#x000B7;</mo><msup><mi>g</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(u + v)' = u' + v',\quad (uv)' = u'v + uv',\quad \left(f(g(x))\right)' = f'(g(x)) \cdot g'(x)</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-tangent">
+      <p class="law-name">Equation of the tangent: the slope equals the derivative</p>
+      <div class="math-block" data-tex="y = f(x_0) + f'(x_0)(x - x_0)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><mi>f</mi><mo stretchy="false">&#x00028;</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">&#x00029;</mo><mo>&#x0002B;</mo><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">y = f(x_0) + f'(x_0)(x - x_0)</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-monotone">
+      <p class="law-name">Monotonicity and extremum</p>
+      <p><span class="math" data-tex="f' > 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo>&#x0003E;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f' &gt; 0</annotation></semantics></math></span> on an interval - the function increases, <span class="math" data-tex="f' < 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo>&#x0003C;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f' &lt; 0</annotation></semantics></math></span> - it decreases. The derivative changes sign from «+» to «−» - a maximum, from «−» to «+» - a minimum.</p>
+    </div>
+    <div class="law" id="law-nl">
+      <p class="law-name">Newton - Leibniz formula</p>
+      <div class="math-block" data-tex="\int_a^b f(x)\,dx = F(b) - F(a),\qquad F' = f"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msubsup><mo>&#x0222B;</mo><mi>a</mi><mi>b</mi></msubsup><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mspace width="0.167em" /><mi>d</mi><mi>x</mi><mo>&#x0003D;</mo><mi>F</mi><mo stretchy="false">&#x00028;</mo><mi>b</mi><mo stretchy="false">&#x00029;</mo><mo>&#x02212;</mo><mi>F</mi><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0002C;</mo><mspace width="2em" /><msup><mi>F</mi><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><mi>f</mi></mrow><annotation encoding="application/x-tex">\int_a^b f(x)\,dx = F(b) - F(a),\qquad F' = f</annotation></semantics></math></div>
+    </div>
+
+    <span class="step">Step 3 · Why it is so</span>
+    <h2 id="why">4 · Where the laws come from <a class="anchor-link" href="#why">#</a></h2>
+    <p><strong>The derivative of a square</strong> by definition:</p>
+    <div class="math-block" data-tex="\frac{(x + h)^2 - x^2}{h} = \frac{2xh + h^2}{h} = 2x + h \to 2x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002B;</mo><mi>h</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x02212;</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mrow><mi>h</mi></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mn>2</mn><mi>x</mi><mi>h</mi><mo>&#x0002B;</mo><msup><mi>h</mi><mn>2</mn></msup></mrow><mrow><mi>h</mi></mrow></mfrac><mo>&#x0003D;</mo><mn>2</mn><mi>x</mi><mo>&#x0002B;</mo><mi>h</mi><mo>&#x02192;</mo><mn>2</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">\frac{(x + h)^2 - x^2}{h} = \frac{2xh + h^2}{h} = 2x + h \to 2x</annotation></semantics></math></div>
+    <p>In the same way, through the binomial, one gets <span class="math" data-tex="(x^n)' = nx^{n-1}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><msup><mi>x</mi><mi>n</mi></msup><msup><mo stretchy="false">&#x00029;</mo><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><mi>n</mi><msup><mi>x</mi><mrow><mi>n</mi><mo>&#x02212;</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">(x^n)' = nx^{n-1}</annotation></semantics></math></span>.</p>
+    <!-- fig:08-tangent -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 220" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="The parabola y = x² and its tangent at x₀ = 1. The tangent rises 2 units for each unit to the right: its gradient 2 equals the derivative 2x at the point 1.">
+        <line x1="20.0" y1="147.0" x2="300.0" y2="147.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="300.0,147.0 293.6,149.7 293.6,144.3" fill="currentColor"/>
+        <line x1="113.3" y1="192.0" x2="113.3" y2="12.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="113.3,12.0 116.1,18.4 110.6,18.4" fill="currentColor"/>
+        <text x="296.0" y="163.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <text x="121.3" y="24.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <line x1="175.6" y1="144.0" x2="175.6" y2="150.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="175.6" y="163.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">1</text>
+        <line x1="237.8" y1="144.0" x2="237.8" y2="150.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="237.8" y="163.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">2</text>
+        <line x1="110.3" y1="117.0" x2="116.3" y2="117.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="107.3" y="121.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">1</text>
+        <line x1="110.3" y1="57.0" x2="116.3" y2="57.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="107.3" y="61.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">3</text>
+        <polyline points="20.0,79.5 21.9,82.2 23.7,84.8 25.6,87.4 27.5,89.9 29.3,92.3 31.2,94.7 33.1,97.1 34.9,99.4 36.8,101.6 38.7,103.8 40.5,105.9 42.4,108.0 44.3,110.0 46.1,112.0 48.0,113.9 49.9,115.8 51.7,117.6 53.6,119.4 55.5,121.1 57.3,122.7 59.2,124.3 61.1,125.8 62.9,127.3 64.8,128.7 66.7,130.1 68.5,131.4 70.4,132.7 72.3,133.9 74.1,135.1 76.0,136.2 77.9,137.3 79.7,138.3 81.6,139.2 83.5,140.1 85.3,140.9 87.2,141.7 89.1,142.4 90.9,143.1 92.8,143.7 94.7,144.3 96.5,144.8 98.4,145.3 100.3,145.7 102.1,146.0 104.0,146.3 105.9,146.6 107.7,146.8 109.6,146.9 111.5,147.0 113.3,147.0 115.2,147.0 117.1,146.9 118.9,146.8 120.8,146.6 122.7,146.3 124.5,146.0 126.4,145.7 128.3,145.3 130.1,144.8 132.0,144.3 133.9,143.7 135.7,143.1 137.6,142.4 139.5,141.7 141.3,140.9 143.2,140.1 145.1,139.2 146.9,138.3 148.8,137.3 150.7,136.2 152.5,135.1 154.4,133.9 156.3,132.7 158.1,131.4 160.0,130.1 161.9,128.7 163.7,127.3 165.6,125.8 167.5,124.3 169.3,122.7 171.2,121.1 173.1,119.4 174.9,117.6 176.8,115.8 178.7,113.9 180.5,112.0 182.4,110.0 184.3,108.0 186.1,105.9 188.0,103.8 189.9,101.6 191.7,99.4 193.6,97.1 195.5,94.7 197.3,92.3 199.2,89.9 201.1,87.4 202.9,84.8 204.8,82.2 206.7,79.5 208.5,76.8 210.4,74.0 212.3,71.2 214.1,68.3 216.0,65.3 217.9,62.3 219.7,59.3 221.6,56.2 223.5,53.0 225.3,49.8 227.2,46.5 229.1,43.2 230.9,39.8 232.8,36.4 234.7,32.9 236.5,29.4 238.4,25.8 240.3,22.2 242.1,18.5 244.0,14.7" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="2" opacity="1.0"/>
+        <polyline points="100.9,189.0 102.4,187.6 103.9,186.1 105.4,184.6 106.9,183.2 108.4,181.8 109.9,180.3 111.4,178.8 112.9,177.4 114.4,175.9 115.9,174.5 117.4,173.0 118.9,171.6 120.4,170.2 121.9,168.7 123.4,167.2 124.9,165.8 126.5,164.3 128.0,162.9 129.5,161.4 131.0,160.0 132.5,158.5 134.0,157.1 135.5,155.7 137.0,154.2 138.5,152.8 140.0,151.3 141.5,149.8 143.0,148.4 144.5,146.9 146.0,145.5 147.5,144.1 149.0,142.6 150.5,141.1 152.0,139.7 153.5,138.2 155.0,136.8 156.5,135.3 158.0,133.9 159.5,132.4 161.0,131.0 162.5,129.5 164.0,128.1 165.5,126.6 167.1,125.2 168.6,123.7 170.1,122.3 171.6,120.8 173.1,119.4 174.6,117.9 176.1,116.5 177.6,115.0 179.1,113.6 180.6,112.1 182.1,110.7 183.6,109.2 185.1,107.8 186.6,106.3 188.1,104.9 189.6,103.4 191.1,102.0 192.6,100.5 194.1,99.1 195.6,97.6 197.1,96.2 198.6,94.7 200.1,93.3 201.6,91.8 203.1,90.4 204.6,88.9 206.1,87.5 207.7,86.0 209.2,84.6 210.7,83.1 212.2,81.7 213.7,80.2 215.2,78.8 216.7,77.3 218.2,75.9 219.7,74.4 221.2,73.0 222.7,71.5 224.2,70.1 225.7,68.6 227.2,67.2 228.7,65.8 230.2,64.3 231.7,62.8 233.2,61.4 234.7,59.9 236.2,58.5 237.7,57.0 239.2,55.6 240.7,54.1 242.2,52.7 243.7,51.2 245.2,49.8 246.7,48.4 248.3,46.9 249.8,45.5 251.3,44.0 252.8,42.6 254.3,41.1 255.8,39.6 257.3,38.2 258.8,36.7 260.3,35.3 261.8,33.9 263.3,32.4 264.8,31.0 266.3,29.5 267.8,28.1 269.3,26.6 270.8,25.1 272.3,23.7 273.8,22.2 275.3,20.8 276.8,19.3 278.3,17.9 279.8,16.5 281.3,15.0" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.6" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="175.6" cy="117.0" r="4.5" fill="currentColor" style="fill:var(--acc)"/>
+        <line x1="175.6" y1="117.0" x2="237.8" y2="117.0" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 3" opacity="1.0"/>
+        <line x1="237.8" y1="117.0" x2="237.8" y2="57.0" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 3" opacity="1.0"/>
+        <text x="243.8" y="91.0" fill="currentColor" font-size="12" opacity="1.0" style="fill:var(--acc)">slope 2</text>
+        <text x="206.7" y="133.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">1</text>
+        <text x="26.2" y="30.0" fill="currentColor" font-size="12" opacity="1.0">y = x²</text>
+      </svg>
+      <p class="dim">Figure 29. The derivative as the slope of the tangent: for y = x² at the point 1 the slope is 2.</p>
+    </div>
+    <!-- /fig:08-tangent -->
+    <p><strong>Monotonicity.</strong> If the tangent goes up at every point (the gradient is positive), the graph goes up too.</p>
+    <p><strong>Newton - Leibniz.</strong> Let S(x) be the area under the graph from a to x. If x is moved by a small h, the area grows by about a strip <span class="math" data-tex="f(x) \cdot h"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x000B7;</mo><mi>h</mi></mrow><annotation encoding="application/x-tex">f(x) \cdot h</annotation></semantics></math></span>. So the rate at which the area grows is <span class="math" data-tex="S'(x) = f(x)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>S</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">S'(x) = f(x)</annotation></semantics></math></span>: the area is an antiderivative. Two antiderivatives differ by a constant, so the area on <div class="math-block" data-tex="a;\ b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>a</mi><mi>;</mi><mtext>&#x000A0;</mtext><mi>b</mi></mrow><annotation encoding="application/x-tex">a;\ b</annotation></semantics></math></div> equals <span class="math" data-tex="F(b) - F(a)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>F</mi><mo stretchy="false">&#x00028;</mo><mi>b</mi><mo stretchy="false">&#x00029;</mo><mo>&#x02212;</mo><mi>F</mi><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">F(b) - F(a)</annotation></semantics></math></span> for any antiderivative F.</p>
+    <!-- fig:08-area -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 220" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="The area under the graph of y = 0.5x² + 0.5 from a to x is shaded. If x is moved by a small h, the area grows by a narrow strip of height f(x): so the rate at which the area grows equals f(x), and the area is an antiderivative.">
+        <polygon points="76.0,178.4 76.0,159.8 79.6,159.2 83.2,158.6 86.8,157.8 90.4,157.0 94.0,156.2 97.6,155.2 101.2,154.2 104.8,153.2 108.4,152.0 112.0,150.8 115.6,149.6 119.2,148.3 122.8,146.9 126.4,145.4 130.0,143.9 133.6,142.3 137.2,140.7 140.8,139.0 144.4,137.2 148.0,135.4 151.6,133.5 155.2,131.5 158.8,129.5 162.4,127.4 166.0,125.2 169.6,123.0 173.2,120.7 176.8,118.3 180.4,115.9 184.0,113.4 187.6,110.8 191.2,108.2 194.8,105.5 198.4,102.8 202.0,100.0 205.6,97.1 209.2,94.2 212.8,91.2 216.4,88.1 220.0,85.0 220.0,178.4" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="0.8" opacity="1.0"/>
+        <polygon points="220.0,178.4 220.0,85.0 242.4,85.0 242.4,178.4" fill="currentColor" fill-opacity="0.35" stroke="currentColor" stroke-width="1.2" opacity="1.0" style="stroke:var(--acc);fill:var(--acc)"/>
+        <line x1="20.0" y1="178.4" x2="300.0" y2="178.4" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="300.0,178.4 293.6,181.1 293.6,175.7" fill="currentColor"/>
+        <line x1="44.0" y1="188.0" x2="44.0" y2="12.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="44.0,12.0 46.7,18.4 41.3,18.4" fill="currentColor"/>
+        <text x="296.0" y="194.4" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <text x="52.0" y="24.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <polyline points="28.0,161.8 30.2,161.9 32.4,162.1 34.6,162.2 36.8,162.3 39.0,162.3 41.2,162.4 43.4,162.4 45.6,162.4 47.8,162.4 50.0,162.3 52.2,162.2 54.4,162.1 56.6,162.0 58.8,161.9 61.0,161.7 63.2,161.5 65.4,161.3 67.6,161.0 69.8,160.7 72.0,160.4 74.2,160.1 76.4,159.8 78.6,159.4 80.8,159.0 83.0,158.6 85.2,158.2 87.4,157.7 89.6,157.2 91.8,156.7 94.0,156.2 96.2,155.6 98.4,155.0 100.6,154.4 102.8,153.8 105.0,153.1 107.2,152.4 109.4,151.7 111.6,151.0 113.8,150.2 116.0,149.4 118.2,148.6 120.4,147.8 122.6,147.0 124.8,146.1 127.0,145.2 129.2,144.3 131.4,143.3 133.6,142.3 135.8,141.3 138.0,140.3 140.2,139.3 142.4,138.2 144.6,137.1 146.8,136.0 149.0,134.8 151.2,133.7 153.4,132.5 155.6,131.3 157.8,130.0 160.0,128.8 162.2,127.5 164.4,126.2 166.6,124.8 168.8,123.5 171.0,122.1 173.2,120.7 175.4,119.2 177.6,117.8 179.8,116.3 182.0,114.8 184.2,113.3 186.4,111.7 188.6,110.1 190.8,108.5 193.0,106.9 195.2,105.2 197.4,103.6 199.6,101.9 201.8,100.1 204.0,98.4 206.2,96.6 208.4,94.8 210.6,93.0 212.8,91.2 215.0,89.3 217.2,87.4 219.4,85.5 221.6,83.5 223.8,81.6 226.0,79.6 228.2,77.6 230.4,75.5 232.6,73.5 234.8,71.4 237.0,69.3 239.2,67.1 241.4,65.0 243.6,62.8 245.8,60.6 248.0,58.4 250.2,56.1 252.4,53.8 254.6,51.5 256.8,49.2 259.0,46.8 261.2,44.5 263.4,42.1 265.6,39.6 267.8,37.2 270.0,34.7 272.2,32.2 274.4,29.7 276.6,27.1 278.8,24.6 281.0,22.0 283.2,19.4 285.4,16.7 287.6,14.0" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="2" opacity="1.0"/>
+        <text x="76.0" y="194.4" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-style="italic">a</text>
+        <text x="220.0" y="194.4" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-style="italic">x</text>
+        <text x="248.4" y="194.4" fill="currentColor" font-size="12" opacity="1.0" font-style="italic">x + h</text>
+        <text x="60.0" y="40.8" fill="currentColor" font-size="12" opacity="1.0" style="fill:var(--acc)">strip f(x) · h</text>
+        <line x1="172.0" y1="45.6" x2="231.2" y2="81.0" stroke="currentColor" stroke-width="1.2" opacity="1.0" style="stroke:var(--acc)"/>
+        <polygon points="231.2,81.0 224.3,80.0 227.1,75.3" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="140.0" y="159.2" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-style="italic">S(x)</text>
+      </svg>
+      <p class="dim">Figure 30. Newton - Leibniz: the area grows by a strip f(x) · h, so the area is an antiderivative of the function.</p>
+    </div>
+    <!-- /fig:08-area -->
+
+    <span class="step">Step 4 · Limits</span>
+    <h2 id="limits">5 · Where the laws break <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-zero">
+      <p><strong><span class="math" data-tex="f'(x_0) = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f'(x_0) = 0</annotation></semantics></math></span> does not guarantee an extremum</strong> (the example <span class="math" data-tex="x^3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>x</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">x^3</annotation></semantics></math></span> in the hook). A change of sign of the derivative is needed.</p>
+    </div>
+    <!-- fig:08-cubic -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 230" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="The graph of f(x) = x³ − 3x². The derivative 3x(x − 2) changes sign from plus to minus at 0, where there is a maximum, and from minus to plus at 2, where there is a minimum. The signs of the derivative are written below the axis.">
+        <line x1="30.0" y1="53.8" x2="290.0" y2="53.8" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="290.0,53.8 283.6,56.5 283.6,51.1" fill="currentColor"/>
+        <line x1="101.9" y1="182.0" x2="101.9" y2="12.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="101.9,12.0 104.6,18.4 99.2,18.4" fill="currentColor"/>
+        <text x="286.0" y="69.8" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <text x="109.9" y="24.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <line x1="212.6" y1="50.8" x2="212.6" y2="56.8" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="212.6" y="69.8" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">2</text>
+        <line x1="98.9" y1="165.3" x2="104.9" y2="165.3" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="95.9" y="169.3" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">−4</text>
+        <polyline points="43.9,177.8 46.0,167.9 48.1,158.5 50.2,149.6 52.3,141.1 54.4,133.1 56.5,125.5 58.6,118.4 60.7,111.7 62.8,105.5 64.9,99.6 67.0,94.1 69.1,89.1 71.2,84.4 73.3,80.1 75.4,76.1 77.5,72.5 79.6,69.3 81.7,66.4 83.8,63.8 85.9,61.5 88.0,59.6 90.1,57.9 92.2,56.6 94.3,55.5 96.4,54.7 98.5,54.1 100.6,53.9 102.7,53.8 104.8,54.0 106.8,54.4 108.9,55.1 111.0,56.0 113.1,57.0 115.2,58.3 117.3,59.7 119.4,61.3 121.5,63.1 123.6,65.0 125.7,67.1 127.8,69.3 129.9,71.6 132.0,74.1 134.1,76.6 136.2,79.3 138.3,82.1 140.4,84.9 142.5,87.8 144.6,90.8 146.7,93.8 148.8,96.9 150.9,100.0 153.0,103.1 155.1,106.3 157.2,109.5 159.3,112.6 161.4,115.8 163.5,118.9 165.6,122.1 167.7,125.1 169.8,128.2 171.9,131.1 174.0,134.1 176.1,136.9 178.2,139.7 180.3,142.3 182.4,144.9 184.5,147.4 186.6,149.7 188.7,151.9 190.7,154.0 192.8,155.9 194.9,157.7 197.0,159.3 199.1,160.8 201.2,162.0 203.3,163.1 205.4,164.0 207.5,164.6 209.6,165.0 211.7,165.3 213.8,165.2 215.9,165.0 218.0,164.4 220.1,163.6 222.2,162.6 224.3,161.2 226.4,159.6 228.5,157.7 230.6,155.4 232.7,152.8 234.8,150.0 236.9,146.7 239.0,143.1 241.1,139.2 243.2,134.9 245.3,130.2 247.4,125.2 249.5,119.7 251.6,113.9 253.7,107.6 255.8,101.0 257.9,93.9 260.0,86.3 262.1,78.3 264.2,69.9 266.3,61.0 268.4,51.6 270.5,41.7 272.6,31.4 274.6,20.5" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="2" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="101.9" cy="53.8" r="4.5" fill="currentColor"/>
+        <circle cx="212.6" cy="165.3" r="4.5" fill="currentColor"/>
+        <text x="101.9" y="43.8" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" font-weight="700">max</text>
+        <text x="212.6" y="185.3" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" font-weight="700">min</text>
+        <text x="18.0" y="214.0" fill="currentColor" font-size="12" opacity="0.8">f′:</text>
+        <text x="63.2" y="214.0" fill="currentColor" font-size="16" opacity="1.0" text-anchor="middle" font-weight="700">+</text>
+        <text x="157.2" y="214.0" fill="currentColor" font-size="16" opacity="1.0" text-anchor="middle" font-weight="700">−</text>
+        <text x="256.8" y="214.0" fill="currentColor" font-size="16" opacity="1.0" text-anchor="middle" font-weight="700">+</text>
+        <line x1="101.9" y1="200.0" x2="101.9" y2="218.0" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+        <line x1="212.6" y1="200.0" x2="212.6" y2="218.0" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+      </svg>
+      <p class="dim">Figure 31. An extremum is where the derivative changes sign: a maximum at 0, a minimum at 2.</p>
+    </div>
+    <!-- /fig:08-cubic -->
+    <div class="limit" id="limit-ends">
+      <p><strong>The greatest value on a segment is also sought at the endpoints.</strong> The derivative finds only interior «peaks», while a function on a segment may be greatest exactly at the edge.</p>
+    </div>
+    <div class="limit" id="limit-sign">
+      <p><strong>The integral of a negative function is negative.</strong> The area of a part below the Ox axis enters the integral with the sign «−»; to find the area of a figure, such a part is taken with the opposite sign.</p>
+    </div>
+    <div class="limit" id="limit-chain">
+      <p><strong>The derivative of a composite function has a factor.</strong> <span class="math" data-tex="(\sin 3x)' = 3\cos 3x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>sin</mi><mn>3</mn><mi>x</mi><msup><mo stretchy="false">&#x00029;</mo><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><mn>3</mn><mi>cos</mi><mn>3</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">(\sin 3x)' = 3\cos 3x</annotation></semantics></math></span>, not <span class="math" data-tex="\cos 3x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>cos</mi><mn>3</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">\cos 3x</annotation></semantics></math></span>: the inner function changes too.</p>
+    </div>
+
+    <span class="step">Step 5 · Practice</span>
+    <h2 id="apply">6 · Tasks in the NMT format <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="C" data-limit="">
+      <p class="task-kind">One answer out of five · 1 point</p>
+      <p>Find <span class="math" data-tex="f'(2)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">f'(2)</annotation></semantics></math></span> if <span class="math" data-tex="f(x) = x^3 - 3x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>x</mi><mn>3</mn></msup><mo>&#x02212;</mo><mn>3</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">f(x) = x^3 - 3x</annotation></semantics></math></span>.</p>
+      <div class="opts">
+        <button type="button" data-opt="A">A · 2</button>
+        <button type="button" data-opt="B">B · 6</button>
+        <button type="button" data-opt="C">C · 9</button>
+        <button type="button" data-opt="D">D · 12</button>
+        <button type="button" data-opt="E">E · 3</button>
+      </div>
+      <p class="law-ref">Law: the <a href="#law-table">table of derivatives</a> and the <a href="#law-rules">derivative of a sum</a>.</p>
+      <div class="solution"><span class="math" data-tex="f'(x) = 3x^2 - 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">f'(x) = 3x^2 - 3</annotation></semantics></math></span>, <span class="math" data-tex="f'(2) = 12 - 3 = 9"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>12</mn><mo>&#x02212;</mo><mn>3</mn><mo>&#x0003D;</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">f'(2) = 12 - 3 = 9</annotation></semantics></math></span>. Option A is the value of the function itself, <span class="math" data-tex="f(2) = 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">f(2) = 2</annotation></semantics></math></span>, not of the derivative.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="6" data-limit="">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p>Find the gradient of the tangent to the graph of <span class="math" data-tex="y = x^2 - 4x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>4</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">y = x^2 - 4x</annotation></semantics></math></span> at the point <span class="math" data-tex="x_0 = 5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>&#x0003D;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">x_0 = 5</annotation></semantics></math></span>.</p>
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Law: the <a href="#law-tangent">tangent</a>: its gradient equals the derivative.</p>
+      <div class="solution"><span class="math" data-tex="y' = 2x - 4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>y</mi><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><mn>2</mn><mi>x</mi><mo>&#x02212;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">y' = 2x - 4</annotation></semantics></math></span>, <span class="math" data-tex="y'(5) = 6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>y</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mn>5</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">y'(5) = 6</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="0" data-limit="limit-zero">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p>Find the point of maximum of the function <span class="math" data-tex="f(x) = x^3 - 3x^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>x</mi><mn>3</mn></msup><mo>&#x02212;</mo><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">f(x) = x^3 - 3x^2</annotation></semantics></math></span>.</p>
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Law: <a href="#law-monotone">change of sign of the derivative</a>.</p>
+      <div class="solution"><span class="math" data-tex="f'(x) = 3x^2 - 6x = 3x(x - 2)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>6</mn><mi>x</mi><mo>&#x0003D;</mo><mn>3</mn><mi>x</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">f'(x) = 3x^2 - 6x = 3x(x - 2)</annotation></semantics></math></span>. Signs: «+» before 0, «−» between 0 and 2, «+» after 2. From «+» to «−» at the point 0: that is the maximum. The point 2 is the minimum. A task of this type was among the hardest at NMT 2026: the answer was often confused with the minimum.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="8" data-limit="limit-sign">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p>Find the area of the figure bounded by the graph of <span class="math" data-tex="y = 3x^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">y = 3x^2</annotation></semantics></math></span>, the Ox axis and the line <span class="math" data-tex="x = 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x = 2</annotation></semantics></math></span>.</p>
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Law: <a href="#law-nl">Newton - Leibniz</a>.</p>
+      <div class="solution">The antiderivative is <span class="math" data-tex="F(x) = x^3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>F</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">F(x) = x^3</annotation></semantics></math></span>; <span class="math" data-tex="\int_0^2 3x^2\,dx = 2^3 - 0^3 = 8"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msubsup><mo>&#x0222B;</mo><mn>0</mn><mn>2</mn></msubsup><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup><mspace width="0.167em" /><mi>d</mi><mi>x</mi><mo>&#x0003D;</mo><msup><mn>2</mn><mn>3</mn></msup><mo>&#x02212;</mo><msup><mn>0</mn><mn>3</mn></msup><mo>&#x0003D;</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">\int_0^2 3x^2\,dx = 2^3 - 0^3 = 8</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="match" data-answer="A B C" data-limit="">
+      <p class="task-kind">Matching · 3 points</p>
+      <p>Match each function (1-3) with its derivative (A-E).</p>
+      <ul class="pairs">
+        <li><label>1. <span class="math" data-tex="x^5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>x</mi><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">x^5</annotation></semantics></math></span> <select aria-label="Answer for function 1"><option value="">-</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option></select></label></li>
+        <li><label>2. <span class="math" data-tex="\sin x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>sin</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\sin x</annotation></semantics></math></span> <select aria-label="Answer for function 2"><option value="">-</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option></select></label></li>
+        <li><label>3. <span class="math" data-tex="e^x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>e</mi><mi>x</mi></msup></mrow><annotation encoding="application/x-tex">e^x</annotation></semantics></math></span> <select aria-label="Answer for function 3"><option value="">-</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option></select></label></li>
+      </ul>
+      <p>A · 5x⁴ &nbsp; B · cos x &nbsp; C · eˣ &nbsp; D · x⁶/6 &nbsp; E · −cos x</p>
+      <p><button type="button" class="check">Check</button></p>
+      <p class="law-ref">Law: the <a href="#law-table">table of derivatives</a>.</p>
+      <div class="solution">D is an antiderivative, not a derivative: the direction of the operation got mixed up. E is the derivative that <span class="math" data-tex="-\sin x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02212;</mo><mi>sin</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">-\sin x</annotation></semantics></math></span> gives.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="9" data-limit="" data-claim="08-task-area">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p>Find the area of the figure bounded by the graph of the function y = x², the Ox axis and the line x = 3.</p>
+      <!-- fig:08-task-area -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 220" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="The graph of y = x² for x from 0 onwards. The figure under the graph between the Ox axis and the line x = 3 is shaded: it is bounded by the parabola above, the Ox axis below and the vertical line x = 3 on the right.">
+        <line x1="20.0" y1="189.7" x2="300.0" y2="189.7" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="300.0,189.7 293.6,192.4 293.6,186.9" fill="currentColor"/>
+        <line x1="58.2" y1="206.0" x2="58.2" y2="10.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="58.2,10.0 60.9,16.4 55.5,16.4" fill="currentColor"/>
+        <text x="296.0" y="205.7" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <text x="66.2" y="22.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <line x1="249.1" y1="186.7" x2="249.1" y2="192.7" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="249.1" y="205.7" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">3</text>
+        <polygon points="58.2,189.7 61.4,189.6 64.5,189.5 67.7,189.3 70.9,189.0 74.1,188.6 77.3,188.2 80.5,187.7 83.6,187.1 86.8,186.4 90.0,185.6 93.2,184.7 96.4,183.8 99.5,182.8 102.7,181.7 105.9,180.5 109.1,179.2 112.3,177.9 115.5,176.4 118.6,174.9 121.8,173.3 125.0,171.7 128.2,169.9 131.4,168.1 134.5,166.1 137.7,164.1 140.9,162.1 144.1,159.9 147.3,157.7 150.5,155.3 153.6,152.9 156.8,150.4 160.0,147.9 163.2,145.2 166.4,142.5 169.5,139.6 172.7,136.7 175.9,133.8 179.1,130.7 182.3,127.6 185.5,124.3 188.6,121.0 191.8,117.6 195.0,114.2 198.2,110.6 201.4,107.0 204.5,103.3 207.7,99.5 210.9,95.6 214.1,91.6 217.3,87.6 220.5,83.5 223.6,79.3 226.8,75.0 230.0,70.6 233.2,66.1 236.4,61.6 239.5,57.0 242.7,52.3 245.9,47.5 249.1,42.7 249.1,189.7 58.2,189.7" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="0" opacity="1.0" style="stroke:var(--acc);fill:var(--acc)"/>
+        <polyline points="20.0,183.8 22.1,184.4 24.1,185.0 26.2,185.5 28.3,186.1 30.3,186.5 32.4,187.0 34.5,187.4 36.5,187.8 38.6,188.1 40.7,188.4 42.8,188.7 44.8,188.9 46.9,189.2 49.0,189.3 51.0,189.5 53.1,189.6 55.2,189.6 57.2,189.7 59.3,189.7 61.4,189.6 63.4,189.6 65.5,189.5 67.6,189.3 69.6,189.1 71.7,188.9 73.8,188.7 75.8,188.4 77.9,188.1 80.0,187.8 82.0,187.4 84.1,187.0 86.2,186.5 88.2,186.0 90.3,185.5 92.4,184.9 94.5,184.4 96.5,183.7 98.6,183.1 100.7,182.4 102.7,181.7 104.8,180.9 106.9,180.1 108.9,179.3 111.0,178.4 113.1,177.5 115.1,176.6 117.2,175.6 119.3,174.6 121.3,173.6 123.4,172.5 125.5,171.4 127.5,170.3 129.6,169.1 131.7,167.9 133.8,166.6 135.8,165.4 137.9,164.0 140.0,162.7 142.0,161.3 144.1,159.9 146.2,158.4 148.2,157.0 150.3,155.4 152.4,153.9 154.4,152.3 156.5,150.7 158.6,149.0 160.6,147.3 162.7,145.6 164.8,143.8 166.8,142.0 168.9,140.2 171.0,138.4 173.0,136.5 175.1,134.5 177.2,132.6 179.3,130.5 181.3,128.5 183.4,126.4 185.5,124.3 187.5,122.2 189.6,120.0 191.7,117.8 193.7,115.6 195.8,113.3 197.9,111.0 199.9,108.6 202.0,106.2 204.1,103.8 206.1,101.4 208.2,98.9 210.3,96.4 212.3,93.8 214.4,91.2 216.5,88.6 218.5,85.9 220.6,83.3 222.7,80.5 224.8,77.8 226.8,75.0 228.9,72.1 231.0,69.3 233.0,66.4 235.1,63.4 237.2,60.5 239.2,57.5 241.3,54.4 243.4,51.4 245.4,48.2 247.5,45.1 249.6,41.9 251.6,38.7 253.7,35.5 255.8,32.2 257.8,28.9 259.9,25.5 262.0,22.2 264.0,18.7 266.1,15.3 268.2,11.8" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="2.2" opacity="1.0"/>
+        <line x1="249.1" y1="189.7" x2="249.1" y2="42.7" stroke="currentColor" stroke-width="1.6" stroke-dasharray="5 3" opacity="1.0"/>
+        <text x="140.9" y="55.7" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y = x²</text>
+        <text x="191.8" y="163.5" fill="currentColor" font-size="16" opacity="1.0" text-anchor="middle" font-style="italic" font-weight="700">S</text>
+      </svg>
+      <p class="dim">Figure 32. For the task: a curvilinear trapezium under a parabola.</p>
+    </div>
+    <!-- /fig:08-task-area -->
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Law: the <a href="#law-nl">Newton - Leibniz formula</a>.</p>
+      <div class="solution">An antiderivative of x² is x³/3, so <span class="math" data-tex="S = \int_0^3 x^2\,dx = \frac{27}{3} - 0 = 9"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>S</mi><mo>&#x0003D;</mo><msubsup><mo>&#x0222B;</mo><mn>0</mn><mn>3</mn></msubsup><msup><mi>x</mi><mn>2</mn></msup><mspace width="0.167em" /><mi>d</mi><mi>x</mi><mo>&#x0003D;</mo><mfrac><mrow><mn>27</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mo>&#x02212;</mo><mn>0</mn><mo>&#x0003D;</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">S = \int_0^3 x^2\,dx = \frac{27}{3} - 0 = 9</annotation></semantics></math></span>.</div>
+    </div>
+
+    <span class="step">Step 6 · Reverse move</span>
+    <h2 id="reverse">7 · Name the law yourself <a class="anchor-link" href="#reverse">#</a></h2>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="6" data-limit="limit-ends">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p>Find the greatest value of the function <span class="math" data-tex="f(x) = x^2 - 4x + 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>4</mn><mi>x</mi><mo>&#x0002B;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">f(x) = x^2 - 4x + 1</annotation></semantics></math></span> on the segment
+      <div class="math-block" data-tex="0;\ 5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>0</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>5</mn></mrow><annotation encoding="application/x-tex">0;\ 5</annotation></semantics></math></div>.</p>
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Limit: <a href="#limit-ends">the endpoints of the segment</a>.</p>
+      <div class="solution"><span class="math" data-tex="f'(x) = 2x - 4 = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>2</mn><mi>x</mi><mo>&#x02212;</mo><mn>4</mn><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f'(x) = 2x - 4 = 0</annotation></semantics></math></span> at x = 2, but that is a minimum: <span class="math" data-tex="f(2) = -3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">f(2) = -3</annotation></semantics></math></span>. At the endpoints <span class="math" data-tex="f(0) = 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mn>0</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">f(0) = 1</annotation></semantics></math></span>, <span class="math" data-tex="f(5) = 6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mn>5</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">f(5) = 6</annotation></semantics></math></span>. The greatest is 6, at the edge.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="10" data-limit="">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p>A body moves in a straight line by the law <span class="math" data-tex="s(t) = t^3 - 2t"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>s</mi><mo stretchy="false">&#x00028;</mo><mi>t</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>t</mi><mn>3</mn></msup><mo>&#x02212;</mo><mn>2</mn><mi>t</mi></mrow><annotation encoding="application/x-tex">s(t) = t^3 - 2t</annotation></semantics></math></span> (s in metres, t in seconds). Find the speed of the body (in m/s) at the moment <span class="math" data-tex="t = 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>t</mi><mo>&#x0003D;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">t = 2</annotation></semantics></math></span>.</p>
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Concept: <a href="#concept">the derivative as instantaneous speed</a>.</p>
+      <div class="solution"><span class="math" data-tex="v(t) = s'(t) = 3t^2 - 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>v</mi><mo stretchy="false">&#x00028;</mo><mi>t</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>s</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mi>t</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>3</mn><msup><mi>t</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">v(t) = s'(t) = 3t^2 - 2</annotation></semantics></math></span>, <span class="math" data-tex="v(2) = 10"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>v</mi><mo stretchy="false">&#x00028;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">v(2) = 10</annotation></semantics></math></span>. The story about a body is the derivative at a point.</div>
+    </div>
+
+    <h2 id="error">8 · Find the mistake in someone else's solution <a class="anchor-link" href="#error">#</a></h2>
+    <p>Artem studies <span class="math" data-tex="f(x) = x^3 + 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>x</mi><mn>3</mn></msup><mo>&#x0002B;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">f(x) = x^3 + 1</annotation></semantics></math></span>: «<span class="math" data-tex="f'(x) = 3x^2 = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f'(x) = 3x^2 = 0</annotation></semantics></math></span> at <span class="math" data-tex="x = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x = 0</annotation></semantics></math></span>, so 0 is an extremum point».</p>
+    <details>
+      <summary>Where is the mistake?</summary>
+      <p>The derivative <span class="math" data-tex="3x^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">3x^2</annotation></semantics></math></span> is non-negative and positive on both sides of zero: the sign does not change, the function increases everywhere. A zero of the derivative is only a candidate; the extremum is decided by a change of sign (the <a href="#limit-zero">first limit</a>).</p>
+    </details>
+    <!-- sources -->
+    <h2 id="external">9 · Links to tasks from external sources <a class="anchor-link" href="#external">#</a></h2>
+    <p class="dim">Real tasks from other NMT preparation sites that lean on the laws of this block. Read the condition on the source site behind the link; the tagging by laws is ours. Sources and years are switched on and off in the settings (the gear at the top).</p>
+    <p class="dim ext-off" hidden>All external sources are switched off in the settings.</p>
+    <div class="ext-source" data-ext-source="nmt-ua" id="ext-nmt-ua">
+      <h3 class="ext-head">NMT on the ZNO-ONLINE site (zno.osvita.ua, in Ukrainian)</h3>
+      <p class="dim ext-lead">Tasks of the main NMT sessions of 2024-2026 from the ZNO-ONLINE site, by year. Each year is switched on separately.</p>
+      <div class="ext" data-ext="nmt-ua:2026" id="ext-nmt-ua-2026">
+        <h4>NMT 2026</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q12" rel="noopener" target="_blank">Session 1, task 12</a> (with a figure) - Newton - Leibniz formula</li>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q19" rel="noopener" target="_blank">Session 1, task 19</a> - Monotonicity and extremum</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q12" rel="noopener" target="_blank">Session 2, task 12</a> - Table of derivatives</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q19" rel="noopener" target="_blank">Session 2, task 19</a> - Monotonicity and extremum</li>
+        </ul>
+      </div>
+      <div class="ext" data-ext="nmt-ua:2025" id="ext-nmt-ua-2025">
+        <h4>NMT 2025</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q19" rel="noopener" target="_blank">Session 1, task 19</a> - Equation of the tangent: the slope equals the derivative, Table of derivatives</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q12" rel="noopener" target="_blank">Session 2, task 12</a> - Table of derivatives</li>
+        </ul>
+      </div>
+      <div class="ext" data-ext="nmt-ua:2024" id="ext-nmt-ua-2024">
+        <h4>NMT 2024</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q19" rel="noopener" target="_blank">Session 1, task 19</a> - Newton - Leibniz formula</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q19" rel="noopener" target="_blank">Session 2, task 19</a> (with a figure) - Newton - Leibniz formula</li>
+        </ul>
+      </div>
+    </div>
+    <!-- /sources -->
+
+    <h2 id="artifacts">What you have after this page <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>Rate and accumulation as two sides of one idea.</strong> The derivative is the gradient of the tangent and the instantaneous speed; its sign shows where the function grows. The integral is the area and what has accumulated, and Newton - Leibniz says: to find what has accumulated, it is enough to find the function whose rate is known.</p>
+    </div>
+    <!-- freq -->
+    <p class="dim law-freq" data-tasks="8">Frequency on this site, not in the NMT: this page has 8 trainer tasks, and they lean on these laws: Newton - Leibniz formula - 2, Table of derivatives - 2, Equation of the tangent: the slope equals the derivative - 1, Monotonicity and extremum - 1, Rules of differentiation - 1, The derivative as instantaneous speed - 1, The endpoints of the segment - 1. In real NMT papers of 2024-2026 this block is needed in 8 tasks out of 132: Newton - Leibniz formula - 3, Table of derivatives - 3, Monotonicity and extremum - 2, Equation of the tangent: the slope equals the derivative - 1.</p>
+    <!-- /freq -->
+    <p>You know this block if you:</p>
+    <ol>
+      <li>solve 8 tasks out of 10 on the derivative, extremum and area without a hint;</li>
+      <li>can explain aloud why <span class="math" data-tex="f'(x_0) = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy="false">&#x00028;</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f'(x_0) = 0</annotation></semantics></math></span> does not yet mean an extremum;</li>
+      <li>find the mistake in someone else's solution, as in Artem's.</li>
+    </ol>
+  
+
+    <footer>
+      <nav class="pager" aria-label="Neighbouring topics">
+        <p class="pager-next">Next topic: <a href="09.html">Combinatorics, probability, statistics</a></p>
+        <p class="pager-prev">Previous topic: <a href="07.html">Trigonometry</a></p>
+      </nav>
+      <p class="footer-note">An AI Factory series site. Built with the same harness: plain HTML and CSS, checked with bash, published via GitHub Pages.</p>
+    </footer>
+  </main>
+
+</div>
+</div>
+<script src="../assets/swa.js?v=3"></script>
+<script src="../assets/trainer.js?v=3"></script>
+<script src="../assets/sources.js?v=3"></script>
+<script src="../assets/terms.js?v=3"></script>
+<script src="../assets/cp.js?v=3"></script>
+</body>
+</html>
