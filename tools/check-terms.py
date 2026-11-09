@@ -149,6 +149,52 @@ def debris(chunk):
     return ''
 
 
+def span_end(text, start):
+    """Конец элемента <span>, открытого в start: скобки считаются, как в drop_cards."""
+    depth = 0
+    k = start
+    while k < len(text):
+        opened = text.find('<span', k)
+        closed = text.find('</span>', k)
+        if closed < 0:
+            return len(text)
+        if 0 <= opened < closed:
+            depth += 1
+            k = opened + 5
+        else:
+            depth -= 1
+            k = closed + 7
+            if depth == 0:
+                return k
+    return len(text)
+
+
+BUTTON_TEXT_RE = re.compile(r'<button[^>]*class="term-btn"[^>]*>([\s\S]*?)</button>')
+
+
+def inside_word(content):
+    """Карточки, которые начинаются или кончаются внутри слова.
+
+    Буква сразу перед карточкой или сразу после неё значит, что подчёркнут
+    кусок чужого слова: «ко[ордината]» на nmt-math, «т[роль]» на kubernetes.
+    """
+    out = []
+    i = 0
+    while True:
+        start = content.find('<span class="term">', i)
+        if start < 0:
+            return out
+        end = span_end(content, start)
+        before = content[start - 1] if start else ''
+        after = content[end] if end < len(content) else ''
+        if before.isalpha() or after.isalpha():
+            said = BUTTON_TEXT_RE.search(content, start, end)
+            word = plain(said.group(1)) if said else '?'
+            out.append('%s[%s]%s' % (before if before.isalpha() else '', word,
+                                     after if after.isalpha() else ''))
+        i = end
+
+
 def plain(chunk):
     """Текст без разметки, без двойных пробелов и без щелей перед точкой."""
     words = ' '.join(html.unescape(re.sub(r'<[^>]+>', ' ', chunk)).split())
@@ -256,6 +302,8 @@ def main():
     # страниц получили карточки без terms.js, проверка была зелёной, а слово
     # не открывалось по щелчку. Поэтому смотрятся все языки, не только исходный.
     deaf = []
+    # Шестая сторона: карточка висит на целом слове (nmt-math, шаг 11).
+    split = []
     for lang in siteconf.profile()['langs']:
         for file_path in sorted(glob.glob(os.path.join(lang, '*.html'))):
             with open(file_path, encoding='utf-8') as f:
@@ -264,6 +312,8 @@ def main():
                 deaf.append((file_path, 'terms.js', 'карточки .term'))
             if '<pre' in content and 'assets/cp.js' not in content:
                 deaf.append((file_path, 'cp.js', 'блоки кода'))
+            for word in inside_word(content):
+                split.append((file_path, word))
 
     # Identify glossary terms missing in-page markup
     missing_in_pages = [t for t in glossary_terms if t not in found_term_links]
@@ -274,7 +324,7 @@ def main():
     skip = SHELL_WORDS | site_words()
     unexplained = sorted(a for a in acronyms if a not in explained and a not in skip)
 
-    has_errors = bool(broken_links or missing_in_pages or unexplained or drifted or deaf)
+    has_errors = bool(broken_links or missing_in_pages or unexplained or drifted or deaf or split)
 
     print()
     print('  Двусторонний контракт терминов')
@@ -291,6 +341,7 @@ def main():
     print(f'  сокращений в тексте:         {len(acronyms)}, без объяснения: {len(unexplained)}')
     print(f'  описаний карточек проверено: {compared}, с обломками: {len(drifted)}')
     print(f'  страниц без своего скрипта:  {len(deaf)}')
+    print(f'  карточек внутри слова:       {len(split)}')
 
     if missing_in_pages:
         print()
@@ -332,6 +383,15 @@ def main():
         if len(deaf) > 10:
             print(f'    -> ... и ещё {len(deaf) - 10}')
         print('  Строка <script src="../assets/<скрипт>"></script> перед </body>, как на странице исходного языка.')
+
+    if split:
+        print()
+        print('  ОШИБКА: карточка начинается или кончается внутри слова:')
+        for s_file, s_word in split[:10]:
+            print(f'    -> {s_file}: {s_word}')
+        if len(split) > 10:
+            print(f'    -> ... и ещё {len(split) - 10}')
+        print('  Кнопка карточки должна держать слово целиком.')
 
     print('  ' + '-' * 46)
     if has_errors:
