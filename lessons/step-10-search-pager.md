@@ -1,6 +1,6 @@
 # Шаг 10: пейджер в окне поиска
 
-Дата: 2026-11-09. Статус: черновик, ждёт утверждения Conductor. Правка ростка (`seed/swa/assets/search.js`, `seed/swa/assets/style.css`), доставка на сайт через `seed/swa/sync.sh`, регрессия серии.
+Дата: 2026-11-09. Статус: утверждён Conductor 2026-11-09 как есть. Правка ростка (`seed/swa/assets/search.js`, `seed/swa/assets/style.css`), доставка на сайт через `seed/swa/sync.sh`, регрессия серии.
 
 ## Что сейчас
 
