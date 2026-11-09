@@ -49,24 +49,29 @@ LANG_GROUP = {'ru': 'Язык страницы', 'en': 'Page language',
 # украинский: на ru, uk и en читалка говорила по-немецки (nmt-math, шаг 11).
 # Поэтому подпись ставится здесь, по форме элемента, на языке папки страницы.
 # Значение - (подсказка title, подпись для читалки aria-label); у областей
-# подсказки нет.
+# подсказки нет. Ссылка-якорь у заголовка блока тоже подписывается здесь
+# (раньше её одну переводил генератор, таблица LABELS, nmt-math шаг 12).
 SHELL = {
     'ru': {'tray': 'Настройки отображения и язык', 'scaler': 'Размер шрифта',
            's': 'Мелкий шрифт', 'm': 'Стандартный шрифт', 'l': 'Крупный шрифт',
            'theme': ('Сменить тему (День/Ночь)', 'Сменить тему день/ночь'),
-           'nav': 'Разделы сайта', 'nav-study': 'Блоки курса', 'toc': 'Разделы этой страницы'},
+           'nav': 'Разделы сайта', 'nav-study': 'Блоки курса', 'toc': 'Разделы этой страницы',
+           'anchor': 'ссылка на этот блок'},
     'uk': {'tray': 'Налаштування відображення і мова', 'scaler': 'Розмір шрифту',
            's': 'Дрібний шрифт', 'm': 'Звичайний шрифт', 'l': 'Великий шрифт',
            'theme': ('Змінити тему (день/ніч)', 'Змінити тему день/ніч'),
-           'nav': 'Розділи сайту', 'nav-study': 'Блоки курсу', 'toc': 'Розділи цієї сторінки'},
+           'nav': 'Розділи сайту', 'nav-study': 'Блоки курсу', 'toc': 'Розділи цієї сторінки',
+           'anchor': 'посилання на цей блок'},
     'en': {'tray': 'Display settings and language', 'scaler': 'Font size',
            's': 'Small font', 'm': 'Standard font', 'l': 'Large font',
            'theme': ('Switch theme (day/night)', 'Switch theme day/night'),
-           'nav': 'Site sections', 'nav-study': 'Course blocks', 'toc': 'Sections of this page'},
+           'nav': 'Site sections', 'nav-study': 'Course blocks', 'toc': 'Sections of this page',
+           'anchor': 'link to this block'},
     'de': {'tray': 'Anzeigeeinstellungen und Sprache', 'scaler': 'Schriftgröße',
            's': 'Kleine Schrift', 'm': 'Standardschrift', 'l': 'Große Schrift',
            'theme': ('Thema wechseln (Tag/Nacht)', 'Thema Tag/Nacht wechseln'),
-           'nav': 'Bereiche der Website', 'nav-study': 'Kursblöcke', 'toc': 'Abschnitte dieser Seite'},
+           'nav': 'Bereiche der Website', 'nav-study': 'Kursblöcke', 'toc': 'Abschnitte dieser Seite',
+           'anchor': 'Link zu diesem Block'},
 }
 SHELL_TAG = (
     ('tray', re.compile(r'<div class="utility-tray"[^>]*>')),
@@ -75,6 +80,7 @@ SHELL_TAG = (
     ('theme', re.compile(r'<button[^>]*class="theme-toggle"[^>]*>')),
     ('nav', re.compile(r'<nav class="contents"[^>]*>')),
     ('toc', re.compile(r'<div class="page-toc"[^>]*>')),
+    ('anchor', re.compile(r'<a\b[^>]*\bclass="anchor-link"[^>]*>')),
 )
 SKIP_LINK = re.compile(r'\s*<a class="skip"[^>]*>.*?</a>', re.S)
 SWITCHER = re.compile(r'<(div|nav) class="lang-switcher"[^>]*>(.*?)</\1>', re.S)
