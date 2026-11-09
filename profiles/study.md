@@ -49,6 +49,24 @@ laws at the end; the order of steps inside one law does not change.
 usually one or two. A story about a video sped up 1.5 times is `t = S / k`,
 not three "laws".
 
+**Three levels of foundation** (Conductor, 2026-11-09). If an exam task has a
+solution, the site holds what it rests on, at one of three levels:
+
+1. **Law** - the frame `.law`. Few of them: a new law appears only when the
+   topic cannot be derived from the laws already on the site.
+2. **Corollary** - a theorem derived from a law of the block, standing under
+   its law: `<div class="corollary" id="cor-..." data-law="law-...">` with
+   `<p class="corollary-of">` (a link to the law), `<p class="corollary-name">`
+   and a derivation of two to five lines. It counts for its law in the
+   frequency and the exam slice (`tools/examslice.py` parent()), so laws do not
+   multiply while every task has a foundation.
+3. **Method** - not a new statement but a scheme of applying laws, in step 5:
+   `<div class="method">` with `<h3 id="method-...">` and a trainer task tied
+   to the laws it uses.
+
+The exam slice tags a task `NN:law-...`, `NN:cor-...` or `NN:method-...`;
+`tools/build-frequency.py` is red on a tag that names nothing on its page.
+
 **Three predicates close every block**: I solve 8 of 10 tasks of this kind
 without a hint; I explain aloud why the formula works; I find the error in
 someone else's solution. Every block carries one "find the error" item.
