@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Algebraische Terme · nmt-math · ai|</title>
 <!-- meta: built by tools/build-meta.py - do not edit by hand -->
-<meta name="description" content="">
+<meta name="description" content="Die Rechengesetze aus Block 1, mit Buchstaben für alle Zahlen zugleich geschrieben.">
 <link rel="canonical" href="https://y-kolyada.github.io/nmt-math/de/03.html">
 <link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/03.html">
 <link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/03.html">
@@ -16,12 +16,12 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="nmt-math">
 <meta property="og:title" content="Algebraische Terme">
-<meta property="og:description" content="">
+<meta property="og:description" content="Die Rechengesetze aus Block 1, mit Buchstaben für alle Zahlen zugleich geschrieben.">
 <meta property="og:url" content="https://y-kolyada.github.io/nmt-math/de/03.html">
 <meta property="og:locale" content="de_DE">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Algebraische Terme","description":"","url":"https://y-kolyada.github.io/nmt-math/de/03.html","inLanguage":"de","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Algebraische Terme","description":"Die Rechengesetze aus Block 1, mit Buchstaben für alle Zahlen zugleich geschrieben.","url":"https://y-kolyada.github.io/nmt-math/de/03.html","inLanguage":"de","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
 <!-- /meta -->
 <link rel="stylesheet" href="../assets/style.css?v=3">
 <link rel="stylesheet" href="../assets/study.css?v=3">
@@ -96,16 +96,242 @@
 
   <main id="main">
     <h1>Algebraische Terme</h1>
-    <p class="page-size" data-words="22">Wörter: 22</p>
+    <p class="page-size" data-words="1195">Wörter: 1195</p>
+    <p class="lead">Die Rechengesetze aus Block 1, mit Buchstaben für alle Zahlen zugleich geschrieben. Die binomischen Formeln musst du nicht auswendig lernen: jede ist das mehrmals angewandte Distributivgesetz.</p>
 
-    <div class="stub-card">
-      <h2>Die deutsche Fassung ist in Vorbereitung</h2>
-      <p>Die vollständige Fassung dieser Seite ist auf Ukrainisch veröffentlicht.</p>
-      <p>Vollständige Fassung öffnen:</p>
-      <div class="stub-actions">
-        <a href="../uk/03.html" class="btn-primary">Algebraische Terme →</a>
+    <div class="box key" id="key-idea">
+      <h2>Hauptgedanke der Seite <a class="anchor-link" href="#key-idea" aria-label="Link zu diesem Block">#</a></h2>
+      <p>Eine identische Umformung ändert die Form eines Terms, aber nicht seinen Wert. Deshalb muss jeder Schritt auf einem Gesetz beruhen, nicht auf «sieht ähnlich aus». Der Block kann einen Term in eine bequeme Form bringen: faktorisieren, kürzen, quadratisch ergänzen. Eine Unbekannte finden kann er nicht - das ist eine Gleichung (Block 4).</p>
+    </div>
+
+    <span class="step">Schritt 0 · Einstieg</span>
+    <h2 id="hook">1 · Ist das Quadrat einer Summe die Summe der Quadrate? <a class="anchor-link" href="#hook">#</a></h2>
+    <p>Der übliche blinde Zug: <span class="math" data-tex="(a + b)^2 = a^2 + b^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(a + b)^2 = a^2 + b^2</annotation></semantics></math></span>. Prüfen wir mit Zahlen: <span class="math" data-tex="(1 + 2)^2 = 9"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mn>1</mn><mo>&#x0002B;</mo><mn>2</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">(1 + 2)^2 = 9</annotation></semantics></math></span>, dagegen <span class="math" data-tex="1^2 + 2^2 = 5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>1</mn><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mn>2</mn><mn>2</mn></msup><mo>&#x0003D;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">1^2 + 2^2 = 5</annotation></semantics></math></span>. Die Differenz 4 ist genau der Summand <span class="math" data-tex="2ab = 2 \cdot 1 \cdot 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>2</mn><mi>a</mi><mi>b</mi><mo>&#x0003D;</mo><mn>2</mn><mo>&#x000B7;</mo><mn>1</mn><mo>&#x000B7;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2ab = 2 \cdot 1 \cdot 2</annotation></semantics></math></span>, den der blinde Zug verloren hat.</p>
+    <p>Der zweite Einstieg: stimmt es, dass <span class="math" data-tex="\frac{x^2 - 4}{x - 2} = x + 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>4</mn></mrow><mrow><mi>x</mi><mo>&#x02212;</mo><mn>2</mn></mrow></mfrac><mo>&#x0003D;</mo><mi>x</mi><mo>&#x0002B;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\frac{x^2 - 4}{x - 2} = x + 2</annotation></semantics></math></span>? Bei <span class="math" data-tex="x = 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x = 2</annotation></semantics></math></span> hat die linke Seite keinen Sinn, die rechte ist 4. Die Gleichung gilt überall außer in einem Punkt, und genau dieser Punkt ist oft die Antwort einer Aufgabe.</p>
+
+    <span class="step">Schritt 1 · Begriff</span>
+    <h2 id="concept">2 · Term, Identität, Definitionsbereich <a class="anchor-link" href="#concept">#</a></h2>
+    <ul>
+      <li>Ein <strong>Term</strong> ist eine Schreibweise aus Zahlen, Buchstaben und Rechenzeichen. Ein <strong>Monom</strong> ist ein Produkt aus Zahlen und Potenzen von Buchstaben; ein <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Polynom</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Polynom</strong><button type="button" class="term-close" aria-label="Schließen">&times;</button></span><span class="term-desc">Eine Summe von Monomen, also Produkten aus Zahlen und Potenzen von Variablen.</span><span class="term-links"><a href="glossary.html#term-polynomial">Zum Begriffswörterbuch <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> ist eine Summe von Monomen.</li>
+      <li>Eine <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Identität</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Identität</strong><button type="button" class="term-close" aria-label="Schließen">&times;</button></span><span class="term-desc">Eine Gleichung, die für alle zulässigen Werte der Variablen wahr ist.</span><span class="term-links"><a href="glossary.html#term-identity">Zum Begriffswörterbuch <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> ist eine Gleichung, die für alle zulässigen Werte der Buchstaben wahr ist. Eine <strong>identische Umformung</strong> ersetzt einen Term durch einen, der ihm identisch gleich ist.</li>
+      <li><strong>Der <span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Bereich der zulässigen Werte</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Bereich der zulässigen Werte (Definitionsbereich)</strong><button type="button" class="term-close" aria-label="Schließen">&times;</button></span><span class="term-desc">Die Werte der Variablen, für die ein Term einen Sinn hat.</span><span class="term-links"><a href="glossary.html#term-odz">Zum Begriffswörterbuch <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span> (Definitionsbereich)</strong> ist die Menge der Werte der Buchstaben, für die der Term einen Sinn hat. Bei einem Bruch sind es alle Werte, für die der Nenner nicht null ist.</li>
+    </ul>
+
+    <span class="step">Schritt 2 · Gesetz</span>
+    <h2 id="law">3 · Binomische Formeln und Brüche <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-square">
+      <p class="law-name">Quadrat einer Summe und einer Differenz</p>
+      <div class="math-block" data-tex="(a \pm b)^2 = a^2 \pm 2ab + b^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mi>&#x000B1;</mi><mi>b</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mi>&#x000B1;</mi><mn>2</mn><mi>a</mi><mi>b</mi><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(a \pm b)^2 = a^2 \pm 2ab + b^2</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-diff">
+      <p class="law-name">Differenz von Quadraten</p>
+      <div class="math-block" data-tex="a^2 - b^2 = (a - b)(a + b)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>&#x02212;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x02212;</mo><mi>b</mi><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">a^2 - b^2 = (a - b)(a + b)</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-cubes">
+      <p class="law-name">Summe und Differenz von Kuben</p>
+      <div class="math-block" data-tex="a^3 \pm b^3 = (a \pm b)(a^2 \mp ab + b^2)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>a</mi><mn>3</mn></msup><mi>&#x000B1;</mi><msup><mi>b</mi><mn>3</mn></msup><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>a</mi><mi>&#x000B1;</mi><mi>b</mi><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x02213;</mo><mi>a</mi><mi>b</mi><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">a^3 \pm b^3 = (a \pm b)(a^2 \mp ab + b^2)</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-fraction">
+      <p class="law-name">Grundeigenschaft eines Bruchs</p>
+      <div class="math-block" data-tex="\frac{a}{b} = \frac{ac}{bc}, \quad b \neq 0,\ c \neq 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mi>a</mi><mi>c</mi></mrow><mrow><mi>b</mi><mi>c</mi></mrow></mfrac><mo>&#x0002C;</mo><mspace width="1em" /><mi>b</mi><mo>&#x02260;</mo><mn>0</mn><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><mi>c</mi><mo>&#x02260;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\frac{a}{b} = \frac{ac}{bc}, \quad b \neq 0,\ c \neq 0</annotation></semantics></math></div>
+      <p>Zähler und Nenner dürfen mit ein und demselben von null verschiedenen <strong>Faktor</strong> multipliziert oder durch ihn geteilt werden.</p>
+    </div>
+
+    <span class="step">Schritt 3 · Warum es so ist</span>
+    <h2 id="why">4 · All das ist das Distributivgesetz <a class="anchor-link" href="#why">#</a></h2>
+    <div class="math-block" data-tex="(a + b)^2 = (a + b)(a + b) = a^2 + ab + ba + b^2 = a^2 + 2ab + b^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mi>a</mi><mi>b</mi><mo>&#x0002B;</mo><mi>b</mi><mi>a</mi><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mn>2</mn><mi>a</mi><mi>b</mi><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(a + b)^2 = (a + b)(a + b) = a^2 + ab + ba + b^2 = a^2 + 2ab + b^2</annotation></semantics></math></div>
+    <p>Geometrisch: ein Quadrat mit der Seite a + b besteht aus einem Quadrat a², einem Quadrat b² und zwei Rechtecken ab. Der blinde Zug verliert genau diese zwei Rechtecke.</p>
+    <!-- fig:03-square -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 220" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Ein Quadrat mit der Seite a + b ist in vier Teile geteilt: ein Quadrat a², ein Quadrat b² und zwei gleiche Rechtecke ab. Der blinde Zug «a² + b²» verliert genau die zwei Rechtecke.">
+        <rect x="70.0" y="10.0" width="110.0" height="110.0" rx="0" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.2"/>
+        <rect x="180.0" y="10.0" width="70.0" height="110.0" rx="0" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <rect x="70.0" y="120.0" width="110.0" height="70.0" rx="0" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <rect x="180.0" y="120.0" width="70.0" height="70.0" rx="0" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.2"/>
+        <text x="125.0" y="71.0" fill="currentColor" font-size="18" opacity="1.0" text-anchor="middle" font-style="italic">a²</text>
+        <text x="215.0" y="71.0" fill="currentColor" font-size="16" opacity="1.0" text-anchor="middle" font-style="italic">ab</text>
+        <text x="125.0" y="161.0" fill="currentColor" font-size="16" opacity="1.0" text-anchor="middle" font-style="italic">ab</text>
+        <text x="215.0" y="161.0" fill="currentColor" font-size="16" opacity="1.0" text-anchor="middle" font-style="italic">b²</text>
+        <text x="60.0" y="70.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="end" font-style="italic">a</text>
+        <text x="60.0" y="160.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="end" font-style="italic">b</text>
+        <text x="125.0" y="210.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-style="italic">a</text>
+        <text x="215.0" y="210.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-style="italic">b</text>
+      </svg>
+      <p class="dim">Abbildung 10. Das Quadrat einer Summe: die zwei Rechtecke ab, die der blinde Zug verliert.</p>
+    </div>
+    <!-- /fig:03-square -->
+    <div class="math-block" data-tex="(a - b)(a + b) = a^2 + ab - ab - b^2 = a^2 - b^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x02212;</mo><mi>b</mi><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mi>a</mi><mi>b</mi><mo>&#x02212;</mo><mi>a</mi><mi>b</mi><mo>&#x02212;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x02212;</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(a - b)(a + b) = a^2 + ab - ab - b^2 = a^2 - b^2</annotation></semantics></math></div>
+    <p>Hier heben sich die mittleren Summanden gegenseitig auf. Die Formeln für Kuben prüft man genauso: die rechte Seite ausmultiplizieren.</p>
+    <p>Die Grundeigenschaft eines Bruchs ist die Multiplikation mit eins:</p>
+    <div class="math-block" data-tex="\frac{ac}{bc} = \frac{a}{b} \cdot \frac{c}{c} = \frac{a}{b} \cdot 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mi>a</mi><mi>c</mi></mrow><mrow><mi>b</mi><mi>c</mi></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></mfrac><mo>&#x000B7;</mo><mfrac><mrow><mi>c</mi></mrow><mrow><mi>c</mi></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></mfrac><mo>&#x000B7;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\frac{ac}{bc} = \frac{a}{b} \cdot \frac{c}{c} = \frac{a}{b} \cdot 1</annotation></semantics></math></div>
+    <p>Kürzen kann man deshalb nur einen gemeinsamen <strong>Faktor</strong>: nur er ergibt den Bruch <span class="math" data-tex="\frac{c}{c} = 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mi>c</mi></mrow><mrow><mi>c</mi></mrow></mfrac><mo>&#x0003D;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\frac{c}{c} = 1</annotation></semantics></math></span>.</p>
+
+    <span class="step">Schritt 4 · Grenzen</span>
+    <h2 id="limits">5 · Wo Umformungen brechen <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-cancel">
+      <p><strong>Man kürzt Faktoren, keine Summanden.</strong> <span class="math" data-tex="\frac{x + 5}{x + 10} \neq \frac{5}{10}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mi>x</mi><mo>&#x0002B;</mo><mn>5</mn></mrow><mrow><mi>x</mi><mo>&#x0002B;</mo><mn>10</mn></mrow></mfrac><mo>&#x02260;</mo><mfrac><mrow><mn>5</mn></mrow><mrow><mn>10</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{x + 5}{x + 10} \neq \frac{5}{10}</annotation></semantics></math></span>: bei <span class="math" data-tex="x = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x = 0</annotation></semantics></math></span> sieht die Gleichung noch richtig aus, aber bei <span class="math" data-tex="x = 10"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">x = 10</annotation></semantics></math></span> ist die linke Seite <span class="math" data-tex="\frac{15}{20} = \frac{3}{4}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>15</mn></mrow><mrow><mn>20</mn></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>4</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{15}{20} = \frac{3}{4}</annotation></semantics></math></span>. Zuerst faktorisieren, dann kürzen.</p>
+    </div>
+    <div class="limit" id="limit-domain">
+      <p><strong>Kürzen erweitert den Definitionsbereich.</strong> Nach dem Kürzen, <span class="math" data-tex="\frac{x^2 - 4}{x - 2} = x + 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>4</mn></mrow><mrow><mi>x</mi><mo>&#x02212;</mo><mn>2</mn></mrow></mfrac><mo>&#x0003D;</mo><mi>x</mi><mo>&#x0002B;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\frac{x^2 - 4}{x - 2} = x + 2</annotation></semantics></math></span>, ist die rechte Seite bei <span class="math" data-tex="x = 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x = 2</annotation></semantics></math></span> definiert, die linke nicht. Ehrlich geschrieben: die Gleichung gilt für <span class="math" data-tex="x \neq 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x02260;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x \neq 2</annotation></semantics></math></span>.</p>
+    </div>
+    <div class="limit" id="limit-sign">
+      <p><strong>Eine gerade Potenz schluckt das Vorzeichen, eine ungerade nicht.</strong> <span class="math" data-tex="(a - b)^2 = (b - a)^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x02212;</mo><mi>b</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>b</mi><mo>&#x02212;</mo><mi>a</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(a - b)^2 = (b - a)^2</annotation></semantics></math></span>, aber <span class="math" data-tex="(a - b)^3 = -(b - a)^3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x02212;</mo><mi>b</mi><msup><mo stretchy="false">&#x00029;</mo><mn>3</mn></msup><mo>&#x0003D;</mo><mo>&#x02212;</mo><mo stretchy="false">&#x00028;</mo><mi>b</mi><mo>&#x02212;</mo><mi>a</mi><msup><mo stretchy="false">&#x00029;</mo><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">(a - b)^3 = -(b - a)^3</annotation></semantics></math></span>.</p>
+    </div>
+
+    <span class="step">Schritt 5 · Übung</span>
+    <h2 id="apply">6 · Aufgaben im NMT-Format <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="C" data-limit="">
+      <p class="task-kind">Eine Antwort aus fünf · 1 Punkt</p>
+      <p>Faktorisiere <span class="math" data-tex="x^2 - 9"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">x^2 - 9</annotation></semantics></math></span>.</p>
+      <div class="opts">
+        <button type="button" data-opt="A">A · (x − 3)²</button>
+        <button type="button" data-opt="B">B · (x − 9)(x + 1)</button>
+        <button type="button" data-opt="C">C · (x − 3)(x + 3)</button>
+        <button type="button" data-opt="D">D · (x − 9)(x + 9)</button>
+        <button type="button" data-opt="E">E · x(x − 9)</button>
+      </div>
+      <p class="law-ref">Gesetz: <a href="#law-diff">Differenz von Quadraten</a>.</p>
+      <div class="solution"><span class="math" data-tex="x^2 - 3^2 = (x - 3)(x + 3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><msup><mn>3</mn><mn>2</mn></msup><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mn>3</mn><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002B;</mo><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">x^2 - 3^2 = (x - 3)(x + 3)</annotation></semantics></math></span>. Antwort D vergisst, dass 9 schon ein Quadrat ist und nicht die Zahl unter dem Quadrat.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="400" data-limit="">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p>Berechne <span class="math" data-tex="101^2 - 99^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>101</mn><mn>2</mn></msup><mo>&#x02212;</mo><msup><mn>99</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">101^2 - 99^2</annotation></semantics></math></span>.</p>
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetz: <a href="#law-diff">Differenz von Quadraten</a>.</p>
+      <div class="solution"><span class="math" data-tex="(101 - 99)(101 + 99) = 2 \cdot 200 = 400"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mn>101</mn><mo>&#x02212;</mo><mn>99</mn><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><mn>101</mn><mo>&#x0002B;</mo><mn>99</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>2</mn><mo>&#x000B7;</mo><mn>200</mn><mo>&#x0003D;</mo><mn>400</mn></mrow><annotation encoding="application/x-tex">(101 - 99)(101 + 99) = 2 \cdot 200 = 400</annotation></semantics></math></span>. Ohne das Gesetz sind es zwei fünfstellige Quadrate und eine Subtraktion; mit dem Gesetz ist es Kopfrechnen.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="A" data-limit="limit-domain">
+      <p class="task-kind">Eine Antwort aus fünf · 1 Punkt</p>
+      <p>Vereinfache den Term <span class="math" data-tex="\frac{x^2 - 4x + 4}{x - 2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>4</mn><mi>x</mi><mo>&#x0002B;</mo><mn>4</mn></mrow><mrow><mi>x</mi><mo>&#x02212;</mo><mn>2</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{x^2 - 4x + 4}{x - 2}</annotation></semantics></math></span>.</p>
+      <div class="opts">
+        <button type="button" data-opt="A">A · x − 2</button>
+        <button type="button" data-opt="B">B · x + 2</button>
+        <button type="button" data-opt="C">C · x − 4</button>
+        <button type="button" data-opt="D">D · 1/(x − 2)</button>
+        <button type="button" data-opt="E">E · x² − 4</button>
+      </div>
+      <p class="law-ref">Gesetze: <a href="#law-square">Quadrat einer Differenz</a> und die <a href="#law-fraction">Grundeigenschaft eines Bruchs</a>.</p>
+      <div class="solution">Der Zähler ist <span class="math" data-tex="(x - 2)^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mn>2</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(x - 2)^2</annotation></semantics></math></span>. Kürze den Faktor <span class="math" data-tex="x - 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x02212;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x - 2</annotation></semantics></math></span>: das Ergebnis ist <span class="math" data-tex="x - 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x02212;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x - 2</annotation></semantics></math></span> für <span class="math" data-tex="x \neq 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x02260;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x \neq 2</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="match" data-answer="B C A" data-limit="">
+      <p class="task-kind">Zuordnung · 3 Punkte</p>
+      <p>Ordne jedem Term (1-3) das ihm identisch gleiche Polynom (A-E) zu.</p>
+      <ul class="pairs">
+        <li><label>1. <span class="math" data-tex="(a + 3)^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mn>3</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(a + 3)^2</annotation></semantics></math></span> <select aria-label="Answer for expression 1"><option value="">-</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option></select></label></li>
+        <li><label>2. <span class="math" data-tex="(a - 3)^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x02212;</mo><mn>3</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(a - 3)^2</annotation></semantics></math></span> <select aria-label="Answer for expression 2"><option value="">-</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option></select></label></li>
+        <li><label>3. <span class="math" data-tex="(a - 3)(a + 3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x02212;</mo><mn>3</mn><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(a - 3)(a + 3)</annotation></semantics></math></span> <select aria-label="Answer for expression 3"><option value="">-</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option></select></label></li>
+      </ul>
+      <p>A · a² − 9 &nbsp; B · a² + 6a + 9 &nbsp; C · a² − 6a + 9 &nbsp; D · a² + 9 &nbsp; E · a² − 6a − 9</p>
+      <p><button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetze: <a href="#law-square">Quadrat einer Summe und einer Differenz</a>, <a href="#law-diff">Differenz von Quadraten</a>.</p>
+      <div class="solution">D ist der blinde Zug aus dem Einstieg, E ist das Quadrat einer Differenz mit verlorenem Vorzeichen des letzten Summanden: <span class="math" data-tex="(-3)^2 = +9"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mn>3</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><mo>&#x0002B;</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">(-3)^2 = +9</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="29" data-limit="">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p>Bekannt ist, dass <span class="math" data-tex="a + b = 7"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><mo>&#x0003D;</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">a + b = 7</annotation></semantics></math></span> und <span class="math" data-tex="ab = 10"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mi>b</mi><mo>&#x0003D;</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">ab = 10</annotation></semantics></math></span>. Finde <span class="math" data-tex="a^2 + b^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">a^2 + b^2</annotation></semantics></math></span>.</p>
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetz: das <a href="#law-square">Quadrat einer Summe</a>, rückwärts gelesen.</p>
+      <div class="solution"><span class="math" data-tex="a^2 + b^2 = (a + b)^2 - 2ab = 49 - 20 = 29"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x02212;</mo><mn>2</mn><mi>a</mi><mi>b</mi><mo>&#x0003D;</mo><mn>49</mn><mo>&#x02212;</mo><mn>20</mn><mo>&#x0003D;</mo><mn>29</mn></mrow><annotation encoding="application/x-tex">a^2 + b^2 = (a + b)^2 - 2ab = 49 - 20 = 29</annotation></semantics></math></span>. a und b selbst muss man nicht finden (sie sind 2 und 5): das Gesetz gibt die Antwort ohne sie.</div>
+    </div>
+
+    <span class="step">Schritt 6 · Rückwärtszug</span>
+    <h2 id="reverse">7 · Nenne das Gesetz selbst <a class="anchor-link" href="#reverse">#</a></h2>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="3" data-limit="">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p>Berechne <span class="math" data-tex="(\sqrt{7} - 2)(\sqrt{7} + 2)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><msqrt><mrow><mn>7</mn></mrow></msqrt><mo>&#x02212;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><msqrt><mrow><mn>7</mn></mrow></msqrt><mo>&#x0002B;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(\sqrt{7} - 2)(\sqrt{7} + 2)</annotation></semantics></math></span>.</p>
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetz: <a href="#law-diff">Differenz von Quadraten</a>.</p>
+      <div class="solution"><span class="math" data-tex="(\sqrt{7})^2 - 2^2 = 7 - 4 = 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><msqrt><mrow><mn>7</mn></mrow></msqrt><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x02212;</mo><msup><mn>2</mn><mn>2</mn></msup><mo>&#x0003D;</mo><mn>7</mn><mo>&#x02212;</mo><mn>4</mn><mo>&#x0003D;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">(\sqrt{7})^2 - 2^2 = 7 - 4 = 3</annotation></semantics></math></span>. So entfernt man einen irrationalen Nenner: man multipliziert mit dem «konjugierten» Term.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="8,5" data-limit="">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p>Finde den Wert des Terms <span class="math" data-tex="\frac{a^3 + 8}{a^2 - 2a + 4}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><msup><mi>a</mi><mn>3</mn></msup><mo>&#x0002B;</mo><mn>8</mn></mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>2</mn><mi>a</mi><mo>&#x0002B;</mo><mn>4</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{a^3 + 8}{a^2 - 2a + 4}</annotation></semantics></math></span> bei <span class="math" data-tex="a = 6{,}5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mo>&#x0003D;</mo><mn>6</mn><mrow><mo>&#x0002C;</mo></mrow><mn>5</mn></mrow><annotation encoding="application/x-tex">a = 6{,}5</annotation></semantics></math></span>.</p>
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetz: <a href="#law-cubes">Summe von Kuben</a>.</p>
+      <div class="solution"><span class="math" data-tex="a^3 + 2^3 = (a + 2)(a^2 - 2a + 4)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>a</mi><mn>3</mn></msup><mo>&#x0002B;</mo><msup><mn>2</mn><mn>3</mn></msup><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>2</mn><mi>a</mi><mo>&#x0002B;</mo><mn>4</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">a^3 + 2^3 = (a + 2)(a^2 - 2a + 4)</annotation></semantics></math></span>, also ist der Bruch gleich <span class="math" data-tex="a + 2 = 8{,}5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mo>&#x0002B;</mo><mn>2</mn><mo>&#x0003D;</mo><mn>8</mn><mrow><mo>&#x0002C;</mo></mrow><mn>5</mn></mrow><annotation encoding="application/x-tex">a + 2 = 8{,}5</annotation></semantics></math></span>. 6,5 hoch drei zu rechnen ist ein langer Weg zum selben Ziel.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="4" data-limit="">
+      <p class="task-kind">Kurzantwort · 2 Punkte</p>
+      <p>Finde den kleinsten Wert des Terms <span class="math" data-tex="x^2 + 6x + 13"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mn>6</mn><mi>x</mi><mo>&#x0002B;</mo><mn>13</mn></mrow><annotation encoding="application/x-tex">x^2 + 6x + 13</annotation></semantics></math></span>.</p>
+      <p><label>Antwort: <input type="text" inputmode="decimal" size="8" aria-label="Antwort"></label>
+      <button type="button" class="check">Prüfen</button></p>
+      <p class="law-ref">Gesetz: das <a href="#law-square">Quadrat einer Summe</a>: quadratische Ergänzung.</p>
+      <div class="solution"><span class="math" data-tex="x^2 + 6x + 13 = (x + 3)^2 + 4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mn>6</mn><mi>x</mi><mo>&#x0002B;</mo><mn>13</mn><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002B;</mo><mn>3</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0002B;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">x^2 + 6x + 13 = (x + 3)^2 + 4</annotation></semantics></math></span>. Ein Quadrat ist nie negativ, also wird der kleinste Wert 4 bei <span class="math" data-tex="x = -3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">x = -3</annotation></semantics></math></span> erreicht.</div>
+    </div>
+
+    <h2 id="error">8 · Finde den Fehler in einer fremden Lösung <a class="anchor-link" href="#error">#</a></h2>
+    <p>Ihor vereinfacht: «<span class="math" data-tex="\frac{x + 5}{x + 10} = \frac{5}{10} = \frac{1}{2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mi>x</mi><mo>&#x0002B;</mo><mn>5</mn></mrow><mrow><mi>x</mi><mo>&#x0002B;</mo><mn>10</mn></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mn>5</mn></mrow><mrow><mn>10</mn></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{x + 5}{x + 10} = \frac{5}{10} = \frac{1}{2}</annotation></semantics></math></span>, weil sich das x im Zähler und im Nenner kürzt».</p>
+    <details>
+      <summary>Wo ist der Fehler?</summary>
+      <p>Hier ist x ein Summand, kein Faktor. Kürzen kann man nur einen gemeinsamen Faktor von Zähler und Nenner (die <a href="#limit-cancel">erste Grenze</a>). Dieser Bruch lässt sich überhaupt nicht vereinfachen.</p>
+    </details>
+    <!-- sources -->
+    <h2 id="external">9 · Links zu Aufgaben aus externen Quellen <a class="anchor-link" href="#external">#</a></h2>
+    <p class="dim">Echte Aufgaben von anderen Seiten zur NMT-Vorbereitung, die auf den Gesetzen dieses Blocks beruhen. Die Aufgabe liest du auf der Quellseite hinter dem Link; die Zuordnung zu den Gesetzen ist unsere. Quellen und Jahre werden in den Einstellungen ein- und ausgeschaltet (das Zahnrad oben).</p>
+    <p class="dim ext-off" hidden>Alle externen Quellen sind in den Einstellungen ausgeschaltet.</p>
+    <div class="ext-source" data-ext-source="nmt-ua" id="ext-nmt-ua">
+      <h3 class="ext-head">NMT auf der Seite ZNO-ONLINE (zno.osvita.ua, auf Ukrainisch)</h3>
+      <p class="dim ext-lead">Aufgaben der Hauptsitzungen des NMT 2024-2026 von der Seite ZNO-ONLINE, nach Jahren. Jedes Jahr wird einzeln eingeschaltet.</p>
+      <div class="ext" data-ext="nmt-ua:2026" id="ext-nmt-ua-2026">
+        <h4>NMT 2026</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q9" rel="noopener" target="_blank">Sitzung 1, Aufgabe 9</a> - Differenz von Quadraten</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q9" rel="noopener" target="_blank">Sitzung 2, Aufgabe 9</a> - Grundeigenschaft eines Bruchs</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q17" rel="noopener" target="_blank">Sitzung 2, Aufgabe 17</a> - Quadrat einer Summe und einer Differenz</li>
+        </ul>
+      </div>
+      <div class="ext" data-ext="nmt-ua:2025" id="ext-nmt-ua-2025">
+        <h4>NMT 2025</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q13" rel="noopener" target="_blank">Sitzung 1, Aufgabe 13</a> - Quadrat einer Summe und einer Differenz</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q17" rel="noopener" target="_blank">Sitzung 2, Aufgabe 17</a> - Differenz von Quadraten</li>
+        </ul>
+      </div>
+      <div class="ext" data-ext="nmt-ua:2024" id="ext-nmt-ua-2024">
+        <h4>NMT 2024</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q3" rel="noopener" target="_blank">Sitzung 1, Aufgabe 3</a> - Differenz von Quadraten</li>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q19" rel="noopener" target="_blank">Sitzung 1, Aufgabe 19</a> - Quadrat einer Summe und einer Differenz</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q2" rel="noopener" target="_blank">Sitzung 2, Aufgabe 2</a> - Quadrat einer Summe und einer Differenz</li>
+        </ul>
       </div>
     </div>
+    <!-- /sources -->
+
+    <h2 id="artifacts">Was du nach dieser Seite hast <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>Sieben Formeln als ein Gesetz.</strong> Die binomischen Formeln sind das Distributivgesetz, und jede lässt sich in einer halben Minute herleiten. Und einen Bruch kürzen ist Multiplikation mit eins, deshalb kürzt sich nur ein Faktor.</p>
+    </div>
+    <!-- freq -->
+    <p class="dim law-freq" data-tasks="8">Häufigkeit auf dieser Seite, nicht im NMT: diese Seite hat 8 Aufgaben im Trainer, und sie stützen sich auf diese Gesetze: Differenz von Quadraten - 4, Quadrat einer Summe und einer Differenz - 4, Grundeigenschaft eines Bruchs - 1, Summe und Differenz von Kuben - 1. In echten NMT-Varianten 2024-2026 wird dieser Block in 8 Aufgaben von 132 gebraucht: Quadrat einer Summe und einer Differenz - 4, Differenz von Quadraten - 3, Grundeigenschaft eines Bruchs - 1.</p>
+    <!-- /freq -->
+    <p>Du kannst diesen Block, wenn du:</p>
+    <ol>
+      <li>8 von 10 Aufgaben zum Faktorisieren und Kürzen ohne Hinweis löst;</li>
+      <li>laut erklären kannst, woher das <span class="math" data-tex="2ab"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>2</mn><mi>a</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">2ab</annotation></semantics></math></span> im Quadrat einer Summe kommt;</li>
+      <li>den Fehler in einer fremden Lösung findest, wie in der von Ihor.</li>
+    </ol>
+  
+
+    <footer>
+      <nav class="pager" aria-label="Benachbarte Themen">
+        <p class="pager-next">Nächstes Thema: <a href="04.html">Gleichungen und Ungleichungen</a></p>
+        <p class="pager-prev">Vorheriges Thema: <a href="02.html">Verhältnis, Proportion, Prozent</a></p>
+      </nav>
+      <p class="footer-note">Eine Website der AI Factory-Serie. Mit denselben Werkzeugen erstellt: einfaches HTML und CSS, Bash-Prüfung, Veröffentlichung über GitHub Pages.</p>
+    </footer>
   </main>
 
 </div>
