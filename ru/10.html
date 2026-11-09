@@ -92,7 +92,7 @@
 
   <main id="main">
     <h1>Фигуры на плоскости</h1>
-    <p class="page-size" data-words="1842">Слов: 1842</p>
+    <p class="page-size" data-words="1921">Слов: 1921</p>
     <p class="lead">Несколько аксиом, из которых логикой выводится всё остальное. Геометрия - первое место, где математика
     предстаёт не набором формул, а системой: каждое свойство доказывается из предыдущих.</p>
 
@@ -135,6 +135,22 @@
       <p class="corollary-name">Углы параллелограмма</p>
       <div class="math-block" data-tex="\angle A + \angle B = 180^\circ,\qquad \angle A = \angle C,\quad \angle B = \angle D"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>&#x02220;</mo><mi>A</mi><mo>&#x0002B;</mo><mo>&#x02220;</mo><mi>B</mi><mo>&#x0003D;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x0002C;</mo><mspace width="2em" /><mo>&#x02220;</mo><mi>A</mi><mo>&#x0003D;</mo><mo>&#x02220;</mo><mi>C</mi><mo>&#x0002C;</mo><mspace width="1em" /><mo>&#x02220;</mo><mi>B</mi><mo>&#x0003D;</mo><mo>&#x02220;</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">\angle A + \angle B = 180^\circ,\qquad \angle A = \angle C,\quad \angle B = \angle D</annotation></semantics></math></div>
       <p>Соседние углы параллелограмма в сумме дают 180°, противоположные углы равны.</p>
+      <!-- fig:10-cor-parallelogram -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 190" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Параллелограмм ABCD. Углы A и C отмечены α, углы B и D отмечены 180° − α: соседние углы вместе дают 180°, противоположные равны.">
+        <polygon points="40.0,160.0 210.0,160.0 270.0,56.1 100.0,56.1" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <text x="34.0" y="174.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">A</text>
+        <text x="214.0" y="174.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">B</text>
+        <text x="276.0" y="54.1" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">C</text>
+        <text x="94.0" y="52.1" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">D</text>
+        <text x="66.0" y="152.0" fill="currentColor" font-size="14" opacity="1.0" style="fill:var(--acc)">α</text>
+        <text x="244.0" y="76.1" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" style="fill:var(--acc)">α</text>
+        <text x="200.0" y="150.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end">180° − α</text>
+        <text x="112.0" y="78.1" fill="currentColor" font-size="13" opacity="1.0">180° − α</text>
+      </svg>
+      <p class="dim">Рисунок 30. Следствие: соседние углы параллелограмма в сумме 180°, противоположные равны.</p>
+    </div>
+    <!-- /fig:10-cor-parallelogram -->
       <p><strong>Почему так.</strong> Стороны AD и BC параллельны, AB - секущая, поэтому углы A и B односторонние: A + B = 180°. Так же B + C = 180° для параллельных AB и CD, отсюда A = C. Поэтому параллелограмм с углами x и 2x существует: x + 2x = 180°, углы 60° и 120°.</p>
     </div>
     <div class="law" id="law-angles">
@@ -151,12 +167,49 @@
       <p class="corollary-name">Вписанный четырёхугольник</p>
       <div class="math-block" data-tex="\angle A + \angle C = \angle B + \angle D = 180^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>&#x02220;</mo><mi>A</mi><mo>&#x0002B;</mo><mo>&#x02220;</mo><mi>C</mi><mo>&#x0003D;</mo><mo>&#x02220;</mo><mi>B</mi><mo>&#x0002B;</mo><mo>&#x02220;</mo><mi>D</mi><mo>&#x0003D;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">\angle A + \angle C = \angle B + \angle D = 180^\circ</annotation></semantics></math></div>
       <p>Если четырёхугольник вписан в окружность, сумма его противоположных углов равна 180°. Около трапеции можно описать окружность только тогда, когда она равнобокая.</p>
+      <!-- fig:10-cor-cyclic -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 230" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Четырёхугольник ABCD, вписанный в окружность. Угол A отмечен α, противоположный угол C - 180° − α; угол B отмечен β, противоположный угол D - 180° − β.">
+        <circle cx="160.0" cy="112.0" r="96.0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="1.4"/>
+        <polygon points="69.8,144.8 192.8,202.2 254.5,95.3 127.2,21.8" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <text x="56.6" y="154.6" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">A</text>
+        <text x="197.6" y="220.4" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">B</text>
+        <text x="268.3" y="97.9" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">C</text>
+        <text x="122.4" y="13.6" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">D</text>
+        <text x="93.2" y="141.3" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" style="fill:var(--acc)">α</text>
+        <text x="207.3" y="108.7" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" style="fill:var(--acc)">180° − α</text>
+        <text x="183.0" y="180.1" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">β</text>
+        <text x="141.0" y="64.7" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">180° − β</text>
+      </svg>
+      <p class="dim">Рисунок 31. Следствие: во вписанном четырёхугольнике сумма противоположных углов равна 180°.</p>
+    </div>
+    <!-- /fig:10-cor-cyclic -->
       <p><strong>Почему так.</strong> Углы A и C опираются на две дуги, которые вместе составляют всю окружность, 360°. Каждый вписанный угол - половина своей дуги, поэтому A + C = 360° : 2 = 180°. В трапеции ABCD с основаниями AD и BC углы A и B односторонние: A + B = 180°; во вписанной ещё и B + D = 180°, значит A = D, и трапеция равнобокая.</p>
     </div>
     <div class="corollary" id="cor-circumcenter" data-law="law-inscribed">
       <p class="corollary-of">Следствие закона <a href="#law-inscribed">«Вписанный угол»</a></p>
       <p class="corollary-name">Центр описанной окружности</p>
       <p>Серединные перпендикуляры к сторонам треугольника пересекаются в одной точке - <span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">центре описанной окружности</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Центр описанной окружности</strong><button type="button" class="term-close" aria-label="Закрыть">&times;</button></span><span class="term-desc">Точка, равноудалённая от всех вершин треугольника: пересечение серединных перпендикуляров к сторонам.</span><span class="term-links"><a href="glossary.html#term-circumcenter">В словарь <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span>. В прямоугольном треугольнике это середина гипотенузы, в тупоугольном - точка вне треугольника.</p>
+      <!-- fig:10-cor-circumcenter -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 256" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Треугольник ABC и серединные перпендикуляры к трём его сторонам, пунктиром. Они пересекаются в одной точке O - центре окружности, которая проходит через A, B и C.">
+        <circle cx="160.0" cy="142.1" r="100.6" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 4"/>
+        <polygon points="66.0,178.0 254.0,178.0 130.0,46.0" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="160.0" y1="192.0" x2="160.0" y2="124.1" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="160.0" cy="178.0" r="3" fill="currentColor"/>
+        <line x1="202.2" y1="102.4" x2="146.9" y2="154.4" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="192.0" cy="112.0" r="3" fill="currentColor"/>
+        <line x1="85.4" y1="105.9" x2="176.2" y2="149.9" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="98.0" cy="112.0" r="3" fill="currentColor"/>
+        <circle cx="160.0" cy="142.1" r="3.5" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="170.0" y="147.1" fill="currentColor" font-size="14" opacity="1.0" font-style="italic" style="fill:var(--acc)">O</text>
+        <text x="60.0" y="192.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">A</text>
+        <text x="260.0" y="192.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">B</text>
+        <text x="130.0" y="36.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">C</text>
+      </svg>
+      <p class="dim">Рисунок 32. Следствие: серединные перпендикуляры к сторонам треугольника пересекаются в центре описанной окружности.</p>
+    </div>
+    <!-- /fig:10-cor-circumcenter -->
       <p><strong>Почему так.</strong> Каждая точка серединного перпендикуляра к AB одинаково удалена от A и B: два прямоугольных треугольника с общим катетом и равными вторыми катетами имеют равные гипотенузы (теорема Пифагора, блок 11). Точка пересечения двух перпендикуляров равноудалена от всех трёх вершин - это центр окружности. Прямой угол опирается на диаметр, поэтому в прямоугольном треугольнике гипотенуза - диаметр, а центр - её середина. Тупой угол C - половина дуги AB, большей полуокружности, поэтому C и центр лежат по разные стороны от AB.</p>
     </div>
     <div class="law" id="law-triangle-ineq">
@@ -173,6 +226,24 @@
       <p class="corollary-name"><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Средняя линия</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Средняя линия</strong><button type="button" class="term-close" aria-label="Закрыть">&times;</button></span><span class="term-desc">Отрезок, соединяющий середины двух сторон треугольника или боковых сторон трапеции.</span><span class="term-links"><a href="glossary.html#term-midline">В словарь <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span> треугольника и трапеции</p>
       <div class="math-block" data-tex="MN \parallel AC,\quad MN = \frac{AC}{2};\qquad m_{\text{трап}} = \frac{a + b}{2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>M</mi><mi>N</mi><mo>&#x02225;</mo><mi>A</mi><mi>C</mi><mo>&#x0002C;</mo><mspace width="1em" /><mi>M</mi><mi>N</mi><mo>&#x0003D;</mo><mfrac><mrow><mi>A</mi><mi>C</mi></mrow><mrow><mn>2</mn></mrow></mfrac><mi>;</mi><mspace width="2em" /><msub><mi>m</mi><mrow><mtext>трап</mtext></mrow></msub><mo>&#x0003D;</mo><mfrac><mrow><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi></mrow><mrow><mn>2</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">MN \parallel AC,\quad MN = \frac{AC}{2};\qquad m_{\text{трап}} = \frac{a + b}{2}</annotation></semantics></math></div>
       <p>Средняя линия соединяет середины двух сторон треугольника: она параллельна третьей стороне и равна её половине. Средняя линия трапеции соединяет середины боковых сторон, параллельна основаниям и равна их полусумме.</p>
+      <!-- fig:10-cor-midline -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 200" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Треугольник ABC, M - середина AB, N - середина BC. Средняя линия MN выделена: она параллельна AC и равна её половине; AC отмечена a, MN отмечена a/2.">
+        <polygon points="40.0,170.0 150.0,30.0 280.0,170.0" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="95.0" y1="100.0" x2="215.0" y2="100.0" stroke="currentColor" stroke-width="2.4" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="95.0" cy="100.0" r="3.5" fill="currentColor" style="fill:var(--acc)"/>
+        <circle cx="215.0" cy="100.0" r="3.5" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="34.0" y="184.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">A</text>
+        <text x="150.0" y="20.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">B</text>
+        <text x="286.0" y="184.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">C</text>
+        <text x="87.0" y="100.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">M</text>
+        <text x="223.0" y="100.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">N</text>
+        <text x="160.0" y="188.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">a</text>
+        <text x="155.0" y="118.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic" style="fill:var(--acc)">a/2</text>
+      </svg>
+      <p class="dim">Рисунок 33. Следствие: средняя линия треугольника параллельна третьей стороне и равна её половине.</p>
+    </div>
+    <!-- /fig:10-cor-midline -->
       <p><strong>Почему так.</strong> Через середину M стороны AB проведём прямую, параллельную AC; она пересечёт BC в точке N. Соответственные углы при параллельных равны, поэтому треугольники MBN и ABC подобны по двум углам с коэффициентом BM : BA = 1 : 2. Отсюда BN = BC/2, то есть N - середина, и MN = AC/2. Диагональ делит трапецию на два треугольника, и средняя линия трапеции складывается из средних линий этих треугольников: a/2 + b/2.</p>
     </div>
 
@@ -195,7 +266,7 @@
         <text x="152.0" y="56.0" fill="currentColor" font-size="13" opacity="1.0" font-weight="700" style="fill:var(--acc)">3</text>
         <text x="128.0" y="70.0" fill="currentColor" font-size="13" opacity="1.0" font-weight="700">2</text>
       </svg>
-      <p class="dim">Рисунок 30. Сумма углов треугольника: три угла при вершине B составляют прямую линию.</p>
+      <p class="dim">Рисунок 34. Сумма углов треугольника: три угла при вершине B составляют прямую линию.</p>
     </div>
     <!-- /fig:10-angle-sum -->
     <p><strong>Многоугольник.</strong> Диагонали из одной вершины делят выпуклый n-угольник на
@@ -220,7 +291,7 @@
         <text x="160.0" y="142.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" style="fill:var(--acc)">100°</text>
         <text x="146.0" y="55.4" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">50°</text>
       </svg>
-      <p class="dim">Рисунок 31. Вписанный угол - половина центрального на той же дуге: 100° и 50°.</p>
+      <p class="dim">Рисунок 35. Вписанный угол - половина центрального на той же дуге: 100° и 50°.</p>
     </div>
     <!-- /fig:10-inscribed -->
     <p><strong>Неравенство треугольника.</strong> Отрезок - кратчайший путь между двумя точками, поэтому путь через третью вершину
@@ -309,7 +380,7 @@
         <text x="254.6" y="139.3" fill="currentColor" font-size="13" opacity="1.0">10</text>
         <text x="97.0" y="188.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">12</text>
       </svg>
-      <p class="dim">Рисунок 32. К задаче: треугольник, вершины которого - середины сторон треугольника ABC.</p>
+      <p class="dim">Рисунок 36. К задаче: треугольник, вершины которого - середины сторон треугольника ABC.</p>
     </div>
     <!-- /fig:10-task-midline -->
       <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
@@ -335,7 +406,7 @@
         <text x="140.6" y="56.7" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">70°</text>
         <text x="243.0" y="138.1" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-weight="700" style="fill:var(--acc)">?</text>
       </svg>
-      <p class="dim">Рисунок 33. К задаче: внешний угол треугольника при вершине C.</p>
+      <p class="dim">Рисунок 37. К задаче: внешний угол треугольника при вершине C.</p>
     </div>
     <!-- /fig:10-task-exterior -->
       <div class="opts">
@@ -366,7 +437,7 @@
         <text x="218.0" y="104.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end">35°</text>
         <text x="98.0" y="102.0" fill="currentColor" font-size="15" opacity="1.0" font-weight="700" style="fill:var(--acc)">?</text>
       </svg>
-      <p class="dim">Рисунок 34. К задаче: треугольник, вписанный в окружность, одна сторона которого - диаметр.</p>
+      <p class="dim">Рисунок 38. К задаче: треугольник, вписанный в окружность, одна сторона которого - диаметр.</p>
     </div>
     <!-- /fig:10-task-diameter -->
       <div class="opts">
