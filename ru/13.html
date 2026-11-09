@@ -3,22 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Пространство и тела · nmt-math · ai|</title>
+<title>Пространство: прямые, плоскости, тела · nmt-math · ai|</title>
 <!-- meta: built by tools/build-meta.py - do not edit by hand -->
-<meta name="description" content="">
+<meta name="description" content="Планиметрия плюс ещё одно измерение.">
 <link rel="canonical" href="https://y-kolyada.github.io/nmt-math/ru/13.html">
 <link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/13.html">
 <link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/13.html">
 <link rel="alternate" hreflang="x-default" href="https://y-kolyada.github.io/nmt-math/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="nmt-math">
-<meta property="og:title" content="Пространство и тела">
-<meta property="og:description" content="">
+<meta property="og:title" content="Пространство: прямые, плоскости, тела">
+<meta property="og:description" content="Планиметрия плюс ещё одно измерение.">
 <meta property="og:url" content="https://y-kolyada.github.io/nmt-math/ru/13.html">
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Пространство и тела","description":"","url":"https://y-kolyada.github.io/nmt-math/ru/13.html","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Пространство: прямые, плоскости, тела","description":"Планиметрия плюс ещё одно измерение.","url":"https://y-kolyada.github.io/nmt-math/ru/13.html","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
 <!-- /meta -->
 <link rel="stylesheet" href="../assets/style.css?v=1">
 <link rel="stylesheet" href="../assets/study.css?v=1">
@@ -90,17 +90,297 @@
   </nav>
 
   <main id="main">
-    <h1>Пространство и тела</h1>
-    <p class="page-size" data-words="21">Слов: 21</p>
+    <h1>Пространство: прямые, плоскости, тела</h1>
+    <p class="page-size" data-words="828">Слов: 828</p>
+    <p class="lead">Планиметрия плюс ещё одно измерение. Почти каждая задача стереометрии решается тем, что в теле
+    находят плоскую фигуру: сечение, развёртку, прямоугольный треугольник внутри.</p>
 
-    <div class="stub-card">
-      <h2>Русская версия готовится</h2>
-      <p>Полная рабочая версия этой страницы опубликована на украинском языке.</p>
-      <p>Открыть полную версию:</p>
-      <div class="stub-actions">
-        <a href="../uk/13.html" class="btn-primary">Пространство и тела →</a>
-      </div>
+    <div class="box key" id="key-idea">
+      <h2>Главная мысль страницы <a class="anchor-link" href="#key-idea" aria-label="ссылка на этот блок">#</a></h2>
+      <p>Пространство не требует новых законов так, как кажется: расстояния в нём - теорема Пифагора (применённая дважды),
+      боковые поверхности - площади прямоугольников и треугольников из развёртки, объёмы - «площадь основания на высоту», с множителем
+      одна треть для острых тел. Новое только одно: объём растёт как куб линейного размера. Блок замыкает геометрию;
+      координатный взгляд на пространство - в блоке 12.</p>
     </div>
+
+    <span class="step">Шаг 0 · Зацепка</span>
+    <h2 id="hook">1 · Ребро удвоили - объём удвоился? <a class="anchor-link" href="#hook">#</a></h2>
+    <p>Куб с ребром 1 имеет объём 1. Ребро удвоили. «Объём удвоился»? Куб с ребром 2 состоит из восьми единичных
+    кубиков: два слоя по четыре. Объём вырос в 8 раз. Площадь каждой грани - в 4. То же правило, что в блоке 11, но с
+    третьим измерением.</p>
+    <!-- fig:13-cube -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 190" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Слева единичный кубик. Справа куб с ребром 2, сложенный из восьми таких кубиков: два слоя по четыре. Ребро удвоилось, объём вырос в 8 раз.">
+        <polygon points="70.0,130.0 90.0,116.0 90.0,76.0 70.0,90.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="70.0,130.0 90.0,116.0 90.0,76.0 70.0,90.0" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="1" opacity="1.0" style="stroke:var(--acc);fill:var(--acc)"/>
+        <polygon points="30.0,90.0 70.0,90.0 90.0,76.0 50.0,76.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="30.0,90.0 70.0,90.0 90.0,76.0 50.0,76.0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1" opacity="1.0" style="stroke:var(--acc);fill:var(--acc)"/>
+        <polygon points="30.0,130.0 70.0,130.0 70.0,90.0 30.0,90.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="30.0,130.0 70.0,130.0 70.0,90.0 30.0,90.0" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1" opacity="1.0" style="stroke:var(--acc);fill:var(--acc)"/>
+        <text x="60.0" y="160.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">V = 1</text>
+        <polygon points="210.0,136.0 230.0,122.0 230.0,82.0 210.0,96.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="210.0,136.0 230.0,122.0 230.0,82.0 210.0,96.0" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="170.0,96.0 210.0,96.0 230.0,82.0 190.0,82.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="170.0,96.0 210.0,96.0 230.0,82.0 190.0,82.0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="170.0,136.0 210.0,136.0 210.0,96.0 170.0,96.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="170.0,136.0 210.0,136.0 210.0,96.0 170.0,96.0" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="250.0,136.0 270.0,122.0 270.0,82.0 250.0,96.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="250.0,136.0 270.0,122.0 270.0,82.0 250.0,96.0" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="210.0,96.0 250.0,96.0 270.0,82.0 230.0,82.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="210.0,96.0 250.0,96.0 270.0,82.0 230.0,82.0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="210.0,136.0 250.0,136.0 250.0,96.0 210.0,96.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="210.0,136.0 250.0,136.0 250.0,96.0 210.0,96.0" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="210.0,96.0 230.0,82.0 230.0,42.0 210.0,56.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="210.0,96.0 230.0,82.0 230.0,42.0 210.0,56.0" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="170.0,56.0 210.0,56.0 230.0,42.0 190.0,42.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="170.0,56.0 210.0,56.0 230.0,42.0 190.0,42.0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="170.0,96.0 210.0,96.0 210.0,56.0 170.0,56.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="170.0,96.0 210.0,96.0 210.0,56.0 170.0,56.0" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="250.0,96.0 270.0,82.0 270.0,42.0 250.0,56.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="250.0,96.0 270.0,82.0 270.0,42.0 250.0,56.0" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="210.0,56.0 250.0,56.0 270.0,42.0 230.0,42.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="210.0,56.0 250.0,56.0 270.0,42.0 230.0,42.0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="210.0,96.0 250.0,96.0 250.0,56.0 210.0,56.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="210.0,96.0 250.0,96.0 250.0,56.0 210.0,56.0" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="190.0,150.0 210.0,136.0 210.0,96.0 190.0,110.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="190.0,150.0 210.0,136.0 210.0,96.0 190.0,110.0" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="150.0,110.0 190.0,110.0 210.0,96.0 170.0,96.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="150.0,110.0 190.0,110.0 210.0,96.0 170.0,96.0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="150.0,150.0 190.0,150.0 190.0,110.0 150.0,110.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="150.0,150.0 190.0,150.0 190.0,110.0 150.0,110.0" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="230.0,150.0 250.0,136.0 250.0,96.0 230.0,110.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="230.0,150.0 250.0,136.0 250.0,96.0 230.0,110.0" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="190.0,110.0 230.0,110.0 250.0,96.0 210.0,96.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="190.0,110.0 230.0,110.0 250.0,96.0 210.0,96.0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="190.0,150.0 230.0,150.0 230.0,110.0 190.0,110.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="190.0,150.0 230.0,150.0 230.0,110.0 190.0,110.0" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="190.0,110.0 210.0,96.0 210.0,56.0 190.0,70.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="190.0,110.0 210.0,96.0 210.0,56.0 190.0,70.0" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="150.0,70.0 190.0,70.0 210.0,56.0 170.0,56.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="150.0,70.0 190.0,70.0 210.0,56.0 170.0,56.0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="150.0,110.0 190.0,110.0 190.0,70.0 150.0,70.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="150.0,110.0 190.0,110.0 190.0,70.0 150.0,70.0" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="230.0,110.0 250.0,96.0 250.0,56.0 230.0,70.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="230.0,110.0 250.0,96.0 250.0,56.0 230.0,70.0" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="190.0,70.0 230.0,70.0 250.0,56.0 210.0,56.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="190.0,70.0 230.0,70.0 250.0,56.0 210.0,56.0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="190.0,110.0 230.0,110.0 230.0,70.0 190.0,70.0" style="fill:var(--bg)" stroke="none"/>
+        <polygon points="190.0,110.0 230.0,110.0 230.0,70.0 190.0,70.0" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="210.0" y="178.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">V = 8</text>
+      </svg>
+      <p class="dim">Рисунок 28. Ребро вдвое - объём в 2³ = 8 раз.</p>
+    </div>
+    <!-- /fig:13-cube -->
+
+    <span class="step">Шаг 1 · Понятие</span>
+    <h2 id="concept">2 · Прямые, плоскости, тела <a class="anchor-link" href="#concept">#</a></h2>
+    <ul>
+      <li>Две прямые в пространстве могут пересекаться, быть параллельными или <strong>скрещивающимися</strong>: не пересекаться и не лежать
+      в одной плоскости.</li>
+      <li>Прямая <strong>перпендикулярна плоскости</strong>, если она перпендикулярна двум пересекающимся прямым этой плоскости. Её
+      отрезок от точки до плоскости - расстояние от точки до плоскости.</li>
+      <li><strong>Призма</strong> и <strong>цилиндр</strong> имеют два равных параллельных основания; <strong>пирамида</strong> и
+      <strong>конус</strong> - одно основание и вершину. <strong>Высота</strong> - перпендикуляр из вершины (или из верхнего основания) к
+      плоскости основания. <strong>Апофема</strong> правильной пирамиды - высота боковой грани.</li>
+      <li><strong>Боковая поверхность</strong> - все грани, кроме оснований; <strong>полная</strong> - вместе с основаниями.</li>
+    </ul>
+
+    <span class="step">Шаг 2 · Закон</span>
+    <h2 id="law">3 · Законы пространства <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-volumes">
+      <p class="law-name">Объёмы</p>
+      <div class="math-block" data-tex="V_{\text{призмы}} = V_{\text{цилиндра}} = S_{\text{осн}} \cdot h,\qquad V_{\text{пирамиды}} = V_{\text{конуса}} = \frac{1}{3} S_{\text{осн}} \cdot h"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>V</mi><mrow><mtext>призмы</mtext></mrow></msub><mo>&#x0003D;</mo><msub><mi>V</mi><mrow><mtext>цилиндра</mtext></mrow></msub><mo>&#x0003D;</mo><msub><mi>S</mi><mrow><mtext>осн</mtext></mrow></msub><mo>&#x000B7;</mo><mi>h</mi><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>V</mi><mrow><mtext>пирамиды</mtext></mrow></msub><mo>&#x0003D;</mo><msub><mi>V</mi><mrow><mtext>конуса</mtext></mrow></msub><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><msub><mi>S</mi><mrow><mtext>осн</mtext></mrow></msub><mo>&#x000B7;</mo><mi>h</mi></mrow><annotation encoding="application/x-tex">V_{\text{призмы}} = V_{\text{цилиндра}} = S_{\text{осн}} \cdot h,\qquad V_{\text{пирамиды}} = V_{\text{конуса}} = \frac{1}{3} S_{\text{осн}} \cdot h</annotation></semantics></math></div>
+      <div class="math-block" data-tex="V_{\text{шара}} = \frac{4}{3}\pi R^3,\qquad S_{\text{сферы}} = 4\pi R^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>V</mi><mrow><mtext>шара</mtext></mrow></msub><mo>&#x0003D;</mo><mfrac><mrow><mn>4</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mi>&#x003C0;</mi><msup><mi>R</mi><mn>3</mn></msup><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>S</mi><mrow><mtext>сферы</mtext></mrow></msub><mo>&#x0003D;</mo><mn>4</mn><mi>&#x003C0;</mi><msup><mi>R</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">V_{\text{шара}} = \frac{4}{3}\pi R^3,\qquad S_{\text{сферы}} = 4\pi R^2</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-lateral">
+      <p class="law-name">Боковые поверхности</p>
+      <div class="math-block" data-tex="S_{\text{бок. призмы}} = P_{\text{осн}} \cdot h,\qquad S_{\text{бок. цилиндра}} = 2\pi R h"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>S</mi><mrow><mtext>бок.&#x000A0;призмы</mtext></mrow></msub><mo>&#x0003D;</mo><msub><mi>P</mi><mrow><mtext>осн</mtext></mrow></msub><mo>&#x000B7;</mo><mi>h</mi><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>S</mi><mrow><mtext>бок.&#x000A0;цилиндра</mtext></mrow></msub><mo>&#x0003D;</mo><mn>2</mn><mi>&#x003C0;</mi><mi>R</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">S_{\text{бок. призмы}} = P_{\text{осн}} \cdot h,\qquad S_{\text{бок. цилиндра}} = 2\pi R h</annotation></semantics></math></div>
+      <p>для прямой призмы и прямого цилиндра.</p>
+    </div>
+    <div class="law" id="law-diagonal">
+      <p class="law-name">Диагональ прямоугольного параллелепипеда</p>
+      <div class="math-block" data-tex="d^2 = a^2 + b^2 + c^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">d^2 = a^2 + b^2 + c^2</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-cube-scale">
+      <p class="law-name">Объёмы подобных тел</p>
+      <div class="math-block" data-tex="\frac{V_1}{V_2} = k^3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><msub><mi>V</mi><mn>1</mn></msub></mrow><mrow><msub><mi>V</mi><mn>2</mn></msub></mrow></mfrac><mo>&#x0003D;</mo><msup><mi>k</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">\frac{V_1}{V_2} = k^3</annotation></semantics></math></div>
+    </div>
+
+    <span class="step">Шаг 3 · Почему так</span>
+    <h2 id="why">4 · Откуда формулы <a class="anchor-link" href="#why">#</a></h2>
+    <p><strong>Площадь основания на высоту.</strong> Призму можно представить как стопку тонких одинаковых «плиток» в форме основания; их
+    количество пропорционально высоте.</p>
+    <p><strong>Одна треть.</strong> Куб можно разрезать на три равные пирамиды с вершиной в одной вершине куба, каждая - на
+    одну из трёх противоположных граней. Поэтому пирамида с тем же основанием и высотой занимает треть призмы. Для конуса и
+    цилиндра - то же самое.</p>
+    <p><strong>Боковая поверхность.</strong> Развёртка боковой поверхности прямой призмы - прямоугольник со сторонами
+    <span class="math" data-tex="P_{\text{осн}}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>P</mi><mrow><mtext>осн</mtext></mrow></msub></mrow><annotation encoding="application/x-tex">P_{\text{осн}}</annotation></semantics></math></span> и h; цилиндра - прямоугольник со сторонами
+    <span class="math" data-tex="2\pi R"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>2</mn><mi>&#x003C0;</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">2\pi R</annotation></semantics></math></span> и h.</p>
+    <!-- fig:13-unfold -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 150" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Развёртка боковой поверхности прямой четырёхугольной призмы: четыре боковые грани встали в ряд и образовали прямоугольник. Его ширина - периметр основания a + b + a + b, высота - высота призмы h, поэтому боковая поверхность равна P · h.">
+        <rect x="20.0" y="20.0" width="80.0" height="80.0" rx="0" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="60.0" y="65.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">a</text>
+        <rect x="100.0" y="20.0" width="50.0" height="80.0" rx="0" fill="currentColor" fill-opacity="0.16" stroke="currentColor" stroke-width="1.2"/>
+        <text x="125.0" y="65.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">b</text>
+        <rect x="150.0" y="20.0" width="80.0" height="80.0" rx="0" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.2"/>
+        <text x="190.0" y="65.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">a</text>
+        <rect x="230.0" y="20.0" width="50.0" height="80.0" rx="0" fill="currentColor" fill-opacity="0.16" stroke="currentColor" stroke-width="1.2"/>
+        <text x="255.0" y="65.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">b</text>
+        <text x="286.0" y="65.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">h</text>
+        <line x1="20.0" y1="114.0" x2="280.0" y2="114.0" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+        <text x="150.0" y="134.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-style="italic">P = a + b + a + b</text>
+      </svg>
+      <p class="dim">Рисунок 29. Боковая поверхность прямой призмы - прямоугольник со сторонами P и h.</p>
+    </div>
+    <!-- /fig:13-unfold -->
+    <p><strong>Диагональ.</strong> Пифагор дважды: диагональ основания <span class="math" data-tex="\sqrt{a^2 + b^2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">\sqrt{a^2 + b^2}</annotation></semantics></math></span>, потом она и боковое ребро c -
+    катеты треугольника с гипотенузой d.</p>
+    <!-- fig:13-diagonal -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 200" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Прямоугольный параллелепипед с рёбрами a, b, c. Пунктиром - диагональ основания √(a² + b²). Она вместе с боковым ребром c образует прямоугольный треугольник, гипотенуза которого - диагональ параллелепипеда d, поэтому d² = a² + b² + c².">
+        <line x1="40.0" y1="176.0" x2="190.0" y2="176.0" stroke="currentColor" stroke-width="1.4" opacity="1.0"/>
+        <line x1="190.0" y1="176.0" x2="190.0" y2="76.0" stroke="currentColor" stroke-width="1.4" opacity="1.0"/>
+        <line x1="190.0" y1="76.0" x2="40.0" y2="76.0" stroke="currentColor" stroke-width="1.4" opacity="1.0"/>
+        <line x1="40.0" y1="76.0" x2="40.0" y2="176.0" stroke="currentColor" stroke-width="1.4" opacity="1.0"/>
+        <line x1="190.0" y1="176.0" x2="235.0" y2="144.5" stroke="currentColor" stroke-width="1.4" opacity="1.0"/>
+        <line x1="235.0" y1="144.5" x2="235.0" y2="44.5" stroke="currentColor" stroke-width="1.4" opacity="1.0"/>
+        <line x1="235.0" y1="44.5" x2="190.0" y2="76.0" stroke="currentColor" stroke-width="1.4" opacity="1.0"/>
+        <line x1="40.0" y1="76.0" x2="85.0" y2="44.5" stroke="currentColor" stroke-width="1.4" opacity="1.0"/>
+        <line x1="85.0" y1="44.5" x2="235.0" y2="44.5" stroke="currentColor" stroke-width="1.4" opacity="1.0"/>
+        <line x1="40.0" y1="176.0" x2="85.0" y2="144.5" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+        <line x1="85.0" y1="144.5" x2="235.0" y2="144.5" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+        <line x1="85.0" y1="144.5" x2="85.0" y2="44.5" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+        <line x1="40.0" y1="176.0" x2="235.0" y2="144.5" stroke="currentColor" stroke-width="1.6" stroke-dasharray="5 3" opacity="1.0" style="stroke:var(--acc)"/>
+        <line x1="40.0" y1="176.0" x2="235.0" y2="44.5" stroke="currentColor" stroke-width="2.4" opacity="1.0" style="stroke:var(--acc)"/>
+        <text x="115.0" y="194.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">a</text>
+        <text x="222.5" y="172.2" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">b</text>
+        <text x="243.0" y="94.5" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">c</text>
+        <text x="131.5" y="104.2" fill="currentColor" font-size="15" opacity="1.0" text-anchor="end" font-style="italic" font-weight="700" style="fill:var(--acc)">d</text>
+      </svg>
+      <p class="dim">Рисунок 30. Диагональ параллелепипеда: Пифагор дважды, d² = a² + b² + c².</p>
+    </div>
+    <!-- /fig:13-diagonal -->
+
+    <span class="step">Шаг 4 · Границы</span>
+    <h2 id="limits">5 · Где законы ломаются <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-full">
+      <p><strong>Боковая и полная поверхности - разные величины.</strong> Полная поверхность цилиндра
+      <span class="math" data-tex="2\pi R h + 2\pi R^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>2</mn><mi>&#x003C0;</mi><mi>R</mi><mi>h</mi><mo>&#x0002B;</mo><mn>2</mn><mi>&#x003C0;</mi><msup><mi>R</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">2\pi R h + 2\pi R^2</annotation></semantics></math></span>: два основания добавляются.</p>
+    </div>
+    <div class="limit" id="limit-height">
+      <p><strong>Высота пирамиды - не апофема и не боковое ребро.</strong> В объём идёт высота, в боковую поверхность правильной пирамиды -
+      апофема.</p>
+    </div>
+    <div class="limit" id="limit-cube">
+      <p><strong>Объём растёт как куб.</strong> Увеличение всех размеров в k раз увеличивает объём в
+      <span class="math" data-tex="k^3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>k</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">k^3</annotation></semantics></math></span> раз, площадь поверхности - в <span class="math" data-tex="k^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>k</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">k^2</annotation></semantics></math></span>.</p>
+    </div>
+
+    <span class="step">Шаг 5 · Применение</span>
+    <h2 id="apply">6 · Задачи в форме НМТ <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="Г" data-limit="">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p>Измерения прямоугольного параллелепипеда 2 см, 3 см и 4 см. Найдите его объём.</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · 9 см³</button>
+        <button type="button" data-opt="Б">Б · 12 см³</button>
+        <button type="button" data-opt="В">В · 18 см³</button>
+        <button type="button" data-opt="Г">Г · 24 см³</button>
+        <button type="button" data-opt="Д">Д · 52 см³</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#law-volumes">площадь основания на высоту</a>.</p>
+      <div class="solution"><span class="math" data-tex="2 \cdot 3 \cdot 4 = 24"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>2</mn><mo>&#x000B7;</mo><mn>3</mn><mo>&#x000B7;</mo><mn>4</mn><mo>&#x0003D;</mo><mn>24</mn></mrow><annotation encoding="application/x-tex">2 \cdot 3 \cdot 4 = 24</annotation></semantics></math></span>. 52 - площадь полной поверхности, а не объём.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="45" data-limit="limit-full">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Сторона основания правильной четырёхугольной призмы 3 см, площадь боковой поверхности 60 см². Найдите объём призмы (в см³).</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Законы: <a href="#law-lateral">боковая поверхность</a> и <a href="#law-volumes">объём призмы</a>.</p>
+      <div class="solution">Периметр основания 12, поэтому <span class="math" data-tex="h = 60 : 12 = 5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>h</mi><mo>&#x0003D;</mo><mn>60</mn><mi>:</mi><mn>12</mn><mo>&#x0003D;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">h = 60 : 12 = 5</annotation></semantics></math></span>. Основание - квадрат площадью 9;
+      <span class="math" data-tex="V = 9 \cdot 5 = 45"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>V</mi><mo>&#x0003D;</mo><mn>9</mn><mo>&#x000B7;</mo><mn>5</mn><mo>&#x0003D;</mo><mn>45</mn></mrow><annotation encoding="application/x-tex">V = 9 \cdot 5 = 45</annotation></semantics></math></span>. Задача такого типа была среди самых трудных на НМТ 2026: два закона в одной
+      задаче, и первый из них «прячется» в слове «боковая».</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="12" data-limit="limit-height">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Радиус основания конуса 3 см, высота 4 см. Найдите объём конуса. В ответ запишите значение <span class="math" data-tex="\frac{V}{\pi}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mi>V</mi></mrow><mrow><mi>&#x003C0;</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{V}{\pi}</annotation></semantics></math></span>.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-volumes">объём конуса</a>.</p>
+      <div class="solution"><span class="math" data-tex="V = \frac{1}{3}\pi \cdot 9 \cdot 4 = 12\pi"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>V</mi><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mi>&#x003C0;</mi><mo>&#x000B7;</mo><mn>9</mn><mo>&#x000B7;</mo><mn>4</mn><mo>&#x0003D;</mo><mn>12</mn><mi>&#x003C0;</mi></mrow><annotation encoding="application/x-tex">V = \frac{1}{3}\pi \cdot 9 \cdot 4 = 12\pi</annotation></semantics></math></span>. Образующая здесь 5, но в объём идёт высота.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="В" data-limit="">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p>Найдите диагональ куба с ребром 2.</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · 2</button>
+        <button type="button" data-opt="Б">Б · 2√2</button>
+        <button type="button" data-opt="В">В · 2√3</button>
+        <button type="button" data-opt="Г">Г · 4</button>
+        <button type="button" data-opt="Д">Д · 6</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#law-diagonal">диагональ параллелепипеда</a>.</p>
+      <div class="solution"><span class="math" data-tex="d = \sqrt{4 + 4 + 4} = 2\sqrt{3}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>d</mi><mo>&#x0003D;</mo><msqrt><mrow><mn>4</mn><mo>&#x0002B;</mo><mn>4</mn><mo>&#x0002B;</mo><mn>4</mn></mrow></msqrt><mo>&#x0003D;</mo><mn>2</mn><msqrt><mrow><mn>3</mn></mrow></msqrt></mrow><annotation encoding="application/x-tex">d = \sqrt{4 + 4 + 4} = 2\sqrt{3}</annotation></semantics></math></span>. 2√2 - диагональ грани, а не куба.</div>
+    </div>
+
+    <span class="step">Шаг 6 · Обратный ход</span>
+    <h2 id="reverse">7 · Назови закон сам <a class="anchor-link" href="#reverse">#</a></h2>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="8" data-limit="limit-cube">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Ребро куба увеличили вдвое. Во сколько раз увеличился его объём?</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-cube-scale">объёмы подобных тел</a>.</p>
+      <div class="solution"><span class="math" data-tex="2^3 = 8"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>&#x0003D;</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">2^3 = 8</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="36" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Радиус шара 3 см. Найдите площадь его поверхности. В ответ запишите значение <span class="math" data-tex="\frac{S}{\pi}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mi>S</mi></mrow><mrow><mi>&#x003C0;</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{S}{\pi}</annotation></semantics></math></span>.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-volumes">площадь сферы</a>.</p>
+      <div class="solution"><span class="math" data-tex="4\pi \cdot 9 = 36\pi"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>4</mn><mi>&#x003C0;</mi><mo>&#x000B7;</mo><mn>9</mn><mo>&#x0003D;</mo><mn>36</mn><mi>&#x003C0;</mi></mrow><annotation encoding="application/x-tex">4\pi \cdot 9 = 36\pi</annotation></semantics></math></span>. Интересно: при R = 3 площадь сферы и объём шара
+      (<span class="math" data-tex="\frac{4}{3}\pi \cdot 27 = 36\pi"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>4</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mi>&#x003C0;</mi><mo>&#x000B7;</mo><mn>27</mn><mo>&#x0003D;</mo><mn>36</mn><mi>&#x003C0;</mi></mrow><annotation encoding="application/x-tex">\frac{4}{3}\pi \cdot 27 = 36\pi</annotation></semantics></math></span>) численно равны - но это разные величины с разными единицами.</div>
+    </div>
+
+    <h2 id="error">8 · Найди ошибку в чужом решении <a class="anchor-link" href="#error">#</a></h2>
+    <p>Богдан считает краску для цилиндрического бака с крышкой и дном: «Площадь поверхности <span class="math" data-tex="S = 2\pi R h"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>S</mi><mo>&#x0003D;</mo><mn>2</mn><mi>&#x003C0;</mi><mi>R</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">S = 2\pi R h</annotation></semantics></math></span>».</p>
+    <details>
+      <summary>Где ошибка?</summary>
+      <p>Это только боковая поверхность. Дно и крышка - ещё два круга: <span class="math" data-tex="S = 2\pi R h + 2\pi R^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>S</mi><mo>&#x0003D;</mo><mn>2</mn><mi>&#x003C0;</mi><mi>R</mi><mi>h</mi><mo>&#x0002B;</mo><mn>2</mn><mi>&#x003C0;</mi><msup><mi>R</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">S = 2\pi R h + 2\pi R^2</annotation></semantics></math></span>
+      (<a href="#limit-full">первая граница</a>).</p>
+    </details>
+
+    <h2 id="artifacts">Что у тебя есть после этой страницы <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>Пространство сводится к плоскости.</strong> Расстояния - Пифагор дважды, боковые поверхности - развёртки, объёмы - площадь
+      основания на высоту и одна треть для острых тел. Площадь растёт как квадрат, объём - как куб.</p>
+    </div>
+    <!-- freq -->
+    <p class="dim law-freq" data-tasks="6">Частота на этом сайте, а не на НМТ: на этой странице 6 задач тренажёра, и они опираются на такие законы: Объёмы - 4, Боковые поверхности - 1, Диагональ прямоугольного параллелепипеда - 1, Объёмы подобных тел - 1.</p>
+    <!-- /freq -->
+    <p>Ты знаешь этот блок, если:</p>
+    <ol>
+      <li>решаешь 8 из 10 задач на объёмы и поверхности без подсказки;</li>
+      <li>можешь объяснить вслух, откуда в объёме пирамиды одна треть;</li>
+      <li>находишь ошибку в чужом решении, как у Богдана.</li>
+    </ol>
+  
+
+    <footer>
+      <nav class="pager" aria-label="Соседние темы">
+        <p class="pager-next">Следующая тема: <a href="glossary.html">Словарь понятий</a></p>
+        <p class="pager-prev">Предыдущая тема: <a href="12.html">Координаты и векторы</a></p>
+      </nav>
+      <p class="footer-note">Сайт серии AI Factory. Сделан той же оснасткой, что и остальные: обычный HTML и CSS, проверка на bash, публикация через GitHub Pages.</p>
+    </footer>
   </main>
 
 </div>
