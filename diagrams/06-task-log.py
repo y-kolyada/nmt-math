@@ -7,6 +7,8 @@ TEXT = {
            'До задачі: точка графіка логарифма з ординатою 3.'),
     'ru': ('График функции y = log₂ x: проходит через точку (1; 0) и медленно растёт вправо. На высоте y = 3 проведена горизонтальная пунктирная линия до графика; точка пересечения отмечена, её абсцисса неизвестна.',
            'К задаче: точка графика логарифма с ординатой 3.'),
+    'en': ('The graph of y = log₂ x: it passes through (1; 0) and grows slowly to the right. At height y = 3 a horizontal dashed line is drawn to the graph; the point where they meet is marked, and its abscissa is unknown.',
+           'For the task: the point of the logarithm graph with ordinate 3.'),
 }
 Y = 3
 

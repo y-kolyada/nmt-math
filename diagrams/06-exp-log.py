@@ -7,6 +7,8 @@ TEXT = {
            'Логарифм - дзеркало степеня: 2ˣ > 0 завжди, тому log₂ x існує лише при x > 0.'),
     'ru': ('Графики y = 2ˣ и y = log₂ x симметричны относительно прямой y = x. Показательная функция всегда положительна, поэтому логарифм существует только для положительных чисел: его график не заходит левее оси Oy.',
            'Логарифм - зеркало степени: 2ˣ > 0 всегда, поэтому log₂ x существует только при x > 0.'),
+    'en': ('The graphs y = 2ˣ and y = log₂ x are symmetric about the line y = x. The exponential function is always positive, so the logarithm exists only for positive numbers: its graph never goes to the left of the Oy axis.',
+           'The logarithm mirrors the power: 2ˣ > 0 always, so log₂ x exists only for x > 0.'),
 }
 
 

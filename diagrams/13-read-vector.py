@@ -8,6 +8,8 @@ TEXT = {
            'До задачі: прямокутний паралелепіпед в осях координат і вектор BD₁.'),
     'ru': ('Прямоугольный параллелепипед ABCDA₁B₁C₁D₁, вершина A - начало координат. Ось x идёт вдоль AB, ось y - вдоль AD, ось z - вдоль AA₁. На рисунке подписаны рёбра: AB = 6, AD = 2, AA₁ = 3. Вектор BD₁ выделен.',
            'К задаче: прямоугольный параллелепипед в осях координат и вектор BD₁.'),
+    'en': ('Cuboid ABCDA₁B₁C₁D₁, vertex A is the origin. The x-axis runs along AB, the y-axis along AD, the z-axis along AA₁. The figure labels the edges: AB = 6, AD = 2, AA₁ = 3. The vector BD₁ is highlighted.',
+           'For the task: a cuboid on coordinate axes and the vector BD₁.'),
 }
 
 

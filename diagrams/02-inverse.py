@@ -6,6 +6,9 @@ TEXT = {
            'Обернена пропорційність: добуток v · t сталий, як площа прямокутника.', 'S = 12'),
     'ru': ('Два прямоугольника одинаковой площади 12: со сторонами 2 на 6 и 3 на 4. Скорость - высота, время - ширина, путь - площадь. Увеличили высоту в 1,5 раза - ширина уменьшилась в 1,5 раза.',
            'Обратная пропорциональность: произведение v · t постоянно, как площадь прямоугольника.', 'S = 12'),
+    'en': ('Two rectangles of the same area 12: with sides 2 by 6 and 3 by 4. Speed is the height, time is the width, distance is the area. The height grew 1.5 times, so the width shrank 1.5 times.',
+           'Inverse proportion: the product v · t is constant, like the area of a rectangle.',
+           'S = 12'),
 }
 
 

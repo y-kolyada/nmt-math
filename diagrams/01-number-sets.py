@@ -10,6 +10,10 @@ TEXT = {
            ['позволил корень', 'позволило деление', 'позволило вычитание'],
            'Вложенные множества чисел: натуральные внутри целых, целые внутри рациональных, рациональные внутри действительных. Каждое расширение позволило действие, которого не было: вычитание, деление, извлечение корня.',
            'Каждое множество чисел лежит внутри следующего, и каждое расширение появилось ради нового действия.'),
+    'en': (['ℝ real: √2, π added', 'ℚ rational: fractions p/q', 'ℤ integers: zero and negatives', 'ℕ natural: 1, 2, 3, …'],
+           ['allowed roots', 'allowed division', 'allowed subtraction'],
+           'Nested sets of numbers: natural numbers inside the integers, integers inside the rationals, rationals inside the reals. Each extension allowed an operation that was not there before: subtraction, division, taking a root.',
+           'Each set of numbers lies inside the next one, and each extension came for the sake of a new operation.'),
 }
 
 

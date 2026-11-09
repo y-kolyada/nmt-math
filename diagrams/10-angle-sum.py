@@ -6,6 +6,8 @@ TEXT = {
            'Сума кутів трикутника: три кути при вершині B складають пряму лінію.'),
     'ru': ('Треугольник ABC и прямая через вершину B, параллельная стороне AC. Углы при B, образованные этой прямой, равны углам A и C как внутренние накрест лежащие. Три угла при B вместе составляют развёрнутый угол 180°.',
            'Сумма углов треугольника: три угла при вершине B составляют прямую линию.'),
+    'en': ('Triangle ABC and a line through vertex B parallel to side AC. The angles at B formed by this line are equal to angles A and C as alternate angles. The three angles at B together make a straight angle, 180°.',
+           'The angle sum of a triangle: the three angles at vertex B make a straight line.'),
 }
 
 

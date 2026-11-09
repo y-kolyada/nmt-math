@@ -24,7 +24,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 HERE = pathlib.Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-WORD = {'uk': 'Рисунок', 'ru': 'Рисунок'}
+WORD = {'uk': 'Рисунок', 'ru': 'Рисунок', 'en': 'Figure'}
 MARK = re.compile(r'<!-- fig:((?:[0-9]{2}|navigator)-[a-z0-9-]+) -->.*?<!-- /fig:\1 -->', re.S)
 
 
@@ -57,7 +57,7 @@ def bake(lang):
 
 def main():
     bad = 0
-    for lang in ('uk', 'ru'):
+    for lang in WORD:
         if not (ROOT / lang).is_dir():
             continue
         changed, count = bake(lang)

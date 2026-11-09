@@ -6,6 +6,8 @@ TEXT = {
            'До задачі: графік y = x², зсунутий праворуч і вниз.'),
     'ru': ('Две параболы в координатах. Пунктиром - график y = x² с вершиной в начале координат. Цветом - тот же график, сдвинутый на 3 единицы вправо и на 2 единицы вниз: его вершина в точке (3; −2). Стрелка ведёт от старой вершины к новой.',
            'К задаче: график y = x², сдвинутый вправо и вниз.'),
+    'en': ('Two parabolas on coordinate axes. Dashed: the graph of y = x² with its vertex at the origin. Coloured: the same graph shifted 3 units to the right and 2 units down, with its vertex at (3; −2). An arrow leads from the old vertex to the new one.',
+           'For the task: the graph of y = x² shifted right and down.'),
 }
 DX, DY = 3, -2
 

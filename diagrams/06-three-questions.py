@@ -8,6 +8,10 @@ TEXT = {
     'ru': ('В центре равенство 2³ = 8. Три стрелки ведут к трём вопросам: неизвестный результат - степень, неизвестное основание - корень, неизвестный показатель - логарифм.',
            'Одно равенство, три вопроса: степень, корень, логарифм.',
            ['степень', 'корень', 'логарифм'], ['ищем 8', 'ищем 2', 'ищем 3']),
+    'en': ('In the centre is the equality 2³ = 8. Three arrows lead to three questions: unknown result - a power, unknown base - a root, unknown exponent - a logarithm.',
+           'One equality, three questions: power, root, logarithm.',
+           ['power', 'root', 'logarithm'],
+           ['we seek 8', 'we seek 2', 'we seek 3']),
 }
 
 

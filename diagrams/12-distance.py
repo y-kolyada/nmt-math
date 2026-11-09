@@ -6,6 +6,8 @@ TEXT = {
            'Відстань між точками - теорема Піфагора: √(3² + 4²) = 5.'),
     'ru': ('Точки A(1; 2) и B(4; 6). Разности координат 3 и 4 - катеты прямоугольного треугольника, отрезок AB - гипотенуза: AB = √(3² + 4²) = 5.',
            'Расстояние между точками - теорема Пифагора: √(3² + 4²) = 5.'),
+    'en': ('Points A(1; 2) and B(4; 6). The coordinate differences 3 and 4 are the legs of a right triangle, the segment AB is the hypotenuse: AB = √(3² + 4²) = 5.',
+           "The distance between points is Pythagoras' theorem: √(3² + 4²) = 5."),
 }
 
 

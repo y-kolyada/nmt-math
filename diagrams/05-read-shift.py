@@ -7,6 +7,8 @@ TEXT = {
            'До задачі: графік y = |x| і зсунутий графік на сітці з кроком 2.'),
     'ru': ('Координатная сетка с шагом 2: на осях подписаны 2, 4, 6. Пунктиром - график y = |x| с вершиной в начале координат. Сплошной линией - график-«уголок» с вершиной в точке (4; 2): две клетки вправо и одна вверх.',
            'К задаче: график y = |x| и сдвинутый график на сетке с шагом 2.'),
+    'en': ('A coordinate grid with step 2: the axes are labelled 2, 4, 6. Dashed: the graph of y = |x| with its vertex at the origin. Solid: a «V» graph with its vertex at (4; 2): two squares to the right and one up.',
+           'For the task: the graph of y = |x| and a shifted graph on a grid with step 2.'),
 }
 
 

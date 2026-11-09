@@ -7,6 +7,8 @@ TEXT = {
            'До задачі: трикутник, вписаний у коло, одна сторона якого - діаметр.'),
     'ru': ('Окружность с центром O и диаметром AB. Точка C лежит на окружности, угол ABC равен 35°, угол BAC отмечен знаком вопроса; угол ACB опирается на диаметр.',
            'К задаче: треугольник, вписанный в окружность, одна сторона которого - диаметр.'),
+    'en': ('A circle with centre O and diameter AB. Point C lies on the circle, angle ABC is 35°, angle BAC is marked with a question mark; angle ACB stands on the diameter.',
+           'For the task: a triangle inscribed in a circle, one side of which is a diameter.'),
 }
 ANG_B = 35
 

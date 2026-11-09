@@ -7,6 +7,8 @@ TEXT = {
            'До задачі: парабола, яка перетинає вісь x у двох позначених точках.'),
     'ru': ('График функции y = f(x) - парабола, ветви вверх. Она пересекает ось x в точках −1 и 3 (отмечены), вершина - в точке (1; −4). Часть графика под осью x выделена.',
            'К задаче: парабола, которая пересекает ось x в двух отмеченных точках.'),
+    'en': ('The graph of y = f(x) is a parabola opening upwards. It crosses the x-axis at −1 and 3 (marked), and its vertex is at (1; −4). The part of the graph below the x-axis is highlighted.',
+           'For the task: a parabola that crosses the x-axis at two marked points.'),
 }
 
 

@@ -6,6 +6,9 @@ TEXT = {
            'Похідна як нахил дотичної: для y = x² у точці 1 нахил дорівнює 2.', 'нахил 2'),
     'ru': ('Парабола y = x² и касательная к ней в точке x₀ = 1. Касательная поднимается на 2 единицы на каждую единицу вправо: её угловой коэффициент 2 равен производной 2x в точке 1.',
            'Производная как наклон касательной: для y = x² в точке 1 наклон равен 2.', 'наклон 2'),
+    'en': ('The parabola y = x² and its tangent at x₀ = 1. The tangent rises 2 units for each unit to the right: its gradient 2 equals the derivative 2x at the point 1.',
+           'The derivative as the slope of the tangent: for y = x² at the point 1 the slope is 2.',
+           'slope 2'),
 }
 
 

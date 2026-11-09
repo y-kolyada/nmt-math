@@ -7,6 +7,8 @@ TEXT = {
            'Сторонній корінь: при x = −1 обидві частини мають однаковий квадрат, але різні знаки.'),
     'ru': ('Графики y = √(x + 2) и y = x пересекаются только в точке x = 2. При x = −1 корень равен 1, а прямая даёт −1: значения противоположны, поэтому после возведения в квадрат −1 появляется как посторонний корень.',
            'Посторонний корень: при x = −1 обе части имеют одинаковый квадрат, но разные знаки.'),
+    'en': ('The graphs y = √(x + 2) and y = x meet only at x = 2. At x = −1 the root equals 1 and the line gives −1: the values are opposite, so after squaring, −1 appears as an extraneous root.',
+           'An extraneous root: at x = −1 both sides have the same square but different signs.'),
 }
 
 

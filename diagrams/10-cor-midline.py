@@ -6,6 +6,8 @@ TEXT = {
            'Наслідок: середня лінія трикутника паралельна третій стороні і дорівнює її половині.'),
     'ru': ('Треугольник ABC, M - середина AB, N - середина BC. Средняя линия MN выделена: она параллельна AC и равна её половине; AC отмечена a, MN отмечена a/2.',
            'Следствие: средняя линия треугольника параллельна третьей стороне и равна её половине.'),
+    'en': ('Triangle ABC, M is the midpoint of AB, N is the midpoint of BC. The midline MN is highlighted: it is parallel to AC and equals half of it; AC is marked a, MN is marked a/2.',
+           'Corollary: the midline of a triangle is parallel to the third side and equals half of it.'),
 }
 A, B, C = (40, 170), (150, 30), (280, 170)
 

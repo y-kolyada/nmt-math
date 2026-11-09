@@ -6,6 +6,8 @@ TEXT = {
            'Сторона подвоїлася - площа зросла вчетверо: 3² = 9, 6² = 36.'),
     'ru': ('Слева квадрат со стороной 3 и площадью 9. Справа квадрат со стороной 6: он складывается из четырёх таких же квадратов, поэтому его площадь 36, вчетверо больше.',
            'Сторона удвоилась - площадь выросла вчетверо: 3² = 9, 6² = 36.'),
+    'en': ('On the left, a square with side 3 and area 9. On the right, a square with side 6: it is made of four such squares, so its area is 36, four times as large.',
+           'The side doubled, so the area grew fourfold: 3² = 9, 6² = 36.'),
 }
 
 

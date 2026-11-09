@@ -12,6 +12,8 @@ TEXT = {
            'До задачі: чотирикутник, описаний навколо кола.'),
     'ru': ('Четырёхугольник ABCD, описанный около окружности: каждая сторона касается окружности. Подписаны стороны AB = 7, BC = 9, CD = 12; сторона AD отмечена знаком вопроса.',
            'К задаче: четырёхугольник, описанный около окружности.'),
+    'en': ('Quadrilateral ABCD circumscribed about a circle: each side touches the circle. The sides AB = 7, BC = 9, CD = 12 are labelled; side AD is marked with a question mark.',
+           'For the task: a quadrilateral circumscribed about a circle.'),
 }
 T = (3, 4, 5, 7)  # tangent segments from A, B, C, D
 

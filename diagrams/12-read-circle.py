@@ -8,6 +8,8 @@ TEXT = {
            'До задачі: коло, його центр і точка на колі.'),
     'ru': ('Окружность с центром в точке C и точка M на окружности. От точек к осям проведён пунктир: центр C имеет координаты (2; 3), точка M - (5; 7). На осях подписаны 2, 5 и 3, 7.',
            'К задаче: окружность, её центр и точка на окружности.'),
+    'en': ('A circle with centre at point C and a point M on the circle. Dashed lines run from the points to the axes: the centre C has coordinates (2; 3), the point M (5; 7). The axes are labelled 2, 5 and 3, 7.',
+           'For the task: a circle, its centre and a point on the circle.'),
 }
 
 

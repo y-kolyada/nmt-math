@@ -7,6 +7,8 @@ TEXT = {
            'До задачі: висота рівнобічної трапеції, опущена з вершини меншої основи.'),
     'ru': ('Равнобокая трапеция ABCD: нижнее основание AD = 16, верхнее основание BC = 4, боковая сторона AB = 10. Из вершины B на основание AD опущена высота h.',
            'К задаче: высота равнобокой трапеции, опущенная из вершины меньшего основания.'),
+    'en': ('Isosceles trapezium ABCD: lower base AD = 16, upper base BC = 4, leg AB = 10. From vertex B the height h is dropped to the base AD.',
+           'For the task: the height of an isosceles trapezium, dropped from a vertex of the shorter base.'),
 }
 BIG, SMALL, LEG = 16, 4, 10
 

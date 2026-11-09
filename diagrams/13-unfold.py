@@ -6,6 +6,9 @@ TEXT = {
            'Бічна поверхня прямої призми - прямокутник зі сторонами P і h.', 'P = a + b + a + b'),
     'ru': ('Развёртка боковой поверхности прямой четырёхугольной призмы: четыре боковые грани встали в ряд и образовали прямоугольник. Его ширина - периметр основания a + b + a + b, высота - высота призмы h, поэтому боковая поверхность равна P · h.',
            'Боковая поверхность прямой призмы - прямоугольник со сторонами P и h.', 'P = a + b + a + b'),
+    'en': ('The net of the lateral surface of a right square prism: the four side faces stand in a row and form a rectangle. Its width is the perimeter of the base a + b + a + b, its height is the height of the prism h, so the lateral surface equals P · h.',
+           'The lateral surface of a right prism is a rectangle with sides P and h.',
+           'P = a + b + a + b'),
 }
 
 

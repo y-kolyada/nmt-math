@@ -6,6 +6,11 @@ TEXT = {
            'Правило добутку як дерево: 2 · 2 = 4 рівноможливі наслідки.', 'Г', 'Ц', ['1-й кидок', '2-й кидок']),
     'ru': ('Дерево двух бросков монеты: из начала две ветви, герб и цифра, из каждой ещё две. Листьев 2 · 2 = 4: ГГ, ГЦ, ЦГ, ЦЦ. Все четыре равновозможны, и только один из них - два герба.',
            'Правило произведения как дерево: 2 · 2 = 4 равновозможных исхода.', 'Г', 'Ц', ['1-й бросок', '2-й бросок']),
+    'en': ('A tree of two coin tosses: from the start, two branches, heads and tails, and two more from each. There are 2 · 2 = 4 leaves: HH, HT, TH, TT. All four are equally likely, and only one of them is two heads.',
+           'The product rule as a tree: 2 · 2 = 4 equally likely outcomes.',
+           'H',
+           'T',
+           ['1st toss', '2nd toss']),
 }
 
 

@@ -6,6 +6,10 @@ TEXT = {
            'Екстремум там, де похідна змінює знак: максимум у 0, мінімум у 2.', ['max', 'min'], "f′:"),
     'ru': ('График f(x) = x³ − 3x². Производная 3x(x − 2) меняет знак с плюса на минус в точке 0 - там максимум, и с минуса на плюс в точке 2 - там минимум. Знаки производной подписаны под осью.',
            'Экстремум там, где производная меняет знак: максимум в 0, минимум в 2.', ['max', 'min'], "f′:"),
+    'en': ('The graph of f(x) = x³ − 3x². The derivative 3x(x − 2) changes sign from plus to minus at 0, where there is a maximum, and from minus to plus at 2, where there is a minimum. The signs of the derivative are written below the axis.',
+           'An extremum is where the derivative changes sign: a maximum at 0, a minimum at 2.',
+           ['max', 'min'],
+           'f′:'),
 }
 
 

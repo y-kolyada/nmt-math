@@ -6,6 +6,8 @@ TEXT = {
            'До задачі: прямокутний паралелепіпед і площина його нижньої основи.'),
     'ru': ('Прямоугольный параллелепипед ABCDA₁B₁C₁D₁ в косоугольной проекции: ABCD - нижнее основание, A₁B₁C₁D₁ - верхнее, AA₁, BB₁, CC₁, DD₁ - боковые рёбра. Невидимые рёбра - пунктиром.',
            'К задаче: прямоугольный параллелепипед и плоскость его нижнего основания.'),
+    'en': ('Cuboid ABCDA₁B₁C₁D₁ in oblique projection: ABCD is the lower base, A₁B₁C₁D₁ the upper one, AA₁, BB₁, CC₁, DD₁ are the side edges. Hidden edges are dashed.',
+           'For the task: a cuboid and the plane of its lower base.'),
 }
 
 

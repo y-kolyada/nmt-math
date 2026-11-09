@@ -8,6 +8,8 @@ TEXT = {
            'До задачі: трикутник із двома позначеними кутами.'),
     'ru': ('Треугольник ABC. На рисунке отмечены углы: ∠A = 48°, ∠B = 67°. Угол C отмечен знаком вопроса.',
            'К задаче: треугольник с двумя отмеченными углами.'),
+    'en': ('Triangle ABC. The figure marks the angles ∠A = 48°, ∠B = 67°. Angle C is marked with a question mark.',
+           'For the task: a triangle with two marked angles.'),
 }
 
 

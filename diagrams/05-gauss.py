@@ -6,6 +6,9 @@ TEXT = {
            'Сума арифметичної прогресії: сто пар по 101, поділені на два.', 'кожна пара'),
     'ru': ('Сумма от 1 до 100 записана дважды: слева направо и справа налево. Каждый столбик даёт 101, столбиков 100, и каждое число посчитано дважды, поэтому сумма равна 101 · 100 / 2 = 5050.',
            'Сумма арифметической прогрессии: сто пар по 101, делённые на два.', 'каждая пара'),
+    'en': ('The sum from 1 to 100 is written twice: left to right and right to left. Each column gives 101, there are 100 columns, and each number is counted twice, so the sum is 101 · 100 / 2 = 5050.',
+           'The sum of an arithmetic progression: a hundred pairs of 101, divided by two.',
+           'each pair'),
 }
 
 

@@ -6,6 +6,8 @@ TEXT = {
            'Доведення теореми Піфагора площею: чотири трикутники і квадрат c².'),
     'ru': ('Квадрат со стороной a + b, в углах которого стоят четыре одинаковых прямоугольных треугольника с катетами a и b. Внутри остаётся квадрат со стороной c - гипотенузой. Площадь: (a + b)² = 4 · ab/2 + c², откуда a² + b² = c².',
            'Доказательство теоремы Пифагора площадью: четыре треугольника и квадрат c².'),
+    'en': ('A square with side a + b, in whose corners stand four equal right triangles with legs a and b. Inside remains a square with side c, the hypotenuse. Area: (a + b)² = 4 · ab/2 + c², hence a² + b² = c².',
+           "A proof of Pythagoras' theorem by area: four triangles and a square c²."),
 }
 
 

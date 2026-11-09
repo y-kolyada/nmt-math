@@ -7,6 +7,8 @@ TEXT = {
            'До задачі: пряма на сітці, у якої крок по осях різний.'),
     'ru': ('Прямая проходит через точки P и Q. Клетки сетки квадратные на вид, но по оси x одна клетка - 2 единицы (подписано 2, 4, 6, 8), а по оси y - 1 единица (подписано 1, 2, 3, 4). Точка P имеет координаты (2; 1), точка Q - (6; 3).',
            'К задаче: прямая на сетке, у которой шаг по осям разный.'),
+    'en': ('A line passes through the points P and Q. The grid squares look square, but along the x-axis one square is 2 units (labelled 2, 4, 6, 8), and along the y-axis it is 1 unit (labelled 1, 2, 3, 4). Point P has coordinates (2; 1), point Q (6; 3).',
+           'For the task: a line on a grid with different steps on the axes.'),
 }
 
 

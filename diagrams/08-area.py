@@ -6,6 +6,9 @@ TEXT = {
            'Ньютон - Лейбніц: площа росте на смужку f(x) · h, отже площа - первісна функції.', 'смужка f(x) · h'),
     'ru': ('Площадь под графиком y = 0,5x² + 0,5 от a до x закрашена. Если x сдвинуть на малое h, площадь вырастет на узкую полоску высотой f(x): поэтому скорость роста площади равна f(x), и площадь - первообразная.',
            'Ньютон - Лейбниц: площадь растёт на полоску f(x) · h, значит площадь - первообразная функции.', 'полоска f(x) · h'),
+    'en': ('The area under the graph of y = 0.5x² + 0.5 from a to x is shaded. If x is moved by a small h, the area grows by a narrow strip of height f(x): so the rate at which the area grows equals f(x), and the area is an antiderivative.',
+           'Newton - Leibniz: the area grows by a strip f(x) · h, so the area is an antiderivative of the function.',
+           'strip f(x) · h'),
 }
 
 

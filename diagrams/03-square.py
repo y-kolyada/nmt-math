@@ -6,6 +6,8 @@ TEXT = {
            'Квадрат суми: два прямокутники ab, які губить сліпий хід.'),
     'ru': ('Квадрат со стороной a + b разрезан на четыре части: квадрат a², квадрат b² и два одинаковых прямоугольника ab. Слепой ход «a² + b²» теряет именно два прямоугольника.',
            'Квадрат суммы: два прямоугольника ab, которые теряет слепой ход.'),
+    'en': ('A square with side a + b is cut into four parts: a square a², a square b² and two equal rectangles ab. The blind move «a² + b²» loses exactly the two rectangles.',
+           'The square of a sum: the two rectangles ab that the blind move loses.'),
 }
 
 

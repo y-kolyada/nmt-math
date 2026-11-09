@@ -6,6 +6,9 @@ TEXT = {
            'Рівноможливі - 36 пар граней, а не 11 сум: сума 7 займає 6 клітинок з 36.', ['1-й', '2-й']),
     'ru': ('Таблица 6 на 6: строка - первый кубик, столбец - второй, в клетке сумма. Шесть клеток с суммой 7 лежат на диагонали и выделены. Сумма 2 встречается только в одной клетке, поэтому суммы не равновозможны, а пары граней - равновозможны.',
            'Равновозможны 36 пар граней, а не 11 сумм: сумма 7 занимает 6 клеток из 36.', ['1-й', '2-й']),
+    'en': ('A 6 by 6 table: the row is the first die, the column is the second, the cell holds the sum. The six cells with sum 7 lie on a diagonal and are highlighted. The sum 2 occurs in only one cell, so the sums are not equally likely, while the pairs of faces are.',
+           'Equally likely are the 36 pairs of faces, not the 11 sums: the sum 7 takes 6 cells of 36.',
+           ['1st', '2nd']),
 }
 
 

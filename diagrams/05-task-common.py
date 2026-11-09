@@ -7,6 +7,8 @@ TEXT = {
            'До задачі: спільні точки параболи і прямої.'),
     'ru': ('Парабола y = x² и прямая y = x + 2 в одних координатах. Прямая пересекает параболу в двух точках, слева и справа от оси Oy; обе точки отмечены.',
            'К задаче: общие точки параболы и прямой.'),
+    'en': ('The parabola y = x² and the line y = x + 2 on the same axes. The line crosses the parabola at two points, to the left and to the right of the Oy axis; both points are marked.',
+           'For the task: the common points of a parabola and a line.'),
 }
 
 

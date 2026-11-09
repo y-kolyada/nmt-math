@@ -6,6 +6,8 @@ TEXT = {
            'До задачі: графік y = |x|, зсунутий ліворуч.'),
     'ru': ('Два графика-«уголка» в координатах. Пунктиром - y = |x| с вершиной в начале координат. Цветом - тот же график, сдвинутый на 2 единицы влево: его вершина в точке (−2; 0). Точка, где новый график пересекает ось Oy, отмечена.',
            'К задаче: график y = |x|, сдвинутый влево.'),
+    'en': ('Two «V» graphs on coordinate axes. Dashed: y = |x| with its vertex at the origin. Coloured: the same graph shifted 2 units to the left, with its vertex at (−2; 0). The point where the new graph crosses the Oy axis is marked.',
+           'For the task: the graph of y = |x| shifted to the left.'),
 }
 DX = -2
 

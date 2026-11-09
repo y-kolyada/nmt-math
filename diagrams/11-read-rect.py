@@ -7,7 +7,12 @@ TEXT = {
            'До задачі: прямокутник із підписаними сторонами і діагональ.'),
     'ru': ('Прямоугольник ABCD. На рисунке подписаны стороны: AD = 5 см, AB = 12 см. Диагональ AC - пунктиром, отмечена знаком вопроса.',
            'К задаче: прямоугольник с подписанными сторонами и диагональ.'),
+    'en': ('Rectangle ABCD. The figure labels the sides: AD = 5 cm, AB = 12 cm. The diagonal AC is dashed and marked with a question mark.',
+           'For the task: a rectangle with labelled sides and a diagonal.'),
 }
+
+# The unit is a word of the page language: a figure in English says cm.
+CM = {'uk': 'см', 'ru': 'см', 'en': 'cm'}
 
 
 def figure(lang):
@@ -21,8 +26,8 @@ def figure(lang):
     f.poly([A, B, C, D], close=True, w=1.8, fill_op=0.04)
     f.line(*A, *C, w=1.6, dash='6 4', accent=True)
     f.text((A[0] + C[0]) / 2 - 6, (A[1] + C[1]) / 2 - 8, '?', size=15, bold=True, accent=True)
-    f.text((A[0] + B[0]) / 2, A[1] + 20, '12 см', size=13, anchor='middle')
-    f.text(A[0] - 8, (A[1] + D[1]) / 2 + 5, '5 см', size=13, anchor='end')
+    f.text((A[0] + B[0]) / 2, A[1] + 20, '12 ' + CM[lang], size=13, anchor='middle')
+    f.text(A[0] - 8, (A[1] + D[1]) / 2 + 5, '5 ' + CM[lang], size=13, anchor='end')
     for name, p, dxy, anc in (('A', A, (-6, 16), 'end'), ('B', B, (6, 16), 'start'), ('C', C, (6, -4), 'start'), ('D', D, (-6, -4), 'end')):
         f.text(p[0] + dxy[0], p[1] + dxy[1], name, size=14, anchor=anc, italic=True)
     return f, label, caption

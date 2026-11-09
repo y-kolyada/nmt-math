@@ -7,6 +7,8 @@ TEXT = {
            '√(x²) = |x|: ліворуч від нуля корінь з квадрата не дорівнює x.'),
     'ru': ('График y = √(x²) - это «галочка» y = |x|: обе ветви выше оси Ox. Пунктиром показано y = x: слева от нуля она идёт ниже оси, поэтому √(x²) и x там различны.',
            '√(x²) = |x|: слева от нуля корень из квадрата не равен x.'),
+    'en': ('The graph of y = √(x²) is the «tick» y = |x|: both branches lie above the Ox axis. Dashed: y = x; to the left of zero it runs below the axis, so √(x²) and x differ there.',
+           '√(x²) = |x|: to the left of zero the root of the square is not x.'),
 }
 
 

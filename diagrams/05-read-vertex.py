@@ -7,6 +7,8 @@ TEXT = {
            'До задачі: парабола з позначеною вершиною.'),
     'ru': ('Парабола в координатах, ветви вверх. Её вершина - точка (2; 3): от вершины к осям проведён пунктир, на оси x отмечено 2, на оси y - 3.',
            'К задаче: парабола с отмеченной вершиной.'),
+    'en': ('A parabola on coordinate axes, opening upwards. Its vertex is the point (2; 3): dashed lines run from the vertex to the axes, 2 is marked on the x-axis and 3 on the y-axis.',
+           'For the task: a parabola with a marked vertex.'),
 }
 
 

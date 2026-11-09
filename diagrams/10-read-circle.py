@@ -8,6 +8,8 @@ TEXT = {
            'До задачі: вписаний трикутник, центральний кут і вписаний кут.'),
     'ru': ('Окружность с центром O, точки A, B, C на окружности, треугольник ABC вписан. На рисунке отмечены центральный угол AOB = 130° (опирается на дугу AB, не содержащую C) и угол CAB = 70°. Угол ABC отмечен знаком вопроса.',
            'К задаче: вписанный треугольник, центральный угол и вписанный угол.'),
+    'en': ('A circle with centre O, points A, B, C on the circle, triangle ABC inscribed. The figure marks the central angle AOB = 130° (on the arc AB that does not contain C) and the angle CAB = 70°. Angle ABC is marked with a question mark.',
+           'For the task: an inscribed triangle, a central angle and an inscribed angle.'),
 }
 
 

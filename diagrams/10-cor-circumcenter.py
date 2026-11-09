@@ -7,6 +7,8 @@ TEXT = {
            'Наслідок: серединні перпендикуляри до сторін трикутника перетинаються в центрі описаного кола.'),
     'ru': ('Треугольник ABC и серединные перпендикуляры к трём его сторонам, пунктиром. Они пересекаются в одной точке O - центре окружности, которая проходит через A, B и C.',
            'Следствие: серединные перпендикуляры к сторонам треугольника пересекаются в центре описанной окружности.'),
+    'en': ('Triangle ABC and the perpendicular bisectors of its three sides, dashed. They meet at one point O, the centre of the circle through A, B and C.',
+           'Corollary: the perpendicular bisectors of the sides of a triangle meet at the centre of the circumscribed circle.'),
 }
 A, B, C = (66, 178), (254, 178), (130, 46)
 

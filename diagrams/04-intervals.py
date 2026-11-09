@@ -6,6 +6,9 @@ TEXT = {
            'Метод інтервалів для (x − 3)(x + 3): знак змінюється лише в нулях множників.', ['x² > 9', 'x² < 9', 'x² > 9']),
     'ru': ('Числовая прямая с нулями множителей −3 и 3. Слева от −3 и справа от 3 произведение (x − 3)(x + 3) положительно, между ними - отрицательно. Поэтому x² > 9 при x < −3 или x > 3, а x² < 9 между −3 и 3.',
            'Метод интервалов для (x − 3)(x + 3): знак меняется только в нулях множителей.', ['x² > 9', 'x² < 9', 'x² > 9']),
+    'en': ('A number line with the zeros of the factors, −3 and 3. To the left of −3 and to the right of 3 the product (x − 3)(x + 3) is positive, between them it is negative. So x² > 9 for x < −3 or x > 3, and x² < 9 between −3 and 3.',
+           'The interval method for (x − 3)(x + 3): the sign changes only at the zeros of the factors.',
+           ['x² > 9', 'x² < 9', 'x² > 9']),
 }
 
 

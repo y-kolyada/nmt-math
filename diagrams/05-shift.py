@@ -6,6 +6,9 @@ TEXT = {
            'f(x + 2): вершина переїхала з 0 у −2, тобто ліворуч.', 'ліворуч на 2'),
     'ru': ('Парабола y = x² с вершиной в нуле и парабола y = (x + 2)² с вершиной в точке −2. Стрелка показывает сдвиг на 2 влево, хотя в скобках стоит плюс.',
            'f(x + 2): вершина переехала из 0 в −2, то есть влево.', 'влево на 2'),
+    'en': ('The parabola y = x² with vertex at zero and the parabola y = (x + 2)² with vertex at −2. The arrow shows a shift of 2 to the left, although the brackets hold a plus.',
+           'f(x + 2): the vertex moved from 0 to −2, that is, to the left.',
+           'left by 2'),
 }
 
 

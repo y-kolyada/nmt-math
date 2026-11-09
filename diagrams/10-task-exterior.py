@@ -7,6 +7,8 @@ TEXT = {
            'До задачі: зовнішній кут трикутника при вершині C.'),
     'ru': ('Треугольник ABC с углами A = 50° и B = 70°. Сторона AC продолжена за вершину C; внешний угол при вершине C, между продолжением и стороной CB, отмечен знаком вопроса.',
            'К задаче: внешний угол треугольника при вершине C.'),
+    'en': ('Triangle ABC with angles A = 50° and B = 70°. Side AC is extended beyond vertex C; the exterior angle at vertex C, between the extension and side CB, is marked with a question mark.',
+           'For the task: the exterior angle of a triangle at vertex C.'),
 }
 ANG_A, ANG_B = 50, 70
 

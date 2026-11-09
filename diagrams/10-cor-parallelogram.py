@@ -7,6 +7,8 @@ TEXT = {
            'Наслідок: сусідні кути паралелограма в сумі 180°, протилежні рівні.'),
     'ru': ('Параллелограмм ABCD. Углы A и C отмечены α, углы B и D отмечены 180° − α: соседние углы вместе дают 180°, противоположные равны.',
            'Следствие: соседние углы параллелограмма в сумме 180°, противоположные равны.'),
+    'en': ('Parallelogram ABCD. Angles A and C are marked α, angles B and D are marked 180° − α: adjacent angles add up to 180°, opposite angles are equal.',
+           'Corollary: adjacent angles of a parallelogram add up to 180°, opposite angles are equal.'),
 }
 ALPHA = 60
 

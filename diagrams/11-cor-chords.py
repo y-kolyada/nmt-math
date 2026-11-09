@@ -7,6 +7,8 @@ TEXT = {
            'Наслідок: хорда дорівнює подвоєному радіусу, помноженому на синус вписаного кута.'),
     'ru': ('Окружность с центром O и радиусом R. Хорда AB выделена, вписанный угол ACB, опирающийся на неё, отмечен γ. Пунктиром - диаметр, наибольшая хорда. Подпись: AB = 2R · sin γ.',
            'Следствие: хорда равна удвоенному радиусу, умноженному на синус вписанного угла.'),
+    'en': ('A circle with centre O and radius R. Chord AB is highlighted, and the inscribed angle ACB standing on it is marked γ. Dashed: a diameter, the longest chord. Label: AB = 2R · sin γ.',
+           'Corollary: a chord equals twice the radius times the sine of the inscribed angle.'),
 }
 AT = {'A': 215, 'B': 325, 'C': 95}
 

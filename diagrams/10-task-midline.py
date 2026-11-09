@@ -7,6 +7,8 @@ TEXT = {
            'До задачі: трикутник, вершини якого - середини сторін трикутника ABC.'),
     'ru': ('Треугольник ABC со сторонами AB = 8, BC = 10, AC = 12. Точки M, N и K - середины сторон AB, BC и AC; треугольник MNK выделен цветом.',
            'К задаче: треугольник, вершины которого - середины сторон треугольника ABC.'),
+    'en': ('Triangle ABC with sides AB = 8, BC = 10, AC = 12. The points M, N and K are the midpoints of AB, BC and AC; triangle MNK is coloured.',
+           'For the task: a triangle whose vertices are the midpoints of the sides of triangle ABC.'),
 }
 AB, BC, AC = 8, 10, 12
 

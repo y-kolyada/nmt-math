@@ -6,6 +6,8 @@ TEXT = {
            'До задачі: правильна чотирикутна піраміда і її висота.'),
     'ru': ('Правильная четырёхугольная пирамида SABCD: в основании квадрат ABCD со стороной 6, вершина S стоит над центром O квадрата, высота SO = 4. Невидимые рёбра - пунктиром.',
            'К задаче: правильная четырёхугольная пирамида и её высота.'),
+    'en': ('A regular square pyramid SABCD: the base is the square ABCD with side 6, the apex S stands above the centre O of the square, height SO = 4. Hidden edges are dashed.',
+           'For the task: a regular square pyramid and its height.'),
 }
 SIDE, HEIGHT = 6, 4
 

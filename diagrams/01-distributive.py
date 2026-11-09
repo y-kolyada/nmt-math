@@ -6,6 +6,8 @@ TEXT = {
            'Розподільний закон як площа: a(b + c) = ab + ac.'),
     'ru': ('Прямоугольник высотой a и шириной b + c разрезан на два прямоугольника: ab и ac. Площадь целого a(b + c) равна сумме площадей ab + ac.',
            'Распределительный закон как площадь: a(b + c) = ab + ac.'),
+    'en': ('A rectangle of height a and width b + c is cut into two rectangles: ab and ac. The area of the whole, a(b + c), equals the sum of the areas ab + ac.',
+           'The distributive law as area: a(b + c) = ab + ac.'),
 }
 
 

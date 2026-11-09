@@ -7,6 +7,8 @@ TEXT = {
            'Наслідок: у вписаному чотирикутнику сума протилежних кутів дорівнює 180°.'),
     'ru': ('Четырёхугольник ABCD, вписанный в окружность. Угол A отмечен α, противоположный угол C - 180° − α; угол B отмечен β, противоположный угол D - 180° − β.',
            'Следствие: во вписанном четырёхугольнике сумма противоположных углов равна 180°.'),
+    'en': ('Quadrilateral ABCD inscribed in a circle. Angle A is marked α, the opposite angle C is 180° − α; angle B is marked β, the opposite angle D is 180° − β.',
+           'Corollary: in an inscribed quadrilateral, opposite angles add up to 180°.'),
 }
 # the positions of A, B, C, D on the circle, degrees counter-clockwise from the right
 AT = {'A': 200, 'B': 290, 'C': 10, 'D': 110}

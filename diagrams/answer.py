@@ -27,14 +27,22 @@ import sys
 
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parent
-LANGS = ('uk', 'ru')
+LANGS = ('uk', 'ru', 'en')
+# English writes a decimal point where Ukrainian and Russian write a comma.
+POINT = {'uk': ',', 'ru': ',', 'en': '.'}
 
 
-def fmt(v):
+def fmt(v, lang='uk'):
     if isinstance(v, str):
         return v
     s = '%g' % round(v, 6)
-    return s.replace('.', ',')
+    return s.replace('.', POINT[lang])
+
+
+def translated(lang, tid):
+    """The block of the task exists in this language and is not a stub."""
+    page = ROOT / lang / (tid[:2] + '.html')
+    return page.is_file() and 'stub-card' not in page.read_text(encoding='utf-8')
 
 
 def task(lang, tid):
@@ -47,9 +55,9 @@ def task(lang, tid):
     return None
 
 
-def numbers(s):
-    """The unsigned numbers written in a piece of text, decimal comma kept."""
-    return set(re.findall(r'\d+(?:,\d+)?', s))
+def numbers(s, lang='uk'):
+    """The unsigned numbers written in a piece of text, decimal separator kept."""
+    return set(re.findall(r'\d+(?:%s\d+)?' % re.escape(POINT[lang]), s))
 
 
 def data(tid):
@@ -66,14 +74,14 @@ def figure_faults(lang, tid, body, values):
     if not m:
         return ['%s: рисунок не запечён' % lang]
     svg = m.group(1)
-    labels = numbers(' '.join(re.findall(r'<text[^>]*>([^<]*)</text>', svg)))
-    aria = numbers(' '.join(re.findall(r'aria-label="([^"]*)"', svg)))
+    labels = numbers(' '.join(re.findall(r'<text[^>]*>([^<]*)</text>', svg)), lang)
+    aria = numbers(' '.join(re.findall(r'aria-label="([^"]*)"', svg)), lang)
     head = body[:m.start()]
     head = re.sub(r'<p class="task-(?:kind|class)">.*?</p>', '', head, flags=re.S)
-    cond = numbers(re.sub(r'<[^>]+>', ' ', head))
+    cond = numbers(re.sub(r'<[^>]+>', ' ', head), lang)
     bad = []
     for name, v in values.items():
-        s = fmt(abs(v))
+        s = fmt(abs(v), lang)
         if s not in labels:
             bad.append('%s: %s = %s нет подписью на рисунке' % (lang, name, s))
         if s not in aria:
@@ -94,6 +102,9 @@ def main():
     value = fmt(raw)
     bad = []
     for lang in LANGS:
+        # A language whose block is still a stub has no task to check yet.
+        if lang != 'uk' and not translated(lang, tid):
+            continue
         found = task(lang, tid)
         if not found:
             bad.append('%s: нет задачи' % lang)
@@ -106,7 +117,7 @@ def main():
                 got = got.split(' ')[0].rstrip('°').replace('−', '-')
         else:
             got = answer
-        if got != value:
+        if got != fmt(raw, lang):
             bad.append('%s: на странице %s' % (lang, got))
         if figure:
             bad += figure_faults(lang, tid, body, values)

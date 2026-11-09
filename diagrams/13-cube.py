@@ -6,6 +6,10 @@ TEXT = {
            'Ребро вдвічі - об\'єм у 2³ = 8 разів.', 'V = 1', 'V = 8'),
     'ru': ('Слева единичный кубик. Справа куб с ребром 2, сложенный из восьми таких кубиков: два слоя по четыре. Ребро удвоилось, объём вырос в 8 раз.',
            'Ребро вдвое - объём в 2³ = 8 раз.', 'V = 1', 'V = 8'),
+    'en': ('On the left, a unit cube. On the right, a cube with edge 2, made of eight such cubes: two layers of four. The edge doubled, the volume grew 8 times.',
+           'Twice the edge - 2³ = 8 times the volume.',
+           'V = 1',
+           'V = 8'),
 }
 
 DX, DY = 0.5, 0.35  # oblique projection of the depth axis

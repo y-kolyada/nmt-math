@@ -7,6 +7,8 @@ TEXT = {
            'Наслідок: відрізки дотичних, проведених до кола з однієї точки, рівні.'),
     'ru': ('Окружность с центром O и точка P вне её. Из P проведены две касательные, точки касания T₁ и T₂; оба отрезка касательных отмечены t. Радиусы OT₁ и OT₂ перпендикулярны касательным.',
            'Следствие: отрезки касательных, проведённых к окружности из одной точки, равны.'),
+    'en': ('A circle with centre O and a point P outside it. Two tangents are drawn from P, touching at T₁ and T₂; both tangent segments are marked t. The radii OT₁ and OT₂ are perpendicular to the tangents.',
+           'Corollary: the tangent segments drawn to a circle from one point are equal.'),
 }
 
 

@@ -7,12 +7,15 @@ NAMES = {
            8: 'Похідна', 9: 'Лічба', 10: 'Фігури', 11: 'Виміри', 12: 'Вектори', 13: 'Простір'},
     'ru': {1: 'Число', 2: 'Процент', 3: 'Алгебра', 4: 'Корни', 5: 'Функция', 6: 'Степень', 7: 'sin, cos',
            8: 'Скорость', 9: 'Счёт', 10: 'Фигуры', 11: 'Площади', 12: 'Векторы', 13: 'Объёмы'},
+    'en': {1: 'Number', 2: 'Percent', 3: 'Algebra', 4: 'Equations', 5: 'Function', 6: 'Power', 7: 'sin, cos', 8: 'Derivative', 9: 'Counting', 10: 'Figures', 11: 'Measure', 12: 'Vectors', 13: 'Space'},
 }
 TEXT = {
     'uk': ('Граф тринадцяти блоків: стрілка веде від блоку до того, що з нього виростає. Число веде до відсотка, виразів, рівнянь, функції і похідної; вирази і функція - до степеня й логарифма; число - до лічби варіантів. Фігури ведуть до тригонометрії, вимірювань, простору, а вимірювання і рівняння - до координат і векторів.',
            'Як блоки виростають один з одного: алгебра зверху, геометрія знизу.'),
     'ru': ('Граф тринадцати блоков: стрелка ведёт от блока к тому, что из него вырастает. Число ведёт к проценту, выражениям, уравнениям, функции и производной; выражения и функция - к степени и логарифму; число - к счёту вариантов. Фигуры ведут к тригонометрии, измерениям, пространству, а измерения и уравнения - к координатам и векторам.',
            'Как блоки вырастают друг из друга: алгебра сверху, геометрия снизу.'),
+    'en': ('A graph of the thirteen blocks: an arrow leads from a block to the one that grows out of it. Number leads to percent, expressions, equations, function and derivative; expressions and function lead to power and logarithm; number leads to counting. Figures lead to trigonometry, measurement and space, and measurement and equations lead to coordinates and vectors.',
+           'How the blocks grow out of one another: algebra above, geometry below.'),
 }
 # Three columns, so an arrow has room between the boxes: 30 units across and
 # 24 down (four columns left 6 and 12, and the head of an arrow did not fit).

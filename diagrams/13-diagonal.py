@@ -6,6 +6,8 @@ TEXT = {
            'Діагональ паралелепіпеда: Піфагор двічі, d² = a² + b² + c².'),
     'ru': ('Прямоугольный параллелепипед с рёбрами a, b, c. Пунктиром - диагональ основания √(a² + b²). Она вместе с боковым ребром c образует прямоугольный треугольник, гипотенуза которого - диагональ параллелепипеда d, поэтому d² = a² + b² + c².',
            'Диагональ параллелепипеда: Пифагор дважды, d² = a² + b² + c².'),
+    'en': ('A cuboid with edges a, b, c. Dashed: the diagonal of the base, √(a² + b²). Together with the side edge c it forms a right triangle whose hypotenuse is the diagonal of the cuboid d, so d² = a² + b² + c².',
+           'The diagonal of a cuboid: Pythagoras twice, d² = a² + b² + c².'),
 }
 
 

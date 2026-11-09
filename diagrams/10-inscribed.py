@@ -7,6 +7,8 @@ TEXT = {
            'Вписаний кут - половина центрального на тій самій дузі: 100° і 50°.'),
     'ru': ('Окружность с центром O. Центральный угол AOB равен 100°, вписанный угол ACB опирается на ту же дугу AB и равен 50° - вдвое меньше.',
            'Вписанный угол - половина центрального на той же дуге: 100° и 50°.'),
+    'en': ('A circle with centre O. The central angle AOB is 100°; the inscribed angle ACB stands on the same arc AB and is 50°, half as large.',
+           'An inscribed angle is half the central angle on the same arc: 100° and 50°.'),
 }
 
 

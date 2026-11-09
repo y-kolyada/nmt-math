@@ -7,6 +7,8 @@ TEXT = {
            'До задачі: рулетка з восьми рівних секторів.'),
     'ru': ('Круг-рулетка, разделённый на 8 одинаковых секторов с номерами от 1 до 8. Стрелка в центре останавливается наугад на одном из секторов.',
            'К задаче: рулетка из восьми равных секторов.'),
+    'en': ('A spinner divided into 8 equal sectors numbered 1 to 8. The arrow in the centre stops at random on one of the sectors.',
+           'For the task: a spinner of eight equal sectors.'),
 }
 N = 8
 

@@ -6,6 +6,8 @@ TEXT = {
            'Координати вектора - кінець мінус початок: AB = (2 − 5; 4 − 1) = (−3; 3).'),
     'ru': ('Координатная сетка с точками A(5; 1) и B(2; 4). Вектор AB идёт от A к B: по оси x на −3, по оси y на +3, поэтому AB = (−3; 3), конец минус начало.',
            'Координаты вектора - конец минус начало: AB = (2 − 5; 4 − 1) = (−3; 3).'),
+    'en': ('A coordinate grid with points A(5; 1) and B(2; 4). The vector AB goes from A to B: by −3 along the x-axis and by +3 along the y-axis, so AB = (−3; 3), end minus start.',
+           'The coordinates of a vector are end minus start: AB = (2 − 5; 4 − 1) = (−3; 3).'),
 }
 
 

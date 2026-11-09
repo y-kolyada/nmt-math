@@ -6,6 +6,8 @@ TEXT = {
            'Наслідок: b - точка перетину з віссю y, k - підйом прямої на один крок праворуч.'),
     'ru': ('Прямая y = kx + b в координатах. Она пересекает ось y в точке, отмеченной b. Ступенька под прямой: шаг 1 вправо - подъём k вверх.',
            'Следствие: b - точка пересечения с осью y, k - подъём прямой на один шаг вправо.'),
+    'en': ('The line y = kx + b on coordinate axes. It crosses the y-axis at the point marked b. A step under the line: 1 to the right, k up.',
+           'Corollary: b is where the line crosses the y-axis, k is how far the line rises for one step to the right.'),
 }
 K, B0 = 0.5, 1.5
 

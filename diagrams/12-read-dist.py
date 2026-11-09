@@ -7,6 +7,8 @@ TEXT = {
            'До задачі: дві точки, координати яких видно на осях.'),
     'ru': ('Координатная плоскость с точками A и B. От точек к осям проведён пунктир: точка A имеет абсциссу 1 и ординату 2, точка B - абсциссу 7 и ординату 10. На осях подписаны 1, 7 и 2, 10.',
            'К задаче: две точки, координаты которых видны на осях.'),
+    'en': ('A coordinate plane with points A and B. Dashed lines run from the points to the axes: point A has abscissa 1 and ordinate 2, point B has abscissa 7 and ordinate 10. The axes are labelled 1, 7 and 2, 10.',
+           'For the task: two points whose coordinates can be seen on the axes.'),
 }
 
 

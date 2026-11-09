@@ -7,6 +7,8 @@ TEXT = {
            'Синус і косинус - координати точки одиничного кола; тотожність - теорема Піфагора.'),
     'ru': ('Единичная окружность с центром в начале координат. Точка на окружности под углом α имеет координаты (cos α; sin α). Катеты прямоугольного треугольника - cos α и sin α, гипотенуза - радиус 1, поэтому cos²α + sin²α = 1.',
            'Синус и косинус - координаты точки единичной окружности; тождество - теорема Пифагора.'),
+    'en': ('The unit circle centred at the origin. The point on the circle at angle α has coordinates (cos α; sin α). The legs of the right triangle are cos α and sin α, the hypotenuse is the radius 1, so cos²α + sin²α = 1.',
+           "Sine and cosine are the coordinates of a point of the unit circle; the identity is Pythagoras' theorem."),
 }
 
 

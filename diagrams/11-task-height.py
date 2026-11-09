@@ -6,6 +6,8 @@ TEXT = {
            'До задачі: висота CH прямокутного трикутника, проведена до гіпотенузи.'),
     'ru': ('Прямоугольный треугольник ABC с прямым углом C: катет AC = 15 вертикальный, катет BC = 20 горизонтальный. Из вершины C к гипотенузе AB проведена высота CH, обозначенная h.',
            'К задаче: высота CH прямоугольного треугольника, проведённая к гипотенузе.'),
+    'en': ('Right triangle ABC with the right angle at C: leg AC = 15 is vertical, leg BC = 20 is horizontal. From vertex C the height CH, marked h, is drawn to the hypotenuse AB.',
+           'For the task: the height CH of a right triangle, drawn to the hypotenuse.'),
 }
 AC, BC = 15, 20
 

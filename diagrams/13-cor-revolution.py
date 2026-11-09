@@ -6,6 +6,8 @@ TEXT = {
            'Наслідок: конус утворюється обертанням прямокутного трикутника навколо катета; гіпотенуза стає твірною.'),
     'ru': ('Конус. Прямоугольный треугольник выделен: его катет h лежит на оси вращения, пунктиром; второй катет r - радиус основания; гипотенуза l - образующая конуса. Вращение треугольника вокруг h даёт конус.',
            'Следствие: конус образуется вращением прямоугольного треугольника вокруг катета; гипотенуза становится образующей.'),
+    'en': ('A cone. A right triangle is highlighted: its leg h lies on the axis of rotation, dashed; the other leg r is the radius of the base; the hypotenuse l is the slant height of the cone. Rotating the triangle about h gives the cone.',
+           'Corollary: a cone is formed by rotating a right triangle about a leg; the hypotenuse becomes the slant height.'),
 }
 
 

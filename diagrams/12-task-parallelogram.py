@@ -6,6 +6,8 @@ TEXT = {
            'До задачі: паралелограм ABCD, у якого невідома вершина D.'),
     'ru': ('Координатная плоскость с вершинами параллелограмма A(1; 1), B(4; 2), C(5; 5). Четвёртая вершина D отмечена без координат; стороны CD и DA - пунктиром.',
            'К задаче: параллелограмм ABCD, у которого неизвестна вершина D.'),
+    'en': ('A coordinate plane with the vertices of a parallelogram A(1; 1), B(4; 2), C(5; 5). The fourth vertex D is marked without coordinates; the sides CD and DA are dashed.',
+           'For the task: parallelogram ABCD with an unknown vertex D.'),
 }
 A, B, C = (1, 1), (4, 2), (5, 5)
 
