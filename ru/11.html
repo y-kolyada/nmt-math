@@ -3,22 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Измерение фигур · nmt-math · ai|</title>
+<title>Измерения на плоскости · nmt-math · ai|</title>
 <!-- meta: built by tools/build-meta.py - do not edit by hand -->
-<meta name="description" content="">
+<meta name="description" content="Фигурам из блока 10 ставят в соответствие числа: длины, углы, площади.">
 <link rel="canonical" href="https://y-kolyada.github.io/nmt-math/ru/11.html">
 <link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/11.html">
 <link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/11.html">
 <link rel="alternate" hreflang="x-default" href="https://y-kolyada.github.io/nmt-math/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="nmt-math">
-<meta property="og:title" content="Измерение фигур">
-<meta property="og:description" content="">
+<meta property="og:title" content="Измерения на плоскости">
+<meta property="og:description" content="Фигурам из блока 10 ставят в соответствие числа: длины, углы, площади.">
 <meta property="og:url" content="https://y-kolyada.github.io/nmt-math/ru/11.html">
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Измерение фигур","description":"","url":"https://y-kolyada.github.io/nmt-math/ru/11.html","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Измерения на плоскости","description":"Фигурам из блока 10 ставят в соответствие числа: длины, углы, площади.","url":"https://y-kolyada.github.io/nmt-math/ru/11.html","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
 <!-- /meta -->
 <link rel="stylesheet" href="../assets/style.css?v=1">
 <link rel="stylesheet" href="../assets/study.css?v=1">
@@ -90,17 +90,222 @@
   </nav>
 
   <main id="main">
-    <h1>Измерение фигур</h1>
-    <p class="page-size" data-words="19">Слов: 19</p>
+    <h1>Измерения на плоскости</h1>
+    <p class="page-size" data-words="778">Слов: 778</p>
+    <p class="lead">Фигурам из блока 10 ставят в соответствие числа: длины, углы, площади. Почти каждая формула
+    здесь - либо теорема Пифагора, либо площадь прямоугольника, разрезанного и сложенного иначе.</p>
 
-    <div class="stub-card">
-      <h2>Русская версия готовится</h2>
-      <p>Полная рабочая версия этой страницы опубликована на украинском языке.</p>
-      <p>Открыть полную версию:</p>
-      <div class="stub-actions">
-        <a href="../uk/11.html" class="btn-primary">Измерение фигур →</a>
-      </div>
+    <div class="box key" id="key-idea">
+      <h2>Главная мысль страницы <a class="anchor-link" href="#key-idea" aria-label="ссылка на этот блок">#</a></h2>
+      <p>Теорема косинусов - это Пифагор для любого треугольника, а площадь треугольника через синус - это «половина основания на
+      высоту», где высота записана через угол. Площади фигур выводятся из площади прямоугольника разрезанием. И одно правило,
+      которое спасает баллы: площадь растёт как квадрат линейного размера, объём (блок 13) - как куб. Блок умеет мерить; расположение
+      фигур в координатах - тема блока 12.</p>
     </div>
+
+    <span class="step">Шаг 0 · Зацепка</span>
+    <h2 id="hook">1 · Сторону удвоили - площадь удвоилась? <a class="anchor-link" href="#hook">#</a></h2>
+    <p>Квадрат со стороной 3 имеет площадь 9. Сторону удвоили. Привычный ответ: «площадь тоже удвоилась, 18». Но квадрат
+    со стороной 6 имеет площадь 36 - вчетверо большую. Его можно сложить из четырёх исходных квадратов. Площадь
+    зависит от двух измерений, и каждое из них удвоилось.</p>
+    <!-- fig:11-scale -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 176" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Слева квадрат со стороной 3 и площадью 9. Справа квадрат со стороной 6: он складывается из четырёх таких же квадратов, поэтому его площадь 36, вчетверо больше.">
+        <rect x="20.0" y="80.0" width="66.0" height="66.0" rx="0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.2"/>
+        <text x="53.0" y="118.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">S = 9</text>
+        <text x="53.0" y="164.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-style="italic">3</text>
+        <rect x="150.0" y="14.0" width="66.0" height="66.0" rx="0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="183.0" y="52.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">9</text>
+        <rect x="216.0" y="14.0" width="66.0" height="66.0" rx="0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.2"/>
+        <text x="249.0" y="52.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">9</text>
+        <rect x="150.0" y="80.0" width="66.0" height="66.0" rx="0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.2"/>
+        <text x="183.0" y="118.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">9</text>
+        <rect x="216.0" y="80.0" width="66.0" height="66.0" rx="0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.2"/>
+        <text x="249.0" y="118.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">9</text>
+        <text x="216.0" y="164.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-style="italic">6  ·  S = 36</text>
+        <line x1="96.0" y1="110.0" x2="140.0" y2="90.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <polygon points="140.0,90.0 135.3,95.1 133.0,90.2" fill="currentColor"/>
+      </svg>
+      <p class="dim">Рисунок 24. Сторона удвоилась - площадь выросла вчетверо: 3² = 9, 6² = 36.</p>
+    </div>
+    <!-- /fig:11-scale -->
+
+    <span class="step">Шаг 1 · Понятие</span>
+    <h2 id="concept">2 · Длина, угол, площадь <a class="anchor-link" href="#concept">#</a></h2>
+    <ul>
+      <li>В <strong>прямоугольном треугольнике</strong>: синус острого угла - отношение противолежащего катета к гипотенузе, косинус -
+      прилежащего катета к гипотенузе, тангенс - противолежащего катета к прилежащему.</li>
+      <li><strong>Площадь</strong> - сколько единичных квадратов вмещает фигура. Равные фигуры имеют равные площади, а площадь фигуры,
+      составленной из частей, - сумма площадей частей.</li>
+      <li><strong>Коэффициент подобия</strong> k - во сколько раз длины одной фигуры больше соответствующих длин другой.</li>
+    </ul>
+
+    <span class="step">Шаг 2 · Закон</span>
+    <h2 id="law">3 · Законы измерения <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-pythagoras">
+      <p class="law-name">Теорема Пифагора</p>
+      <div class="math-block" data-tex="c^2 = a^2 + b^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">c^2 = a^2 + b^2</annotation></semantics></math></div>
+      <p>c - гипотенуза, a и b - катеты прямоугольного треугольника.</p>
+    </div>
+    <div class="law" id="law-cosines">
+      <p class="law-name">Теорема косинусов и теорема синусов</p>
+      <div class="math-block" data-tex="c^2 = a^2 + b^2 - 2ab\cos C,\qquad \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi><mi>C</mi><mo>&#x0002C;</mo><mspace width="2em" /><mfrac><mrow><mi>a</mi></mrow><mrow><mi>sin</mi><mi>A</mi></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mi>b</mi></mrow><mrow><mi>sin</mi><mi>B</mi></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mi>c</mi></mrow><mrow><mi>sin</mi><mi>C</mi></mrow></mfrac><mo>&#x0003D;</mo><mn>2</mn><mi>R</mi></mrow><annotation encoding="application/x-tex">c^2 = a^2 + b^2 - 2ab\cos C,\qquad \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-areas">
+      <p class="law-name">Площади</p>
+      <div class="math-block" data-tex="S_\triangle = \frac{1}{2}ah = \frac{1}{2}ab\sin C,\qquad S_{\text{трап}} = \frac{a + b}{2}\,h,\qquad S_{\text{круга}} = \pi r^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>S</mi><mi>&#x025B3;</mi></msub><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>a</mi><mi>h</mi><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>a</mi><mi>b</mi><mi>sin</mi><mi>C</mi><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>S</mi><mrow><mtext>трап</mtext></mrow></msub><mo>&#x0003D;</mo><mfrac><mrow><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi></mrow><mrow><mn>2</mn></mrow></mfrac><mspace width="0.167em" /><mi>h</mi><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>S</mi><mrow><mtext>круга</mtext></mrow></msub><mo>&#x0003D;</mo><mi>&#x003C0;</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">S_\triangle = \frac{1}{2}ah = \frac{1}{2}ab\sin C,\qquad S_{\text{трап}} = \frac{a + b}{2}\,h,\qquad S_{\text{круга}} = \pi r^2</annotation></semantics></math></div>
+      <p>Длина окружности <span class="math" data-tex="C = 2\pi r"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>C</mi><mo>&#x0003D;</mo><mn>2</mn><mi>&#x003C0;</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">C = 2\pi r</annotation></semantics></math></span>; параллелограмм <span class="math" data-tex="S = ah"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>S</mi><mo>&#x0003D;</mo><mi>a</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">S = ah</annotation></semantics></math></span>.</p>
+    </div>
+    <div class="law" id="law-scale">
+      <p class="law-name">Площади подобных фигур</p>
+      <div class="math-block" data-tex="\frac{S_1}{S_2} = k^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><msub><mi>S</mi><mn>1</mn></msub></mrow><mrow><msub><mi>S</mi><mn>2</mn></msub></mrow></mfrac><mo>&#x0003D;</mo><msup><mi>k</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{S_1}{S_2} = k^2</annotation></semantics></math></div>
+    </div>
+
+    <span class="step">Шаг 3 · Почему так</span>
+    <h2 id="why">4 · Откуда формулы <a class="anchor-link" href="#why">#</a></h2>
+    <p><strong>Пифагор.</strong> Квадрат со стороной <span class="math" data-tex="a + b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a + b</annotation></semantics></math></span> можно заполнить четырьмя одинаковыми прямоугольными
+    треугольниками и квадратом на гипотенузе в середине. Площадь: <span class="math" data-tex="(a + b)^2 = 4 \cdot \frac{ab}{2} + c^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><mn>4</mn><mo>&#x000B7;</mo><mfrac><mrow><mi>a</mi><mi>b</mi></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x0002B;</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(a + b)^2 = 4 \cdot \frac{ab}{2} + c^2</annotation></semantics></math></span>.
+    Раскройте квадрат суммы (блок 3) - останется <span class="math" data-tex="a^2 + b^2 = c^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">a^2 + b^2 = c^2</annotation></semantics></math></span>.</p>
+    <!-- fig:11-pythagoras -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 236" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Квадрат со стороной a + b, в углах которого стоят четыре одинаковых прямоугольных треугольника с катетами a и b. Внутри остаётся квадрат со стороной c - гипотенузой. Площадь: (a + b)² = 4 · ab/2 + c², откуда a² + b² = c².">
+        <rect x="70.0" y="18.0" width="180.0" height="180.0" rx="0" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.2"/>
+        <polygon points="190.0,18.0 250.0,138.0 130.0,198.0 70.0,78.0" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.8" opacity="1.0" style="stroke:var(--acc);fill:var(--acc)"/>
+        <text x="160.0" y="114.0" fill="currentColor" font-size="18" opacity="1.0" text-anchor="middle" font-style="italic" font-weight="700">c²</text>
+        <text x="130.0" y="14.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">a</text>
+        <text x="220.0" y="14.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">b</text>
+        <text x="62.0" y="53.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">b</text>
+        <text x="62.0" y="143.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">a</text>
+        <text x="224.0" y="74.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic" style="fill:var(--acc)">c</text>
+      </svg>
+      <p class="dim">Рисунок 25. Доказательство теоремы Пифагора площадью: четыре треугольника и квадрат c².</p>
+    </div>
+    <!-- /fig:11-pythagoras -->
+    <p><strong>Косинусы.</strong> При <span class="math" data-tex="C = 90^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>C</mi><mo>&#x0003D;</mo><msup><mn>90</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">C = 90^\circ</annotation></semantics></math></span> косинус ноль, и формула становится Пифагором. Слагаемое
+    <span class="math" data-tex="-2ab\cos C"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02212;</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">-2ab\cos C</annotation></semantics></math></span> - поправка на то, насколько угол отличается от прямого.</p>
+    <p><strong>Площадь через синус.</strong> Высота к стороне a равна <span class="math" data-tex="b\sin C"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>b</mi><mi>sin</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">b\sin C</annotation></semantics></math></span> (из прямоугольного треугольника),
+    поэтому <span class="math" data-tex="\frac{1}{2}ah = \frac{1}{2}ab\sin C"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>a</mi><mi>h</mi><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>a</mi><mi>b</mi><mi>sin</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">\frac{1}{2}ah = \frac{1}{2}ab\sin C</annotation></semantics></math></span>. Трапеция - два треугольника, круг - многоугольник с очень
+    большим количеством сторон.</p>
+    <p><strong>Подобие.</strong> Каждый единичный квадрат внутри фигуры растягивается в k раз в обоих направлениях, то есть
+    в <span class="math" data-tex="k^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>k</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">k^2</annotation></semantics></math></span> раз по площади.</p>
+
+    <span class="step">Шаг 4 · Границы</span>
+    <h2 id="limits">5 · Где законы ломаются <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-right">
+      <p><strong>Пифагор - только для прямоугольного треугольника.</strong> Для других - теорема косинусов.</p>
+    </div>
+    <div class="limit" id="limit-obtuse">
+      <p><strong>Косинус тупого угла отрицателен.</strong> Тогда <span class="math" data-tex="-2ab\cos C"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02212;</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">-2ab\cos C</annotation></semantics></math></span> становится положительным, и сторона против
+      тупого угла длиннее, чем дал бы Пифагор.</p>
+    </div>
+    <div class="limit" id="limit-square">
+      <p><strong>Площадь растёт как квадрат.</strong> Увеличить все длины в k раз значит увеличить площадь в
+      <span class="math" data-tex="k^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>k</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">k^2</annotation></semantics></math></span> раз, а не в k.</p>
+    </div>
+
+    <span class="step">Шаг 5 · Применение</span>
+    <h2 id="apply">6 · Задачи в форме НМТ <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="В" data-limit="limit-right">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p>Катеты прямоугольного треугольника равны 6 см и 8 см. Найдите гипотенузу.</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · 7 см</button>
+        <button type="button" data-opt="Б">Б · 14 см</button>
+        <button type="button" data-opt="В">В · 10 см</button>
+        <button type="button" data-opt="Г">Г · √28 см</button>
+        <button type="button" data-opt="Д">Д · 48 см</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#law-pythagoras">теорема Пифагора</a>.</p>
+      <div class="solution"><span class="math" data-tex="\sqrt{36 + 64} = 10"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msqrt><mrow><mn>36</mn><mo>&#x0002B;</mo><mn>64</mn></mrow></msqrt><mo>&#x0003D;</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">\sqrt{36 + 64} = 10</annotation></semantics></math></span>. 14 - сумма катетов, √28 - разность квадратов.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="15" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Две стороны треугольника равны 6 см и 10 см, а угол между ними 30°. Найдите площадь треугольника (в см²).</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-areas">площадь треугольника через синус</a>.</p>
+      <div class="solution"><span class="math" data-tex="\frac{1}{2} \cdot 6 \cdot 10 \cdot \sin 30^\circ = 30 \cdot \frac{1}{2} = 15"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x000B7;</mo><mn>6</mn><mo>&#x000B7;</mo><mn>10</mn><mo>&#x000B7;</mo><mi>sin</mi><msup><mn>30</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><mn>30</mn><mo>&#x000B7;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x0003D;</mo><mn>15</mn></mrow><annotation encoding="application/x-tex">\frac{1}{2} \cdot 6 \cdot 10 \cdot \sin 30^\circ = 30 \cdot \frac{1}{2} = 15</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="35" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Основания трапеции равны 4 см и 10 см, высота 5 см. Найдите площадь трапеции (в см²).</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-areas">площадь трапеции</a>.</p>
+      <div class="solution"><span class="math" data-tex="\frac{4 + 10}{2} \cdot 5 = 35"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>4</mn><mo>&#x0002B;</mo><mn>10</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x000B7;</mo><mn>5</mn><mo>&#x0003D;</mo><mn>35</mn></mrow><annotation encoding="application/x-tex">\frac{4 + 10}{2} \cdot 5 = 35</annotation></semantics></math></span>: средняя линия на высоту.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="В" data-limit="limit-obtuse">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p>Две стороны треугольника 3 и 5, угол между ними 120°. Найдите третью сторону.</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · 4</button>
+        <button type="button" data-opt="Б">Б · √19</button>
+        <button type="button" data-opt="В">В · 7</button>
+        <button type="button" data-opt="Г">Г · 8</button>
+        <button type="button" data-opt="Д">Д · √34</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#law-cosines">теорема косинусов</a>.</p>
+      <div class="solution"><span class="math" data-tex="c^2 = 9 + 25 - 2 \cdot 15 \cdot \left(-\frac{1}{2}\right) = 49"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mn>9</mn><mo>&#x0002B;</mo><mn>25</mn><mo>&#x02212;</mo><mn>2</mn><mo>&#x000B7;</mo><mn>15</mn><mo>&#x000B7;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mo>&#x02212;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mo>&#x0003D;</mo><mn>49</mn></mrow><annotation encoding="application/x-tex">c^2 = 9 + 25 - 2 \cdot 15 \cdot \left(-\frac{1}{2}\right) = 49</annotation></semantics></math></span>,
+      c = 7. √19 - косинус взят со знаком «+», √34 - Пифагор для тупоугольного треугольника.</div>
+    </div>
+
+    <span class="step">Шаг 6 · Обратный ход</span>
+    <h2 id="reverse">7 · Назови закон сам <a class="anchor-link" href="#reverse">#</a></h2>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="3" data-limit="limit-square">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Площадь квадрата увеличилась в 9 раз. Во сколько раз увеличилась его сторона?</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-scale">площади подобных фигур</a>.</p>
+      <div class="solution"><span class="math" data-tex="k^2 = 9"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">k^2 = 9</annotation></semantics></math></span>, k = 3.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="5" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Гипотенуза прямоугольного треугольника 10 см, один из острых углов 30°. Найдите катет, противолежащий этому углу (в см).</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Понятие: <a href="#concept">синус острого угла</a>.</p>
+      <div class="solution"><span class="math" data-tex="10 \cdot \sin 30^\circ = 5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>10</mn><mo>&#x000B7;</mo><mi>sin</mi><msup><mn>30</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">10 \cdot \sin 30^\circ = 5</annotation></semantics></math></span>. Известный факт «катет против 30° равен половине
+      гипотенузы» - это то же определение синуса.</div>
+    </div>
+
+    <h2 id="error">8 · Найди ошибку в чужом решении <a class="anchor-link" href="#error">#</a></h2>
+    <p>Наталья пишет: «Радиус круга увеличили втрое, значит площадь круга увеличилась втрое».</p>
+    <details>
+      <summary>Где ошибка?</summary>
+      <p><span class="math" data-tex="\pi (3r)^2 = 9\pi r^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>&#x003C0;</mi><mo stretchy="false">&#x00028;</mo><mn>3</mn><mi>r</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><mn>9</mn><mi>&#x003C0;</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\pi (3r)^2 = 9\pi r^2</annotation></semantics></math></span>: площадь увеличилась в 9 раз. Площадь зависит от квадрата линейного размера
+      (<a href="#limit-square">третья граница</a>). Втрое увеличилась бы длина окружности.</p>
+    </details>
+
+    <h2 id="artifacts">Что у тебя есть после этой страницы <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>Пифагор, площадь прямоугольника и квадрат коэффициента.</strong> Теорема косинусов - Пифагор с поправкой на угол,
+      площадь через синус - высота, записанная через угол, площади фигур - разрезание. И площадь всегда растёт как квадрат.</p>
+    </div>
+    <!-- freq -->
+    <p class="dim law-freq" data-tasks="6">Частота на этом сайте, а не на НМТ: на этой странице 6 задач тренажёра, и они опираются на такие законы: Площади - 2, Площади подобных фигур - 1, Синус острого угла - 1, Теорема Пифагора - 1, Теорема косинусов и теорема синусов - 1.</p>
+    <!-- /freq -->
+    <p>Ты знаешь этот блок, если:</p>
+    <ol>
+      <li>решаешь 8 из 10 задач на длины и площади без подсказки;</li>
+      <li>можешь объяснить вслух, почему теорема косинусов при прямом угле становится теоремой Пифагора;</li>
+      <li>находишь ошибку в чужом решении, как у Натальи.</li>
+    </ol>
+  
+
+    <footer>
+      <nav class="pager" aria-label="Соседние темы">
+        <p class="pager-next">Следующая тема: <a href="12.html">Координаты и векторы</a></p>
+        <p class="pager-prev">Предыдущая тема: <a href="10.html">Фигуры на плоскости</a></p>
+      </nav>
+      <p class="footer-note">Сайт серии AI Factory. Сделан той же оснасткой, что и остальные: обычный HTML и CSS, проверка на bash, публикация через GitHub Pages.</p>
+    </footer>
   </main>
 
 </div>
