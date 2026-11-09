@@ -9,6 +9,8 @@ TEXT = {
            'К задаче: парабола с отмеченной вершиной.'),
     'en': ('A parabola on coordinate axes, opening upwards. Its vertex is the point (2; 3): dashed lines run from the vertex to the axes, 2 is marked on the x-axis and 3 on the y-axis.',
            'For the task: a parabola with a marked vertex.'),
+    'de': ('Eine nach oben geöffnete Parabel im Koordinatensystem. Ihr Scheitel ist der Punkt (2; 3): gestrichelte Linien führen vom Scheitel zu den Achsen, 2 ist auf der x-Achse und 3 auf der y-Achse markiert.',
+           'Zur Aufgabe: eine Parabel mit markiertem Scheitel.'),
 }
 
 

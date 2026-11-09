@@ -8,6 +8,8 @@ TEXT = {
            'Доказательство теоремы Пифагора площадью: четыре треугольника и квадрат c².'),
     'en': ('A square with side a + b, in whose corners stand four equal right triangles with legs a and b. Inside remains a square with side c, the hypotenuse. Area: (a + b)² = 4 · ab/2 + c², hence a² + b² = c².',
            "A proof of Pythagoras' theorem by area: four triangles and a square c²."),
+    'de': ('Ein Quadrat mit der Seite a + b, in dessen Ecken vier gleiche rechtwinklige Dreiecke mit den Katheten a und b stehen. Innen bleibt ein Quadrat mit der Seite c, der Hypotenuse. Fläche: (a + b)² = 4 · ab/2 + c², also a² + b² = c².',
+           'Ein Beweis des Satzes des Pythagoras über die Fläche: vier Dreiecke und ein Quadrat c².'),
 }
 
 

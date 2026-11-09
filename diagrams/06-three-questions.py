@@ -12,6 +12,10 @@ TEXT = {
            'One equality, three questions: power, root, logarithm.',
            ['power', 'root', 'logarithm'],
            ['we seek 8', 'we seek 2', 'we seek 3']),
+    'de': ('In der Mitte steht die Gleichung 2³ = 8. Drei Pfeile führen zu drei Fragen: Ergebnis unbekannt - eine Potenz, Basis unbekannt - eine Wurzel, Exponent unbekannt - ein Logarithmus.',
+           'Eine Gleichung, drei Fragen: Potenz, Wurzel, Logarithmus.',
+           ['Potenz', 'Wurzel', 'Logarithmus'],
+           ['gesucht 8', 'gesucht 2', 'gesucht 3']),
 }
 
 

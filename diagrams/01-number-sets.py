@@ -14,6 +14,10 @@ TEXT = {
            ['allowed roots', 'allowed division', 'allowed subtraction'],
            'Nested sets of numbers: natural numbers inside the integers, integers inside the rationals, rationals inside the reals. Each extension allowed an operation that was not there before: subtraction, division, taking a root.',
            'Each set of numbers lies inside the next one, and each extension came for the sake of a new operation.'),
+    'de': (['ℝ reell: √2, π hinzu', 'ℚ rational: Brüche p/q', 'ℤ ganz: Null und Negative', 'ℕ natürlich: 1, 2, 3, …'],
+           ['erlaubt Wurzeln', 'erlaubt Division', 'erlaubt Subtraktion'],
+           'Ineinander liegende Zahlenmengen: die natürlichen Zahlen in den ganzen, die ganzen in den rationalen, die rationalen in den reellen. Jede Erweiterung erlaubte eine Operation, die es vorher nicht gab: Subtraktion, Division, Wurzelziehen.',
+           'Jede Zahlenmenge liegt in der nächsten, und jede Erweiterung kam um einer neuen Operation willen.'),
 }
 
 

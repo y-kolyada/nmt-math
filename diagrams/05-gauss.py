@@ -9,6 +9,9 @@ TEXT = {
     'en': ('The sum from 1 to 100 is written twice: left to right and right to left. Each column gives 101, there are 100 columns, and each number is counted twice, so the sum is 101 · 100 / 2 = 5050.',
            'The sum of an arithmetic progression: a hundred pairs of 101, divided by two.',
            'each pair'),
+    'de': ('Die Summe von 1 bis 100 steht zweimal da: von links nach rechts und von rechts nach links. Jede Spalte ergibt 101, es gibt 100 Spalten, und jede Zahl ist doppelt gezählt, also ist die Summe 101 · 100 / 2 = 5050.',
+           'Die Summe einer arithmetischen Folge: hundert Paare zu 101, geteilt durch zwei.',
+           'jedes Paar'),
 }
 
 

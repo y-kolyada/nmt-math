@@ -3,7 +3,7 @@ from fig import Fig
 from bars import bars
 
 DATA = {'jan': 40, 'mar': 50}
-MONTHS = {'uk': ['січ', 'лют', 'бер', 'кві'], 'ru': ['янв', 'фев', 'мар', 'апр'], 'en': ['Jan', 'Feb', 'Mar', 'Apr']}
+MONTHS = {'uk': ['січ', 'лют', 'бер', 'кві'], 'ru': ['янв', 'фев', 'мар', 'апр'], 'en': ['Jan', 'Feb', 'Mar', 'Apr'], 'de': ['Jan', 'Feb', 'Mär', 'Apr']}
 TEXT = {
     'uk': ('Стовпчикова діаграма: ціна кілограма яблук, грн, за чотири місяці. Шкала від 0 до 60 з кроком 10. Січень - 40, лютий - 30, березень - 50, квітень - 60.',
            'До задачі: ціна яблук за чотири місяці.'),
@@ -11,6 +11,8 @@ TEXT = {
            'К задаче: цена яблок за четыре месяца.'),
     'en': ('A bar chart: the price of a kilogram of apples, UAH, over four months. The scale goes from 0 to 60 in steps of 10. January 40, February 30, March 50, April 60.',
            'For the task: the price of apples over four months.'),
+    'de': ('Ein Säulendiagramm: der Preis eines Kilogramms Äpfel in UAH über vier Monate. Die Skala geht von 0 bis 60 in Schritten von 10. Januar 40, Februar 30, März 50, April 60.',
+           'Zur Aufgabe: der Apfelpreis über vier Monate.'),
 }
 
 

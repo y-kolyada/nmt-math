@@ -8,6 +8,8 @@ TEXT = {
            'Сумма углов треугольника: три угла при вершине B составляют прямую линию.'),
     'en': ('Triangle ABC and a line through vertex B parallel to side AC. The angles at B formed by this line are equal to angles A and C as alternate angles. The three angles at B together make a straight angle, 180°.',
            'The angle sum of a triangle: the three angles at vertex B make a straight line.'),
+    'de': ('Das Dreieck ABC und eine Gerade durch die Ecke B parallel zur Seite AC. Die Winkel bei B, die diese Gerade bildet, sind als Wechselwinkel gleich den Winkeln A und C. Die drei Winkel bei B ergeben zusammen einen gestreckten Winkel, 180°.',
+           'Die Winkelsumme im Dreieck: die drei Winkel an der Ecke B bilden eine Gerade.'),
 }
 
 

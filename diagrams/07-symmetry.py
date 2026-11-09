@@ -9,6 +9,8 @@ TEXT = {
            'Формула приведения как симметрия окружности: sin(π − α) = sin α.'),
     'en': ('The points of the circle for the angles α and π − α are symmetric about the Oy axis: the ordinates are equal, the abscissas are opposite. Hence sin(π − α) = sin α and cos(π − α) = −cos α.',
            'A reduction formula as a symmetry of the circle: sin(π − α) = sin α.'),
+    'de': ('Die Kreispunkte zu den Winkeln α und π − α liegen symmetrisch zur Oy-Achse: die Ordinaten sind gleich, die Abszissen entgegengesetzt. Daher sin(π − α) = sin α und cos(π − α) = −cos α.',
+           'Eine Reduktionsformel als Symmetrie des Kreises: sin(π − α) = sin α.'),
 }
 
 

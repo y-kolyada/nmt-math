@@ -8,6 +8,8 @@ TEXT = {
            'Следствие: конус образуется вращением прямоугольного треугольника вокруг катета; гипотенуза становится образующей.'),
     'en': ('A cone. A right triangle is highlighted: its leg h lies on the axis of rotation, dashed; the other leg r is the radius of the base; the hypotenuse l is the slant height of the cone. Rotating the triangle about h gives the cone.',
            'Corollary: a cone is formed by rotating a right triangle about a leg; the hypotenuse becomes the slant height.'),
+    'de': ('Ein Kegel. Ein rechtwinkliges Dreieck ist hervorgehoben: seine Kathete h liegt auf der Drehachse, gestrichelt; die andere Kathete r ist der Radius der Grundfläche; die Hypotenuse l ist die Mantellinie des Kegels. Dreht man das Dreieck um h, entsteht der Kegel.',
+           'Folgerung: ein Kegel entsteht durch Drehung eines rechtwinkligen Dreiecks um eine Kathete; die Hypotenuse wird zur Mantellinie.'),
 }
 
 

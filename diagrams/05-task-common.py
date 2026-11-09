@@ -9,6 +9,8 @@ TEXT = {
            'К задаче: общие точки параболы и прямой.'),
     'en': ('The parabola y = x² and the line y = x + 2 on the same axes. The line crosses the parabola at two points, to the left and to the right of the Oy axis; both points are marked.',
            'For the task: the common points of a parabola and a line.'),
+    'de': ('Die Parabel y = x² und die Gerade y = x + 2 im selben Koordinatensystem. Die Gerade schneidet die Parabel in zwei Punkten, links und rechts der Oy-Achse; beide Punkte sind markiert.',
+           'Zur Aufgabe: die gemeinsamen Punkte einer Parabel und einer Geraden.'),
 }
 
 

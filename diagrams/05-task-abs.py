@@ -8,6 +8,8 @@ TEXT = {
            'К задаче: график y = |x|, сдвинутый влево.'),
     'en': ('Two «V» graphs on coordinate axes. Dashed: y = |x| with its vertex at the origin. Coloured: the same graph shifted 2 units to the left, with its vertex at (−2; 0). The point where the new graph crosses the Oy axis is marked.',
            'For the task: the graph of y = |x| shifted to the left.'),
+    'de': ('Zwei «V»-Graphen im Koordinatensystem. Gestrichelt: y = |x| mit dem Scheitel im Ursprung. Farbig: derselbe Graph um 2 Einheiten nach links verschoben, mit dem Scheitel bei (−2; 0). Der Punkt, in dem der neue Graph die Oy-Achse schneidet, ist markiert.',
+           'Zur Aufgabe: der Graph von y = |x|, nach links verschoben.'),
 }
 DX = -2
 

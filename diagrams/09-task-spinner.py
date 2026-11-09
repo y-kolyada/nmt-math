@@ -9,6 +9,8 @@ TEXT = {
            'К задаче: рулетка из восьми равных секторов.'),
     'en': ('A spinner divided into 8 equal sectors numbered 1 to 8. The arrow in the centre stops at random on one of the sectors.',
            'For the task: a spinner of eight equal sectors.'),
+    'de': ('Ein Glücksrad, in 8 gleiche Sektoren mit den Nummern 1 bis 8 geteilt. Der Pfeil in der Mitte bleibt zufällig auf einem der Sektoren stehen.',
+           'Zur Aufgabe: ein Glücksrad aus acht gleichen Sektoren.'),
 }
 N = 8
 

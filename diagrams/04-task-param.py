@@ -8,6 +8,8 @@ TEXT = {
            'К задаче: число корней уравнения x² − 4x = a как число общих точек параболы и прямой y = a.'),
     'en': ('The parabola y = x² − 4x with vertex at (2; −4) and the horizontal line y = a drawn below the vertex. A line lying below the vertex has no common points with the parabola.',
            'For the task: the number of roots of x² − 4x = a as the number of common points of the parabola and the line y = a.'),
+    'de': ('Die Parabel y = x² − 4x mit dem Scheitel (2; −4) und die waagerechte Gerade y = a unterhalb des Scheitels. Eine Gerade unterhalb des Scheitels hat keine gemeinsamen Punkte mit der Parabel.',
+           'Zur Aufgabe: die Zahl der Lösungen von x² − 4x = a als Zahl der gemeinsamen Punkte von Parabel und Gerade y = a.'),
 }
 
 

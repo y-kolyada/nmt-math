@@ -9,6 +9,8 @@ TEXT = {
            'К задаче: треугольник, вершины которого - середины сторон треугольника ABC.'),
     'en': ('Triangle ABC with sides AB = 8, BC = 10, AC = 12. The points M, N and K are the midpoints of AB, BC and AC; triangle MNK is coloured.',
            'For the task: a triangle whose vertices are the midpoints of the sides of triangle ABC.'),
+    'de': ('Das Dreieck ABC mit den Seiten AB = 8, BC = 10, AC = 12. Die Punkte M, N und K sind die Mittelpunkte von AB, BC und AC; das Dreieck MNK ist farbig.',
+           'Zur Aufgabe: ein Dreieck, dessen Ecken die Seitenmitten des Dreiecks ABC sind.'),
 }
 AB, BC, AC = 8, 10, 12
 

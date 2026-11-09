@@ -9,6 +9,8 @@ TEXT = {
            'Следствие: отрезки касательных, проведённых к окружности из одной точки, равны.'),
     'en': ('A circle with centre O and a point P outside it. Two tangents are drawn from P, touching at T₁ and T₂; both tangent segments are marked t. The radii OT₁ and OT₂ are perpendicular to the tangents.',
            'Corollary: the tangent segments drawn to a circle from one point are equal.'),
+    'de': ('Ein Kreis mit dem Mittelpunkt O und ein Punkt P außerhalb. Von P gehen zwei Tangenten aus, die den Kreis in T₁ und T₂ berühren; beide Tangentenabschnitte sind mit t markiert. Die Radien OT₁ und OT₂ stehen senkrecht auf den Tangenten.',
+           'Folgerung: die von einem Punkt an einen Kreis gelegten Tangentenabschnitte sind gleich lang.'),
 }
 
 

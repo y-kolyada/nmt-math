@@ -8,6 +8,8 @@ TEXT = {
            'Координаты вектора - конец минус начало: AB = (2 − 5; 4 − 1) = (−3; 3).'),
     'en': ('A coordinate grid with points A(5; 1) and B(2; 4). The vector AB goes from A to B: by −3 along the x-axis and by +3 along the y-axis, so AB = (−3; 3), end minus start.',
            'The coordinates of a vector are end minus start: AB = (2 − 5; 4 − 1) = (−3; 3).'),
+    'de': ('Ein Koordinatengitter mit den Punkten A(5; 1) und B(2; 4). Der Vektor AB geht von A nach B: um −3 entlang der x-Achse und um +3 entlang der y-Achse, also AB = (−3; 3), Ende minus Anfang.',
+           'Die Koordinaten eines Vektors sind Ende minus Anfang: AB = (2 − 5; 4 − 1) = (−3; 3).'),
 }
 
 

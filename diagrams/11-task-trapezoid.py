@@ -9,6 +9,8 @@ TEXT = {
            'К задаче: высота равнобокой трапеции, опущенная из вершины меньшего основания.'),
     'en': ('Isosceles trapezium ABCD: lower base AD = 16, upper base BC = 4, leg AB = 10. From vertex B the height h is dropped to the base AD.',
            'For the task: the height of an isosceles trapezium, dropped from a vertex of the shorter base.'),
+    'de': ('Das gleichschenklige Trapez ABCD: untere Grundseite AD = 16, obere Grundseite BC = 4, Schenkel AB = 10. Von der Ecke B ist die Höhe h auf die Grundseite AD gefällt.',
+           'Zur Aufgabe: die Höhe eines gleichschenkligen Trapezes, von einer Ecke der kürzeren Grundseite gefällt.'),
 }
 BIG, SMALL, LEG = 16, 4, 10
 

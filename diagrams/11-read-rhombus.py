@@ -9,10 +9,12 @@ TEXT = {
            'К задаче: ромб и две его диагонали.'),
     'en': ('Rhombus ABCD with diagonals meeting at point O at a right angle. The figure labels the diagonals: AC = 24 cm, BD = 10 cm.',
            'For the task: a rhombus and its two diagonals.'),
+    'de': ('Die Raute ABCD, deren Diagonalen sich im Punkt O im rechten Winkel schneiden. Auf der Abbildung sind die Diagonalen beschriftet: AC = 24 cm, BD = 10 cm.',
+           'Zur Aufgabe: eine Raute und ihre zwei Diagonalen.'),
 }
 
 # The unit is a word of the page language: a figure in English says cm.
-CM = {'uk': 'см', 'ru': 'см', 'en': 'cm'}
+CM = {'uk': 'см', 'ru': 'см', 'en': 'cm', 'de': 'cm'}
 
 
 def figure(lang):

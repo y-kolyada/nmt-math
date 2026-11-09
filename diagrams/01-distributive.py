@@ -8,6 +8,8 @@ TEXT = {
            'Распределительный закон как площадь: a(b + c) = ab + ac.'),
     'en': ('A rectangle of height a and width b + c is cut into two rectangles: ab and ac. The area of the whole, a(b + c), equals the sum of the areas ab + ac.',
            'The distributive law as area: a(b + c) = ab + ac.'),
+    'de': ('Ein Rechteck der Höhe a und der Breite b + c ist in zwei Rechtecke geteilt: ab und ac. Der Flächeninhalt des Ganzen, a(b + c), ist gleich der Summe der Flächen ab + ac.',
+           'Das Distributivgesetz als Fläche: a(b + c) = ab + ac.'),
 }
 
 

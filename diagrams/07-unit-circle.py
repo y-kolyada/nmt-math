@@ -9,6 +9,8 @@ TEXT = {
            'Синус и косинус - координаты точки единичной окружности; тождество - теорема Пифагора.'),
     'en': ('The unit circle centred at the origin. The point on the circle at angle α has coordinates (cos α; sin α). The legs of the right triangle are cos α and sin α, the hypotenuse is the radius 1, so cos²α + sin²α = 1.',
            "Sine and cosine are the coordinates of a point of the unit circle; the identity is Pythagoras' theorem."),
+    'de': ('Der Einheitskreis mit dem Mittelpunkt im Ursprung. Der Kreispunkt zum Winkel α hat die Koordinaten (cos α; sin α). Die Katheten des rechtwinkligen Dreiecks sind cos α und sin α, die Hypotenuse ist der Radius 1, also cos²α + sin²α = 1.',
+           'Sinus und Kosinus sind die Koordinaten eines Punktes des Einheitskreises; die Identität ist der Satz des Pythagoras.'),
 }
 
 

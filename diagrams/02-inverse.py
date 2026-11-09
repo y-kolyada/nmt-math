@@ -9,6 +9,9 @@ TEXT = {
     'en': ('Two rectangles of the same area 12: with sides 2 by 6 and 3 by 4. Speed is the height, time is the width, distance is the area. The height grew 1.5 times, so the width shrank 1.5 times.',
            'Inverse proportion: the product v · t is constant, like the area of a rectangle.',
            'S = 12'),
+    'de': ('Zwei Rechtecke mit demselben Flächeninhalt 12: mit den Seiten 2 mal 6 und 3 mal 4. Die Geschwindigkeit ist die Höhe, die Zeit die Breite, der Weg die Fläche. Die Höhe wuchs auf das 1,5-Fache, also schrumpfte die Breite um den Faktor 1,5.',
+           'Umgekehrte Proportionalität: das Produkt v · t ist konstant, wie der Flächeninhalt eines Rechtecks.',
+           'S = 12'),
 }
 
 

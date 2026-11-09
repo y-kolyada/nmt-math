@@ -9,6 +9,9 @@ TEXT = {
     'en': ('The parabola y = x² and its tangent at x₀ = 1. The tangent rises 2 units for each unit to the right: its gradient 2 equals the derivative 2x at the point 1.',
            'The derivative as the slope of the tangent: for y = x² at the point 1 the slope is 2.',
            'slope 2'),
+    'de': ('Die Parabel y = x² und ihre Tangente bei x₀ = 1. Die Tangente steigt um 2 Einheiten je Einheit nach rechts: ihre Steigung 2 ist gleich der Ableitung 2x im Punkt 1.',
+           'Die Ableitung als Steigung der Tangente: für y = x² im Punkt 1 ist die Steigung 2.',
+           'Steigung 2'),
 }
 
 

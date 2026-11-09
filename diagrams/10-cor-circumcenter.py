@@ -9,6 +9,8 @@ TEXT = {
            'Следствие: серединные перпендикуляры к сторонам треугольника пересекаются в центре описанной окружности.'),
     'en': ('Triangle ABC and the perpendicular bisectors of its three sides, dashed. They meet at one point O, the centre of the circle through A, B and C.',
            'Corollary: the perpendicular bisectors of the sides of a triangle meet at the centre of the circumscribed circle.'),
+    'de': ('Das Dreieck ABC und die Mittelsenkrechten seiner drei Seiten, gestrichelt. Sie schneiden sich in einem Punkt O, dem Mittelpunkt des Kreises durch A, B und C.',
+           'Folgerung: die Mittelsenkrechten der Dreiecksseiten schneiden sich im Mittelpunkt des Umkreises.'),
 }
 A, B, C = (66, 178), (254, 178), (130, 46)
 

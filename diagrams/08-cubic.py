@@ -10,6 +10,10 @@ TEXT = {
            'An extremum is where the derivative changes sign: a maximum at 0, a minimum at 2.',
            ['max', 'min'],
            'f′:'),
+    'de': ('Der Graph von f(x) = x³ − 3x². Die Ableitung 3x(x − 2) wechselt das Vorzeichen bei 0 von plus nach minus, dort liegt ein Maximum, und bei 2 von minus nach plus, dort liegt ein Minimum. Die Vorzeichen der Ableitung stehen unter der Achse.',
+           'Ein Extremum liegt dort, wo die Ableitung das Vorzeichen wechselt: ein Maximum bei 0, ein Minimum bei 2.',
+           ['max', 'min'],
+           'f′:'),
 }
 
 

@@ -9,6 +9,9 @@ TEXT = {
     'en': ('The net of the lateral surface of a right square prism: the four side faces stand in a row and form a rectangle. Its width is the perimeter of the base a + b + a + b, its height is the height of the prism h, so the lateral surface equals P · h.',
            'The lateral surface of a right prism is a rectangle with sides P and h.',
            'P = a + b + a + b'),
+    'de': ('Das Netz der Mantelfläche eines geraden Prismas mit viereckiger Grundfläche: die vier Seitenflächen stehen in einer Reihe und bilden ein Rechteck. Seine Breite ist der Umfang der Grundfläche a + b + a + b, seine Höhe die Höhe des Prismas h, also ist die Mantelfläche P · h.',
+           'Die Mantelfläche eines geraden Prismas ist ein Rechteck mit den Seiten P und h.',
+           'P = a + b + a + b'),
 }
 
 

@@ -8,6 +8,8 @@ TEXT = {
            'К задаче: криволинейная трапеция под параболой.'),
     'en': ('The graph of y = x² for x from 0 onwards. The figure under the graph between the Ox axis and the line x = 3 is shaded: it is bounded by the parabola above, the Ox axis below and the vertical line x = 3 on the right.',
            'For the task: a curvilinear trapezium under a parabola.'),
+    'de': ('Der Graph von y = x² für x ab 0. Die Figur unter dem Graphen zwischen der Ox-Achse und der Geraden x = 3 ist schraffiert: oben begrenzt sie die Parabel, unten die Ox-Achse, rechts die senkrechte Gerade x = 3.',
+           'Zur Aufgabe: ein krummliniges Trapez unter einer Parabel.'),
 }
 B = 3
 

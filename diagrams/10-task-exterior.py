@@ -9,6 +9,8 @@ TEXT = {
            'К задаче: внешний угол треугольника при вершине C.'),
     'en': ('Triangle ABC with angles A = 50° and B = 70°. Side AC is extended beyond vertex C; the exterior angle at vertex C, between the extension and side CB, is marked with a question mark.',
            'For the task: the exterior angle of a triangle at vertex C.'),
+    'de': ('Das Dreieck ABC mit den Winkeln A = 50° und B = 70°. Die Seite AC ist über die Ecke C hinaus verlängert; der Außenwinkel an der Ecke C, zwischen der Verlängerung und der Seite CB, ist mit einem Fragezeichen markiert.',
+           'Zur Aufgabe: der Außenwinkel eines Dreiecks an der Ecke C.'),
 }
 ANG_A, ANG_B = 50, 70
 

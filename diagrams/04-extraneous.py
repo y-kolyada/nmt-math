@@ -9,6 +9,8 @@ TEXT = {
            'Посторонний корень: при x = −1 обе части имеют одинаковый квадрат, но разные знаки.'),
     'en': ('The graphs y = √(x + 2) and y = x meet only at x = 2. At x = −1 the root equals 1 and the line gives −1: the values are opposite, so after squaring, −1 appears as an extraneous root.',
            'An extraneous root: at x = −1 both sides have the same square but different signs.'),
+    'de': ('Die Graphen y = √(x + 2) und y = x treffen sich nur bei x = 2. Bei x = −1 ist die Wurzel 1 und die Gerade gibt −1: die Werte sind entgegengesetzt, also erscheint nach dem Quadrieren −1 als Scheinlösung.',
+           'Eine Scheinlösung: bei x = −1 haben beide Seiten dasselbe Quadrat, aber verschiedene Vorzeichen.'),
 }
 
 

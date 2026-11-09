@@ -8,6 +8,8 @@ TEXT = {
            'Следствие: средняя линия треугольника параллельна третьей стороне и равна её половине.'),
     'en': ('Triangle ABC, M is the midpoint of AB, N is the midpoint of BC. The midline MN is highlighted: it is parallel to AC and equals half of it; AC is marked a, MN is marked a/2.',
            'Corollary: the midline of a triangle is parallel to the third side and equals half of it.'),
+    'de': ('Das Dreieck ABC, M ist der Mittelpunkt von AB, N der Mittelpunkt von BC. Die Mittellinie MN ist hervorgehoben: sie ist parallel zu AC und halb so lang; AC ist mit a markiert, MN mit a/2.',
+           'Folgerung: die Mittellinie eines Dreiecks ist parallel zur dritten Seite und halb so lang.'),
 }
 A, B, C = (40, 170), (150, 30), (280, 170)
 

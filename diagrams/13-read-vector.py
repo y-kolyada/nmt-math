@@ -10,6 +10,8 @@ TEXT = {
            'К задаче: прямоугольный параллелепипед в осях координат и вектор BD₁.'),
     'en': ('Cuboid ABCDA₁B₁C₁D₁, vertex A is the origin. The x-axis runs along AB, the y-axis along AD, the z-axis along AA₁. The figure labels the edges: AB = 6, AD = 2, AA₁ = 3. The vector BD₁ is highlighted.',
            'For the task: a cuboid on coordinate axes and the vector BD₁.'),
+    'de': ('Der Quader ABCDA₁B₁C₁D₁, die Ecke A ist der Ursprung. Die x-Achse verläuft entlang AB, die y-Achse entlang AD, die z-Achse entlang AA₁. Auf der Abbildung sind die Kanten beschriftet: AB = 6, AD = 2, AA₁ = 3. Der Vektor BD₁ ist hervorgehoben.',
+           'Zur Aufgabe: ein Quader im Koordinatensystem und der Vektor BD₁.'),
 }
 
 

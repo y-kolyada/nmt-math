@@ -10,6 +10,8 @@ TEXT = {
            'К задаче: треугольник с двумя отмеченными углами.'),
     'en': ('Triangle ABC. The figure marks the angles ∠A = 48°, ∠B = 67°. Angle C is marked with a question mark.',
            'For the task: a triangle with two marked angles.'),
+    'de': ('Das Dreieck ABC. Auf der Abbildung sind die Winkel ∠A = 48°, ∠B = 67° markiert. Der Winkel C ist mit einem Fragezeichen markiert.',
+           'Zur Aufgabe: ein Dreieck mit zwei markierten Winkeln.'),
 }
 
 

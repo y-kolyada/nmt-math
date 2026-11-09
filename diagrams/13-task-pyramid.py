@@ -8,6 +8,8 @@ TEXT = {
            'К задаче: правильная четырёхугольная пирамида и её высота.'),
     'en': ('A regular square pyramid SABCD: the base is the square ABCD with side 6, the apex S stands above the centre O of the square, height SO = 4. Hidden edges are dashed.',
            'For the task: a regular square pyramid and its height.'),
+    'de': ('Eine regelmäßige quadratische Pyramide SABCD: die Grundfläche ist das Quadrat ABCD mit der Seite 6, die Spitze S steht über dem Mittelpunkt O des Quadrats, Höhe SO = 4. Verdeckte Kanten sind gestrichelt.',
+           'Zur Aufgabe: eine regelmäßige quadratische Pyramide und ihre Höhe.'),
 }
 SIDE, HEIGHT = 6, 4
 

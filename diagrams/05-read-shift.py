@@ -9,6 +9,8 @@ TEXT = {
            'К задаче: график y = |x| и сдвинутый график на сетке с шагом 2.'),
     'en': ('A coordinate grid with step 2: the axes are labelled 2, 4, 6. Dashed: the graph of y = |x| with its vertex at the origin. Solid: a «V» graph with its vertex at (4; 2): two squares to the right and one up.',
            'For the task: the graph of y = |x| and a shifted graph on a grid with step 2.'),
+    'de': ('Ein Koordinatengitter mit Schritt 2: die Achsen sind mit 2, 4, 6 beschriftet. Gestrichelt: der Graph von y = |x| mit dem Scheitel im Ursprung. Durchgezogen: ein «V»-Graph mit dem Scheitel bei (4; 2): zwei Kästchen nach rechts und eins nach oben.',
+           'Zur Aufgabe: der Graph von y = |x| und ein verschobener Graph auf einem Gitter mit Schritt 2.'),
 }
 
 

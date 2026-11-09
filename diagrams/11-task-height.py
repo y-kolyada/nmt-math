@@ -8,6 +8,8 @@ TEXT = {
            'К задаче: высота CH прямоугольного треугольника, проведённая к гипотенузе.'),
     'en': ('Right triangle ABC with the right angle at C: leg AC = 15 is vertical, leg BC = 20 is horizontal. From vertex C the height CH, marked h, is drawn to the hypotenuse AB.',
            'For the task: the height CH of a right triangle, drawn to the hypotenuse.'),
+    'de': ('Das rechtwinklige Dreieck ABC mit dem rechten Winkel bei C: die Kathete AC = 15 ist senkrecht, die Kathete BC = 20 waagerecht. Von der Ecke C ist die Höhe CH, mit h markiert, auf die Hypotenuse AB gezogen.',
+           'Zur Aufgabe: die Höhe CH eines rechtwinkligen Dreiecks auf die Hypotenuse.'),
 }
 AC, BC = 15, 20
 

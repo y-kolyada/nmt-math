@@ -4,7 +4,8 @@ from fig import Fig
 
 DATA = {'uk': (('футбол', 10), ('баскетбол', 14), ('волейбол', 16)),
         'ru': (('футбол', 10), ('баскетбол', 14), ('волейбол', 16)),
-        'en': (('football', 10), ('basketball', 14), ('volleyball', 16))}
+        'en': (('football', 10), ('basketball', 14), ('volleyball', 16)),
+        'de': (('Fußball', 10), ('Basketball', 14), ('Volleyball', 16))}
 TEXT = {
     'uk': ('Кругова діаграма: 40 учнів за улюбленою грою - футбол 10, баскетбол 14, волейбол 16. Сектор баскетболу виділено кольором, його кут позначено знаком питання.',
            'До задачі: кругова діаграма, у якій сектор - частка цілого.'),
@@ -12,6 +13,8 @@ TEXT = {
            'К задаче: круговая диаграмма, в которой сектор - доля целого.'),
     'en': ('A pie chart: 40 pupils by favourite game - football 10, basketball 14, volleyball 16. The basketball sector is coloured, and its angle is marked with a question mark.',
            'For the task: a pie chart in which a sector is a share of the whole.'),
+    'de': ('Ein Kreisdiagramm: 40 Schüler nach ihrem Lieblingsspiel - Fußball 10, Basketball 14, Volleyball 16. Der Sektor Basketball ist farbig, sein Winkel ist mit einem Fragezeichen markiert.',
+           'Zur Aufgabe: ein Kreisdiagramm, in dem ein Sektor ein Anteil am Ganzen ist.'),
 }
 
 

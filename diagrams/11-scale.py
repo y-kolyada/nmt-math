@@ -8,6 +8,8 @@ TEXT = {
            'Сторона удвоилась - площадь выросла вчетверо: 3² = 9, 6² = 36.'),
     'en': ('On the left, a square with side 3 and area 9. On the right, a square with side 6: it is made of four such squares, so its area is 36, four times as large.',
            'The side doubled, so the area grew fourfold: 3² = 9, 6² = 36.'),
+    'de': ('Links ein Quadrat mit der Seite 3 und dem Flächeninhalt 9. Rechts ein Quadrat mit der Seite 6: es besteht aus vier solchen Quadraten, also ist sein Flächeninhalt 36, viermal so groß.',
+           'Die Seite verdoppelte sich, also wuchs die Fläche auf das Vierfache: 3² = 9, 6² = 36.'),
 }
 
 

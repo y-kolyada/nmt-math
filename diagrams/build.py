@@ -24,7 +24,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 HERE = pathlib.Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-WORD = {'uk': 'Рисунок', 'ru': 'Рисунок', 'en': 'Figure'}
+WORD = {'uk': 'Рисунок', 'ru': 'Рисунок', 'en': 'Figure', 'de': 'Abbildung'}
 MARK = re.compile(r'<!-- fig:((?:[0-9]{2}|navigator)-[a-z0-9-]+) -->.*?<!-- /fig:\1 -->', re.S)
 
 

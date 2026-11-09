@@ -9,6 +9,8 @@ TEXT = {
            'sin x = 1/2: две точки на одном обороте, дальше - повторение через 2π.'),
     'en': ('The line y = 1/2 crosses the unit circle at two points: at x = π/6 and x = 5π/6. Each of them repeats after a full turn 2π, hence two series of roots of sin x = 1/2.',
            'sin x = 1/2: two points on one turn, then repetition every 2π.'),
+    'de': ('Die Gerade y = 1/2 schneidet den Einheitskreis in zwei Punkten: bei x = π/6 und x = 5π/6. Jeder wiederholt sich nach einer vollen Umdrehung 2π, daher zwei Lösungsreihen von sin x = 1/2.',
+           'sin x = 1/2: zwei Punkte auf einer Umdrehung, dann Wiederholung alle 2π.'),
 }
 
 

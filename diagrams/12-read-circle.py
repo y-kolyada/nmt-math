@@ -10,6 +10,8 @@ TEXT = {
            'К задаче: окружность, её центр и точка на окружности.'),
     'en': ('A circle with centre at point C and a point M on the circle. Dashed lines run from the points to the axes: the centre C has coordinates (2; 3), the point M (5; 7). The axes are labelled 2, 5 and 3, 7.',
            'For the task: a circle, its centre and a point on the circle.'),
+    'de': ('Ein Kreis mit dem Mittelpunkt im Punkt C und ein Punkt M auf dem Kreis. Gestrichelte Linien führen von den Punkten zu den Achsen: der Mittelpunkt C hat die Koordinaten (2; 3), der Punkt M (5; 7). Die Achsen sind mit 2, 5 und 3, 7 beschriftet.',
+           'Zur Aufgabe: ein Kreis, sein Mittelpunkt und ein Punkt auf dem Kreis.'),
 }
 
 

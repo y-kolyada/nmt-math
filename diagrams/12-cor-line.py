@@ -8,6 +8,8 @@ TEXT = {
            'Следствие: b - точка пересечения с осью y, k - подъём прямой на один шаг вправо.'),
     'en': ('The line y = kx + b on coordinate axes. It crosses the y-axis at the point marked b. A step under the line: 1 to the right, k up.',
            'Corollary: b is where the line crosses the y-axis, k is how far the line rises for one step to the right.'),
+    'de': ('Die Gerade y = kx + b im Koordinatensystem. Sie schneidet die y-Achse in dem mit b markierten Punkt. Ein Schritt unter der Geraden: 1 nach rechts, k nach oben.',
+           'Folgerung: b ist der Schnittpunkt der Geraden mit der y-Achse, k ist, wie weit die Gerade bei einem Schritt nach rechts steigt.'),
 }
 K, B0 = 0.5, 1.5
 

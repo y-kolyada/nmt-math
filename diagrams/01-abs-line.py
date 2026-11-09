@@ -9,6 +9,9 @@ TEXT = {
     'en': ('A number line from −5 to 5. The points −3 and 3 stand at the same distance 3 from zero, so |−3| = |3| = 3.',
            'Absolute value is the distance to zero: |−3| = |3| = 3.',
            'distance 3'),
+    'de': ('Ein Zahlenstrahl von −5 bis 5. Die Punkte −3 und 3 haben denselben Abstand 3 von null, also |−3| = |3| = 3.',
+           'Der Betrag ist der Abstand zu null: |−3| = |3| = 3.',
+           'Abstand 3'),
 }
 
 

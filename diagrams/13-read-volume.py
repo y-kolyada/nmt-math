@@ -10,10 +10,12 @@ TEXT = {
            'К задаче: прямоугольный параллелепипед, на котором подписаны три ребра и диагональ основания.'),
     'en': ('Cuboid ABCDA₁B₁C₁D₁. The figure labels the edges AB = 5 cm, AD = 2 cm, AA₁ = 4 cm and the diagonal of the base AC = √29 cm (dashed).',
            'For the task: a cuboid with three edges and the diagonal of the base labelled.'),
+    'de': ('Der Quader ABCDA₁B₁C₁D₁. Auf der Abbildung sind die Kanten AB = 5 cm, AD = 2 cm, AA₁ = 4 cm und die Diagonale der Grundfläche AC = √29 cm (gestrichelt) beschriftet.',
+           'Zur Aufgabe: ein Quader mit drei beschrifteten Kanten und der Diagonalen der Grundfläche.'),
 }
 
 # The unit is a word of the page language: a figure in English says cm.
-CM = {'uk': 'см', 'ru': 'см', 'en': 'cm'}
+CM = {'uk': 'см', 'ru': 'см', 'en': 'cm', 'de': 'cm'}
 
 
 def figure(lang):

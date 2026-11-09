@@ -9,6 +9,8 @@ TEXT = {
            'К задаче: треугольник, вписанный в окружность, одна сторона которого - диаметр.'),
     'en': ('A circle with centre O and diameter AB. Point C lies on the circle, angle ABC is 35°, angle BAC is marked with a question mark; angle ACB stands on the diameter.',
            'For the task: a triangle inscribed in a circle, one side of which is a diameter.'),
+    'de': ('Ein Kreis mit dem Mittelpunkt O und dem Durchmesser AB. Der Punkt C liegt auf dem Kreis, der Winkel ABC beträgt 35°, der Winkel BAC ist mit einem Fragezeichen markiert; der Winkel ACB steht über dem Durchmesser.',
+           'Zur Aufgabe: ein einem Kreis einbeschriebenes Dreieck, dessen eine Seite ein Durchmesser ist.'),
 }
 ANG_B = 35
 

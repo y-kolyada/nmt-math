@@ -11,6 +11,11 @@ TEXT = {
            'H',
            'T',
            ['1st toss', '2nd toss']),
+    'de': ('Ein Baum für zwei Münzwürfe: vom Start zwei Äste, Kopf und Zahl, und von jedem noch zwei. Es gibt 2 · 2 = 4 Blätter: KK, KZ, ZK, ZZ. Alle vier sind gleich wahrscheinlich, und nur eines davon ist zweimal Kopf.',
+           'Die Produktregel als Baum: 2 · 2 = 4 gleich wahrscheinliche Ausgänge.',
+           'K',
+           'Z',
+           ['1. Wurf', '2. Wurf']),
 }
 
 

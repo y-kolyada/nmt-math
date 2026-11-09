@@ -8,6 +8,8 @@ TEXT = {
            'К задаче: параллелограмм ABCD, у которого неизвестна вершина D.'),
     'en': ('A coordinate plane with the vertices of a parallelogram A(1; 1), B(4; 2), C(5; 5). The fourth vertex D is marked without coordinates; the sides CD and DA are dashed.',
            'For the task: parallelogram ABCD with an unknown vertex D.'),
+    'de': ('Eine Koordinatenebene mit den Ecken eines Parallelogramms A(1; 1), B(4; 2), C(5; 5). Die vierte Ecke D ist ohne Koordinaten markiert; die Seiten CD und DA sind gestrichelt.',
+           'Zur Aufgabe: das Parallelogramm ABCD mit einer unbekannten Ecke D.'),
 }
 A, B, C = (1, 1), (4, 2), (5, 5)
 

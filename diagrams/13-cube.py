@@ -10,6 +10,10 @@ TEXT = {
            'Twice the edge - 2³ = 8 times the volume.',
            'V = 1',
            'V = 8'),
+    'de': ('Links ein Einheitswürfel. Rechts ein Würfel mit der Kante 2, aus acht solchen Würfeln: zwei Schichten zu vier. Die Kante verdoppelte sich, das Volumen wuchs auf das 8-Fache.',
+           'Doppelte Kante - 2³ = 8-faches Volumen.',
+           'V = 1',
+           'V = 8'),
 }
 
 DX, DY = 0.5, 0.35  # oblique projection of the depth axis

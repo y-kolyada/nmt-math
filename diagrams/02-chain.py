@@ -10,6 +10,10 @@ TEXT = {
            'Two steps of 20 % of different wholes: 100 → 120 → 96.',
            ['+20 % of 100', '−20 % of 120'],
            'UAH'),
+    'de': ('Drei Säulen: 100 Hrywnja; nach einer Erhöhung um 20 % von 100 sind es 120 Hrywnja; nach einer Senkung um 20 % von 120 sind es 96 Hrywnja. Die gestrichelte Linie zeigt das Niveau 100, zu dem der Preis nicht zurückkehrte.',
+           'Zwei Schritte von 20 % verschiedener Ganzer: 100 → 120 → 96.',
+           ['+20 % von 100', '−20 % von 120'],
+           'UAH'),
 }
 
 

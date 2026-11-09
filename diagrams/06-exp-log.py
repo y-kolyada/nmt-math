@@ -9,6 +9,8 @@ TEXT = {
            'Логарифм - зеркало степени: 2ˣ > 0 всегда, поэтому log₂ x существует только при x > 0.'),
     'en': ('The graphs y = 2ˣ and y = log₂ x are symmetric about the line y = x. The exponential function is always positive, so the logarithm exists only for positive numbers: its graph never goes to the left of the Oy axis.',
            'The logarithm mirrors the power: 2ˣ > 0 always, so log₂ x exists only for x > 0.'),
+    'de': ('Die Graphen y = 2ˣ und y = log₂ x sind symmetrisch zur Geraden y = x. Die Exponentialfunktion ist immer positiv, also existiert der Logarithmus nur für positive Zahlen: sein Graph geht nie links von der Oy-Achse.',
+           'Der Logarithmus spiegelt die Potenz: 2ˣ > 0 immer, also existiert log₂ x nur für x > 0.'),
 }
 
 

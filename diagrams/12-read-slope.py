@@ -9,6 +9,8 @@ TEXT = {
            'К задаче: прямая на сетке, у которой шаг по осям разный.'),
     'en': ('A line passes through the points P and Q. The grid squares look square, but along the x-axis one square is 2 units (labelled 2, 4, 6, 8), and along the y-axis it is 1 unit (labelled 1, 2, 3, 4). Point P has coordinates (2; 1), point Q (6; 3).',
            'For the task: a line on a grid with different steps on the axes.'),
+    'de': ('Eine Gerade geht durch die Punkte P und Q. Die Gitterkästchen sehen quadratisch aus, aber entlang der x-Achse ist ein Kästchen 2 Einheiten (beschriftet 2, 4, 6, 8), entlang der y-Achse 1 Einheit (beschriftet 1, 2, 3, 4). Der Punkt P hat die Koordinaten (2; 1), der Punkt Q (6; 3).',
+           'Zur Aufgabe: eine Gerade auf einem Gitter mit verschiedenen Schritten auf den Achsen.'),
 }
 
 

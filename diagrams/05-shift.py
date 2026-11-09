@@ -9,6 +9,9 @@ TEXT = {
     'en': ('The parabola y = x² with vertex at zero and the parabola y = (x + 2)² with vertex at −2. The arrow shows a shift of 2 to the left, although the brackets hold a plus.',
            'f(x + 2): the vertex moved from 0 to −2, that is, to the left.',
            'left by 2'),
+    'de': ('Die Parabel y = x² mit dem Scheitel bei null und die Parabel y = (x + 2)² mit dem Scheitel bei −2. Der Pfeil zeigt eine Verschiebung um 2 nach links, obwohl in der Klammer ein Plus steht.',
+           'f(x + 2): der Scheitel wanderte von 0 nach −2, also nach links.',
+           'um 2 nach links'),
 }
 
 

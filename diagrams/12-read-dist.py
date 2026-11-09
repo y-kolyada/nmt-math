@@ -9,6 +9,8 @@ TEXT = {
            'К задаче: две точки, координаты которых видны на осях.'),
     'en': ('A coordinate plane with points A and B. Dashed lines run from the points to the axes: point A has abscissa 1 and ordinate 2, point B has abscissa 7 and ordinate 10. The axes are labelled 1, 7 and 2, 10.',
            'For the task: two points whose coordinates can be seen on the axes.'),
+    'de': ('Eine Koordinatenebene mit den Punkten A und B. Gestrichelte Linien führen von den Punkten zu den Achsen: der Punkt A hat die Abszisse 1 und die Ordinate 2, der Punkt B die Abszisse 7 und die Ordinate 10. Die Achsen sind mit 1, 7 und 2, 10 beschriftet.',
+           'Zur Aufgabe: zwei Punkte, deren Koordinaten an den Achsen abzulesen sind.'),
 }
 
 

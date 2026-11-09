@@ -8,6 +8,8 @@ TEXT = {
            'К задаче: график y = x², сдвинутый вправо и вниз.'),
     'en': ('Two parabolas on coordinate axes. Dashed: the graph of y = x² with its vertex at the origin. Coloured: the same graph shifted 3 units to the right and 2 units down, with its vertex at (3; −2). An arrow leads from the old vertex to the new one.',
            'For the task: the graph of y = x² shifted right and down.'),
+    'de': ('Zwei Parabeln im Koordinatensystem. Gestrichelt: der Graph von y = x² mit dem Scheitel im Ursprung. Farbig: derselbe Graph um 3 Einheiten nach rechts und 2 Einheiten nach unten verschoben, mit dem Scheitel bei (3; −2). Ein Pfeil führt vom alten Scheitel zum neuen.',
+           'Zur Aufgabe: der Graph von y = x², nach rechts und nach unten verschoben.'),
 }
 DX, DY = 3, -2
 

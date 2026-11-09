@@ -9,10 +9,12 @@ TEXT = {
            'К задаче: трапеция, на которой подписаны четыре длины.'),
     'en': ('Isosceles trapezium ABCD. The figure labels: upper base BC = 6 cm, lower base AD = 12 cm, height BH = 4 cm (dashed), leg CD = 5 cm.',
            'For the task: a trapezium with four lengths labelled.'),
+    'de': ('Das gleichschenklige Trapez ABCD. Auf der Abbildung sind beschriftet: obere Grundseite BC = 6 cm, untere Grundseite AD = 12 cm, Höhe BH = 4 cm (gestrichelt), Schenkel CD = 5 cm.',
+           'Zur Aufgabe: ein Trapez mit vier beschrifteten Längen.'),
 }
 
 # The unit is a word of the page language: a figure in English says cm.
-CM = {'uk': 'см', 'ru': 'см', 'en': 'cm'}
+CM = {'uk': 'см', 'ru': 'см', 'en': 'cm', 'de': 'cm'}
 
 
 def figure(lang):

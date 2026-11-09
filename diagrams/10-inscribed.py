@@ -9,6 +9,8 @@ TEXT = {
            'Вписанный угол - половина центрального на той же дуге: 100° и 50°.'),
     'en': ('A circle with centre O. The central angle AOB is 100°; the inscribed angle ACB stands on the same arc AB and is 50°, half as large.',
            'An inscribed angle is half the central angle on the same arc: 100° and 50°.'),
+    'de': ('Ein Kreis mit dem Mittelpunkt O. Der Mittelpunktswinkel AOB beträgt 100°; der Umfangswinkel ACB steht über demselben Bogen AB und beträgt 50°, halb so viel.',
+           'Ein Umfangswinkel ist halb so groß wie der Mittelpunktswinkel über demselben Bogen: 100° und 50°.'),
 }
 
 

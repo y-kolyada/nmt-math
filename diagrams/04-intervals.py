@@ -9,6 +9,9 @@ TEXT = {
     'en': ('A number line with the zeros of the factors, −3 and 3. To the left of −3 and to the right of 3 the product (x − 3)(x + 3) is positive, between them it is negative. So x² > 9 for x < −3 or x > 3, and x² < 9 between −3 and 3.',
            'The interval method for (x − 3)(x + 3): the sign changes only at the zeros of the factors.',
            ['x² > 9', 'x² < 9', 'x² > 9']),
+    'de': ('Ein Zahlenstrahl mit den Nullstellen der Faktoren, −3 und 3. Links von −3 und rechts von 3 ist das Produkt (x − 3)(x + 3) positiv, dazwischen negativ. Also x² > 9 für x < −3 oder x > 3, und x² < 9 zwischen −3 und 3.',
+           'Die Intervallmethode für (x − 3)(x + 3): das Vorzeichen wechselt nur an den Nullstellen der Faktoren.',
+           ['x² > 9', 'x² < 9', 'x² > 9']),
 }
 
 

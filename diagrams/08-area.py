@@ -9,6 +9,9 @@ TEXT = {
     'en': ('The area under the graph of y = 0.5x² + 0.5 from a to x is shaded. If x is moved by a small h, the area grows by a narrow strip of height f(x): so the rate at which the area grows equals f(x), and the area is an antiderivative.',
            'Newton - Leibniz: the area grows by a strip f(x) · h, so the area is an antiderivative of the function.',
            'strip f(x) · h'),
+    'de': ('Die Fläche unter dem Graphen von y = 0,5x² + 0,5 von a bis x ist schraffiert. Verschiebt man x um ein kleines h, wächst die Fläche um einen schmalen Streifen der Höhe f(x): die Fläche wächst also mit der Rate f(x), und die Fläche ist eine Stammfunktion.',
+           'Newton - Leibniz: die Fläche wächst um einen Streifen f(x) · h, also ist die Fläche eine Stammfunktion der Funktion.',
+           'Streifen f(x) · h'),
 }
 
 

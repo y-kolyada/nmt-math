@@ -9,6 +9,9 @@ TEXT = {
     'en': ('A 6 by 6 table: the row is the first die, the column is the second, the cell holds the sum. The six cells with sum 7 lie on a diagonal and are highlighted. The sum 2 occurs in only one cell, so the sums are not equally likely, while the pairs of faces are.',
            'Equally likely are the 36 pairs of faces, not the 11 sums: the sum 7 takes 6 cells of 36.',
            ['1st', '2nd']),
+    'de': ('Eine Tabelle 6 mal 6: die Zeile ist der erste Würfel, die Spalte der zweite, in der Zelle steht die Summe. Die sechs Zellen mit der Summe 7 liegen auf einer Diagonalen und sind hervorgehoben. Die Summe 2 kommt nur in einer Zelle vor, also sind die Summen nicht gleich wahrscheinlich, die Paare von Augenzahlen aber schon.',
+           'Gleich wahrscheinlich sind die 36 Paare von Augenzahlen, nicht die 11 Summen: die Summe 7 nimmt 6 Zellen von 36 ein.',
+           ['1.', '2.']),
 }
 
 

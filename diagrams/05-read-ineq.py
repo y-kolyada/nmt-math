@@ -9,6 +9,8 @@ TEXT = {
            'К задаче: парабола, которая пересекает ось x в двух отмеченных точках.'),
     'en': ('The graph of y = f(x) is a parabola opening upwards. It crosses the x-axis at −1 and 3 (marked), and its vertex is at (1; −4). The part of the graph below the x-axis is highlighted.',
            'For the task: a parabola that crosses the x-axis at two marked points.'),
+    'de': ('Der Graph von y = f(x) ist eine nach oben geöffnete Parabel. Er schneidet die x-Achse bei −1 und 3 (markiert), sein Scheitel liegt bei (1; −4). Der Teil des Graphen unterhalb der x-Achse ist hervorgehoben.',
+           'Zur Aufgabe: eine Parabel, die die x-Achse in zwei markierten Punkten schneidet.'),
 }
 
 

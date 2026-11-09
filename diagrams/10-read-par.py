@@ -10,10 +10,12 @@ TEXT = {
            'К задаче: параллелограмм с отмеченным углом и подписанной стороной.'),
     'en': ('Parallelogram ABCD. The figure marks angle A = 58° and labels side AB = 7 cm. Angle B is marked with a question mark.',
            'For the task: a parallelogram with a marked angle and a labelled side.'),
+    'de': ('Das Parallelogramm ABCD. Auf der Abbildung ist der Winkel A = 58° markiert und die Seite AB = 7 cm beschriftet. Der Winkel B ist mit einem Fragezeichen markiert.',
+           'Zur Aufgabe: ein Parallelogramm mit einem markierten Winkel und einer beschrifteten Seite.'),
 }
 
 # The unit is a word of the page language: a figure in English says cm.
-CM = {'uk': 'см', 'ru': 'см', 'en': 'cm'}
+CM = {'uk': 'см', 'ru': 'см', 'en': 'cm', 'de': 'cm'}
 
 
 def figure(lang):

@@ -8,6 +8,8 @@ TEXT = {
            'Диагональ параллелепипеда: Пифагор дважды, d² = a² + b² + c².'),
     'en': ('A cuboid with edges a, b, c. Dashed: the diagonal of the base, √(a² + b²). Together with the side edge c it forms a right triangle whose hypotenuse is the diagonal of the cuboid d, so d² = a² + b² + c².',
            'The diagonal of a cuboid: Pythagoras twice, d² = a² + b² + c².'),
+    'de': ('Ein Quader mit den Kanten a, b, c. Gestrichelt: die Diagonale der Grundfläche, √(a² + b²). Zusammen mit der Seitenkante c bildet sie ein rechtwinkliges Dreieck, dessen Hypotenuse die Raumdiagonale d ist, also d² = a² + b² + c².',
+           'Die Raumdiagonale eines Quaders: zweimal Pythagoras, d² = a² + b² + c².'),
 }
 
 

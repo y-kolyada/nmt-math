@@ -8,6 +8,8 @@ TEXT = {
            'Квадрат суммы: два прямоугольника ab, которые теряет слепой ход.'),
     'en': ('A square with side a + b is cut into four parts: a square a², a square b² and two equal rectangles ab. The blind move «a² + b²» loses exactly the two rectangles.',
            'The square of a sum: the two rectangles ab that the blind move loses.'),
+    'de': ('Ein Quadrat mit der Seite a + b ist in vier Teile geteilt: ein Quadrat a², ein Quadrat b² und zwei gleiche Rechtecke ab. Der blinde Zug «a² + b²» verliert genau die zwei Rechtecke.',
+           'Das Quadrat einer Summe: die zwei Rechtecke ab, die der blinde Zug verliert.'),
 }
 
 

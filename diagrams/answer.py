@@ -27,9 +27,9 @@ import sys
 
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parent
-LANGS = ('uk', 'ru', 'en')
-# English writes a decimal point where Ukrainian and Russian write a comma.
-POINT = {'uk': ',', 'ru': ',', 'en': '.'}
+LANGS = ('uk', 'ru', 'en', 'de')
+# English writes a decimal point where Ukrainian, Russian and German write a comma.
+POINT = {'uk': ',', 'ru': ',', 'en': '.', 'de': ','}
 
 
 def fmt(v, lang='uk'):

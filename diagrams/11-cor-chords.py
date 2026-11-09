@@ -9,6 +9,8 @@ TEXT = {
            'Следствие: хорда равна удвоенному радиусу, умноженному на синус вписанного угла.'),
     'en': ('A circle with centre O and radius R. Chord AB is highlighted, and the inscribed angle ACB standing on it is marked γ. Dashed: a diameter, the longest chord. Label: AB = 2R · sin γ.',
            'Corollary: a chord equals twice the radius times the sine of the inscribed angle.'),
+    'de': ('Ein Kreis mit dem Mittelpunkt O und dem Radius R. Die Sehne AB ist hervorgehoben, der Umfangswinkel ACB über ihr ist mit γ markiert. Gestrichelt: ein Durchmesser, die längste Sehne. Beschriftung: AB = 2R · sin γ.',
+           'Folgerung: eine Sehne ist gleich dem doppelten Radius mal dem Sinus des Umfangswinkels.'),
 }
 AT = {'A': 215, 'B': 325, 'C': 95}
 

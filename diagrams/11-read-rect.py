@@ -9,10 +9,12 @@ TEXT = {
            'К задаче: прямоугольник с подписанными сторонами и диагональ.'),
     'en': ('Rectangle ABCD. The figure labels the sides: AD = 5 cm, AB = 12 cm. The diagonal AC is dashed and marked with a question mark.',
            'For the task: a rectangle with labelled sides and a diagonal.'),
+    'de': ('Das Rechteck ABCD. Auf der Abbildung sind die Seiten beschriftet: AD = 5 cm, AB = 12 cm. Die Diagonale AC ist gestrichelt und mit einem Fragezeichen markiert.',
+           'Zur Aufgabe: ein Rechteck mit beschrifteten Seiten und einer Diagonalen.'),
 }
 
 # The unit is a word of the page language: a figure in English says cm.
-CM = {'uk': 'см', 'ru': 'см', 'en': 'cm'}
+CM = {'uk': 'см', 'ru': 'см', 'en': 'cm', 'de': 'cm'}
 
 
 def figure(lang):

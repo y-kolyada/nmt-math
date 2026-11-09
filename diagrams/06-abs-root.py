@@ -9,6 +9,8 @@ TEXT = {
            '√(x²) = |x|: слева от нуля корень из квадрата не равен x.'),
     'en': ('The graph of y = √(x²) is the «tick» y = |x|: both branches lie above the Ox axis. Dashed: y = x; to the left of zero it runs below the axis, so √(x²) and x differ there.',
            '√(x²) = |x|: to the left of zero the root of the square is not x.'),
+    'de': ('Der Graph von y = √(x²) ist der «Haken» y = |x|: beide Äste liegen über der Ox-Achse. Gestrichelt: y = x; links von null verläuft er unter der Achse, dort unterscheiden sich √(x²) und x.',
+           '√(x²) = |x|: links von null ist die Wurzel aus dem Quadrat nicht x.'),
 }
 
 

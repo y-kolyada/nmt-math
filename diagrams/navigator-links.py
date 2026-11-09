@@ -8,6 +8,7 @@ NAMES = {
     'ru': {1: 'Число', 2: 'Процент', 3: 'Алгебра', 4: 'Корни', 5: 'Функция', 6: 'Степень', 7: 'sin, cos',
            8: 'Скорость', 9: 'Счёт', 10: 'Фигуры', 11: 'Площади', 12: 'Векторы', 13: 'Объёмы'},
     'en': {1: 'Number', 2: 'Percent', 3: 'Algebra', 4: 'Equations', 5: 'Function', 6: 'Power', 7: 'sin, cos', 8: 'Derivative', 9: 'Counting', 10: 'Figures', 11: 'Measure', 12: 'Vectors', 13: 'Space'},
+    'de': {1: 'Zahl', 2: 'Prozent', 3: 'Algebra', 4: 'Gleichungen', 5: 'Funktion', 6: 'Potenz', 7: 'sin, cos', 8: 'Ableitung', 9: 'Zählen', 10: 'Figuren', 11: 'Messen', 12: 'Vektoren', 13: 'Raum'},
 }
 TEXT = {
     'uk': ('Граф тринадцяти блоків: стрілка веде від блоку до того, що з нього виростає. Число веде до відсотка, виразів, рівнянь, функції і похідної; вирази і функція - до степеня й логарифма; число - до лічби варіантів. Фігури ведуть до тригонометрії, вимірювань, простору, а вимірювання і рівняння - до координат і векторів.',
@@ -16,6 +17,8 @@ TEXT = {
            'Как блоки вырастают друг из друга: алгебра сверху, геометрия снизу.'),
     'en': ('A graph of the thirteen blocks: an arrow leads from a block to the one that grows out of it. Number leads to percent, expressions, equations, function and derivative; expressions and function lead to power and logarithm; number leads to counting. Figures lead to trigonometry, measurement and space, and measurement and equations lead to coordinates and vectors.',
            'How the blocks grow out of one another: algebra above, geometry below.'),
+    'de': ('Ein Graph der dreizehn Blöcke: ein Pfeil führt von einem Block zu dem, der aus ihm herauswächst. Die Zahl führt zu Prozent, Termen, Gleichungen, Funktion und Ableitung; Terme und Funktion führen zu Potenz und Logarithmus; die Zahl führt zum Zählen. Die Figuren führen zu Trigonometrie, Messen und Raum, und Messen und Gleichungen führen zu Koordinaten und Vektoren.',
+           'Wie die Blöcke auseinander herauswachsen: Algebra oben, Geometrie unten.'),
 }
 # Three columns, so an arrow has room between the boxes: 30 units across and
 # 24 down (four columns left 6 and 12, and the head of an arrow did not fit).

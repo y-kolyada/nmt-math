@@ -8,6 +8,8 @@ TEXT = {
            'К задаче: прямоугольный параллелепипед и плоскость его нижнего основания.'),
     'en': ('Cuboid ABCDA₁B₁C₁D₁ in oblique projection: ABCD is the lower base, A₁B₁C₁D₁ the upper one, AA₁, BB₁, CC₁, DD₁ are the side edges. Hidden edges are dashed.',
            'For the task: a cuboid and the plane of its lower base.'),
+    'de': ('Der Quader ABCDA₁B₁C₁D₁ in Schrägbild: ABCD ist die untere Grundfläche, A₁B₁C₁D₁ die obere, AA₁, BB₁, CC₁, DD₁ sind die Seitenkanten. Verdeckte Kanten sind gestrichelt.',
+           'Zur Aufgabe: ein Quader und die Ebene seiner unteren Grundfläche.'),
 }
 
 

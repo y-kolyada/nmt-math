@@ -10,6 +10,8 @@ TEXT = {
            'К задаче: вписанный треугольник, центральный угол и вписанный угол.'),
     'en': ('A circle with centre O, points A, B, C on the circle, triangle ABC inscribed. The figure marks the central angle AOB = 130° (on the arc AB that does not contain C) and the angle CAB = 70°. Angle ABC is marked with a question mark.',
            'For the task: an inscribed triangle, a central angle and an inscribed angle.'),
+    'de': ('Ein Kreis mit dem Mittelpunkt O, die Punkte A, B, C auf dem Kreis, das Dreieck ABC einbeschrieben. Auf der Abbildung sind der Mittelpunktswinkel AOB = 130° (über dem Bogen AB, der C nicht enthält) und der Winkel CAB = 70° markiert. Der Winkel ABC ist mit einem Fragezeichen markiert.',
+           'Zur Aufgabe: ein einbeschriebenes Dreieck, ein Mittelpunktswinkel und ein Umfangswinkel.'),
 }
 
 
