@@ -47,7 +47,8 @@ SAY = {
            'xhead': 'Реальні варіанти НМТ %s', 'xintro': 'Ті самі закони, але в %d завданнях шести основних сесій НМТ %s: друга цифра поруч із першою. Розмітка наша, завдання - за посиланнями в кожному блоці.',
            'xblocks': 'Завдань НМТ за блоками', 'xtop': 'Закони, на які спирається найбільше завдань НМТ',
            'xmiss': 'Закони НМТ, яких на сайті ще немає', 'xmissintro': 'Ці теми трапилися в завданнях НМТ, а окремого закону на сайті для них поки немає. Це вхід для наступних блоків, а не готовий матеріал.',
-           'xitem': '%s: %d %s', 'xtask': ('завдання', 'завдання', 'завдань'), 'xloc': ('завданні', 'завданнях', 'завданнях')},
+           'xitem': '%s: %d %s', 'xtask': ('завдання', 'завдання', 'завдань'), 'xloc': ('завданні', 'завданнях', 'завданнях'),
+           'xstub': 'Блоки %s ще не перекладені: їхніх законів у цих списках немає. Їхні числа - на посадковій сторінці мови-джерела.'},
     'ru': {'line': 'Частота на этом сайте, а не на НМТ: на этой странице %d %s тренажёра, и они опираются на такие законы: %s.',
            'none': 'На этой странице задач тренажёра нет.',
            'tasks': ('задача', 'задачи', 'задач'),
@@ -64,7 +65,27 @@ SAY = {
            'xhead': 'Реальные варианты НМТ %s', 'xintro': 'Те же законы, но в %d заданиях шести основных сессий НМТ %s: вторая цифра рядом с первой. Разметка наша, задания - по ссылкам в каждом блоке.',
            'xblocks': 'Заданий НМТ по блокам', 'xtop': 'Законы, на которые опирается больше всего заданий НМТ',
            'xmiss': 'Законы НМТ, которых на сайте ещё нет', 'xmissintro': 'Эти темы встретились в заданиях НМТ, а отдельного закона на сайте для них пока нет. Это вход для следующих блоков, а не готовый материал.',
-           'xitem': '%s: %d %s', 'xtask': ('задание', 'задания', 'заданий'), 'xloc': ('задании', 'заданиях', 'заданиях')},
+           'xitem': '%s: %d %s', 'xtask': ('задание', 'задания', 'заданий'), 'xloc': ('задании', 'заданиях', 'заданиях'),
+           'xstub': 'Блоки %s ещё не переведены: их законов в этих списках нет. Их числа - на посадочной странице языка-источника.'},
+    # English has two forms where Ukrainian and Russian have three: plural() reads the length.
+    'en': {'line': 'Frequency on this site, not in the NMT: this page has %d trainer %s, and they lean on these laws: %s.',
+           'none': 'This page has no trainer tasks.',
+           'tasks': ('task', 'tasks'),
+           'head': 'Frequency of laws on the site',
+           'intro': 'How many trainer tasks lean on each law. This is the frequency <strong>on this site</strong>, not in the NMT: '
+                    'it shows how the site trains, not what the exam asks. What the exam asks is shown by the slice of real NMT papers below, if there is one.',
+           'total': 'Trainer tasks in all: %d; laws they lean on: %d.',
+           'blocks': 'By block',
+           'top': 'Laws that the most tasks lean on',
+           'block': '%s: %d %s, most often - %s',
+           'even': 'one task for each law', 'and': ' and ',
+           'exam': 'In real NMT papers of %s this block is needed in %d %s out of %d: %s.',
+           'exam0': 'In real NMT papers of %s this block was not needed in any of the %d tasks.',
+           'xhead': 'Real NMT papers of %s', 'xintro': 'The same laws, but in %d tasks of the six main NMT sessions of %s: the second number next to the first. The tagging is ours, the tasks are behind the links in each block.',
+           'xblocks': 'NMT tasks by block', 'xtop': 'Laws that the most NMT tasks lean on',
+           'xmiss': 'NMT laws the site does not have yet', 'xmissintro': 'These topics came up in NMT tasks, but the site has no law of its own for them yet. This is input for the next blocks, not finished material.',
+           'xitem': '%s: %d %s', 'xtask': ('task', 'tasks'), 'xloc': ('task', 'tasks'),
+           'xstub': 'Blocks %s are not translated yet: their laws are not in these lists. Their counts are on the landing page of the source language.'},
 }
 TASK = re.compile(r'<div class="task"[^>]*>(.*?)<div class="solution">', re.S)
 LAW_REF = re.compile(r'<p class="law-ref">(.*?)</p>', re.S)
@@ -82,6 +103,8 @@ def plain(s):
 
 
 def plural(n, forms):
+    if len(forms) == 2:
+        return forms[0] if n == 1 else forms[1]
     if n % 10 == 1 and n % 100 != 11:
         return forms[0]
     if 2 <= n % 10 <= 4 and not 12 <= n % 100 <= 14:
@@ -172,8 +195,13 @@ def bake(lang, check):
     say = SAY[lang]
     rows, missing = examslice.load()
     exam = exam_counts(rows, pages, lang, missing) if rows else None
+    # A page that is still a stub in this language has no laws to name: its
+    # tags are not a defect here, and the landing leaves them out and says so.
+    stubs = sorted(stem for stem in PROFILE['topics'] if 'stub-card' in pages.get(stem, ''))
     for r in rows or []:
         for tag in r['tags']:
+            if tag.split(':')[0] in stubs:
+                continue
             if not tag.startswith('missing:') and not examslice.resolved(tag, pages, lang, missing):
                 unresolved.append('срез %s/%s №%s: %s' % (r['year'], r['test'], r['n'], tag))
     changed = []
@@ -233,9 +261,11 @@ def bake(lang, check):
                 rows.append('      <li><a href="%s.html">%s</a></li>' % (stem, html.escape(say['xitem'] % (title, n, plural(n, say['xtask'])), quote=False)))
             rows += ['    </ul>', '    <h3 id="freq-nmt-top">%s</h3>' % say['xtop'], '    <ol>']
             known = [(name, c) for (tag, name), c in per_tag.items()
-                     if not tag.startswith('missing:') and ':method-' not in tag]
+                     if not tag.startswith('missing:') and ':method-' not in tag and tag.split(':')[0] not in stubs]
             rows += ['      <li>%s - %d</li>' % (html.escape(n, quote=False), c) for n, c in sorted(known, key=lambda kv: (-kv[1], kv[0]))[:10]]
             rows += ['    </ol>']
+            if stubs:
+                rows += ['    <p class="dim">%s</p>' % (say['xstub'] % ', '.join(str(int(x)) for x in stubs))]
             gaps = [(name, c) for (tag, name), c in per_tag.items() if tag.startswith('missing:')]
             # The list of gaps exists only while there are gaps.
             if gaps:

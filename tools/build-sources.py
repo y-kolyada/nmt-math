@@ -58,6 +58,15 @@ SAY = {
            'sources': {'nmt-ua': {'head': 'НМТ на сайте ЗНО-ОНЛАЙН (zno.osvita.ua)', 'year': 'НМТ %s',
                                   'lead': 'Задания основных сессий НМТ %s с сайта ЗНО-ОНЛАЙН, по годам. '
                                           'Каждый год включается отдельно.'}}},
+    'en': {'head': 'Links to tasks from external sources',
+           'intro': 'Real tasks from other NMT preparation sites that lean on the laws of this block. '
+                    'Read the condition on the source site behind the link; the tagging by laws is ours. Sources and years are switched '
+                    'on and off in the settings (the gear at the top).',
+           'off': 'All external sources are switched off in the settings.',
+           'item': 'Session %s, task %s', 'fig': 'with a figure',
+           'sources': {'nmt-ua': {'head': 'NMT on the ZNO-ONLINE site (zno.osvita.ua, in Ukrainian)', 'year': 'NMT %s',
+                                  'lead': 'Tasks of the main NMT sessions of %s from the ZNO-ONLINE site, by year. '
+                                          'Each year is switched on separately.'}}},
 }
 SECTION = re.compile(r'\n?\s*<!-- sources -->.*?<!-- /sources -->', re.S)
 META = re.compile(r'\n?<meta name="swa-sources" content="[^"]*">')
