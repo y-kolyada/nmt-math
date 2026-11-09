@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Figures in the plane · nmt-math · ai|</title>
 <!-- meta: built by tools/build-meta.py - do not edit by hand -->
-<meta name="description" content="">
+<meta name="description" content="A few axioms from which logic derives everything else.">
 <link rel="canonical" href="https://y-kolyada.github.io/nmt-math/en/10.html">
 <link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/10.html">
 <link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/10.html">
@@ -15,12 +15,12 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="nmt-math">
 <meta property="og:title" content="Figures in the plane">
-<meta property="og:description" content="">
+<meta property="og:description" content="A few axioms from which logic derives everything else.">
 <meta property="og:url" content="https://y-kolyada.github.io/nmt-math/en/10.html">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Figures in the plane","description":"","url":"https://y-kolyada.github.io/nmt-math/en/10.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Figures in the plane","description":"A few axioms from which logic derives everything else.","url":"https://y-kolyada.github.io/nmt-math/en/10.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
 <!-- /meta -->
 <link rel="stylesheet" href="../assets/style.css?v=2">
 <link rel="stylesheet" href="../assets/study.css?v=2">
@@ -94,16 +94,519 @@
 
   <main id="main">
     <h1>Figures in the plane</h1>
-    <p class="page-size" data-words="29">Words: 29</p>
+    <p class="page-size" data-words="2929">Words: 2929</p>
+    <p class="lead">A few axioms from which logic derives everything else. Geometry is the first place where mathematics appears not as a set of formulas but as a system: every property is proved from the previous ones.</p>
 
-    <div class="stub-card">
-      <h2>The English version is in preparation</h2>
-      <p>The full working version of this page is published in Ukrainian.</p>
-      <p>Open the full version:</p>
-      <div class="stub-actions">
-        <a href="../uk/10.html" class="btn-primary">Figures in the plane →</a>
+    <div class="box key" id="key-idea">
+      <h2>Main idea of the page <a class="anchor-link" href="#key-idea" aria-label="link to this block">#</a></h2>
+      <p>The angle sum of a triangle, the properties of a parallelogram, the inscribed angle are not separate facts but a chain: each is proved from the previous ones, and at the base lies the axiom of parallel lines. So in geometry one rule holds: «it looks equal on the figure» is no argument. The block can establish shape and equality; measuring lengths and areas is the task of the next block (11).</p>
+    </div>
+
+    <span class="step">Step 0 · Hook</span>
+    <h2 id="hook">1 · Is an inscribed angle equal to the central one? <a class="anchor-link" href="#hook">#</a></h2>
+    <p>A central angle of a circle is 80°. What is the inscribed angle that stands on the same arc? The habit «they stand on one arc, so they are equal» gives 80°. In fact the inscribed angle is half as large: 40°. Both angles «look» at one arc, but from different points: from the centre the arc is seen at a larger angle.</p>
+
+    <span class="step">Step 1 · Concept</span>
+    <h2 id="concept">2 · Angles, triangles, the circle <a class="anchor-link" href="#concept">#</a></h2>
+    <ul>
+      <li><strong>Adjacent angles</strong> share a side, and the other two sides form a straight line: together 180°. <strong>Vertically opposite</strong> angles are equal.</li>
+      <li>A <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">transversal</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Transversal</strong><button type="button" class="term-close" aria-label="Close">&times;</button></span><span class="term-desc">A line that crosses two other lines and forms pairs of angles with them.</span><span class="term-links"><a href="glossary.html#term-secant">To the glossary <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> crosses two lines and forms pairs of angles: corresponding, alternate, co-interior.</li>
+      <li><strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Similar triangles</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Similar triangles</strong><button type="button" class="term-close" aria-label="Close">&times;</button></span><span class="term-desc">Triangles of the same shape: the angles are equal, the sides are proportional.</span><span class="term-links"><a href="glossary.html#term-similar">To the glossary <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> have the same shape: the angles are equal, the sides are proportional.</li>
+      <li>A <strong>central angle</strong> has its vertex at the centre of a circle, an <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">inscribed</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Inscribed angle</strong><button type="button" class="term-close" aria-label="Close">&times;</button></span><span class="term-desc">An angle with its vertex on a circle whose sides cut the circle.</span><span class="term-links"><a href="glossary.html#term-inscribed">To the glossary <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> one on the circle. A <strong>tangent</strong> has one common point with the circle.</li>
+      <li>A <strong><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">property</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Property and test</strong><button type="button" class="term-close" aria-label="Close">&times;</button></span><span class="term-desc">The two directions of a theorem: what follows from the kind of figure, and how to recognise that kind.</span><span class="term-links"><a href="glossary.html#term-property-sign">To the glossary <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span></strong> says what follows from a figure being of a certain kind; a <strong>test</strong> says how to recognise that kind. These are two directions of one theorem, and they are not always both true.</li>
+    </ul>
+
+    <span class="step">Step 2 · Law</span>
+    <h2 id="law">3 · Laws of figures <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-parallel">
+      <p class="law-name">Parallel lines and a transversal</p>
+      <p>Lines are parallel if and only if the corresponding angles are equal; the alternate angles are then equal too, and the co-interior angles add up to 180°.</p>
+    </div>
+    <div class="corollary" id="cor-parallelogram" data-law="law-parallel">
+      <p class="corollary-of">Corollary of the law <a href="#law-parallel">«Parallel lines and a transversal»</a></p>
+      <p class="corollary-name">Angles of a parallelogram</p>
+      <div class="math-block" data-tex="\angle A + \angle B = 180^\circ,\qquad \angle A = \angle C,\quad \angle B = \angle D"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>&#x02220;</mo><mi>A</mi><mo>&#x0002B;</mo><mo>&#x02220;</mo><mi>B</mi><mo>&#x0003D;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x0002C;</mo><mspace width="2em" /><mo>&#x02220;</mo><mi>A</mi><mo>&#x0003D;</mo><mo>&#x02220;</mo><mi>C</mi><mo>&#x0002C;</mo><mspace width="1em" /><mo>&#x02220;</mo><mi>B</mi><mo>&#x0003D;</mo><mo>&#x02220;</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">\angle A + \angle B = 180^\circ,\qquad \angle A = \angle C,\quad \angle B = \angle D</annotation></semantics></math></div>
+      <p>Adjacent angles of a parallelogram add up to 180°, opposite angles are equal.</p>
+      <!-- fig:10-cor-parallelogram -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 190" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Parallelogram ABCD. Angles A and C are marked α, angles B and D are marked 180° − α: adjacent angles add up to 180°, opposite angles are equal.">
+        <polygon points="40.0,160.0 210.0,160.0 270.0,56.1 100.0,56.1" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <text x="34.0" y="174.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">A</text>
+        <text x="214.0" y="174.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">B</text>
+        <text x="276.0" y="54.1" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">C</text>
+        <text x="94.0" y="52.1" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">D</text>
+        <text x="66.0" y="152.0" fill="currentColor" font-size="14" opacity="1.0" style="fill:var(--acc)">α</text>
+        <text x="244.0" y="76.1" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" style="fill:var(--acc)">α</text>
+        <text x="200.0" y="150.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end">180° − α</text>
+        <text x="112.0" y="78.1" fill="currentColor" font-size="13" opacity="1.0">180° − α</text>
+      </svg>
+      <p class="dim">Figure 36. Corollary: adjacent angles of a parallelogram add up to 180°, opposite angles are equal.</p>
+    </div>
+    <!-- /fig:10-cor-parallelogram -->
+      <p><strong>Why it is so.</strong> The sides AD and BC are parallel, AB is a transversal, so the angles A and B are co-interior: A + B = 180°. In the same way B + C = 180° for the parallel AB and CD, hence A = C. So a parallelogram with angles x and 2x exists: x + 2x = 180°, the angles are 60° and 120°.</p>
+    </div>
+    <div class="law" id="law-angles">
+      <p class="law-name">The angle sum of a triangle is 180°</p>
+      <div class="math-block" data-tex="\angle A + \angle B + \angle C = 180^\circ,\qquad S_n = 180^\circ (n - 2)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>&#x02220;</mo><mi>A</mi><mo>&#x0002B;</mo><mo>&#x02220;</mo><mi>B</mi><mo>&#x0002B;</mo><mo>&#x02220;</mo><mi>C</mi><mo>&#x0003D;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>S</mi><mi>n</mi></msub><mo>&#x0003D;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo stretchy="false">&#x00028;</mo><mi>n</mi><mo>&#x02212;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">\angle A + \angle B + \angle C = 180^\circ,\qquad S_n = 180^\circ (n - 2)</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-inscribed">
+      <p class="law-name">Inscribed angle</p>
+      <p>An inscribed angle equals half the central angle that stands on the same arc. An inscribed angle that stands on a diameter is a right angle.</p>
+    </div>
+    <div class="corollary" id="cor-cyclic" data-law="law-inscribed">
+      <p class="corollary-of">Corollary of the law <a href="#law-inscribed">«Inscribed angle»</a></p>
+      <p class="corollary-name">Inscribed quadrilateral</p>
+      <div class="math-block" data-tex="\angle A + \angle C = \angle B + \angle D = 180^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>&#x02220;</mo><mi>A</mi><mo>&#x0002B;</mo><mo>&#x02220;</mo><mi>C</mi><mo>&#x0003D;</mo><mo>&#x02220;</mo><mi>B</mi><mo>&#x0002B;</mo><mo>&#x02220;</mo><mi>D</mi><mo>&#x0003D;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">\angle A + \angle C = \angle B + \angle D = 180^\circ</annotation></semantics></math></div>
+      <p>If a quadrilateral is inscribed in a circle, its opposite angles add up to 180°. A circle can be drawn around a trapezium only when it is isosceles (an isosceles trapezium, US: isosceles trapezoid).</p>
+      <!-- fig:10-cor-cyclic -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 230" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Quadrilateral ABCD inscribed in a circle. Angle A is marked α, the opposite angle C is 180° − α; angle B is marked β, the opposite angle D is 180° − β.">
+        <circle cx="160.0" cy="112.0" r="96.0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="1.4"/>
+        <polygon points="69.8,144.8 192.8,202.2 254.5,95.3 127.2,21.8" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <text x="56.6" y="154.6" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">A</text>
+        <text x="197.6" y="220.4" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">B</text>
+        <text x="268.3" y="97.9" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">C</text>
+        <text x="122.4" y="13.6" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">D</text>
+        <text x="93.2" y="141.3" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" style="fill:var(--acc)">α</text>
+        <text x="207.3" y="108.7" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" style="fill:var(--acc)">180° − α</text>
+        <text x="183.0" y="180.1" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">β</text>
+        <text x="141.0" y="64.7" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">180° − β</text>
+      </svg>
+      <p class="dim">Figure 37. Corollary: in an inscribed quadrilateral, opposite angles add up to 180°.</p>
+    </div>
+    <!-- /fig:10-cor-cyclic -->
+      <p><strong>Why it is so.</strong> The angles A and C stand on two arcs that together make the whole circle, 360°. Each inscribed angle is half its arc, so A + C = 360° : 2 = 180°. In a trapezium ABCD with bases AD and BC the angles A and B are co-interior: A + B = 180°; in an inscribed one also B + D = 180°, so A = D, and the trapezium is isosceles.</p>
+    </div>
+    <div class="corollary" id="cor-circumcenter" data-law="law-inscribed">
+      <p class="corollary-of">Corollary of the law <a href="#law-inscribed">«Inscribed angle»</a></p>
+      <p class="corollary-name">Centre of the circumscribed circle</p>
+      <p>The perpendicular bisectors of the sides of a triangle meet at one point, the <span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">centre of the circumscribed circle</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Circumcentre (US: circumcenter)</strong><button type="button" class="term-close" aria-label="Close">&times;</button></span><span class="term-desc">The point equidistant from all the vertices of a triangle: where the perpendicular bisectors of the sides meet.</span><span class="term-links"><a href="glossary.html#term-circumcenter">To the glossary <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span>. In a right triangle it is the midpoint of the hypotenuse, in an obtuse one a point outside the triangle.</p>
+      <!-- fig:10-cor-circumcenter -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 256" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Triangle ABC and the perpendicular bisectors of its three sides, dashed. They meet at one point O, the centre of the circle through A, B and C.">
+        <circle cx="160.0" cy="142.1" r="100.6" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 4"/>
+        <polygon points="66.0,178.0 254.0,178.0 130.0,46.0" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="160.0" y1="192.0" x2="160.0" y2="124.1" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="160.0" cy="178.0" r="3" fill="currentColor"/>
+        <line x1="202.2" y1="102.4" x2="146.9" y2="154.4" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="192.0" cy="112.0" r="3" fill="currentColor"/>
+        <line x1="85.4" y1="105.9" x2="176.2" y2="149.9" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 4" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="98.0" cy="112.0" r="3" fill="currentColor"/>
+        <circle cx="160.0" cy="142.1" r="3.5" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="170.0" y="147.1" fill="currentColor" font-size="14" opacity="1.0" font-style="italic" style="fill:var(--acc)">O</text>
+        <text x="60.0" y="192.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">A</text>
+        <text x="260.0" y="192.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">B</text>
+        <text x="130.0" y="36.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">C</text>
+      </svg>
+      <p class="dim">Figure 38. Corollary: the perpendicular bisectors of the sides of a triangle meet at the centre of the circumscribed circle.</p>
+    </div>
+    <!-- /fig:10-cor-circumcenter -->
+      <p><strong>Why it is so.</strong> Each point of the perpendicular bisector of AB is equally far from A and B: two right triangles with a common leg and equal second legs have equal hypotenuses (Pythagoras' theorem, block 11). The point where two bisectors meet is equidistant from all three vertices - it is the centre of the circle. A right angle stands on a diameter, so in a right triangle the hypotenuse is a diameter and the centre is its midpoint. An obtuse angle C is half of the arc AB larger than a semicircle, so C and the centre lie on different sides of AB.</p>
+    </div>
+    <div class="law" id="law-triangle-ineq">
+      <p class="law-name">Triangle inequality</p>
+      <div class="math-block" data-tex="a < b + c,\quad b < a + c,\quad c < a + b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>a</mi><mo>&#x0003C;</mo><mi>b</mi><mo>&#x0002B;</mo><mi>c</mi><mo>&#x0002C;</mo><mspace width="1em" /><mi>b</mi><mo>&#x0003C;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>c</mi><mo>&#x0002C;</mo><mspace width="1em" /><mi>c</mi><mo>&#x0003C;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a &lt; b + c,\quad b &lt; a + c,\quad c &lt; a + b</annotation></semantics></math></div>
+      <p>It is enough to check that the largest side is less than the sum of the other two.</p>
+    </div>
+    <div class="law" id="law-similar">
+      <p class="law-name">Similarity test by two angles</p>
+      <p>If two angles of one triangle equal two angles of another, the triangles are similar.</p>
+    </div>
+    <div class="corollary" id="cor-midline" data-law="law-similar">
+      <p class="corollary-of">Corollary of the law <a href="#law-similar">«Similarity test by two angles»</a></p>
+      <p class="corollary-name"><span class="term"><button type="button" class="term-btn" aria-expanded="false" style="background:none;border:none;padding:1px 4px;margin:-1px -4px;font:inherit;color:inherit;cursor:pointer;border-bottom:2px dashed var(--term-accent,#db8b0e);border-radius:4px;">Midline</button><span class="term-card" role="tooltip" hidden><span class="term-header"><strong class="term-title">Midline</strong><button type="button" class="term-close" aria-label="Close">&times;</button></span><span class="term-desc">The segment joining the midpoints of two sides of a triangle or of the legs of a trapezium (US: trapezoid).</span><span class="term-links"><a href="glossary.html#term-midline">To the glossary <svg class="icon" data-icon="book" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 3.8h4.8a2.6 2.6 0 0 1 2.6 2.6v10a2.2 2.2 0 0 0-2.2-1.8H2.6z"/><path d="M17.4 3.8h-4.8a2.6 2.6 0 0 0-2.6 2.6v10a2.2 2.2 0 0 1 2.2-1.8h5.2z"/></svg></a></span></span></span> of a triangle and of a trapezium</p>
+      <div class="math-block" data-tex="MN \parallel AC,\quad MN = \frac{AC}{2};\qquad m_{\text{trap}} = \frac{a + b}{2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>M</mi><mi>N</mi><mo>&#x02225;</mo><mi>A</mi><mi>C</mi><mo>&#x0002C;</mo><mspace width="1em" /><mi>M</mi><mi>N</mi><mo>&#x0003D;</mo><mfrac><mrow><mi>A</mi><mi>C</mi></mrow><mrow><mn>2</mn></mrow></mfrac><mi>;</mi><mspace width="2em" /><msub><mi>m</mi><mrow><mtext>trap</mtext></mrow></msub><mo>&#x0003D;</mo><mfrac><mrow><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi></mrow><mrow><mn>2</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">MN \parallel AC,\quad MN = \frac{AC}{2};\qquad m_{\text{trap}} = \frac{a + b}{2}</annotation></semantics></math></div>
+      <p>The midline joins the midpoints of two sides of a triangle: it is parallel to the third side and equals half of it. The midline of a trapezium joins the midpoints of the legs, is parallel to the bases and equals half their sum.</p>
+      <!-- fig:10-cor-midline -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 200" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Triangle ABC, M is the midpoint of AB, N is the midpoint of BC. The midline MN is highlighted: it is parallel to AC and equals half of it; AC is marked a, MN is marked a/2.">
+        <polygon points="40.0,170.0 150.0,30.0 280.0,170.0" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="95.0" y1="100.0" x2="215.0" y2="100.0" stroke="currentColor" stroke-width="2.4" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="95.0" cy="100.0" r="3.5" fill="currentColor" style="fill:var(--acc)"/>
+        <circle cx="215.0" cy="100.0" r="3.5" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="34.0" y="184.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">A</text>
+        <text x="150.0" y="20.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">B</text>
+        <text x="286.0" y="184.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">C</text>
+        <text x="87.0" y="100.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">M</text>
+        <text x="223.0" y="100.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">N</text>
+        <text x="160.0" y="188.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">a</text>
+        <text x="155.0" y="118.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic" style="fill:var(--acc)">a/2</text>
+      </svg>
+      <p class="dim">Figure 39. Corollary: the midline of a triangle is parallel to the third side and equals half of it.</p>
+    </div>
+    <!-- /fig:10-cor-midline -->
+      <p><strong>Why it is so.</strong> Through the midpoint M of the side AB draw a line parallel to AC; it meets BC at the point N. Corresponding angles at parallel lines are equal, so the triangles MBN and ABC are similar by two angles with ratio BM : BA = 1 : 2. Hence BN = BC/2, that is, N is the midpoint, and MN = AC/2. A diagonal divides a trapezium into two triangles, and the midline of the trapezium is made of the midlines of these triangles: a/2 + b/2.</p>
+    </div>
+
+    <span class="step">Step 3 · Why it is so</span>
+    <h2 id="why">4 · Where the laws come from <a class="anchor-link" href="#why">#</a></h2>
+    <p><strong>The angle sum of a triangle.</strong> Draw through the vertex B a line parallel to AC. The angles at B formed by it are alternate with the angles A and C, so they are equal to them. The three angles at B together form a straight angle: 180°. Here you see what the theorem stands on: the property of parallel lines.</p>
+    <!-- fig:10-angle-sum -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 180" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Triangle ABC and a line through vertex B parallel to side AC. The angles at B formed by this line are equal to angles A and C as alternate angles. The three angles at B together make a straight angle, 180°.">
+        <polygon points="40.0,150.0 130.0,40.0 290.0,150.0" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="14.0" y1="40.0" x2="306.0" y2="40.0" stroke="currentColor" stroke-width="1.4" opacity="1.0" style="stroke:var(--acc)"/>
+        <text x="34.0" y="168.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-weight="700">A</text>
+        <text x="130.0" y="30.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-weight="700">B</text>
+        <text x="292.0" y="168.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-weight="700">C</text>
+        <text x="66.0" y="144.0" fill="currentColor" font-size="13" opacity="1.0" font-weight="700" style="fill:var(--acc)">1</text>
+        <text x="256.0" y="144.0" fill="currentColor" font-size="13" opacity="1.0" font-weight="700" style="fill:var(--acc)">3</text>
+        <text x="96.0" y="56.0" fill="currentColor" font-size="13" opacity="1.0" font-weight="700" style="fill:var(--acc)">1</text>
+        <text x="152.0" y="56.0" fill="currentColor" font-size="13" opacity="1.0" font-weight="700" style="fill:var(--acc)">3</text>
+        <text x="128.0" y="70.0" fill="currentColor" font-size="13" opacity="1.0" font-weight="700">2</text>
+      </svg>
+      <p class="dim">Figure 40. The angle sum of a triangle: the three angles at vertex B make a straight line.</p>
+    </div>
+    <!-- /fig:10-angle-sum -->
+    <p><strong>A polygon.</strong> The diagonals from one vertex divide a convex n-gon into <span class="math" data-tex="n - 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>n</mi><mo>&#x02212;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n - 2</annotation></semantics></math></span> triangles, and the angles of the triangles together make up the angles of the polygon.</p>
+    <p><strong>The inscribed angle.</strong> Let one side of an inscribed angle pass through the centre O. The triangle with vertices at O, at the vertex of the angle and on the circle is isosceles (two sides are radii), and the central angle is its exterior angle, that is, the sum of two equal angles. So the inscribed angle is half the central one. Other positions reduce to this one.</p>
+    <!-- fig:10-inscribed -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 230" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="A circle with centre O. The central angle AOB is 100°; the inscribed angle ACB stands on the same arc AB and is 50°, half as large.">
+        <circle cx="160.0" cy="112.0" r="92.0" fill="currentColor" fill-opacity="0.0" stroke="currentColor" stroke-width="1.4"/>
+        <polyline points="89.5,171.1 160.0,112.0 230.5,171.1" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.8" opacity="1.0" style="stroke:var(--acc)"/>
+        <polyline points="89.5,171.1 144.0,21.4 230.5,171.1" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.6" opacity="1.0"/>
+        <circle cx="89.5" cy="171.1" r="3.5" fill="currentColor"/>
+        <circle cx="230.5" cy="171.1" r="3.5" fill="currentColor"/>
+        <circle cx="144.0" cy="21.4" r="3.5" fill="currentColor"/>
+        <circle cx="160.0" cy="112.0" r="3.5" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="81.5" y="185.1" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-weight="700">A</text>
+        <text x="238.5" y="185.1" fill="currentColor" font-size="14" opacity="1.0" font-weight="700">B</text>
+        <text x="144.0" y="13.4" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-weight="700">C</text>
+        <text x="168.0" y="108.0" fill="currentColor" font-size="14" opacity="1.0" font-weight="700">O</text>
+        <text x="160.0" y="142.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" style="fill:var(--acc)">100°</text>
+        <text x="146.0" y="55.4" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">50°</text>
+      </svg>
+      <p class="dim">Figure 41. An inscribed angle is half the central angle on the same arc: 100° and 50°.</p>
+    </div>
+    <!-- /fig:10-inscribed -->
+    <p><strong>The triangle inequality.</strong> A segment is the shortest path between two points, so the path through the third vertex is longer.</p>
+
+    <span class="step">Step 4 · Limits</span>
+    <h2 id="limits">5 · Where the laws break <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-picture">
+      <p><strong>A figure is not an argument.</strong> Angles that «look equal» are equal only when this follows from the condition and the theorems.</p>
+    </div>
+    <div class="limit" id="limit-converse">
+      <p><strong>A property does not always reverse.</strong> The diagonals of a rectangle are equal, but an isosceles trapezium has equal diagonals too. In a parallelogram the diagonals bisect each other, but they are equal only in a rectangle.</p>
+    </div>
+    <div class="limit" id="limit-strict">
+      <p><strong>The triangle inequality is strict.</strong> If <span class="math" data-tex="c = a + b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>c</mi><mo>&#x0003D;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">c = a + b</annotation></semantics></math></span>, the three points lie on one line, and there is no triangle.</p>
+    </div>
+
+    <span class="step">Step 5 · Practice</span>
+    <h2 id="apply">6 · Tasks in the NMT format <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="C" data-limit="">
+      <p class="task-kind">One answer out of five · 1 point</p>
+      <p>The angles of a triangle are in the ratio 2 : 3 : 4. Find the largest angle.</p>
+      <div class="opts">
+        <button type="button" data-opt="A">A · 40°</button>
+        <button type="button" data-opt="B">B · 60°</button>
+        <button type="button" data-opt="C">C · 80°</button>
+        <button type="button" data-opt="D">D · 90°</button>
+        <button type="button" data-opt="E">E · 100°</button>
+      </div>
+      <p class="law-ref">Laws: the <a href="#law-angles">angle sum</a> and the part of a whole from <a href="02.html">block 2</a>.</p>
+      <div class="solution">There are 9 parts in all, one part is <span class="math" data-tex="180^\circ : 9 = 20^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>180</mn><mo>&#x02218;</mo></msup><mi>:</mi><mn>9</mn><mo>&#x0003D;</mo><msup><mn>20</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">180^\circ : 9 = 20^\circ</annotation></semantics></math></span>, the largest angle is <span class="math" data-tex="4 \cdot 20^\circ = 80^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>4</mn><mo>&#x000B7;</mo><msup><mn>20</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><msup><mn>80</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">4 \cdot 20^\circ = 80^\circ</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="720" data-limit="">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p>Find the angle sum of a convex hexagon (in degrees).</p>
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Law: the <a href="#law-angles">angle sum of a polygon</a>.</p>
+      <div class="solution"><span class="math" data-tex="180^\circ \cdot (6 - 2) = 720^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x000B7;</mo><mo stretchy="false">&#x00028;</mo><mn>6</mn><mo>&#x02212;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mn>720</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">180^\circ \cdot (6 - 2) = 720^\circ</annotation></semantics></math></span>: four triangles.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="55" data-limit="">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p>A central angle of a circle is 110°. Find the inscribed angle (in degrees) that stands on the same arc.</p>
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Law: <a href="#law-inscribed">inscribed angle</a>.</p>
+      <div class="solution">Half the central one: 55°.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="C" data-limit="limit-strict">
+      <p class="task-kind">One answer out of five · 1 point</p>
+      <p>Which triple of segments can form a triangle?</p>
+      <div class="opts">
+        <button type="button" data-opt="A">A · 1, 2, 3</button>
+        <button type="button" data-opt="B">B · 2, 3, 6</button>
+        <button type="button" data-opt="C">C · 3, 4, 5</button>
+        <button type="button" data-opt="D">D · 1, 1, 2</button>
+        <button type="button" data-opt="E">E · 2, 2, 5</button>
+      </div>
+      <p class="law-ref">Law: the <a href="#law-triangle-ineq">triangle inequality</a>.</p>
+      <div class="solution">Only <span class="math" data-tex="5 < 3 + 4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>5</mn><mo>&#x0003C;</mo><mn>3</mn><mo>&#x0002B;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">5 &lt; 3 + 4</annotation></semantics></math></span>. In A and D the largest side equals the sum of the other two: this is the limit, the triangle degenerates into a segment.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="15" data-limit="" data-claim="10-task-midline">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p>The sides of a triangle are 8 cm, 10 cm and 12 cm. Find the perimeter of the triangle whose vertices are the midpoints of the sides of the given one (in cm).</p>
+      <!-- fig:10-task-midline -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 196" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Triangle ABC with sides AB = 8, BC = 10, AC = 12. The points M, N and K are the midpoints of AB, BC and AC; triangle MNK is coloured.">
+        <polygon points="34.0,170.0 128.5,31.1 286.0,170.0" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <polygon points="81.2,100.5 207.2,100.5 160.0,170.0" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.8" opacity="1.0" style="stroke:var(--acc);fill:var(--acc)"/>
+        <text x="28.0" y="175.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">A</text>
+        <text x="128.5" y="23.1" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">B</text>
+        <text x="292.0" y="175.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">C</text>
+        <text x="73.2" y="100.5" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">M</text>
+        <text x="215.2" y="100.5" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">N</text>
+        <text x="160.0" y="188.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">K</text>
+        <text x="49.6" y="139.3" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end">8</text>
+        <text x="254.6" y="139.3" fill="currentColor" font-size="13" opacity="1.0">10</text>
+        <text x="97.0" y="188.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">12</text>
+      </svg>
+      <p class="dim">Figure 42. For the task: a triangle whose vertices are the midpoints of the sides of triangle ABC.</p>
+    </div>
+    <!-- /fig:10-task-midline -->
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Corollary: <a href="#cor-midline">the midline of a triangle</a>.</p>
+      <div class="solution">Each side of the new triangle is a midline, that is, half a side of the given one: (8 + 10 + 12) : 2 = 15.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="D" data-limit="" data-claim="10-task-exterior">
+      <p class="task-kind">One answer out of five · 1 point</p>
+      <p>In triangle ABC ∠A = 50°, ∠B = 70°. Find the exterior angle of the triangle at the vertex C.</p>
+      <!-- fig:10-task-exterior -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 190" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Triangle ABC with angles A = 50° and B = 70°. Side AC is extended beyond vertex C; the exterior angle at vertex C, between the extension and side CB, is marked with a question mark.">
+        <polygon points="24.0,166.0 142.5,24.8 224.0,166.0" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="224.0" y1="166.0" x2="300.0" y2="166.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <path d="M 50.0 166.0 A 26.0 26.0 0 0 0 40.7 146.1" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M 246.0 166.0 A 22.0 22.0 0 0 0 213.0 146.9" fill="none" stroke="currentColor" stroke-width="1.4" style="stroke:var(--acc)"/>
+        <text x="22.0" y="184.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">A</text>
+        <text x="142.5" y="16.8" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">B</text>
+        <text x="220.0" y="184.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">C</text>
+        <text x="56.0" y="158.0" fill="currentColor" font-size="13" opacity="1.0">50°</text>
+        <text x="140.6" y="56.7" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">70°</text>
+        <text x="243.0" y="138.1" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-weight="700" style="fill:var(--acc)">?</text>
+      </svg>
+      <p class="dim">Figure 43. For the task: the exterior angle of a triangle at vertex C.</p>
+    </div>
+    <!-- /fig:10-task-exterior -->
+      <div class="opts">
+        <button type="button" data-opt="A">A · 60°</button>
+        <button type="button" data-opt="B">B · 100°</button>
+        <button type="button" data-opt="C">C · 110°</button>
+        <button type="button" data-opt="D">D · 120°</button>
+        <button type="button" data-opt="E">E · 130°</button>
+      </div>
+      <p class="law-ref">Law: the <a href="#law-angles">angle sum of a triangle</a>.</p>
+      <div class="solution">∠C = 180° − 50° − 70° = 60°, the exterior angle is 180° − 60° = 120°: it is the sum of the two angles not adjacent to it. 60° is the angle C itself, 110° and 130° are the exterior angles at B and A.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="C" data-limit="" data-claim="10-task-diameter">
+      <p class="task-kind">One answer out of five · 1 point</p>
+      <p>AB is a diameter of a circle, the point C lies on the circle, ∠ABC = 35°. Find ∠BAC.</p>
+      <!-- fig:10-task-diameter -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 214" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="A circle with centre O and diameter AB. Point C lies on the circle, angle ABC is 35°, angle BAC is marked with a question mark; angle ACB stands on the diameter.">
+        <circle cx="160.0" cy="110.0" r="92.0" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-width="1.4"/>
+        <polygon points="68.0,110.0 252.0,110.0 128.5,23.5" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <circle cx="160.0" cy="110.0" r="3" fill="currentColor"/>
+        <polyline points="122.2,32.6 131.2,38.9 137.5,29.9" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <text x="62.0" y="115.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">A</text>
+        <text x="258.0" y="115.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">B</text>
+        <text x="124.5" y="15.5" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">C</text>
+        <text x="160.0" y="128.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">O</text>
+        <text x="218.0" y="104.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end">35°</text>
+        <text x="98.0" y="102.0" fill="currentColor" font-size="15" opacity="1.0" font-weight="700" style="fill:var(--acc)">?</text>
+      </svg>
+      <p class="dim">Figure 44. For the task: a triangle inscribed in a circle, one side of which is a diameter.</p>
+    </div>
+    <!-- /fig:10-task-diameter -->
+      <div class="opts">
+        <button type="button" data-opt="A">A · 35°</button>
+        <button type="button" data-opt="B">B · 45°</button>
+        <button type="button" data-opt="C">C · 55°</button>
+        <button type="button" data-opt="D">D · 65°</button>
+        <button type="button" data-opt="E">E · 145°</button>
+      </div>
+      <p class="law-ref">Law: <a href="#law-inscribed">inscribed angle</a>: an angle that stands on a diameter is a right angle.</p>
+      <div class="solution">∠ACB stands on a semicircle, so it equals 180° : 2 = 90°, and ∠BAC = 180° − 90° − 35° = 55°. 145° is 180° − 35°, as if there were no angle C.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="65" data-limit="" data-claim="10-read-angles">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p class="task-class"><strong>Data on the figure · read and apply.</strong> The numbers for the solution are only on the figure: first write them down, then solve.</p>
+      <p>Find the angle C of the triangle ABC shown in the figure (in degrees).</p>
+      <!-- fig:10-read-angles -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 226" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Triangle ABC. The figure marks the angles ∠A = 48°, ∠B = 67°. Angle C is marked with a question mark.">
+        <polygon points="60.0,200.0 260.0,200.0 195.9,49.0" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <path d="M 86.0 200.0 A 26 26 0 0 0 77.4 180.7" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M 249.8 176.1 A 26 26 0 0 0 234.0 200.0" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <text x="92.0" y="192.0" fill="currentColor" font-size="13" opacity="1.0" style="fill:var(--acc)">48°</text>
+        <text x="228.0" y="192.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" style="fill:var(--acc)">67°</text>
+        <text x="195.9" y="77.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-weight="700" style="fill:var(--acc)">?</text>
+        <text x="54.0" y="216.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">A</text>
+        <text x="266.0" y="216.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">B</text>
+        <text x="195.9" y="41.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">C</text>
+      </svg>
+      <p class="dim">Figure 45. For the task: a triangle with two marked angles.</p>
+    </div>
+    <!-- /fig:10-read-angles -->
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Law: the <a href="#law-angles">angle sum of a triangle</a>.</p>
+      <div class="solution">From the figure: ∠A = 48°, ∠B = 67°. ∠C = 180° − 48° − 67° = 65°.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="D" data-limit="" data-claim="10-read-par">
+      <p class="task-kind">One answer out of five · 1 point</p>
+      <p class="task-class"><strong>Data on the figure · pick what is needed.</strong> The numbers are only on the figure, and among them is an extra one or a trap: the grid step, a scale that does not start at zero. Write down only what the solution needs.</p>
+      <p>Find the angle B of the parallelogram ABCD shown in the figure.</p>
+      <!-- fig:10-read-par -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 192" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Parallelogram ABCD. The figure marks angle A = 58° and labels side AB = 7 cm. Angle B is marked with a question mark.">
+        <polygon points="40.0,160.0 208.0,160.0 274.2,54.0 106.2,54.0" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <path d="M 64.0 160.0 A 24 24 0 0 0 52.7 139.6" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <text x="70.0" y="152.0" fill="currentColor" font-size="13" opacity="1.0" style="fill:var(--acc)">58°</text>
+        <text x="124.0" y="180.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle">7 cm</text>
+        <text x="194.0" y="150.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="end" font-weight="700" style="fill:var(--acc)">?</text>
+        <text x="34.0" y="176.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">A</text>
+        <text x="214.0" y="176.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">B</text>
+        <text x="280.2" y="50.0" fill="currentColor" font-size="14" opacity="1.0" font-style="italic">C</text>
+        <text x="100.2" y="50.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="end" font-style="italic">D</text>
+      </svg>
+      <p class="dim">Figure 46. For the task: a parallelogram with a marked angle and a labelled side.</p>
+    </div>
+    <!-- /fig:10-read-par -->
+      <div class="opts">
+        <button type="button" data-opt="A">A · 58°</button>
+        <button type="button" data-opt="B">B · 65°</button>
+        <button type="button" data-opt="C">C · 97°</button>
+        <button type="button" data-opt="D">D · 122°</button>
+        <button type="button" data-opt="E">E · 151°</button>
+      </div>
+      <p class="law-ref">Corollary: <a href="#cor-parallelogram">angles of a parallelogram</a>.</p>
+      <div class="solution">Only the angle A = 58° is needed: adjacent angles of a parallelogram add up to 180°, so ∠B = 180° − 58° = 122°. The side length 7 cm is not needed for the angles. 58° is the angle C, opposite A.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="45" data-limit="" data-claim="10-read-circle">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p class="task-class"><strong>Data on the figure · read and connect.</strong> The numbers are only on the figure, and what you read goes into two laws: write the numbers down, then name both laws.</p>
+      <p>Find the angle ABC of the triangle shown in the figure (in degrees).</p>
+      <!-- fig:10-read-circle -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 228" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="A circle with centre O, points A, B, C on the circle, triangle ABC inscribed. The figure marks the central angle AOB = 130° (on the arc AB that does not contain C) and the angle CAB = 70°. Angle ABC is marked with a question mark.">
+        <circle cx="160.0" cy="112.0" r="92.0" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="1.4"/>
+        <polygon points="73.5,143.5 239.7,158.0 128.5,25.5" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <line x1="160.0" y1="112.0" x2="73.5" y2="143.5" stroke="currentColor" stroke-width="1.3" opacity="1.0" style="stroke:var(--acc)"/>
+        <line x1="160.0" y1="112.0" x2="239.7" y2="158.0" stroke="currentColor" stroke-width="1.3" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="160.0" cy="112.0" r="3" fill="currentColor"/>
+        <text x="162.0" y="104.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-style="italic">O</text>
+        <text x="160.0" y="142.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" style="fill:var(--acc)">130°</text>
+        <text x="60.4" y="153.3" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">A</text>
+        <text x="251.8" y="170.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">B</text>
+        <text x="123.7" y="17.4" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle" font-style="italic">C</text>
+        <text x="95.5" y="129.5" fill="currentColor" font-size="13" opacity="1.0">70°</text>
+        <text x="221.7" y="136.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="end" font-weight="700" style="fill:var(--acc)">?</text>
+      </svg>
+      <p class="dim">Figure 47. For the task: an inscribed triangle, a central angle and an inscribed angle.</p>
+    </div>
+    <!-- /fig:10-read-circle -->
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Laws: <a href="#law-inscribed">inscribed angle</a> and the <a href="#law-angles">angle sum of a triangle</a>.</p>
+      <div class="solution">From the figure: the central angle AOB = 130°, ∠CAB = 70°. The inscribed angle ACB stands on the same arc AB, so it is half as large: 65°. Then ∠ABC = 180° − 65° − 70° = 45°.</div>
+    </div>
+
+    <span class="step">Step 6 · Reverse move</span>
+    <h2 id="reverse">7 · Name the law yourself <a class="anchor-link" href="#reverse">#</a></h2>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="115" data-limit="">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p>Two parallel lines are cut by a transversal. One of the co-interior angles is 65°. Find the other (in degrees).</p>
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Law: <a href="#law-parallel">parallel lines and a transversal</a>.</p>
+      <div class="solution"><span class="math" data-tex="180^\circ - 65^\circ = 115^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x02212;</mo><msup><mn>65</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><msup><mn>115</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">180^\circ - 65^\circ = 115^\circ</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="55" data-limit="">
+      <p class="task-kind">Short answer · 2 points</p>
+      <p>The point C lies on a circle with diameter AB, <span class="math" data-tex="\angle A = 35^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02220;</mo><mi>A</mi><mo>&#x0003D;</mo><msup><mn>35</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">\angle A = 35^\circ</annotation></semantics></math></span>. Find the angle B of the triangle ABC (in degrees).</p>
+      <p><label>Answer: <input type="text" inputmode="decimal" size="8" aria-label="Answer"></label>
+      <button type="button" class="check">Check</button></p>
+      <p class="law-ref">Laws: <a href="#law-inscribed">an inscribed angle on a diameter</a> and the <a href="#law-angles">angle sum</a>.</p>
+      <div class="solution">The angle C stands on a diameter, so <span class="math" data-tex="\angle C = 90^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02220;</mo><mi>C</mi><mo>&#x0003D;</mo><msup><mn>90</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">\angle C = 90^\circ</annotation></semantics></math></span>; then <span class="math" data-tex="\angle B = 180^\circ - 90^\circ - 35^\circ = 55^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02220;</mo><mi>B</mi><mo>&#x0003D;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x02212;</mo><msup><mn>90</mn><mo>&#x02218;</mo></msup><mo>&#x02212;</mo><msup><mn>35</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><msup><mn>55</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">\angle B = 180^\circ - 90^\circ - 35^\circ = 55^\circ</annotation></semantics></math></span>.</div>
+    </div>
+
+    <h2 id="error">8 · Find the mistake in someone else's solution <a class="anchor-link" href="#error">#</a></h2>
+    <p>Viktoria writes: «The diagonals of the quadrilateral ABCD are equal, so ABCD is a rectangle».</p>
+    <details>
+      <summary>Where is the mistake?</summary>
+      <p>Equal diagonals are a property of a rectangle but not a test: an isosceles trapezium has equal diagonals too, and even a quadrilateral with no parallel sides at all. The test for a rectangle: a parallelogram with equal diagonals (the <a href="#limit-converse">second limit</a>).</p>
+    </details>
+    <!-- sources -->
+    <h2 id="external">9 · Links to tasks from external sources <a class="anchor-link" href="#external">#</a></h2>
+    <p class="dim">Real tasks from other NMT preparation sites that lean on the laws of this block. Read the condition on the source site behind the link; the tagging by laws is ours. Sources and years are switched on and off in the settings (the gear at the top).</p>
+    <p class="dim ext-off" hidden>All external sources are switched off in the settings.</p>
+    <div class="ext-source" data-ext-source="nmt-ua" id="ext-nmt-ua">
+      <h3 class="ext-head">NMT on the ZNO-ONLINE site (zno.osvita.ua, in Ukrainian)</h3>
+      <p class="dim ext-lead">Tasks of the main NMT sessions of 2024-2026 from the ZNO-ONLINE site, by year. Each year is switched on separately.</p>
+      <div class="ext" data-ext="nmt-ua:2026" id="ext-nmt-ua-2026">
+        <h4>NMT 2026</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q3" rel="noopener" target="_blank">Session 1, task 3</a> (with a figure) - Parallel lines and a transversal</li>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q10" rel="noopener" target="_blank">Session 1, task 10</a> (with a figure) - Inscribed angle</li>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q13" rel="noopener" target="_blank">Session 1, task 13</a> (with a figure) - Midline of a triangle and of a trapezium</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q3" rel="noopener" target="_blank">Session 2, task 3</a> (with a figure) - The angle sum of a triangle is 180°</li>
+        </ul>
+      </div>
+      <div class="ext" data-ext="nmt-ua:2025" id="ext-nmt-ua-2025">
+        <h4>NMT 2025</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q2" rel="noopener" target="_blank">Session 1, task 2</a> (with a figure) - Angles, triangles, the circle</li>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q10" rel="noopener" target="_blank">Session 1, task 10</a> - Triangle inequality, The angle sum of a triangle is 180°</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q2" rel="noopener" target="_blank">Session 2, task 2</a> (with a figure) - The angle sum of a triangle is 180°</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q10" rel="noopener" target="_blank">Session 2, task 10</a> - Inscribed quadrilateral, Midline of a triangle and of a trapezium</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q18" rel="noopener" target="_blank">Session 2, task 18</a> (with a figure) - Midline of a triangle and of a trapezium</li>
+        </ul>
+      </div>
+      <div class="ext" data-ext="nmt-ua:2024" id="ext-nmt-ua-2024">
+        <h4>NMT 2024</h4>
+        <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q2" rel="noopener" target="_blank">Session 1, task 2</a> (with a figure) - The angle sum of a triangle is 180°</li>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q10" rel="noopener" target="_blank">Session 1, task 10</a> - Triangle inequality, Angles of a parallelogram</li>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q18" rel="noopener" target="_blank">Session 1, task 18</a> (with a figure) - Midline of a triangle and of a trapezium</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q4" rel="noopener" target="_blank">Session 2, task 4</a> (with a figure) - Angles, triangles, the circle</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q10" rel="noopener" target="_blank">Session 2, task 10</a> - Centre of the circumscribed circle</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q18" rel="noopener" target="_blank">Session 2, task 18</a> (with a figure) - Midline of a triangle and of a trapezium</li>
+        </ul>
       </div>
     </div>
+    <!-- /sources -->
+
+    <h2 id="artifacts">What you have after this page <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>A chain instead of a list.</strong> Parallel lines give the angle sum of a triangle, the angle sum of a triangle gives the angle sum of a polygon, an isosceles triangle of radii gives the inscribed angle. If you forget a fact, you can rebuild it from the previous one.</p>
+    </div>
+    <!-- freq -->
+    <p class="dim law-freq" data-tasks="12">Frequency on this site, not in the NMT: this page has 12 trainer tasks, and they lean on these laws: The angle sum of a triangle is 180° - 6, Inscribed angle - 4, Parallel lines and a transversal - 2, Similarity test by two angles - 1, Triangle inequality - 1. In real NMT papers of 2024-2026 this block is needed in 15 tasks out of 132: Similarity test by two angles - 5, The angle sum of a triangle is 180° - 4, Inscribed angle - 3, Angles, triangles, the circle - 2, Parallel lines and a transversal - 2, Triangle inequality - 2.</p>
+    <!-- /freq -->
+    <p>You know this block if you:</p>
+    <ol>
+      <li>solve 8 tasks out of 10 on angles, triangles and the circle without a hint;</li>
+      <li>can explain aloud why the angle sum of a triangle is 180°;</li>
+      <li>find the mistake in someone else's solution, as in Viktoria's.</li>
+    </ol>
+  
+
+    <footer>
+      <nav class="pager" aria-label="Neighbouring topics">
+        <p class="pager-next">Next topic: <a href="11.html">Measurement in the plane</a></p>
+        <p class="pager-prev">Previous topic: <a href="09.html">Combinatorics, probability, statistics</a></p>
+      </nav>
+      <p class="footer-note">An AI Factory series site. Built with the same harness: plain HTML and CSS, checked with bash, published via GitHub Pages.</p>
+    </footer>
   </main>
 
 </div>
