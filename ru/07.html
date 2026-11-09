@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Тригонометрия · nmt-math · ai|</title>
 <!-- meta: built by tools/build-meta.py - do not edit by hand -->
-<meta name="description" content="">
+<meta name="description" content="Отношения сторон прямоугольного треугольника, которые зависят только от угла, отпущенные по окружности: так угол становится любым числом, а синус и косинус...">
 <link rel="canonical" href="https://y-kolyada.github.io/nmt-math/ru/07.html">
 <link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/07.html">
 <link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/07.html">
@@ -13,12 +13,12 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="nmt-math">
 <meta property="og:title" content="Тригонометрия">
-<meta property="og:description" content="">
+<meta property="og:description" content="Отношения сторон прямоугольного треугольника, которые зависят только от угла, отпущенные по окружности: так угол становится любым числом, а синус и косинус...">
 <meta property="og:url" content="https://y-kolyada.github.io/nmt-math/ru/07.html">
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Тригонометрия","description":"","url":"https://y-kolyada.github.io/nmt-math/ru/07.html","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Тригонометрия","description":"Отношения сторон прямоугольного треугольника, которые зависят только от угла, отпущенные по окружности: так угол становится любым числом, а синус и косинус...","url":"https://y-kolyada.github.io/nmt-math/ru/07.html","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
 <!-- /meta -->
 <link rel="stylesheet" href="../assets/style.css?v=1">
 <link rel="stylesheet" href="../assets/study.css?v=1">
@@ -91,16 +91,287 @@
 
   <main id="main">
     <h1>Тригонометрия</h1>
-    <p class="page-size" data-words="17">Слов: 17</p>
+    <p class="page-size" data-words="781">Слов: 781</p>
+    <p class="lead">Отношения сторон прямоугольного треугольника, которые зависят только от угла, отпущенные по
+    окружности: так угол становится любым числом, а синус и косинус - функциями.</p>
 
-    <div class="stub-card">
-      <h2>Русская версия готовится</h2>
-      <p>Полная рабочая версия этой страницы опубликована на украинском языке.</p>
-      <p>Открыть полную версию:</p>
-      <div class="stub-actions">
-        <a href="../uk/07.html" class="btn-primary">Тригонометрия →</a>
-      </div>
+    <div class="box key" id="key-idea">
+      <h2>Главная мысль страницы <a class="anchor-link" href="#key-idea" aria-label="ссылка на этот блок">#</a></h2>
+      <p>Тригонометрия выросла из подобия треугольников (блок 10): в подобных прямоугольных треугольниках отношения
+      сторон одинаковы, поэтому зависят только от угла. Единичная окружность превращает эти отношения в координаты точки:
+      косинус - абсцисса, синус - ордината. Отсюда почти все формулы: основное тождество - теорема Пифагора на окружности,
+      формулы приведения - симметрии окружности. Блок умеет описывать повторяющееся; цену за это платят бесконечные серии корней.</p>
     </div>
+
+    <span class="step">Шаг 0 · Зацепка</span>
+    <h2 id="hook">1 · Синус суммы - сумма синусов? <a class="anchor-link" href="#hook">#</a></h2>
+    <p>Привычка раскрывать скобки подсказывает: <span class="math" data-tex="\sin(\alpha + \beta) = \sin\alpha + \sin\beta"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>sin</mi><mo stretchy="false">&#x00028;</mo><mi>&#x003B1;</mi><mo>&#x0002B;</mo><mi>&#x003B2;</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mi>sin</mi><mi>&#x003B1;</mi><mo>&#x0002B;</mo><mi>sin</mi><mi>&#x003B2;</mi></mrow><annotation encoding="application/x-tex">\sin(\alpha + \beta) = \sin\alpha + \sin\beta</annotation></semantics></math></span>.
+    Проверим при <span class="math" data-tex="\alpha = \beta = 30^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>&#x003B1;</mi><mo>&#x0003D;</mo><mi>&#x003B2;</mi><mo>&#x0003D;</mo><msup><mn>30</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">\alpha = \beta = 30^\circ</annotation></semantics></math></span>: слева
+    <span class="math" data-tex="\sin 60^\circ \approx 0\text{,}87"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>sin</mi><msup><mn>60</mn><mo>&#x02218;</mo></msup><mo>&#x02248;</mo><mn>0</mn><mtext>,</mtext><mn>87</mn></mrow><annotation encoding="application/x-tex">\sin 60^\circ \approx 0\text{,}87</annotation></semantics></math></span>, справа <span class="math" data-tex="0\text{,}5 + 0\text{,}5 = 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>0</mn><mtext>,</mtext><mn>5</mn><mo>&#x0002B;</mo><mn>0</mn><mtext>,</mtext><mn>5</mn><mo>&#x0003D;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">0\text{,}5 + 0\text{,}5 = 1</annotation></semantics></math></span>.
+    Синус - не множитель, а функция, и распределительный закон к нему не применяется.</p>
+
+    <span class="step">Шаг 1 · Понятие</span>
+    <h2 id="concept">2 · Радиан и единичная окружность <a class="anchor-link" href="#concept">#</a></h2>
+    <ul>
+      <li><strong>Радиан</strong> - угол, который опирается на дугу длиной в радиус. Полная окружность - это
+      <span class="math" data-tex="2\pi"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>2</mn><mi>&#x003C0;</mi></mrow><annotation encoding="application/x-tex">2\pi</annotation></semantics></math></span> радиан, поэтому <span class="math" data-tex="180^\circ = \pi"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><mi>&#x003C0;</mi></mrow><annotation encoding="application/x-tex">180^\circ = \pi</annotation></semantics></math></span>.</li>
+      <li><strong>Единичная окружность</strong> - окружность радиуса 1 с центром в начале координат. Угол α откладывают от
+      положительного направления оси Ox против часовой стрелки.</li>
+      <li><span class="math" data-tex="\cos\alpha"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>cos</mi><mi>&#x003B1;</mi></mrow><annotation encoding="application/x-tex">\cos\alpha</annotation></semantics></math></span> - абсцисса точки окружности, <span class="math" data-tex="\sin\alpha"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>sin</mi><mi>&#x003B1;</mi></mrow><annotation encoding="application/x-tex">\sin\alpha</annotation></semantics></math></span> -
+      ордината, <span class="math" data-tex="\operatorname{tg}\alpha = \frac{\sin\alpha}{\cos\alpha}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>tg</mo><mi>&#x003B1;</mi><mo>&#x0003D;</mo><mfrac><mrow><mi>sin</mi><mi>&#x003B1;</mi></mrow><mrow><mi>cos</mi><mi>&#x003B1;</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\operatorname{tg}\alpha = \frac{\sin\alpha}{\cos\alpha}</annotation></semantics></math></span>.</li>
+      <li>После полного оборота точка возвращается: синус и косинус <strong>периодичны</strong> с периодом
+      <span class="math" data-tex="2\pi"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>2</mn><mi>&#x003C0;</mi></mrow><annotation encoding="application/x-tex">2\pi</annotation></semantics></math></span>.</li>
+    </ul>
+
+    <span class="step">Шаг 2 · Закон</span>
+    <h2 id="law">3 · Законы тригонометрии <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-identity">
+      <p class="law-name">Основное тригонометрическое тождество</p>
+      <div class="math-block" data-tex="\sin^2\alpha + \cos^2\alpha = 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>sin</mi><mn>2</mn></msup><mi>&#x003B1;</mi><mo>&#x0002B;</mo><msup><mi>cos</mi><mn>2</mn></msup><mi>&#x003B1;</mi><mo>&#x0003D;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\sin^2\alpha + \cos^2\alpha = 1</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-sum">
+      <p class="law-name">Синус и косинус суммы</p>
+      <div class="math-block" data-tex="\sin(\alpha \pm \beta) = \sin\alpha\cos\beta \pm \cos\alpha\sin\beta"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>sin</mi><mo stretchy="false">&#x00028;</mo><mi>&#x003B1;</mi><mi>&#x000B1;</mi><mi>&#x003B2;</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mi>sin</mi><mi>&#x003B1;</mi><mi>cos</mi><mi>&#x003B2;</mi><mi>&#x000B1;</mi><mi>cos</mi><mi>&#x003B1;</mi><mi>sin</mi><mi>&#x003B2;</mi></mrow><annotation encoding="application/x-tex">\sin(\alpha \pm \beta) = \sin\alpha\cos\beta \pm \cos\alpha\sin\beta</annotation></semantics></math></div>
+      <div class="math-block" data-tex="\cos(\alpha \pm \beta) = \cos\alpha\cos\beta \mp \sin\alpha\sin\beta"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>cos</mi><mo stretchy="false">&#x00028;</mo><mi>&#x003B1;</mi><mi>&#x000B1;</mi><mi>&#x003B2;</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mi>cos</mi><mi>&#x003B1;</mi><mi>cos</mi><mi>&#x003B2;</mi><mo>&#x02213;</mo><mi>sin</mi><mi>&#x003B1;</mi><mi>sin</mi><mi>&#x003B2;</mi></mrow><annotation encoding="application/x-tex">\cos(\alpha \pm \beta) = \cos\alpha\cos\beta \mp \sin\alpha\sin\beta</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-double">
+      <p class="law-name">Двойной угол</p>
+      <div class="math-block" data-tex="\sin 2\alpha = 2\sin\alpha\cos\alpha,\qquad \cos 2\alpha = \cos^2\alpha - \sin^2\alpha = 1 - 2\sin^2\alpha"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>sin</mi><mn>2</mn><mi>&#x003B1;</mi><mo>&#x0003D;</mo><mn>2</mn><mi>sin</mi><mi>&#x003B1;</mi><mi>cos</mi><mi>&#x003B1;</mi><mo>&#x0002C;</mo><mspace width="2em" /><mi>cos</mi><mn>2</mn><mi>&#x003B1;</mi><mo>&#x0003D;</mo><msup><mi>cos</mi><mn>2</mn></msup><mi>&#x003B1;</mi><mo>&#x02212;</mo><msup><mi>sin</mi><mn>2</mn></msup><mi>&#x003B1;</mi><mo>&#x0003D;</mo><mn>1</mn><mo>&#x02212;</mo><mn>2</mn><msup><mi>sin</mi><mn>2</mn></msup><mi>&#x003B1;</mi></mrow><annotation encoding="application/x-tex">\sin 2\alpha = 2\sin\alpha\cos\alpha,\qquad \cos 2\alpha = \cos^2\alpha - \sin^2\alpha = 1 - 2\sin^2\alpha</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-reduction">
+      <p class="law-name">Формулы приведения</p>
+      <p>Для углов <span class="math" data-tex="\pi \pm \alpha"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>&#x003C0;</mi><mi>&#x000B1;</mi><mi>&#x003B1;</mi></mrow><annotation encoding="application/x-tex">\pi \pm \alpha</annotation></semantics></math></span>, <span class="math" data-tex="2\pi \pm \alpha"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>2</mn><mi>&#x003C0;</mi><mi>&#x000B1;</mi><mi>&#x003B1;</mi></mrow><annotation encoding="application/x-tex">2\pi \pm \alpha</annotation></semantics></math></span> название функции
+      сохраняется, для <span class="math" data-tex="\frac{\pi}{2} \pm \alpha"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mi>&#x003C0;</mi></mrow><mrow><mn>2</mn></mrow></mfrac><mi>&#x000B1;</mi><mi>&#x003B1;</mi></mrow><annotation encoding="application/x-tex">\frac{\pi}{2} \pm \alpha</annotation></semantics></math></span>, <span class="math" data-tex="\frac{3\pi}{2} \pm \alpha"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>3</mn><mi>&#x003C0;</mi></mrow><mrow><mn>2</mn></mrow></mfrac><mi>&#x000B1;</mi><mi>&#x003B1;</mi></mrow><annotation encoding="application/x-tex">\frac{3\pi}{2} \pm \alpha</annotation></semantics></math></span>
+      меняется (синус на косинус и наоборот). Знак - тот, который имеет исходная функция в четверти, куда попал угол.</p>
+    </div>
+    <div class="law" id="law-equations">
+      <p class="law-name">Простейшие уравнения</p>
+      <div class="math-block" data-tex="\sin x = a:\ x = (-1)^k \arcsin a + \pi k;\qquad \cos x = a:\ x = \pm\arccos a + 2\pi k"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>sin</mi><mi>x</mi><mo>&#x0003D;</mo><mi>a</mi><mi>:</mi><mtext>&#x000A0;</mtext><mi>x</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mn>1</mn><msup><mo stretchy="false">&#x00029;</mo><mi>k</mi></msup><mi>arcsin</mi><mi>a</mi><mo>&#x0002B;</mo><mi>&#x003C0;</mi><mi>k</mi><mi>;</mi><mspace width="2em" /><mi>cos</mi><mi>x</mi><mo>&#x0003D;</mo><mi>a</mi><mi>:</mi><mtext>&#x000A0;</mtext><mi>x</mi><mo>&#x0003D;</mo><mi>&#x000B1;</mi><mi>arccos</mi><mi>a</mi><mo>&#x0002B;</mo><mn>2</mn><mi>&#x003C0;</mi><mi>k</mi></mrow><annotation encoding="application/x-tex">\sin x = a:\ x = (-1)^k \arcsin a + \pi k;\qquad \cos x = a:\ x = \pm\arccos a + 2\pi k</annotation></semantics></math></div>
+      <p>где k - любое целое число, и <span class="math" data-tex="|a| \leq 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x0007C;</mo><mi>a</mi><mo stretchy="false">&#x0007C;</mo><mo>&#x02264;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">|a| \leq 1</annotation></semantics></math></span>.</p>
+    </div>
+
+    <span class="step">Шаг 3 · Почему так</span>
+    <h2 id="why">4 · Всё это - окружность <a class="anchor-link" href="#why">#</a></h2>
+    <p><strong>Тождество.</strong> Точка <span class="math" data-tex="(\cos\alpha;\ \sin\alpha)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>cos</mi><mi>&#x003B1;</mi><mi>;</mi><mtext>&#x000A0;</mtext><mi>sin</mi><mi>&#x003B1;</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(\cos\alpha;\ \sin\alpha)</annotation></semantics></math></span> лежит на окружности радиуса 1,
+    то есть её расстояние до центра равно 1. По теореме Пифагора это и есть <span class="math" data-tex="\cos^2\alpha + \sin^2\alpha = 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>cos</mi><mn>2</mn></msup><mi>&#x003B1;</mi><mo>&#x0002B;</mo><msup><mi>sin</mi><mn>2</mn></msup><mi>&#x003B1;</mi><mo>&#x0003D;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\cos^2\alpha + \sin^2\alpha = 1</annotation></semantics></math></span>.</p>
+    <!-- fig:07-unit-circle -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 250" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Единичная окружность с центром в начале координат. Точка на окружности под углом α имеет координаты (cos α; sin α). Катеты прямоугольного треугольника - cos α и sin α, гипотенуза - радиус 1, поэтому cos²α + sin²α = 1.">
+        <line x1="40.0" y1="125.0" x2="270.0" y2="125.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="270.0,125.0 263.6,127.7 263.6,122.3" fill="currentColor"/>
+        <line x1="155.0" y1="240.0" x2="155.0" y2="10.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="155.0,10.0 157.7,16.4 152.3,16.4" fill="currentColor"/>
+        <text x="266.0" y="141.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <text x="163.0" y="22.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <line x1="66.5" y1="122.0" x2="66.5" y2="128.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="66.5" y="141.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">−1</text>
+        <line x1="243.5" y1="122.0" x2="243.5" y2="128.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="243.5" y="141.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">1</text>
+        <line x1="152.0" y1="213.5" x2="158.0" y2="213.5" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="149.0" y="217.5" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">−1</text>
+        <line x1="152.0" y1="36.5" x2="158.0" y2="36.5" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="149.0" y="40.5" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">1</text>
+        <circle cx="155.0" cy="125.0" r="88.5" fill="currentColor" fill-opacity="0.0" stroke="currentColor" stroke-width="1.4"/>
+        <line x1="155.0" y1="125.0" x2="211.9" y2="57.2" stroke="currentColor" stroke-width="1.8" opacity="1.0" style="stroke:var(--acc)"/>
+        <line x1="211.9" y1="125.0" x2="211.9" y2="57.2" stroke="currentColor" stroke-width="2" opacity="1.0" style="stroke:var(--acc)"/>
+        <line x1="155.0" y1="125.0" x2="211.9" y2="125.0" stroke="currentColor" stroke-width="2" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="211.9" cy="57.2" r="4.5" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="219.9" y="51.2" fill="currentColor" font-size="12" opacity="1.0">(cos α; sin α)</text>
+        <text x="183.4" y="141.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">cos α</text>
+        <text x="217.9" y="95.1" fill="currentColor" font-size="12" opacity="1.0">sin α</text>
+        <text x="172.7" y="114.4" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">α</text>
+        <text x="171.4" y="87.1" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end">1</text>
+      </svg>
+      <p class="dim">Рисунок 14. Синус и косинус - координаты точки единичной окружности; тождество - теорема Пифагора.</p>
+    </div>
+    <!-- /fig:07-unit-circle -->
+    <p><strong>Формулы приведения.</strong> Углы α и <span class="math" data-tex="\pi - \alpha"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>&#x003C0;</mi><mo>&#x02212;</mo><mi>&#x003B1;</mi></mrow><annotation encoding="application/x-tex">\pi - \alpha</annotation></semantics></math></span> симметричны относительно оси Oy: ординаты
+    одинаковы, абсциссы противоположны. Отсюда <span class="math" data-tex="\sin(\pi - \alpha) = \sin\alpha"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>sin</mi><mo stretchy="false">&#x00028;</mo><mi>&#x003C0;</mi><mo>&#x02212;</mo><mi>&#x003B1;</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mi>sin</mi><mi>&#x003B1;</mi></mrow><annotation encoding="application/x-tex">\sin(\pi - \alpha) = \sin\alpha</annotation></semantics></math></span>,
+    <span class="math" data-tex="\cos(\pi - \alpha) = -\cos\alpha"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>cos</mi><mo stretchy="false">&#x00028;</mo><mi>&#x003C0;</mi><mo>&#x02212;</mo><mi>&#x003B1;</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mo>&#x02212;</mo><mi>cos</mi><mi>&#x003B1;</mi></mrow><annotation encoding="application/x-tex">\cos(\pi - \alpha) = -\cos\alpha</annotation></semantics></math></span>. Остальные формулы - другие симметрии окружности.</p>
+    <!-- fig:07-symmetry -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 230" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Точки окружности для углов α и π − α симметричны относительно оси Oy: ординаты одинаковы, абсциссы противоположны. Отсюда sin(π − α) = sin α и cos(π − α) = −cos α.">
+        <line x1="40.0" y1="134.0" x2="270.0" y2="134.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="270.0,134.0 263.6,136.7 263.6,131.3" fill="currentColor"/>
+        <line x1="155.0" y1="214.0" x2="155.0" y2="14.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="155.0,14.0 157.7,20.4 152.3,20.4" fill="currentColor"/>
+        <text x="266.0" y="150.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <text x="163.0" y="26.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <circle cx="155.0" cy="134.0" r="88.5" fill="currentColor" fill-opacity="0.0" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="155.0" y1="134.0" x2="227.5" y2="83.0" stroke="currentColor" stroke-width="1.8" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="227.5" cy="83.0" r="4.5" fill="currentColor" style="fill:var(--acc)"/>
+        <line x1="227.5" y1="83.0" x2="227.5" y2="134.0" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" opacity="0.7"/>
+        <text x="235.5" y="75.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic" style="fill:var(--acc)">α</text>
+        <line x1="155.0" y1="134.0" x2="82.5" y2="83.0" stroke="currentColor" stroke-width="1.8" opacity="1.0"/>
+        <circle cx="82.5" cy="83.0" r="4.5" fill="currentColor"/>
+        <line x1="82.5" y1="83.0" x2="82.5" y2="134.0" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" opacity="0.7"/>
+        <text x="74.5" y="75.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">π − α</text>
+        <line x1="82.5" y1="83.0" x2="227.5" y2="83.0" stroke="currentColor" stroke-width="1" stroke-dasharray="2 4" opacity="0.6"/>
+        <text x="161.0" y="77.0" fill="currentColor" font-size="12" opacity="0.8">sin</text>
+      </svg>
+      <p class="dim">Рисунок 15. Формула приведения как симметрия окружности: sin(π − α) = sin α.</p>
+    </div>
+    <!-- /fig:07-symmetry -->
+    <p><strong>Двойной угол</strong> - формула суммы при <span class="math" data-tex="\beta = \alpha"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>&#x003B2;</mi><mo>&#x0003D;</mo><mi>&#x003B1;</mi></mrow><annotation encoding="application/x-tex">\beta = \alpha</annotation></semantics></math></span>. А
+    <span class="math" data-tex="1 - 2\sin^2\alpha"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>1</mn><mo>&#x02212;</mo><mn>2</mn><msup><mi>sin</mi><mn>2</mn></msup><mi>&#x003B1;</mi></mrow><annotation encoding="application/x-tex">1 - 2\sin^2\alpha</annotation></semantics></math></span> получено заменой <span class="math" data-tex="\cos^2\alpha = 1 - \sin^2\alpha"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>cos</mi><mn>2</mn></msup><mi>&#x003B1;</mi><mo>&#x0003D;</mo><mn>1</mn><mo>&#x02212;</mo><msup><mi>sin</mi><mn>2</mn></msup><mi>&#x003B1;</mi></mrow><annotation encoding="application/x-tex">\cos^2\alpha = 1 - \sin^2\alpha</annotation></semantics></math></span> из тождества.</p>
+    <p><strong>Серии корней.</strong> Уравнение <span class="math" data-tex="\sin x = a"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>sin</mi><mi>x</mi><mo>&#x0003D;</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">\sin x = a</annotation></semantics></math></span> на окружности - это горизонтальная прямая
+    <span class="math" data-tex="y = a"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">y = a</annotation></semantics></math></span>. Она пересекает окружность в двух точках (симметричных относительно Oy), и каждая повторяется через
+    полный оборот.</p>
+    <!-- fig:07-half -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 240" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Прямая y = 1/2 пересекает единичную окружность в двух точках: при x = π/6 и x = 5π/6. Каждая из них повторяется через полный оборот 2π, отсюда две серии корней уравнения sin x = 1/2.">
+        <line x1="40.0" y1="117.0" x2="270.0" y2="117.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="270.0,117.0 263.6,119.7 263.6,114.3" fill="currentColor"/>
+        <line x1="155.0" y1="222.0" x2="155.0" y2="12.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="155.0,12.0 157.7,18.4 152.3,18.4" fill="currentColor"/>
+        <text x="266.0" y="133.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <text x="163.0" y="24.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <line x1="152.0" y1="33.0" x2="158.0" y2="33.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="149.0" y="37.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">1</text>
+        <circle cx="155.0" cy="117.0" r="88.5" fill="currentColor" fill-opacity="0.0" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="40.0" y1="75.0" x2="270.0" y2="75.0" stroke="currentColor" stroke-width="1.6" opacity="1.0" style="stroke:var(--acc)"/>
+        <text x="268.2" y="93.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="end" style="fill:var(--acc)">y = 1/2</text>
+        <line x1="155.0" y1="117.0" x2="231.6" y2="75.0" stroke="currentColor" stroke-width="1.2" opacity="0.8"/>
+        <circle cx="231.6" cy="75.0" r="4.5" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="239.6" y="65.0" fill="currentColor" font-size="13" opacity="1.0">π/6</text>
+        <line x1="155.0" y1="117.0" x2="78.4" y2="75.0" stroke="currentColor" stroke-width="1.2" opacity="0.8"/>
+        <circle cx="78.4" cy="75.0" r="4.5" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="70.4" y="65.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end">5π/6</text>
+      </svg>
+      <p class="dim">Рисунок 16. sin x = 1/2: две точки на одном обороте, дальше - повторение через 2π.</p>
+    </div>
+    <!-- /fig:07-half -->
+
+    <span class="step">Шаг 4 · Границы</span>
+    <h2 id="limits">5 · Где законы ломаются <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-range">
+      <p><strong>Синус и косинус не выходят за пределы [−1; 1].</strong> Ордината точки окружности радиуса 1 не может быть 1,5. Поэтому
+      <span class="math" data-tex="\sin x = 1\text{,}5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>sin</mi><mi>x</mi><mo>&#x0003D;</mo><mn>1</mn><mtext>,</mtext><mn>5</mn></mrow><annotation encoding="application/x-tex">\sin x = 1\text{,}5</annotation></semantics></math></span> не имеет решений, а запись <span class="math" data-tex="\arcsin 1\text{,}5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>arcsin</mi><mn>1</mn><mtext>,</mtext><mn>5</mn></mrow><annotation encoding="application/x-tex">\arcsin 1\text{,}5</annotation></semantics></math></span> не имеет смысла.</p>
+    </div>
+    <div class="limit" id="limit-tg">
+      <p><strong>Тангенс не существует там, где косинус ноль</strong>: при <span class="math" data-tex="x = \frac{\pi}{2} + \pi k"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mfrac><mrow><mi>&#x003C0;</mi></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x0002B;</mo><mi>&#x003C0;</mi><mi>k</mi></mrow><annotation encoding="application/x-tex">x = \frac{\pi}{2} + \pi k</annotation></semantics></math></span>.</p>
+    </div>
+    <div class="limit" id="limit-quarter">
+      <p><strong>Тождество даёт модуль, знак даёт четверть.</strong> Из <span class="math" data-tex="\cos\alpha = 0\text{,}6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>cos</mi><mi>&#x003B1;</mi><mo>&#x0003D;</mo><mn>0</mn><mtext>,</mtext><mn>6</mn></mrow><annotation encoding="application/x-tex">\cos\alpha = 0\text{,}6</annotation></semantics></math></span> следует
+      <span class="math" data-tex="\sin\alpha = \pm 0\text{,}8"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>sin</mi><mi>&#x003B1;</mi><mo>&#x0003D;</mo><mi>&#x000B1;</mi><mn>0</mn><mtext>,</mtext><mn>8</mn></mrow><annotation encoding="application/x-tex">\sin\alpha = \pm 0\text{,}8</annotation></semantics></math></span>; какой знак - решает четверть, в которой лежит угол.</p>
+    </div>
+
+    <span class="step">Шаг 5 · Применение</span>
+    <h2 id="apply">6 · Задачи в форме НМТ <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="В" data-limit="limit-quarter">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p>Известно, что <span class="math" data-tex="\cos\alpha = 0\text{,}6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>cos</mi><mi>&#x003B1;</mi><mo>&#x0003D;</mo><mn>0</mn><mtext>,</mtext><mn>6</mn></mrow><annotation encoding="application/x-tex">\cos\alpha = 0\text{,}6</annotation></semantics></math></span> и α - острый угол. Найдите <span class="math" data-tex="\sin\alpha"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>sin</mi><mi>&#x003B1;</mi></mrow><annotation encoding="application/x-tex">\sin\alpha</annotation></semantics></math></span>.</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · 0,4</button>
+        <button type="button" data-opt="Б">Б · 0,6</button>
+        <button type="button" data-opt="В">В · 0,8</button>
+        <button type="button" data-opt="Г">Г · 0,64</button>
+        <button type="button" data-opt="Д">Д · −0,8</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#law-identity">основное тождество</a>.</p>
+      <div class="solution"><span class="math" data-tex="\sin^2\alpha = 1 - 0\text{,}36 = 0\text{,}64"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>sin</mi><mn>2</mn></msup><mi>&#x003B1;</mi><mo>&#x0003D;</mo><mn>1</mn><mo>&#x02212;</mo><mn>0</mn><mtext>,</mtext><mn>36</mn><mo>&#x0003D;</mo><mn>0</mn><mtext>,</mtext><mn>64</mn></mrow><annotation encoding="application/x-tex">\sin^2\alpha = 1 - 0\text{,}36 = 0\text{,}64</annotation></semantics></math></span>, угол острый, поэтому
+      <span class="math" data-tex="\sin\alpha = 0\text{,}8"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>sin</mi><mi>&#x003B1;</mi><mo>&#x0003D;</mo><mn>0</mn><mtext>,</mtext><mn>8</mn></mrow><annotation encoding="application/x-tex">\sin\alpha = 0\text{,}8</annotation></semantics></math></span>. 0,4 - слепое «1 − 0,6», 0,64 - забытый корень.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="2" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Вычислите <span class="math" data-tex="\sin^2 17^\circ + \cos^2 17^\circ + \operatorname{tg} 45^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>sin</mi><mn>2</mn></msup><msup><mn>17</mn><mo>&#x02218;</mo></msup><mo>&#x0002B;</mo><msup><mi>cos</mi><mn>2</mn></msup><msup><mn>17</mn><mo>&#x02218;</mo></msup><mo>&#x0002B;</mo><mo>tg</mo><msup><mn>45</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">\sin^2 17^\circ + \cos^2 17^\circ + \operatorname{tg} 45^\circ</annotation></semantics></math></span>.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-identity">основное тождество</a>.</p>
+      <div class="solution">Первые два слагаемых дают 1 при любом угле, <span class="math" data-tex="\operatorname{tg} 45^\circ = 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>tg</mo><msup><mn>45</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\operatorname{tg} 45^\circ = 1</annotation></semantics></math></span>. Вместе 2.
+      Угол 17° - приманка: таблицы для него не нужно.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="Б" data-limit="">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p>Вычислите <span class="math" data-tex="\sin 150^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>sin</mi><msup><mn>150</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">\sin 150^\circ</annotation></semantics></math></span>.</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · −1/2</button>
+        <button type="button" data-opt="Б">Б · 1/2</button>
+        <button type="button" data-opt="В">В · √3/2</button>
+        <button type="button" data-opt="Г">Г · −√3/2</button>
+        <button type="button" data-opt="Д">Д · 1</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#law-reduction">формулы приведения</a>.</p>
+      <div class="solution"><span class="math" data-tex="\sin(180^\circ - 30^\circ) = \sin 30^\circ = \frac{1}{2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>sin</mi><mo stretchy="false">&#x00028;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x02212;</mo><msup><mn>30</mn><mo>&#x02218;</mo></msup><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mi>sin</mi><msup><mn>30</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\sin(180^\circ - 30^\circ) = \sin 30^\circ = \frac{1}{2}</annotation></semantics></math></span>. Во второй
+      четверти синус положителен, поэтому минус в варианте А - ошибка знака.</div>
+    </div>
+
+    <div class="task" data-kind="match" data-answer="Б В А" data-limit="">
+      <p class="task-kind">Установление соответствия · 3 балла</p>
+      <p>К каждому выражению (1-3) подберите тождественно равное (А-Д).</p>
+      <ul class="pairs">
+        <li><label>1. <span class="math" data-tex="2\sin\alpha\cos\alpha"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>2</mn><mi>sin</mi><mi>&#x003B1;</mi><mi>cos</mi><mi>&#x003B1;</mi></mrow><annotation encoding="application/x-tex">2\sin\alpha\cos\alpha</annotation></semantics></math></span>
+          <select aria-label="Ответ к выражению 1"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+        <li><label>2. <span class="math" data-tex="\cos^2\alpha - \sin^2\alpha"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>cos</mi><mn>2</mn></msup><mi>&#x003B1;</mi><mo>&#x02212;</mo><msup><mi>sin</mi><mn>2</mn></msup><mi>&#x003B1;</mi></mrow><annotation encoding="application/x-tex">\cos^2\alpha - \sin^2\alpha</annotation></semantics></math></span>
+          <select aria-label="Ответ к выражению 2"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+        <li><label>3. <span class="math" data-tex="1 - \sin^2\alpha"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>1</mn><mo>&#x02212;</mo><msup><mi>sin</mi><mn>2</mn></msup><mi>&#x003B1;</mi></mrow><annotation encoding="application/x-tex">1 - \sin^2\alpha</annotation></semantics></math></span>
+          <select aria-label="Ответ к выражению 3"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+      </ul>
+      <p>А · cos²α &nbsp; Б · sin 2α &nbsp; В · cos 2α &nbsp; Г · tg α &nbsp; Д · 1</p>
+      <p><button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Законы: <a href="#law-double">двойной угол</a>, <a href="#law-identity">основное тождество</a>.</p>
+      <div class="solution">Две формулы двойного угла и тождество, прочитанные справа налево.</div>
+    </div>
+
+    <span class="step">Шаг 6 · Обратный ход</span>
+    <h2 id="reverse">7 · Назови закон сам <a class="anchor-link" href="#reverse">#</a></h2>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="2" data-limit="limit-range">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Сколько корней имеет уравнение <span class="math" data-tex="\sin x = \frac{1}{2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>sin</mi><mi>x</mi><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\sin x = \frac{1}{2}</annotation></semantics></math></span> на промежутке <span class="math" data-tex="[0;\ 2\pi]"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">[</mo><mn>0</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>2</mn><mi>&#x003C0;</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[0;\ 2\pi]</annotation></semantics></math></span>?</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-equations">простейшие уравнения</a> и окружность.</p>
+      <div class="solution">Прямая <span class="math" data-tex="y = \frac{1}{2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">y = \frac{1}{2}</annotation></semantics></math></span> пересекает окружность в двух точках:
+      <span class="math" data-tex="\frac{\pi}{6}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mi>&#x003C0;</mi></mrow><mrow><mn>6</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{\pi}{6}</annotation></semantics></math></span> и <span class="math" data-tex="\frac{5\pi}{6}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>5</mn><mi>&#x003C0;</mi></mrow><mrow><mn>6</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{5\pi}{6}</annotation></semantics></math></span>. На одном обороте - два корня.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="0,82" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Найдите <span class="math" data-tex="\cos 2\alpha"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>cos</mi><mn>2</mn><mi>&#x003B1;</mi></mrow><annotation encoding="application/x-tex">\cos 2\alpha</annotation></semantics></math></span>, если <span class="math" data-tex="\sin\alpha = 0\text{,}3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>sin</mi><mi>&#x003B1;</mi><mo>&#x0003D;</mo><mn>0</mn><mtext>,</mtext><mn>3</mn></mrow><annotation encoding="application/x-tex">\sin\alpha = 0\text{,}3</annotation></semantics></math></span>.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-double">двойной угол</a> в форме через синус.</p>
+      <div class="solution"><span class="math" data-tex="1 - 2 \cdot 0\text{,}09 = 0\text{,}82"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>1</mn><mo>&#x02212;</mo><mn>2</mn><mo>&#x000B7;</mo><mn>0</mn><mtext>,</mtext><mn>09</mn><mo>&#x0003D;</mo><mn>0</mn><mtext>,</mtext><mn>82</mn></mrow><annotation encoding="application/x-tex">1 - 2 \cdot 0\text{,}09 = 0\text{,}82</annotation></semantics></math></span>. Косинус искать не нужно,
+      и знак угла не важен: синус стоит в квадрате.</div>
+    </div>
+
+    <h2 id="error">8 · Найди ошибку в чужом решении <a class="anchor-link" href="#error">#</a></h2>
+    <p>София решает <span class="math" data-tex="2\sin x = 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>2</mn><mi>sin</mi><mi>x</mi><mo>&#x0003D;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">2\sin x = 3</annotation></semantics></math></span>: «<span class="math" data-tex="\sin x = 1\text{,}5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>sin</mi><mi>x</mi><mo>&#x0003D;</mo><mn>1</mn><mtext>,</mtext><mn>5</mn></mrow><annotation encoding="application/x-tex">\sin x = 1\text{,}5</annotation></semantics></math></span>,
+    значит <span class="math" data-tex="x = (-1)^k \arcsin 1\text{,}5 + \pi k"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mn>1</mn><msup><mo stretchy="false">&#x00029;</mo><mi>k</mi></msup><mi>arcsin</mi><mn>1</mn><mtext>,</mtext><mn>5</mn><mo>&#x0002B;</mo><mi>&#x003C0;</mi><mi>k</mi></mrow><annotation encoding="application/x-tex">x = (-1)^k \arcsin 1\text{,}5 + \pi k</annotation></semantics></math></span>».</p>
+    <details>
+      <summary>Где ошибка?</summary>
+      <p>Синус не бывает больше 1 (<a href="#limit-range">первая граница</a>). Уравнение не имеет решений, а формула серии
+      применяется только при <span class="math" data-tex="|a| \leq 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x0007C;</mo><mi>a</mi><mo stretchy="false">&#x0007C;</mo><mo>&#x02264;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">|a| \leq 1</annotation></semantics></math></span>.</p>
+    </details>
+
+    <h2 id="artifacts">Что у тебя есть после этой страницы <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>Единичная окружность вместо таблиц.</strong> Тождество - Пифагор на окружности, формулы приведения - симметрии окружности,
+      серии корней - повторение после полного оборота. Окружность можно нарисовать на черновике за десять секунд, и она
+      ответит на большинство вопросов блока.</p>
+    </div>
+    <!-- freq -->
+    <p class="dim law-freq" data-tasks="6">Частота на этом сайте, а не на НМТ: на этой странице 6 задач тренажёра, и они опираются на такие законы: Основное тригонометрическое тождество - 3, Двойной угол - 2, Простейшие уравнения - 1, Формулы приведения - 1.</p>
+    <!-- /freq -->
+    <p>Ты знаешь этот блок, если:</p>
+    <ol>
+      <li>решаешь 8 из 10 задач на значения, тождества и простые уравнения без подсказки;</li>
+      <li>можешь объяснить вслух, почему <span class="math" data-tex="\sin^2\alpha + \cos^2\alpha = 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>sin</mi><mn>2</mn></msup><mi>&#x003B1;</mi><mo>&#x0002B;</mo><msup><mi>cos</mi><mn>2</mn></msup><mi>&#x003B1;</mi><mo>&#x0003D;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\sin^2\alpha + \cos^2\alpha = 1</annotation></semantics></math></span>;</li>
+      <li>находишь ошибку в чужом решении, как у Софии.</li>
+    </ol>
+  
+
+    <footer>
+      <nav class="pager" aria-label="Соседние темы">
+        <p class="pager-next">Следующая тема: <a href="08.html">Производная и интеграл</a></p>
+        <p class="pager-prev">Предыдущая тема: <a href="06.html">Степень, корень, логарифм</a></p>
+      </nav>
+      <p class="footer-note">Сайт серии AI Factory. Сделан той же оснасткой, что и остальные: обычный HTML и CSS, проверка на bash, публикация через GitHub Pages.</p>
+    </footer>
   </main>
 
 </div>
