@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Функция и последовательность · nmt-math · ai|</title>
 <!-- meta: built by tools/build-meta.py - do not edit by hand -->
-<meta name="description" content="">
+<meta name="description" content="Функция - это правило «каждому x - одно y».">
 <link rel="canonical" href="https://y-kolyada.github.io/nmt-math/ru/05.html">
 <link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/05.html">
 <link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/05.html">
@@ -13,12 +13,12 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="nmt-math">
 <meta property="og:title" content="Функция и последовательность">
-<meta property="og:description" content="">
+<meta property="og:description" content="Функция - это правило «каждому x - одно y».">
 <meta property="og:url" content="https://y-kolyada.github.io/nmt-math/ru/05.html">
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Функция и последовательность","description":"","url":"https://y-kolyada.github.io/nmt-math/ru/05.html","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Функция и последовательность","description":"Функция - это правило «каждому x - одно y».","url":"https://y-kolyada.github.io/nmt-math/ru/05.html","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
 <!-- /meta -->
 <link rel="stylesheet" href="../assets/style.css?v=1">
 <link rel="stylesheet" href="../assets/study.css?v=1">
@@ -91,16 +91,297 @@
 
   <main id="main">
     <h1>Функция и последовательность</h1>
-    <p class="page-size" data-words="21">Слов: 21</p>
+    <p class="page-size" data-words="907">Слов: 907</p>
+    <p class="lead">Функция - это правило «каждому x - одно y». Посмотреть на уравнение как на функцию значит
+    увидеть не один ответ, а всю зависимость сразу.</p>
 
-    <div class="stub-card">
-      <h2>Русская версия готовится</h2>
-      <p>Полная рабочая версия этой страницы опубликована на украинском языке.</p>
-      <p>Открыть полную версию:</p>
-      <div class="stub-actions">
-        <a href="../uk/05.html" class="btn-primary">Функция и последовательность →</a>
-      </div>
+    <div class="box key" id="key-idea">
+      <h2>Главная мысль страницы <a class="anchor-link" href="#key-idea" aria-label="ссылка на этот блок">#</a></h2>
+      <p>Блок 4 спрашивал «при каком x?». Функция спрашивает «как y зависит от x везде?». График отвечает на это
+      картинкой, а преобразования графиков позволяют получить десятки графиков из нескольких базовых. Последовательность -
+      это та же функция, только аргумент натуральный: номер члена. Блок умеет описывать зависимость целиком;
+      измерить, как быстро функция меняется в точке, он не умеет - это производная (блок 8).</p>
     </div>
+
+    <span class="step">Шаг 0 · Зацепка</span>
+    <h2 id="hook">1 · Куда сдвигается график y = (x + 2)² <a class="anchor-link" href="#hook">#</a></h2>
+    <p>Привычный ответ: «плюс - значит вправо». Проверим: вершина параболы <span class="math" data-tex="y = (x + 2)^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002B;</mo><mn>2</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">y = (x + 2)^2</annotation></semantics></math></span> там,
+    где выражение в скобках равно нулю, то есть при <span class="math" data-tex="x = -2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x = -2</annotation></semantics></math></span>. График сдвинулся
+    <strong>влево</strong>. То, что <span class="math" data-tex="y = x^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">y = x^2</annotation></semantics></math></span> делала в точке 0, новая функция делает в точке −2:
+    ей «нужен меньший x», чтобы получить то же значение.</p>
+
+    <span class="step">Шаг 1 · Понятие</span>
+    <h2 id="concept">2 · Функция, её свойства, последовательность <a class="anchor-link" href="#concept">#</a></h2>
+    <ul>
+      <li><strong>Функция</strong> f - правило, которое каждому x из <strong>области определения</strong> D(f) ставит в соответствие
+      одно число f(x). Все такие числа - <strong>область значений</strong> E(f).</li>
+      <li><strong>Нули</strong> - значения x, при которых <span class="math" data-tex="f(x) = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f(x) = 0</annotation></semantics></math></span>.
+      <strong>Возрастает</strong> на промежутке: большему x соответствует большее f(x).</li>
+      <li><strong>Чётная</strong>: <span class="math" data-tex="f(-x) = f(x)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">f(-x) = f(x)</annotation></semantics></math></span>, график симметричен относительно оси Oy.
+      <strong>Нечётная</strong>: <span class="math" data-tex="f(-x) = -f(x)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mo>&#x02212;</mo><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">f(-x) = -f(x)</annotation></semantics></math></span>, симметрия относительно начала координат.</li>
+      <li><strong>Последовательность</strong> - функция натурального аргумента: <span class="math" data-tex="a_n = f(n)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>&#x0003D;</mo><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>n</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">a_n = f(n)</annotation></semantics></math></span>.
+      <strong>Арифметическая прогрессия</strong>: каждый член больше предыдущего на одно и то же число d.
+      <strong>Геометрическая</strong>: каждый член больше в одно и то же число раз q.</li>
+    </ul>
+
+    <span class="step">Шаг 2 · Закон</span>
+    <h2 id="law">3 · Законы функций и прогрессий <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-shift">
+      <p class="law-name">Преобразования графиков</p>
+      <ul>
+        <li><span class="math" data-tex="f(x) + a"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0002B;</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">f(x) + a</annotation></semantics></math></span> - сдвиг на a вверх;</li>
+        <li><span class="math" data-tex="f(x + a)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002B;</mo><mi>a</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">f(x + a)</annotation></semantics></math></span> - сдвиг на a <strong>влево</strong> (при a &gt; 0);</li>
+        <li><span class="math" data-tex="-f(x)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02212;</mo><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">-f(x)</annotation></semantics></math></span> - симметрия относительно оси Ox, <span class="math" data-tex="f(-x)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">f(-x)</annotation></semantics></math></span> - относительно оси Oy;</li>
+        <li><span class="math" data-tex="k \cdot f(x)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>k</mi><mo>&#x000B7;</mo><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">k \cdot f(x)</annotation></semantics></math></span> - растяжение от оси Ox в k раз.</li>
+      </ul>
+    </div>
+    <div class="law" id="law-parabola">
+      <p class="law-name">Вершина параболы</p>
+      <div class="math-block" data-tex="y = ax^2 + bx + c:\quad x_0 = -\frac{b}{2a}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mi>b</mi><mi>x</mi><mo>&#x0002B;</mo><mi>c</mi><mi>:</mi><mspace width="1em" /><msub><mi>x</mi><mn>0</mn></msub><mo>&#x0003D;</mo><mo>&#x02212;</mo><mfrac><mrow><mi>b</mi></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">y = ax^2 + bx + c:\quad x_0 = -\frac{b}{2a}</annotation></semantics></math></div>
+      <p>При <span class="math" data-tex="a > 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mo>&#x0003E;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a &gt; 0</annotation></semantics></math></span> ветви вверх, и в вершине наименьшее значение.</p>
+    </div>
+    <div class="law" id="law-arith">
+      <p class="law-name">Арифметическая прогрессия</p>
+      <div class="math-block" data-tex="a_n = a_1 + d(n - 1),\qquad S_n = \frac{(a_1 + a_n)\,n}{2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>&#x0003D;</mo><msub><mi>a</mi><mn>1</mn></msub><mo>&#x0002B;</mo><mi>d</mi><mo stretchy="false">&#x00028;</mo><mi>n</mi><mo>&#x02212;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>S</mi><mi>n</mi></msub><mo>&#x0003D;</mo><mfrac><mrow><mo stretchy="false">&#x00028;</mo><msub><mi>a</mi><mn>1</mn></msub><mo>&#x0002B;</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">&#x00029;</mo><mspace width="0.167em" /><mi>n</mi></mrow><mrow><mn>2</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">a_n = a_1 + d(n - 1),\qquad S_n = \frac{(a_1 + a_n)\,n}{2}</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-geom">
+      <p class="law-name">Геометрическая прогрессия</p>
+      <div class="math-block" data-tex="b_n = b_1 q^{n-1},\qquad S_n = \frac{b_1(q^n - 1)}{q - 1},\ q \neq 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>b</mi><mi>n</mi></msub><mo>&#x0003D;</mo><msub><mi>b</mi><mn>1</mn></msub><msup><mi>q</mi><mrow><mi>n</mi><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>S</mi><mi>n</mi></msub><mo>&#x0003D;</mo><mfrac><mrow><msub><mi>b</mi><mn>1</mn></msub><mo stretchy="false">&#x00028;</mo><msup><mi>q</mi><mi>n</mi></msup><mo>&#x02212;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo></mrow><mrow><mi>q</mi><mo>&#x02212;</mo><mn>1</mn></mrow></mfrac><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><mi>q</mi><mo>&#x02260;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">b_n = b_1 q^{n-1},\qquad S_n = \frac{b_1(q^n - 1)}{q - 1},\ q \neq 1</annotation></semantics></math></div>
+    </div>
+
+    <span class="step">Шаг 3 · Почему так</span>
+    <h2 id="why">4 · Откуда законы <a class="anchor-link" href="#why">#</a></h2>
+    <p><strong>Сдвиг.</strong> Точка <span class="math" data-tex="(0;\ f(0))"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mn>0</mn><mi>;</mi><mtext>&#x000A0;</mtext><mi>f</mi><mo stretchy="false">&#x00028;</mo><mn>0</mn><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(0;\ f(0))</annotation></semantics></math></span> на графике f переходит в точку, где
+    <span class="math" data-tex="x + a = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0002B;</mo><mi>a</mi><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x + a = 0</annotation></semantics></math></span>, то есть <span class="math" data-tex="x = -a"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mo>&#x02212;</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">x = -a</annotation></semantics></math></span>. Так с каждой точкой: график
+    едет на a влево.</p>
+    <!-- fig:05-shift -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 210" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Парабола y = x² с вершиной в нуле и парабола y = (x + 2)² с вершиной в точке −2. Стрелка показывает сдвиг на 2 влево, хотя в скобках стоит плюс.">
+        <line x1="14.0" y1="139.4" x2="306.0" y2="139.4" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="306.0,139.4 299.6,142.1 299.6,136.6" fill="currentColor"/>
+        <line x1="196.5" y1="182.0" x2="196.5" y2="14.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <polygon points="196.5,14.0 199.2,20.4 193.8,20.4" fill="currentColor"/>
+        <text x="302.0" y="155.4" fill="currentColor" font-size="13" opacity="1.0" text-anchor="end" font-style="italic">x</text>
+        <text x="204.5" y="26.0" fill="currentColor" font-size="13" opacity="1.0" font-style="italic">y</text>
+        <line x1="123.5" y1="136.4" x2="123.5" y2="142.4" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="123.5" y="155.4" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">−2</text>
+        <line x1="269.5" y1="136.4" x2="269.5" y2="142.4" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="269.5" y="155.4" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">2</text>
+        <line x1="193.5" y1="89.2" x2="199.5" y2="89.2" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="190.5" y="93.2" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">2</text>
+        <line x1="193.5" y1="39.1" x2="199.5" y2="39.1" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="190.5" y="43.1" fill="currentColor" font-size="12" opacity="0.8" text-anchor="end">4</text>
+        <polyline points="115.3,15.4 116.7,19.7 118.1,23.8 119.5,27.9 120.9,31.9 122.3,35.9 123.7,39.7 125.1,43.5 126.5,47.3 127.9,50.9 129.3,54.5 130.7,58.0 132.1,61.4 133.5,64.8 134.9,68.0 136.3,71.2 137.7,74.4 139.1,77.4 140.5,80.4 141.9,83.3 143.3,86.2 144.7,88.9 146.1,91.6 147.5,94.2 148.9,96.8 150.3,99.2 151.7,101.6 153.1,104.0 154.5,106.2 155.9,108.4 157.3,110.5 158.7,112.5 160.1,114.5 161.5,116.3 162.9,118.1 164.3,119.9 165.7,121.5 167.1,123.1 168.5,124.6 169.9,126.1 171.3,127.4 172.7,128.7 174.1,129.9 175.5,131.1 176.9,132.2 178.3,133.1 179.7,134.1 181.1,134.9 182.5,135.7 183.9,136.4 185.3,137.0 186.7,137.6 188.1,138.0 189.5,138.5 190.9,138.8 192.3,139.0 193.7,139.2 195.1,139.3 196.5,139.4 197.9,139.3 199.3,139.2 200.7,139.0 202.1,138.8 203.5,138.5 204.9,138.0 206.3,137.6 207.7,137.0 209.1,136.4 210.5,135.7 211.9,134.9 213.3,134.1 214.7,133.1 216.1,132.2 217.5,131.1 218.9,129.9 220.3,128.7 221.7,127.4 223.1,126.1 224.5,124.6 225.9,123.1 227.3,121.5 228.7,119.9 230.1,118.1 231.5,116.3 232.9,114.5 234.3,112.5 235.7,110.5 237.1,108.4 238.5,106.2 239.9,104.0 241.3,101.6 242.7,99.2 244.1,96.8 245.5,94.2 246.9,91.6 248.3,88.9 249.7,86.2 251.1,83.3 252.5,80.4 253.9,77.4 255.3,74.4 256.7,71.2 258.1,68.0 259.5,64.8 260.9,61.4 262.3,58.0 263.7,54.5 265.1,50.9 266.5,47.3 267.9,43.5 269.3,39.7 270.7,35.9 272.1,31.9 273.5,27.9 274.9,23.8 276.3,19.7 277.7,15.4" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="1.4" opacity="0.6"/>
+        <polyline points="42.3,15.4 43.7,19.7 45.1,23.8 46.5,27.9 47.9,31.9 49.3,35.9 50.7,39.7 52.1,43.5 53.5,47.3 54.9,50.9 56.3,54.5 57.7,58.0 59.1,61.4 60.5,64.8 61.9,68.0 63.3,71.2 64.7,74.4 66.1,77.4 67.5,80.4 68.9,83.3 70.3,86.2 71.7,88.9 73.1,91.6 74.5,94.2 75.9,96.8 77.3,99.2 78.7,101.6 80.1,104.0 81.5,106.2 82.9,108.4 84.3,110.5 85.7,112.5 87.1,114.5 88.5,116.3 89.9,118.1 91.3,119.9 92.7,121.5 94.1,123.1 95.5,124.6 96.9,126.1 98.3,127.4 99.7,128.7 101.1,129.9 102.5,131.1 103.9,132.2 105.3,133.1 106.7,134.1 108.1,134.9 109.5,135.7 110.9,136.4 112.3,137.0 113.7,137.6 115.1,138.0 116.5,138.5 117.9,138.8 119.3,139.0 120.7,139.2 122.1,139.3 123.5,139.4 124.9,139.3 126.3,139.2 127.7,139.0 129.1,138.8 130.5,138.5 131.9,138.0 133.3,137.6 134.7,137.0 136.1,136.4 137.5,135.7 138.9,134.9 140.3,134.1 141.7,133.1 143.1,132.2 144.5,131.1 145.9,129.9 147.3,128.7 148.7,127.4 150.1,126.1 151.5,124.6 152.9,123.1 154.3,121.5 155.7,119.9 157.1,118.1 158.5,116.3 159.9,114.5 161.3,112.5 162.7,110.5 164.1,108.4 165.5,106.2 166.9,104.0 168.3,101.6 169.7,99.2 171.1,96.8 172.5,94.2 173.9,91.6 175.3,88.9 176.7,86.2 178.1,83.3 179.5,80.4 180.9,77.4 182.3,74.4 183.7,71.2 185.1,68.0 186.5,64.8 187.9,61.4 189.3,58.0 190.7,54.5 192.1,50.9 193.5,47.3 194.9,43.5 196.3,39.7 197.7,35.9 199.1,31.9 200.5,27.9 201.9,23.8 203.3,19.7 204.7,15.4" fill="none" fill-opacity="0.0" stroke="currentColor" stroke-width="2" opacity="1.0" style="stroke:var(--acc)"/>
+        <circle cx="196.5" cy="139.4" r="4" fill="currentColor"/>
+        <circle cx="123.5" cy="139.4" r="4.5" fill="currentColor" style="fill:var(--acc)"/>
+        <line x1="189.2" y1="153.2" x2="130.8" y2="153.2" stroke="currentColor" stroke-width="1.6" opacity="1.0" style="stroke:var(--acc)"/>
+        <polygon points="130.8,153.2 137.2,150.4 137.2,155.9" fill="currentColor" style="fill:var(--acc)"/>
+        <text x="160.0" y="170.2" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle" style="fill:var(--acc)">влево на 2</text>
+        <text x="43.2" y="24.0" fill="currentColor" font-size="12" opacity="1.0" style="fill:var(--acc)">y = (x + 2)²</text>
+        <text x="240.3" y="24.0" fill="currentColor" font-size="12" opacity="0.8">y = x²</text>
+      </svg>
+      <p class="dim">Рисунок 9. f(x + 2): вершина переехала из 0 в −2, то есть влево.</p>
+    </div>
+    <!-- /fig:05-shift -->
+    <p><strong>Вершина.</strong> Выделим полный квадрат (блок 3):
+    <span class="math" data-tex="ax^2 + bx + c = a\left(x + \frac{b}{2a}\right)^2 + \ldots"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mi>b</mi><mi>x</mi><mo>&#x0002B;</mo><mi>c</mi><mo>&#x0003D;</mo><mi>a</mi><msup><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mi>x</mi><mo>&#x0002B;</mo><mfrac><mrow><mi>b</mi></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mn>2</mn></msup><mo>&#x0002B;</mo><mi>&#x02026;</mi></mrow><annotation encoding="application/x-tex">ax^2 + bx + c = a\left(x + \frac{b}{2a}\right)^2 + \ldots</annotation></semantics></math></span>.
+    Квадрат наименьший, когда равен нулю, то есть при <span class="math" data-tex="x = -\frac{b}{2a}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mo>&#x02212;</mo><mfrac><mrow><mi>b</mi></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">x = -\frac{b}{2a}</annotation></semantics></math></span>.</p>
+    <p><strong>Сумма арифметической прогрессии.</strong> Запишем сумму дважды: слева направо и справа налево, и сложим
+    столбиками. Каждая пара даёт <span class="math" data-tex="a_1 + a_n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>&#x0002B;</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">a_1 + a_n</annotation></semantics></math></span>, пар n, а каждый член посчитан дважды.
+    Так, по легенде, маленький Гаусс сложил числа от 1 до 100.</p>
+    <!-- fig:05-gauss -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 132" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Сумма от 1 до 100 записана дважды: слева направо и справа налево. Каждый столбик даёт 101, столбиков 100, и каждое число посчитано дважды, поэтому сумма равна 101 · 100 / 2 = 5050.">
+        <text x="40.0" y="30.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle">1</text>
+        <text x="40.0" y="56.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle">100</text>
+        <line x1="24.0" y1="66.0" x2="56.0" y2="66.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="40.0" y="86.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-weight="700" style="fill:var(--acc)">101</text>
+        <text x="84.0" y="30.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle">2</text>
+        <text x="84.0" y="56.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle">99</text>
+        <line x1="68.0" y1="66.0" x2="100.0" y2="66.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="84.0" y="86.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-weight="700" style="fill:var(--acc)">101</text>
+        <text x="128.0" y="30.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle">3</text>
+        <text x="128.0" y="56.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle">98</text>
+        <line x1="112.0" y1="66.0" x2="144.0" y2="66.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="128.0" y="86.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-weight="700" style="fill:var(--acc)">101</text>
+        <text x="172.0" y="30.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle">…</text>
+        <text x="172.0" y="56.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle">…</text>
+        <text x="216.0" y="30.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle">99</text>
+        <text x="216.0" y="56.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle">2</text>
+        <line x1="200.0" y1="66.0" x2="232.0" y2="66.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="216.0" y="86.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-weight="700" style="fill:var(--acc)">101</text>
+        <text x="268.0" y="30.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle">100</text>
+        <text x="268.0" y="56.0" fill="currentColor" font-size="14" opacity="1.0" text-anchor="middle">1</text>
+        <line x1="252.0" y1="66.0" x2="284.0" y2="66.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="268.0" y="86.0" fill="currentColor" font-size="13" opacity="1.0" text-anchor="middle" font-weight="700" style="fill:var(--acc)">101</text>
+        <text x="160.0" y="118.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">каждая пара: 101,  2S = 101 · 100</text>
+      </svg>
+      <p class="dim">Рисунок 10. Сумма арифметической прогрессии: сто пар по 101, делённые на два.</p>
+    </div>
+    <!-- /fig:05-gauss -->
+    <p><strong>Сумма геометрической.</strong> <span class="math" data-tex="qS_n - S_n = b_1 q^n - b_1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>q</mi><msub><mi>S</mi><mi>n</mi></msub><mo>&#x02212;</mo><msub><mi>S</mi><mi>n</mi></msub><mo>&#x0003D;</mo><msub><mi>b</mi><mn>1</mn></msub><msup><mi>q</mi><mi>n</mi></msup><mo>&#x02212;</mo><msub><mi>b</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">qS_n - S_n = b_1 q^n - b_1</annotation></semantics></math></span>: при
+    умножении на q почти все члены повторяются и уничтожаются при вычитании. Делим на
+    <span class="math" data-tex="q - 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>q</mi><mo>&#x02212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">q - 1</annotation></semantics></math></span>.</p>
+
+    <span class="step">Шаг 4 · Границы</span>
+    <h2 id="limits">5 · Где законы ломаются <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-shift">
+      <p><strong>Сдвиг вдоль Ox - «наоборот знаку».</strong> <span class="math" data-tex="f(x - 3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">f(x - 3)</annotation></semantics></math></span> - вправо на 3,
+      <span class="math" data-tex="f(x + 3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002B;</mo><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">f(x + 3)</annotation></semantics></math></span> - влево. Сдвиг вдоль Oy - по знаку.</p>
+    </div>
+    <div class="limit" id="limit-q1">
+      <p><strong>Формула суммы геометрической прогрессии не работает при q = 1</strong>: знаменатель ноль. Тогда все члены одинаковы и
+      <span class="math" data-tex="S_n = n b_1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>&#x0003D;</mo><mi>n</mi><msub><mi>b</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">S_n = n b_1</annotation></semantics></math></span>.</p>
+    </div>
+    <div class="limit" id="limit-domain">
+      <p><strong>Область определения ищут раньше всего остального.</strong> Под корнем чётной степени - неотрицательное, в
+      знаменателе - ненулевое, под логарифмом - положительное (блок 6).</p>
+    </div>
+    <div class="limit" id="limit-parity">
+      <p><strong>Чётность требует симметричной области определения.</strong> Функция <span class="math" data-tex="y = x^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">y = x^2</annotation></semantics></math></span>
+      на промежутке <span class="math" data-tex="[-1;\ 2]"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">[</mo><mo>&#x02212;</mo><mn>1</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>2</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[-1;\ 2]</annotation></semantics></math></span> не чётная и не нечётная.</p>
+    </div>
+
+    <span class="step">Шаг 5 · Применение</span>
+    <h2 id="apply">6 · Задачи в форме НМТ <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="Б" data-limit="">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p>Укажите координаты вершины параболы <span class="math" data-tex="y = x^2 - 6x + 5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>6</mn><mi>x</mi><mo>&#x0002B;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">y = x^2 - 6x + 5</annotation></semantics></math></span>.</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · (−3; −4)</button>
+        <button type="button" data-opt="Б">Б · (3; −4)</button>
+        <button type="button" data-opt="В">В · (3; 4)</button>
+        <button type="button" data-opt="Г">Г · (6; 5)</button>
+        <button type="button" data-opt="Д">Д · (−6; 5)</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#law-parabola">вершина параболы</a>.</p>
+      <div class="solution"><span class="math" data-tex="x_0 = \frac{6}{2} = 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>&#x0003D;</mo><mfrac><mrow><mn>6</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x0003D;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">x_0 = \frac{6}{2} = 3</annotation></semantics></math></span>,
+      <span class="math" data-tex="y_0 = 9 - 18 + 5 = -4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>y</mi><mn>0</mn></msub><mo>&#x0003D;</mo><mn>9</mn><mo>&#x02212;</mo><mn>18</mn><mo>&#x0002B;</mo><mn>5</mn><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">y_0 = 9 - 18 + 5 = -4</annotation></semantics></math></span>. Вариант А - потерянный минус в формуле
+      <span class="math" data-tex="-\frac{b}{2a}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02212;</mo><mfrac><mrow><mi>b</mi></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">-\frac{b}{2a}</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="210" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>В арифметической прогрессии <span class="math" data-tex="a_1 = 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>&#x0003D;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">a_1 = 3</annotation></semantics></math></span>, <span class="math" data-tex="d = 4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>d</mi><mo>&#x0003D;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">d = 4</annotation></semantics></math></span>. Найдите сумму
+      первых десяти её членов.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-arith">арифметическая прогрессия</a>.</p>
+      <div class="solution"><span class="math" data-tex="a_{10} = 3 + 4 \cdot 9 = 39"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>a</mi><mrow><mn>10</mn></mrow></msub><mo>&#x0003D;</mo><mn>3</mn><mo>&#x0002B;</mo><mn>4</mn><mo>&#x000B7;</mo><mn>9</mn><mo>&#x0003D;</mo><mn>39</mn></mrow><annotation encoding="application/x-tex">a_{10} = 3 + 4 \cdot 9 = 39</annotation></semantics></math></span>,
+      <span class="math" data-tex="S_{10} = \frac{(3 + 39) \cdot 10}{2} = 210"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>S</mi><mrow><mn>10</mn></mrow></msub><mo>&#x0003D;</mo><mfrac><mrow><mo stretchy="false">&#x00028;</mo><mn>3</mn><mo>&#x0002B;</mo><mn>39</mn><mo stretchy="false">&#x00029;</mo><mo>&#x000B7;</mo><mn>10</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x0003D;</mo><mn>210</mn></mrow><annotation encoding="application/x-tex">S_{10} = \frac{(3 + 39) \cdot 10}{2} = 210</annotation></semantics></math></span>. Типичная ошибка:
+      <span class="math" data-tex="d \cdot n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>d</mi><mo>&#x000B7;</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">d \cdot n</annotation></semantics></math></span> вместо <span class="math" data-tex="d(n - 1)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>d</mi><mo stretchy="false">&#x00028;</mo><mi>n</mi><mo>&#x02212;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">d(n - 1)</annotation></semantics></math></span> - первый член уже стоит, шагов на один меньше.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="162" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>В геометрической прогрессии <span class="math" data-tex="b_1 = 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>&#x0003D;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">b_1 = 2</annotation></semantics></math></span>, <span class="math" data-tex="q = 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>q</mi><mo>&#x0003D;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">q = 3</annotation></semantics></math></span>. Найдите
+      <span class="math" data-tex="b_5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>b</mi><mn>5</mn></msub></mrow><annotation encoding="application/x-tex">b_5</annotation></semantics></math></span>.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-geom">геометрическая прогрессия</a>.</p>
+      <div class="solution"><span class="math" data-tex="b_5 = 2 \cdot 3^4 = 162"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>b</mi><mn>5</mn></msub><mo>&#x0003D;</mo><mn>2</mn><mo>&#x000B7;</mo><msup><mn>3</mn><mn>4</mn></msup><mo>&#x0003D;</mo><mn>162</mn></mrow><annotation encoding="application/x-tex">b_5 = 2 \cdot 3^4 = 162</annotation></semantics></math></span>. Показатель 4, а не 5: от первого
+      члена до пятого четыре шага.</div>
+    </div>
+
+    <div class="task" data-kind="match" data-answer="А Б В" data-limit="limit-shift">
+      <p class="task-kind">Установление соответствия · 3 балла</p>
+      <p>К каждой функции (1-3) подберите преобразование графика <span class="math" data-tex="y = x^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">y = x^2</annotation></semantics></math></span> (А-Д), которым она получена.</p>
+      <ul class="pairs">
+        <li><label>1. <span class="math" data-tex="y = (x - 2)^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mn>2</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">y = (x - 2)^2</annotation></semantics></math></span>
+          <select aria-label="Ответ к функции 1"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+        <li><label>2. <span class="math" data-tex="y = x^2 - 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">y = x^2 - 2</annotation></semantics></math></span>
+          <select aria-label="Ответ к функции 2"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+        <li><label>3. <span class="math" data-tex="y = (x + 2)^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002B;</mo><mn>2</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">y = (x + 2)^2</annotation></semantics></math></span>
+          <select aria-label="Ответ к функции 3"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+      </ul>
+      <p>А · вправо на 2 &nbsp; Б · вниз на 2 &nbsp; В · влево на 2 &nbsp; Г · вверх на 2 &nbsp; Д · симметрия относительно Ox</p>
+      <p><button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-shift">преобразования графиков</a>.</p>
+      <div class="solution">Вдоль Ox - наоборот знаку, вдоль Oy - по знаку.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="В" data-limit="limit-domain">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p>Найдите область определения функции <span class="math" data-tex="y = \sqrt{x - 3} + \frac{1}{x - 5}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><msqrt><mrow><mi>x</mi><mo>&#x02212;</mo><mn>3</mn></mrow></msqrt><mo>&#x0002B;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mi>x</mi><mo>&#x02212;</mo><mn>5</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">y = \sqrt{x - 3} + \frac{1}{x - 5}</annotation></semantics></math></span>.</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · [3; +∞)</button>
+        <button type="button" data-opt="Б">Б · (3; 5)</button>
+        <button type="button" data-opt="В">В · [3; 5) ∪ (5; +∞)</button>
+        <button type="button" data-opt="Г">Г · (5; +∞)</button>
+        <button type="button" data-opt="Д">Д · (−∞; 3]</button>
+      </div>
+      <p class="law-ref">Граница: <a href="#limit-domain">область определения</a>.</p>
+      <div class="solution">Под корнем <span class="math" data-tex="x \geq 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x02265;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">x \geq 3</annotation></semantics></math></span>, в знаменателе <span class="math" data-tex="x \neq 5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x02260;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">x \neq 5</annotation></semantics></math></span>.
+      Оба условия вместе - вариант В. А забывает о знаменателе.</div>
+    </div>
+
+    <span class="step">Шаг 6 · Обратный ход</span>
+    <h2 id="reverse">7 · Назови закон сам <a class="anchor-link" href="#reverse">#</a></h2>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="5050" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Найдите сумму всех натуральных чисел от 1 до 100.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-arith">сумма арифметической прогрессии</a>.</p>
+      <div class="solution">Прогрессия с <span class="math" data-tex="d = 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>d</mi><mo>&#x0003D;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">d = 1</annotation></semantics></math></span>: <span class="math" data-tex="\frac{(1 + 100) \cdot 100}{2} = 5050"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mo stretchy="false">&#x00028;</mo><mn>1</mn><mo>&#x0002B;</mo><mn>100</mn><mo stretchy="false">&#x00029;</mo><mo>&#x000B7;</mo><mn>100</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x0003D;</mo><mn>5050</mn></mrow><annotation encoding="application/x-tex">\frac{(1 + 100) \cdot 100}{2} = 5050</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="-5" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Найдите наименьшее значение функции <span class="math" data-tex="y = 2x^2 - 8x + 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>8</mn><mi>x</mi><mo>&#x0002B;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">y = 2x^2 - 8x + 3</annotation></semantics></math></span>.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-parabola">вершина параболы</a>.</p>
+      <div class="solution"><span class="math" data-tex="x_0 = \frac{8}{4} = 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>&#x0003D;</mo><mfrac><mrow><mn>8</mn></mrow><mrow><mn>4</mn></mrow></mfrac><mo>&#x0003D;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x_0 = \frac{8}{4} = 2</annotation></semantics></math></span>, <span class="math" data-tex="y(2) = 8 - 16 + 3 = -5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo stretchy="false">&#x00028;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>8</mn><mo>&#x02212;</mo><mn>16</mn><mo>&#x0002B;</mo><mn>3</mn><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">y(2) = 8 - 16 + 3 = -5</annotation></semantics></math></span>.
+      Ветви вверх (<span class="math" data-tex="a = 2 > 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mo>&#x0003D;</mo><mn>2</mn><mo>&#x0003E;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a = 2 &gt; 0</annotation></semantics></math></span>), значит это наименьшее значение.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="1275" data-limit="limit-q1">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Найдите сумму <span class="math" data-tex="5 + 10 + 20 + \ldots + 640"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>5</mn><mo>&#x0002B;</mo><mn>10</mn><mo>&#x0002B;</mo><mn>20</mn><mo>&#x0002B;</mo><mi>&#x02026;</mi><mo>&#x0002B;</mo><mn>640</mn></mrow><annotation encoding="application/x-tex">5 + 10 + 20 + \ldots + 640</annotation></semantics></math></span>.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-geom">геометрическая прогрессия</a>.</p>
+      <div class="solution"><span class="math" data-tex="q = 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>q</mi><mo>&#x0003D;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">q = 2</annotation></semantics></math></span>; <span class="math" data-tex="5 \cdot 2^{n-1} = 640"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>5</mn><mo>&#x000B7;</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo>&#x0003D;</mo><mn>640</mn></mrow><annotation encoding="application/x-tex">5 \cdot 2^{n-1} = 640</annotation></semantics></math></span> даёт
+      <span class="math" data-tex="n = 8"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>n</mi><mo>&#x0003D;</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">n = 8</annotation></semantics></math></span>. <span class="math" data-tex="S_8 = \frac{5(2^8 - 1)}{2 - 1} = 1275"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>S</mi><mn>8</mn></msub><mo>&#x0003D;</mo><mfrac><mrow><mn>5</mn><mo stretchy="false">&#x00028;</mo><msup><mn>2</mn><mn>8</mn></msup><mo>&#x02212;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo></mrow><mrow><mn>2</mn><mo>&#x02212;</mo><mn>1</mn></mrow></mfrac><mo>&#x0003D;</mo><mn>1275</mn></mrow><annotation encoding="application/x-tex">S_8 = \frac{5(2^8 - 1)}{2 - 1} = 1275</annotation></semantics></math></span>.</div>
+    </div>
+
+    <h2 id="error">8 · Найди ошибку в чужом решении <a class="anchor-link" href="#error">#</a></h2>
+    <p>Денис пишет: «График <span class="math" data-tex="y = (x - 3)^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mn>3</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">y = (x - 3)^2</annotation></semantics></math></span> получаем из
+    <span class="math" data-tex="y = x^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">y = x^2</annotation></semantics></math></span> сдвигом на 3 влево, потому что в скобках минус».</p>
+    <details>
+      <summary>Где ошибка?</summary>
+      <p>Вершина там, где <span class="math" data-tex="x - 3 = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x02212;</mo><mn>3</mn><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x - 3 = 0</annotation></semantics></math></span>, то есть при <span class="math" data-tex="x = 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">x = 3</annotation></semantics></math></span>: сдвиг
+      вправо. Вдоль оси Ox сдвиг идёт наоборот знаку в скобках (<a href="#limit-shift">первая граница</a>).</p>
+    </details>
+
+    <h2 id="artifacts">Что у тебя есть после этой страницы <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>Несколько базовых графиков и четыре преобразования вместо сотни графиков.</strong> Вершина параболы - это
+      полный квадрат из блока 3, а две формулы сумм прогрессий - два приёма: сложить сумму с её отражением и вычесть
+      сумму из неё же, умноженной на q.</p>
+    </div>
+    <!-- freq -->
+    <p class="dim law-freq" data-tasks="8">Частота на этом сайте, а не на НМТ: на этой странице 8 задач тренажёра, и они опираются на такие законы: Арифметическая прогрессия - 2, Вершина параболы - 2, Геометрическая прогрессия - 2, Область определения - 1, Преобразования графиков - 1.</p>
+    <!-- /freq -->
+    <p>Ты знаешь этот блок, если:</p>
+    <ol>
+      <li>решаешь 8 из 10 задач на графики и прогрессии без подсказки;</li>
+      <li>можешь объяснить вслух, почему <span class="math" data-tex="f(x + 2)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002B;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">f(x + 2)</annotation></semantics></math></span> сдвигает график влево;</li>
+      <li>находишь ошибку в чужом решении, как у Дениса.</li>
+    </ol>
+  
+
+    <footer>
+      <nav class="pager" aria-label="Соседние темы">
+        <p class="pager-next">Следующая тема: <a href="06.html">Степень, корень, логарифм</a></p>
+        <p class="pager-prev">Предыдущая тема: <a href="04.html">Уравнения и неравенства</a></p>
+      </nav>
+      <p class="footer-note">Сайт серии AI Factory. Сделан той же оснасткой, что и остальные: обычный HTML и CSS, проверка на bash, публикация через GitHub Pages.</p>
+    </footer>
   </main>
 
 </div>
