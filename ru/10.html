@@ -92,7 +92,7 @@
 
   <main id="main">
     <h1>Фигуры на плоскости</h1>
-    <p class="page-size" data-words="1152">Слов: 1152</p>
+    <p class="page-size" data-words="1581">Слов: 1581</p>
     <p class="lead">Несколько аксиом, из которых логикой выводится всё остальное. Геометрия - первое место, где математика
     предстаёт не набором формул, а системой: каждое свойство доказывается из предыдущих.</p>
 
@@ -130,6 +130,13 @@
       <p>Прямые параллельны тогда и только тогда, когда соответственные углы равны; равны и накрест лежащие; а
       односторонние в сумме дают 180°.</p>
     </div>
+    <div class="corollary" id="cor-parallelogram" data-law="law-parallel">
+      <p class="corollary-of">Следствие закона <a href="#law-parallel">«Параллельные прямые и секущая»</a></p>
+      <p class="corollary-name">Углы параллелограмма</p>
+      <div class="math-block" data-tex="\angle A + \angle B = 180^\circ,\qquad \angle A = \angle C,\quad \angle B = \angle D"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>&#x02220;</mo><mi>A</mi><mo>&#x0002B;</mo><mo>&#x02220;</mo><mi>B</mi><mo>&#x0003D;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x0002C;</mo><mspace width="2em" /><mo>&#x02220;</mo><mi>A</mi><mo>&#x0003D;</mo><mo>&#x02220;</mo><mi>C</mi><mo>&#x0002C;</mo><mspace width="1em" /><mo>&#x02220;</mo><mi>B</mi><mo>&#x0003D;</mo><mo>&#x02220;</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">\angle A + \angle B = 180^\circ,\qquad \angle A = \angle C,\quad \angle B = \angle D</annotation></semantics></math></div>
+      <p>Соседние углы параллелограмма в сумме дают 180°, противоположные углы равны.</p>
+      <p><strong>Почему так.</strong> Стороны AD и BC параллельны, AB - секущая, поэтому углы A и B односторонние: A + B = 180°. Так же B + C = 180° для параллельных AB и CD, отсюда A = C. Поэтому параллелограмм с углами x и 2x существует: x + 2x = 180°, углы 60° и 120°.</p>
+    </div>
     <div class="law" id="law-angles">
       <p class="law-name">Сумма углов треугольника - 180°</p>
       <div class="math-block" data-tex="\angle A + \angle B + \angle C = 180^\circ,\qquad S_n = 180^\circ (n - 2)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>&#x02220;</mo><mi>A</mi><mo>&#x0002B;</mo><mo>&#x02220;</mo><mi>B</mi><mo>&#x0002B;</mo><mo>&#x02220;</mo><mi>C</mi><mo>&#x0003D;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>S</mi><mi>n</mi></msub><mo>&#x0003D;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup><mo stretchy="false">&#x00028;</mo><mi>n</mi><mo>&#x02212;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">\angle A + \angle B + \angle C = 180^\circ,\qquad S_n = 180^\circ (n - 2)</annotation></semantics></math></div>
@@ -139,6 +146,19 @@
       <p>Вписанный угол равен половине центрального, опирающегося на ту же дугу. Вписанный угол, опирающийся на
       диаметр, - прямой.</p>
     </div>
+    <div class="corollary" id="cor-cyclic" data-law="law-inscribed">
+      <p class="corollary-of">Следствие закона <a href="#law-inscribed">«Вписанный угол»</a></p>
+      <p class="corollary-name">Вписанный четырёхугольник</p>
+      <div class="math-block" data-tex="\angle A + \angle C = \angle B + \angle D = 180^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>&#x02220;</mo><mi>A</mi><mo>&#x0002B;</mo><mo>&#x02220;</mo><mi>C</mi><mo>&#x0003D;</mo><mo>&#x02220;</mo><mi>B</mi><mo>&#x0002B;</mo><mo>&#x02220;</mo><mi>D</mi><mo>&#x0003D;</mo><msup><mn>180</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">\angle A + \angle C = \angle B + \angle D = 180^\circ</annotation></semantics></math></div>
+      <p>Если четырёхугольник вписан в окружность, сумма его противоположных углов равна 180°. Около трапеции можно описать окружность только тогда, когда она равнобокая.</p>
+      <p><strong>Почему так.</strong> Углы A и C опираются на две дуги, которые вместе составляют всю окружность, 360°. Каждый вписанный угол - половина своей дуги, поэтому A + C = 360° : 2 = 180°. В трапеции ABCD с основаниями AD и BC углы A и B односторонние: A + B = 180°; во вписанной ещё и B + D = 180°, значит A = D, и трапеция равнобокая.</p>
+    </div>
+    <div class="corollary" id="cor-circumcenter" data-law="law-inscribed">
+      <p class="corollary-of">Следствие закона <a href="#law-inscribed">«Вписанный угол»</a></p>
+      <p class="corollary-name">Центр описанной окружности</p>
+      <p>Серединные перпендикуляры к сторонам треугольника пересекаются в одной точке - центре описанной окружности. В прямоугольном треугольнике это середина гипотенузы, в тупоугольном - точка вне треугольника.</p>
+      <p><strong>Почему так.</strong> Каждая точка серединного перпендикуляра к AB одинаково удалена от A и B: два прямоугольных треугольника с общим катетом и равными вторыми катетами имеют равные гипотенузы (теорема Пифагора, блок 11). Точка пересечения двух перпендикуляров равноудалена от всех трёх вершин - это центр окружности. Прямой угол опирается на диаметр, поэтому в прямоугольном треугольнике гипотенуза - диаметр, а центр - её середина. Тупой угол C - половина дуги AB, большей полуокружности, поэтому C и центр лежат по разные стороны от AB.</p>
+    </div>
     <div class="law" id="law-triangle-ineq">
       <p class="law-name">Неравенство треугольника</p>
       <div class="math-block" data-tex="a < b + c,\quad b < a + c,\quad c < a + b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>a</mi><mo>&#x0003C;</mo><mi>b</mi><mo>&#x0002B;</mo><mi>c</mi><mo>&#x0002C;</mo><mspace width="1em" /><mi>b</mi><mo>&#x0003C;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>c</mi><mo>&#x0002C;</mo><mspace width="1em" /><mi>c</mi><mo>&#x0003C;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a &lt; b + c,\quad b &lt; a + c,\quad c &lt; a + b</annotation></semantics></math></div>
@@ -147,6 +167,13 @@
     <div class="law" id="law-similar">
       <p class="law-name">Признак подобия по двум углам</p>
       <p>Если два угла одного треугольника равны двум углам другого, треугольники подобны.</p>
+    </div>
+    <div class="corollary" id="cor-midline" data-law="law-similar">
+      <p class="corollary-of">Следствие закона <a href="#law-similar">«Признак подобия по двум углам»</a></p>
+      <p class="corollary-name">Средняя линия треугольника и трапеции</p>
+      <div class="math-block" data-tex="MN \parallel AC,\quad MN = \frac{AC}{2};\qquad m_{\text{трап}} = \frac{a + b}{2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>M</mi><mi>N</mi><mo>&#x02225;</mo><mi>A</mi><mi>C</mi><mo>&#x0002C;</mo><mspace width="1em" /><mi>M</mi><mi>N</mi><mo>&#x0003D;</mo><mfrac><mrow><mi>A</mi><mi>C</mi></mrow><mrow><mn>2</mn></mrow></mfrac><mi>;</mi><mspace width="2em" /><msub><mi>m</mi><mrow><mtext>трап</mtext></mrow></msub><mo>&#x0003D;</mo><mfrac><mrow><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi></mrow><mrow><mn>2</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">MN \parallel AC,\quad MN = \frac{AC}{2};\qquad m_{\text{трап}} = \frac{a + b}{2}</annotation></semantics></math></div>
+      <p>Средняя линия соединяет середины двух сторон треугольника: она параллельна третьей стороне и равна её половине. Средняя линия трапеции соединяет середины боковых сторон, параллельна основаниям и равна их полусумме.</p>
+      <p><strong>Почему так.</strong> Через середину M стороны AB проведём прямую, параллельную AC; она пересечёт BC в точке N. Соответственные углы при параллельных равны, поэтому треугольники MBN и ABC подобны по двум углам с коэффициентом BM : BA = 1 : 2. Отсюда BN = BC/2, то есть N - середина, и MN = AC/2. Диагональ делит трапецию на два треугольника, и средняя линия трапеции складывается из средних линий этих треугольников: a/2 + b/2.</p>
     </div>
 
     <span class="step">Шаг 3 · Почему так</span>
@@ -307,6 +334,7 @@
         <ul>
           <li><a href="https://zno.osvita.ua/mathematics/846/" rel="noopener" target="_blank">1 сессия, задание 3</a> (с рисунком) - Параллельные прямые и секущая</li>
           <li><a href="https://zno.osvita.ua/mathematics/846/" rel="noopener" target="_blank">1 сессия, задание 10</a> (с рисунком) - Вписанный угол</li>
+          <li><a href="https://zno.osvita.ua/mathematics/846/" rel="noopener" target="_blank">1 сессия, задание 13</a> (с рисунком) - Средняя линия треугольника и трапеции</li>
           <li><a href="https://zno.osvita.ua/mathematics/847/" rel="noopener" target="_blank">2 сессия, задание 3</a> (с рисунком) - Сумма углов треугольника - 180°</li>
         </ul>
       </div>
@@ -316,14 +344,19 @@
           <li><a href="https://zno.osvita.ua/mathematics/671/" rel="noopener" target="_blank">1 сессия, задание 2</a> (с рисунком) - Углы, треугольники, окружность</li>
           <li><a href="https://zno.osvita.ua/mathematics/671/" rel="noopener" target="_blank">1 сессия, задание 10</a> - Неравенство треугольника, Сумма углов треугольника - 180°</li>
           <li><a href="https://zno.osvita.ua/mathematics/672/" rel="noopener" target="_blank">2 сессия, задание 2</a> (с рисунком) - Сумма углов треугольника - 180°</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/" rel="noopener" target="_blank">2 сессия, задание 10</a> - Вписанный четырёхугольник, Средняя линия треугольника и трапеции</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/" rel="noopener" target="_blank">2 сессия, задание 18</a> (с рисунком) - Средняя линия треугольника и трапеции</li>
         </ul>
       </div>
       <div class="ext" data-ext="nmt-ua:2024" id="ext-nmt-ua-2024">
         <h4>НМТ 2024</h4>
         <ul>
           <li><a href="https://zno.osvita.ua/mathematics/585/" rel="noopener" target="_blank">1 сессия, задание 2</a> (с рисунком) - Сумма углов треугольника - 180°</li>
-          <li><a href="https://zno.osvita.ua/mathematics/585/" rel="noopener" target="_blank">1 сессия, задание 10</a> - Неравенство треугольника</li>
+          <li><a href="https://zno.osvita.ua/mathematics/585/" rel="noopener" target="_blank">1 сессия, задание 10</a> - Неравенство треугольника, Углы параллелограмма</li>
+          <li><a href="https://zno.osvita.ua/mathematics/585/" rel="noopener" target="_blank">1 сессия, задание 18</a> (с рисунком) - Средняя линия треугольника и трапеции</li>
           <li><a href="https://zno.osvita.ua/mathematics/606/" rel="noopener" target="_blank">2 сессия, задание 4</a> (с рисунком) - Углы, треугольники, окружность</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/" rel="noopener" target="_blank">2 сессия, задание 10</a> - Центр описанной окружности</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/" rel="noopener" target="_blank">2 сессия, задание 18</a> (с рисунком) - Средняя линия треугольника и трапеции</li>
         </ul>
       </div>
     </div>
@@ -336,7 +369,7 @@
       предыдущего.</p>
     </div>
     <!-- freq -->
-    <p class="dim law-freq" data-tasks="6">Частота на этом сайте, а не на НМТ: на этой странице 6 задач тренажёра, и они опираются на такие законы: Сумма углов треугольника - 180° - 3, Вписанный угол - 2, Неравенство треугольника - 1, Параллельные прямые и секущая - 1. В реальных вариантах НМТ 2024-2026 этот блок нужен в 9 заданиях из 132: Сумма углов треугольника - 180° - 4, Неравенство треугольника - 2, Углы, треугольники, окружность - 2, Вписанный угол - 1, Параллельные прямые и секущая - 1.</p>
+    <p class="dim law-freq" data-tasks="6">Частота на этом сайте, а не на НМТ: на этой странице 6 задач тренажёра, и они опираются на такие законы: Сумма углов треугольника - 180° - 3, Вписанный угол - 2, Неравенство треугольника - 1, Параллельные прямые и секущая - 1. В реальных вариантах НМТ 2024-2026 этот блок нужен в 15 заданиях из 132: Признак подобия по двум углам - 5, Сумма углов треугольника - 180° - 4, Вписанный угол - 3, Неравенство треугольника - 2, Параллельные прямые и секущая - 2, Углы, треугольники, окружность - 2.</p>
     <!-- /freq -->
     <p>Ты знаешь этот блок, если:</p>
     <ol>

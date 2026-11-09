@@ -92,7 +92,7 @@
 
   <main id="main">
     <h1>Координати і вектори</h1>
-    <p class="page-size" data-words="939">Слів: 939</p>
+    <p class="page-size" data-words="1056">Слів: 1056</p>
     <p class="lead">Точка стає парою (у просторі - трійкою) чисел, і геометрична задача розв'язується рівнянням.
     Площина і простір тут разом: формули відрізняються лише третьою координатою.</p>
 
@@ -170,6 +170,13 @@
     <div class="law" id="law-vector">
       <p class="law-name">Координати вектора і середина відрізка</p>
       <div class="math-block" data-tex="\overrightarrow{AB} = (x_B - x_A;\ y_B - y_A;\ z_B - z_A),\qquad M = \left(\frac{x_A + x_B}{2};\ \frac{y_A + y_B}{2};\ \frac{z_A + z_B}{2}\right)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mover><mrow><mi>A</mi><mi>B</mi></mrow><mo>&#x02192;</mo></mover><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><msub><mi>x</mi><mi>B</mi></msub><mo>&#x02212;</mo><msub><mi>x</mi><mi>A</mi></msub><mi>;</mi><mtext>&#x000A0;</mtext><msub><mi>y</mi><mi>B</mi></msub><mo>&#x02212;</mo><msub><mi>y</mi><mi>A</mi></msub><mi>;</mi><mtext>&#x000A0;</mtext><msub><mi>z</mi><mi>B</mi></msub><mo>&#x02212;</mo><msub><mi>z</mi><mi>A</mi></msub><mo stretchy="false">&#x00029;</mo><mo>&#x0002C;</mo><mspace width="2em" /><mi>M</mi><mo>&#x0003D;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mfrac><mrow><msub><mi>x</mi><mi>A</mi></msub><mo>&#x0002B;</mo><msub><mi>x</mi><mi>B</mi></msub></mrow><mrow><mn>2</mn></mrow></mfrac><mi>;</mi><mtext>&#x000A0;</mtext><mfrac><mrow><msub><mi>y</mi><mi>A</mi></msub><mo>&#x0002B;</mo><msub><mi>y</mi><mi>B</mi></msub></mrow><mrow><mn>2</mn></mrow></mfrac><mi>;</mi><mtext>&#x000A0;</mtext><mfrac><mrow><msub><mi>z</mi><mi>A</mi></msub><mo>&#x0002B;</mo><msub><mi>z</mi><mi>B</mi></msub></mrow><mrow><mn>2</mn></mrow></mfrac><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow></mrow><annotation encoding="application/x-tex">\overrightarrow{AB} = (x_B - x_A;\ y_B - y_A;\ z_B - z_A),\qquad M = \left(\frac{x_A + x_B}{2};\ \frac{y_A + y_B}{2};\ \frac{z_A + z_B}{2}\right)</annotation></semantics></math></div>
+    </div>
+    <div class="corollary" id="cor-line" data-law="law-vector">
+      <p class="corollary-of">Наслідок закону <a href="#law-vector">«Координати вектора і середина відрізка»</a></p>
+      <p class="corollary-name">Рівняння прямої</p>
+      <div class="math-block" data-tex="y = kx + b,\qquad k = \frac{y_B - y_A}{x_B - x_A}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><mi>k</mi><mi>x</mi><mo>&#x0002B;</mo><mi>b</mi><mo>&#x0002C;</mo><mspace width="2em" /><mi>k</mi><mo>&#x0003D;</mo><mfrac><mrow><msub><mi>y</mi><mi>B</mi></msub><mo>&#x02212;</mo><msub><mi>y</mi><mi>A</mi></msub></mrow><mrow><msub><mi>x</mi><mi>B</mi></msub><mo>&#x02212;</mo><msub><mi>x</mi><mi>A</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">y = kx + b,\qquad k = \frac{y_B - y_A}{x_B - x_A}</annotation></semantics></math></div>
+      <p>Невертикальна пряма має рівняння y = kx + b: k - кутовий коефіцієнт, b - точка перетину з віссю y. Якщо k > 0, пряма утворює гострий кут з додатним напрямком осі x; прямі з рівними k паралельні; пряма y = kx проходить через початок координат.</p>
+      <p><strong>Чому так.</strong> Вектор AB = (x_B − x_A; y_B − y_A) задає напрям прямої: на кожну одиницю вправо вона піднімається на k = Δy/Δx, і це число однакове для будь-яких двох її точок. При x = 0 маємо y = b. Однаковий напрям - однакове k, тому прямі з рівними k паралельні. Заміна x на −x відбиває пряму відносно осі y: y = kx + b переходить у y = −kx + b.</p>
     </div>
     <div class="law" id="law-distance">
       <p class="law-name">Відстань між точками</p>
@@ -343,6 +350,7 @@
         <ul>
           <li><a href="https://zno.osvita.ua/mathematics/671/" rel="noopener" target="_blank">1 сесія, завдання 8</a> - Координати вектора і середина відрізка</li>
           <li><a href="https://zno.osvita.ua/mathematics/672/" rel="noopener" target="_blank">2 сесія, завдання 8</a> (з рисунком) - Відстань між точками</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/" rel="noopener" target="_blank">2 сесія, завдання 16</a> - Рівняння прямої</li>
           <li><a href="https://zno.osvita.ua/mathematics/672/" rel="noopener" target="_blank">2 сесія, завдання 22</a> (з рисунком) - Рівняння кола і сфери</li>
         </ul>
       </div>
@@ -362,7 +370,7 @@
       скалярний добуток - теорема косинусів; простір відрізняється від площини лише третьою координатою.</p>
     </div>
     <!-- freq -->
-    <p class="dim law-freq" data-tasks="6">Частота на цьому сайті, а не на НМТ: на цій сторінці 6 задач тренажера, і вони спираються на такі закони: Відстань між точками - 2, Скалярний добуток - 2, Координати вектора і середина відрізка - 1, Рівняння кола і сфери - 1. У реальних варіантах НМТ 2024-2026 цей блок потрібен у 7 завданнях з 132: Відстань між точками - 4, Координати вектора і середина відрізка - 3, Рівняння кола і сфери - 1.</p>
+    <p class="dim law-freq" data-tasks="6">Частота на цьому сайті, а не на НМТ: на цій сторінці 6 задач тренажера, і вони спираються на такі закони: Відстань між точками - 2, Скалярний добуток - 2, Координати вектора і середина відрізка - 1, Рівняння кола і сфери - 1. У реальних варіантах НМТ 2024-2026 цей блок потрібен у 8 завданнях з 132: Відстань між точками - 4, Координати вектора і середина відрізка - 4, Рівняння кола і сфери - 1.</p>
     <!-- /freq -->
     <p>Ти знаєш цей блок, якщо:</p>
     <ol>

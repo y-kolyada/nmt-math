@@ -92,7 +92,7 @@
 
   <main id="main">
     <h1>Пространство: прямые, плоскости, тела</h1>
-    <p class="page-size" data-words="1078">Слов: 1078</p>
+    <p class="page-size" data-words="1371">Слов: 1371</p>
     <p class="lead">Планиметрия плюс ещё одно измерение. Почти каждая задача стереометрии решается тем, что в теле
     находят плоскую фигуру: сечение, развёртку, прямоугольный треугольник внутри.</p>
 
@@ -198,6 +198,13 @@
       <div class="math-block" data-tex="S_{\text{бок. призмы}} = P_{\text{осн}} \cdot h,\qquad S_{\text{бок. цилиндра}} = 2\pi R h"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>S</mi><mrow><mtext>бок.&#x000A0;призмы</mtext></mrow></msub><mo>&#x0003D;</mo><msub><mi>P</mi><mrow><mtext>осн</mtext></mrow></msub><mo>&#x000B7;</mo><mi>h</mi><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>S</mi><mrow><mtext>бок.&#x000A0;цилиндра</mtext></mrow></msub><mo>&#x0003D;</mo><mn>2</mn><mi>&#x003C0;</mi><mi>R</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">S_{\text{бок. призмы}} = P_{\text{осн}} \cdot h,\qquad S_{\text{бок. цилиндра}} = 2\pi R h</annotation></semantics></math></div>
       <p>для прямой призмы и прямого цилиндра.</p>
     </div>
+    <div class="corollary" id="cor-revolution" data-law="law-lateral">
+      <p class="corollary-of">Следствие закона <a href="#law-lateral">«Боковая поверхность - периметр основания на высоту»</a></p>
+      <p class="corollary-name">Тела вращения</p>
+      <div class="math-block" data-tex="l_{\text{цилиндра}} = h,\qquad l_{\text{конуса}}^2 = R^2 + h^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>l</mi><mrow><mtext>цилиндра</mtext></mrow></msub><mo>&#x0003D;</mo><mi>h</mi><mo>&#x0002C;</mo><mspace width="2em" /><msubsup><mi>l</mi><mrow><mtext>конуса</mtext></mrow><mn>2</mn></msubsup><mo>&#x0003D;</mo><msup><mi>R</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>h</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">l_{\text{цилиндра}} = h,\qquad l_{\text{конуса}}^2 = R^2 + h^2</annotation></semantics></math></div>
+      <p>Цилиндр образуется вращением прямоугольника вокруг стороны, конус - прямоугольного треугольника вокруг катета, шар - круга вокруг диаметра. Осевое сечение цилиндра - прямоугольник 2R × h, конуса - равнобедренный треугольник с основанием 2R. Образующая цилиндра равна высоте, образующая конуса l находится из l² = R² + h².</p>
+      <p><strong>Почему так.</strong> Сторона, вокруг которой вращается фигура, становится осью тела, а противоположная сторона прямоугольника или гипотенуза треугольника описывает боковую поверхность - это и есть образующая. В осевом сечении конуса высота, радиус основания и образующая образуют прямоугольный треугольник, поэтому работает теорема Пифагора (блок 11). Боковая поверхность цилиндра разворачивается в прямоугольник 2πR × l, и при l = h это закон боковой поверхности.</p>
+    </div>
     <div class="law" id="law-diagonal">
       <p class="law-name">Диагональ прямоугольного параллелепипеда</p>
       <div class="math-block" data-tex="d^2 = a^2 + b^2 + c^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">d^2 = a^2 + b^2 + c^2</annotation></semantics></math></div>
@@ -205,6 +212,11 @@
     <div class="law" id="law-cube-scale">
       <p class="law-name">Объёмы подобных тел</p>
       <div class="math-block" data-tex="\frac{V_1}{V_2} = k^3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><msub><mi>V</mi><mn>1</mn></msub></mrow><mrow><msub><mi>V</mi><mn>2</mn></msub></mrow></mfrac><mo>&#x0003D;</mo><msup><mi>k</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">\frac{V_1}{V_2} = k^3</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-space">
+      <p class="law-name">Признаки параллельности и перпендикулярности в пространстве</p>
+      <p>Прямая параллельна плоскости, если она параллельна какой-нибудь прямой этой плоскости. Две плоскости параллельны, если две пересекающиеся прямые одной из них параллельны другой; через точку вне плоскости проходит ровно одна плоскость, параллельная данной. Прямая перпендикулярна плоскости, если она перпендикулярна двум пересекающимся прямым этой плоскости.</p>
+      <p>Пространство проверяют плоскостью: чтобы доказать параллельность или перпендикулярность, ищут нужную прямую в самой плоскости, а там уже работают законы блока 10.</p>
     </div>
 
     <span class="step">Шаг 3 · Почему так</span>
@@ -329,6 +341,15 @@
       <div class="solution"><span class="math" data-tex="d = \sqrt{4 + 4 + 4} = 2\sqrt{3}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>d</mi><mo>&#x0003D;</mo><msqrt><mrow><mn>4</mn><mo>&#x0002B;</mo><mn>4</mn><mo>&#x0002B;</mo><mn>4</mn></mrow></msqrt><mo>&#x0003D;</mo><mn>2</mn><msqrt><mrow><mn>3</mn></mrow></msqrt></mrow><annotation encoding="application/x-tex">d = \sqrt{4 + 4 + 4} = 2\sqrt{3}</annotation></semantics></math></span>. 2√2 - диагональ грани, а не куба.</div>
     </div>
 
+    <div class="task" data-kind="short" data-answer="4" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Сколько рёбер куба ABCDA₁B₁C₁D₁ параллельны плоскости грани ABCD?</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-space">признак параллельности прямой и плоскости</a>.</p>
+      <div class="solution">Четыре ребра верхней грани: каждое параллельно ребру нижней грани, которое лежит в плоскости ABCD. Рёбра нижней грани лежат в самой плоскости, а боковые рёбра её пересекают.</div>
+    </div>
+
     <span class="step">Шаг 6 · Обратный ход</span>
     <h2 id="reverse">7 · Назови закон сам <a class="anchor-link" href="#reverse">#</a></h2>
 
@@ -368,22 +389,28 @@
       <div class="ext" data-ext="nmt-ua:2026" id="ext-nmt-ua-2026">
         <h4>НМТ 2026</h4>
         <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/846/" rel="noopener" target="_blank">1 сессия, задание 5</a> - Тела вращения</li>
           <li><a href="https://zno.osvita.ua/mathematics/846/" rel="noopener" target="_blank">1 сессия, задание 21</a> (с рисунком) - Боковая поверхность - периметр основания на высоту, Объём: призма - S·h, пирамида - треть</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/" rel="noopener" target="_blank">2 сессия, задание 5</a> - Тела вращения</li>
           <li><a href="https://zno.osvita.ua/mathematics/847/" rel="noopener" target="_blank">2 сессия, задание 21</a> (с рисунком) - Диагональ прямоугольного параллелепипеда, Объём: призма - S·h, пирамида - треть</li>
         </ul>
       </div>
       <div class="ext" data-ext="nmt-ua:2025" id="ext-nmt-ua-2025">
         <h4>НМТ 2025</h4>
         <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/671/" rel="noopener" target="_blank">1 сессия, задание 5</a> (с рисунком) - Признаки параллельности и перпендикулярности в пространстве</li>
           <li><a href="https://zno.osvita.ua/mathematics/671/" rel="noopener" target="_blank">1 сессия, задание 21</a> - Боковая поверхность - периметр основания на высоту, Объём: призма - S·h, пирамида - треть</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/" rel="noopener" target="_blank">2 сессия, задание 5</a> (с рисунком) - Признаки параллельности и перпендикулярности в пространстве</li>
           <li><a href="https://zno.osvita.ua/mathematics/672/" rel="noopener" target="_blank">2 сессия, задание 21</a> - Боковая поверхность - периметр основания на высоту</li>
         </ul>
       </div>
       <div class="ext" data-ext="nmt-ua:2024" id="ext-nmt-ua-2024">
         <h4>НМТ 2024</h4>
         <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/585/" rel="noopener" target="_blank">1 сессия, задание 4</a> (с рисунком) - Тела вращения</li>
           <li><a href="https://zno.osvita.ua/mathematics/585/" rel="noopener" target="_blank">1 сессия, задание 9</a> - Боковая поверхность - периметр основания на высоту</li>
           <li><a href="https://zno.osvita.ua/mathematics/585/" rel="noopener" target="_blank">1 сессия, задание 21</a> - Объём: призма - S·h, пирамида - треть</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/" rel="noopener" target="_blank">2 сессия, задание 5</a> (с рисунком) - Признаки параллельности и перпендикулярности в пространстве</li>
           <li><a href="https://zno.osvita.ua/mathematics/606/" rel="noopener" target="_blank">2 сессия, задание 8</a> - Объём: призма - S·h, пирамида - треть</li>
           <li><a href="https://zno.osvita.ua/mathematics/606/" rel="noopener" target="_blank">2 сессия, задание 21</a> - Боковая поверхность - периметр основания на высоту</li>
         </ul>
@@ -397,7 +424,7 @@
       основания на высоту и одна треть для острых тел. Площадь растёт как квадрат, объём - как куб.</p>
     </div>
     <!-- freq -->
-    <p class="dim law-freq" data-tasks="6">Частота на этом сайте, а не на НМТ: на этой странице 6 задач тренажёра, и они опираются на такие законы: Объём: призма - S·h, пирамида - треть - 4, Боковая поверхность - периметр основания на высоту - 1, Диагональ прямоугольного параллелепипеда - 1, Объёмы подобных тел - 1. В реальных вариантах НМТ 2024-2026 этот блок нужен в 8 заданиях из 132: Боковая поверхность - периметр основания на высоту - 5, Объём: призма - S·h, пирамида - треть - 5, Диагональ прямоугольного параллелепипеда - 1.</p>
+    <p class="dim law-freq" data-tasks="7">Частота на этом сайте, а не на НМТ: на этой странице 7 задач тренажёра, и они опираются на такие законы: Объём: призма - S·h, пирамида - треть - 4, Боковая поверхность - периметр основания на высоту - 1, Диагональ прямоугольного параллелепипеда - 1, Объёмы подобных тел - 1, Признаки параллельности и перпендикулярности в пространстве - 1. В реальных вариантах НМТ 2024-2026 этот блок нужен в 14 заданиях из 132: Боковая поверхность - периметр основания на высоту - 8, Объём: призма - S·h, пирамида - треть - 5, Признаки параллельности и перпендикулярности в пространстве - 3, Диагональ прямоугольного параллелепипеда - 1.</p>
     <!-- /freq -->
     <p>Ты знаешь этот блок, если:</p>
     <ol>

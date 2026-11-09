@@ -92,7 +92,7 @@
 
   <main id="main">
     <h1>Измерения на плоскости</h1>
-    <p class="page-size" data-words="1040">Слов: 1040</p>
+    <p class="page-size" data-words="1259">Слов: 1259</p>
     <p class="lead">Фигурам из блока 10 ставят в соответствие числа: длины, углы, площади. Почти каждая формула
     здесь - либо теорема Пифагора, либо площадь прямоугольника, разрезанного и сложенного иначе.</p>
 
@@ -148,9 +148,23 @@
       <div class="math-block" data-tex="c^2 = a^2 + b^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">c^2 = a^2 + b^2</annotation></semantics></math></div>
       <p>c - гипотенуза, a и b - катеты прямоугольного треугольника.</p>
     </div>
+    <div class="corollary" id="cor-tangents" data-law="law-pythagoras">
+      <p class="corollary-of">Следствие закона <a href="#law-pythagoras">«Теорема Пифагора»</a></p>
+      <p class="corollary-name">Отрезки касательных и описанный четырёхугольник</p>
+      <div class="math-block" data-tex="PT_1 = PT_2;\qquad a + c = b + d"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><msub><mi>T</mi><mn>1</mn></msub><mo>&#x0003D;</mo><mi>P</mi><msub><mi>T</mi><mn>2</mn></msub><mi>;</mi><mspace width="2em" /><mi>a</mi><mo>&#x0002B;</mo><mi>c</mi><mo>&#x0003D;</mo><mi>b</mi><mo>&#x0002B;</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">PT_1 = PT_2;\qquad a + c = b + d</annotation></semantics></math></div>
+      <p>Отрезки касательных, проведённых к окружности из одной точки, равны. Поэтому в четырёхугольнике, описанном около окружности, суммы противоположных сторон равны: a + c = b + d.</p>
+      <p><strong>Почему так.</strong> Радиус, проведённый в точку касания, перпендикулярен касательной, поэтому для точки P и центра O по теореме Пифагора PT² = PO² − r² для обеих касательных: отрезки равны. Каждая сторона описанного четырёхугольника состоит из двух таких отрезков от её концов, и в сумме противоположных сторон каждый из четырёх отрезков встречается ровно раз. Центр окружности, вписанной в трапецию, удалён от обоих оснований на r, поэтому лежит на средней линии, а высота трапеции равна 2r.</p>
+    </div>
     <div class="law" id="law-cosines">
       <p class="law-name">Теорема косинусов и теорема синусов</p>
       <div class="math-block" data-tex="c^2 = a^2 + b^2 - 2ab\cos C,\qquad \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi><mi>C</mi><mo>&#x0002C;</mo><mspace width="2em" /><mfrac><mrow><mi>a</mi></mrow><mrow><mi>sin</mi><mi>A</mi></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mi>b</mi></mrow><mrow><mi>sin</mi><mi>B</mi></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mi>c</mi></mrow><mrow><mi>sin</mi><mi>C</mi></mrow></mfrac><mo>&#x0003D;</mo><mn>2</mn><mi>R</mi></mrow><annotation encoding="application/x-tex">c^2 = a^2 + b^2 - 2ab\cos C,\qquad \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R</annotation></semantics></math></div>
+    </div>
+    <div class="corollary" id="cor-chords" data-law="law-cosines">
+      <p class="corollary-of">Следствие закона <a href="#law-cosines">«Теорема косинусов и теорема синусов»</a></p>
+      <p class="corollary-name">Хорды и дуги</p>
+      <div class="math-block" data-tex="AB = 2R\sin C"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mi>B</mi><mo>&#x0003D;</mo><mn>2</mn><mi>R</mi><mi>sin</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">AB = 2R\sin C</annotation></semantics></math></div>
+      <p>Хорда равна удвоенному радиусу, умноженному на синус вписанного угла, который на неё опирается. Равные хорды стягивают равные дуги; наибольшая хорда - диаметр, и он делит окружность пополам; хорда может быть короче радиуса.</p>
+      <p><strong>Почему так.</strong> Это теорема синусов для треугольника ABC, вписанного в окружность: AB : sin C = 2R. Равные хорды - равные синусы вписанных углов - равные дуги. Синус не больше 1, поэтому хорда не длиннее 2R, и длину 2R имеет только диаметр. Если sin C < 1/2, хорда короче R.</p>
     </div>
     <div class="law" id="law-areas">
       <p class="law-name">Площади треугольника, трапеции и круга</p>
@@ -296,6 +310,7 @@
           <li><a href="https://zno.osvita.ua/mathematics/846/" rel="noopener" target="_blank">1 сессия, задание 13</a> (с рисунком) - Площади треугольника, трапеции и круга</li>
           <li><a href="https://zno.osvita.ua/mathematics/846/" rel="noopener" target="_blank">1 сессия, задание 18</a> (с рисунком) - Теорема Пифагора</li>
           <li><a href="https://zno.osvita.ua/mathematics/846/" rel="noopener" target="_blank">1 сессия, задание 21</a> (с рисунком) - Теорема Пифагора</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/" rel="noopener" target="_blank">2 сессия, задание 10</a> - Хорды и дуги</li>
           <li><a href="https://zno.osvita.ua/mathematics/847/" rel="noopener" target="_blank">2 сессия, задание 13</a> (с рисунком) - Площади треугольника, трапеции и круга</li>
           <li><a href="https://zno.osvita.ua/mathematics/847/" rel="noopener" target="_blank">2 сессия, задание 18</a> (с рисунком) - Теорема Пифагора</li>
         </ul>
@@ -306,6 +321,7 @@
           <li><a href="https://zno.osvita.ua/mathematics/671/" rel="noopener" target="_blank">1 сессия, задание 15</a> (с рисунком) - Площади треугольника, трапеции и круга</li>
           <li><a href="https://zno.osvita.ua/mathematics/671/" rel="noopener" target="_blank">1 сессия, задание 18</a> (с рисунком) - Теорема Пифагора</li>
           <li><a href="https://zno.osvita.ua/mathematics/671/" rel="noopener" target="_blank">1 сессия, задание 21</a> - Теорема Пифагора</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/" rel="noopener" target="_blank">2 сессия, задание 10</a> - Отрезки касательных и описанный четырёхугольник</li>
           <li><a href="https://zno.osvita.ua/mathematics/672/" rel="noopener" target="_blank">2 сессия, задание 15</a> (с рисунком) - Длина, угол, площадь</li>
           <li><a href="https://zno.osvita.ua/mathematics/672/" rel="noopener" target="_blank">2 сессия, задание 18</a> (с рисунком) - Теорема Пифагора</li>
         </ul>
@@ -314,6 +330,7 @@
         <h4>НМТ 2024</h4>
         <ul>
           <li><a href="https://zno.osvita.ua/mathematics/585/" rel="noopener" target="_blank">1 сессия, задание 15</a> (с рисунком) - Длина, угол, площадь</li>
+          <li><a href="https://zno.osvita.ua/mathematics/585/" rel="noopener" target="_blank">1 сессия, задание 18</a> (с рисунком) - Отрезки касательных и описанный четырёхугольник</li>
           <li><a href="https://zno.osvita.ua/mathematics/606/" rel="noopener" target="_blank">2 сессия, задание 8</a> - Площади треугольника, трапеции и круга</li>
           <li><a href="https://zno.osvita.ua/mathematics/606/" rel="noopener" target="_blank">2 сессия, задание 15</a> (с рисунком) - Площади треугольника, трапеции и круга</li>
           <li><a href="https://zno.osvita.ua/mathematics/606/" rel="noopener" target="_blank">2 сессия, задание 18</a> (с рисунком) - Площади треугольника, трапеции и круга</li>
@@ -328,7 +345,7 @@
       площадь через синус - высота, записанная через угол, площади фигур - разрезание. И площадь всегда растёт как квадрат.</p>
     </div>
     <!-- freq -->
-    <p class="dim law-freq" data-tasks="6">Частота на этом сайте, а не на НМТ: на этой странице 6 задач тренажёра, и они опираются на такие законы: Площади треугольника, трапеции и круга - 2, Площади подобных фигур - 1, Синус острого угла - 1, Теорема Пифагора - 1, Теорема косинусов и теорема синусов - 1. В реальных вариантах НМТ 2024-2026 этот блок нужен в 14 заданиях из 132: Площади треугольника, трапеции и круга - 6, Теорема Пифагора - 6, Длина, угол, площадь - 2.</p>
+    <p class="dim law-freq" data-tasks="6">Частота на этом сайте, а не на НМТ: на этой странице 6 задач тренажёра, и они опираются на такие законы: Площади треугольника, трапеции и круга - 2, Площади подобных фигур - 1, Синус острого угла - 1, Теорема Пифагора - 1, Теорема косинусов и теорема синусов - 1. В реальных вариантах НМТ 2024-2026 этот блок нужен в 17 заданиях из 132: Теорема Пифагора - 8, Площади треугольника, трапеции и круга - 6, Длина, угол, площадь - 2, Теорема косинусов и теорема синусов - 1.</p>
     <!-- /freq -->
     <p>Ты знаешь этот блок, если:</p>
     <ol>

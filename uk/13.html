@@ -92,7 +92,7 @@
 
   <main id="main">
     <h1>Простір: прямі, площини, тіла</h1>
-    <p class="page-size" data-words="1079">Слів: 1079</p>
+    <p class="page-size" data-words="1374">Слів: 1374</p>
     <p class="lead">Планіметрія плюс ще один вимір. Майже кожна задача стереометрії розв'язується тим, що в тілі
     знаходять плоску фігуру: переріз, розгортку, прямокутний трикутник усередині.</p>
 
@@ -198,6 +198,13 @@
       <div class="math-block" data-tex="S_{\text{бічн. призми}} = P_{\text{осн}} \cdot h,\qquad S_{\text{бічн. циліндра}} = 2\pi R h"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>S</mi><mrow><mtext>бічн.&#x000A0;призми</mtext></mrow></msub><mo>&#x0003D;</mo><msub><mi>P</mi><mrow><mtext>осн</mtext></mrow></msub><mo>&#x000B7;</mo><mi>h</mi><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>S</mi><mrow><mtext>бічн.&#x000A0;циліндра</mtext></mrow></msub><mo>&#x0003D;</mo><mn>2</mn><mi>&#x003C0;</mi><mi>R</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">S_{\text{бічн. призми}} = P_{\text{осн}} \cdot h,\qquad S_{\text{бічн. циліндра}} = 2\pi R h</annotation></semantics></math></div>
       <p>для прямої призми і прямого циліндра.</p>
     </div>
+    <div class="corollary" id="cor-revolution" data-law="law-lateral">
+      <p class="corollary-of">Наслідок закону <a href="#law-lateral">«Бічна поверхня - периметр основи на висоту»</a></p>
+      <p class="corollary-name">Тіла обертання</p>
+      <div class="math-block" data-tex="l_{\text{циліндра}} = h,\qquad l_{\text{конуса}}^2 = R^2 + h^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>l</mi><mrow><mtext>циліндра</mtext></mrow></msub><mo>&#x0003D;</mo><mi>h</mi><mo>&#x0002C;</mo><mspace width="2em" /><msubsup><mi>l</mi><mrow><mtext>конуса</mtext></mrow><mn>2</mn></msubsup><mo>&#x0003D;</mo><msup><mi>R</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>h</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">l_{\text{циліндра}} = h,\qquad l_{\text{конуса}}^2 = R^2 + h^2</annotation></semantics></math></div>
+      <p>Циліндр утворюється обертанням прямокутника навколо сторони, конус - прямокутного трикутника навколо катета, куля - круга навколо діаметра. Осьовий переріз циліндра - прямокутник 2R × h, конуса - рівнобедрений трикутник з основою 2R. Твірна циліндра дорівнює висоті, твірна конуса l знаходиться з l² = R² + h².</p>
+      <p><strong>Чому так.</strong> Сторона, навколо якої обертається фігура, стає віссю тіла, а протилежна сторона прямокутника або гіпотенуза трикутника описує бічну поверхню - це і є твірна. В осьовому перерізі конуса висота, радіус основи і твірна утворюють прямокутний трикутник, тож працює теорема Піфагора (блок 11). Бічна поверхня циліндра розгортається в прямокутник 2πR × l, і при l = h це закон бічної поверхні.</p>
+    </div>
     <div class="law" id="law-diagonal">
       <p class="law-name">Діагональ прямокутного паралелепіпеда</p>
       <div class="math-block" data-tex="d^2 = a^2 + b^2 + c^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">d^2 = a^2 + b^2 + c^2</annotation></semantics></math></div>
@@ -205,6 +212,11 @@
     <div class="law" id="law-cube-scale">
       <p class="law-name">Об'єми подібних тіл</p>
       <div class="math-block" data-tex="\frac{V_1}{V_2} = k^3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><msub><mi>V</mi><mn>1</mn></msub></mrow><mrow><msub><mi>V</mi><mn>2</mn></msub></mrow></mfrac><mo>&#x0003D;</mo><msup><mi>k</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">\frac{V_1}{V_2} = k^3</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-space">
+      <p class="law-name">Ознаки паралельності й перпендикулярності в просторі</p>
+      <p>Пряма паралельна площині, якщо вона паралельна якійсь прямій цієї площини. Дві площини паралельні, якщо дві прямі однієї з них, що перетинаються, паралельні другій; через точку поза площиною проходить рівно одна площина, паралельна даній. Пряма перпендикулярна площині, якщо вона перпендикулярна двом прямим цієї площини, що перетинаються.</p>
+      <p>Простір перевіряють площиною: щоб довести паралельність чи перпендикулярність, шукають потрібну пряму в самій площині, а там уже працюють закони блоку 10.</p>
     </div>
 
     <span class="step">Крок 3 · Чому так</span>
@@ -329,6 +341,15 @@
       <div class="solution"><span class="math" data-tex="d = \sqrt{4 + 4 + 4} = 2\sqrt{3}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>d</mi><mo>&#x0003D;</mo><msqrt><mrow><mn>4</mn><mo>&#x0002B;</mo><mn>4</mn><mo>&#x0002B;</mo><mn>4</mn></mrow></msqrt><mo>&#x0003D;</mo><mn>2</mn><msqrt><mrow><mn>3</mn></mrow></msqrt></mrow><annotation encoding="application/x-tex">d = \sqrt{4 + 4 + 4} = 2\sqrt{3}</annotation></semantics></math></span>. 2√2 - діагональ грані, а не куба.</div>
     </div>
 
+    <div class="task" data-kind="short" data-answer="4" data-limit="">
+      <p class="task-kind">Коротка відповідь · 2 бали</p>
+      <p>Скільки ребер куба ABCDA₁B₁C₁D₁ паралельні площині грані ABCD?</p>
+      <p><label>Відповідь: <input type="text" inputmode="decimal" size="8" aria-label="Відповідь"></label>
+      <button type="button" class="check">Перевірити</button></p>
+      <p class="law-ref">Закон: <a href="#law-space">ознака паралельності прямої і площини</a>.</p>
+      <div class="solution">Чотири ребра верхньої грані: кожне паралельне ребру нижньої грані, що лежить у площині ABCD. Ребра нижньої грані лежать у самій площині, а бічні ребра її перетинають.</div>
+    </div>
+
     <span class="step">Крок 6 · Зворотний хід</span>
     <h2 id="reverse">7 · Сам назви закон <a class="anchor-link" href="#reverse">#</a></h2>
 
@@ -368,22 +389,28 @@
       <div class="ext" data-ext="nmt-ua:2026" id="ext-nmt-ua-2026">
         <h4>НМТ 2026</h4>
         <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/846/" rel="noopener" target="_blank">1 сесія, завдання 5</a> - Тіла обертання</li>
           <li><a href="https://zno.osvita.ua/mathematics/846/" rel="noopener" target="_blank">1 сесія, завдання 21</a> (з рисунком) - Бічна поверхня - периметр основи на висоту, Об'єм: призма - S·h, піраміда - третина</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/" rel="noopener" target="_blank">2 сесія, завдання 5</a> - Тіла обертання</li>
           <li><a href="https://zno.osvita.ua/mathematics/847/" rel="noopener" target="_blank">2 сесія, завдання 21</a> (з рисунком) - Діагональ прямокутного паралелепіпеда, Об'єм: призма - S·h, піраміда - третина</li>
         </ul>
       </div>
       <div class="ext" data-ext="nmt-ua:2025" id="ext-nmt-ua-2025">
         <h4>НМТ 2025</h4>
         <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/671/" rel="noopener" target="_blank">1 сесія, завдання 5</a> (з рисунком) - Ознаки паралельності й перпендикулярності в просторі</li>
           <li><a href="https://zno.osvita.ua/mathematics/671/" rel="noopener" target="_blank">1 сесія, завдання 21</a> - Бічна поверхня - периметр основи на висоту, Об'єм: призма - S·h, піраміда - третина</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/" rel="noopener" target="_blank">2 сесія, завдання 5</a> (з рисунком) - Ознаки паралельності й перпендикулярності в просторі</li>
           <li><a href="https://zno.osvita.ua/mathematics/672/" rel="noopener" target="_blank">2 сесія, завдання 21</a> - Бічна поверхня - периметр основи на висоту</li>
         </ul>
       </div>
       <div class="ext" data-ext="nmt-ua:2024" id="ext-nmt-ua-2024">
         <h4>НМТ 2024</h4>
         <ul>
+          <li><a href="https://zno.osvita.ua/mathematics/585/" rel="noopener" target="_blank">1 сесія, завдання 4</a> (з рисунком) - Тіла обертання</li>
           <li><a href="https://zno.osvita.ua/mathematics/585/" rel="noopener" target="_blank">1 сесія, завдання 9</a> - Бічна поверхня - периметр основи на висоту</li>
           <li><a href="https://zno.osvita.ua/mathematics/585/" rel="noopener" target="_blank">1 сесія, завдання 21</a> - Об'єм: призма - S·h, піраміда - третина</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/" rel="noopener" target="_blank">2 сесія, завдання 5</a> (з рисунком) - Ознаки паралельності й перпендикулярності в просторі</li>
           <li><a href="https://zno.osvita.ua/mathematics/606/" rel="noopener" target="_blank">2 сесія, завдання 8</a> - Об'єм: призма - S·h, піраміда - третина</li>
           <li><a href="https://zno.osvita.ua/mathematics/606/" rel="noopener" target="_blank">2 сесія, завдання 21</a> - Бічна поверхня - периметр основи на висоту</li>
         </ul>
@@ -397,7 +424,7 @@
       основи на висоту і одна третя для гострих тіл. Площа росте як квадрат, об'єм - як куб.</p>
     </div>
     <!-- freq -->
-    <p class="dim law-freq" data-tasks="6">Частота на цьому сайті, а не на НМТ: на цій сторінці 6 задач тренажера, і вони спираються на такі закони: Об'єм: призма - S·h, піраміда - третина - 4, Бічна поверхня - периметр основи на висоту - 1, Діагональ прямокутного паралелепіпеда - 1, Об'єми подібних тіл - 1. У реальних варіантах НМТ 2024-2026 цей блок потрібен у 8 завданнях з 132: Бічна поверхня - периметр основи на висоту - 5, Об'єм: призма - S·h, піраміда - третина - 5, Діагональ прямокутного паралелепіпеда - 1.</p>
+    <p class="dim law-freq" data-tasks="7">Частота на цьому сайті, а не на НМТ: на цій сторінці 7 задач тренажера, і вони спираються на такі закони: Об'єм: призма - S·h, піраміда - третина - 4, Бічна поверхня - периметр основи на висоту - 1, Діагональ прямокутного паралелепіпеда - 1, Об'єми подібних тіл - 1, Ознаки паралельності й перпендикулярності в просторі - 1. У реальних варіантах НМТ 2024-2026 цей блок потрібен у 14 завданнях з 132: Бічна поверхня - периметр основи на висоту - 8, Об'єм: призма - S·h, піраміда - третина - 5, Ознаки паралельності й перпендикулярності в просторі - 3, Діагональ прямокутного паралелепіпеда - 1.</p>
     <!-- /freq -->
     <p>Ти знаєш цей блок, якщо:</p>
     <ol>
