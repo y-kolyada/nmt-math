@@ -92,7 +92,7 @@
 
   <main id="main">
     <h1>Відношення, пропорція, відсоток</h1>
-    <p class="page-size" data-words="1554">Слів: 1554</p>
+    <p class="page-size" data-words="1630">Слів: 1630</p>
     <p class="lead">Частина від цілого і сталий добуток: два закони, які стоять за відсотками,
     сумішами, швидкістю відтворення і знижками. Один закон, три запитання до нього і одна межа. На цій межі у 2026 році
     втратили бал чотири учасники НМТ з п'яти: задачу на відсотки правильно розв'язали 20,4 %.</p>
@@ -310,6 +310,37 @@
       Три запитання, одна пара чисел, але ціле щоразу інше: у першому і третьому - 100, у другому - 80.</div>
     </div>
 
+    <div class="task" data-kind="choice" data-answer="В" data-limit="" data-claim="02-task-pie">
+      <p class="task-kind">Вибір однієї відповіді з п'яти · 1 бал</p>
+      <p>40 учнів назвали улюблену гру: 10 - футбол, 14 - баскетбол, 16 - волейбол. Яким буде кут сектора «баскетбол» на круговій діаграмі цих даних?</p>
+      <!-- fig:02-task-pie -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 190" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Кругова діаграма: 40 учнів за улюбленою грою - футбол 10, баскетбол 14, волейбол 16. Сектор баскетболу виділено кольором, його кут позначено знаком питання.">
+        <path d="M 88.0 95.0 L 88.0 17.0 A 78.0 78.0 0 0 0 10.0 95.0 Z" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.4"/>
+        <rect x="180.0" y="51.0" width="12.0" height="12.0" rx="2" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.2"/>
+        <text x="198.0" y="62.0" fill="currentColor" font-size="13" opacity="1.0">футбол - 10</text>
+        <path d="M 88.0 95.0 L 10.0 95.0 A 78.0 78.0 0 0 0 133.8 158.1 Z" fill="currentColor" fill-opacity="0.45" stroke="currentColor" stroke-width="1.4" style="fill:var(--acc)"/>
+        <text x="68.0" y="140.2" fill="currentColor" font-size="16" opacity="1.0" text-anchor="middle" font-weight="700">?</text>
+        <rect x="180.0" y="81.0" width="12.0" height="12.0" rx="2" fill="currentColor" fill-opacity="0.45" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="198.0" y="92.0" fill="currentColor" font-size="13" opacity="1.0">баскетбол - 14</text>
+        <path d="M 88.0 95.0 L 133.8 158.1 A 78.0 78.0 0 0 0 88.0 17.0 Z" fill="currentColor" fill-opacity="0.28" stroke="currentColor" stroke-width="1.4"/>
+        <rect x="180.0" y="111.0" width="12.0" height="12.0" rx="2" fill="currentColor" fill-opacity="0.28" stroke="currentColor" stroke-width="1.2"/>
+        <text x="198.0" y="122.0" fill="currentColor" font-size="13" opacity="1.0">волейбол - 16</text>
+      </svg>
+      <p class="dim">Рисунок 6. До задачі: кругова діаграма, у якій сектор - частка цілого.</p>
+    </div>
+    <!-- /fig:02-task-pie -->
+      <div class="opts">
+        <button type="button" data-opt="А">А · 90°</button>
+        <button type="button" data-opt="Б">Б · 108°</button>
+        <button type="button" data-opt="В">В · 126°</button>
+        <button type="button" data-opt="Г">Г · 140°</button>
+        <button type="button" data-opt="Д">Д · 144°</button>
+      </div>
+      <p class="law-ref">Наслідок: <a href="#cor-diagram">діаграма читається законом частини</a>.</p>
+      <div class="solution">Сектор - та сама частка від 360°, що й частина від цілого: <span class="math" data-tex="\frac{14}{40} \cdot 360^\circ = 126^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>14</mn></mrow><mrow><mn>40</mn></mrow></mfrac><mo>&#x000B7;</mo><msup><mn>360</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><msup><mn>126</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">\frac{14}{40} \cdot 360^\circ = 126^\circ</annotation></semantics></math></span>. 90° - сектор футболу, 144° - волейболу.</div>
+    </div>
+
     <span class="step">Крок 6 · Зворотний хід</span>
     <h2 id="reverse">7 · Сам назви закон <a class="anchor-link" href="#reverse">#</a></h2>
     <p>Тут закон не підказаний. Спершу скажи собі, який закон працює і від якого цілого рахувати,
@@ -402,7 +433,7 @@
       відсоток, підвищити, знизити, порівняти - це один закон частини і питання «від чого».</p>
     </div>
     <!-- freq -->
-    <p class="dim law-freq" data-tasks="7">Частота на цьому сайті, а не на НМТ: на цій сторінці 7 задач тренажера, і вони спираються на такі закони: Закон зміни - 3, Закон частини - 3, Обернена пропорційність: добуток сталий - 2. У реальних варіантах НМТ 2024-2026 цей блок потрібен у 12 завданнях з 132: Закон частини - 7, Основна властивість пропорції - 3, Закон зміни - 2, Обернена пропорційність: добуток сталий - 1.</p>
+    <p class="dim law-freq" data-tasks="8">Частота на цьому сайті, а не на НМТ: на цій сторінці 8 задач тренажера, і вони спираються на такі закони: Закон частини - 4, Закон зміни - 3, Обернена пропорційність: добуток сталий - 2. У реальних варіантах НМТ 2024-2026 цей блок потрібен у 12 завданнях з 132: Закон частини - 7, Основна властивість пропорції - 3, Закон зміни - 2, Обернена пропорційність: добуток сталий - 1.</p>
     <!-- /freq -->
     <p>Перевір себе трьома запитаннями. Ти знаєш цей закон, якщо:</p>
     <ol>

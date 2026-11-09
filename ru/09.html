@@ -92,7 +92,7 @@
 
   <main id="main">
     <h1>Комбинаторика, вероятность, статистика</h1>
-    <p class="page-size" data-words="1158">Слов: 1158</p>
+    <p class="page-size" data-words="1229">Слов: 1229</p>
     <p class="lead">Счёт, применённый не к предметам, а к вариантам. Вероятность - тот же счёт: сколько
     вариантов благоприятных среди всех равновозможных.</p>
 
@@ -170,7 +170,7 @@
         <text x="70.0" y="192.0" fill="currentColor" font-size="12" opacity="0.7" text-anchor="middle">1-й бросок</text>
         <text x="186.0" y="192.0" fill="currentColor" font-size="12" opacity="0.7" text-anchor="middle">2-й бросок</text>
       </svg>
-      <p class="dim">Рисунок 20. Правило произведения как дерево: 2 · 2 = 4 равновозможных исхода.</p>
+      <p class="dim">Рисунок 27. Правило произведения как дерево: 2 · 2 = 4 равновозможных исхода.</p>
     </div>
     <!-- /fig:09-tree -->
     <p><strong>Сочетания.</strong> Каждую неупорядоченную группу из k элементов можно упорядочить <span class="math" data-tex="k!"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>k</mi><mo>&#x00021;</mo></mrow><annotation encoding="application/x-tex">k!</annotation></semantics></math></span> способами, и все
@@ -278,7 +278,7 @@
         <text x="170.0" y="14.0" fill="currentColor" font-size="12" opacity="0.7" text-anchor="middle">2-й</text>
         <text x="14.0" y="130.0" fill="currentColor" font-size="12" opacity="0.7">1-й</text>
       </svg>
-      <p class="dim">Рисунок 21. Равновозможны 36 пар граней, а не 11 сумм: сумма 7 занимает 6 клеток из 36.</p>
+      <p class="dim">Рисунок 28. Равновозможны 36 пар граней, а не 11 сумм: сумма 7 занимает 6 клеток из 36.</p>
     </div>
     <!-- /fig:09-dice -->
     <div class="limit" id="limit-median">
@@ -341,6 +341,42 @@
       <p class="law-ref">Понятие: <a href="#concept">характеристики ряда данных</a>.</p>
       <div class="solution">Среднее <span class="math" data-tex="\frac{20}{5} = 4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>20</mn></mrow><mrow><mn>5</mn></mrow></mfrac><mo>&#x0003D;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">\frac{20}{5} = 4</annotation></semantics></math></span>; медиана - третье из пяти, 3; размах
       <span class="math" data-tex="7 - 2 = 5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>7</mn><mo>&#x02212;</mo><mn>2</mn><mo>&#x0003D;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">7 - 2 = 5</annotation></semantics></math></span>. Мода здесь тоже 3, но её не спрашивали.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="0,5" data-limit="" data-claim="09-task-spinner">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Рулетка разделена на 8 одинаковых секторов с номерами 1, 2, …, 8. Стрелку крутят один раз. Найдите вероятность того, что она остановится на секторе с простым числом.</p>
+      <!-- fig:09-task-spinner -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 210" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Круг-рулетка, разделённый на 8 одинаковых секторов с номерами от 1 до 8. Стрелка в центре останавливается наугад на одном из секторов.">
+        <circle cx="160.0" cy="105.0" r="92.0" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-width="1.8"/>
+        <line x1="160.0" y1="105.0" x2="160.0" y2="13.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <text x="185.3" y="49.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-weight="700">1</text>
+        <line x1="160.0" y1="105.0" x2="225.1" y2="39.9" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <text x="221.0" y="84.7" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-weight="700">2</text>
+        <line x1="160.0" y1="105.0" x2="252.0" y2="105.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <text x="221.0" y="135.3" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-weight="700">3</text>
+        <line x1="160.0" y1="105.0" x2="225.1" y2="170.1" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <text x="185.3" y="171.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-weight="700">4</text>
+        <line x1="160.0" y1="105.0" x2="160.0" y2="197.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <text x="134.7" y="171.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-weight="700">5</text>
+        <line x1="160.0" y1="105.0" x2="94.9" y2="170.1" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <text x="99.0" y="135.3" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-weight="700">6</text>
+        <line x1="160.0" y1="105.0" x2="68.0" y2="105.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <text x="99.0" y="84.7" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-weight="700">7</text>
+        <line x1="160.0" y1="105.0" x2="94.9" y2="39.9" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <text x="134.7" y="49.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-weight="700">8</text>
+        <line x1="160.0" y1="105.0" x2="202.8" y2="115.3" stroke="currentColor" stroke-width="2.6" opacity="1.0" style="stroke:var(--acc)"/>
+        <polygon points="202.8,115.3 193.9,116.7 195.5,109.9" fill="currentColor" style="fill:var(--acc)"/>
+        <circle cx="160.0" cy="105.0" r="5" fill="currentColor" style="fill:var(--acc)"/>
+      </svg>
+      <p class="dim">Рисунок 29. К задаче: рулетка из восьми равных секторов.</p>
+    </div>
+    <!-- /fig:09-task-spinner -->
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-probability">классическая вероятность</a>.</p>
+      <div class="solution">Равновозможных исходов 8, благоприятных 4: простые числа 2, 3, 5, 7 (1 не является простым). P = 4 : 8 = 0,5.</div>
     </div>
 
     <span class="step">Шаг 6 · Обратный ход</span>
@@ -413,7 +449,7 @@
       порядок» выбирает между ними. Вероятность - это счёт, но только среди равновозможных исходов.</p>
     </div>
     <!-- freq -->
-    <p class="dim law-freq" data-tasks="6">Частота на этом сайте, а не на НМТ: на этой странице 6 задач тренажёра, и они опираются на такие законы: Классическая вероятность - 2, Перестановки, размещения, сочетания - 2, Правило произведения - 2, Характеристики ряда данных - 1. В реальных вариантах НМТ 2024-2026 этот блок нужен в 7 заданиях из 132: Классическая вероятность - 5, Варианты, события, ряды данных - 1, Перестановки, размещения, сочетания - 1.</p>
+    <p class="dim law-freq" data-tasks="7">Частота на этом сайте, а не на НМТ: на этой странице 7 задач тренажёра, и они опираются на такие законы: Классическая вероятность - 3, Перестановки, размещения, сочетания - 2, Правило произведения - 2, Характеристики ряда данных - 1. В реальных вариантах НМТ 2024-2026 этот блок нужен в 7 заданиях из 132: Классическая вероятность - 5, Варианты, события, ряды данных - 1, Перестановки, размещения, сочетания - 1.</p>
     <!-- /freq -->
     <p>Ты знаешь этот блок, если:</p>
     <ol>
