@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Алгебраические выражения · nmt-math · ai|</title>
 <!-- meta: built by tools/build-meta.py - do not edit by hand -->
-<meta name="description" content="">
+<meta name="description" content="Законы действий из блока 1, записанные буквами сразу для всех чисел.">
 <link rel="canonical" href="https://y-kolyada.github.io/nmt-math/ru/03.html">
 <link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/03.html">
 <link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/03.html">
@@ -13,12 +13,12 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="nmt-math">
 <meta property="og:title" content="Алгебраические выражения">
-<meta property="og:description" content="">
+<meta property="og:description" content="Законы действий из блока 1, записанные буквами сразу для всех чисел.">
 <meta property="og:url" content="https://y-kolyada.github.io/nmt-math/ru/03.html">
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Алгебраические выражения","description":"","url":"https://y-kolyada.github.io/nmt-math/ru/03.html","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Алгебраические выражения","description":"Законы действий из блока 1, записанные буквами сразу для всех чисел.","url":"https://y-kolyada.github.io/nmt-math/ru/03.html","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
 <!-- /meta -->
 <link rel="stylesheet" href="../assets/style.css?v=1">
 <link rel="stylesheet" href="../assets/study.css?v=1">
@@ -91,16 +91,248 @@
 
   <main id="main">
     <h1>Алгебраические выражения</h1>
-    <p class="page-size" data-words="19">Слов: 19</p>
+    <p class="page-size" data-words="798">Слов: 798</p>
+    <p class="lead">Законы действий из блока 1, записанные буквами сразу для всех чисел. Формулы сокращённого
+    умножения не нужно заучивать: каждая из них - распределительный закон, применённый несколько раз.</p>
 
-    <div class="stub-card">
-      <h2>Русская версия готовится</h2>
-      <p>Полная рабочая версия этой страницы опубликована на украинском языке.</p>
-      <p>Открыть полную версию:</p>
-      <div class="stub-actions">
-        <a href="../uk/03.html" class="btn-primary">Алгебраические выражения →</a>
-      </div>
+    <div class="box key" id="key-idea">
+      <h2>Главная мысль страницы <a class="anchor-link" href="#key-idea" aria-label="ссылка на этот блок">#</a></h2>
+      <p>Тождественное преобразование меняет форму выражения, но не его значение. Поэтому каждый шаг должен
+      опираться на закон, а не на «так выглядит похоже». Блок умеет переписывать выражение в удобную форму: раскладывать на
+      множители, сокращать, выделять полный квадрат. Находить неизвестное он не умеет - это уравнения
+      (блок 4).</p>
     </div>
+
+    <span class="step">Шаг 0 · Зацепка</span>
+    <h2 id="hook">1 · Квадрат суммы - сумма квадратов? <a class="anchor-link" href="#hook">#</a></h2>
+    <p>Привычный слепой ход: <span class="math" data-tex="(a + b)^2 = a^2 + b^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(a + b)^2 = a^2 + b^2</annotation></semantics></math></span>. Проверим на числах:
+    <span class="math" data-tex="(1 + 2)^2 = 9"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mn>1</mn><mo>&#x0002B;</mo><mn>2</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">(1 + 2)^2 = 9</annotation></semantics></math></span>, а <span class="math" data-tex="1^2 + 2^2 = 5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>1</mn><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mn>2</mn><mn>2</mn></msup><mo>&#x0003D;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">1^2 + 2^2 = 5</annotation></semantics></math></span>. Разница
+    4 - это именно то слагаемое <span class="math" data-tex="2ab = 2 \cdot 1 \cdot 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>2</mn><mi>a</mi><mi>b</mi><mo>&#x0003D;</mo><mn>2</mn><mo>&#x000B7;</mo><mn>1</mn><mo>&#x000B7;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2ab = 2 \cdot 1 \cdot 2</annotation></semantics></math></span>, которое слепой ход потерял.</p>
+    <p>Вторая зацепка: верно ли, что <span class="math" data-tex="\frac{x^2 - 4}{x - 2} = x + 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>4</mn></mrow><mrow><mi>x</mi><mo>&#x02212;</mo><mn>2</mn></mrow></mfrac><mo>&#x0003D;</mo><mi>x</mi><mo>&#x0002B;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\frac{x^2 - 4}{x - 2} = x + 2</annotation></semantics></math></span>?
+    При <span class="math" data-tex="x = 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x = 2</annotation></semantics></math></span> левая часть не имеет смысла, а правая равна 4. Равенство верно
+    везде, кроме одной точки, и эта точка часто и есть ответ в задаче.</p>
+
+    <span class="step">Шаг 1 · Понятие</span>
+    <h2 id="concept">2 · Выражение, тождество, ОДЗ <a class="anchor-link" href="#concept">#</a></h2>
+    <ul>
+      <li><strong>Выражение</strong> - запись из чисел, букв и знаков действий. <strong>Одночлен</strong> - произведение чисел и
+      степеней букв; <strong>многочлен</strong> - сумма одночленов.</li>
+      <li><strong>Тождество</strong> - равенство, верное при всех допустимых значениях букв.
+      <strong>Тождественное преобразование</strong> - замена выражения на тождественно равное.</li>
+      <li><strong>Область допустимых значений (ОДЗ)</strong> - те значения букв, при которых выражение имеет смысл. Для
+      дроби это все значения, при которых знаменатель не равен нулю.</li>
+    </ul>
+
+    <span class="step">Шаг 2 · Закон</span>
+    <h2 id="law">3 · Формулы сокращённого умножения и дроби <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-square">
+      <p class="law-name">Квадрат суммы и разности</p>
+      <div class="math-block" data-tex="(a \pm b)^2 = a^2 \pm 2ab + b^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mi>&#x000B1;</mi><mi>b</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mi>&#x000B1;</mi><mn>2</mn><mi>a</mi><mi>b</mi><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(a \pm b)^2 = a^2 \pm 2ab + b^2</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-diff">
+      <p class="law-name">Разность квадратов</p>
+      <div class="math-block" data-tex="a^2 - b^2 = (a - b)(a + b)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>&#x02212;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x02212;</mo><mi>b</mi><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">a^2 - b^2 = (a - b)(a + b)</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-cubes">
+      <p class="law-name">Сумма и разность кубов</p>
+      <div class="math-block" data-tex="a^3 \pm b^3 = (a \pm b)(a^2 \mp ab + b^2)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>a</mi><mn>3</mn></msup><mi>&#x000B1;</mi><msup><mi>b</mi><mn>3</mn></msup><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>a</mi><mi>&#x000B1;</mi><mi>b</mi><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x02213;</mo><mi>a</mi><mi>b</mi><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">a^3 \pm b^3 = (a \pm b)(a^2 \mp ab + b^2)</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-fraction">
+      <p class="law-name">Основное свойство дроби</p>
+      <div class="math-block" data-tex="\frac{a}{b} = \frac{ac}{bc}, \quad b \neq 0,\ c \neq 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mi>a</mi><mi>c</mi></mrow><mrow><mi>b</mi><mi>c</mi></mrow></mfrac><mo>&#x0002C;</mo><mspace width="1em" /><mi>b</mi><mo>&#x02260;</mo><mn>0</mn><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><mi>c</mi><mo>&#x02260;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\frac{a}{b} = \frac{ac}{bc}, \quad b \neq 0,\ c \neq 0</annotation></semantics></math></div>
+      <p>Числитель и знаменатель можно умножить или разделить на один и тот же ненулевой <strong>множитель</strong>.</p>
+    </div>
+
+    <span class="step">Шаг 3 · Почему так</span>
+    <h2 id="why">4 · Всё это - распределительный закон <a class="anchor-link" href="#why">#</a></h2>
+    <div class="math-block" data-tex="(a + b)^2 = (a + b)(a + b) = a^2 + ab + ba + b^2 = a^2 + 2ab + b^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mi>a</mi><mi>b</mi><mo>&#x0002B;</mo><mi>b</mi><mi>a</mi><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mn>2</mn><mi>a</mi><mi>b</mi><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(a + b)^2 = (a + b)(a + b) = a^2 + ab + ba + b^2 = a^2 + 2ab + b^2</annotation></semantics></math></div>
+    <p>Геометрически: квадрат со стороной a + b состоит из квадрата a², квадрата b² и двух прямоугольников ab.
+    Слепой ход теряет именно эти два прямоугольника.</p>
+    <!-- fig:03-square -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 220" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Квадрат со стороной a + b разрезан на четыре части: квадрат a², квадрат b² и два одинаковых прямоугольника ab. Слепой ход «a² + b²» теряет именно два прямоугольника.">
+        <rect x="70.0" y="10.0" width="110.0" height="110.0" rx="0" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.2"/>
+        <rect x="180.0" y="10.0" width="70.0" height="110.0" rx="0" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <rect x="70.0" y="120.0" width="110.0" height="70.0" rx="0" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <rect x="180.0" y="120.0" width="70.0" height="70.0" rx="0" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.2"/>
+        <text x="125.0" y="71.0" fill="currentColor" font-size="18" opacity="1.0" text-anchor="middle" font-style="italic">a²</text>
+        <text x="215.0" y="71.0" fill="currentColor" font-size="16" opacity="1.0" text-anchor="middle" font-style="italic">ab</text>
+        <text x="125.0" y="161.0" fill="currentColor" font-size="16" opacity="1.0" text-anchor="middle" font-style="italic">ab</text>
+        <text x="215.0" y="161.0" fill="currentColor" font-size="16" opacity="1.0" text-anchor="middle" font-style="italic">b²</text>
+        <text x="60.0" y="70.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="end" font-style="italic">a</text>
+        <text x="60.0" y="160.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="end" font-style="italic">b</text>
+        <text x="125.0" y="210.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-style="italic">a</text>
+        <text x="215.0" y="210.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-style="italic">b</text>
+      </svg>
+      <p class="dim">Рисунок 6. Квадрат суммы: два прямоугольника ab, которые теряет слепой ход.</p>
+    </div>
+    <!-- /fig:03-square -->
+    <div class="math-block" data-tex="(a - b)(a + b) = a^2 + ab - ab - b^2 = a^2 - b^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x02212;</mo><mi>b</mi><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mi>a</mi><mi>b</mi><mo>&#x02212;</mo><mi>a</mi><mi>b</mi><mo>&#x02212;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x02212;</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(a - b)(a + b) = a^2 + ab - ab - b^2 = a^2 - b^2</annotation></semantics></math></div>
+    <p>Здесь средние слагаемые уничтожают друг друга. Формулы кубов проверяются так же - перемножьте правую часть.</p>
+    <p>Основное свойство дроби - это умножение на единицу:</p>
+    <div class="math-block" data-tex="\frac{ac}{bc} = \frac{a}{b} \cdot \frac{c}{c} = \frac{a}{b} \cdot 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mi>a</mi><mi>c</mi></mrow><mrow><mi>b</mi><mi>c</mi></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></mfrac><mo>&#x000B7;</mo><mfrac><mrow><mi>c</mi></mrow><mrow><mi>c</mi></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></mfrac><mo>&#x000B7;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\frac{ac}{bc} = \frac{a}{b} \cdot \frac{c}{c} = \frac{a}{b} \cdot 1</annotation></semantics></math></div>
+    <p>Поэтому сокращать можно только общий <strong>множитель</strong>: только он даёт дробь <span class="math" data-tex="\frac{c}{c} = 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mi>c</mi></mrow><mrow><mi>c</mi></mrow></mfrac><mo>&#x0003D;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\frac{c}{c} = 1</annotation></semantics></math></span>.</p>
+
+    <span class="step">Шаг 4 · Границы</span>
+    <h2 id="limits">5 · Где преобразования ломаются <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-cancel">
+      <p><strong>Сокращают множители, а не слагаемые.</strong> <span class="math" data-tex="\frac{x + 5}{x + 10} \neq \frac{5}{10}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mi>x</mi><mo>&#x0002B;</mo><mn>5</mn></mrow><mrow><mi>x</mi><mo>&#x0002B;</mo><mn>10</mn></mrow></mfrac><mo>&#x02260;</mo><mfrac><mrow><mn>5</mn></mrow><mrow><mn>10</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{x + 5}{x + 10} \neq \frac{5}{10}</annotation></semantics></math></span>:
+      при <span class="math" data-tex="x = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x = 0</annotation></semantics></math></span> равенство ещё похоже на правду, а при
+      <span class="math" data-tex="x = 10"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">x = 10</annotation></semantics></math></span> слева <span class="math" data-tex="\frac{15}{20} = \frac{3}{4}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>15</mn></mrow><mrow><mn>20</mn></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>4</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{15}{20} = \frac{3}{4}</annotation></semantics></math></span>.
+      Сначала разложи на множители, потом сокращай.</p>
+    </div>
+    <div class="limit" id="limit-domain">
+      <p><strong>Сокращение расширяет ОДЗ.</strong> После сокращения
+      <span class="math" data-tex="\frac{x^2 - 4}{x - 2} = x + 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>4</mn></mrow><mrow><mi>x</mi><mo>&#x02212;</mo><mn>2</mn></mrow></mfrac><mo>&#x0003D;</mo><mi>x</mi><mo>&#x0002B;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\frac{x^2 - 4}{x - 2} = x + 2</annotation></semantics></math></span> правая часть определена при
+      <span class="math" data-tex="x = 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x = 2</annotation></semantics></math></span>, а левая - нет. Честная запись: равенство верно при
+      <span class="math" data-tex="x \neq 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x02260;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x \neq 2</annotation></semantics></math></span>.</p>
+    </div>
+    <div class="limit" id="limit-sign">
+      <p><strong>Чётная степень глотает знак, нечётная - нет.</strong>
+      <span class="math" data-tex="(a - b)^2 = (b - a)^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x02212;</mo><mi>b</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>b</mi><mo>&#x02212;</mo><mi>a</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(a - b)^2 = (b - a)^2</annotation></semantics></math></span>, но
+      <span class="math" data-tex="(a - b)^3 = -(b - a)^3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x02212;</mo><mi>b</mi><msup><mo stretchy="false">&#x00029;</mo><mn>3</mn></msup><mo>&#x0003D;</mo><mo>&#x02212;</mo><mo stretchy="false">&#x00028;</mo><mi>b</mi><mo>&#x02212;</mo><mi>a</mi><msup><mo stretchy="false">&#x00029;</mo><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">(a - b)^3 = -(b - a)^3</annotation></semantics></math></span>.</p>
+    </div>
+
+    <span class="step">Шаг 5 · Применение</span>
+    <h2 id="apply">6 · Задачи в форме НМТ <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="В" data-limit="">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p>Разложите на множители <span class="math" data-tex="x^2 - 9"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">x^2 - 9</annotation></semantics></math></span>.</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · (x − 3)²</button>
+        <button type="button" data-opt="Б">Б · (x − 9)(x + 1)</button>
+        <button type="button" data-opt="В">В · (x − 3)(x + 3)</button>
+        <button type="button" data-opt="Г">Г · (x − 9)(x + 9)</button>
+        <button type="button" data-opt="Д">Д · x(x − 9)</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#law-diff">разность квадратов</a>.</p>
+      <div class="solution"><span class="math" data-tex="x^2 - 3^2 = (x - 3)(x + 3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><msup><mn>3</mn><mn>2</mn></msup><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mn>3</mn><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002B;</mo><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">x^2 - 3^2 = (x - 3)(x + 3)</annotation></semantics></math></span>.
+      Вариант Г забывает, что 9 - это уже квадрат, а не число под квадратом.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="400" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Вычислите <span class="math" data-tex="101^2 - 99^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>101</mn><mn>2</mn></msup><mo>&#x02212;</mo><msup><mn>99</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">101^2 - 99^2</annotation></semantics></math></span>.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-diff">разность квадратов</a>.</p>
+      <div class="solution"><span class="math" data-tex="(101 - 99)(101 + 99) = 2 \cdot 200 = 400"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mn>101</mn><mo>&#x02212;</mo><mn>99</mn><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><mn>101</mn><mo>&#x0002B;</mo><mn>99</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>2</mn><mo>&#x000B7;</mo><mn>200</mn><mo>&#x0003D;</mo><mn>400</mn></mrow><annotation encoding="application/x-tex">(101 - 99)(101 + 99) = 2 \cdot 200 = 400</annotation></semantics></math></span>.
+      Без закона - два пятизначных квадрата и вычитание; с законом - устный счёт.</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="А" data-limit="limit-domain">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p>Упростите выражение <span class="math" data-tex="\frac{x^2 - 4x + 4}{x - 2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>4</mn><mi>x</mi><mo>&#x0002B;</mo><mn>4</mn></mrow><mrow><mi>x</mi><mo>&#x02212;</mo><mn>2</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{x^2 - 4x + 4}{x - 2}</annotation></semantics></math></span>.</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · x − 2</button>
+        <button type="button" data-opt="Б">Б · x + 2</button>
+        <button type="button" data-opt="В">В · x − 4</button>
+        <button type="button" data-opt="Г">Г · 1/(x − 2)</button>
+        <button type="button" data-opt="Д">Д · x² − 4</button>
+      </div>
+      <p class="law-ref">Законы: <a href="#law-square">квадрат разности</a> и <a href="#law-fraction">основное свойство дроби</a>.</p>
+      <div class="solution">Числитель - это <span class="math" data-tex="(x - 2)^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mn>2</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(x - 2)^2</annotation></semantics></math></span>. Сокращаем на множитель
+      <span class="math" data-tex="x - 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x02212;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x - 2</annotation></semantics></math></span>: результат <span class="math" data-tex="x - 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x02212;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x - 2</annotation></semantics></math></span> при
+      <span class="math" data-tex="x \neq 2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x02260;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x \neq 2</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="match" data-answer="Б В А" data-limit="">
+      <p class="task-kind">Установление соответствия · 3 балла</p>
+      <p>К каждому выражению (1-3) подберите тождественно равный ему многочлен (А-Д).</p>
+      <ul class="pairs">
+        <li><label>1. <span class="math" data-tex="(a + 3)^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mn>3</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(a + 3)^2</annotation></semantics></math></span>
+          <select aria-label="Ответ к выражению 1"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+        <li><label>2. <span class="math" data-tex="(a - 3)^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x02212;</mo><mn>3</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(a - 3)^2</annotation></semantics></math></span>
+          <select aria-label="Ответ к выражению 2"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+        <li><label>3. <span class="math" data-tex="(a - 3)(a + 3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x02212;</mo><mn>3</mn><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(a - 3)(a + 3)</annotation></semantics></math></span>
+          <select aria-label="Ответ к выражению 3"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+      </ul>
+      <p>А · a² − 9 &nbsp; Б · a² + 6a + 9 &nbsp; В · a² − 6a + 9 &nbsp; Г · a² + 9 &nbsp; Д · a² − 6a − 9</p>
+      <p><button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Законы: <a href="#law-square">квадрат суммы и разности</a>, <a href="#law-diff">разность квадратов</a>.</p>
+      <div class="solution">Г - слепой ход из зацепки, Д - квадрат разности с потерянным знаком последнего слагаемого:
+      <span class="math" data-tex="(-3)^2 = +9"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mn>3</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><mo>&#x0002B;</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">(-3)^2 = +9</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="29" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Известно, что <span class="math" data-tex="a + b = 7"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><mo>&#x0003D;</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">a + b = 7</annotation></semantics></math></span> и <span class="math" data-tex="ab = 10"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mi>b</mi><mo>&#x0003D;</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">ab = 10</annotation></semantics></math></span>.
+      Найдите <span class="math" data-tex="a^2 + b^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">a^2 + b^2</annotation></semantics></math></span>.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-square">квадрат суммы</a>, прочитанный наоборот.</p>
+      <div class="solution"><span class="math" data-tex="a^2 + b^2 = (a + b)^2 - 2ab = 49 - 20 = 29"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x02212;</mo><mn>2</mn><mi>a</mi><mi>b</mi><mo>&#x0003D;</mo><mn>49</mn><mo>&#x02212;</mo><mn>20</mn><mo>&#x0003D;</mo><mn>29</mn></mrow><annotation encoding="application/x-tex">a^2 + b^2 = (a + b)^2 - 2ab = 49 - 20 = 29</annotation></semantics></math></span>.
+      Сами a и b искать не нужно (это 2 и 5): закон даёт ответ без них.</div>
+    </div>
+
+    <span class="step">Шаг 6 · Обратный ход</span>
+    <h2 id="reverse">7 · Назови закон сам <a class="anchor-link" href="#reverse">#</a></h2>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="3" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Вычислите <span class="math" data-tex="(\sqrt{7} - 2)(\sqrt{7} + 2)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><msqrt><mrow><mn>7</mn></mrow></msqrt><mo>&#x02212;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><msqrt><mrow><mn>7</mn></mrow></msqrt><mo>&#x0002B;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(\sqrt{7} - 2)(\sqrt{7} + 2)</annotation></semantics></math></span>.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-diff">разность квадратов</a>.</p>
+      <div class="solution"><span class="math" data-tex="(\sqrt{7})^2 - 2^2 = 7 - 4 = 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><msqrt><mrow><mn>7</mn></mrow></msqrt><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x02212;</mo><msup><mn>2</mn><mn>2</mn></msup><mo>&#x0003D;</mo><mn>7</mn><mo>&#x02212;</mo><mn>4</mn><mo>&#x0003D;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">(\sqrt{7})^2 - 2^2 = 7 - 4 = 3</annotation></semantics></math></span>. Так
+      избавляются от иррациональности в знаменателе: умножают на «сопряжённое» выражение.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="8,5" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Найдите значение выражения <span class="math" data-tex="\frac{a^3 + 8}{a^2 - 2a + 4}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><msup><mi>a</mi><mn>3</mn></msup><mo>&#x0002B;</mo><mn>8</mn></mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>2</mn><mi>a</mi><mo>&#x0002B;</mo><mn>4</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{a^3 + 8}{a^2 - 2a + 4}</annotation></semantics></math></span>
+      при <span class="math" data-tex="a = 6\text{,}5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mo>&#x0003D;</mo><mn>6</mn><mtext>,</mtext><mn>5</mn></mrow><annotation encoding="application/x-tex">a = 6\text{,}5</annotation></semantics></math></span>.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-cubes">сумма кубов</a>.</p>
+      <div class="solution"><span class="math" data-tex="a^3 + 2^3 = (a + 2)(a^2 - 2a + 4)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>a</mi><mn>3</mn></msup><mo>&#x0002B;</mo><msup><mn>2</mn><mn>3</mn></msup><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>2</mn><mi>a</mi><mo>&#x0002B;</mo><mn>4</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">a^3 + 2^3 = (a + 2)(a^2 - 2a + 4)</annotation></semantics></math></span>, поэтому дробь
+      равна <span class="math" data-tex="a + 2 = 8\text{,}5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mo>&#x0002B;</mo><mn>2</mn><mo>&#x0003D;</mo><mn>8</mn><mtext>,</mtext><mn>5</mn></mrow><annotation encoding="application/x-tex">a + 2 = 8\text{,}5</annotation></semantics></math></span>. Подставлять 6,5 в куб - долгая дорога к тому же.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="4" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Найдите наименьшее значение выражения <span class="math" data-tex="x^2 + 6x + 13"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mn>6</mn><mi>x</mi><mo>&#x0002B;</mo><mn>13</mn></mrow><annotation encoding="application/x-tex">x^2 + 6x + 13</annotation></semantics></math></span>.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-square">квадрат суммы</a>: выделение полного квадрата.</p>
+      <div class="solution"><span class="math" data-tex="x^2 + 6x + 13 = (x + 3)^2 + 4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mn>6</mn><mi>x</mi><mo>&#x0002B;</mo><mn>13</mn><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002B;</mo><mn>3</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0002B;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">x^2 + 6x + 13 = (x + 3)^2 + 4</annotation></semantics></math></span>. Квадрат не
+      бывает отрицательным, поэтому наименьшее значение 4 достигается при <span class="math" data-tex="x = -3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">x = -3</annotation></semantics></math></span>.</div>
+    </div>
+
+    <h2 id="error">8 · Найди ошибку в чужом решении <a class="anchor-link" href="#error">#</a></h2>
+    <p>Игорь упрощает: «<span class="math" data-tex="\frac{x + 5}{x + 10} = \frac{5}{10} = \frac{1}{2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mi>x</mi><mo>&#x0002B;</mo><mn>5</mn></mrow><mrow><mi>x</mi><mo>&#x0002B;</mo><mn>10</mn></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mn>5</mn></mrow><mrow><mn>10</mn></mrow></mfrac><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{x + 5}{x + 10} = \frac{5}{10} = \frac{1}{2}</annotation></semantics></math></span>,
+    потому что x в числителе и знаменателе сокращается».</p>
+    <details>
+      <summary>Где ошибка?</summary>
+      <p>x здесь - слагаемое, а не множитель. Сокращать можно только общий множитель числителя и знаменателя
+      (<a href="#limit-cancel">первая граница</a>). Эта дробь не упрощается вообще.</p>
+    </details>
+
+    <h2 id="artifacts">Что у тебя есть после этой страницы <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>Семь формул как один закон.</strong> Формулы сокращённого умножения - это распределительный закон, и любую из
+      них можно вывести за полминуты. А сокращение дроби - это умножение на единицу, поэтому сокращается только
+      множитель.</p>
+    </div>
+    <!-- freq -->
+    <p class="dim law-freq" data-tasks="8">Частота на этом сайте, а не на НМТ: на этой странице 8 задач тренажёра, и они опираются на такие законы: Квадрат суммы и разности - 4, Разность квадратов - 4, Основное свойство дроби - 1, Сумма и разность кубов - 1.</p>
+    <!-- /freq -->
+    <p>Ты знаешь этот блок, если:</p>
+    <ol>
+      <li>решаешь 8 из 10 задач на разложение и сокращение без подсказки;</li>
+      <li>можешь объяснить вслух, откуда в квадрате суммы берётся <span class="math" data-tex="2ab"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>2</mn><mi>a</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">2ab</annotation></semantics></math></span>;</li>
+      <li>находишь ошибку в чужом решении, как у Игоря.</li>
+    </ol>
+  
+
+    <footer>
+      <nav class="pager" aria-label="Соседние темы">
+        <p class="pager-next">Следующая тема: <a href="04.html">Уравнения и неравенства</a></p>
+        <p class="pager-prev">Предыдущая тема: <a href="02.html">Отношение, пропорция, процент</a></p>
+      </nav>
+      <p class="footer-note">Сайт серии AI Factory. Сделан той же оснасткой, что и остальные: обычный HTML и CSS, проверка на bash, публикация через GitHub Pages.</p>
+    </footer>
   </main>
 
 </div>
