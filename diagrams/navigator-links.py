@@ -8,7 +8,7 @@ NAMES = {
     'ru': {1: 'Число', 2: 'Процент', 3: 'Алгебра', 4: 'Корни', 5: 'Функция', 6: 'Степень', 7: 'sin, cos',
            8: 'Скорость', 9: 'Счёт', 10: 'Фигуры', 11: 'Площади', 12: 'Векторы', 13: 'Объёмы'},
     'en': {1: 'Number', 2: 'Percent', 3: 'Algebra', 4: 'Equations', 5: 'Function', 6: 'Power', 7: 'sin, cos', 8: 'Derivative', 9: 'Counting', 10: 'Figures', 11: 'Measure', 12: 'Vectors', 13: 'Space'},
-    'de': {1: 'Zahl', 2: 'Prozent', 3: 'Algebra', 4: 'Gleichungen', 5: 'Funktion', 6: 'Potenz', 7: 'sin, cos', 8: 'Ableitung', 9: 'Zählen', 10: 'Figuren', 11: 'Messen', 12: 'Vektoren', 13: 'Raum'},
+    'de': {1: 'Zahl', 2: 'Prozent', 3: 'Algebra', 4: 'Gleichung', 5: 'Funktion', 6: 'Potenz', 7: 'sin, cos', 8: 'Ableitung', 9: 'Zählen', 10: 'Figuren', 11: 'Messen', 12: 'Vektoren', 13: 'Raum'},
 }
 TEXT = {
     'uk': ('Граф тринадцяти блоків: стрілка веде від блоку до того, що з нього виростає. Число веде до відсотка, виразів, рівнянь, функції і похідної; вирази і функція - до степеня й логарифма; число - до лічби варіантів. Фігури ведуть до тригонометрії, вимірювань, простору, а вимірювання і рівняння - до координат і векторів.',
