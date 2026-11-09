@@ -47,3 +47,7 @@ details[open] summary { margin-bottom: 6px; }
 /* Группа блоков в меню: подпись, а не пункт (check-struct считает только <li>). */
 nav.contents li.group { font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em;
   color: var(--dim); margin: .5rem 0 .15rem 10px; list-style: none; }
+
+/* Thirteen blocks mean two-digit numbers in the menu; the series width of
+   1.4em fits one digit, and "10" glued itself to the block title. */
+nav.contents .num { width: 1.9em; }
