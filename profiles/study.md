@@ -103,3 +103,32 @@ Decided with the Conductor 2026-11-09.
 4. Captions read `Рисунок N.`, numbered through the language folder; the
    series rules of rule 18 (canvas 320, labels of at least 12 units,
    `currentColor`) hold for both kinds.
+
+## 7. External sources and the settings window
+
+A study site may point beyond itself, to the real exam tasks that lean on a
+block's laws. The rule is the same as in section 4: **a link, never a copy**.
+
+1. **The slice.** `site.conf slice = lessons/<file>.tsv` holds the tagged tasks
+   (year, session, number, figure, our laws, url); `tools/examslice.py` reads
+   it. The frequency line prints the second number from it
+   (`tools/build-frequency.py`), and `tools/build-sources.py` prints the section
+   "Посилання на завдання із зовнішніх джерел" before the artifacts of each block.
+   The section speaks of sources in general, because there may be several
+   platforms; what belongs to one source (its heading and lead) lives in its own
+   block `<div class="ext-source" data-ext-source="<source>">` and leaves the page
+   with its last year.
+2. **A year is a block of its own**: `<div class="ext" data-ext="<source>:<year>">`.
+   The reader switches a whole source or a single year off in the settings
+   (`assets/sources.js`, the gear in the tray); the choice is stored in
+   `localStorage swa-<site>-ext-off`, and the search (`assets/search.js`) offers
+   every year that is on as a filter of its own and does not search the years
+   that are off.
+3. **The look is the site's own.** The settings window repeats the search
+   window (frame, head, cross, backdrop, full screen on a phone); a year block
+   wears the `.box` frame; a checked box wears the accent of a pressed search
+   filter. The gear follows the Conductor's sample: six wide teeth and a hole, filled on hover. A new external source adds its texts to `build-sources.py` and `sources.js`, not a new style.
+4. **Polite collection.** Before any request to a source site the volume and the
+   rate are agreed with the Conductor; robots.txt is read first, requests go one
+   at a time, at most one per five seconds, each file once, and the run stops
+   on 429, 5xx or a disallow.
