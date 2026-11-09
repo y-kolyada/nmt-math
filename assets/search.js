@@ -239,13 +239,27 @@
     return out;
   }
 
+  // Стрелки пейджера - значки тем же пером, что лупа и воронка в шапке окна:
+  // знаки ‹ и « в мелком шрифте счётчика читались как пылинки.
+  const PG_ICON = {
+    first: 'M10 5l-5 5 5 5M15 5l-5 5 5 5',
+    prev: 'M12 5l-5 5 5 5',
+    next: 'M8 5l5 5-5 5',
+    last: 'M5 5l5 5-5 5M10 5l5 5-5 5',
+  };
+
   function pgButton(label, to, aria, current, disabled) {
     const b = document.createElement('button');
     b.type = 'button';
     b.className = 'search-pg';
-    b.textContent = label;
+    if (PG_ICON[label]) {
+      b.classList.add('search-pg-arrow');
+      b.innerHTML = '<svg class="icon" data-icon="pg-' + label + '" viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + PG_ICON[label] + '"/></svg>';
+    } else {
+      b.textContent = label;
+    }
     b.dataset.page = String(to);
-    if (aria) b.setAttribute('aria-label', aria);
+    if (aria) { b.setAttribute('aria-label', aria); b.title = aria; }
     if (current) b.setAttribute('aria-current', 'page');
     if (disabled) b.disabled = true;
     return b;
@@ -257,8 +271,8 @@
     if (pages < 2) return;
     // Края « и » - стандарт пейджера: в начало и в конец одним щелчком,
     // даже когда номер нужной страницы спрятан за многоточием.
-    pager.appendChild(pgButton('«', 0, say.first, false, pageNo === 0));
-    pager.appendChild(pgButton('‹', pageNo - 1, say.prev, false, pageNo === 0));
+    pager.appendChild(pgButton('first', 0, say.first, false, pageNo === 0));
+    pager.appendChild(pgButton('prev', pageNo - 1, say.prev, false, pageNo === 0));
     pageList(pages, pageNo).forEach((n) => {
       if (n === null) {
         const gap = document.createElement('span');
@@ -269,8 +283,8 @@
         pager.appendChild(pgButton(String(n + 1), n, '', n === pageNo, false));
       }
     });
-    pager.appendChild(pgButton('›', pageNo + 1, say.next, false, pageNo === pages - 1));
-    pager.appendChild(pgButton('»', pages - 1, say.last, false, pageNo === pages - 1));
+    pager.appendChild(pgButton('next', pageNo + 1, say.next, false, pageNo === pages - 1));
+    pager.appendChild(pgButton('last', pages - 1, say.last, false, pageNo === pages - 1));
   }
 
   function turn(to) {
