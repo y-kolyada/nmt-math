@@ -94,3 +94,18 @@ nav.contents .num { width: 1.9em; }
 @media (max-width: 56rem) {
   .settings-panel { width: 100%; max-width: none; height: 100%; max-height: 100%; margin: 0; border: none; border-radius: 0; }
 }
+
+/* Следствие закона (profiles/study.md, три уровня): стоит под своим законом,
+   рамка тоньше и уже рамки закона, вывод в 2-5 строк и ссылка на закон. */
+.corollary { border: 1px solid var(--line); border-left: 3px solid var(--acc); border-radius: 10px;
+  padding: 10px 14px; margin: -.4rem 0 1.2rem 1rem; }
+.corollary .corollary-of { font-size: .78rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+  color: var(--dim); margin: 0 0 4px; }
+.corollary .corollary-name { font-weight: 700; margin: 0 0 6px; }
+.corollary .math-block { margin: .4rem 0; }
+.corollary p:last-child { margin-bottom: 0; }
+@media (max-width: 48rem) { .corollary { margin-left: .5rem; padding: 8px 12px; } }
+
+/* Метод: схема применения законов в шаге «Застосування». */
+.method { border: 1px dashed var(--line); border-radius: 10px; padding: 10px 16px; margin: 1.2rem 0; }
+.method > h3 { margin-top: 0; }

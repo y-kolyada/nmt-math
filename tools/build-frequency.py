@@ -36,7 +36,7 @@ SAY = {
            'tasks': ('задача', 'задачі', 'задач'),
            'head': 'Частота законів на сайті',
            'intro': 'Скільки задач тренажера спирається на кожен закон. Це частота <strong>на цьому сайті</strong>, а не на НМТ: '
-                    'вона показує, як сайт тренує, а не що питає екзамен. Зріз реальних варіантів НМТ 2024-2026 стане поруч, коли буде зроблений.',
+                    'вона показує, як сайт тренує, а не що питає екзамен. Що питає екзамен, показує зріз реальних варіантів НМТ нижче, якщо він є.',
            'total': 'Усього задач тренажера: %d, законів, на які вони спираються: %d.',
            'blocks': 'За блоками',
            'top': 'Закони, на які спирається найбільше задач',
@@ -53,7 +53,7 @@ SAY = {
            'tasks': ('задача', 'задачи', 'задач'),
            'head': 'Частота законов на сайте',
            'intro': 'Сколько задач тренажёра опирается на каждый закон. Это частота <strong>на этом сайте</strong>, а не на НМТ: '
-                    'она показывает, как сайт тренирует, а не что спрашивает экзамен. Срез реальных вариантов НМТ 2024-2026 встанет рядом, когда будет сделан.',
+                    'она показывает, как сайт тренирует, а не что спрашивает экзамен. Что спрашивает экзамен, показывает срез реальных вариантов НМТ ниже, если он есть.',
            'total': 'Всего задач тренажёра: %d, законов, на которые они опираются: %d.',
            'blocks': 'По блокам',
            'top': 'Законы, на которые опирается больше всего задач',
@@ -100,6 +100,10 @@ def name_of(text, anchor, said):
     law = re.search(r'<p class="law-name">(.*?)</p>', chunk, re.S)
     if chunk.startswith('<div class="law"') and law:
         return plain(law.group(1))
+    # A corollary counts for its law: the same line, not a new law.
+    cor = re.match(r'<div class="corollary"[^>]*data-law="([^"]+)"', chunk)
+    if cor:
+        return name_of(text, cor.group(1), said)
     words = plain(said)
     return words[:1].upper() + words[1:] if words else None
 
@@ -142,11 +146,15 @@ def block_line(lang, tasks, counts):
 
 
 def exam_counts(rows, pages, lang, missing):
-    """Per block: tasks of the slice that lean on it and how often each tag does."""
+    """Per block: tasks of the slice that lean on it and how often each tag does.
+
+    A corollary is counted for its law (examslice.parent); a task that leans on
+    a law twice, once directly and once through its corollary, counts once.
+    """
     per_block, per_tag = {}, {}
     for r in rows:
         blocks = set()
-        for tag in r['tags']:
+        for tag in dict.fromkeys(examslice.parent(t, pages) for t in r['tags']):
             name = examslice.name_of(tag, pages, lang, missing)
             per_tag[(tag, name)] = per_tag.get((tag, name), 0) + 1
             where = tag.split(':')[0]
@@ -164,6 +172,10 @@ def bake(lang, check):
     say = SAY[lang]
     rows, missing = examslice.load()
     exam = exam_counts(rows, pages, lang, missing) if rows else None
+    for r in rows or []:
+        for tag in r['tags']:
+            if not tag.startswith('missing:') and not examslice.resolved(tag, pages, lang, missing):
+                unresolved.append('срез %s/%s №%s: %s' % (r['year'], r['test'], r['n'], tag))
     changed = []
     for stem, (tasks, counts) in per_page.items():
         text = pages[stem]
@@ -220,12 +232,16 @@ def bake(lang, check):
                 title = plain(re.search(r'<h1[^>]*>(.*?)</h1>', pages[stem], re.S).group(1))
                 rows.append('      <li><a href="%s.html">%s</a></li>' % (stem, html.escape(say['xitem'] % (title, n, plural(n, say['xtask'])), quote=False)))
             rows += ['    </ul>', '    <h3 id="freq-nmt-top">%s</h3>' % say['xtop'], '    <ol>']
-            known = [(name, c) for (tag, name), c in per_tag.items() if not tag.startswith('missing:')]
+            known = [(name, c) for (tag, name), c in per_tag.items()
+                     if not tag.startswith('missing:') and ':method-' not in tag]
             rows += ['      <li>%s - %d</li>' % (html.escape(n, quote=False), c) for n, c in sorted(known, key=lambda kv: (-kv[1], kv[0]))[:10]]
-            rows += ['    </ol>', '    <h3 id="freq-missing">%s</h3>' % say['xmiss'], '    <p>%s</p>' % say['xmissintro'], '    <ul>']
+            rows += ['    </ol>']
             gaps = [(name, c) for (tag, name), c in per_tag.items() if tag.startswith('missing:')]
-            rows += ['      <li>%s - %d</li>' % (html.escape(n, quote=False), c) for n, c in sorted(gaps, key=lambda kv: (-kv[1], kv[0]))]
-            rows += ['    </ul>']
+            # The list of gaps exists only while there are gaps.
+            if gaps:
+                rows += ['    <h3 id="freq-missing">%s</h3>' % say['xmiss'], '    <p>%s</p>' % say['xmissintro'], '    <ul>']
+                rows += ['      <li>%s - %d</li>' % (html.escape(n, quote=False), c) for n, c in sorted(gaps, key=lambda kv: (-kv[1], kv[0]))]
+                rows += ['    </ul>']
         rows += ['    ']
         new = SUMMARY.sub(lambda m: m.group(1) + '\n'.join(rows) + m.group(2), landing, count=1)
         if new != landing:
