@@ -14,15 +14,31 @@ TEXT = {
     'ru': ('Граф тринадцати блоков: стрелка ведёт от блока к тому, что из него вырастает. Число ведёт к проценту, выражениям, уравнениям, функции и производной; выражения и функция - к степени и логарифму; число - к счёту вариантов. Фигуры ведут к тригонометрии, измерениям, пространству, а измерения и уравнения - к координатам и векторам.',
            'Как блоки вырастают друг из друга: алгебра сверху, геометрия снизу.'),
 }
-POS = {1: (0, 0), 2: (1, 0), 3: (2, 0), 4: (3, 0), 9: (0, 1), 6: (2, 1), 5: (3, 1),
-       7: (1, 2), 8: (3, 2), 10: (0, 3), 11: (1, 3), 13: (2, 3), 12: (2, 2)}
-EDGES = [(1, 2), (2, 3), (3, 4), (4, 5), (5, 8), (3, 6), (5, 6), (1, 9), (10, 7), (10, 11), (11, 13), (11, 12)]
-BW, BH = 74, 38
+# Three columns, so an arrow has room between the boxes: 30 units across and
+# 24 down (four columns left 6 and 12, and the head of an arrow did not fit).
+# Algebra in rows 0-2, geometry in rows 3-4, with a wider gap between them.
+# 4 -> 12 runs down the empty cell under block 4: the equation of a circle is
+# an equation of block 4 (lessons/map.md section 5, the lens "links").
+POS = {1: (0, 0), 2: (1, 0), 3: (2, 0),
+       9: (0, 1), 6: (1, 1), 4: (2, 1),
+       8: (0, 2), 5: (1, 2),
+       10: (0, 3), 11: (1, 3), 12: (2, 3),
+       7: (0, 4), 13: (1, 4)}
+EDGES = [(1, 2), (2, 3), (3, 4), (4, 5), (5, 8), (3, 6), (5, 6), (1, 9),
+         (10, 7), (10, 11), (11, 12), (11, 13), (4, 12)]
+BW, BH = 84, 36
+STEP_X, STEP_Y, SPLIT = 114, 60, 10
+HEIGHT = 8 + 4 * STEP_Y + SPLIT + BH + 8
+
+
+def corner(n):
+    c, r = POS[n]
+    return 4 + c * STEP_X, 8 + r * STEP_Y + (SPLIT if r >= 3 else 0)
 
 
 def centre(n):
-    c, r = POS[n]
-    return (4 + c * 80 + BW / 2, 8 + r * 50 + BH / 2)
+    x, y = corner(n)
+    return (x + BW / 2, y + BH / 2)
 
 
 def edge_point(a, b):
@@ -34,13 +50,13 @@ def edge_point(a, b):
 
 def figure(lang):
     label, caption = TEXT[lang]
-    f = Fig(206)
+    f = Fig(HEIGHT)
     for a, b in EDGES:
         p, q = edge_point(a, b)
         f.arrow(*p, *q, w=1.1, head=6)
-    for n, (c, r) in POS.items():
-        x, y = 4 + c * 80, 8 + r * 50
+    for n in POS:
+        x, y = corner(n)
         f.rect(x, y, BW, BH, fill_op=0.14 if n >= 10 else 0.05, accent=(n >= 10))
         f.text(x + 6, y + 15, str(n), size=12, bold=True)
-        f.text(x + 6, y + 31, NAMES[lang][n], size=12)
+        f.text(x + 6, y + 30, NAMES[lang][n], size=12)
     return f, label, caption
