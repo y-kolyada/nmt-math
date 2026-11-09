@@ -10,6 +10,7 @@
           only: 'Искать только по темам или снова везде', found: 'Найдено',
           shown: 'показаны', pages: 'Страницы результатов',
           prev: 'Предыдущая страница результатов', next: 'Следующая страница результатов',
+          first: 'Первая страница результатов', last: 'Последняя страница результатов',
           kinds: { t: 'Темы', e: 'Примеры', q: 'Вопросы', n: 'Навигатор', g: 'Словарь', i: 'Витрина' } },
     en: { place: 'Search sections, glossary, and questions', none: 'Nothing found',
           empty: 'This language has no content yet', close: 'Close search',
@@ -18,6 +19,7 @@
           only: 'Search topics only, or everywhere again', found: 'Found',
           shown: 'shown', pages: 'Result pages',
           prev: 'Previous page of results', next: 'Next page of results',
+          first: 'First page of results', last: 'Last page of results',
           kinds: { t: 'Topics', e: 'Examples', q: 'Questions', n: 'Navigator', g: 'Glossary', i: 'Landing' } },
     uk: { place: 'Шукати в розділах, словнику й питаннях', none: 'Нічого не знайдено',
           empty: 'Для цієї мови зміст ще не перекладено', close: 'Закрити пошук',
@@ -26,6 +28,7 @@
           only: 'Шукати лише в темах або знову скрізь', found: 'Знайдено',
           shown: 'показано', pages: 'Сторінки результатів',
           prev: 'Попередня сторінка результатів', next: 'Наступна сторінка результатів',
+          first: 'Перша сторінка результатів', last: 'Остання сторінка результатів',
           kinds: { t: 'Теми', e: 'Приклади', q: 'Питання', n: 'Навігатор', g: 'Словник', i: 'Вітрина' } },
     de: { place: 'Abschnitte, Glossar und Fragen durchsuchen', none: 'Nichts gefunden',
           empty: 'Für diese Sprache gibt es noch keine Inhalte', close: 'Suche schließen',
@@ -34,6 +37,7 @@
           only: 'Nur in Themen suchen oder wieder überall', found: 'Gefunden',
           shown: 'angezeigt', pages: 'Ergebnisseiten',
           prev: 'Vorherige Ergebnisseite', next: 'Nächste Ergebnisseite',
+          first: 'Erste Ergebnisseite', last: 'Letzte Ergebnisseite',
           kinds: { t: 'Themen', e: 'Beispiele', q: 'Fragen', n: 'Navigator', g: 'Glossar', i: 'Startseite' } },
   };
 
@@ -251,6 +255,9 @@
     pager.innerHTML = '';
     pager.hidden = pages < 2;
     if (pages < 2) return;
+    // Края « и » - стандарт пейджера: в начало и в конец одним щелчком,
+    // даже когда номер нужной страницы спрятан за многоточием.
+    pager.appendChild(pgButton('«', 0, say.first, false, pageNo === 0));
     pager.appendChild(pgButton('‹', pageNo - 1, say.prev, false, pageNo === 0));
     pageList(pages, pageNo).forEach((n) => {
       if (n === null) {
@@ -263,6 +270,7 @@
       }
     });
     pager.appendChild(pgButton('›', pageNo + 1, say.next, false, pageNo === pages - 1));
+    pager.appendChild(pgButton('»', pages - 1, say.last, false, pageNo === pages - 1));
   }
 
   function turn(to) {
