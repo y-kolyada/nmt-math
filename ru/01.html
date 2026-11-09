@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Число и действия · nmt-math · ai|</title>
 <!-- meta: built by tools/build-meta.py - do not edit by hand -->
-<meta name="description" content="">
+<meta name="description" content="От натуральных чисел к действительным: каждое расширение числа появилось, чтобы выполнить действие, которое раньше выполнить было невозможно.">
 <link rel="canonical" href="https://y-kolyada.github.io/nmt-math/ru/01.html">
 <link rel="alternate" hreflang="uk" href="https://y-kolyada.github.io/nmt-math/uk/01.html">
 <link rel="alternate" hreflang="ru" href="https://y-kolyada.github.io/nmt-math/ru/01.html">
@@ -13,12 +13,12 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="nmt-math">
 <meta property="og:title" content="Число и действия">
-<meta property="og:description" content="">
+<meta property="og:description" content="От натуральных чисел к действительным: каждое расширение числа появилось, чтобы выполнить действие, которое раньше выполнить было невозможно.">
 <meta property="og:url" content="https://y-kolyada.github.io/nmt-math/ru/01.html">
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Число и действия","description":"","url":"https://y-kolyada.github.io/nmt-math/ru/01.html","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Число и действия","description":"От натуральных чисел к действительным: каждое расширение числа появилось, чтобы выполнить действие, которое раньше выполнить было невозможно.","url":"https://y-kolyada.github.io/nmt-math/ru/01.html","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"nmt-math","url":"https://y-kolyada.github.io/nmt-math/"}}</script>
 <!-- /meta -->
 <link rel="stylesheet" href="../assets/style.css?v=1">
 <link rel="stylesheet" href="../assets/study.css?v=1">
@@ -91,16 +91,335 @@
 
   <main id="main">
     <h1>Число и действия</h1>
-    <p class="page-size" data-words="21">Слов: 21</p>
+    <p class="page-size" data-words="1158">Слов: 1158</p>
+    <p class="lead">От натуральных чисел к действительным: каждое расширение числа появилось, чтобы
+    выполнить действие, которое раньше выполнить было невозможно. Законы действий при этом не изменились.</p>
 
-    <div class="stub-card">
-      <h2>Русская версия готовится</h2>
-      <p>Полная рабочая версия этой страницы опубликована на украинском языке.</p>
-      <p>Открыть полную версию:</p>
-      <div class="stub-actions">
-        <a href="../uk/01.html" class="btn-primary">Число и действия →</a>
-      </div>
+    <div class="box key" id="key-idea">
+      <h2>Главная мысль страницы <a class="anchor-link" href="#key-idea" aria-label="ссылка на этот блок">#</a></h2>
+      <p>Вычитание породило отрицательные числа, деление - дроби, извлечение корня - иррациональные
+      числа. Но переместительный, сочетательный и распределительный законы, которые действовали для счёта предметов,
+      действуют и для всех действительных чисел. Этот блок - фундамент: остальная алгебра есть эти законы,
+      записанные буквами. Он умеет точно считать и сравнивать; он не говорит, как две величины
+      зависят друг от друга, - это уже функция (блок 5).</p>
     </div>
+
+    <span class="step">Шаг 0 · Зацепка</span>
+    <h2 id="hook">1 · Минус два в квадрате <a class="anchor-link" href="#hook">#</a></h2>
+    <p>Сколько будет <span class="math" data-tex="-2^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02212;</mo><msup><mn>2</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">-2^2</annotation></semantics></math></span>? Привычный ответ: «минус на минус даёт плюс,
+    значит 4». Но в записи <span class="math" data-tex="-2^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02212;</mo><msup><mn>2</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">-2^2</annotation></semantics></math></span> в квадрат возводится только двойка, а минус
+    стоит перед результатом: <span class="math" data-tex="-2^2 = -(2^2) = -4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02212;</mo><msup><mn>2</mn><mn>2</mn></msup><mo>&#x0003D;</mo><mo>&#x02212;</mo><mo stretchy="false">&#x00028;</mo><msup><mn>2</mn><mn>2</mn></msup><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">-2^2 = -(2^2) = -4</annotation></semantics></math></span>. Чтобы возвести в
+    квадрат именно −2, нужны скобки: <span class="math" data-tex="(-2)^2 = 4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mn>2</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo>&#x0003D;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">(-2)^2 = 4</annotation></semantics></math></span>.</p>
+    <p>Вторая зацепка: <span class="math" data-tex="|-5 + 2|"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x0007C;</mo><mo>&#x02212;</mo><mn>5</mn><mo>&#x0002B;</mo><mn>2</mn><mo stretchy="false">&#x0007C;</mo></mrow><annotation encoding="application/x-tex">|-5 + 2|</annotation></semantics></math></span>. Привычка «модуль убирает минусы»
+    даёт <span class="math" data-tex="5 + 2 = 7"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>5</mn><mo>&#x0002B;</mo><mn>2</mn><mo>&#x0003D;</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">5 + 2 = 7</annotation></semantics></math></span>. На самом деле сначала выполняется действие внутри:
+    <span class="math" data-tex="|-3| = 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x0007C;</mo><mo>&#x02212;</mo><mn>3</mn><mo stretchy="false">&#x0007C;</mo><mo>&#x0003D;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">|-3| = 3</annotation></semantics></math></span>. Обе ошибки - не от незнания правил, а от
+    чтения записи «на глаз».</p>
+
+    <span class="step">Шаг 1 · Понятие</span>
+    <h2 id="concept">2 · Как росло число <a class="anchor-link" href="#concept">#</a></h2>
+    <ul>
+      <li><strong>Натуральные</strong> <span class="math" data-tex="\mathbb{N}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>&#x02115;</mi></mrow><annotation encoding="application/x-tex">\mathbb{N}</annotation></semantics></math></span>: 1, 2, 3, … - числа счёта.
+      Складывать и умножать можно всегда, вычитать - не всегда.</li>
+      <li><strong>Целые</strong> <span class="math" data-tex="\mathbb{Z}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>&#x02124;</mi></mrow><annotation encoding="application/x-tex">\mathbb{Z}</annotation></semantics></math></span>: добавляются ноль и отрицательные числа.
+      Теперь вычитание всегда возможно, а деление - нет.</li>
+      <li><strong>Рациональные</strong> <span class="math" data-tex="\mathbb{Q}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>&#x0211A;</mi></mrow><annotation encoding="application/x-tex">\mathbb{Q}</annotation></semantics></math></span>: дроби
+      <span class="math" data-tex="\frac{p}{q}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mi>p</mi></mrow><mrow><mi>q</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{p}{q}</annotation></semantics></math></span>, где p целое, q натуральное. Деление на любое число, кроме нуля,
+      возможно. Каждая рациональная дробь - конечная или бесконечная периодическая десятичная дробь.</li>
+      <li><strong>Действительные</strong> <span class="math" data-tex="\mathbb{R}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>&#x0211D;</mi></mrow><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math></span>: добавляются иррациональные числа -
+      бесконечные непериодические дроби, как <span class="math" data-tex="\sqrt{2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow><annotation encoding="application/x-tex">\sqrt{2}</annotation></semantics></math></span> или π. Теперь каждая точка числовой
+      прямой имеет своё число.</li>
+    </ul>
+    <!-- fig:01-number-sets -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 214" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Вложенные множества чисел: натуральные внутри целых, целые внутри рациональных, рациональные внутри действительных. Каждое расширение позволило действие, которого не было: вычитание, деление, извлечение корня.">
+        <rect x="4.0" y="4.0" width="312.0" height="206.0" rx="6" fill="currentColor" fill-opacity="0.035" stroke="currentColor" stroke-width="1.2"/>
+        <text x="14.0" y="24.0" fill="currentColor" font-size="13" opacity="1.0">ℝ действительные: + √2, π</text>
+        <text x="14.0" y="42.0" fill="currentColor" font-size="12" opacity="0.7" font-style="italic">позволил корень</text>
+        <rect x="16.0" y="50.0" width="288.0" height="156.0" rx="6" fill="currentColor" fill-opacity="0.035" stroke="currentColor" stroke-width="1.2"/>
+        <text x="26.0" y="70.0" fill="currentColor" font-size="13" opacity="1.0">ℚ рациональные: дроби p/q</text>
+        <text x="26.0" y="88.0" fill="currentColor" font-size="12" opacity="0.7" font-style="italic">позволило деление</text>
+        <rect x="28.0" y="96.0" width="264.0" height="106.0" rx="6" fill="currentColor" fill-opacity="0.035" stroke="currentColor" stroke-width="1.2"/>
+        <text x="38.0" y="116.0" fill="currentColor" font-size="13" opacity="1.0">ℤ целые: ноль и отрицательные</text>
+        <text x="38.0" y="134.0" fill="currentColor" font-size="12" opacity="0.7" font-style="italic">позволило вычитание</text>
+        <rect x="40.0" y="142.0" width="240.0" height="56.0" rx="6" fill="currentColor" fill-opacity="0.035" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="50.0" y="162.0" fill="currentColor" font-size="13" opacity="1.0" font-weight="700">ℕ натуральные: 1, 2, 3, …</text>
+      </svg>
+      <p class="dim">Рисунок 1. Каждое множество чисел лежит внутри следующего, и каждое расширение появилось ради нового действия.</p>
+    </div>
+    <!-- /fig:01-number-sets -->
+    <p><strong>Модуль</strong> числа - это расстояние от него до нуля на числовой прямой, поэтому модуль никогда не
+    бывает отрицательным. <strong>Числовой промежуток</strong> - множество всех чисел между двумя границами: квадратная скобка
+    означает, что граница входит, круглая - что нет.</p>
+    <!-- fig:01-abs-line -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 110" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Числовая прямая от −5 до 5. Точки −3 и 3 стоят на одинаковом расстоянии 3 от нуля, поэтому |−3| = |3| = 3.">
+        <line x1="14.0" y1="50.0" x2="306.0" y2="50.0" stroke="currentColor" stroke-width="1.2" opacity="1.0"/>
+        <polygon points="306.0,50.0 299.6,52.7 299.6,47.3" fill="currentColor"/>
+        <line x1="27.3" y1="46.0" x2="27.3" y2="54.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="27.3" y="70.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">−5</text>
+        <line x1="53.8" y1="46.0" x2="53.8" y2="54.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="53.8" y="70.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">−4</text>
+        <line x1="80.4" y1="46.0" x2="80.4" y2="54.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="80.4" y="70.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">−3</text>
+        <line x1="106.9" y1="46.0" x2="106.9" y2="54.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="106.9" y="70.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">−2</text>
+        <line x1="133.5" y1="46.0" x2="133.5" y2="54.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="133.5" y="70.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">−1</text>
+        <line x1="160.0" y1="46.0" x2="160.0" y2="54.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="160.0" y="70.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">0</text>
+        <line x1="186.5" y1="46.0" x2="186.5" y2="54.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="186.5" y="70.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">1</text>
+        <line x1="213.1" y1="46.0" x2="213.1" y2="54.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="213.1" y="70.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">2</text>
+        <line x1="239.6" y1="46.0" x2="239.6" y2="54.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="239.6" y="70.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">3</text>
+        <line x1="266.2" y1="46.0" x2="266.2" y2="54.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="266.2" y="70.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">4</text>
+        <line x1="292.7" y1="46.0" x2="292.7" y2="54.0" stroke="currentColor" stroke-width="1" opacity="1.0"/>
+        <text x="292.7" y="70.0" fill="currentColor" font-size="12" opacity="0.8" text-anchor="middle">5</text>
+        <circle cx="80.4" cy="50.0" r="4.5" fill="currentColor" style="fill:var(--acc)"/>
+        <circle cx="239.6" cy="50.0" r="4.5" fill="currentColor" style="fill:var(--acc)"/>
+        <line x1="80.4" y1="32.0" x2="160.0" y2="32.0" stroke="currentColor" stroke-width="2" opacity="1.0" style="stroke:var(--acc)"/>
+        <line x1="160.0" y1="32.0" x2="239.6" y2="32.0" stroke="currentColor" stroke-width="2" opacity="1.0" style="stroke:var(--acc)"/>
+        <line x1="80.4" y1="27.0" x2="80.4" y2="37.0" stroke="currentColor" stroke-width="1.4" opacity="1.0" style="stroke:var(--acc)"/>
+        <line x1="160.0" y1="27.0" x2="160.0" y2="37.0" stroke="currentColor" stroke-width="1.4" opacity="1.0" style="stroke:var(--acc)"/>
+        <line x1="239.6" y1="27.0" x2="239.6" y2="37.0" stroke="currentColor" stroke-width="1.4" opacity="1.0" style="stroke:var(--acc)"/>
+        <text x="120.2" y="24.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">расстояние 3</text>
+        <text x="199.8" y="24.0" fill="currentColor" font-size="12" opacity="1.0" text-anchor="middle">расстояние 3</text>
+      </svg>
+      <p class="dim">Рисунок 2. Модуль - расстояние до нуля: |−3| = |3| = 3.</p>
+    </div>
+    <!-- /fig:01-abs-line -->
+
+    <span class="step">Шаг 2 · Закон</span>
+    <h2 id="law">3 · Законы действий <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-dist">
+      <p class="law-name">Распределительный закон</p>
+      <div class="math-block" data-tex="a(b + c) = ab + ac"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>a</mi><mo stretchy="false">&#x00028;</mo><mi>b</mi><mo>&#x0002B;</mo><mi>c</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mi>a</mi><mi>b</mi><mo>&#x0002B;</mo><mi>a</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">a(b + c) = ab + ac</annotation></semantics></math></div>
+      <p>Вместе с переместительным <span class="math" data-tex="ab = ba"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mi>b</mi><mo>&#x0003D;</mo><mi>b</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">ab = ba</annotation></semantics></math></span> и сочетательным
+      <span class="math" data-tex="(ab)c = a(bc)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mi>b</mi><mo stretchy="false">&#x00029;</mo><mi>c</mi><mo>&#x0003D;</mo><mi>a</mi><mo stretchy="false">&#x00028;</mo><mi>b</mi><mi>c</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(ab)c = a(bc)</annotation></semantics></math></span> законами он держит всю алгебру.</p>
+    </div>
+    <div class="law" id="law-zero">
+      <p class="law-name">Нулевое произведение</p>
+      <div class="math-block" data-tex="ab = 0 \iff a = 0 \text{ или } b = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>a</mi><mi>b</mi><mo>&#x0003D;</mo><mn>0</mn><mi>&#x027FA;</mi><mi>a</mi><mo>&#x0003D;</mo><mn>0</mn><mtext>&#x000A0;или&#x000A0;</mtext><mi>b</mi><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">ab = 0 \iff a = 0 \text{ или } b = 0</annotation></semantics></math></div>
+    </div>
+    <div class="law" id="law-abs">
+      <p class="law-name">Модуль</p>
+      <div class="math-block" data-tex="|a| = \begin{cases} a, & a \geq 0 \\ -a, & a < 0 \end{cases}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">&#x0007C;</mo><mi>a</mi><mo stretchy="false">&#x0007C;</mo><mo>&#x0003D;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x0007B;</mo><mtable><mtr><mtd columnalign="left"><mi>a</mi><mo>&#x0002C;</mo></mtd><mtd columnalign="left"><mi>a</mi><mo>&#x02265;</mo><mn>0</mn></mtd></mtr><mtr><mtd columnalign="left"><mo>&#x02212;</mo><mi>a</mi><mo>&#x0002C;</mo></mtd><mtd columnalign="left"><mi>a</mi><mo>&#x0003C;</mo><mn>0</mn></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">|a| = \begin{cases} a, &amp; a \geq 0 \\ -a, &amp; a &lt; 0 \end{cases}</annotation></semantics></math></div>
+      <p>И два следствия: <span class="math" data-tex="|ab| = |a| \cdot |b|"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x0007C;</mo><mi>a</mi><mi>b</mi><mo stretchy="false">&#x0007C;</mo><mo>&#x0003D;</mo><mo stretchy="false">&#x0007C;</mo><mi>a</mi><mo stretchy="false">&#x0007C;</mo><mo>&#x000B7;</mo><mo stretchy="false">&#x0007C;</mo><mi>b</mi><mo stretchy="false">&#x0007C;</mo></mrow><annotation encoding="application/x-tex">|ab| = |a| \cdot |b|</annotation></semantics></math></span>,
+      <span class="math" data-tex="|a + b| \leq |a| + |b|"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x0007C;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><mo stretchy="false">&#x0007C;</mo><mo>&#x02264;</mo><mo stretchy="false">&#x0007C;</mo><mi>a</mi><mo stretchy="false">&#x0007C;</mo><mo>&#x0002B;</mo><mo stretchy="false">&#x0007C;</mo><mi>b</mi><mo stretchy="false">&#x0007C;</mo></mrow><annotation encoding="application/x-tex">|a + b| \leq |a| + |b|</annotation></semantics></math></span>.</p>
+    </div>
+    <div class="law" id="law-nine">
+      <p class="law-name">Признаки делимости на 3 и на 9</p>
+      <p>Число делится на 3 (на 9) тогда и только тогда, когда на 3 (на 9) делится сумма его цифр. На 2, 5 и 10
+      смотрят на последнюю цифру.</p>
+    </div>
+    <div class="law" id="law-gcd">
+      <p class="law-name">НОД и НОК</p>
+      <div class="math-block" data-tex="\text{НОД}(a, b) \cdot \text{НОК}(a, b) = a \cdot b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>НОД</mtext><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002C;</mo><mi>b</mi><mo stretchy="false">&#x00029;</mo><mo>&#x000B7;</mo><mtext>НОК</mtext><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002C;</mo><mi>b</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mi>a</mi><mo>&#x000B7;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">\text{НОД}(a, b) \cdot \text{НОК}(a, b) = a \cdot b</annotation></semantics></math></div>
+    </div>
+
+    <span class="step">Шаг 3 · Почему так</span>
+    <h2 id="why">4 · Откуда эти законы <a class="anchor-link" href="#why">#</a></h2>
+    <p><strong>Распределительный закон</strong> - это площадь прямоугольника со стороной a и второй стороной, составленной из
+    отрезков b и c: её можно посчитать целиком или двумя кусками. На нём стоят все формулы сокращённого
+    умножения (блок 3).</p>
+    <!-- fig:01-distributive -->
+    <div class="box figure">
+      <svg viewBox="0 0 320 176" width="100%" style="max-width:320px;height:auto;display:block;margin:0 auto" role="img" aria-label="Прямоугольник высотой a и шириной b + c разрезан на два прямоугольника: ab и ac. Площадь целого a(b + c) равна сумме площадей ab + ac.">
+        <rect x="40.0" y="20.0" width="150.0" height="90.0" rx="0" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.2"/>
+        <rect x="190.0" y="20.0" width="100.0" height="90.0" rx="0" fill="currentColor" fill-opacity="0.16" stroke="currentColor" stroke-width="1.2" style="stroke:var(--acc)"/>
+        <text x="115.0" y="70.0" fill="currentColor" font-size="16" opacity="1.0" text-anchor="middle" font-style="italic">ab</text>
+        <text x="240.0" y="70.0" fill="currentColor" font-size="16" opacity="1.0" text-anchor="middle" font-style="italic">ac</text>
+        <text x="30.0" y="70.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="end" font-style="italic">a</text>
+        <text x="115.0" y="130.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-style="italic">b</text>
+        <text x="240.0" y="130.0" fill="currentColor" font-size="15" opacity="1.0" text-anchor="middle" font-style="italic">c</text>
+        <line x1="40.0" y1="142.0" x2="288.0" y2="142.0" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+        <text x="165.0" y="156.0" fill="currentColor" font-size="13" opacity="0.8" text-anchor="middle" font-style="italic">b + c</text>
+      </svg>
+      <p class="dim">Рисунок 3. Распределительный закон как площадь: a(b + c) = ab + ac.</p>
+    </div>
+    <!-- /fig:01-distributive -->
+    <p><strong>Нулевое произведение.</strong> Пусть <span class="math" data-tex="ab = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mi>b</mi><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">ab = 0</annotation></semantics></math></span> и
+    <span class="math" data-tex="a \neq 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mo>&#x02260;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a \neq 0</annotation></semantics></math></span>. Умножим обе части на
+    <span class="math" data-tex="\frac{1}{a}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mi>a</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{a}</annotation></semantics></math></span>: получим <span class="math" data-tex="b = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>b</mi><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b = 0</annotation></semantics></math></span>. Именно поэтому
+    уравнения решают, раскладывая на множители: произведение равно нулю, только когда нулю равен
+    множитель.</p>
+    <p><strong>Признак делимости на 9.</strong> <span class="math" data-tex="10 = 9 + 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>10</mn><mo>&#x0003D;</mo><mn>9</mn><mo>&#x0002B;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">10 = 9 + 1</annotation></semantics></math></span>,
+    <span class="math" data-tex="100 = 99 + 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>100</mn><mo>&#x0003D;</mo><mn>99</mn><mo>&#x0002B;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">100 = 99 + 1</annotation></semantics></math></span>, и так для каждого разряда. Поэтому</p>
+    <div class="math-block" data-tex="3456 = 3 \cdot 999 + 4 \cdot 99 + 5 \cdot 9 + (3 + 4 + 5 + 6)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>3456</mn><mo>&#x0003D;</mo><mn>3</mn><mo>&#x000B7;</mo><mn>999</mn><mo>&#x0002B;</mo><mn>4</mn><mo>&#x000B7;</mo><mn>99</mn><mo>&#x0002B;</mo><mn>5</mn><mo>&#x000B7;</mo><mn>9</mn><mo>&#x0002B;</mo><mo stretchy="false">&#x00028;</mo><mn>3</mn><mo>&#x0002B;</mo><mn>4</mn><mo>&#x0002B;</mo><mn>5</mn><mo>&#x0002B;</mo><mn>6</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">3456 = 3 \cdot 999 + 4 \cdot 99 + 5 \cdot 9 + (3 + 4 + 5 + 6)</annotation></semantics></math></div>
+    <p>Первые три слагаемых делятся на 9 всегда, значит всё решает сумма цифр. Так же и для 3, потому что 9 делится на 3.</p>
+    <p><strong>НОД и НОК.</strong> НОД берёт каждый простой множитель в наименьшей степени из двух, НОК - в
+    наибольшей. Вместе они берут каждый множитель ровно столько раз, сколько его в a и b вместе, то есть дают
+    произведение ab.</p>
+
+    <span class="step">Шаг 4 · Границы</span>
+    <h2 id="limits">5 · Где законы ломаются <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-zero-div">
+      <p><strong>На ноль не делят.</strong> Это не запрет учителя, а следствие: если
+      <span class="math" data-tex="\frac{5}{0} = x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><mn>5</mn></mrow><mrow><mn>0</mn></mrow></mfrac><mo>&#x0003D;</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">\frac{5}{0} = x</annotation></semantics></math></span>, то <span class="math" data-tex="x \cdot 0 = 5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x000B7;</mo><mn>0</mn><mo>&#x0003D;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">x \cdot 0 = 5</annotation></semantics></math></span>, а любое число,
+      умноженное на ноль, даёт ноль.</p>
+    </div>
+    <div class="limit" id="limit-abs">
+      <p><strong><span class="math" data-tex="|a + b| = |a| + |b|"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x0007C;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><mo stretchy="false">&#x0007C;</mo><mo>&#x0003D;</mo><mo stretchy="false">&#x0007C;</mo><mi>a</mi><mo stretchy="false">&#x0007C;</mo><mo>&#x0002B;</mo><mo stretchy="false">&#x0007C;</mo><mi>b</mi><mo stretchy="false">&#x0007C;</mo></mrow><annotation encoding="application/x-tex">|a + b| = |a| + |b|</annotation></semantics></math></span> только когда a и b одного
+      знака</strong> (или хотя бы одно из них ноль). Для чисел разных знаков модуль суммы меньше.</p>
+    </div>
+    <div class="limit" id="limit-order">
+      <p><strong>Порядок действий - договорённость, а не закон.</strong> Степень выполняется раньше умножения и
+      знака минус перед числом, умножение - раньше сложения. Поэтому <span class="math" data-tex="-2^2 = -4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02212;</mo><msup><mn>2</mn><mn>2</mn></msup><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">-2^2 = -4</annotation></semantics></math></span>, а
+      изменить порядок могут только скобки.</p>
+    </div>
+    <div class="limit" id="limit-signs">
+      <p><strong>Признаки по последней цифре работают только для 2, 5 и 10.</strong> На 4 смотрят на две последние
+      цифры, на 8 - на три, а на 6 число делится, когда делится и на 2, и на 3.</p>
+    </div>
+
+    <span class="step">Шаг 5 · Применение</span>
+    <h2 id="apply">6 · Задачи в форме НМТ <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="В" data-limit="limit-order">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p>Вычислите <span class="math" data-tex="-2^2 + (-2)^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02212;</mo><msup><mn>2</mn><mn>2</mn></msup><mo>&#x0002B;</mo><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mn>2</mn><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">-2^2 + (-2)^2</annotation></semantics></math></span>.</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · −8</button>
+        <button type="button" data-opt="Б">Б · −4</button>
+        <button type="button" data-opt="В">В · 0</button>
+        <button type="button" data-opt="Г">Г · 4</button>
+        <button type="button" data-opt="Д">Д · 8</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#limit-order">порядок действий</a>.</p>
+      <div class="solution"><span class="math" data-tex="-4 + 4 = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02212;</mo><mn>4</mn><mo>&#x0002B;</mo><mn>4</mn><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">-4 + 4 = 0</annotation></semantics></math></span>. Ответ 8 даёт слепой ход «оба
+      слагаемых - это 4».</div>
+    </div>
+
+    <div class="task" data-kind="choice" data-answer="Б" data-limit="limit-signs">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p>Какое из чисел делится на 9?</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · 1234</button>
+        <button type="button" data-opt="Б">Б · 3456</button>
+        <button type="button" data-opt="В">В · 5678</button>
+        <button type="button" data-opt="Г">Г · 7891</button>
+        <button type="button" data-opt="Д">Д · 9001</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#law-nine">признак делимости на 9</a>.</p>
+      <div class="solution">Суммы цифр: 10, 18, 26, 25, 10. На 9 делится только 18. Число 9001 начинается с девятки,
+      но признак смотрит на сумму всех цифр.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="36" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Найдите наименьшее общее кратное чисел 12 и 18.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-gcd">НОД и НОК</a>.</p>
+      <div class="solution"><span class="math" data-tex="12 = 2^2 \cdot 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>12</mn><mo>&#x0003D;</mo><msup><mn>2</mn><mn>2</mn></msup><mo>&#x000B7;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">12 = 2^2 \cdot 3</annotation></semantics></math></span>,
+      <span class="math" data-tex="18 = 2 \cdot 3^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>18</mn><mo>&#x0003D;</mo><mn>2</mn><mo>&#x000B7;</mo><msup><mn>3</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">18 = 2 \cdot 3^2</annotation></semantics></math></span>. НОК берёт наибольшие степени:
+      <span class="math" data-tex="2^2 \cdot 3^2 = 36"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>&#x000B7;</mo><msup><mn>3</mn><mn>2</mn></msup><mo>&#x0003D;</mo><mn>36</mn></mrow><annotation encoding="application/x-tex">2^2 \cdot 3^2 = 36</annotation></semantics></math></span>. Проверка: НОД = 6, и
+      <span class="math" data-tex="6 \cdot 36 = 216 = 12 \cdot 18"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>6</mn><mo>&#x000B7;</mo><mn>36</mn><mo>&#x0003D;</mo><mn>216</mn><mo>&#x0003D;</mo><mn>12</mn><mo>&#x000B7;</mo><mn>18</mn></mrow><annotation encoding="application/x-tex">6 \cdot 36 = 216 = 12 \cdot 18</annotation></semantics></math></span>.</div>
+    </div>
+
+    <div class="task" data-kind="match" data-answer="Б А В" data-limit="limit-abs">
+      <p class="task-kind">Установление соответствия · 3 балла</p>
+      <p>К каждому выражению (1-3) подберите его значение (А-Д).</p>
+      <ul class="pairs">
+        <li><label>1. <span class="math" data-tex="|-7| + |3|"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x0007C;</mo><mo>&#x02212;</mo><mn>7</mn><mo stretchy="false">&#x0007C;</mo><mo>&#x0002B;</mo><mo stretchy="false">&#x0007C;</mo><mn>3</mn><mo stretchy="false">&#x0007C;</mo></mrow><annotation encoding="application/x-tex">|-7| + |3|</annotation></semantics></math></span>
+          <select aria-label="Ответ к выражению 1"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+        <li><label>2. <span class="math" data-tex="|-7 + 3|"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x0007C;</mo><mo>&#x02212;</mo><mn>7</mn><mo>&#x0002B;</mo><mn>3</mn><mo stretchy="false">&#x0007C;</mo></mrow><annotation encoding="application/x-tex">|-7 + 3|</annotation></semantics></math></span>
+          <select aria-label="Ответ к выражению 2"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+        <li><label>3. <span class="math" data-tex="|3| - |-7|"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x0007C;</mo><mn>3</mn><mo stretchy="false">&#x0007C;</mo><mo>&#x02212;</mo><mo stretchy="false">&#x0007C;</mo><mo>&#x02212;</mo><mn>7</mn><mo stretchy="false">&#x0007C;</mo></mrow><annotation encoding="application/x-tex">|3| - |-7|</annotation></semantics></math></span>
+          <select aria-label="Ответ к выражению 3"><option value="">-</option><option>А</option><option>Б</option><option>В</option><option>Г</option><option>Д</option></select></label></li>
+      </ul>
+      <p>А · 4 &nbsp; Б · 10 &nbsp; В · −4 &nbsp; Г · 21 &nbsp; Д · −10</p>
+      <p><button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-abs">модуль</a> и его граница для чисел разных знаков.</p>
+      <div class="solution">1) 7 + 3 = 10; 2) |−4| = 4: модуль суммы меньше суммы модулей, потому что знаки разные;
+      3) 3 − 7 = −4: разность модулей может быть отрицательной, модуль - нет.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-answer="5" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Сколько целых чисел принадлежит промежутку <span class="math" data-tex="[-2\text{,}5;\ 3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">[</mo><mo>&#x02212;</mo><mn>2</mn><mtext>,</mtext><mn>5</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">[-2\text{,}5;\ 3)</annotation></semantics></math></span>?</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Понятие: <a href="#concept">числовой промежуток</a>.</p>
+      <div class="solution">Целые числа −2, −1, 0, 1, 2. Граница 3 не входит (круглая скобка), −2,5 не целое. Ответ: 5.</div>
+    </div>
+
+    <span class="step">Шаг 6 · Обратный ход</span>
+    <h2 id="reverse">7 · Назови закон сам <a class="anchor-link" href="#reverse">#</a></h2>
+    <p>Закон не подсказан. Сначала назови его, потом считай.</p>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="3700" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Вычислите <span class="math" data-tex="37 \cdot 54 + 37 \cdot 46"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>37</mn><mo>&#x000B7;</mo><mn>54</mn><mo>&#x0002B;</mo><mn>37</mn><mo>&#x000B7;</mo><mn>46</mn></mrow><annotation encoding="application/x-tex">37 \cdot 54 + 37 \cdot 46</annotation></semantics></math></span>.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-dist">распределительный</a>, прочитанный справа налево.</p>
+      <div class="solution"><span class="math" data-tex="37 \cdot (54 + 46) = 37 \cdot 100 = 3700"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>37</mn><mo>&#x000B7;</mo><mo stretchy="false">&#x00028;</mo><mn>54</mn><mo>&#x0002B;</mo><mn>46</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>37</mn><mo>&#x000B7;</mo><mn>100</mn><mo>&#x0003D;</mo><mn>3700</mn></mrow><annotation encoding="application/x-tex">37 \cdot (54 + 46) = 37 \cdot 100 = 3700</annotation></semantics></math></span>.
+      Закон работает в обе стороны: раскрыть скобки и вынести общий множитель - одно равенство.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="-2" data-limit="limit-zero-div">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Решите уравнение <span class="math" data-tex="(x - 3)(x + 5) = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mn>3</mn><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002B;</mo><mn>5</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">(x - 3)(x + 5) = 0</annotation></semantics></math></span>. В ответ
+      запишите сумму корней.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Закон: <a href="#law-zero">нулевое произведение</a>.</p>
+      <div class="solution">Произведение равно нулю, когда один из множителей ноль: <span class="math" data-tex="x = 3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">x = 3</annotation></semantics></math></span>
+      или <span class="math" data-tex="x = -5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">x = -5</annotation></semantics></math></span>. Сумма: −2. Раскрывать скобки здесь лишнее: закон даёт корни сразу.</div>
+    </div>
+
+    <div class="task" data-kind="short" data-mode="reverse" data-answer="7" data-limit="">
+      <p class="task-kind">Краткий ответ · 2 балла</p>
+      <p>Число <span class="math" data-tex="2\text{,}(3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>2</mn><mtext>,</mtext><mo stretchy="false">&#x00028;</mo><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">2\text{,}(3)</annotation></semantics></math></span> запишите несократимой обыкновенной дробью. В ответ
+      запишите её числитель.</p>
+      <p><label>Ответ: <input type="text" inputmode="decimal" size="8" aria-label="Ответ"></label>
+      <button type="button" class="check">Проверить</button></p>
+      <p class="law-ref">Понятие: <a href="#concept">рациональное число как периодическая дробь</a>.</p>
+      <div class="solution">Пусть <span class="math" data-tex="x = 2\text{,}333\ldots"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mn>2</mn><mtext>,</mtext><mn>333</mn><mi>&#x02026;</mi></mrow><annotation encoding="application/x-tex">x = 2\text{,}333\ldots</annotation></semantics></math></span>. Тогда
+      <span class="math" data-tex="10x = 23\text{,}333\ldots"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>10</mn><mi>x</mi><mo>&#x0003D;</mo><mn>23</mn><mtext>,</mtext><mn>333</mn><mi>&#x02026;</mi></mrow><annotation encoding="application/x-tex">10x = 23\text{,}333\ldots</annotation></semantics></math></span>, и разность
+      <span class="math" data-tex="9x = 21"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>9</mn><mi>x</mi><mo>&#x0003D;</mo><mn>21</mn></mrow><annotation encoding="application/x-tex">9x = 21</annotation></semantics></math></span>, <span class="math" data-tex="x = \frac{7}{3}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mfrac><mrow><mn>7</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">x = \frac{7}{3}</annotation></semantics></math></span>.
+      Период исчезает при вычитании - поэтому каждая периодическая дробь рациональна.</div>
+    </div>
+
+    <h2 id="error">8 · Найди ошибку в чужом решении <a class="anchor-link" href="#error">#</a></h2>
+    <p>Марк пишет: «Равенство <span class="math" data-tex="|x| = -x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x0007C;</mo><mi>x</mi><mo stretchy="false">&#x0007C;</mo><mo>&#x0003D;</mo><mo>&#x02212;</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">|x| = -x</annotation></semantics></math></span> невозможно, потому что модуль всегда
+    положителен, а <span class="math" data-tex="-x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02212;</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">-x</annotation></semantics></math></span> - отрицательно».</p>
+    <details>
+      <summary>Где ошибка?</summary>
+      <p>Выражение <span class="math" data-tex="-x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>&#x02212;</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">-x</annotation></semantics></math></span> не обязательно отрицательно: при
+      <span class="math" data-tex="x = -4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">x = -4</annotation></semantics></math></span> оно равно 4. По <a href="#law-abs">определению модуля</a>
+      <span class="math" data-tex="|x| = -x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x0007C;</mo><mi>x</mi><mo stretchy="false">&#x0007C;</mo><mo>&#x0003D;</mo><mo>&#x02212;</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">|x| = -x</annotation></semantics></math></span> именно при <span class="math" data-tex="x \leq 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x02264;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x \leq 0</annotation></semantics></math></span>. Марк перепутал «минус в
+      записи» и «знак числа». И ещё мелочь: модуль не «всегда положителен», а неотрицателен -
+      <span class="math" data-tex="|0| = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x0007C;</mo><mn>0</mn><mo stretchy="false">&#x0007C;</mo><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">|0| = 0</annotation></semantics></math></span>.</p>
+    </details>
+
+    <h2 id="artifacts">Что у тебя есть после этой страницы <a class="anchor-link" href="#artifacts">#</a></h2>
+    <div class="box key">
+      <p><strong>Три закона действий и модуль как расстояние.</strong> Всё, что дальше будет называться «тождественными
+      преобразованиями», - это распределительный, переместительный и сочетательный законы, а решение уравнений
+      разложением на множители - это закон нулевого произведения.</p>
+    </div>
+    <!-- freq -->
+    <p class="dim law-freq" data-tasks="8">Частота на этом сайте, а не на НМТ: на этой странице 8 задач тренажёра, и они опираются на такие законы: Модуль - 1, НОД и НОК - 1, Нулевое произведение - 1, Порядок действий - 1, Признаки делимости на 3 и на 9 - 1, Распределительный закон - 1, Рациональное число как периодическая дробь - 1, Числовой промежуток - 1.</p>
+    <!-- /freq -->
+    <p>Ты знаешь этот блок, если:</p>
+    <ol>
+      <li>решаешь 8 из 10 задач на порядок действий, модуль и делимость без подсказки;</li>
+      <li>можешь объяснить вслух, почему признак делимости на 9 смотрит на сумму цифр;</li>
+      <li>находишь ошибку в чужом решении, как у Марка.</li>
+    </ol>
+  
+
+    <footer>
+      <nav class="pager" aria-label="Соседние темы">
+        <p class="pager-next">Следующая тема: <a href="02.html">Отношение, пропорция, процент</a></p>
+        <p class="pager-prev">Предыдущая тема: <a href="index.html">Посадочная страница</a></p>
+      </nav>
+      <p class="footer-note">Сайт серии AI Factory. Сделан той же оснасткой, что и остальные: обычный HTML и CSS, проверка на bash, публикация через GitHub Pages.</p>
+    </footer>
   </main>
 
 </div>
