@@ -119,6 +119,7 @@ Decided with the Conductor 2026-11-09.
    states and prints the SVG: a parabola drawn from its equation, not by eye.
    `tools/check-diagrams.mjs` accepts both kinds as sources.
 4. Captions read `Рисунок N.`, numbered through the language folder; the
+   raster illustrations of AGENTS.md rule 27 keep a count of their own; the
    series rules of rule 18 (canvas 320, labels of at least 12 units,
    `currentColor`) hold for both kinds.
 
@@ -157,7 +158,7 @@ The landing of a study site ends, before its artifacts, with three short section
 
 | id | Ukrainian heading | Ceiling | What it holds |
 | :-- | :-- | :-- | :-- |
-| `features` | Що вміє сайт | 80 words | a list of five or six lines, one line per feature: search, term cards behind the dotted underline, the trainer with its instant check, the exam tasks by year in the settings, font size and theme, work without the internet |
+| `features` | Що вміє сайт | 80 words | a list of five or six lines, one line per feature: search, term cards behind the dotted underline, the trainer with its instant check, the exam tasks by year in the settings, font size and theme, work without the internet (neutral, the Conductor 2026-11-17: say that it is technically possible - the pages load nothing from other sites; no call to save or copy the site, no promise of an offline mode) |
 | `tools` | Навігатор і словник | 60 words | a block is a vertical, a lens is a horizontal through all blocks; the dotted underline opens a card, the glossary holds every concept by block |
 | `how-to-read` | Три способи вчитися | 120 words | three routes: **the exam is soon** (the frequency of laws, then the trainer and the reverse sections), **in order** (blocks from the first, each rests on the previous), **close a gap** (a mistake in a school test, then the search or the lens of traps, then the law, then a task) |
 

@@ -13,7 +13,10 @@
 //   4. every diagram has a non-empty aria-label, which rots silently because
 //      nobody looks at it;
 //   5. captions are numbered sequentially across the language folder in
-//      reading order (landing page first, navigator last), and
+//      reading order (landing page first, navigator last): schemes in one
+//      count, raster illustrations in a count of their own, so the landing
+//      picture is 1 and the next picture the reader meets is 2; a hidden
+//      alternative line of an illustration repeats its default's number; and
 //      every diagram answers a source in diagrams/ and every source a diagram;
 //   6. a translated page carries a translated diagram: its aria-label differs
 //      from the base one and it keeps the same number of labels.
@@ -50,12 +53,17 @@ const byReading = (a, b) => {
   if (b === 'navigator.html') return -1;
   return a.localeCompare(b);
 };
+// A raster illustration (AGENTS.md rule 27) is numbered in its own count;
+// a page that holds only illustrations is opened for that count alone.
+const hasIll = /data-kind="illustration"/;
 const pages = {};
+const figPages = {};
 for (const lang of LANGS) {
   if (!existsSync(lang)) continue;
-  pages[lang] = readdirSync(lang).sort(byReading)
-    .filter((n) => n.endsWith('.html'))
-    .filter((n) => has.test(readFileSync(join(lang, n), 'utf8').split('<main')[1] || ''));
+  const main = (n) => readFileSync(join(lang, n), 'utf8').split('<main')[1] || '';
+  const all = readdirSync(lang).sort(byReading).filter((n) => n.endsWith('.html'));
+  pages[lang] = all.filter((n) => has.test(main(n)));
+  figPages[lang] = all.filter((n) => has.test(main(n)) || hasIll.test(main(n)));
 }
 const sources = existsSync('diagrams')
   // A Mermaid source for schemes; on study sites also a generator (.py) for
@@ -63,8 +71,9 @@ const sources = existsSync('diagrams')
   ? readdirSync('diagrams').sort().filter((n) => n.endsWith('.mmd') || /^\d\d-.*\.py$/.test(n))
   : [];
 const total = Object.values(pages).reduce((n, list) => n + list.length, 0);
+const figTotal = Object.values(figPages).reduce((n, list) => n + list.length, 0);
 
-if (!total && !sources.length) {
+if (!figTotal && !sources.length) {
   console.log();
   console.log('  Проверка схем');
   console.log('  ' + '-'.repeat(46));
@@ -96,10 +105,24 @@ try {
 const page = await browser.newPage({ viewport: { width: 390, height: 900 } });
 
 const seen = {}; // lang -> file -> [diagram, ...]
-for (const lang of Object.keys(pages)) {
+const figs = {}; // lang -> file -> [scheme or illustration, in document order]
+for (const lang of Object.keys(figPages)) {
   seen[lang] = {};
-  for (const name of pages[lang]) {
+  figs[lang] = {};
+  for (const name of figPages[lang]) {
     await page.goto('file://' + join(process.cwd(), lang, name));
+    figs[lang][name] = await page.evaluate(() => [...document.querySelectorAll('main svg[role="img"], main [data-kind="illustration"]')]
+      .map((e) => {
+        const svg = e.tagName.toLowerCase() === 'svg';
+        const box = svg ? e.closest('.box') : e;
+        const cap = box && box.querySelector('p.dim');
+        return {
+          kind: svg ? 'схема' : 'иллюстрация',
+          alt: !svg && e.hasAttribute('hidden') && e.hasAttribute('data-line'),
+          caption: cap ? cap.textContent.trim() : null,
+        };
+      }));
+    if (!pages[lang].includes(name)) continue;
     seen[lang][name] = await page.evaluate(({ MIN_GAP }) => {
       return [...document.querySelectorAll('main svg[role="img"]')].map((svg) => {
         const vb = svg.viewBox.baseVal;
@@ -290,8 +313,6 @@ await browser.close();
 const CAPTION = /^(\S+)\s+(\d+)\./u;
 let drawn = 0;
 for (const lang of Object.keys(seen)) {
-  let n = 0;
-  let word = null;
   for (const [name, list] of Object.entries(seen[lang])) {
     for (const d of list) {
       const where = lang + '/' + name;
@@ -301,20 +322,34 @@ for (const lang of Object.keys(seen)) {
       if (d.smallest !== null && d.smallest < MIN_LABEL) bad.push([where, 'наименьшая подпись ' + d.smallest + ' единиц вместо ' + MIN_LABEL]);
       for (const t of d.tight) bad.push([where, 'подпись не помещается: ' + t]);
       for (const c of d.cramped) bad.push([where, 'дефект геометрии стрелки: ' + c]);
-      n += 1;
       drawn += 1;
-      if (!d.caption) {
-        bad.push([where, 'у схемы нет подписи <p class="dim">']);
+    }
+  }
+}
+
+// 5, the counts: schemes and illustrations, each its own sequence per language.
+let numbered = 0;
+for (const lang of Object.keys(figs)) {
+  const count = { 'схема': 0, 'иллюстрация': 0 };
+  let word = null;
+  for (const [name, list] of Object.entries(figs[lang])) {
+    for (const f of list) {
+      const where = lang + '/' + name;
+      if (!f.alt) count[f.kind] += 1;
+      const n = count[f.kind];
+      numbered += 1;
+      if (!f.caption) {
+        bad.push([where, 'у ' + (f.kind === 'схема' ? 'схемы' : 'иллюстрации') + ' нет подписи <p class="dim">']);
         continue;
       }
-      const m = CAPTION.exec(d.caption);
+      const m = CAPTION.exec(f.caption);
       if (!m) {
-        bad.push([where, 'подпись не начинается со слова и номера: «' + d.caption.slice(0, 40) + '»']);
+        bad.push([where, 'подпись не начинается со слова и номера: «' + f.caption.slice(0, 40) + '»']);
         continue;
       }
       if (word === null) word = m[1];
       else if (m[1] !== word) bad.push([where, 'подписи названы по-разному: «' + m[1] + '» против «' + word + '»']);
-      if (+m[2] !== n) bad.push([where, 'номер подписи ' + m[2] + ', а по порядку ' + n]);
+      if (+m[2] !== n) bad.push([where, f.kind + ': номер подписи ' + m[2] + ', а по порядку ' + n]);
     }
   }
 }
@@ -353,6 +388,7 @@ console.log();
 console.log('  Проверка схем: холст, подписи, исходники, перевод');
 console.log('  ' + '-'.repeat(46));
 console.log('  схем проверено: ' + drawn + ' на ' + total + (total === 1 ? ' странице' : ' страницах'));
+console.log('  подписей в счёте: ' + numbered + ' (схемы и иллюстрации, два счёта, по всем языкам)');
 console.log('  в браке:        ' + bad.length);
 for (const [where, why] of bad.slice(0, 20)) console.log('        -> ' + where + ': ' + why);
 if (bad.length > 20) console.log('        -> ... и ещё ' + (bad.length - 20));
