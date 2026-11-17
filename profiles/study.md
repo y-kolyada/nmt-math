@@ -83,7 +83,7 @@ with a link to its frame, and a `<div class="solution">` with the worked answer.
 - A wrong answer leads to the law and its limit, never to the right answer.
 - `data-mode="reverse"` hides the law line too until the task is solved
   (step 6).
-- Choice: buttons `data-opt="А".."Д"`; wrong options are real blind moves,
+- Choice: buttons `data-opt` with the letters of the answer sheet of the subject's exam (Cyrillic `А`..`Д` for Ukrainian and mathematics, Latin `A`..`H` for a foreign language: `assets/trainer.js` compares strings and knows no alphabet); wrong options are real blind moves,
   explained in the solution. Match: three `<select>`, `data-answer="В Б А"`.
   Short: one `<input>`, comma or dot accepted, Unicode minus accepted.
 

@@ -14,7 +14,8 @@ Identify the five parameters of the new site with the Conductor:
 - `<site-name>`: header brand, e.g. `devops-docker`
 - `<topic-chip>`: amber chip in the header, e.g. `Docker`
 - `<storage-key>`: local storage and cookie key prefix, e.g. `docker`
-- `[search-word]`: the smoke search term. The Architect's decision of 26.10.2026: `Раздел` for every new site, because only placeholders exist on a fresh site and the word is replaced by real content later.
+- `[search-word]`: the smoke search term. The Architect's decision of 26.10.2026: `Раздел` for every new site, because only placeholders exist on a fresh site and the word is replaced by real content later. The stamp writes the placeholder word itself (`Раздел`, or `Блок` on `study`) into `search` and keeps this argument as the planned word.
+- `PROFILE` (environment, not an argument): the skeleton, read by `tools/siteconf.py`. `assess` by default: Russian source, 15 topics. `study` for the school study sites: Ukrainian source, Russian second, 13 blocks (`profiles/study.md`). `practice` for the sites of the conductor's practice with AI agents: Russian source, then Ukrainian and English, 15 blocks under menu groups, no exam (`profiles/practice.md`). It is fixed at the stamp and written into `site.conf`.
 
 ## 2. Execute Bootstrap from the Seed
 
@@ -32,14 +33,18 @@ The repository has a `chore(init)` commit and the branches `main`, `dev`, `prod`
 ```bash
 cd <factory root>/seed/swa
 ./bootstrap.sh ../../courses/<repo> <site-name> "<topic-chip>" <storage-key> <search-word>
+# a study site:
+PROFILE=study ./bootstrap.sh ../../courses/<repo> <site-name> "<topic-chip>" <storage-key> <search-word>
 ```
+
+`init-course.sh` of Option A does not read `PROFILE` itself: written before it (`PROFILE=study ./scripts/src/bash/cources/init-course.sh ...`), the variable reaches `bootstrap.sh` through the environment.
 
 What the stamp does automatically:
 - Copies the static SWA engine, assets, checks, and harness.
 - Writes `site.conf` with site-specific metadata.
-- Stamps all HTML pages (landing page `index.html`, 15 topics, `glossary.html`, `navigator.html` across `ru`, `en`, `uk`, `de`, plus the root `index.html` language door). The stamp prints how many.
+- Stamps all HTML pages: on `assess` the landing page `index.html`, 15 topics, `glossary.html` and `navigator.html` across `ru`, `en`, `uk`, `de`; on `study` the same shells with 13 blocks across `uk` and `ru`; on `practice` 15 blocks across `ru`, `uk` and `en`; plus the root `index.html` language door. The stamp prints how many.
 - Links the factory's `node_modules` into the site. Without that link the site's own checks go red; do not make it by hand.
-- Builds initial navigation (`build-nav.py`), metadata (`build-meta.py`), and search index (`build-search.py`).
+- Builds initial navigation (`build-nav.py`), the law frequency paragraphs (`build-frequency.py`, which does nothing on `assess` and `practice`), metadata (`build-meta.py`), and search index (`build-search.py`), in that order: meta and search read the pages the earlier builders wrote.
 - Removes seed scaffolding (`pages/`, `tools/new-site.py`).
 
 ## 3. Git setup

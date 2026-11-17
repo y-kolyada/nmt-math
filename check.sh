@@ -19,6 +19,7 @@
 #     python3 tools/build-math.py --check  формулы: напечатаны и совпадают с источником
 #     node tools/check-diagrams.mjs       схемы: холст, подписи, исходники, перевод
 #     python3 tools/check-navigator.py    девять линз и выход из каждой
+#     python3 tools/check-menu.py         меню: одни названия на всех страницах, без заглушек
 #     node tools/shot.mjs ru/01.html       снимок одной страницы, чтобы посмотреть глазами
 #
 # Браузерная проверка требует playwright (npm i playwright). Если его нет,
@@ -93,6 +94,7 @@ SOURCE=$(python3 tools/siteconf.py --get source) || exit 2
 
 run "страница и заголовок" ./tools/check-page.sh "$SOURCE/index.html"
 run "оболочка и навигация" python3 tools/build-nav.py --check
+run "меню без заглушек"    python3 tools/check-menu.py
 run "утверждения сайта"    ./tools/check-claims.sh
 run "примеры запускаются"  ./tools/check-examples.sh
 run "ссылки и якоря"       python3 tools/check-links.py
@@ -105,8 +107,9 @@ run "формулы"             python3 tools/build-math.py --check
 run "схемы страниц"        node tools/check-diagrams.mjs
 run "линзы навигатора"     python3 tools/check-navigator.py
 run "перевод и заглушки"  python3 tools/check-struct.py
-# Study sites only: an assess site keeps exactly the rows it always had.
-if [ "$(python3 tools/siteconf.py --get name)" = study ]; then
+# Sites measured against an exam only (study): an assess or practice site keeps
+# exactly the rows it always had.
+if [ "$(python3 tools/siteconf.py --get exam)" = True ]; then
   run "частота законов"     python3 tools/build-frequency.py --check
   run "ссылки на экзамен"    python3 tools/build-sources.py --check
 fi

@@ -251,7 +251,7 @@ for (const file of files) {
       if (indexed) {
         if (!links[0].getAttribute('href').includes('#')) return ['результат ведёт на страницу без якоря'];
         const samePage = links.find((a) => (a.getAttribute('href') || '').startsWith('02.html#'));
-        if (!samePage) return ['среди результатов нет раздела текущей страницы 02.html'];
+        if (!samePage) return ['среди результатов нет раздела текущей страницы 02.html (слово site.conf: search должно стоять на странице 02)'];
         samePage.click();
         if (getComputedStyle(panel).display !== 'none') return ['поиск не закрылся при переходе к разделу'];
         if (!document.querySelectorAll('mark.search-mark').length) return ['найденные слова не подсвечены в разделе'];
@@ -593,7 +593,15 @@ for (const file of files) {
       // Панель не ездит сама: активный пункт читатель подводит рукой.
       const navScrollKept = nav.scrollTop === navScrollBefore;
 
-      return { hidden, spyOk, below: Math.max(0, below), carried, clean,
+      // The two-column grid: the menu beside the content, not above it. A page
+      // with a foreign shell (div.layout instead of div.cols) kept every phone
+      // check green and put a 1056 px menu over the text (nmt-enlang).
+      const mainBox = document.querySelector('main');
+      const navBox = nav.getBoundingClientRect();
+      const beside = !mainBox || (navBox.width < window.innerWidth / 2
+        && navBox.right <= mainBox.getBoundingClientRect().left + 2);
+
+      return { hidden, spyOk, below: Math.max(0, below), carried, clean, beside, navWidth: Math.round(navBox.width),
                nested, ownItem, firstVisible, firstTop: Math.round(firstTop),
                navVisible: nav.clientHeight, navScrollKept, badCurrent,
                // A page that does not scroll has no current section, so the
@@ -606,6 +614,10 @@ for (const file of files) {
     if (!seen) continue;
     const where = ' (окно ' + viewport.height + 'px)';
     if (seen.badCurrent && viewport === desktops[0][0]) bad.push([file, seen.badCurrent]);
+    if (!seen.beside && viewport === desktops[0][0]) {
+      bad.push([file, 'меню не рядом с содержимым на ширине ' + viewport.width + 'px: ширина меню '
+        + seen.navWidth + 'px (оболочка страницы - div.cols?)']);
+    }
     if (seen.hidden) bad.push([file, 'на дне страницы панель спрятана над окном на ' + seen.hidden + 'px' + where]);
     if (seen.scrollable && !seen.spyOk) bad.push([file, 'на дне страницы последний раздел не подсвечен в навигаторе' + where]);
     if (seen.scrollable && !seen.carried) bad.push([file, 'переключатель языков не уносит текущий раздел' + where]);

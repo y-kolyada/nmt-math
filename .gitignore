@@ -13,3 +13,6 @@ docs/codemie/
 # sync.sh, and this one was - on devops-helm, on 31.10.2026, which is how the
 # line got here.
 .cluster/
+# The snapshot of tools/shot.mjs, written next to the pages to be looked at and
+# never committed: git add -A found it on nmt-enlang.
+phone.png

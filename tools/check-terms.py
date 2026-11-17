@@ -201,6 +201,115 @@ def plain(chunk):
     return GAP_RE.sub(r'\1', words)
 
 
+def check_glossary_structure(glossary_html, glossary_terms):
+    """Проверяет рубрикацию по главам, наличие панели чипов и математику счетчиков.
+
+    Возвращает словарь с результатами и список ошибок:
+    - chips_count: количество чипов
+    - matched_chapters: количество сошедшихся глав
+    - total_chapters: всего глав в чипах
+    - size_metric: число понятий из строки размера (или None)
+    - errors: список текстовых сообщений об ошибках
+    """
+    errors = []
+    total_terms = len(glossary_terms)
+
+    # 1. Проверка строки размера страницы
+    ps_match = re.search(r'<p class="page-size"[^>]*>(.*?)</p>', glossary_html)
+    size_metric = None
+    if not ps_match:
+        errors.append('в словаре отсутствует строка метаданных <p class="page-size">')
+    else:
+        ps_text = ps_match.group(1)
+        m_cnt = re.search(r'(?:Понятий|Terms|Понять|Begriffe):\s*(\d+)', ps_text)
+        if not m_cnt:
+            errors.append('в строке <p class="page-size"> отсутствует метрика понятий (Понятий: N)')
+        else:
+            size_metric = int(m_cnt.group(1))
+            if size_metric != total_terms:
+                errors.append(f'метрика понятий в <p class="page-size"> ({size_metric}) не совпадает с числом терминов ({total_terms})')
+
+    # Если терминов мало (< 10), панель чипов опциональна
+    if total_terms < 10:
+        return {
+            'chips_count': 0,
+            'matched_chapters': 0,
+            'total_chapters': 0,
+            'size_metric': size_metric,
+            'errors': errors
+        }
+
+    # 2. Проверка панели чипов навигации
+    chips_match = re.search(r'<nav class="chips"[^>]*>(.*?)</nav>', glossary_html, re.DOTALL)
+    if not chips_match:
+        errors.append('в словаре отсутствует обязательная панель чипов быстрого перехода <nav class="chips">')
+        return {
+            'chips_count': 0,
+            'matched_chapters': 0,
+            'total_chapters': 0,
+            'size_metric': size_metric,
+            'errors': errors
+        }
+
+    chips_html = chips_match.group(1)
+    chips = re.findall(r'<a href="#((?:ch-\d\d|block-[a-z0-9_-]+))">([^<]+)</a>', chips_html)
+    if not chips:
+        errors.append('в панели <nav class="chips"> не найдено ссылок на разделы вида #ch-NN или #block-*')
+        return {
+            'chips_count': 0,
+            'matched_chapters': 0,
+            'total_chapters': 0,
+            'size_metric': size_metric,
+            'errors': errors
+        }
+
+    # 3. Подсчет терминов по главам/разделам в теле словаря
+    sections = re.split(r'(<h2 id="(?:ch-\d\d|block-[a-z0-9_-]+)">)', glossary_html)
+    sec_counts = {}
+    for i in range(1, len(sections), 2):
+        tag = sections[i]
+        content = sections[i + 1]
+        ch_id = re.search(r'id="((?:ch-\d\d|block-[a-z0-9_-]+))"', tag).group(1)
+        cnt = len(re.findall(r'<div class="glossary-term"', content))
+        sec_counts[ch_id] = cnt
+
+    orphan_terms = len(re.findall(r'<div class="glossary-term"', sections[0]))
+    if orphan_terms > 0:
+        errors.append(f'обнаружено {orphan_terms} терминов до первого заголовка раздела <h2 id="..."> (термины-сироты)')
+
+    matched_chapters = 0
+    sum_chips = 0
+    for ch_id, label in chips:
+        m_count = re.search(r'\((\d+)\)', label)
+        if not m_count:
+            errors.append(f'в чипе {ch_id} ({label}) отсутствует счетчик понятий в скобках (N)')
+            continue
+        chip_cnt = int(m_count.group(1))
+        if chip_cnt == 0:
+            errors.append(f'чип #{ch_id} имеет 0 понятий; пустые чипы в панели навигации запрещены')
+            continue
+        sum_chips += chip_cnt
+
+        actual_cnt = sec_counts.get(ch_id)
+        if actual_cnt is None:
+            errors.append(f'в чипе заявлена глава #{ch_id}, но заголовок <h2 id="{ch_id}"> отсутствует в словаре')
+        elif actual_cnt != chip_cnt:
+            errors.append(f'в чипе #{ch_id} указано ({chip_cnt}), а фактически в разделе находится {actual_cnt} терминов')
+        else:
+            matched_chapters += 1
+
+    if sum_chips != total_terms:
+        errors.append(f'сумма счетчиков в чипах ({sum_chips}) не совпадает с общим числом терминов ({total_terms})')
+
+    return {
+        'chips_count': len(chips),
+        'matched_chapters': matched_chapters,
+        'total_chapters': len(chips),
+        'size_metric': size_metric,
+        'errors': errors
+    }
+
+
 def main():
     if not os.path.isfile(GLOSSARY_PATH):
         print()
@@ -318,13 +427,17 @@ def main():
     # Identify glossary terms missing in-page markup
     missing_in_pages = [t for t in glossary_terms if t not in found_term_links]
 
+    # Седьмая сторона: структурированный словарь понятий с рубрикацией по главам,
+    # панелью чипов быстрого перехода (.chips) и математикой счетчиков (N).
+    glossary_struct = check_glossary_structure(glossary_html, glossary_terms)
+
     explained = set()
     for found in GLOSSARY_NAME_RE.finditer(glossary_html):
         explained.update(ACRONYM_RE.findall(found.group(1) or found.group(2)))
     skip = SHELL_WORDS | site_words()
     unexplained = sorted(a for a in acronyms if a not in explained and a not in skip)
 
-    has_errors = bool(broken_links or missing_in_pages or unexplained or drifted or deaf or split)
+    has_errors = bool(broken_links or missing_in_pages or unexplained or drifted or deaf or split or glossary_struct['errors'])
 
     print()
     print('  Двусторонний контракт терминов')
@@ -342,6 +455,11 @@ def main():
     print(f'  описаний карточек проверено: {compared}, с обломками: {len(drifted)}')
     print(f'  страниц без своего скрипта:  {len(deaf)}')
     print(f'  карточек внутри слова:       {len(split)}')
+    if glossary_struct['chips_count'] > 0 or glossary_struct['size_metric'] is not None:
+        print(f'  чипов навигации по главам:   {glossary_struct["chips_count"]}')
+        print(f'  сходимость счетчиков глав:   {glossary_struct["matched_chapters"]}/{glossary_struct["total_chapters"]}')
+        metric_str = str(glossary_struct["size_metric"]) if glossary_struct["size_metric"] is not None else "отсутствует"
+        print(f'  метрика понятий в размере:   {metric_str}')
 
     if missing_in_pages:
         print()
@@ -392,6 +510,12 @@ def main():
         if len(split) > 10:
             print(f'    -> ... и ещё {len(split) - 10}')
         print('  Кнопка карточки должна держать слово целиком.')
+
+    if glossary_struct['errors']:
+        print()
+        print('  ОШИБКА: дефекты рубрикации или математики словаря понятий:')
+        for g_err in glossary_struct['errors']:
+            print(f'    -> {g_err}')
 
     print('  ' + '-' * 46)
     if has_errors:

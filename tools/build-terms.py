@@ -126,7 +126,46 @@ def main():
 
     new_content = meta_pattern.sub(enrich_meta, new_content)
 
-    changes_needed = legacy_count + enriched_terms
+    # 3. Synchronize chip counters in <nav class="chips">
+    chips_match = re.search(r'(<nav class="chips"[^>]*>)(.*?)(</nav>)', new_content, re.DOTALL)
+    chip_updates = 0
+    if chips_match:
+        chips_prefix = chips_match.group(1)
+        chips_inner = chips_match.group(2)
+        chips_suffix = chips_match.group(3)
+
+        sections = re.split(r'(<h2 id="(?:ch-\d\d|block-[a-z0-9_-]+)">)', new_content)
+        sec_counts = {}
+        for i in range(1, len(sections), 2):
+            tag = sections[i]
+            sec_content = sections[i + 1]
+            ch_id = re.search(r'id="((?:ch-\d\d|block-[a-z0-9_-]+))"', tag).group(1)
+            cnt = len(re.findall(r'<div class="glossary-term"', sec_content))
+            sec_counts[ch_id] = cnt
+
+        def update_chip(m):
+            nonlocal chip_updates
+            c_prefix = m.group(1)
+            ch_id = m.group(2)
+            old_label = m.group(3).strip()
+            c_suffix = m.group(4)
+            base_title = re.sub(r'\s*\(\d+\)$', '', old_label)
+            actual = sec_counts.get(ch_id, 0)
+            new_label = f"{base_title} ({actual})"
+            if new_label != old_label:
+                chip_updates += 1
+                return f"{c_prefix}{new_label}{c_suffix}"
+            return m.group(0)
+
+        new_chips_inner = re.sub(
+            r'(<a href="#((?:ch-\d\d|block-[a-z0-9_-]+))">)(.*?)(</a>)',
+            update_chip,
+            chips_inner
+        )
+        if chip_updates > 0:
+            new_content = new_content[:chips_match.start()] + chips_prefix + new_chips_inner + chips_suffix + new_content[chips_match.end():]
+
+    changes_needed = legacy_count + enriched_terms + chip_updates
 
     print()
     print('  Синхронизация сносок словаря («Где встретилось:»)')
@@ -134,6 +173,8 @@ def main():
     print(f'  терминов в словаре:               {len(term_blocks)}')
     print(f'  устаревших сносок «впервые:»:      {legacy_count}')
     print(f'  терминов с дополненными ссылками: {enriched_terms}')
+    if chips_match:
+        print(f'  чипов со скорректированным счетом: {chip_updates}')
     print('  ' + '-' * 46)
 
     if check_mode:
@@ -149,9 +190,9 @@ def main():
         if changes_needed > 0:
             with open(GLOSSARY_PATH, 'w', encoding='utf-8') as f:
                 f.write(new_content)
-            print(f'  успешно обновлено сносок: {changes_needed}')
+            print(f'  успешно обновлено сносок и чипов: {changes_needed}')
         else:
-            print('  все сноски каноничны и актуальны')
+            print('  все сноски и чипы каноничны и актуальны')
         print('  ЗЕЛЁНОЕ')
         print()
         return 0

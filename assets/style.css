@@ -3,7 +3,7 @@
 :root {
   --bg: #fbfbfa; --fg: #1a1a18; --dim: #6b6b66; --line: #e4e4e0;
   --acc: #1d4ed8; --ok: #126b2f; --warn: #8a5a00; --code: #f1f1ee;
-  --term-accent: #db8b0e; --term-bg-hover: rgba(252, 189, 74, 0.28);
+  --term-accent: #db8b0e; --term-bg-hover: rgba(252, 189, 74, 0.28); --brand-amber: #db8b0e;
   --target-bg: rgba(252, 189, 74, 0.12); --target-line: rgba(219, 139, 14, 0.55);
   --base-font-size: 16px;
 }
@@ -11,7 +11,7 @@
   :root {
     --bg: #16161a; --fg: #f0f0ee; --dim: #9a9a95; --line: #2e2e34;
     --acc: #8ab0ff; --ok: #6fd48c; --warn: #e0b45a; --code: #22222a;
-    --term-accent: #fcbd4a; --term-bg-hover: rgba(252, 189, 74, 0.22);
+    --term-accent: #fcbd4a; --term-bg-hover: rgba(252, 189, 74, 0.22); --brand-amber: #fcbd4a;
     --target-bg: rgba(252, 189, 74, 0.08); --target-line: rgba(252, 189, 74, 0.45);
   }
 }
@@ -19,13 +19,13 @@
 html[data-theme="dark"] {
   --bg: #16161a; --fg: #f0f0ee; --dim: #9a9a95; --line: #2e2e34;
   --acc: #8ab0ff; --ok: #6fd48c; --warn: #e0b45a; --code: #22222a;
-  --term-accent: #fcbd4a; --term-bg-hover: rgba(252, 189, 74, 0.22);
+  --term-accent: #fcbd4a; --term-bg-hover: rgba(252, 189, 74, 0.22); --brand-amber: #fcbd4a;
   --target-bg: rgba(252, 189, 74, 0.08); --target-line: rgba(252, 189, 74, 0.45);
 }
 html[data-theme="light"] {
   --bg: #fbfbfa; --fg: #1a1a18; --dim: #6b6b66; --line: #e4e4e0;
   --acc: #1d4ed8; --ok: #126b2f; --warn: #8a5a00; --code: #f1f1ee;
-  --term-accent: #db8b0e; --term-bg-hover: rgba(252, 189, 74, 0.28);
+  --term-accent: #db8b0e; --term-bg-hover: rgba(252, 189, 74, 0.28); --brand-amber: #db8b0e;
   --target-bg: rgba(252, 189, 74, 0.12); --target-line: rgba(219, 139, 14, 0.55);
 }
 
@@ -113,8 +113,11 @@ header.top .three {
    с запасом (6.82 : 1 в светлой теме, 11.07 : 1 в тёмной). Увеличивать размер
    нельзя - слоган переносится на вторую строку и крадёт первый экран телефона.
    Со знаком продукта плашка не спорит: тот 18.4px, она 13.6px. */
+/* The chip takes the amber of the brand, not of the terms: a site palette
+   (study.css, nmt-*) recolours the terms and the law frames, and the ochre read
+   as dirty amber beside the badge (Conductor 2026-11-17). */
 header.top .three .topic {
-  background: var(--term-accent);
+  background: var(--brand-amber);
   color: #121316;
   padding: 1px 6px;
   border-radius: 4px;
@@ -1258,3 +1261,7 @@ math { font-size: inherit; color: inherit; }
   padding-bottom: 2px;
 }
 .math-block math { display: block; margin: 0 auto; min-width: max-content; }
+
+/* The number of a diagram, «Схема N.», in bold and in the text colour: the
+   caption under it is dimmed, and a dimmed number ran into the caption's words. */
+.box p.dim > strong:first-child { color: var(--fg); font-weight: 700; }

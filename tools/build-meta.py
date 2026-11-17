@@ -226,7 +226,17 @@ def head_block(lang, name, title, text):
     return '\n'.join(rows)
 
 
-def size_line(lang, words):
+def size_line(lang, words, name=None, text=''):
+    if name == 'glossary' and '<div class="glossary-term"' in text:
+        terms_count = len(re.findall(r'<div class="glossary-term"', text))
+        term_say = {
+            'ru': 'Понятий:',
+            'en': 'Terms:',
+            'uk': 'Понять:',
+            'de': 'Begriffe:',
+        }
+        return ('\n    <p class="page-size" data-words="%d">%s %d · %s %d</p>'
+                % (words, SAY[lang]['size'], words, term_say.get(lang, 'Понятий:'), terms_count))
     return ('\n    <p class="page-size" data-words="%d">%s %d</p>'
             % (words, SAY[lang]['size'], words))
 
@@ -261,7 +271,7 @@ def rebuild(lang, name, titles):
     pager = pager_block(lang, prev_page, next_page, titles)
 
     words = count_words(text)
-    text = re.sub(r'(</h1>)', lambda m: m.group(1) + size_line(lang, words), text, count=1)
+    text = re.sub(r'(</h1>)', lambda m: m.group(1) + size_line(lang, words, name, text), text, count=1)
 
     if pager and '<div class="stub-card">' not in text:
         footer_text = CONF.get('footer') if (CONF.get('footer') and lang == SOURCE) else SAY[lang]['footer']

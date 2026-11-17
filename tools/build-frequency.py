@@ -30,6 +30,7 @@ import examslice
 import siteconf
 
 PROFILE = siteconf.profile()
+FREQ_AT = siteconf.conf().get('freq_at', 'artifacts')
 SAY = {
     'uk': {'line': 'Частота на цьому сайті, а не на НМТ: на цій сторінці %d %s тренажера, і вони спираються на такі закони: %s.',
            'none': 'На цій сторінці задач тренажера немає.',
@@ -44,7 +45,7 @@ SAY = {
            'even': 'кожен закон по одній задачі', 'and': ' та ',
            'exam': 'У реальних варіантах НМТ %s цей блок потрібен у %d %s з %d: %s.',
            'exam0': 'У реальних варіантах НМТ %s цей блок не знадобився в жодному з %d завдань.',
-           'xhead': 'Реальні варіанти НМТ %s', 'xintro': 'Ті самі закони, але в %d завданнях шести основних сесій НМТ %s: друга цифра поруч із першою. Розмітка наша, завдання - за посиланнями в кожному блоці.',
+           'xhead': 'Реальні варіанти НМТ %s', 'xintro': 'Ті самі закони, але в %d завданнях %s НМТ %s: друга цифра поруч із першою. Розмітка наша, завдання - за посиланнями в кожному блоці.',
            'xblocks': 'Завдань НМТ за блоками', 'xtop': 'Закони, на які спирається найбільше завдань НМТ',
            'xmiss': 'Закони НМТ, яких на сайті ще немає', 'xmissintro': 'Ці теми трапилися в завданнях НМТ, а окремого закону на сайті для них поки немає. Це вхід для наступних блоків, а не готовий матеріал.',
            'xitem': '%s: %d %s', 'xtask': ('завдання', 'завдання', 'завдань'), 'xloc': ('завданні', 'завданнях', 'завданнях'),
@@ -62,7 +63,7 @@ SAY = {
            'even': 'каждый закон по одной задаче', 'and': ' и ',
            'exam': 'В реальных вариантах НМТ %s этот блок нужен в %d %s из %d: %s.',
            'exam0': 'В реальных вариантах НМТ %s этот блок не понадобился ни в одном из %d заданий.',
-           'xhead': 'Реальные варианты НМТ %s', 'xintro': 'Те же законы, но в %d заданиях шести основных сессий НМТ %s: вторая цифра рядом с первой. Разметка наша, задания - по ссылкам в каждом блоке.',
+           'xhead': 'Реальные варианты НМТ %s', 'xintro': 'Те же законы, но в %d заданиях %s НМТ %s: вторая цифра рядом с первой. Разметка наша, задания - по ссылкам в каждом блоке.',
            'xblocks': 'Заданий НМТ по блокам', 'xtop': 'Законы, на которые опирается больше всего заданий НМТ',
            'xmiss': 'Законы НМТ, которых на сайте ещё нет', 'xmissintro': 'Эти темы встретились в заданиях НМТ, а отдельного закона на сайте для них пока нет. Это вход для следующих блоков, а не готовый материал.',
            'xitem': '%s: %d %s', 'xtask': ('задание', 'задания', 'заданий'), 'xloc': ('задании', 'заданиях', 'заданиях'),
@@ -81,7 +82,7 @@ SAY = {
            'even': 'one task for each law', 'and': ' and ',
            'exam': 'In real NMT papers of %s this block is needed in %d %s out of %d: %s.',
            'exam0': 'In real NMT papers of %s this block was not needed in any of the %d tasks.',
-           'xhead': 'Real NMT papers of %s', 'xintro': 'The same laws, but in %d tasks of the six main NMT sessions of %s: the second number next to the first. The tagging is ours, the tasks are behind the links in each block.',
+           'xhead': 'Real NMT papers of %s', 'xintro': 'The same laws, but in %d tasks of the %s of %s: the second number next to the first. The tagging is ours, the tasks are behind the links in each block.',
            'xblocks': 'NMT tasks by block', 'xtop': 'Laws that the most NMT tasks lean on',
            'xmiss': 'NMT laws the site does not have yet', 'xmissintro': 'These topics came up in NMT tasks, but the site has no law of its own for them yet. This is input for the next blocks, not finished material.',
            'xitem': '%s: %d %s', 'xtask': ('task', 'tasks'), 'xloc': ('task', 'tasks'),
@@ -100,7 +101,7 @@ SAY = {
            'even': 'jedes Gesetz mit einer Aufgabe', 'and': ' und ',
            'exam': 'In echten NMT-Varianten %s wird dieser Block in %d %s von %d gebraucht: %s.',
            'exam0': 'In echten NMT-Varianten %s wurde dieser Block in keiner der %d Aufgaben gebraucht.',
-           'xhead': 'Echte NMT-Varianten %s', 'xintro': 'Dieselben Gesetze, aber in %d Aufgaben der sechs Hauptsitzungen des NMT %s: die zweite Zahl neben der ersten. Die Zuordnung ist unsere, die Aufgaben stehen hinter den Links in jedem Block.',
+           'xhead': 'Echte NMT-Varianten %s', 'xintro': 'Dieselben Gesetze, aber in %d Aufgaben %s des NMT %s: die zweite Zahl neben der ersten. Die Zuordnung ist unsere, die Aufgaben stehen hinter den Links in jedem Block.',
            'xblocks': 'NMT-Aufgaben nach Blöcken', 'xtop': 'Gesetze, auf die sich die meisten NMT-Aufgaben stützen',
            'xmiss': 'NMT-Gesetze, die die Seite noch nicht hat', 'xmissintro': 'Diese Themen kamen in NMT-Aufgaben vor, aber die Seite hat für sie noch kein eigenes Gesetz. Das ist ein Eingang für die nächsten Blöcke, kein fertiges Material.',
            'xitem': '%s: %d %s', 'xtask': ('Aufgabe', 'Aufgaben'), 'xloc': ('Aufgabe', 'Aufgaben'),
@@ -119,6 +120,26 @@ def plain(s):
     s = re.sub(r'<annotation[^>]*>.*?</annotation>', '', s, flags=re.S)
     s = re.sub(r'<span class="term-card".*?</span></span></span>', '', s, flags=re.S)
     return ' '.join(html.unescape(TAG.sub(' ', s)).split()).replace(' .', '.').replace(' ,', ',')
+
+
+# The number of main sessions in the slice, in words and in the genitive the
+# sentence needs ("шести основних сесій"): nmt-math had six, other sites have
+# other counts. Beyond ten the number is written in digits.
+SESSIONS = {
+    'uk': ('однієї основної сесії', '%s основних сесій',
+           ['', '', 'двох', 'трьох', 'чотирьох', "п'яти", 'шести', 'семи', 'восьми', "дев'яти", 'десяти']),
+    'ru': ('одной основной сессии', '%s основных сессий',
+           ['', '', 'двух', 'трёх', 'четырёх', 'пяти', 'шести', 'семи', 'восьми', 'девяти', 'десяти']),
+    'en': ('one main NMT session', '%s main NMT sessions',
+           ['', '', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']),
+    'de': ('der einen Hauptsitzung', 'der %s Hauptsitzungen',
+           ['', '', 'zwei', 'drei', 'vier', 'fünf', 'sechs', 'sieben', 'acht', 'neun', 'zehn']),
+}
+
+
+def sessions(lang, n):
+    one, many, words = SESSIONS.get(lang, SESSIONS['uk'])
+    return one if n == 1 else many % (words[n] if n < len(words) else n)
 
 
 def plural(n, forms):
@@ -218,6 +239,10 @@ def bake(lang, check):
     # tags are not a defect here, and the landing leaves them out and says so.
     stubs = sorted(stem for stem in PROFILE['topics'] if 'stub-card' in pages.get(stem, ''))
     for r in rows or []:
+        # A task with no tag counts nowhere: neither on a block nor in the
+        # missing topics. Silent, it makes the slice look complete.
+        if not r['tags']:
+            unresolved.append('срез %s/%s №%s: задание без закона' % (r['year'], r['test'], r['n']))
         for tag in r['tags']:
             if tag.split(':')[0] in stubs:
                 continue
@@ -232,16 +257,30 @@ def bake(lang, check):
             continue
         end = new.find('</div>', at)
         said = block_line(lang, tasks, counts)
+        exam_said = ''
         if exam:
             mine = dict(exam[0].get(stem, {}))
             n = mine.pop('__tasks__', 0)
             if n:
-                said += ' ' + say['exam'] % (examslice.years(rows), n, plural(n, say['xloc']), len(rows),
-                                             ', '.join('%s - %d' % kv for kv in ranked(mine)))
+                exam_said = say['exam'] % (examslice.years(rows), n, plural(n, say['xloc']), len(rows),
+                                           ', '.join('%s - %d' % kv for kv in ranked(mine)))
             else:
-                said += ' ' + say['exam0'] % (examslice.years(rows), len(rows))
-        line = '\n    <!-- freq -->\n    <p class="dim law-freq" data-tasks="%d">%s</p>\n    <!-- /freq -->' % (tasks, said)
-        new = new[:end + 6] + line + new[end + 6:]
+                exam_said = say['exam0'] % (examslice.years(rows), len(rows))
+        # site.conf freq_at: "artifacts" (default) keeps one line under the
+        # artifacts box. "lead" moves only the exam sentence under the lead
+        # paragraph, where a reader preparing for the exam sees it first; the
+        # trainer count stays below, where it was.
+        lead = new.find('<p class="lead">')
+        if FREQ_AT == 'lead' and exam_said and lead >= 0:
+            top = new.find('</p>', lead) + 4
+            line = '\n    <p class="dim law-freq" data-tasks="%d">%s</p>' % (tasks, said)
+            new = new[:end + 6] + '\n    <!-- freq -->' + line + '\n    <!-- /freq -->' + new[end + 6:]
+            new = new[:top] + '\n    <!-- freq -->\n    <p class="dim law-freq-nmt">%s</p>\n    <!-- /freq -->' % exam_said + new[top:]
+        else:
+            if exam_said:
+                said += ' ' + exam_said
+            line = '\n    <!-- freq -->\n    <p class="dim law-freq" data-tasks="%d">%s</p>\n    <!-- /freq -->' % (tasks, said)
+            new = new[:end + 6] + line + new[end + 6:]
         if new != text:
             changed.append('%s/%s.html' % (lang, stem))
             if not check:
@@ -272,7 +311,7 @@ def bake(lang, check):
             yrs = examslice.years(exrows)
             per_block, per_tag = exam
             rows += ['    <h3 id="freq-nmt">%s</h3>' % (say['xhead'] % yrs),
-                     '    <p>%s</p>' % (say['xintro'] % (len(exrows), yrs)),
+                     '    <p>%s</p>' % (say['xintro'] % (len(exrows), sessions(lang, len({(r['year'], r['session']) for r in exrows})), yrs)),
                      '    <h3 id="freq-nmt-blocks">%s</h3>' % say['xblocks'], '    <ul>']
             for stem in per_page:
                 n = per_block.get(stem, {}).get('__tasks__', 0)
@@ -305,8 +344,8 @@ def main(argv):
     print()
     print('  Частота законов в задачах тренажёра')
     print('  ' + '-' * 46)
-    if PROFILE['name'] != 'study':
-        print('  профиль %s: тренажёра нет, считать нечего' % PROFILE['name'])
+    if not PROFILE['exam']:
+        print('  профиль %s: среза экзамена нет, считать нечего' % PROFILE['name'])
         print('  ЗЕЛЁНОЕ')
         print()
         return 0

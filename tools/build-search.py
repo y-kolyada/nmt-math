@@ -114,12 +114,12 @@ def kind_of(page):
     """Topic, example or question page - by the profile, not by a number.
 
     The engineering series numbers topics 01-09, examples 10-12 and question
-    banks 13-15; a study site has thirteen blocks of laws and nothing else, and
-    reading its block 10 as an example chapter put geometry under "Приклади".
+    banks 13-15; a study or practice site has only blocks of laws, and reading
+    block 10 of a study site as an example chapter put geometry under "Приклади".
     """
     name = page[:-5] if page.endswith('.html') else page
     if name.isdigit():
-        if PROFILE['name'] == 'study' or name in PROFILE['topics'] and int(name) <= 9:
+        if PROFILE['blocks'] or name in PROFILE['topics'] and int(name) <= 9:
             return 't'
         n = int(name)
         if n <= 9:

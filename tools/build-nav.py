@@ -85,7 +85,8 @@ SHELL_TAG = (
 SKIP_LINK = re.compile(r'\s*<a class="skip"[^>]*>.*?</a>', re.S)
 SWITCHER = re.compile(r'<(div|nav) class="lang-switcher"[^>]*>(.*?)</\1>', re.S)
 SWITCH_LINK = re.compile(r'<a ([^>]*?)href="([^"]+)"([^>]*)>(.*?)</a>', re.S)
-# study.css, trainer.js and sources.js are loaded only by pages of study-profile sites.
+# study.css and trainer.js are loaded only by pages of block sites (study, practice),
+# sources.js only by those measured against an exam (study).
 ASSETS = ('style.css', 'swa.js', 'terms.js', 'cp.js', 'study.css', 'trainer.js', 'sources.js')
 NAV_ITEM = re.compile(r'(<nav class="contents"[^>]*>.*?</nav>)', re.S | re.I)
 NAV_LINK = re.compile(r'(<a\b[^>]*href="(?:\.\./\w\w/)?(\d\d)\.html"[^>]*>)(.*?)(</a>)', re.S | re.I)
@@ -160,6 +161,33 @@ def accessible(text, lang):
     # 2. Переключатель языков: область с подписью, у ссылок язык и имя языка.
     def switcher(m):
         inner = m.group(2)
+        # The set of languages comes from site.conf, not from the markup: a
+        # language added later reaches the written pages, a language dropped
+        # leaves them. Links already standing keep their order, the missing
+        # ones go to the end in the order of langs, so a switcher that is
+        # already right is not touched at all.
+        found = SWITCH_LINK.findall(inner)
+
+        def code_of(href):
+            other = re.search(r'\.\./(\w\w)/', href)
+            return other.group(1) if other else lang
+        codes = [code_of(f[1]) for f in found]
+        if found and (set(codes) != set(LANGS) or len(codes) != len(set(codes))):
+            base = re.sub(r'^\.\./\w\w/', '', found[0][1]).split('#')[0]
+            kept, seen = [], set()
+            for f, code in zip(found, codes):
+                if code in LANGS and code not in seen:
+                    kept.append('<a %shref="%s"%s>%s</a>' % f)
+                    seen.add(code)
+            for code in LANGS:
+                if code not in seen:
+                    href = base if code == lang else '../%s/%s' % (code, base)
+                    kept.append('<a href="%s">%s</a>' % (href, code.upper()))
+            indent = re.match(r'\s*?\n([ \t]*)<a', inner)
+            indent = indent.group(1) if indent else '      '
+            tail = re.search(r'\n([ \t]*)$', inner)
+            tail = tail.group(1) if tail else '    '
+            inner = ''.join('\n' + indent + a for a in kept) + '\n' + tail
 
         def link(one):
             href = one.group(2)
@@ -199,7 +227,7 @@ def accessible(text, lang):
                 elif kind == 'theme':
                     title, aria = words['theme']
                 else:
-                    key = 'nav-study' if kind == 'nav' and PROFILE['name'] == 'study' else kind
+                    key = 'nav-study' if kind == 'nav' and PROFILE['blocks'] else kind
                     title, aria = None, words[key]
                 new = put(tag, 'aria-label', aria)
                 if title:

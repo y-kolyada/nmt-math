@@ -8,7 +8,10 @@
   text-transform: uppercase; color: var(--dim); margin: 2.2rem 0 -.4rem; }
 
 /* Рамка закона: то, что узнаётся за секунды. */
-.law { border: 2px solid var(--acc); border-radius: 10px; padding: 12px 16px; margin: 1.2rem 0; }
+/* Amber, the site's accent, not --acc: the link blue says "you can click this",
+   and a frame is not a link. The task's mark before «Закон:» is the same amber,
+   so a task and the law it trains read as one pair. */
+.law { border: 2px solid var(--term-accent); border-radius: 10px; padding: 12px 16px; margin: 1.2rem 0; }
 .law .law-name { font-weight: 700; margin: 0 0 6px; }
 .law .math-block { margin: .4rem 0; }
 .law p:last-child { margin-bottom: 0; }
@@ -18,7 +21,20 @@
 
 /* Задача формы НМТ с явной ссылкой на закон. */
 .task { border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; margin: 1.2rem 0; }
-.task .task-kind { font-size: .8rem; color: var(--dim); margin: 0 0 6px; }
+/* A card stands apart from the next one. Three cards in a row read as one
+   block of text when the kind of task is pale grey and the options are plain:
+   so the kind sits on the amber ground the glossary and the search use, in
+   bold (dark text on amber needs the weight at this size), the option letter
+   is bold, and the law the task trains is marked by a framed rule. */
+.task .task-kind { display: inline-block; font-size: .8rem; font-weight: 700; color: var(--fg);
+  background: var(--term-bg-hover); padding: 1px 8px; border-radius: 5px; margin: 0 0 8px; }
+.task .opts button::first-letter { font-weight: 700; }
+/* A button centres its text; an option of two lines then reads ragged on both sides. */
+.task .opts button { text-align: left; }
+.task .law-ref::before { content: ""; display: inline-block; width: 1.05em; height: 1.05em;
+  margin-right: .35em; vertical-align: -.18em; background: var(--term-accent);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round'%3E%3Crect x='2.6' y='3.4' width='14.8' height='13.2' rx='2.2'/%3E%3Cpath d='M6.2 8.2h7.6M6.2 11.8h4.6'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round'%3E%3Crect x='2.6' y='3.4' width='14.8' height='13.2' rx='2.2'/%3E%3Cpath d='M6.2 8.2h7.6M6.2 11.8h4.6'/%3E%3C/svg%3E") center / contain no-repeat; }
 .task .opts { display: flex; flex-wrap: wrap; gap: 8px; margin: .6rem 0; }
 .task .opts button, .task .check { font: inherit; padding: 6px 12px; border: 1px solid var(--line);
   border-radius: 8px; background: var(--bg); color: var(--fg); cursor: pointer; min-height: 40px; }
@@ -48,6 +64,17 @@ details[open] summary { margin-bottom: 6px; }
 nav.contents li.group { font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em;
   color: var(--dim); margin: .5rem 0 .15rem 10px; list-style: none; }
 
+/* A dense menu (data-dense, stamped on profiles with menu groups: practice).
+   Fifteen blocks under seven captions are 22 rows: at the series size the page's
+   own sections fell below the visible panel of an 860px window on blocks 14, 15
+   and the navigator, and the panel does not scroll by itself. Tighter rows on a
+   wide screen only; on a phone the menu is a drawer and keeps its touch size. */
+@media (min-width: 56rem) {
+  nav.contents[data-dense] li > a { padding: 3px 10px; }
+  nav.contents[data-dense] li { margin: 0 0 1px; }
+  nav.contents[data-dense] li.group { font-size: .7rem; line-height: 1.2; margin: .4rem 0 .1rem 10px; }
+}
+
 /* Thirteen blocks mean two-digit numbers in the menu; the series width of
    1.4em fits one digit, and "10" glued itself to the block title. */
 nav.contents .num { width: 1.9em; }
@@ -62,7 +89,7 @@ nav.contents .num { width: 1.9em; }
 .ext ul { margin: 0 0 .5rem; padding-left: 1.2rem; }
 .ext li { margin: 0 0 4px; }
 @media (max-width: 48rem) { .ext { padding: 8px 12px 4px; } .ext ul { padding-left: 1rem; } }
-.ext[hidden], .ext-source[hidden], .ext-off[hidden], .search-facet[hidden] { display: none; }
+.ext[hidden], .ext-source[hidden], .ext-off[hidden], .search-facet[hidden], [data-kind="illustration"][hidden] { display: none; }
 
 /* Шестерня в лотке - по образцу кнопки поиска; окно настроек - по образцу
    окна поиска: та же рамка, шапка, крестик и подложка. Флажок «включено»
@@ -109,3 +136,55 @@ nav.contents .num { width: 1.9em; }
 /* Метод: схема применения законов в шаге «Застосування». */
 .method { border: 1px dashed var(--line); border-radius: 10px; padding: 10px 16px; margin: 1.2rem 0; }
 .method > h3 { margin-top: 0; }
+
+/* The NMT line palette (design book §6, decided with the Conductor 2026-11-15):
+   warm old paper, ink, links in oxblood, law frames in ochre. It applies to the
+   school sites of the series by their name, courses/nmt-*, through the
+   data-site attribute every page carries, so no site file and no builder is
+   involved, and a study or practice site with another name keeps the series
+   palette. WCAG on the light/dark background: text 15.5/15.0, dim 5.7/6.9,
+   links 7.5/8.3, law frame 3.7/9.4 (series: 2.6/10.8). The selectors repeat
+   the three ways style.css sets a theme: the system, data-theme dark, light. */
+html[data-site^="nmt-"] {
+  --bg: #f8f4ea; --fg: #221b13; --dim: #6a5f50; --line: #e3dac8;
+  --acc: #8f2d1c; --ok: #126b2f; --warn: #7a4f00; --code: #efe9dc;
+  --term-accent: #a8741a; --term-bg-hover: rgba(168, 116, 26, 0.20);
+  --target-bg: rgba(168, 116, 26, 0.10); --target-line: rgba(168, 116, 26, 0.55);
+}
+@media (prefers-color-scheme: dark) {
+  html[data-site^="nmt-"]:not([data-theme="light"]) {
+    --bg: #18140f; --fg: #efe8da; --dim: #a99d89; --line: #352d22;
+    --acc: #eb9a80; --ok: #6fd48c; --warn: #e0b45a; --code: #241f18;
+    --term-accent: #e2b25a; --term-bg-hover: rgba(226, 178, 90, 0.20);
+    --target-bg: rgba(226, 178, 90, 0.08); --target-line: rgba(226, 178, 90, 0.45);
+  }
+}
+html[data-site^="nmt-"][data-theme="dark"] {
+  --bg: #18140f; --fg: #efe8da; --dim: #a99d89; --line: #352d22;
+  --acc: #eb9a80; --ok: #6fd48c; --warn: #e0b45a; --code: #241f18;
+  --term-accent: #e2b25a; --term-bg-hover: rgba(226, 178, 90, 0.20);
+  --target-bg: rgba(226, 178, 90, 0.08); --target-line: rgba(226, 178, 90, 0.45);
+}
+
+/* A raster illustration (design book §6.3): webp 640 wide, the width of the
+   column, on its own paper; the caption starts «Ілюстрація, не джерело». */
+[data-kind="illustration"] img { display: block; width: 100%; height: auto; border-radius: 6px; }
+
+/* A panno (design book §6.7, the Conductor's idea 2026-11-16): the pictures of
+   all topics as one mosaic of small tiles with one caption below, so a page is
+   not cut by pictures. A tile is a button that opens its picture in a popover:
+   the browser dims the page, and Esc, a click outside or a click on the picture
+   closes it. No script is involved; a browser without popover keeps the mosaic. */
+.panno { margin: 1.2rem 0; }
+.panno-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
+@media (max-width: 480px) { .panno-grid { grid-template-columns: repeat(3, 1fr); } }
+.panno-tile { display: block; padding: 0; border: 0; background: none; line-height: 0; cursor: zoom-in; }
+.panno-tile img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 3px; }
+.panno-tile:hover img, .panno-tile:focus-visible img { outline: 2px solid var(--term-accent, var(--acc)); outline-offset: -2px; }
+.panno figcaption { margin-top: .5rem; text-align: center; }
+.panno-pop { width: min(94vw, 760px); max-height: 94vh; padding: 0; color: var(--fg); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 18px 50px rgba(0, 0, 0, .35); overflow: auto; }
+.panno-pop::backdrop { background: rgba(0, 0, 0, .72); }
+.panno-shut { display: block; width: 100%; padding: 0; border: 0; background: none; line-height: 0; cursor: zoom-out; }
+.panno-shut img { display: block; width: 100%; height: auto; }
+.panno-pop p { margin: .6rem 1rem .9rem; }

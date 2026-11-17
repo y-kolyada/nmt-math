@@ -120,16 +120,31 @@ def main(argv):
     print()
     print('  Ссылки на задания экзамена по блокам')
     print('  ' + '-' * 46)
-    rows, missing = examslice.load(CONF) if PROFILE['name'] == 'study' else (None, {})
+    rows, missing = examslice.load(CONF) if PROFILE['exam'] else (None, {})
     if not rows:
+        # A slice switched off must leave no trace: the catalogue meta would
+        # keep the gear on every page and a block would keep its old links.
+        stale = []
+        for lang in PROFILE['langs']:
+            for page in sorted(pathlib.Path(lang).glob('*.html')) if pathlib.Path(lang).is_dir() else []:
+                text = page.read_text(encoding='utf-8')
+                new = SECTION.sub('', META.sub('', text))
+                if new != text:
+                    stale.append(str(page))
+                    if not check:
+                        page.write_text(new, encoding='utf-8')
         print('  среза экзамена нет (site.conf: slice), печатать нечего')
-        print('  ЗЕЛЁНОЕ')
+        if stale:
+            print('  %s со следами прежнего среза: %d' % ('страниц' if check else 'вычищено страниц', len(stale)))
+            for page in stale[:8] if check else []:
+                print('        -> %s' % page)
+        print('  ' + ('КРАСНОЕ' if check and stale else 'ЗЕЛЁНОЕ'))
         print()
-        return 0
+        return 1 if check and stale else 0
     all_years = sorted({r['year'] for r in rows})
     catalogue = ' '.join('%s:%s' % (SOURCE, y) for y in all_years)
     span = all_years[0] if len(all_years) == 1 else '%s-%s' % (all_years[0], all_years[-1])
-    changed = []
+    changed, unplaced = [], []
     for lang in PROFILE['langs']:
         if not pathlib.Path(lang).is_dir():
             continue
@@ -143,6 +158,11 @@ def main(argv):
                 at = new.find('<h2 id="artifacts">')
                 if block and at >= 0:
                     new = new[:at].rstrip() + block + '\n\n    ' + new[at:]
+                elif block:
+                    # The section is placed before <h2 id="artifacts">. Without
+                    # that heading the block silently lost its exam links and
+                    # --check stayed green (nmt-ualang, 2026-11-17).
+                    unplaced.append('%s/%s.html' % (lang, stem))
             if new != text:
                 changed.append('%s/%s.html' % (lang, stem))
                 if not check:
@@ -153,10 +173,13 @@ def main(argv):
     else:
         print('  заданий в срезе: %d, источник %s, годы: %s' % (len(rows), SOURCE, catalogue))
         print('  переписано страниц: %d' % len(changed))
+    for page in unplaced:
+        print('        -> у блока есть задания среза, но нет <h2 id="artifacts">, раздел не вставлен: %s' % page)
+    red = bool(check and changed) or bool(unplaced)
     print('  ' + '-' * 46)
-    print('  ' + ('КРАСНОЕ' if check and changed else 'ЗЕЛЁНОЕ'))
+    print('  ' + ('КРАСНОЕ' if red else 'ЗЕЛЁНОЕ'))
     print()
-    return 1 if check and changed else 0
+    return 1 if red else 0
 
 
 if __name__ == '__main__':

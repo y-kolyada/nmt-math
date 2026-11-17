@@ -12,7 +12,8 @@
 //      page font and cannot be computed from the markup;
 //   4. every diagram has a non-empty aria-label, which rots silently because
 //      nobody looks at it;
-//   5. captions are numbered sequentially across the language folder, and
+//   5. captions are numbered sequentially across the language folder in
+//      reading order (landing page first, navigator last), and
 //      every diagram answers a source in diagrams/ and every source a diagram;
 //   6. a translated page carries a translated diagram: its aria-label differs
 //      from the base one and it keeps the same number of labels.
@@ -38,10 +39,21 @@ const has = /<svg[^>]*\brole="img"/;
 
 // Pages that actually hold a diagram. Reading the file is free; starting a
 // browser is not.
+// Reading order, not the alphabet: the landing page first, the navigator
+// last, the rest by name. With sort() alone index.html came after block 15
+// and a diagram on the landing page could never be number 1; aws-s3 had
+// fixed this in its own copy, where a fix to the engine does not travel.
+const byReading = (a, b) => {
+  if (a === 'index.html') return -1;
+  if (b === 'index.html') return 1;
+  if (a === 'navigator.html') return 1;
+  if (b === 'navigator.html') return -1;
+  return a.localeCompare(b);
+};
 const pages = {};
 for (const lang of LANGS) {
   if (!existsSync(lang)) continue;
-  pages[lang] = readdirSync(lang).sort()
+  pages[lang] = readdirSync(lang).sort(byReading)
     .filter((n) => n.endsWith('.html'))
     .filter((n) => has.test(readFileSync(join(lang, n), 'utf8').split('<main')[1] || ''));
 }
@@ -96,6 +108,7 @@ for (const lang of Object.keys(pages)) {
         const rects = [...svg.querySelectorAll('rect')].map((e) => ({
           x: +e.getAttribute('x'), y: +e.getAttribute('y'),
           w: +e.getAttribute('width'), h: +e.getAttribute('height'),
+          rx: +(e.getAttribute('rx') || 0),
         })).filter((e) => Number.isFinite(e.x + e.y + e.w + e.h));
         let min = Infinity;
         const tight = [];
@@ -115,6 +128,148 @@ for (const lang of Object.keys(pages)) {
           }
         }
         const cap = svg.closest('.box') && svg.closest('.box').querySelector('p.dim');
+
+        // Geometry check: fork clearance and arrow shafts
+        const cramped = [];
+        // Rule 26 is the geometry of block diagrams: arrows join rounded boxes
+        // that carry a label. A plot or a figure of geometry has no such box -
+        // its axis arrows point into the plane by design, its rectangles are
+        // areas with square corners - and held to the rule it reddened every
+        // plot of the math sites (nmt-math: 661 findings, math: 18).
+        const blockDiagram = rects.some((r) => r.rx > 0 && [...svg.querySelectorAll('text')].some((t) => {
+          const tx = +t.getAttribute('x'), ty = +t.getAttribute('y');
+          return tx >= r.x && tx <= r.x + r.w && ty >= r.y && ty <= r.y + r.h;
+        }));
+        const paths = [...svg.querySelectorAll('path')];
+        const polys = [...svg.querySelectorAll('polygon')].map((p) => {
+          const pts = (p.getAttribute('points') || '').trim().split(/\s+/).map((pt) => pt.split(',').map(Number));
+          const ys = pts.map((pt) => pt[1]);
+          const xs = pts.map((pt) => pt[0]);
+          return { pts, xs, ys, apexX: pts[0][0], apexY: pts[0][1], baseY: ys[1], baseX: xs[1] };
+        });
+
+        for (const p of paths) {
+          const d = p.getAttribute('d') || '';
+          const m = d.match(/M\s*(\d+)\s+(\d+)\s+L\s*\1\s+(\d+)\s+L\s*(\d+)\s+\3\s+L\s*\4\s+(\d+)/);
+          if (m) {
+            const barY = +m[3];
+            const targetX = +m[4];
+            const matchingPoly = polys.find((poly) => Math.abs(poly.apexX - targetX) <= 6);
+            if (matchingPoly) {
+              const shaft = Math.abs(matchingPoly.baseY - barY);
+              if (shaft < 7) {
+                cramped.push(`стрелка развилки упирается в перекладину: ножка ${shaft}px < 7px (x=${targetX})`);
+              }
+            }
+          }
+        }
+
+        const lines = [...svg.querySelectorAll('line')].map((l) => ({
+          x1: +l.getAttribute('x1'), y1: +l.getAttribute('y1'),
+          x2: +l.getAttribute('x2'), y2: +l.getAttribute('y2'),
+        }));
+        for (const l of lines) {
+          if (l.x1 === l.x2) {
+            const isDown = l.y2 > l.y1;
+            const matchingPoly = polys.find((p) => Math.abs(p.apexX - l.x2) <= 5 && (isDown ? (p.apexY >= l.y1 && p.apexY <= l.y2 + 8) : (p.apexY <= l.y1 && p.apexY >= l.y2 - 8)));
+            if (matchingPoly) {
+              const shaft = isDown ? (matchingPoly.baseY - l.y1) : (l.y1 - matchingPoly.baseY);
+              if (shaft < 6) {
+                cramped.push(`слишком короткая ножка вертикальной стрелки: ${shaft}px < 6px (x=${l.x1})`);
+              }
+              const touchesRect = rects.some((r) => l.x1 >= r.x - 6 && l.x1 <= r.x + r.w + 6 && Math.abs(l.y1 - (isDown ? r.y + r.h : r.y)) <= 6);
+              if (!touchesRect) {
+                cramped.push(`стрелка идет ниоткуда: начало (${l.x1}, ${l.y1}) не касается границы блока`);
+              }
+            }
+          } else if (l.y1 === l.y2) {
+            const isRight = l.x2 > l.x1;
+            const matchingPoly = polys.find((p) => Math.abs(p.apexY - l.y1) <= 5 && (isRight ? (p.apexX >= l.x1 && p.apexX <= l.x2 + 8) : (p.apexX <= l.x1 && p.apexX >= l.x2 - 8)));
+            if (matchingPoly) {
+              const shaft = isRight ? (matchingPoly.baseX - l.x1) : (l.x1 - matchingPoly.baseX);
+              if (shaft < 6) {
+                cramped.push(`слишком короткая ножка горизонтальной стрелки: ${shaft}px < 6px (y=${l.y1})`);
+              }
+              const touchesRect = rects.some((r) => l.y1 >= r.y - 6 && l.y1 <= r.y + r.h + 6 && Math.abs(l.x1 - (isRight ? r.x + r.w : r.x)) <= 6);
+              if (!touchesRect) {
+                cramped.push(`горизонтальная стрелка идет ниоткуда: начало (${l.x1}, ${l.y1}) не касается границы блока`);
+              }
+            }
+          }
+        }
+
+        // Arrowhead apex must touch a target block boundary
+        for (const p of polys) {
+          const pts = p.pts;
+          if (pts.length !== 3) continue;
+          let apex = null, dir = null;
+          if (pts[1][1] === pts[2][1]) {
+            apex = pts[0]; dir = pts[0][1] > pts[1][1] ? 'down' : 'up';
+          } else if (pts[0][1] === pts[1][1]) {
+            apex = pts[2]; dir = pts[2][1] > pts[0][1] ? 'down' : 'up';
+          } else if (pts[0][1] === pts[2][1]) {
+            apex = pts[1]; dir = pts[1][1] > pts[0][1] ? 'down' : 'up';
+          } else if (pts[1][0] === pts[2][0]) {
+            apex = pts[0]; dir = pts[0][0] > pts[1][0] ? 'right' : 'left';
+          } else if (pts[0][0] === pts[1][0]) {
+            apex = pts[2]; dir = pts[2][0] > pts[0][0] ? 'right' : 'left';
+          } else if (pts[0][0] === pts[2][0]) {
+            apex = pts[1]; dir = pts[1][0] > pts[0][0] ? 'right' : 'left';
+          }
+          if (!apex) continue;
+
+          const touches = rects.some((r) => {
+            if (dir === 'down') return apex[0] >= r.x - 6 && apex[0] <= r.x + r.w + 6 && Math.abs(apex[1] - r.y) <= 6;
+            if (dir === 'up') return apex[0] >= r.x - 6 && apex[0] <= r.x + r.w + 6 && Math.abs(apex[1] - (r.y + r.h)) <= 6;
+            if (dir === 'right') return apex[1] >= r.y - 6 && apex[1] <= r.y + r.h + 6 && Math.abs(apex[0] - r.x) <= 6;
+            if (dir === 'left') return apex[1] >= r.y - 6 && apex[1] <= r.y + r.h + 6 && Math.abs(apex[0] - (r.x + r.w)) <= 6;
+            return false;
+          });
+          if (!touches) {
+            cramped.push(`наконечник стрелки указывает в пустоту: точка (${apex[0]}, ${apex[1]}) не касается границы блока`);
+          }
+        }
+
+        // All non-banner rects must have at least one connection
+        if (lines.length > 0 || paths.length > 0) {
+          for (const r of rects) {
+            if (r.w >= 260) continue; // ignore full-width banner containers
+            let connected = false;
+            for (const l of lines) {
+              const p1 = l.x1 >= r.x - 6 && l.x1 <= r.x + r.w + 6 && l.y1 >= r.y - 6 && l.y1 <= r.y + r.h + 6;
+              const p2 = l.x2 >= r.x - 6 && l.x2 <= r.x + r.w + 6 && l.y2 >= r.y - 6 && l.y2 <= r.y + r.h + 6;
+              if (p1 || p2) { connected = true; break; }
+            }
+            if (!connected) {
+              for (const p of polys) {
+                for (const pt of p.pts) {
+                  if (pt[0] >= r.x - 6 && pt[0] <= r.x + r.w + 6 && pt[1] >= r.y - 6 && pt[1] <= r.y + r.h + 6) {
+                    connected = true; break;
+                  }
+                }
+                if (connected) break;
+              }
+            }
+            if (!connected) {
+              for (const p of paths) {
+                const mStart = (p.getAttribute('d') || '').match(/M\s*(\d+)\s+(\d+)/);
+                const mEnd = (p.getAttribute('d') || '').match(/L\s*(\d+)\s+(\d+)\s*$/);
+                if (mStart) {
+                  const x = +mStart[1], y = +mStart[2];
+                  if (x >= r.x - 6 && x <= r.x + r.w + 6 && y >= r.y - 6 && y <= r.y + r.h + 6) { connected = true; break; }
+                }
+                if (mEnd) {
+                  const x = +mEnd[1], y = +mEnd[2];
+                  if (x >= r.x - 6 && x <= r.x + r.w + 6 && y >= r.y - 6 && y <= r.y + r.h + 6) { connected = true; break; }
+                }
+              }
+            }
+            if (!connected) {
+              cramped.push(`изолированный блок без связей: [x=${r.x}, y=${r.y}, w=${r.w}, h=${r.h}] не соединен со схемой`);
+            }
+          }
+        }
+
         return {
           width: vb.width,
           capped: getComputedStyle(svg).maxWidth,
@@ -122,6 +277,7 @@ for (const lang of Object.keys(pages)) {
           labels: texts.length,
           smallest: Number.isFinite(min) ? +min.toFixed(1) : null,
           tight,
+          cramped: blockDiagram ? cramped : [],
           caption: cap ? cap.textContent.trim() : null,
         };
       });
@@ -144,6 +300,7 @@ for (const lang of Object.keys(seen)) {
       if (!d.label) bad.push([where, 'пустой aria-label: читалке схема не достанется']);
       if (d.smallest !== null && d.smallest < MIN_LABEL) bad.push([where, 'наименьшая подпись ' + d.smallest + ' единиц вместо ' + MIN_LABEL]);
       for (const t of d.tight) bad.push([where, 'подпись не помещается: ' + t]);
+      for (const c of d.cramped) bad.push([where, 'дефект геометрии стрелки: ' + c]);
       n += 1;
       drawn += 1;
       if (!d.caption) {

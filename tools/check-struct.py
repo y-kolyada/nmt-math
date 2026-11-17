@@ -284,6 +284,11 @@ def pages(args):
 
 
 def main(argv):
+    # A site with one language (nmt-uahist: langs = uk) has no translation and no
+    # stub to hold to a contract: nothing to compare is green there, not an error.
+    if not argv[1:] and not LANGS:
+        print('переводов нет: сайт на одном языке (%s)' % SOURCE)
+        return 0
     args = argv[1:] or list(LANGS)
     targets = pages(args)
     if not targets:

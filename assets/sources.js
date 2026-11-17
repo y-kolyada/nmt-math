@@ -11,39 +11,78 @@
 // The choice lives in localStorage swa-<site>-ext-off as a list: "nmt-ua" is the
 // whole source off, "nmt-ua:2026" one year off. assets/search.js reads the same
 // list, so a switched-off year is not searched either.
+//
+// The same window switches the line of illustrations. A site may draw the same
+// picture in several lines (a village and a modern one, say): each drawing is
+// <div class="box" data-kind="illustration" data-line="modern"
+// data-line-name="Сучасна Україна">, the alternatives stand side by side, and
+// all but the default carry `hidden` in the markup, so a reader without
+// JavaScript and the first paint see the default only. The lines are read from
+// the page itself, in the order they first appear: the first is the default, so
+// a site lists its default line first on every page. The choice lives in
+// localStorage swa-<site>-art-line; a choice the page does not draw falls back
+// to the default. A drawing without data-line belongs to no line and always
+// shows. The group appears only where a page has two lines or more.
 (function () {
   const meta = document.querySelector('meta[name="swa-sources"]');
   const tray = document.querySelector('.utility-tray');
-  if (!meta || !tray) return;
-  const catalogue = meta.content.split(/\s+/).filter(Boolean);
-  if (!catalogue.length) return;
+  if (!tray) return;
+  const catalogue = meta ? meta.content.split(/\s+/).filter(Boolean) : [];
+  const lines = [];
+  const lineName = {};
+  document.querySelectorAll('[data-kind="illustration"][data-line]').forEach((el) => {
+    const id = el.dataset.line;
+    if (!(id in lineName)) { lines.push(id); lineName[id] = el.dataset.lineName || id; }
+  });
+  if (!catalogue.length && lines.length < 2) return;
 
   const SAY = {
     uk: { open: 'Налаштування', title: 'Налаштування', close: 'Закрити налаштування',
           group: 'Зовнішні джерела',
           lead: 'Посилання на реальні завдання, що спираються на закони блоку. Вимкнений рік зникає зі сторінок і з пошуку.',
           sources: { 'nmt-ua': 'Показувати посилання на завдання НМТ із сайту ЗНО-ОНЛАЙН (zno.osvita.ua)' },
-          year: { 'nmt-ua': 'НМТ %s' } },
+          year: { 'nmt-ua': 'НМТ %s' },
+          artGroup: 'Ілюстрації',
+          artLead: 'Ті самі сюжети в різних лініях. Вибір діє на всіх сторінках сайту.' },
     ru: { open: 'Настройки', title: 'Настройки', close: 'Закрыть настройки',
           group: 'Внешние источники',
           lead: 'Ссылки на реальные задания, которые опираются на законы блока. Выключенный год пропадает со страниц и из поиска.',
           sources: { 'nmt-ua': 'Показывать ссылки на задания НМТ с сайта ЗНО-ОНЛАЙН (zno.osvita.ua)' },
-          year: { 'nmt-ua': 'НМТ %s' } },
+          year: { 'nmt-ua': 'НМТ %s' },
+          artGroup: 'Иллюстрации',
+          artLead: 'Те же сюжеты в разных линиях. Выбор действует на всех страницах сайта.' },
     en: { open: 'Settings', title: 'Settings', close: 'Close settings',
           group: 'External sources',
           lead: 'Links to real exam tasks that rest on the laws of a block. A year switched off leaves the pages and the search.',
           sources: { 'nmt-ua': 'Show links to NMT tasks on the ZNO-ONLINE site (zno.osvita.ua)' },
-          year: { 'nmt-ua': 'NMT %s' } },
+          year: { 'nmt-ua': 'NMT %s' },
+          artGroup: 'Illustrations',
+          artLead: 'The same scenes in different lines. The choice holds on every page of the site.' },
     de: { open: 'Einstellungen', title: 'Einstellungen', close: 'Einstellungen schließen',
           group: 'Externe Quellen',
           lead: 'Links zu echten Prüfungsaufgaben, die auf den Gesetzen eines Blocks beruhen. Ein ausgeschaltetes Jahr verschwindet von den Seiten und aus der Suche.',
           sources: { 'nmt-ua': 'Links zu NMT-Aufgaben auf der Seite ZNO-ONLINE (zno.osvita.ua) zeigen' },
-          year: { 'nmt-ua': 'NMT %s' } },
+          year: { 'nmt-ua': 'NMT %s' },
+          artGroup: 'Illustrationen',
+          artLead: 'Dieselben Motive in verschiedenen Linien. Die Wahl gilt auf allen Seiten der Website.' },
   };
   const lang = document.documentElement.lang || 'uk';
   const say = SAY[lang] || SAY.uk;
   const SITE = document.documentElement.dataset.site || 'swa';
   const KEY = 'swa-' + SITE + '-ext-off';
+  const LINE_KEY = 'swa-' + SITE + '-art-line';
+
+  function readLine() {
+    let id = null;
+    try { id = localStorage.getItem(LINE_KEY); } catch (_) {}
+    return lines.includes(id) ? id : lines[0];
+  }
+  function writeLine(id) {
+    try {
+      if (id === lines[0]) localStorage.removeItem(LINE_KEY);
+      else localStorage.setItem(LINE_KEY, id);
+    } catch (_) {}
+  }
 
   function readOff() {
     try {
@@ -84,6 +123,12 @@
       const scope = note.parentElement;
       note.hidden = [...scope.querySelectorAll('.ext-source')].some((box) => !box.hidden);
     });
+    if (lines.length) {
+      const line = readLine();
+      document.querySelectorAll('[data-kind="illustration"][data-line]').forEach((el) => {
+        el.hidden = el.dataset.line !== line;
+      });
+    }
   }
 
   const gear = document.createElement('button');
@@ -107,7 +152,12 @@
   const fmt = (src, id) => (say.year[src] || '%s').replace('%s', id.slice(src.length + 1));
   dlg.innerHTML = '<div class="settings-head"><h2 id="settings-title">' + say.title + '</h2>'
     + '<button type="button" class="settings-close" aria-label="' + say.close + '">&times;</button></div>'
-    + '<fieldset class="settings-group"><legend>' + say.group + '</legend>'
+    + (lines.length > 1 ? '<fieldset class="settings-group"><legend>' + (say.artGroup || SAY.uk.artGroup) + '</legend>'
+      + '<p class="dim">' + (say.artLead || SAY.uk.artLead) + '</p>'
+      + lines.map((id) => '<label class="settings-row"><input type="radio" name="art-line" data-line="' + id + '"> '
+        + lineName[id] + '</label>').join('')
+      + '</fieldset>' : '')
+    + (catalogue.length ? '<fieldset class="settings-group"><legend>' + say.group + '</legend>'
     + '<p class="dim">' + say.lead + '</p>'
     + sources.map((src) => '<div class="settings-source">'
       + '<label class="settings-row"><input type="checkbox" data-src="' + src + '"> '
@@ -116,10 +166,12 @@
       + years[src].map((id) => '<label class="settings-row"><input type="checkbox" data-id="' + id + '"> '
         + fmt(src, id) + '</label>').join('')
       + '</div></div>').join('')
-    + '</fieldset>';
+    + '</fieldset>' : '');
   document.body.appendChild(dlg);
 
   function paint() {
+    const line = readLine();
+    dlg.querySelectorAll('input[data-line]').forEach((r) => { r.checked = r.dataset.line === line; });
     const off = readOff();
     dlg.querySelectorAll('input[data-src]').forEach((box) => {
       box.checked = !off.has(box.dataset.src);
@@ -133,6 +185,12 @@
   dlg.addEventListener('change', (e) => {
     const box = e.target;
     if (!(box instanceof HTMLInputElement)) return;
+    if (box.dataset.line) {
+      writeLine(box.dataset.line);
+      paint();
+      apply();
+      return;
+    }
     const off = readOff();
     const id = box.dataset.src || box.dataset.id;
     if (box.checked) off.delete(id); else off.add(id);
@@ -149,6 +207,6 @@
   });
 
   // Another tab may change the choice; this one follows it.
-  window.addEventListener('storage', (e) => { if (e.key === KEY) { paint(); apply(); } });
+  window.addEventListener('storage', (e) => { if (e.key === KEY || e.key === LINE_KEY) { paint(); apply(); } });
   apply();
 })();

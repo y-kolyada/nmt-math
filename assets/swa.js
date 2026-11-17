@@ -104,7 +104,10 @@
         if (anchor) anchor.remove();
         const obj = text.querySelector('.glossary-object');
         if (obj) obj.remove();
-        a.textContent = text.textContent.trim();
+        // A term marked inside a heading carries its whole card: keep the
+        // term's word, drop the card, or the menu reads its definition.
+        text.querySelectorAll('.term-card').forEach((card) => card.remove());
+        a.textContent = text.textContent.replace(/\s+/g, ' ').trim();
         li.appendChild(a);
         tocList.appendChild(li);
       });
@@ -235,8 +238,11 @@
     function applySearchHighlight(anchorId, query) {
       clearSearchHighlight(true);
       const needle = norm((query || '').trim());
-      if (!anchorId || needle.length < 2) return 0;
-      const target = document.getElementById(anchorId);
+      if (needle.length < 2) return 0;
+      // With an anchor, the section the reader chose; without one, the whole
+      // text of the page, so the mark and its button follow the word to every
+      // page that has it, the landing page too, and nowhere else.
+      const target = anchorId ? document.getElementById(anchorId) : document.querySelector('main');
       if (!target) return 0;
 
       const roots = [target];
@@ -255,7 +261,7 @@
         let n;
         while ((n = walker.nextNode())) {
           const p = n.parentElement;
-          if (!p || p.closest('.anchor-link, script, style, mark.search-mark')) continue;
+          if (!p || p.closest('.anchor-link, script, style, mark.search-mark, .term-card')) continue;
           if (norm(n.nodeValue).indexOf(needle) >= 0) nodes.push(n);
         }
         nodes.forEach((textNode) => {
@@ -289,10 +295,16 @@
     try {
       const saved = JSON.parse(sessionStorage.getItem(key('search')) || 'null');
       if (saved && saved.active && saved.q) {
+        // The chosen result's anchor counts only on the chosen result's page:
+        // ids like #concept repeat across blocks, and on a page without that
+        // id the mark used to vanish, the landing page among them.
+        const here = location.pathname.split('/').pop() || 'index.html';
+        const [savedPage, savedHash] = (saved.url || '').split('#');
+        const samePage = (savedPage.split('/').pop() || 'index.html') === here;
         const hashAnchor = location.hash ? decodeURIComponent(location.hash.slice(1)) : '';
-        const savedAnchor = (saved.url && saved.url.includes('#')) ? saved.url.split('#')[1] : '';
-        const anchor = hashAnchor || savedAnchor;
-        if (anchor) applySearchHighlight(anchor, saved.q);
+        const anchor = hashAnchor || (samePage ? (savedHash || '') : '');
+        const inPage = anchor && document.getElementById(anchor) ? anchor : '';
+        applySearchHighlight(inPage, saved.q);
       }
     } catch (_) {}
 
