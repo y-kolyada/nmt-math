@@ -96,7 +96,7 @@
 
   <main id="main">
     <h1>Функция и последовательность</h1>
-    <p class="page-size" data-words="2121">Слов: 2121</p>
+    <p class="page-size" data-words="2341">Слов: 2341</p>
     <p class="lead">Функция - это правило «каждому x - одно y». Посмотреть на уравнение как на функцию значит
     увидеть не один ответ, а всю зависимость сразу.</p>
 
@@ -131,6 +131,31 @@
 
     <span class="step">Шаг 2 · Закон</span>
     <h2 id="law">3 · Законы функций и прогрессий <a class="anchor-link" href="#law">#</a></h2>
+    <div class="law" id="law-graph">
+      <p class="law-name">График функции</p>
+      <p>Точка <span class="math" data-tex="(a;\ b)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mi>;</mi><mtext>&#x000A0;</mtext><mi>b</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(a;\ b)</annotation></semantics></math></span> лежит на графике функции f тогда и только тогда, когда</p>
+      <div class="math-block" data-tex="f(a) = b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">f(a) = b</annotation></semantics></math></div>
+      <ul>
+        <li><strong>нуль</strong> функции - абсцисса точки, где график пересекает ось Ox;</li>
+        <li><span class="math" data-tex="f(x) \lt 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003C;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f(x) \lt 0</annotation></semantics></math></span> там, где график ниже оси Ox, <span class="math" data-tex="f(x) > 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003E;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f(x) &gt; 0</annotation></semantics></math></span> - где выше;</li>
+        <li>функция <strong>возрастает</strong> там, где график идёт вверх слева направо, и убывает, где вниз;</li>
+        <li><strong>наибольшее и наименьшее значения</strong> на отрезке - ординаты самой высокой и самой низкой точек графика на нём.</li>
+      </ul>
+    </div>
+    <div class="corollary" id="cor-functions" data-law="law-graph">
+      <p class="corollary-of">Следствие закона <a href="#law-graph">«График функции»</a></p>
+      <p class="corollary-name">Свойства основных функций</p>
+      <ul>
+        <li><span class="math" data-tex="y = kx + b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><mi>k</mi><mi>x</mi><mo>&#x0002B;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">y = kx + b</annotation></semantics></math></span>: возрастает при <span class="math" data-tex="k > 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>k</mi><mo>&#x0003E;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">k &gt; 0</annotation></semantics></math></span>, убывает при <span class="math" data-tex="k \lt 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>k</mi><mo>&#x0003C;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">k \lt 0</annotation></semantics></math></span>;</li>
+        <li><span class="math" data-tex="y = x^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">y = x^2</annotation></semantics></math></span>: чётная, <span class="math" data-tex="E = [0;\ +\infty)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>E</mi><mo>&#x0003D;</mo><mo stretchy="false">[</mo><mn>0</mn><mi>;</mi><mtext>&#x000A0;</mtext><mo>&#x0002B;</mo><mo>&#x0221E;</mo><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">E = [0;\ +\infty)</annotation></semantics></math></span>, наименьшее значение 0 в точке 0;</li>
+        <li><span class="math" data-tex="y = x^3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">y = x^3</annotation></semantics></math></span>: нечётная, возрастает на всей прямой; <span class="math" data-tex="y = \frac{1}{x}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mi>x</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">y = \frac{1}{x}</annotation></semantics></math></span>: нечётная, не определена в 0, убывает на каждом из промежутков <span class="math" data-tex="(-\infty;\ 0)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mo>&#x0221E;</mo><mi>;</mi><mtext>&#x000A0;</mtext><mn>0</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(-\infty;\ 0)</annotation></semantics></math></span> и <span class="math" data-tex="(0;\ +\infty)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mn>0</mn><mi>;</mi><mtext>&#x000A0;</mtext><mo>&#x0002B;</mo><mo>&#x0221E;</mo><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(0;\ +\infty)</annotation></semantics></math></span>;</li>
+        <li><span class="math" data-tex="y = \sqrt{x}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><msqrt><mrow><mi>x</mi></mrow></msqrt></mrow><annotation encoding="application/x-tex">y = \sqrt{x}</annotation></semantics></math></span>: <span class="math" data-tex="D = E = [0;\ +\infty)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>D</mi><mo>&#x0003D;</mo><mi>E</mi><mo>&#x0003D;</mo><mo stretchy="false">[</mo><mn>0</mn><mi>;</mi><mtext>&#x000A0;</mtext><mo>&#x0002B;</mo><mo>&#x0221E;</mo><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">D = E = [0;\ +\infty)</annotation></semantics></math></span>, возрастает;</li>
+        <li><span class="math" data-tex="y = a^x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><msup><mi>a</mi><mi>x</mi></msup></mrow><annotation encoding="application/x-tex">y = a^x</annotation></semantics></math></span>: <span class="math" data-tex="E = (0;\ +\infty)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>E</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mn>0</mn><mi>;</mi><mtext>&#x000A0;</mtext><mo>&#x0002B;</mo><mo>&#x0221E;</mo><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">E = (0;\ +\infty)</annotation></semantics></math></span>, график проходит через <span class="math" data-tex="(0;\ 1)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mn>0</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>1</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(0;\ 1)</annotation></semantics></math></span>; возрастает при <span class="math" data-tex="a > 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mo>&#x0003E;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">a &gt; 1</annotation></semantics></math></span>, убывает при <span class="math" data-tex="0 \lt a \lt 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>0</mn><mo>&#x0003C;</mo><mi>a</mi><mo>&#x0003C;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">0 \lt a \lt 1</annotation></semantics></math></span>;</li>
+        <li><span class="math" data-tex="y = \log_a x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><msub><mi>log</mi><mi>a</mi></msub><mi>x</mi></mrow><annotation encoding="application/x-tex">y = \log_a x</annotation></semantics></math></span>: <span class="math" data-tex="D = (0;\ +\infty)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>D</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mn>0</mn><mi>;</mi><mtext>&#x000A0;</mtext><mo>&#x0002B;</mo><mo>&#x0221E;</mo><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">D = (0;\ +\infty)</annotation></semantics></math></span>, график проходит через <span class="math" data-tex="(1;\ 0)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mn>1</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>0</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(1;\ 0)</annotation></semantics></math></span>; возрастает при <span class="math" data-tex="a > 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mo>&#x0003E;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">a &gt; 1</annotation></semantics></math></span>, убывает при <span class="math" data-tex="0 \lt a \lt 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>0</mn><mo>&#x0003C;</mo><mi>a</mi><mo>&#x0003C;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">0 \lt a \lt 1</annotation></semantics></math></span>;</li>
+        <li><span class="math" data-tex="\sin x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>sin</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\sin x</annotation></semantics></math></span> и <span class="math" data-tex="\operatorname{tg} x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo>tg</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">\operatorname{tg} x</annotation></semantics></math></span> нечётные, <span class="math" data-tex="\cos x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>cos</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\cos x</annotation></semantics></math></span> чётная; <span class="math" data-tex="E(\sin) = E(\cos) = [-1;\ 1]"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>E</mi><mo stretchy="false">&#x00028;</mo><mi>sin</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mi>E</mi><mo stretchy="false">&#x00028;</mo><mi>cos</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mo stretchy="false">[</mo><mo>&#x02212;</mo><mn>1</mn><mi>;</mi><mtext>&#x000A0;</mtext><mn>1</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">E(\sin) = E(\cos) = [-1;\ 1]</annotation></semantics></math></span>.</li>
+      </ul>
+      <p>Каждая строка читается с графика по закону: чётность - симметрия графика относительно оси Oy (чётная) или начала координат (нечётная), возрастание - направление линии, область значений - тень графика на оси Oy.</p>
+    </div>
     <div class="law" id="law-shift">
       <p class="law-name">Преобразования графиков</p>
       <ul>
@@ -156,6 +181,7 @@
 
     <span class="step">Шаг 3 · Почему так</span>
     <h2 id="why">4 · Откуда законы <a class="anchor-link" href="#why">#</a></h2>
+    <p><strong>График.</strong> График функции - это все точки <span class="math" data-tex="(x;\ f(x))"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>x</mi><mi>;</mi><mtext>&#x000A0;</mtext><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(x;\ f(x))</annotation></semantics></math></span> и только они. Поэтому каждая его точка - пара «аргумент; значение»: абсцисса - x, высота точки - f(x). Всё, что спрашивают о значениях функции, читается по высоте точек.</p>
     <p><strong>Сдвиг.</strong> Точка <span class="math" data-tex="(0;\ f(0))"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mn>0</mn><mi>;</mi><mtext>&#x000A0;</mtext><mi>f</mi><mo stretchy="false">&#x00028;</mo><mn>0</mn><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(0;\ f(0))</annotation></semantics></math></span> на графике f переходит в точку, где
     <span class="math" data-tex="x + a = 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0002B;</mo><mi>a</mi><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x + a = 0</annotation></semantics></math></span>, то есть <span class="math" data-tex="x = -a"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi><mo>&#x0003D;</mo><mo>&#x02212;</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">x = -a</annotation></semantics></math></span>. Так с каждой точкой: график
     едет на a влево.</p>
@@ -231,6 +257,9 @@
 
     <span class="step">Шаг 4 · Границы</span>
     <h2 id="limits">5 · Где законы ломаются <a class="anchor-link" href="#limits">#</a></h2>
+    <div class="limit" id="limit-graph">
+      <p><strong>Значение - это ордината, промежуток - абсциссы.</strong> «Наибольшее значение» - y самой высокой точки, а не её x; «где <span class="math" data-tex="f(x) \lt 0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003C;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f(x) \lt 0</annotation></semantics></math></span>» - промежуток на оси Ox. И график отвечает только там, где функция определена.</p>
+    </div>
     <div class="limit" id="limit-shift">
       <p><strong>Сдвиг вдоль Ox - «наоборот знаку».</strong> <span class="math" data-tex="f(x - 3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">f(x - 3)</annotation></semantics></math></span> - вправо на 3,
       <span class="math" data-tex="f(x + 3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002B;</mo><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">f(x + 3)</annotation></semantics></math></span> - влево. Сдвиг вдоль Oy - по знаку.</p>
@@ -250,6 +279,20 @@
 
     <span class="step">Шаг 5 · Применение</span>
     <h2 id="apply">6 · Задачи в форме НМТ <a class="anchor-link" href="#apply">#</a></h2>
+
+    <div class="task" data-kind="choice" data-answer="Б" data-limit="limit-graph">
+      <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
+      <p>График функции <span class="math" data-tex="y = f(x)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>y</mi><mo>&#x0003D;</mo><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">y = f(x)</annotation></semantics></math></span> проходит через точку <span class="math" data-tex="(2;\ -3)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mn>2</mn><mi>;</mi><mtext>&#x000A0;</mtext><mo>&#x02212;</mo><mn>3</mn><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">(2;\ -3)</annotation></semantics></math></span>. Какое равенство верно?</p>
+      <div class="opts">
+        <button type="button" data-opt="А">А · f(−3) = 2</button>
+        <button type="button" data-opt="Б">Б · f(2) = −3</button>
+        <button type="button" data-opt="В">В · f(2) = 3</button>
+        <button type="button" data-opt="Г">Г · f(−2) = 3</button>
+        <button type="button" data-opt="Д">Д · f(3) = −2</button>
+      </div>
+      <p class="law-ref">Закон: <a href="#law-graph">график функции</a>.</p>
+      <div class="solution">Первая координата - аргумент, вторая - значение: <span class="math" data-tex="f(2) = -3"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">f(2) = -3</annotation></semantics></math></span>. Вариант А - координаты переставлены местами.</div>
+    </div>
 
     <div class="task" data-kind="choice" data-answer="Б" data-limit="">
       <p class="task-kind">Выбор одного ответа из пяти · 1 балл</p>
@@ -599,19 +642,19 @@
       <div class="ext" data-ext="nmt-ua:2026" id="ext-nmt-ua-2026">
         <h4>НМТ 2026</h4>
         <ul>
-          <li><a href="https://zno.osvita.ua/mathematics/846/#q6" rel="noopener" target="_blank">1 сессия, задание 6</a> (с рисунком) - Функция, её свойства, последовательность</li>
-          <li><a href="https://zno.osvita.ua/mathematics/846/#q16" rel="noopener" target="_blank">1 сессия, задание 16</a> - Функция, её свойства, последовательность</li>
-          <li><a href="https://zno.osvita.ua/mathematics/847/#q6" rel="noopener" target="_blank">2 сессия, задание 6</a> (с рисунком) - Функция, её свойства, последовательность</li>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q6" rel="noopener" target="_blank">1 сессия, задание 6</a> (с рисунком) - График функции</li>
+          <li><a href="https://zno.osvita.ua/mathematics/846/#q16" rel="noopener" target="_blank">1 сессия, задание 16</a> - Свойства основных функций</li>
+          <li><a href="https://zno.osvita.ua/mathematics/847/#q6" rel="noopener" target="_blank">2 сессия, задание 6</a> (с рисунком) - График функции</li>
           <li><a href="https://zno.osvita.ua/mathematics/847/#q16" rel="noopener" target="_blank">2 сессия, задание 16</a> - Метод: общие точки графиков</li>
         </ul>
       </div>
       <div class="ext" data-ext="nmt-ua:2025" id="ext-nmt-ua-2025">
         <h4>НМТ 2025</h4>
         <ul>
-          <li><a href="https://zno.osvita.ua/mathematics/671/#q1" rel="noopener" target="_blank">1 сессия, задание 1</a> (с рисунком) - Функция, её свойства, последовательность</li>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q1" rel="noopener" target="_blank">1 сессия, задание 1</a> (с рисунком) - График функции</li>
           <li><a href="https://zno.osvita.ua/mathematics/671/#q6" rel="noopener" target="_blank">1 сессия, задание 6</a> (с рисунком) - Преобразования графиков</li>
           <li><a href="https://zno.osvita.ua/mathematics/671/#q12" rel="noopener" target="_blank">1 сессия, задание 12</a> - Арифметическая прогрессия</li>
-          <li><a href="https://zno.osvita.ua/mathematics/671/#q16" rel="noopener" target="_blank">1 сессия, задание 16</a> - Функция, её свойства, последовательность</li>
+          <li><a href="https://zno.osvita.ua/mathematics/671/#q16" rel="noopener" target="_blank">1 сессия, задание 16</a> - Свойства основных функций</li>
           <li><a href="https://zno.osvita.ua/mathematics/672/#q6" rel="noopener" target="_blank">2 сессия, задание 6</a> - Преобразования графиков</li>
           <li><a href="https://zno.osvita.ua/mathematics/672/#q19" rel="noopener" target="_blank">2 сессия, задание 19</a> - Функция, её свойства, последовательность</li>
           <li><a href="https://zno.osvita.ua/mathematics/672/#q22" rel="noopener" target="_blank">2 сессия, задание 22</a> (с рисунком) - Преобразования графиков</li>
@@ -620,32 +663,32 @@
       <div class="ext" data-ext="nmt-ua:2024" id="ext-nmt-ua-2024">
         <h4>НМТ 2024</h4>
         <ul>
-          <li><a href="https://zno.osvita.ua/mathematics/585/#q1" rel="noopener" target="_blank">1 сессия, задание 1</a> (с рисунком) - Функция, её свойства, последовательность</li>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q1" rel="noopener" target="_blank">1 сессия, задание 1</a> (с рисунком) - График функции</li>
           <li><a href="https://zno.osvita.ua/mathematics/585/#q7" rel="noopener" target="_blank">1 сессия, задание 7</a> (с рисунком) - Преобразования графиков</li>
           <li><a href="https://zno.osvita.ua/mathematics/585/#q12" rel="noopener" target="_blank">1 сессия, задание 12</a> - Арифметическая прогрессия</li>
           <li><a href="https://zno.osvita.ua/mathematics/585/#q16" rel="noopener" target="_blank">1 сессия, задание 16</a> (с рисунком) - Метод: общие точки графиков</li>
-          <li><a href="https://zno.osvita.ua/mathematics/606/#q6" rel="noopener" target="_blank">2 сессия, задание 6</a> (с рисунком) - Функция, её свойства, последовательность</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q6" rel="noopener" target="_blank">2 сессия, задание 6</a> (с рисунком) - График функции</li>
           <li><a href="https://zno.osvita.ua/mathematics/606/#q12" rel="noopener" target="_blank">2 сессия, задание 12</a> - Геометрическая прогрессия</li>
-          <li><a href="https://zno.osvita.ua/mathematics/606/#q16" rel="noopener" target="_blank">2 сессия, задание 16</a> (с рисунком) - Функция, её свойства, последовательность</li>
+          <li><a href="https://zno.osvita.ua/mathematics/606/#q16" rel="noopener" target="_blank">2 сессия, задание 16</a> (с рисунком) - График функции</li>
         </ul>
       </div>
       <div class="ext" data-ext="nmt-ua:2023" id="ext-nmt-ua-2023">
         <h4>НМТ 2023</h4>
         <ul>
-          <li><a href="https://zno.osvita.ua/mathematics/546/#q6" rel="noopener" target="_blank">1 сессия, задание 6</a> (с рисунком) - Функция, её свойства, последовательность</li>
-          <li><a href="https://zno.osvita.ua/mathematics/546/#q16" rel="noopener" target="_blank">1 сессия, задание 16</a> - Функция, её свойства, последовательность</li>
+          <li><a href="https://zno.osvita.ua/mathematics/546/#q6" rel="noopener" target="_blank">1 сессия, задание 6</a> (с рисунком) - График функции</li>
+          <li><a href="https://zno.osvita.ua/mathematics/546/#q16" rel="noopener" target="_blank">1 сессия, задание 16</a> - Свойства основных функций</li>
           <li><a href="https://zno.osvita.ua/mathematics/546/#q19" rel="noopener" target="_blank">1 сессия, задание 19</a> - Арифметическая прогрессия</li>
-          <li><a href="https://zno.osvita.ua/mathematics/547/#q6" rel="noopener" target="_blank">2 сессия, задание 6</a> (с рисунком) - Функция, её свойства, последовательность</li>
-          <li><a href="https://zno.osvita.ua/mathematics/547/#q16" rel="noopener" target="_blank">2 сессия, задание 16</a> - Функция, её свойства, последовательность</li>
+          <li><a href="https://zno.osvita.ua/mathematics/547/#q6" rel="noopener" target="_blank">2 сессия, задание 6</a> (с рисунком) - График функции</li>
+          <li><a href="https://zno.osvita.ua/mathematics/547/#q16" rel="noopener" target="_blank">2 сессия, задание 16</a> - Свойства основных функций</li>
           <li><a href="https://zno.osvita.ua/mathematics/547/#q19" rel="noopener" target="_blank">2 сессия, задание 19</a> - Арифметическая прогрессия</li>
         </ul>
       </div>
       <div class="ext" data-ext="nmt-ua:2022" id="ext-nmt-ua-2022">
         <h4>НМТ 2022</h4>
         <ul>
-          <li><a href="https://zno.osvita.ua/mathematics/521/#q6" rel="noopener" target="_blank">1 сессия, задание 6</a> (с рисунком) - Функция, её свойства, последовательность</li>
+          <li><a href="https://zno.osvita.ua/mathematics/521/#q6" rel="noopener" target="_blank">1 сессия, задание 6</a> (с рисунком) - График функции</li>
           <li><a href="https://zno.osvita.ua/mathematics/521/#q8" rel="noopener" target="_blank">1 сессия, задание 8</a> - Преобразования графиков</li>
-          <li><a href="https://zno.osvita.ua/mathematics/521/#q15" rel="noopener" target="_blank">1 сессия, задание 15</a> (с рисунком) - Функция, её свойства, последовательность, Метод: общие точки графиков</li>
+          <li><a href="https://zno.osvita.ua/mathematics/521/#q15" rel="noopener" target="_blank">1 сессия, задание 15</a> (с рисунком) - Свойства основных функций, Метод: общие точки графиков</li>
           <li><a href="https://zno.osvita.ua/mathematics/521/#q19" rel="noopener" target="_blank">1 сессия, задание 19</a> - Геометрическая прогрессия</li>
         </ul>
       </div>
@@ -657,24 +700,24 @@
         <h4>Демо НМТ 2026</h4>
         <ul>
           <li><a href="https://zno.osvita.ua/mathematics/712/#q6" rel="noopener" target="_blank">демовариант 2026, задание 6</a> (с рисунком) - Вершина параболы</li>
-          <li><a href="https://zno.osvita.ua/mathematics/712/#q16" rel="noopener" target="_blank">демовариант 2026, задание 16</a> - Функция, её свойства, последовательность</li>
+          <li><a href="https://zno.osvita.ua/mathematics/712/#q16" rel="noopener" target="_blank">демовариант 2026, задание 16</a> - Свойства основных функций</li>
           <li><a href="https://zno.osvita.ua/mathematics/712/#q19" rel="noopener" target="_blank">демовариант 2026, задание 19</a> - Функция, её свойства, последовательность</li>
         </ul>
       </div>
       <div class="ext" data-ext="nmt-demo:2024" id="ext-nmt-demo-2024">
         <h4>Демо НМТ 2024</h4>
         <ul>
-          <li><a href="https://zno.osvita.ua/mathematics/570/#q7" rel="noopener" target="_blank">демовариант 2024, задание 7</a> (с рисунком) - Функция, её свойства, последовательность</li>
-          <li><a href="https://zno.osvita.ua/mathematics/570/#q16" rel="noopener" target="_blank">демовариант 2024, задание 16</a> - Функция, её свойства, последовательность</li>
+          <li><a href="https://zno.osvita.ua/mathematics/570/#q7" rel="noopener" target="_blank">демовариант 2024, задание 7</a> (с рисунком) - График функции</li>
+          <li><a href="https://zno.osvita.ua/mathematics/570/#q16" rel="noopener" target="_blank">демовариант 2024, задание 16</a> - Свойства основных функций</li>
           <li><a href="https://zno.osvita.ua/mathematics/570/#q19" rel="noopener" target="_blank">демовариант 2024, задание 19</a> (с рисунком) - Арифметическая прогрессия</li>
         </ul>
       </div>
       <div class="ext" data-ext="nmt-demo:2023" id="ext-nmt-demo-2023">
         <h4>Демо НМТ 2023</h4>
         <ul>
-          <li><a href="https://zno.osvita.ua/mathematics/523/#q1" rel="noopener" target="_blank">демовариант 2023, задание 1</a> (с рисунком) - Функция, её свойства, последовательность</li>
+          <li><a href="https://zno.osvita.ua/mathematics/523/#q1" rel="noopener" target="_blank">демовариант 2023, задание 1</a> (с рисунком) - График функции</li>
           <li><a href="https://zno.osvita.ua/mathematics/523/#q13" rel="noopener" target="_blank">демовариант 2023, задание 13</a> - Арифметическая прогрессия</li>
-          <li><a href="https://zno.osvita.ua/mathematics/523/#q16" rel="noopener" target="_blank">демовариант 2023, задание 16</a> (с рисунком) - Функция, её свойства, последовательность</li>
+          <li><a href="https://zno.osvita.ua/mathematics/523/#q16" rel="noopener" target="_blank">демовариант 2023, задание 16</a> (с рисунком) - Свойства основных функций</li>
         </ul>
       </div>
       <div class="ext" data-ext="nmt-demo:2022" id="ext-nmt-demo-2022">
@@ -682,7 +725,7 @@
         <ul>
           <li><a href="https://zno.osvita.ua/mathematics/516/#q6" rel="noopener" target="_blank">демовариант 2022, задание 6</a> (с рисунком) - Вершина параболы</li>
           <li><a href="https://zno.osvita.ua/mathematics/516/#q8" rel="noopener" target="_blank">демовариант 2022, задание 8</a> - Преобразования графиков</li>
-          <li><a href="https://zno.osvita.ua/mathematics/516/#q15" rel="noopener" target="_blank">демовариант 2022, задание 15</a> - Функция, её свойства, последовательность</li>
+          <li><a href="https://zno.osvita.ua/mathematics/516/#q15" rel="noopener" target="_blank">демовариант 2022, задание 15</a> - Свойства основных функций</li>
           <li><a href="https://zno.osvita.ua/mathematics/516/#q19" rel="noopener" target="_blank">демовариант 2022, задание 19</a> - Арифметическая прогрессия</li>
         </ul>
       </div>
@@ -696,7 +739,7 @@
       сумму из неё же, умноженной на q.</p>
     </div>
     <!-- freq -->
-    <p class="dim law-freq" data-tasks="15">Частота на этом сайте, а не на НМТ: на этой странице 15 задач тренажёра, и они опираются на такие законы: Вершина параболы - 5, Преобразования графиков - 5, Арифметическая прогрессия - 2, Геометрическая прогрессия - 2, Общие точки графиков - 2, Область определения - 1. В реальных вариантах НМТ 2022-2026 этот блок нужен в 28 заданиях из 196: Функция, её свойства, последовательность - 15, Преобразования графиков - 5, Арифметическая прогрессия - 4, Метод: общие точки графиков - 3, Геометрическая прогрессия - 2.</p>
+    <p class="dim law-freq" data-tasks="16">Частота на этом сайте, а не на НМТ: на этой странице 16 задач тренажёра, и они опираются на такие законы: Вершина параболы - 5, Преобразования графиков - 5, Арифметическая прогрессия - 2, Геометрическая прогрессия - 2, Общие точки графиков - 2, График функции - 1, Область определения - 1. В реальных вариантах НМТ 2022-2026 этот блок нужен в 28 заданиях из 196: График функции - 14, Преобразования графиков - 5, Арифметическая прогрессия - 4, Метод: общие точки графиков - 3, Геометрическая прогрессия - 2, Функция, её свойства, последовательность - 1.</p>
     <!-- /freq -->
     <p>Ты знаешь этот блок, если:</p>
     <ol>

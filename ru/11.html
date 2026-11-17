@@ -96,7 +96,7 @@
 
   <main id="main">
     <h1>Измерения на плоскости</h1>
-    <p class="page-size" data-words="2000">Слов: 2000</p>
+    <p class="page-size" data-words="2074">Слов: 2074</p>
     <p class="lead">Фигурам из блока 10 ставят в соответствие числа: длины, углы, площади. Почти каждая формула
     здесь - либо теорема Пифагора, либо площадь прямоугольника, разрезанного и сложенного иначе.</p>
 
@@ -182,6 +182,13 @@
     </div>
     <!-- /fig:11-cor-tangents -->
       <p><strong>Почему так.</strong> Радиус, проведённый в точку касания, перпендикулярен касательной, поэтому для точки P и центра O по теореме Пифагора PT² = PO² − r² для обеих касательных: отрезки равны. Каждая сторона описанного четырёхугольника состоит из двух таких отрезков от её концов, и в сумме противоположных сторон каждый из четырёх отрезков встречается ровно раз. Центр окружности, вписанной в трапецию, удалён от обоих оснований на r, поэтому лежит на средней линии, а высота трапеции равна 2r.</p>
+    </div>
+    <div class="corollary" id="cor-right" data-law="law-pythagoras">
+      <p class="corollary-of">Следствие закона <a href="#law-pythagoras">«Теорема Пифагора»</a></p>
+      <p class="corollary-name">Прямоугольный треугольник: синус, косинус, тангенс</p>
+      <div class="math-block" data-tex="\sin A = \frac{a}{c},\qquad \cos A = \frac{b}{c},\qquad \operatorname{tg} A = \frac{a}{b}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>sin</mi><mi>A</mi><mo>&#x0003D;</mo><mfrac><mrow><mi>a</mi></mrow><mrow><mi>c</mi></mrow></mfrac><mo>&#x0002C;</mo><mspace width="2em" /><mi>cos</mi><mi>A</mi><mo>&#x0003D;</mo><mfrac><mrow><mi>b</mi></mrow><mrow><mi>c</mi></mrow></mfrac><mo>&#x0002C;</mo><mspace width="2em" /><mo>tg</mo><mi>A</mi><mo>&#x0003D;</mo><mfrac><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\sin A = \frac{a}{c},\qquad \cos A = \frac{b}{c},\qquad \operatorname{tg} A = \frac{a}{b}</annotation></semantics></math></div>
+      <p>a - катет против угла A, b - прилежащий катет, c - гипотенуза. Отсюда <span class="math" data-tex="a = c\sin A"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mo>&#x0003D;</mo><mi>c</mi><mi>sin</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">a = c\sin A</annotation></semantics></math></span>, <span class="math" data-tex="b = c\cos A"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>b</mi><mo>&#x0003D;</mo><mi>c</mi><mi>cos</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">b = c\cos A</annotation></semantics></math></span>. Катет против угла <span class="math" data-tex="30^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>30</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">30^\circ</annotation></semantics></math></span> равен половине гипотенузы, потому что <span class="math" data-tex="\sin 30^\circ = \frac{1}{2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>sin</mi><msup><mn>30</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\sin 30^\circ = \frac{1}{2}</annotation></semantics></math></span>.</p>
+      <p><strong>Почему так.</strong> Разделим <span class="math" data-tex="a^2 + b^2 = c^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">a^2 + b^2 = c^2</annotation></semantics></math></span> на <span class="math" data-tex="c^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">c^2</annotation></semantics></math></span>: <span class="math" data-tex="\sin^2 A + \cos^2 A = 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>sin</mi><mn>2</mn></msup><mi>A</mi><mo>&#x0002B;</mo><msup><mi>cos</mi><mn>2</mn></msup><mi>A</mi><mo>&#x0003D;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\sin^2 A + \cos^2 A = 1</annotation></semantics></math></span>. Отношение сторон зависит только от угла, поэтому синус и косинус острого угла - числа из таблицы, а не из конкретного треугольника.</p>
     </div>
     <div class="law" id="law-cosines">
       <p class="law-name">Теорема косинусов и теорема синусов</p>
@@ -538,14 +545,14 @@
           <li><a href="https://zno.osvita.ua/mathematics/671/#q18" rel="noopener" target="_blank">1 сессия, задание 18</a> (с рисунком) - Теорема Пифагора</li>
           <li><a href="https://zno.osvita.ua/mathematics/671/#q21" rel="noopener" target="_blank">1 сессия, задание 21</a> - Теорема Пифагора</li>
           <li><a href="https://zno.osvita.ua/mathematics/672/#q10" rel="noopener" target="_blank">2 сессия, задание 10</a> - Отрезки касательных и описанный четырёхугольник</li>
-          <li><a href="https://zno.osvita.ua/mathematics/672/#q15" rel="noopener" target="_blank">2 сессия, задание 15</a> (с рисунком) - Длина, угол, площадь</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q15" rel="noopener" target="_blank">2 сессия, задание 15</a> (с рисунком) - Прямоугольный треугольник: синус, косинус, тангенс</li>
           <li><a href="https://zno.osvita.ua/mathematics/672/#q18" rel="noopener" target="_blank">2 сессия, задание 18</a> (с рисунком) - Теорема Пифагора</li>
         </ul>
       </div>
       <div class="ext" data-ext="nmt-ua:2024" id="ext-nmt-ua-2024">
         <h4>НМТ 2024</h4>
         <ul>
-          <li><a href="https://zno.osvita.ua/mathematics/585/#q15" rel="noopener" target="_blank">1 сессия, задание 15</a> (с рисунком) - Длина, угол, площадь</li>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q15" rel="noopener" target="_blank">1 сессия, задание 15</a> (с рисунком) - Прямоугольный треугольник: синус, косинус, тангенс</li>
           <li><a href="https://zno.osvita.ua/mathematics/585/#q18" rel="noopener" target="_blank">1 сессия, задание 18</a> (с рисунком) - Отрезки касательных и описанный четырёхугольник</li>
           <li><a href="https://zno.osvita.ua/mathematics/606/#q8" rel="noopener" target="_blank">2 сессия, задание 8</a> - Площади треугольника, трапеции и круга</li>
           <li><a href="https://zno.osvita.ua/mathematics/606/#q15" rel="noopener" target="_blank">2 сессия, задание 15</a> (с рисунком) - Площади треугольника, трапеции и круга</li>
@@ -555,7 +562,8 @@
       <div class="ext" data-ext="nmt-ua:2023" id="ext-nmt-ua-2023">
         <h4>НМТ 2023</h4>
         <ul>
-          <li><a href="https://zno.osvita.ua/mathematics/546/#q13" rel="noopener" target="_blank">1 сессия, задание 13</a> (с рисунком) - Площади треугольника, трапеции и круга</li>
+          <li><a href="https://zno.osvita.ua/mathematics/546/#q3" rel="noopener" target="_blank">1 сессия, задание 3</a> - Хорды и дуги</li>
+          <li><a href="https://zno.osvita.ua/mathematics/546/#q13" rel="noopener" target="_blank">1 сессия, задание 13</a> (с рисунком) - Прямоугольный треугольник: синус, косинус, тангенс, Площади треугольника, трапеции и круга</li>
           <li><a href="https://zno.osvita.ua/mathematics/546/#q21" rel="noopener" target="_blank">1 сессия, задание 21</a> - Теорема Пифагора, Площади треугольника, трапеции и круга</li>
           <li><a href="https://zno.osvita.ua/mathematics/547/#q13" rel="noopener" target="_blank">2 сессия, задание 13</a> (с рисунком) - Теорема Пифагора, Площади треугольника, трапеции и круга</li>
           <li><a href="https://zno.osvita.ua/mathematics/547/#q18" rel="noopener" target="_blank">2 сессия, задание 18</a> (с рисунком) - Теорема Пифагора, Хорды и дуги</li>
@@ -590,7 +598,7 @@
       <div class="ext" data-ext="nmt-demo:2023" id="ext-nmt-demo-2023">
         <h4>Демо НМТ 2023</h4>
         <ul>
-          <li><a href="https://zno.osvita.ua/mathematics/523/#q12" rel="noopener" target="_blank">демовариант 2023, задание 12</a> (с рисунком) - Хорды и дуги</li>
+          <li><a href="https://zno.osvita.ua/mathematics/523/#q12" rel="noopener" target="_blank">демовариант 2023, задание 12</a> (с рисунком) - Прямоугольный треугольник: синус, косинус, тангенс, Хорды и дуги</li>
           <li><a href="https://zno.osvita.ua/mathematics/523/#q14" rel="noopener" target="_blank">демовариант 2023, задание 14</a> - Теорема Пифагора</li>
           <li><a href="https://zno.osvita.ua/mathematics/523/#q19" rel="noopener" target="_blank">демовариант 2023, задание 19</a> (с рисунком) - Площади треугольника, трапеции и круга</li>
         </ul>
@@ -599,7 +607,7 @@
         <h4>Демо НМТ 2022</h4>
         <ul>
           <li><a href="https://zno.osvita.ua/mathematics/516/#q17" rel="noopener" target="_blank">демовариант 2022, задание 17</a> - Теорема Пифагора, Площади треугольника, трапеции и круга</li>
-          <li><a href="https://zno.osvita.ua/mathematics/516/#q18" rel="noopener" target="_blank">демовариант 2022, задание 18</a> (с рисунком) - Теорема Пифагора</li>
+          <li><a href="https://zno.osvita.ua/mathematics/516/#q18" rel="noopener" target="_blank">демовариант 2022, задание 18</a> (с рисунком) - Теорема Пифагора, Прямоугольный треугольник: синус, косинус, тангенс</li>
           <li><a href="https://zno.osvita.ua/mathematics/516/#q20" rel="noopener" target="_blank">демовариант 2022, задание 20</a> - Теорема Пифагора</li>
         </ul>
       </div>
@@ -612,7 +620,7 @@
       площадь через синус - высота, записанная через угол, площади фигур - разрезание. И площадь всегда растёт как квадрат.</p>
     </div>
     <!-- freq -->
-    <p class="dim law-freq" data-tasks="12">Частота на этом сайте, а не на НМТ: на этой странице 12 задач тренажёра, и они опираются на такие законы: Теорема Пифагора - 6, Площади треугольника, трапеции и круга - 4, Площади подобных фигур - 1, Синус острого угла - 1, Теорема косинусов и теорема синусов - 1. В реальных вариантах НМТ 2022-2026 этот блок нужен в 22 заданиях из 196: Теорема Пифагора - 12, Площади треугольника, трапеции и круга - 10, Длина, угол, площадь - 2, Теорема косинусов и теорема синусов - 2.</p>
+    <p class="dim law-freq" data-tasks="12">Частота на этом сайте, а не на НМТ: на этой странице 12 задач тренажёра, и они опираются на такие законы: Теорема Пифагора - 6, Площади треугольника, трапеции и круга - 4, Площади подобных фигур - 1, Синус острого угла - 1, Теорема косинусов и теорема синусов - 1. В реальных вариантах НМТ 2022-2026 этот блок нужен в 23 заданиях из 196: Теорема Пифагора - 15, Площади треугольника, трапеции и круга - 10, Теорема косинусов и теорема синусов - 3.</p>
     <!-- /freq -->
     <p>Ты знаешь этот блок, если:</p>
     <ol>

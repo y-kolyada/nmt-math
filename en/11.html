@@ -96,7 +96,7 @@
 
   <main id="main">
     <h1>Measurement in the plane</h1>
-    <p class="page-size" data-words="2642">Words: 2642</p>
+    <p class="page-size" data-words="2742">Words: 2742</p>
     <p class="lead">The figures of block 10 are given numbers: lengths, angles, areas. Almost every formula here is either Pythagoras' theorem or the area of a rectangle cut up and put together differently.</p>
 
     <div class="box key" id="key-idea">
@@ -174,6 +174,13 @@
     </div>
     <!-- /fig:11-cor-tangents -->
       <p><strong>Why it is so.</strong> The radius drawn to the point of contact is perpendicular to the tangent, so for a point P and the centre O Pythagoras' theorem gives PT² = PO² − r² for both tangents: the segments are equal. Each side of a circumscribed quadrilateral is made of two such segments from its ends, and in the sum of opposite sides each of the four segments occurs exactly once. The centre of a circle inscribed in a trapezium is r away from both bases, so it lies on the midline, and the height of the trapezium equals 2r.</p>
+    </div>
+    <div class="corollary" id="cor-right" data-law="law-pythagoras">
+      <p class="corollary-of">Corollary of the law <a href="#law-pythagoras">"The Pythagorean theorem"</a></p>
+      <p class="corollary-name">The right triangle: sine, cosine, tangent</p>
+      <div class="math-block" data-tex="\sin A = \frac{a}{c},\qquad \cos A = \frac{b}{c},\qquad \operatorname{tg} A = \frac{a}{b}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>sin</mi><mi>A</mi><mo>&#x0003D;</mo><mfrac><mrow><mi>a</mi></mrow><mrow><mi>c</mi></mrow></mfrac><mo>&#x0002C;</mo><mspace width="2em" /><mi>cos</mi><mi>A</mi><mo>&#x0003D;</mo><mfrac><mrow><mi>b</mi></mrow><mrow><mi>c</mi></mrow></mfrac><mo>&#x0002C;</mo><mspace width="2em" /><mo>tg</mo><mi>A</mi><mo>&#x0003D;</mo><mfrac><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\sin A = \frac{a}{c},\qquad \cos A = \frac{b}{c},\qquad \operatorname{tg} A = \frac{a}{b}</annotation></semantics></math></div>
+      <p>a is the leg opposite the angle A, b is the adjacent leg, c is the hypotenuse. Hence <span class="math" data-tex="a = c\sin A"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mo>&#x0003D;</mo><mi>c</mi><mi>sin</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">a = c\sin A</annotation></semantics></math></span>, <span class="math" data-tex="b = c\cos A"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>b</mi><mo>&#x0003D;</mo><mi>c</mi><mi>cos</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">b = c\cos A</annotation></semantics></math></span>. The leg opposite the angle <span class="math" data-tex="30^\circ"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>30</mn><mo>&#x02218;</mo></msup></mrow><annotation encoding="application/x-tex">30^\circ</annotation></semantics></math></span> is half the hypotenuse, because <span class="math" data-tex="\sin 30^\circ = \frac{1}{2}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>sin</mi><msup><mn>30</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\sin 30^\circ = \frac{1}{2}</annotation></semantics></math></span>.</p>
+      <p><strong>Why.</strong> Divide <span class="math" data-tex="a^2 + b^2 = c^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">a^2 + b^2 = c^2</annotation></semantics></math></span> by <span class="math" data-tex="c^2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">c^2</annotation></semantics></math></span>: <span class="math" data-tex="\sin^2 A + \cos^2 A = 1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>sin</mi><mn>2</mn></msup><mi>A</mi><mo>&#x0002B;</mo><msup><mi>cos</mi><mn>2</mn></msup><mi>A</mi><mo>&#x0003D;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\sin^2 A + \cos^2 A = 1</annotation></semantics></math></span>. The ratio of the sides depends only on the angle, so the sine and cosine of an acute angle are numbers from the table, not from a particular triangle.</p>
     </div>
     <div class="law" id="law-cosines">
       <p class="law-name">Cosine rule and sine rule</p>
@@ -519,14 +526,14 @@
           <li><a href="https://zno.osvita.ua/mathematics/671/#q18" rel="noopener" target="_blank">Session 1, task 18</a> (with a figure) - Pythagoras' theorem</li>
           <li><a href="https://zno.osvita.ua/mathematics/671/#q21" rel="noopener" target="_blank">Session 1, task 21</a> - Pythagoras' theorem</li>
           <li><a href="https://zno.osvita.ua/mathematics/672/#q10" rel="noopener" target="_blank">Session 2, task 10</a> - Tangent segments and a tangential quadrilateral</li>
-          <li><a href="https://zno.osvita.ua/mathematics/672/#q15" rel="noopener" target="_blank">Session 2, task 15</a> (with a figure) - Length, angle, area</li>
+          <li><a href="https://zno.osvita.ua/mathematics/672/#q15" rel="noopener" target="_blank">Session 2, task 15</a> (with a figure) - The right triangle: sine, cosine, tangent</li>
           <li><a href="https://zno.osvita.ua/mathematics/672/#q18" rel="noopener" target="_blank">Session 2, task 18</a> (with a figure) - Pythagoras' theorem</li>
         </ul>
       </div>
       <div class="ext" data-ext="nmt-ua:2024" id="ext-nmt-ua-2024">
         <h4>NMT 2024</h4>
         <ul>
-          <li><a href="https://zno.osvita.ua/mathematics/585/#q15" rel="noopener" target="_blank">Session 1, task 15</a> (with a figure) - Length, angle, area</li>
+          <li><a href="https://zno.osvita.ua/mathematics/585/#q15" rel="noopener" target="_blank">Session 1, task 15</a> (with a figure) - The right triangle: sine, cosine, tangent</li>
           <li><a href="https://zno.osvita.ua/mathematics/585/#q18" rel="noopener" target="_blank">Session 1, task 18</a> (with a figure) - Tangent segments and a tangential quadrilateral</li>
           <li><a href="https://zno.osvita.ua/mathematics/606/#q8" rel="noopener" target="_blank">Session 2, task 8</a> - Areas of a triangle, a trapezium and a disc</li>
           <li><a href="https://zno.osvita.ua/mathematics/606/#q15" rel="noopener" target="_blank">Session 2, task 15</a> (with a figure) - Areas of a triangle, a trapezium and a disc</li>
@@ -536,7 +543,8 @@
       <div class="ext" data-ext="nmt-ua:2023" id="ext-nmt-ua-2023">
         <h4>NMT 2023</h4>
         <ul>
-          <li><a href="https://zno.osvita.ua/mathematics/546/#q13" rel="noopener" target="_blank">Session 1, task 13</a> (with a figure) - Areas of a triangle, a trapezium and a disc</li>
+          <li><a href="https://zno.osvita.ua/mathematics/546/#q3" rel="noopener" target="_blank">Session 1, task 3</a> - Chords and arcs</li>
+          <li><a href="https://zno.osvita.ua/mathematics/546/#q13" rel="noopener" target="_blank">Session 1, task 13</a> (with a figure) - The right triangle: sine, cosine, tangent, Areas of a triangle, a trapezium and a disc</li>
           <li><a href="https://zno.osvita.ua/mathematics/546/#q21" rel="noopener" target="_blank">Session 1, task 21</a> - Pythagoras' theorem, Areas of a triangle, a trapezium and a disc</li>
           <li><a href="https://zno.osvita.ua/mathematics/547/#q13" rel="noopener" target="_blank">Session 2, task 13</a> (with a figure) - Pythagoras' theorem, Areas of a triangle, a trapezium and a disc</li>
           <li><a href="https://zno.osvita.ua/mathematics/547/#q18" rel="noopener" target="_blank">Session 2, task 18</a> (with a figure) - Pythagoras' theorem, Chords and arcs</li>
@@ -571,7 +579,7 @@
       <div class="ext" data-ext="nmt-demo:2023" id="ext-nmt-demo-2023">
         <h4>NMT demo 2023</h4>
         <ul>
-          <li><a href="https://zno.osvita.ua/mathematics/523/#q12" rel="noopener" target="_blank">demo variant 2023, task 12</a> (with a figure) - Chords and arcs</li>
+          <li><a href="https://zno.osvita.ua/mathematics/523/#q12" rel="noopener" target="_blank">demo variant 2023, task 12</a> (with a figure) - The right triangle: sine, cosine, tangent, Chords and arcs</li>
           <li><a href="https://zno.osvita.ua/mathematics/523/#q14" rel="noopener" target="_blank">demo variant 2023, task 14</a> - Pythagoras' theorem</li>
           <li><a href="https://zno.osvita.ua/mathematics/523/#q19" rel="noopener" target="_blank">demo variant 2023, task 19</a> (with a figure) - Areas of a triangle, a trapezium and a disc</li>
         </ul>
@@ -580,7 +588,7 @@
         <h4>NMT demo 2022</h4>
         <ul>
           <li><a href="https://zno.osvita.ua/mathematics/516/#q17" rel="noopener" target="_blank">demo variant 2022, task 17</a> - Pythagoras' theorem, Areas of a triangle, a trapezium and a disc</li>
-          <li><a href="https://zno.osvita.ua/mathematics/516/#q18" rel="noopener" target="_blank">demo variant 2022, task 18</a> (with a figure) - Pythagoras' theorem</li>
+          <li><a href="https://zno.osvita.ua/mathematics/516/#q18" rel="noopener" target="_blank">demo variant 2022, task 18</a> (with a figure) - Pythagoras' theorem, The right triangle: sine, cosine, tangent</li>
           <li><a href="https://zno.osvita.ua/mathematics/516/#q20" rel="noopener" target="_blank">demo variant 2022, task 20</a> - Pythagoras' theorem</li>
         </ul>
       </div>
@@ -592,7 +600,7 @@
       <p><strong>Pythagoras, the area of a rectangle and the square of the factor.</strong> The cosine rule is Pythagoras corrected for the angle, the area through the sine is the height written through the angle, the areas of figures come from cutting. And area always grows as the square.</p>
     </div>
     <!-- freq -->
-    <p class="dim law-freq" data-tasks="12">Frequency on this site, not in the NMT: this page has 12 trainer tasks, and they lean on these laws: Pythagoras' theorem - 6, Areas of a triangle, a trapezium and a disc - 4, Areas of similar figures - 1, Cosine rule and sine rule - 1, The sine of an acute angle - 1. In real NMT papers of 2022-2026 this block is needed in 22 tasks out of 196: Pythagoras' theorem - 12, Areas of a triangle, a trapezium and a disc - 10, Cosine rule and sine rule - 2, Length, angle, area - 2.</p>
+    <p class="dim law-freq" data-tasks="12">Frequency on this site, not in the NMT: this page has 12 trainer tasks, and they lean on these laws: Pythagoras' theorem - 6, Areas of a triangle, a trapezium and a disc - 4, Areas of similar figures - 1, Cosine rule and sine rule - 1, The sine of an acute angle - 1. In real NMT papers of 2022-2026 this block is needed in 23 tasks out of 196: Pythagoras' theorem - 15, Areas of a triangle, a trapezium and a disc - 10, Cosine rule and sine rule - 3.</p>
     <!-- /freq -->
     <p>You know this block if you:</p>
     <ol>
