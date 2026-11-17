@@ -35,6 +35,10 @@ import siteconf
 CONF = siteconf.conf()
 PROFILE = siteconf.profile(CONF)
 SOURCE = CONF.get('slice_source', 'nmt-ua')
+# The sources a slice may name, in their order (examslice.SOURCES). A source
+# outside this list is red: its labels are written here, in the seed, not
+# guessed on a site.
+ORDER = examslice.SOURCES
 # The section speaks of external sources in general: there may be several
 # (another exam-preparation platform beside ZNO-ONLINE). What belongs to one
 # source - its heading and its lead - lives in its own block and leaves the
@@ -48,7 +52,11 @@ SAY = {
            'item': '%s сесія, завдання %s', 'fig': 'з рисунком',
            'sources': {'nmt-ua': {'head': 'НМТ на сайті ЗНО-ОНЛАЙН (zno.osvita.ua)', 'year': 'НМТ %s',
                                   'lead': 'Завдання основних сесій НМТ %s з сайту ЗНО-ОНЛАЙН, по роках. '
-                                          'Кожен рік вмикається окремо.'}}},
+                                          'Кожен рік вмикається окремо.', 'item': '%s сесія, завдання %s'},
+                       'nmt-demo': {'head': 'Демонстраційні варіанти НМТ на сайті ЗНО-ОНЛАЙН (zno.osvita.ua)', 'year': 'Демо НМТ %s',
+                                    'lead': 'Завдання демонстраційних варіантів НМТ %s з сайту ЗНО-ОНЛАЙН, по роках. Кожен рік вмикається окремо.', 'item': 'демоваріант %s, завдання %s'},
+                       'zno-ua': {'head': 'ЗНО минулих років на сайті ЗНО-ОНЛАЙН (zno.osvita.ua)', 'year': 'ЗНО %s',
+                                    'lead': 'Завдання тестів ЗНО %s з сайту ЗНО-ОНЛАЙН, по роках. Кожен рік вмикається окремо.', 'item': '%s сесія, завдання %s'}}},
     'ru': {'head': 'Ссылки на задания из внешних источников',
            'intro': 'Реальные задания с других сайтов подготовки к НМТ, которые опираются на законы этого блока. '
                     'Условие читай на сайте источника по ссылке, разметка законами - наша. Источники и годы включаются '
@@ -57,7 +65,11 @@ SAY = {
            'item': '%s сессия, задание %s', 'fig': 'с рисунком',
            'sources': {'nmt-ua': {'head': 'НМТ на сайте ЗНО-ОНЛАЙН (zno.osvita.ua)', 'year': 'НМТ %s',
                                   'lead': 'Задания основных сессий НМТ %s с сайта ЗНО-ОНЛАЙН, по годам. '
-                                          'Каждый год включается отдельно.'}}},
+                                          'Каждый год включается отдельно.', 'item': '%s сессия, задание %s'},
+                       'nmt-demo': {'head': 'Демонстрационные варианты НМТ на сайте ЗНО-ОНЛАЙН (zno.osvita.ua)', 'year': 'Демо НМТ %s',
+                                    'lead': 'Задания демонстрационных вариантов НМТ %s с сайта ЗНО-ОНЛАЙН, по годам. Каждый год включается отдельно.', 'item': 'демовариант %s, задание %s'},
+                       'zno-ua': {'head': 'ВНО прошлых лет на сайте ЗНО-ОНЛАЙН (zno.osvita.ua)', 'year': 'ВНО %s',
+                                    'lead': 'Задания тестов ВНО %s с сайта ЗНО-ОНЛАЙН, по годам. Каждый год включается отдельно.', 'item': '%s сессия, задание %s'}}},
     'en': {'head': 'Links to tasks from external sources',
            'intro': 'Real tasks from other NMT preparation sites that lean on the laws of this block. '
                     'Read the condition on the source site behind the link; the tagging by laws is ours. Sources and years are switched '
@@ -66,7 +78,11 @@ SAY = {
            'item': 'Session %s, task %s', 'fig': 'with a figure',
            'sources': {'nmt-ua': {'head': 'NMT on the ZNO-ONLINE site (zno.osvita.ua, in Ukrainian)', 'year': 'NMT %s',
                                   'lead': 'Tasks of the main NMT sessions of %s from the ZNO-ONLINE site, by year. '
-                                          'Each year is switched on separately.'}}},
+                                          'Each year is switched on separately.', 'item': 'Session %s, task %s'},
+                       'nmt-demo': {'head': 'NMT demo variants on the ZNO-ONLINE site (zno.osvita.ua, in Ukrainian)', 'year': 'NMT demo %s',
+                                    'lead': 'Tasks of the NMT demo variants of %s from the ZNO-ONLINE site, by year. Each year is switched on separately.', 'item': 'demo variant %s, task %s'},
+                       'zno-ua': {'head': 'ZNO tests of past years on the ZNO-ONLINE site (zno.osvita.ua, in Ukrainian)', 'year': 'ZNO %s',
+                                    'lead': 'Tasks of the ZNO tests of %s from the ZNO-ONLINE site, by year. Each year is switched on separately.', 'item': 'Session %s, task %s'}}},
     'de': {'head': 'Links zu Aufgaben aus externen Quellen',
            'intro': 'Echte Aufgaben von anderen Seiten zur NMT-Vorbereitung, die auf den Gesetzen dieses Blocks beruhen. '
                     'Die Aufgabe liest du auf der Quellseite hinter dem Link; die Zuordnung zu den Gesetzen ist unsere. Quellen und Jahre werden '
@@ -75,7 +91,11 @@ SAY = {
            'item': 'Sitzung %s, Aufgabe %s', 'fig': 'mit Abbildung',
            'sources': {'nmt-ua': {'head': 'NMT auf der Seite ZNO-ONLINE (zno.osvita.ua, auf Ukrainisch)', 'year': 'NMT %s',
                                   'lead': 'Aufgaben der Hauptsitzungen des NMT %s von der Seite ZNO-ONLINE, nach Jahren. '
-                                          'Jedes Jahr wird einzeln eingeschaltet.'}}},
+                                          'Jedes Jahr wird einzeln eingeschaltet.', 'item': 'Sitzung %s, Aufgabe %s'},
+                       'nmt-demo': {'head': 'NMT-Demovarianten auf der Seite ZNO-ONLINE (zno.osvita.ua, auf Ukrainisch)', 'year': 'NMT-Demo %s',
+                                    'lead': 'Aufgaben der NMT-Demovarianten %s von der Seite ZNO-ONLINE, nach Jahren. Jedes Jahr wird einzeln eingeschaltet.', 'item': 'Demovariante %s, Aufgabe %s'},
+                       'zno-ua': {'head': 'ZNO-Tests früherer Jahre auf der Seite ZNO-ONLINE (zno.osvita.ua, auf Ukrainisch)', 'year': 'ZNO %s',
+                                    'lead': 'Aufgaben der ZNO-Tests %s von der Seite ZNO-ONLINE, nach Jahren. Jedes Jahr wird einzeln eingeschaltet.', 'item': 'Sitzung %s, Aufgabe %s'}}},
 }
 SECTION = re.compile(r'\n?\s*<!-- sources -->.*?<!-- /sources -->', re.S)
 META = re.compile(r'\n?<meta name="swa-sources" content="[^"]*">')
@@ -84,13 +104,12 @@ H2NUM = re.compile(r'<h2 id="[^"]+">(\d+)\s*·')
 
 def section(lang, stem, rows, pages, missing, span):
     say = SAY.get(lang, SAY['uk'])
-    src = say['sources'].get(SOURCE, {'head': SOURCE, 'year': '%s', 'lead': '%s'})
-    by_year = {}
+    by_source = {}
     for r in rows:
         mine = [t for t in r['tags'] if t.split(':')[0] == stem]
         if mine:
-            by_year.setdefault(r['year'], []).append((r, mine))
-    if not by_year:
+            by_source.setdefault(r['source'], {}).setdefault(r['year'], []).append((r, mine))
+    if not by_source:
         return ''
     text = pages[stem]
     before = text.split('id="artifacts"')[0]
@@ -98,20 +117,23 @@ def section(lang, stem, rows, pages, missing, span):
     out = ['', '    <!-- sources -->',
            '    <h2 id="external">%d · %s <a class="anchor-link" href="#external">#</a></h2>' % (num, say['head']),
            '    <p class="dim">%s</p>' % say['intro'],
-           '    <p class="dim ext-off" hidden>%s</p>' % say['off'],
-           '    <div class="ext-source" data-ext-source="%s" id="ext-%s">' % (SOURCE, SOURCE),
-           '      <h3 class="ext-head">%s</h3>' % src['head'],
-           '      <p class="dim ext-lead">%s</p>' % (src['lead'] % span)]
-    for year in sorted(by_year, reverse=True):
-        out += ['      <div class="ext" data-ext="%s:%s" id="ext-%s-%s">' % (SOURCE, year, SOURCE, year),
-                '        <h4>%s</h4>' % (src['year'] % year), '        <ul>']
-        for r, mine in sorted(by_year[year], key=lambda x: (x[0]['session'], int(x[0]['n']))):
-            names = ', '.join(examslice.name_of(t, pages, lang, missing) for t in mine)
-            fig = ' (%s)' % say['fig'] if r.get('figure') == 'yes' else ''
-            out.append('          <li><a href="%s" rel="noopener" target="_blank">%s</a>%s - %s</li>'
-                       % (html.escape(r['url'], quote=True), say['item'] % (r['session'], r['n']), fig, html.escape(names, quote=False)))
-        out += ['        </ul>', '      </div>']
-    out += ['    </div>', '    <!-- /sources -->']
+           '    <p class="dim ext-off" hidden>%s</p>' % say['off']]
+    for source in [s for s in ORDER if s in by_source]:
+        src, by_year = say['sources'][source], by_source[source]
+        out += ['    <div class="ext-source" data-ext-source="%s" id="ext-%s">' % (source, source),
+                '      <h3 class="ext-head">%s</h3>' % src['head'],
+                '      <p class="dim ext-lead">%s</p>' % (src['lead'] % span[source])]
+        for year in sorted(by_year, reverse=True):
+            out += ['      <div class="ext" data-ext="%s:%s" id="ext-%s-%s">' % (source, year, source, year),
+                    '        <h4>%s</h4>' % (src['year'] % year), '        <ul>']
+            for r, mine in sorted(by_year[year], key=lambda x: (x[0]['session'], int(x[0]['n']))):
+                names = ', '.join(examslice.name_of(t, pages, lang, missing) for t in mine)
+                fig = ' (%s)' % say['fig'] if r.get('figure') == 'yes' else ''
+                out.append('          <li><a href="%s" rel="noopener" target="_blank">%s</a>%s - %s</li>'
+                           % (html.escape(r['url'], quote=True), src['item'] % (r['session'], r['n']), fig, html.escape(names, quote=False)))
+            out += ['        </ul>', '      </div>']
+        out += ['    </div>']
+    out += ['    <!-- /sources -->']
     return '\n'.join(out)
 
 
@@ -141,9 +163,21 @@ def main(argv):
         print('  ' + ('КРАСНОЕ' if check and stale else 'ЗЕЛЁНОЕ'))
         print()
         return 1 if check and stale else 0
-    all_years = sorted({r['year'] for r in rows})
-    catalogue = ' '.join('%s:%s' % (SOURCE, y) for y in all_years)
-    span = all_years[0] if len(all_years) == 1 else '%s-%s' % (all_years[0], all_years[-1])
+    unknown = sorted({r['source'] for r in rows} - set(ORDER))
+    if unknown:
+        # A source without labels would print the main sessions' words over
+        # its tasks; it is named and nothing is written.
+        print('        -> источник без подписей в ростке (tools/build-sources.py, ORDER): %s' % ', '.join(unknown))
+        print('  ' + '-' * 46)
+        print('  КРАСНОЕ')
+        print()
+        return 1
+    catalogue, span = [], {}
+    for source in [s for s in ORDER if any(r['source'] == s for r in rows)]:
+        ys = sorted({r['year'] for r in rows if r['source'] == source})
+        catalogue += ['%s:%s' % (source, y) for y in ys]
+        span[source] = ys[0] if len(ys) == 1 else '%s-%s' % (ys[0], ys[-1])
+    catalogue = ' '.join(catalogue)
     changed, unplaced = [], []
     for lang in PROFILE['langs']:
         if not pathlib.Path(lang).is_dir():
@@ -171,7 +205,7 @@ def main(argv):
         for c in changed:
             print('        -> раздел ссылок разошёлся со срезом: %s' % c)
     else:
-        print('  заданий в срезе: %d, источник %s, годы: %s' % (len(rows), SOURCE, catalogue))
+        print('  заданий в срезе: %d, источники и годы: %s' % (len(rows), catalogue))
         print('  переписано страниц: %d' % len(changed))
     for page in unplaced:
         print('        -> у блока есть задания среза, но нет <h2 id="artifacts">, раздел не вставлен: %s' % page)

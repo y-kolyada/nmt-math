@@ -20,6 +20,7 @@ import os
 import re
 import sys
 
+import examslice
 import siteconf
 
 LANGS = tuple(siteconf.profile()['langs'])
@@ -175,7 +176,13 @@ def build(lang):
     seen = {k for *_, k in items}
     kinds = [code for code in KINDS if code in seen]
     index = {'l': lang, 'k': kinds, 'i': items}
-    ext = sorted({e[4] for e in items if e[4].startswith('x:')}, reverse=True)
+    # Filters in the order of the sources (examslice.SOURCES), the newest year
+    # first within a source: the main sessions lead, as in the settings.
+    def rank(k):
+        src, _, year = k[2:].partition(':')
+        order = examslice.SOURCES.index(src) if src in examslice.SOURCES else len(examslice.SOURCES)
+        return (order, -int(year) if year.isdigit() else 0, k)
+    ext = sorted({e[4] for e in items if e[4].startswith('x:')}, key=rank)
     if ext:
         index['x'] = {k: next(e[1] for e in items if e[4] == k) for k in ext}
     data = json.dumps(index, ensure_ascii=False, separators=(',', ':'))

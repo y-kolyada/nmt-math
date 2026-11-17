@@ -6,6 +6,12 @@ real exam tasks (one row per task) tagged with its own laws:
     year  session  test  n  form  figure  laws  url
     2026  1        846   8  choice  yes   12:law-vector  https://...
 
+An optional column `source` names where the task comes from: empty or absent
+is the main source (`slice_source` in site.conf, `nmt-ua` by default, the main
+NMT sessions). Other sources are `nmt-demo` (the demo variants of the NMT) and
+`zno-ua` (the ZNO tests of past years): their tasks get links of their own and
+stay out of the frequency, which counts the main sessions only.
+
 A tag is `NN:law-id` (a law frame on block NN), `NN:cor-id` (a corollary of a
 law, `<div class="corollary" id="cor-id" data-law="law-id">`), `NN:method-id` (a
 method in the block's applications, an element with `id="method-id"`),
@@ -56,8 +62,26 @@ def load(conf=None):
             continue
         row = dict(zip(head, cells))
         row['tags'] = row.get('laws', '').split()
+        row['source'] = (row.get('source') or '').strip() or main_source(conf)
         rows.append(row)
     return rows, missing
+
+
+# The sources a slice may name, in the order of the section, the settings and
+# the search filters: the main sessions first, then the demo variants, then the
+# ZNO of past years.
+SOURCES = ['nmt-ua', 'nmt-demo', 'zno-ua']
+
+
+def main_source(conf=None):
+    conf = conf if conf is not None else siteconf.conf()
+    return conf.get('slice_source', 'nmt-ua')
+
+
+def main_rows(rows, conf=None):
+    """The rows of the main source: what the frequency counts."""
+    src = main_source(conf)
+    return [r for r in rows or [] if r['source'] == src]
 
 
 COROLLARY = re.compile(r'<div class="corollary" id="([^"]+)" data-law="([^"]+)">.*?<p class="corollary-name">(.*?)</p>', re.S)

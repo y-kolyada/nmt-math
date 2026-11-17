@@ -127,7 +127,7 @@ Decided with the Conductor 2026-11-09.
 A study site may point beyond itself, to the real exam tasks that lean on a
 block's laws. The rule is the same as in section 4: **a link, never a copy**.
 
-1. **The slice.** `site.conf slice = lessons/<file>.tsv` holds the tagged tasks
+1. **The slice.** `site.conf slice = lessons/<file>.tsv` holds the tagged tasks (an optional column `source`: `nmt-ua` the main sessions, the default; `nmt-demo` the demo variants; `zno-ua` the ZNO of past years - only the main sessions count in the frequency)
    (year, session, number, figure, our laws, url); `tools/examslice.py` reads
    it. The frequency line prints the second number from it
    (`tools/build-frequency.py`), and `tools/build-sources.py` prints the section
@@ -150,3 +150,16 @@ block's laws. The rule is the same as in section 4: **a link, never a copy**.
    rate are agreed with the Conductor; robots.txt is read first, requests go one
    at a time, at most one per five seconds, each file once, and the run stops
    on 429, 5xx or a disallow.
+
+## 8. The last three sections of the landing page
+
+The landing of a study site ends, before its artifacts, with three short sections (the Conductor, 2026-11-17). They give the reader a basic grasp of what the site can do and how to use it, and must not take much time or attention from the subject: each has a ceiling of words.
+
+| id | Ukrainian heading | Ceiling | What it holds |
+| :-- | :-- | :-- | :-- |
+| `features` | Що вміє сайт | 80 words | a list of five or six lines, one line per feature: search, term cards behind the dotted underline, the trainer with its instant check, the exam tasks by year in the settings, font size and theme, work without the internet |
+| `tools` | Навігатор і словник | 60 words | a block is a vertical, a lens is a horizontal through all blocks; the dotted underline opens a card, the glossary holds every concept by block |
+| `how-to-read` | Три способи вчитися | 120 words | three routes: **the exam is soon** (the frequency of laws, then the trainer and the reverse sections), **in order** (blocks from the first, each rests on the previous), **close a gap** (a mistake in a school test, then the search or the lens of traps, then the law, then a task) |
+
+The third route answers why the series exists: the reader's lessons check more than they explain, and this route turns a check into an explanation. The stamp lays the three headings on a new landing (`tools/new-site.py`, `LANDING_TAIL`). A check that requires them comes once all four NMT sites have written them.
+

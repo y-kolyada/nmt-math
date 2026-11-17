@@ -234,7 +234,9 @@ def bake(lang, check):
     pages, per_page, unresolved = collect(lang)
     say = SAY[lang]
     rows, missing = examslice.load()
-    exam = exam_counts(rows, pages, lang, missing) if rows else None
+    # Coverage below looks at every task; the frequency counts the main sessions.
+    main = examslice.main_rows(rows)
+    exam = exam_counts(main, pages, lang, missing) if main else None
     # A page that is still a stub in this language has no laws to name: its
     # tags are not a defect here, and the landing leaves them out and says so.
     stubs = sorted(stem for stem in PROFILE['topics'] if 'stub-card' in pages.get(stem, ''))
@@ -286,7 +288,7 @@ def bake(lang, check):
             if not check:
                 pathlib.Path(lang, stem + '.html').write_text(new, encoding='utf-8')
     landing = pages.get('index', '')
-    exrows = rows
+    exrows = main
     if SUMMARY.search(landing):
         total = sum(t for t, _ in per_page.values())
         laws = {}
