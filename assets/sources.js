@@ -30,11 +30,21 @@
   const catalogue = meta ? meta.content.split(/\s+/).filter(Boolean) : [];
   const lines = [];
   const lineName = {};
+  // The site's lines come first, from <meta name="swa-art-lines"> that
+  // tools/build-sources.py writes on every page from site.conf `art_lines`, so a
+  // page without pictures shows the same tab; the drawings on the page add any
+  // line the meta does not name.
+  const artMeta = document.querySelector('meta[name="swa-art-lines"]');
+  (artMeta ? artMeta.content.split(';') : []).forEach((pair) => {
+    const at = pair.indexOf(':');
+    const id = (at < 0 ? pair : pair.slice(0, at)).trim();
+    if (id && !(id in lineName)) { lines.push(id); lineName[id] = at < 0 ? '' : pair.slice(at + 1).trim(); }
+  });
   document.querySelectorAll('[data-kind="illustration"][data-line]').forEach((el) => {
     const id = el.dataset.line;
-    if (!(id in lineName)) { lines.push(id); lineName[id] = el.dataset.lineName || id; }
+    if (!(id in lineName)) { lines.push(id); lineName[id] = el.dataset.lineName || ''; }
   });
-  if (!catalogue.length && lines.length < 2) return;
+  if (!catalogue.length && !lines.length) return;
 
   const SAY = {
     uk: { open: 'Налаштування', title: 'Налаштування', close: 'Закрити налаштування',
@@ -45,7 +55,9 @@
                      'zno-ua': 'Показувати завдання ЗНО минулих років із сайту ЗНО-ОНЛАЙН' },
           year: { 'nmt-ua': 'НМТ %s', 'nmt-demo': 'Демо НМТ %s', 'zno-ua': 'ЗНО %s' },
           artGroup: 'Ілюстрації',
-          artLead: 'Ті самі сюжети в різних лініях. Вибір діє на всіх сторінках сайту.' },
+          artLead: 'Ті самі сюжети в різних лініях. Вибір діє на всіх сторінках сайту.',
+          artNone: 'Без ілюстрацій',
+          artAll: 'Показувати ілюстрації', artLeadOne: 'Рисунки на сторінках сайту. Вибір діє на всіх сторінках.' },
     ru: { open: 'Настройки', title: 'Настройки', close: 'Закрыть настройки',
           group: 'Внешние источники',
           lead: 'Ссылки на реальные задания, которые опираются на законы блока. Выключенный год пропадает со страниц и из поиска.',
@@ -54,7 +66,9 @@
                      'zno-ua': 'Показывать задания ВНО прошлых лет с сайта ЗНО-ОНЛАЙН' },
           year: { 'nmt-ua': 'НМТ %s', 'nmt-demo': 'Демо НМТ %s', 'zno-ua': 'ВНО %s' },
           artGroup: 'Иллюстрации',
-          artLead: 'Те же сюжеты в разных линиях. Выбор действует на всех страницах сайта.' },
+          artLead: 'Те же сюжеты в разных линиях. Выбор действует на всех страницах сайта.',
+          artNone: 'Без иллюстраций',
+          artAll: 'Показывать иллюстрации', artLeadOne: 'Рисунки на страницах сайта. Выбор действует на всех страницах.' },
     en: { open: 'Settings', title: 'Settings', close: 'Close settings',
           group: 'External sources',
           lead: 'Links to real exam tasks that rest on the laws of a block. A year switched off leaves the pages and the search.',
@@ -63,7 +77,9 @@
                      'zno-ua': 'Show the ZNO tests of past years from the ZNO-ONLINE site' },
           year: { 'nmt-ua': 'NMT %s', 'nmt-demo': 'NMT demo %s', 'zno-ua': 'ZNO %s' },
           artGroup: 'Illustrations',
-          artLead: 'The same scenes in different lines. The choice holds on every page of the site.' },
+          artLead: 'The same scenes in different lines. The choice holds on every page of the site.',
+          artNone: 'No illustrations',
+          artAll: 'Show illustrations', artLeadOne: 'The pictures on the pages of the site. The choice holds on every page.' },
     de: { open: 'Einstellungen', title: 'Einstellungen', close: 'Einstellungen schließen',
           group: 'Externe Quellen',
           lead: 'Links zu echten Prüfungsaufgaben, die auf den Gesetzen eines Blocks beruhen. Ein ausgeschaltetes Jahr verschwindet von den Seiten und aus der Suche.',
@@ -72,7 +88,9 @@
                      'zno-ua': 'ZNO-Tests früherer Jahre von der Seite ZNO-ONLINE zeigen' },
           year: { 'nmt-ua': 'NMT %s', 'nmt-demo': 'NMT-Demo %s', 'zno-ua': 'ZNO %s' },
           artGroup: 'Illustrationen',
-          artLead: 'Dieselben Motive in verschiedenen Linien. Die Wahl gilt auf allen Seiten der Website.' },
+          artLead: 'Dieselben Motive in verschiedenen Linien. Die Wahl gilt auf allen Seiten der Website.',
+          artNone: 'Ohne Illustrationen',
+          artAll: 'Illustrationen zeigen', artLeadOne: 'Die Bilder auf den Seiten der Website. Die Wahl gilt auf allen Seiten.' },
   };
   const lang = document.documentElement.lang || 'uk';
   const say = SAY[lang] || SAY.uk;
@@ -80,10 +98,14 @@
   const KEY = 'swa-' + SITE + '-ext-off';
   const LINE_KEY = 'swa-' + SITE + '-art-line';
 
+  // «Без ілюстрацій»: one more choice after the lines, which hides every raster
+  // illustration on every page (the Conductor, 2026-11-18). Diagrams are not
+  // illustrations and stay.
+  const NONE = 'none';
   function readLine() {
     let id = null;
     try { id = localStorage.getItem(LINE_KEY); } catch (_) {}
-    return lines.includes(id) ? id : lines[0];
+    return lines.includes(id) || id === NONE ? id : lines[0];
   }
   function writeLine(id) {
     try {
@@ -133,8 +155,8 @@
     });
     if (lines.length) {
       const line = readLine();
-      document.querySelectorAll('[data-kind="illustration"][data-line]').forEach((el) => {
-        el.hidden = el.dataset.line !== line;
+      document.querySelectorAll('[data-kind="illustration"]').forEach((el) => {
+        el.hidden = line === NONE || (el.dataset.line !== undefined && el.dataset.line !== line);
       });
     }
   }
@@ -158,23 +180,58 @@
   dlg.className = 'settings-panel';
   dlg.setAttribute('aria-labelledby', 'settings-title');
   const fmt = (src, id) => (say.year[src] || '%s').replace('%s', id.slice(src.length + 1));
+  // The groups of the window. With two or more, each is a tab of its own, left to
+  // right, and one shows at a time: stacked one under another they made the
+  // window scroll even on a large screen (the Conductor, 2026-11-18). With one
+  // group the window is as before, without a tab row.
+  const groups = [];
+  // One line is enough for the group now: «Без ілюстрацій» makes it a choice. A
+  // site with one line writes `art_lines = all` without a name, and the engine
+  // names it in the page's own language (nmt-math has four).
+  if (lines.length) groups.push({ id: 'art', label: say.artGroup || SAY.uk.artGroup,
+    body: '<p class="dim">' + (lines.length > 1 ? say.artLead || SAY.uk.artLead : say.artLeadOne || SAY.uk.artLeadOne) + '</p>'
+      + lines.concat(NONE).map((id) => '<label class="settings-row"><input type="radio" name="art-line" data-line="' + id + '"> '
+        + (id === NONE ? (say.artNone || SAY.uk.artNone) : lineName[id] || say.artAll || SAY.uk.artAll) + '</label>').join('') });
+  if (catalogue.length) groups.push({ id: 'ext', label: say.group,
+    body: '<p class="dim">' + say.lead + '</p>'
+      + sources.map((src) => '<div class="settings-source">'
+        + '<label class="settings-row"><input type="checkbox" data-src="' + src + '"> '
+        + (say.sources[src] || src) + '</label>'
+        + '<div class="settings-years">'
+        + years[src].map((id) => '<label class="settings-row"><input type="checkbox" data-id="' + id + '"> '
+          + fmt(src, id) + '</label>').join('')
+        + '</div></div>').join('') });
+  const tabbed = groups.length > 1;
   dlg.innerHTML = '<div class="settings-head"><h2 id="settings-title">' + say.title + '</h2>'
     + '<button type="button" class="settings-close" aria-label="' + say.close + '">&times;</button></div>'
-    + (lines.length > 1 ? '<fieldset class="settings-group"><legend>' + (say.artGroup || SAY.uk.artGroup) + '</legend>'
-      + '<p class="dim">' + (say.artLead || SAY.uk.artLead) + '</p>'
-      + lines.map((id) => '<label class="settings-row"><input type="radio" name="art-line" data-line="' + id + '"> '
-        + lineName[id] + '</label>').join('')
-      + '</fieldset>' : '')
-    + (catalogue.length ? '<fieldset class="settings-group"><legend>' + say.group + '</legend>'
-    + '<p class="dim">' + say.lead + '</p>'
-    + sources.map((src) => '<div class="settings-source">'
-      + '<label class="settings-row"><input type="checkbox" data-src="' + src + '"> '
-      + (say.sources[src] || src) + '</label>'
-      + '<div class="settings-years">'
-      + years[src].map((id) => '<label class="settings-row"><input type="checkbox" data-id="' + id + '"> '
-        + fmt(src, id) + '</label>').join('')
-      + '</div></div>').join('')
-    + '</fieldset>' : '');
+    + (tabbed ? '<div class="settings-tabs" role="tablist">' + groups.map((g, i) => '<button type="button" role="tab"'
+      + ' class="settings-tab" id="settings-tab-' + g.id + '" aria-controls="settings-panel-' + g.id + '"'
+      + ' aria-selected="' + (i === 0) + '" tabindex="' + (i === 0 ? 0 : -1) + '">' + g.label + '</button>').join('') + '</div>' : '')
+    + groups.map((g, i) => '<fieldset class="settings-group"' + (tabbed ? ' role="tabpanel" id="settings-panel-' + g.id
+      + '" aria-labelledby="settings-tab-' + g.id + '"' + (i ? ' hidden' : '') : '') + '>'
+      + (tabbed ? '' : '<legend>' + g.label + '</legend>') + g.body + '</fieldset>').join('');
+  if (tabbed) {
+    const tabs = [...dlg.querySelectorAll('.settings-tab')];
+    const show = (tab) => {
+      tabs.forEach((t) => {
+        const on = t === tab;
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+        dlg.querySelector('#' + t.getAttribute('aria-controls')).hidden = !on;
+      });
+    };
+    tabs.forEach((t) => t.addEventListener('click', () => show(t)));
+    dlg.querySelector('.settings-tabs').addEventListener('keydown', (e) => {
+      const i = tabs.indexOf(document.activeElement);
+      if (i < 0) return;
+      const to = { ArrowRight: (i + 1) % tabs.length, ArrowLeft: (i - 1 + tabs.length) % tabs.length,
+                   Home: 0, End: tabs.length - 1 }[e.key];
+      if (to === undefined) return;
+      e.preventDefault();
+      tabs[to].focus();
+      show(tabs[to]);
+    });
+  }
   document.body.appendChild(dlg);
 
   function paint() {

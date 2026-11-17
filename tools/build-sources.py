@@ -99,6 +99,19 @@ SAY = {
 }
 SECTION = re.compile(r'\n?\s*<!-- sources -->.*?<!-- /sources -->', re.S)
 META = re.compile(r'\n?<meta name="swa-sources" content="[^"]*">')
+# The lines of illustrations (site.conf `art_lines = modern:Сучасна Україна; village:Село і ремесла`,
+# the default first; a site with one line writes `art_lines = all` and the engine names it) go on every page beside the sources, so the settings window
+# shows the same two tabs on a page with pictures and on a page without them.
+ART = re.compile(r'\n?<meta name="swa-art-lines" content="[^"]*">')
+ART_LINES = '; '.join(x.strip() for x in CONF.get('art_lines', '').split(';') if x.strip())
+
+
+def art(text):
+    text = ART.sub('', text)
+    if ART_LINES:
+        text = text.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<meta name="swa-art-lines" content="%s">'
+                            % html.escape(ART_LINES, quote=True), 1)
+    return text
 H2NUM = re.compile(r'<h2 id="[^"]+">(\d+)\s*·')
 
 
@@ -150,7 +163,7 @@ def main(argv):
         for lang in PROFILE['langs']:
             for page in sorted(pathlib.Path(lang).glob('*.html')) if pathlib.Path(lang).is_dir() else []:
                 text = page.read_text(encoding='utf-8')
-                new = SECTION.sub('', META.sub('', text))
+                new = art(SECTION.sub('', META.sub('', text)))
                 if new != text:
                     stale.append(str(page))
                     if not check:
@@ -186,6 +199,7 @@ def main(argv):
         for stem, text in pages.items():
             new = META.sub('', text)
             new = new.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<meta name="swa-sources" content="%s">' % catalogue, 1)
+            new = art(new)
             if stem in PROFILE['topics'] and 'stub-card' not in new:
                 new = SECTION.sub('', new)
                 block = section(lang, stem, rows, {**pages, stem: new}, missing, span)
