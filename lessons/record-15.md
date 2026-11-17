@@ -26,9 +26,11 @@
 - **Порядок фильтров поиска** не был в документе шага: первый прогон на копии показал «ЗНО 2019» первым (обратная сортировка ключей). Порядок источников вынесен в `examslice.SOURCES` и общий для раздела, настроек и поиска. На сайтах с одним источником порядок прежний.
 - **Опорный прогон шага B** - итог шага A, снятый до починки словаря nmt-math; две строки nmt-math поэтому сменились не от ростка.
 
+- **Дефект после коммита, найден nmt-enlang.** Строка частоты под лидом блока делила основные сессии на весь срез вместе с демо («128 з 352» вместо «128 з 256»): `build-frequency.py:267` и `:270` брали `rows`, а не `main`. Условие 2 проверяло только `data-tasks` блока и знаменатель фразы не смотрело. Исправлено коммитом фабрики `f06bd31`; копия nmt-ualang с тремя источниками - «з 262» → «з 260» (260 основных), четыре сайта без столбца `source` - `build-frequency.py --check` ЗЕЛЁНОЕ.
+
 ## Коммиты
 
-Фабрика: `d648585`. Сайт: `chore(site): sync the engine from the seed (d648585)`, `docs(lessons): step 15 - several sources in the slice, the last three landing sections; backlog line 15 closed`.
+Фабрика: `d648585`, правка частоты `f06bd31`. Сайт: `chore(site): sync the engine from the seed (d648585)`, `docs(lessons): step 15 - several sources in the slice, the last three landing sections; backlog line 15 closed`.
 
 ## Приёмка
 

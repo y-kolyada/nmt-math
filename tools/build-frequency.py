@@ -264,10 +264,10 @@ def bake(lang, check):
             mine = dict(exam[0].get(stem, {}))
             n = mine.pop('__tasks__', 0)
             if n:
-                exam_said = say['exam'] % (examslice.years(rows), n, plural(n, say['xloc']), len(rows),
+                exam_said = say['exam'] % (examslice.years(main), n, plural(n, say['xloc']), len(main),
                                            ', '.join('%s - %d' % kv for kv in ranked(mine)))
             else:
-                exam_said = say['exam0'] % (examslice.years(rows), len(rows))
+                exam_said = say['exam0'] % (examslice.years(main), len(main))
         # site.conf freq_at: "artifacts" (default) keeps one line under the
         # artifacts box. "lead" moves only the exam sentence under the lead
         # paragraph, where a reader preparing for the exam sees it first; the
