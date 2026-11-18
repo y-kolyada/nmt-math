@@ -158,6 +158,9 @@
       document.querySelectorAll('[data-kind="illustration"]').forEach((el) => {
         el.hidden = line === NONE || (el.dataset.line !== undefined && el.dataset.line !== line);
       });
+      // The panno (a mosaic of the pictures' thumbnails, study.css) is made of
+      // illustrations too and leaves with them (the Conductor, 2026-11-18).
+      document.querySelectorAll('figure.panno').forEach((el) => { el.hidden = line === NONE; });
     }
   }
 
@@ -201,7 +204,9 @@
         + years[src].map((id) => '<label class="settings-row"><input type="checkbox" data-id="' + id + '"> '
           + fmt(src, id) + '</label>').join('')
         + '</div></div>').join('') });
-  const tabbed = groups.length > 1;
+  // Always tabs, even with one group, so the window looks the same on every site
+  // of the series (the Conductor, 2026-11-18: nmt-enlang has the one tab of sources).
+  const tabbed = groups.length > 0;
   dlg.innerHTML = '<div class="settings-head"><h2 id="settings-title">' + say.title + '</h2>'
     + '<button type="button" class="settings-close" aria-label="' + say.close + '">&times;</button></div>'
     + (tabbed ? '<div class="settings-tabs" role="tablist">' + groups.map((g, i) => '<button type="button" role="tab"'

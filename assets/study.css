@@ -89,7 +89,7 @@ nav.contents .num { width: 1.9em; }
 .ext ul { margin: 0 0 .5rem; padding-left: 1.2rem; }
 .ext li { margin: 0 0 4px; }
 @media (max-width: 48rem) { .ext { padding: 8px 12px 4px; } .ext ul { padding-left: 1rem; } }
-.ext[hidden], .ext-source[hidden], .ext-off[hidden], .search-facet[hidden], [data-kind="illustration"][hidden] { display: none; }
+.ext[hidden], .ext-source[hidden], .ext-off[hidden], .search-facet[hidden], [data-kind="illustration"][hidden], figure.panno[hidden] { display: none; }
 
 /* Шестерня в лотке - по образцу кнопки поиска; окно настроек - по образцу
    окна поиска: та же рамка, шапка, крестик и подложка. Флажок «включено»
